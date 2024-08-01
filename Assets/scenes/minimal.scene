@@ -313,7 +313,8 @@
             "go": "fd0f3b86-3fef-4ce3-9431-c8499f591dc3",
             "component_type": "CharacterController"
           },
-          "EyePosition": "0,0,62"
+          "EyePosition": "0,0,62",
+          "WalkSpeed": 250
         }
       ],
       "Children": [
@@ -340,7 +341,13 @@
               "BodyWeight": 1,
               "EyesWeight": 1,
               "HeadWeight": 1,
-              "LookAtEnabled": false
+              "LookAtEnabled": false,
+              "Target": {
+                "_type": "component",
+                "component_id": "8d232f5a-2c0a-47c5-a5fe-43b9ee3526b8",
+                "go": "1eec0ebe-0b81-46f2-99d8-2f0a0ed027ab",
+                "component_type": "SkinnedModelRenderer"
+              }
             }
           ]
         },

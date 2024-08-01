@@ -26,6 +26,12 @@ public sealed class PlayerController : Component
 	[Property]
 	public float CameraPitchClamp { get; set; } = 85.0f;
 
+	[Property]
+	public float WalkSpeed { get; set; } = 250.0f;
+
+	[Property]
+	public float JumpStrength { get; set; } = 273.0f;
+
 	private Vector3 _cameraFollowDirectionNormalised;
 
 	public Vector3 CameraFollowPosition => _cameraFollowDirectionNormalised *
@@ -39,6 +45,8 @@ public sealed class PlayerController : Component
 
 	protected override void DrawGizmos()
 	{
+		base.DrawGizmos();
+
 		if (!Gizmo.IsSelected)
 			return;
 
@@ -54,6 +62,8 @@ public sealed class PlayerController : Component
 
 	protected override void OnUpdate()
 	{
+		base.OnUpdate();
+
 		// Update our eye angles with respect to camera movement
 		_eyeAngles += Input.AnalogLook;
 		var clampedPitch = MathX.Clamp(_eyeAngles.pitch,
@@ -74,11 +84,36 @@ public sealed class PlayerController : Component
 
 	protected override void OnFixedUpdate()
 	{
+		base.OnFixedUpdate();
 
+		if (Controller.IsOnGround)
+		{
+			var speed = WalkSpeed;
+			var velocity = Input.AnalogMove.Normal * speed * Body.Transform.Rotation;
+			Controller.Accelerate(velocity);
+
+			Controller.ApplyFriction(5.0f, 20.0f);
+
+			if (Input.Pressed("Jump"))
+			{
+				Controller.Punch(Vector3.Up * JumpStrength);
+			}
+		}
+		else
+		{
+			Controller.Velocity += Scene.PhysicsWorld.Gravity * Time.Delta;
+		}
+
+		Controller.Move();
+
+		_animationHelper.IsGrounded = Controller.IsOnGround;
+		_animationHelper.WithVelocity(Controller.Velocity);
 	}
 
 	protected override void OnStart()
 	{
+		base.OnStart();
+
 		if (Body == null || Camera == null || Controller == null)
 			throw new ArgumentException("PlayerController must have all of " +
 										"Body, Camera, Controller set to " +
@@ -87,6 +122,7 @@ public sealed class PlayerController : Component
 		_animationHelper = Body.Components.Get<CitizenAnimationHelper>();
 		if (_animationHelper == null)
 			throw new ArgumentException("Body must have a CitizenAnimationHelper");
+		Log.Info(_animationHelper);
 
 		// NOTE: we must set this before using CameraFollowPosition! A side
 		// effect of caching this is that we can't edit this value live. Maybe
