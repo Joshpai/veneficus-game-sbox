@@ -122,7 +122,6 @@ public sealed class PlayerController : Component
 		_animationHelper = Body.Components.Get<CitizenAnimationHelper>();
 		if (_animationHelper == null)
 			throw new ArgumentException("Body must have a CitizenAnimationHelper");
-		Log.Info(_animationHelper);
 
 		// NOTE: we must set this before using CameraFollowPosition! A side
 		// effect of caching this is that we can't edit this value live. Maybe
