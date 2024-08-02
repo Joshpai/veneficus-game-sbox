@@ -314,7 +314,25 @@
             "component_type": "CharacterController"
           },
           "EyePosition": "0,0,62",
+          "JumpStrength": 273,
           "WalkSpeed": 250
+        },
+        {
+          "__type": "HealthComponent",
+          "__guid": "eee517ee-443c-4af7-b4a6-c96723f5b0bd",
+          "DamageMultiplier": 1,
+          "HealMultiplier": 1,
+          "MaxHealth": 100
+        },
+        {
+          "__type": "PlayerSpellcastingController",
+          "__guid": "1b1de3fe-3be0-49d8-a79d-7b1bc352e11d",
+          "PlayerController": {
+            "_type": "component",
+            "component_id": "ef618fa3-7a09-48e0-9a4f-8d6545bfe1f1",
+            "go": "fd0f3b86-3fef-4ce3-9431-c8499f591dc3",
+            "component_type": "PlayerController"
+          }
         }
       ],
       "Children": [
