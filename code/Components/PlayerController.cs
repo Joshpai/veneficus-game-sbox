@@ -37,7 +37,7 @@ public sealed class PlayerController : Component
 	public Vector3 CameraFollowPosition => _cameraFollowDirectionNormalised *
 										   CameraFollowDistance;
 
-	private Angles _eyeAngles = new Angles();
+	public Angles EyeAngles = new Angles();
 
 	private Transform _cameraReference;
 
@@ -65,18 +65,18 @@ public sealed class PlayerController : Component
 		base.OnUpdate();
 
 		// Update our eye angles with respect to camera movement
-		_eyeAngles += Input.AnalogLook;
-		var clampedPitch = MathX.Clamp(_eyeAngles.pitch,
+		EyeAngles += Input.AnalogLook;
+		var clampedPitch = MathX.Clamp(EyeAngles.pitch,
 									   -CameraPitchClamp,
 									    CameraPitchClamp);
-		_eyeAngles = _eyeAngles.WithPitch(clampedPitch);
+		EyeAngles = EyeAngles.WithPitch(clampedPitch);
 
 		// Rotate the player body to align with the camera direction
-		Body.Transform.Rotation = Rotation.FromYaw(_eyeAngles.yaw);
+		Body.Transform.Rotation = Rotation.FromYaw(EyeAngles.yaw);
 
 		// Update the transform of the camera to orbit around the EyePosition
 		var cameraTransform = _cameraReference.RotateAround(EyePosition,
-															_eyeAngles);
+															EyeAngles);
 		var worldPos = Transform.Local.PointToWorld(cameraTransform.Position);
 		Camera.Transform.Position = worldPos;
 		Camera.Transform.LocalRotation = cameraTransform.Rotation;
