@@ -23,7 +23,7 @@ public class FireballSpell : ISpell
 		_fireballObject = new GameObject();
 		var model = _fireballObject.Components.Create<ModelRenderer>();
 		model.Model = Model.Sphere;
-		model.Tint = new Color(255, 0, 0);
+		model.Tint = Color.Red;
 		_fireballObject.Transform.Scale = 0.1f;
 
 		_direction = playerController.EyeAngles.Forward;
