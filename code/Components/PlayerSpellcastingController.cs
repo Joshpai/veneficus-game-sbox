@@ -40,7 +40,7 @@ public sealed class PlayerSpellcastingController : Component
 	private bool CanCastSpell(ISpell.SpellType spellType)
 	{
 		// TODO: we should also consider mana cost here
-		return spellType > ISpell.SpellType.SpellTimeMin &&
+		return spellType > ISpell.SpellType.SpellTypeMin &&
 			   spellType < ISpell.SpellType.SpellTypeMax &&
 			   _spellNextCastTime[(int)spellType] <= Time.Now;
 	}
