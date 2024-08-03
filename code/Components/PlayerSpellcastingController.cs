@@ -7,9 +7,9 @@ public sealed class PlayerSpellcastingController : Component
 	private ISpell.SpellType _activeSpell = ISpell.SpellType.Fireball;
 
 	// TODO: is there a better data type for this?
-	private List<ISpell> castSpells = new List<ISpell>();
+	private List<ISpell> _castSpells = new List<ISpell>();
 	// Defer removal so we can avoid locks (blegh)
-	private List<ISpell> deferredRemovals = new List<ISpell>();
+	private List<ISpell> _deferredRemovals = new List<ISpell>();
 
 	private ISpell _castingSpell;
 	private float _castingSpellFinishTime;
@@ -35,7 +35,7 @@ public sealed class PlayerSpellcastingController : Component
 
 	private void OnSpellDestroyed(object spell, EventArgs e)
 	{
-		deferredRemovals.Add((ISpell)spell);
+		_deferredRemovals.Add((ISpell)spell);
 	}
 
 	private bool CanCastSpell(ISpell.SpellType spellType)
@@ -67,7 +67,7 @@ public sealed class PlayerSpellcastingController : Component
 				);
 				_castingSpell.FinishCasting(PlayerController, chargeAmount);
 				_castingSpell.OnDestroy += OnSpellDestroyed;
-				castSpells.Add(_castingSpell);
+				_castSpells.Add(_castingSpell);
 				// TODO: interesting gameplay question here of:
 				// "does cancelling a cast result in no cooldown?"
 				_spellNextCastTime[(int)_activeSpell] =
@@ -86,16 +86,16 @@ public sealed class PlayerSpellcastingController : Component
 			}
 		}
 
-		foreach (ISpell spell in castSpells)
+		foreach (ISpell spell in _castSpells)
 		{
 			spell.OnFixedUpdate();
 		}
 
 		// spell.OnFixedUpdate() can result in a spell deleting itself, thus
 		// invalidating the iterator so we defer real removal until afterwards
-		foreach (ISpell spell in deferredRemovals)
+		foreach (ISpell spell in _deferredRemovals)
 		{
-			castSpells.Remove(spell);
+			_castSpells.Remove(spell);
 		}
 	}
 }
