@@ -3,6 +3,7 @@ public class FireballSpell : ISpell
 	public float ManaCost => 50.0f;
 	public float Cooldown => 2.0f;
 	public float CastTime => 0.3f;
+	public float MaxChargeTime => 0.5f;
 
 	public event EventHandler OnDestroy;
 
@@ -33,7 +34,8 @@ public class FireballSpell : ISpell
 			_direction * START_OFFSET;
 	}
 
-	void ISpell.FinishCasting(PlayerController playerController)
+	void ISpell.FinishCasting(PlayerController playerController,
+							  float chargeAmount)
 	{
 		FinishedCasting = true;
 		_timeSincefireballSpawn = 0.0f;

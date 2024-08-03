@@ -13,6 +13,7 @@ public sealed class PlayerSpellcastingController : Component
 
 	private ISpell _castingSpell;
 	private float _castingSpellFinishTime;
+	private bool _castingSpellIsHeld;
 
 	private float[] _spellNextCastTime;
 
@@ -49,11 +50,22 @@ public sealed class PlayerSpellcastingController : Component
 	{
 		if (_castingSpell != null)
 		{
-			_castingSpell.OnFixedUpdate();
+			// TODO: it feels like there's a lot of room for improvement here,
+			// lots of this stuff could be useful to just know inside the spell
+			// itself (perhaps via a base class).
+			if (_castingSpell.MaxChargeTime + _castingSpellFinishTime >= Time.Now)
+				_castingSpell.OnFixedUpdate();
 
-			if (_castingSpellFinishTime <= Time.Now)
+			_castingSpellIsHeld &= Input.Down("attack1");
+
+			if (_castingSpellFinishTime <= Time.Now && !_castingSpellIsHeld)
 			{
-				_castingSpell.FinishCasting(PlayerController);
+				float chargeAmount = Math.Min(
+					(_castingSpellFinishTime - Time.Now) /
+						_castingSpell.MaxChargeTime,
+					1.0f
+				);
+				_castingSpell.FinishCasting(PlayerController, chargeAmount);
 				_castingSpell.OnDestroy += OnSpellDestroyed;
 				castSpells.Add(_castingSpell);
 				// TODO: interesting gameplay question here of:
@@ -69,6 +81,7 @@ public sealed class PlayerSpellcastingController : Component
 			{
 				_castingSpell = CreateSpell(_activeSpell);
 				_castingSpellFinishTime = Time.Now + _castingSpell.CastTime;
+				_castingSpellIsHeld = true;
 				_castingSpell.StartCasting(PlayerController);
 			}
 		}
