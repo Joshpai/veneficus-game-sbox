@@ -7,9 +7,13 @@ public interface ISpell
 	enum SpellType
 	{
 		Fireball,
+		// The below must be at the end, so add new types above here!
+		SpellTypeMax
 	}
 
 	public float ManaCost { get; }
+	public float Cooldown { get; }
+
 	public event EventHandler OnDestroy;
 
 	public void Cast(PlayerController playerController);
@@ -21,6 +25,8 @@ public interface ISpell
 public class FireballSpell : ISpell
 {
 	public float ManaCost => 50.0f;
+	public float Cooldown => 2.0f;
+
 	public event EventHandler OnDestroy;
 
 	private GameObject _fireballObject;
@@ -77,12 +83,21 @@ public sealed class PlayerSpellcastingController : Component
 
 	private TimeSince _timeSinceLastSpell = 0.0f;
 
+	// NOTE: setting this internally MUST make sure it's valid.
 	private ISpell.SpellType _activeSpell = ISpell.SpellType.Fireball;
 
 	// TODO: is there a better data type for this?
 	private List<ISpell> castSpells = new List<ISpell>();
 	// Defer removal so we can avoid locks (blegh)
 	private List<ISpell> deferredRemovals = new List<ISpell>();
+
+	private float[] _spellNextCastTime;
+
+	protected override void OnStart()
+	{
+		// This should be zeroed by definition.
+		_spellNextCastTime = new float[(int)ISpell.SpellType.SpellTypeMax];
+	}
 
 	private ISpell CreateSpell(ISpell.SpellType spellType)
 	{
@@ -100,17 +115,15 @@ public sealed class PlayerSpellcastingController : Component
 
 	protected override void OnFixedUpdate()
 	{
-		// TODO: the spell cooldown is probably best as a property of a spell
 		// TODO: we should also consider mana cost here
-		if (Input.Pressed("attack1") && _timeSinceLastSpell > 2.0f)
+		if (Input.Pressed("attack1") &&
+			_spellNextCastTime[(int)_activeSpell] <= Time.Now)
 		{
 			ISpell spell = CreateSpell(_activeSpell);
-			if (spell != null)
-			{
-				spell.Cast(PlayerController);
-				spell.OnDestroy += OnSpellDestroyed;
-				castSpells.Add(spell);
-			}
+			spell.Cast(PlayerController);
+			spell.OnDestroy += OnSpellDestroyed;
+			castSpells.Add(spell);
+			_spellNextCastTime[(int)_activeSpell] = Time.Now + spell.Cooldown;
 		}
 
 		foreach (ISpell spell in castSpells)
