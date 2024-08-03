@@ -3,8 +3,6 @@ public sealed class PlayerSpellcastingController : Component
 	[Property]
 	public PlayerController PlayerController { get; set; }
 
-	private TimeSince _timeSinceLastSpell = 0.0f;
-
 	// NOTE: setting this internally MUST make sure it's valid.
 	private ISpell.SpellType _activeSpell = ISpell.SpellType.Fireball;
 
@@ -13,11 +11,15 @@ public sealed class PlayerSpellcastingController : Component
 	// Defer removal so we can avoid locks (blegh)
 	private List<ISpell> deferredRemovals = new List<ISpell>();
 
+	private ISpell _castingSpell;
+	private float _castingSpellFinishTime;
+
 	private float[] _spellNextCastTime;
 
 	protected override void OnStart()
 	{
-		// This should be zeroed by definition.
+		// This should be zeroed by definition. It should be noted that this
+		// allocates 2 more floats than necessary, but it's probably fine.
 		_spellNextCastTime = new float[(int)ISpell.SpellType.SpellTypeMax];
 	}
 
@@ -35,17 +37,40 @@ public sealed class PlayerSpellcastingController : Component
 		deferredRemovals.Add((ISpell)spell);
 	}
 
-	protected override void OnFixedUpdate()
+	private bool CanCastSpell(ISpell.SpellType spellType)
 	{
 		// TODO: we should also consider mana cost here
-		if (Input.Pressed("attack1") &&
-			_spellNextCastTime[(int)_activeSpell] <= Time.Now)
+		return spellType > ISpell.SpellType.SpellTimeMin &&
+			   spellType < ISpell.SpellType.SpellTypeMax &&
+			   _spellNextCastTime[(int)spellType] <= Time.Now;
+	}
+
+	protected override void OnFixedUpdate()
+	{
+		if (_castingSpell != null)
 		{
-			ISpell spell = CreateSpell(_activeSpell);
-			spell.Cast(PlayerController);
-			spell.OnDestroy += OnSpellDestroyed;
-			castSpells.Add(spell);
-			_spellNextCastTime[(int)_activeSpell] = Time.Now + spell.Cooldown;
+			_castingSpell.OnFixedUpdate();
+
+			if (_castingSpellFinishTime <= Time.Now)
+			{
+				_castingSpell.FinishCasting(PlayerController);
+				_castingSpell.OnDestroy += OnSpellDestroyed;
+				castSpells.Add(_castingSpell);
+				// TODO: interesting gameplay question here of:
+				// "does cancelling a cast result in no cooldown?"
+				_spellNextCastTime[(int)_activeSpell] =
+					Time.Now + _castingSpell.Cooldown;
+				_castingSpell = null;
+			}
+		}
+		else if (Input.Pressed("attack1"))
+		{
+			if (CanCastSpell(_activeSpell))
+			{
+				_castingSpell = CreateSpell(_activeSpell);
+				_castingSpellFinishTime = Time.Now + _castingSpell.CastTime;
+				_castingSpell.StartCasting(PlayerController);
+			}
 		}
 
 		foreach (ISpell spell in castSpells)
