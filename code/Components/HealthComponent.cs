@@ -1,6 +1,3 @@
-using Sandbox;
-using System;
-
 public sealed class HealthComponent : Component
 {
 	[Property]

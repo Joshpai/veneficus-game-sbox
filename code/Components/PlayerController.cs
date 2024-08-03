@@ -1,5 +1,3 @@
-using System;
-using Sandbox;
 using Sandbox.Citizen;
 
 public sealed class PlayerController : Component

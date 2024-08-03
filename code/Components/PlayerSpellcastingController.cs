@@ -1,6 +1,3 @@
-using Sandbox;
-using System;
-
 // TODO: move this elsewhere
 public interface ISpell
 {
