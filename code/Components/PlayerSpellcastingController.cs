@@ -12,7 +12,6 @@ public sealed class PlayerSpellcastingController : Component
 	private List<BaseSpell> _deferredRemovals = new List<BaseSpell>();
 
 	private BaseSpell _castingSpell;
-	private float _castingSpellFinishTime;
 	private bool _castingSpellIsHeld;
 
 	private float[] _spellNextCastTime;
@@ -26,11 +25,12 @@ public sealed class PlayerSpellcastingController : Component
 
 	private BaseSpell CreateSpell(BaseSpell.SpellType spellType)
 	{
-		switch (spellType)
+		GameObject caster = this.GameObject;
+		return spellType switch
 		{
-		case BaseSpell.SpellType.Fireball: return new FireballSpell();
-		}
-		return null;
+			BaseSpell.SpellType.Fireball => new FireballSpell(caster),
+			_ => null,
+		};
 	}
 
 	private void OnSpellDestroyed(object spell, EventArgs e)
@@ -46,26 +46,30 @@ public sealed class PlayerSpellcastingController : Component
 			   _spellNextCastTime[(int)spellType] <= Time.Now;
 	}
 
+	protected override void OnUpdate()
+	{
+		if (_castingSpell != null)
+		{
+			_castingSpell.CastDirection = PlayerControllerRef.EyeAngles.Forward;
+			_castingSpell.OnUpdate();
+		}
+
+		foreach (BaseSpell spell in _castSpells)
+		{
+			spell.OnUpdate();
+		}
+	}
+
 	protected override void OnFixedUpdate()
 	{
 		if (_castingSpell != null)
 		{
-			// TODO: it feels like there's a lot of room for improvement here,
-			// lots of this stuff could be useful to just know inside the spell
-			// itself (perhaps via a base class).
-			if (_castingSpell.MaxChargeTime + _castingSpellFinishTime >= Time.Now)
-				_castingSpell.OnFixedUpdate();
+			_castingSpell.OnFixedUpdate();
 
 			_castingSpellIsHeld &= Input.Down("attack1");
-
-			if (_castingSpellFinishTime <= Time.Now && !_castingSpellIsHeld)
+			if (!_castingSpellIsHeld && _castingSpell.CanFinishCasting())
 			{
-				float chargeAmount = Math.Min(
-					(_castingSpellFinishTime - Time.Now) /
-						_castingSpell.MaxChargeTime,
-					1.0f
-				);
-				_castingSpell.FinishCasting(PlayerControllerRef, chargeAmount);
+				_castingSpell.FinishCasting();
 				_castingSpell.OnDestroy += OnSpellDestroyed;
 				_castSpells.Add(_castingSpell);
 				// TODO: interesting gameplay question here of:
@@ -80,9 +84,11 @@ public sealed class PlayerSpellcastingController : Component
 			if (CanCastSpell(_activeSpell))
 			{
 				_castingSpell = CreateSpell(_activeSpell);
-				_castingSpellFinishTime = Time.Now + _castingSpell.CastTime;
+				_castingSpell.CasterEyeOrigin = PlayerControllerRef.EyePosition;
+				_castingSpell.CastDirection =
+					PlayerControllerRef.EyeAngles.Forward;
+				_castingSpell.StartCasting();
 				_castingSpellIsHeld = true;
-				_castingSpell.StartCasting(PlayerControllerRef);
 			}
 		}
 

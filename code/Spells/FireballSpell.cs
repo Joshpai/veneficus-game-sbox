@@ -10,15 +10,17 @@ public class FireballSpell : BaseSpell
 	private GameObject _fireballObject;
 	private TimeSince _timeSincefireballSpawn;
 
-	private Vector3 _direction;
-
-	private bool FinishedCasting = false;
-
 	const float START_OFFSET = 50.0f;
 	const float SPEED = 300.0f;
 	const float DURATION = 5.0f;
 
-	public override void StartCasting(PlayerController playerController)
+	public FireballSpell(GameObject caster)
+		: base(caster)
+	{
+
+	}
+
+	public override void OnStartCasting()
 	{
 		// I would prefer prefab instantiation here instead...
 		_fireballObject = new GameObject();
@@ -27,26 +29,30 @@ public class FireballSpell : BaseSpell
 		model.Tint = Color.Red;
 		_fireballObject.Transform.Scale = 0.1f;
 
-		_direction = playerController.EyeAngles.Forward;
 		_fireballObject.Transform.Position =
-			playerController.Body.Transform.Position +
-			playerController.EyePosition +
-			_direction * START_OFFSET;
+			CasterEyeOrigin + CastDirection * START_OFFSET;
 	}
 
-	public override void FinishCasting(PlayerController playerController,
-									   float chargeAmount)
+	public override void OnFinishCasting()
 	{
-		FinishedCasting = true;
 		_timeSincefireballSpawn = 0.0f;
+	}
+
+	public override void OnUpdate()
+	{
+		if (!HasFinishedCasting)
+		{
+			_fireballObject.Transform.LocalPosition =
+				CasterEyeOrigin + CastDirection * START_OFFSET;
+		}
 	}
 
 	public override void OnFixedUpdate()
 	{
-		if (!FinishedCasting && _fireballObject != null)
+		if (!HasFinishedCasting)
 		{
-			// Grow in size
-			_fireballObject.Transform.Scale += 1.0f * Time.Delta;
+			if (!IsFullyCharged())
+				_fireballObject.Transform.LocalScale += 1.0f * Time.Delta;
 		}
 		else
 		{
@@ -60,10 +66,9 @@ public class FireballSpell : BaseSpell
 			if (_fireballObject != null)
 			{
 				_fireballObject.Transform.Position +=
-					_direction * SPEED * Time.Delta;
+					CastDirection * SPEED * Time.Delta;
 			}
 		}
-
 	}
 
 	public override BaseSpell.SpellType GetSpellType()

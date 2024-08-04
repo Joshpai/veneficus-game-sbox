@@ -18,11 +18,54 @@ public abstract class BaseSpell
 
 	public abstract event EventHandler OnDestroy;
 
-	// TODO: maybe take a player controller reference in the constructor?
-	public abstract void StartCasting(PlayerController playerController);
-	public abstract void FinishCasting(PlayerController playerController,
-									   float chargeAmount);
+	protected GameObject _caster;
+	public Vector3 CasterEyeOrigin { get; set; }
+	public Vector3 CastDirection { get; set; }
+
+	private float _castTime;
+
+	public bool HasFinishedCasting { get; private set; }
+
+	public BaseSpell(GameObject caster)
+	{
+		_caster = caster;
+	}
+
+	public bool CanFinishCasting()
+	{
+		return (Time.Now - _castTime) >= CastTime;
+	}
+
+	public bool IsFullyCharged()
+	{
+		return (Time.Now - _castTime) >= CastTime + MaxChargeTime;
+	}
+
+	public void StartCasting()
+	{
+		_castTime = Time.Now;
+		HasFinishedCasting = false;
+		OnStartCasting();
+	}
+
+	public void FinishCasting()
+	{
+		HasFinishedCasting = true;
+		OnFinishCasting();
+	}
+
+	public float GetChargeAmount()
+	{
+		float chargeAmount = (Time.Now - _castTime - CastTime) / MaxChargeTime;
+		chargeAmount = Math.Min(chargeAmount, 1.0f);
+		return chargeAmount;
+	}
+
+	public abstract void OnStartCasting();
+	public abstract void OnFinishCasting();
+
 	public abstract void OnFixedUpdate();
+	public abstract void OnUpdate();
 	// This should just help avoid forgetting to create a SpellType.
 	public abstract SpellType GetSpellType();
 }
