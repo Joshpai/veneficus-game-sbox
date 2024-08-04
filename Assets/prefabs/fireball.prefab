@@ -1,0 +1,41 @@
+{
+  "RootObject": {
+    "__guid": "c56165d2-743f-4d75-a0fb-6f9d9a248610",
+    "Flags": 0,
+    "Name": "fireball",
+    "Tags": "projectile",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.ModelRenderer",
+        "__guid": "b56aeb2b-3c14-4405-bea9-31be5c3348ac",
+        "BodyGroups": 18446744073709551615,
+        "Model": "models/dev/sphere.vmdl",
+        "RenderType": "On",
+        "Tint": "0.85116,0.09897,0.09897,1"
+      },
+      {
+        "__type": "Sandbox.SphereCollider",
+        "__guid": "f3459cca-3efa-4b86-b3f2-917243f2d42f",
+        "Center": "0,0,0",
+        "IsTrigger": false,
+        "Radius": 10,
+        "Static": false
+      },
+      {
+        "__type": "FireballCollisionComponent",
+        "__guid": "27f8579a-94fb-4f6b-b1d1-ee2fce65a1b5",
+        "ContactDamage": 50,
+        "DamageMultiplier": 1
+      }
+    ],
+    "Children": [],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

@@ -117,6 +117,13 @@
           "MotionEnabled": true,
           "RigidbodyFlags": 0,
           "StartAsleep": false
+        },
+        {
+          "__type": "HealthComponent",
+          "__guid": "3a8c4ac7-b265-4d58-bc31-387d0d77bcca",
+          "DamageMultiplier": 1,
+          "HealMultiplier": 1,
+          "MaxHealth": 100
         }
       ]
     },
@@ -157,6 +164,13 @@
           "MotionEnabled": true,
           "RigidbodyFlags": 0,
           "StartAsleep": false
+        },
+        {
+          "__type": "HealthComponent",
+          "__guid": "1d1d745b-aa48-40b8-8cce-0eb7f9212cb0",
+          "DamageMultiplier": 1,
+          "HealMultiplier": 1,
+          "MaxHealth": 100
         }
       ]
     },
@@ -197,6 +211,13 @@
           "MotionEnabled": true,
           "RigidbodyFlags": 0,
           "StartAsleep": false
+        },
+        {
+          "__type": "HealthComponent",
+          "__guid": "11b6c669-3797-43d7-b0ef-e9ee7669f9f6",
+          "DamageMultiplier": 1,
+          "HealMultiplier": 1,
+          "MaxHealth": 100
         }
       ]
     },

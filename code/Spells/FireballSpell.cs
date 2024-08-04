@@ -22,12 +22,13 @@ public class FireballSpell : BaseSpell
 
 	public override void OnStartCasting()
 	{
-		// I would prefer prefab instantiation here instead...
+		// TODO: is there a better way to use a prefab programatically?
 		_fireballObject = new GameObject();
-		var model = _fireballObject.Components.Create<ModelRenderer>();
-		model.Model = Model.Sphere;
-		model.Tint = Color.Red;
+		_fireballObject.SetPrefabSource("prefabs/fireball.prefab");
+		_fireballObject.UpdateFromPrefab();
 		_fireballObject.Transform.Scale = 0.1f;
+
+		// NOTE: collision is handled in FireballCollisionComponent.
 
 		_fireballObject.SetParent(_caster);
 		_fireballObject.Transform.LocalPosition =
@@ -43,6 +44,10 @@ public class FireballSpell : BaseSpell
 		// below line, the object will be set to the origin for a few frames
 		// and looks rubbish as it jumps around.
 		_fireballObject.Transform.ClearInterpolation();
+
+		// Update the fireball damage according to the charge amount
+		var collisionComponent = _fireballObject.Components.Get<FireballCollisionComponent>();
+		collisionComponent.DamageMultiplier *= (1 + GetChargeAmount());
 	}
 
 	public override void OnUpdate()
