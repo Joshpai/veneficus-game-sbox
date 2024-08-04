@@ -1,11 +1,11 @@
-public class FireballSpell : ISpell
+public class FireballSpell : BaseSpell
 {
-	public float ManaCost => 50.0f;
-	public float Cooldown => 2.0f;
-	public float CastTime => 0.3f;
-	public float MaxChargeTime => 0.5f;
+	public override float ManaCost => 50.0f;
+	public override float Cooldown => 2.0f;
+	public override float CastTime => 0.3f;
+	public override float MaxChargeTime => 0.5f;
 
-	public event EventHandler OnDestroy;
+	public override event EventHandler OnDestroy;
 
 	private GameObject _fireballObject;
 	private TimeSince _timeSincefireballSpawn;
@@ -18,7 +18,7 @@ public class FireballSpell : ISpell
 	const float SPEED = 300.0f;
 	const float DURATION = 5.0f;
 
-	void ISpell.StartCasting(PlayerController playerController)
+	public override void StartCasting(PlayerController playerController)
 	{
 		// I would prefer prefab instantiation here instead...
 		_fireballObject = new GameObject();
@@ -34,14 +34,14 @@ public class FireballSpell : ISpell
 			_direction * START_OFFSET;
 	}
 
-	void ISpell.FinishCasting(PlayerController playerController,
-							  float chargeAmount)
+	public override void FinishCasting(PlayerController playerController,
+									   float chargeAmount)
 	{
 		FinishedCasting = true;
 		_timeSincefireballSpawn = 0.0f;
 	}
 
-	void ISpell.OnFixedUpdate()
+	public override void OnFixedUpdate()
 	{
 		if (!FinishedCasting && _fireballObject != null)
 		{
@@ -66,8 +66,8 @@ public class FireballSpell : ISpell
 
 	}
 
-	ISpell.SpellType ISpell.GetSpellType()
+	public override BaseSpell.SpellType GetSpellType()
 	{
-		return ISpell.SpellType.Fireball;
+		return BaseSpell.SpellType.Fireball;
 	}
 }

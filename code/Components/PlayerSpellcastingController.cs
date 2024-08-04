@@ -4,14 +4,14 @@ public sealed class PlayerSpellcastingController : Component
 	public PlayerController PlayerController { get; set; }
 
 	// NOTE: setting this internally MUST make sure it's valid.
-	private ISpell.SpellType _activeSpell = ISpell.SpellType.Fireball;
+	private BaseSpell.SpellType _activeSpell = BaseSpell.SpellType.Fireball;
 
 	// TODO: is there a better data type for this?
-	private List<ISpell> _castSpells = new List<ISpell>();
+	private List<BaseSpell> _castSpells = new List<BaseSpell>();
 	// Defer removal so we can avoid locks (blegh)
-	private List<ISpell> _deferredRemovals = new List<ISpell>();
+	private List<BaseSpell> _deferredRemovals = new List<BaseSpell>();
 
-	private ISpell _castingSpell;
+	private BaseSpell _castingSpell;
 	private float _castingSpellFinishTime;
 	private bool _castingSpellIsHeld;
 
@@ -21,28 +21,28 @@ public sealed class PlayerSpellcastingController : Component
 	{
 		// This should be zeroed by definition. It should be noted that this
 		// allocates 2 more floats than necessary, but it's probably fine.
-		_spellNextCastTime = new float[(int)ISpell.SpellType.SpellTypeMax];
+		_spellNextCastTime = new float[(int)BaseSpell.SpellType.SpellTypeMax];
 	}
 
-	private ISpell CreateSpell(ISpell.SpellType spellType)
+	private BaseSpell CreateSpell(BaseSpell.SpellType spellType)
 	{
 		switch (spellType)
 		{
-		case ISpell.SpellType.Fireball: return new FireballSpell();
+		case BaseSpell.SpellType.Fireball: return new FireballSpell();
 		}
 		return null;
 	}
 
 	private void OnSpellDestroyed(object spell, EventArgs e)
 	{
-		_deferredRemovals.Add((ISpell)spell);
+		_deferredRemovals.Add((BaseSpell)spell);
 	}
 
-	private bool CanCastSpell(ISpell.SpellType spellType)
+	private bool CanCastSpell(BaseSpell.SpellType spellType)
 	{
 		// TODO: we should also consider mana cost here
-		return spellType > ISpell.SpellType.SpellTypeMin &&
-			   spellType < ISpell.SpellType.SpellTypeMax &&
+		return spellType > BaseSpell.SpellType.SpellTypeMin &&
+			   spellType < BaseSpell.SpellType.SpellTypeMax &&
 			   _spellNextCastTime[(int)spellType] <= Time.Now;
 	}
 
@@ -86,14 +86,14 @@ public sealed class PlayerSpellcastingController : Component
 			}
 		}
 
-		foreach (ISpell spell in _castSpells)
+		foreach (BaseSpell spell in _castSpells)
 		{
 			spell.OnFixedUpdate();
 		}
 
 		// spell.OnFixedUpdate() can result in a spell deleting itself, thus
 		// invalidating the iterator so we defer real removal until afterwards
-		foreach (ISpell spell in _deferredRemovals)
+		foreach (BaseSpell spell in _deferredRemovals)
 		{
 			_castSpells.Remove(spell);
 		}
