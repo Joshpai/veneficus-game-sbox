@@ -29,13 +29,20 @@ public class FireballSpell : BaseSpell
 		model.Tint = Color.Red;
 		_fireballObject.Transform.Scale = 0.1f;
 
-		_fireballObject.Transform.Position =
+		_fireballObject.SetParent(_caster);
+		_fireballObject.Transform.LocalPosition =
 			CasterEyeOrigin + CastDirection * START_OFFSET;
 	}
 
 	public override void OnFinishCasting()
 	{
 		_timeSincefireballSpawn = 0.0f;
+		_fireballObject.SetParent(null, true);
+		// Reparenting currently messes with interpolation is weird ways that I
+		// haven't bothered reading enough about to understand. But without the
+		// below line, the object will be set to the origin for a few frames
+		// and looks rubbish as it jumps around.
+		_fireballObject.Transform.ClearInterpolation();
 	}
 
 	public override void OnUpdate()
