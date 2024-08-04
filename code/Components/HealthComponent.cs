@@ -18,6 +18,7 @@ public sealed class HealthComponent : Component
 
 	protected override void OnStart()
 	{
+		Alive = true;
 		Health = MaxHealth;
 	}
 
