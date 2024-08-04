@@ -1,7 +1,7 @@
 public sealed class PlayerSpellcastingController : Component
 {
 	[Property]
-	public PlayerController PlayerController { get; set; }
+	public PlayerController PlayerControllerRef { get; set; }
 
 	// NOTE: setting this internally MUST make sure it's valid.
 	private BaseSpell.SpellType _activeSpell = BaseSpell.SpellType.Fireball;
@@ -65,7 +65,7 @@ public sealed class PlayerSpellcastingController : Component
 						_castingSpell.MaxChargeTime,
 					1.0f
 				);
-				_castingSpell.FinishCasting(PlayerController, chargeAmount);
+				_castingSpell.FinishCasting(PlayerControllerRef, chargeAmount);
 				_castingSpell.OnDestroy += OnSpellDestroyed;
 				_castSpells.Add(_castingSpell);
 				// TODO: interesting gameplay question here of:
@@ -82,7 +82,7 @@ public sealed class PlayerSpellcastingController : Component
 				_castingSpell = CreateSpell(_activeSpell);
 				_castingSpellFinishTime = Time.Now + _castingSpell.CastTime;
 				_castingSpellIsHeld = true;
-				_castingSpell.StartCasting(PlayerController);
+				_castingSpell.StartCasting(PlayerControllerRef);
 			}
 		}
 
