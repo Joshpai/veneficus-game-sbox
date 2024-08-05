@@ -3,7 +3,6 @@ public sealed class PlayerSpellcastingController : Component
 	[Property]
 	public PlayerController PlayerControllerRef { get; set; }
 
-	// NOTE: setting this internally MUST make sure it's valid.
 	private BaseSpell.SpellType _activeSpell = BaseSpell.SpellType.Fireball;
 
 	// TODO: is there a better data type for this?
@@ -16,11 +15,16 @@ public sealed class PlayerSpellcastingController : Component
 
 	private float[] _spellNextCastTime;
 
+	private UInt64 _unlockedSpellsMask;
+
 	protected override void OnStart()
 	{
 		// This should be zeroed by definition. It should be noted that this
 		// allocates 2 more floats than necessary, but it's probably fine.
 		_spellNextCastTime = new float[(int)BaseSpell.SpellType.SpellTypeMax];
+		// Default to having all spells unlocked
+		// TODO: This will need to be serialised in some player data thing
+		_unlockedSpellsMask = 0xfffffffffffffffful;
 	}
 
 	private BaseSpell CreateSpell(BaseSpell.SpellType spellType)
@@ -41,9 +45,29 @@ public sealed class PlayerSpellcastingController : Component
 	private bool CanCastSpell(BaseSpell.SpellType spellType)
 	{
 		// TODO: we should also consider mana cost here
+
+		// Spell type is valid
 		return spellType > BaseSpell.SpellType.SpellTypeMin &&
 			   spellType < BaseSpell.SpellType.SpellTypeMax &&
-			   _spellNextCastTime[(int)spellType] <= Time.Now;
+			   // Spell isn't on cooldown
+			   _spellNextCastTime[(int)spellType] <= Time.Now &&
+			   // Spell is unlocked
+			   (_unlockedSpellsMask & (1ul << (int)spellType)) != 0ul;
+	}
+
+	public void SetSpellUnlocked(BaseSpell.SpellType spellType, bool unlocked)
+	{
+		if (unlocked)
+			_unlockedSpellsMask |= (1ul << (int)spellType);
+		else
+			_unlockedSpellsMask &= ~(1ul << (int)spellType);
+	}
+
+	public void SetActiveSpell(BaseSpell.SpellType spellType)
+	{
+		if (spellType > BaseSpell.SpellType.SpellTypeMin &&
+			spellType < BaseSpell.SpellType.SpellTypeMax)
+			_activeSpell = spellType;
 	}
 
 	protected override void OnUpdate()
