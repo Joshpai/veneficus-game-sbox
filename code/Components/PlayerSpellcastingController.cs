@@ -90,6 +90,20 @@ public sealed class PlayerSpellcastingController : Component
 		{
 			_castingSpell.OnFixedUpdate();
 
+			// Cancel the spell
+			if (Input.Pressed("attack2"))
+			{
+				// Even though the spell is cancelled, we still want to service
+				// it as if it wasn't cancelled. We don't really care about the
+				// difference and it just gives a nice way to allow cancel
+				// animations (for example).
+				_castingSpell.OnDestroy += OnSpellDestroyed;
+				_castSpells.Add(_castingSpell);
+				_castingSpell.CancelCasting();
+				_castingSpell = null;
+				// TODO: partial mana refund?
+			}
+
 			_castingSpellIsHeld &= Input.Down("attack1");
 			if (!_castingSpellIsHeld && _castingSpell.CanFinishCasting())
 			{

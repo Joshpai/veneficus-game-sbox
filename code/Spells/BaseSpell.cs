@@ -28,6 +28,7 @@ public abstract class BaseSpell
 	private float _castTime;
 
 	public bool HasFinishedCasting { get; private set; }
+	public bool WasCancelled { get; private set; }
 
 	public BaseSpell(GameObject caster)
 	{
@@ -48,6 +49,7 @@ public abstract class BaseSpell
 	{
 		_castTime = Time.Now;
 		HasFinishedCasting = false;
+		WasCancelled = false;
 		OnStartCasting();
 	}
 
@@ -55,6 +57,11 @@ public abstract class BaseSpell
 	{
 		HasFinishedCasting = true;
 		OnFinishCasting();
+	}
+
+	public void CancelCasting()
+	{
+		WasCancelled = true;
 	}
 
 	public float GetChargeAmount()

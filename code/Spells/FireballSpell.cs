@@ -64,8 +64,21 @@ public class FireballSpell : BaseSpell
 	{
 		if (!HasFinishedCasting)
 		{
-			if (!IsFullyCharged())
+			// TODO: is there a nicer way to create animations
+			if (WasCancelled)
+			{
+				_fireballObject.Transform.LocalScale -= 3.0f * Time.Delta;
+				// Because the scale is the same on all axes, just check one.
+				if (_fireballObject.Transform.LocalScale.x < 0.05f)
+				{
+					OnDestroy?.Invoke(this, EventArgs.Empty);
+					_fireballObject.Destroy();
+				}
+			}
+			else if (!IsFullyCharged())
+			{
 				_fireballObject.Transform.LocalScale += 1.0f * Time.Delta;
+			}
 		}
 		else
 		{
