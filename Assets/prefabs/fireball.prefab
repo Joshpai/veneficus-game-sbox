@@ -19,14 +19,14 @@
         "__guid": "f3459cca-3efa-4b86-b3f2-917243f2d42f",
         "Center": "0,0,0",
         "IsTrigger": false,
-        "Radius": 10,
+        "Radius": 32.90002,
         "Static": false
       },
       {
         "__type": "FireballCollisionComponent",
         "__guid": "27f8579a-94fb-4f6b-b1d1-ee2fce65a1b5",
         "ContactDamage": 50,
-        "DamageMultiplier": 1
+        "SplashDamage": 20
       }
     ],
     "Children": [],
