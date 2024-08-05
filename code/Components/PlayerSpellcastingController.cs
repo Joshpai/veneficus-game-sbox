@@ -101,6 +101,16 @@ public sealed class PlayerSpellcastingController : Component
 			ActiveSpell = spellType;
 	}
 
+	public float GetActiveSpellCost()
+	{
+		return _spellBuffer[(int)ActiveSpell].ManaCost;
+	}
+
+	public float GetActiveSpellCooldown()
+	{
+		return Math.Max(_spellNextCastTime[(int)ActiveSpell] - Time.Now, 0.0f);
+	}
+
 	protected override void OnUpdate()
 	{
 		if (_castingSpell != null)
