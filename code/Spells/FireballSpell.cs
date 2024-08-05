@@ -4,6 +4,7 @@ public class FireballSpell : BaseSpell
 	public override float Cooldown => 2.0f;
 	public override float CastTime => 0.3f;
 	public override float MaxChargeTime => 0.5f;
+	public override float SpellSpeed => 300.0f;
 
 	public override event EventHandler OnDestroy;
 
@@ -11,7 +12,6 @@ public class FireballSpell : BaseSpell
 	private TimeSince _timeSincefireballSpawn;
 
 	const float START_OFFSET = 50.0f;
-	const float SPEED = 300.0f;
 	const float DURATION = 5.0f;
 
 	public FireballSpell(GameObject caster)
@@ -78,7 +78,7 @@ public class FireballSpell : BaseSpell
 			if (_fireballObject != null)
 			{
 				_fireballObject.Transform.Position +=
-					CastDirection * SPEED * Time.Delta;
+					CastDirection * SpellSpeed * Time.Delta;
 			}
 		}
 	}

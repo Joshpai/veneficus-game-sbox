@@ -15,6 +15,7 @@ public abstract class BaseSpell
 	// This is the "additional" charge time (after the cast is ready), so total
 	// time to charge fully is CastTime + MaxChargeTime.
 	public abstract float MaxChargeTime { get; }
+	public abstract float SpellSpeed { get; }
 
 	public abstract event EventHandler OnDestroy;
 
