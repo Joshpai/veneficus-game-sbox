@@ -61,6 +61,30 @@
           "go": "b650359f-3468-4456-b249-1e8c3686c0cf",
           "component_type": "PlayerController"
         }
+      },
+      {
+        "__type": "Sandbox.ScreenPanel",
+        "__guid": "1c81a55e-0bb1-4a4c-a2bd-de90c433e952",
+        "AutoScreenScale": true,
+        "Opacity": 1,
+        "Scale": 1,
+        "ZIndex": 100
+      },
+      {
+        "__type": "PlayerStats",
+        "__guid": "7561d536-0d8f-4f85-aefd-3bb918027e5c",
+        "Health": {
+          "_type": "component",
+          "component_id": "c83f3b30-ed4a-4ad7-b0b4-e6acac06664d",
+          "go": "b650359f-3468-4456-b249-1e8c3686c0cf",
+          "component_type": "HealthComponent"
+        },
+        "Spellcasting": {
+          "_type": "component",
+          "component_id": "06d5e6b4-10f6-4af0-a0d9-55593bbf8591",
+          "go": "b650359f-3468-4456-b249-1e8c3686c0cf",
+          "component_type": "PlayerSpellcastingController"
+        }
       }
     ],
     "Children": [
