@@ -4,6 +4,7 @@ public class FireballSpell : BaseSpell
 	public override float Cooldown => 2.0f;
 	public override float CastTime => 0.3f;
 	public override float MaxChargeTime => 0.5f;
+	public override float SpellMass => 100.0f;
 	public override float SpellSpeed => 300.0f;
 
 	public override event EventHandler OnDestroy;

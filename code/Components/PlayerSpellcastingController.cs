@@ -70,6 +70,12 @@ public sealed class PlayerSpellcastingController : Component
 			if (!_castingSpellIsHeld && _castingSpell.CanFinishCasting())
 			{
 				_castingSpell.FinishCasting();
+				// TODO: replace magic 100 with "PlayerWeight" or something
+				var pushback =
+					_castingSpell.SpellMass * _castingSpell.SpellSpeed /
+					100.0f * (1.0f + _castingSpell.GetChargeAmount()) *
+					-PlayerControllerRef.EyeAngles.Forward;
+				PlayerControllerRef.Controller.Punch(pushback);
 				_castingSpell.OnDestroy += OnSpellDestroyed;
 				_castSpells.Add(_castingSpell);
 				// TODO: interesting gameplay question here of:
