@@ -10,7 +10,7 @@ public sealed class ExplosionManagerComponent : Component
 	public float ExplosionDamage { get; set; } = 20.0f;
 
 	[Property]
-	public float ImpulseForce { get; set; } = 10000.0f;
+	public float ImpulseForce { get; set; } = 500000.0f;
 
 	public float DamageMultiplier { get; set; } = 1.0f;
 
@@ -25,7 +25,6 @@ public sealed class ExplosionManagerComponent : Component
 		// is on the other side of a thick wall but the explosion radius gets
 		// them then they will take full damage.
 		// TODO: also add some distance-based damage drop-off?
-		// TODO: add some knockback to all hit entities.
 		// TODO: create custom particles (using placeholder currently)
 
 		foreach (var hit in trace)
@@ -44,7 +43,7 @@ public sealed class ExplosionManagerComponent : Component
 			var rigidBody = hit.GameObject.Components
 										  .GetInDescendantsOrSelf<Rigidbody>();
 			if (rigidBody != null)
-				rigidBody.ApplyImpulse(explosionToHit * ImpulseForce);
+				rigidBody.ApplyImpulse(explosionToHit.Normal * ImpulseForce);
 		}
 	}
 }

@@ -11,7 +11,8 @@
         "__guid": "0bcd8462-70c5-4682-a9ca-34b7bf87f260",
         "ExplosionDamage": 20,
         "ExplosionOrigin": "0,0,0",
-        "ExplosionRadius": 100
+        "ExplosionRadius": 100,
+        "ImpulseForce": 500000
       },
       {
         "__type": "Sandbox.ParticleEffect",
