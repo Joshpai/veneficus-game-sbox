@@ -17,6 +17,13 @@ public sealed class PlayerSpellcastingController : Component
 
 	private UInt64 _unlockedSpellsMask;
 
+	// This makes a strange architectural format for the spell system. I really
+	// want to know things like `ManaCost` without needing an object but C#
+	// doesn't allow static abstract members. To get around this, and also
+	// avoid many random allocations, we just create a big buffer of all the
+	// spells and just grab the one we need (and replace it).
+	private BaseSpell[] _spellBuffer;
+
 	protected override void OnStart()
 	{
 		// This should be zeroed by definition. It should be noted that this
@@ -25,6 +32,10 @@ public sealed class PlayerSpellcastingController : Component
 		// Default to having all spells unlocked
 		// TODO: This will need to be serialised in some player data thing
 		_unlockedSpellsMask = 0xfffffffffffffffful;
+
+		_spellBuffer = new BaseSpell[(int)BaseSpell.SpellType.SpellTypeMax];
+		for (int i = 0; i < _spellBuffer.Length; i++)
+			_spellBuffer[i] = CreateSpell((BaseSpell.SpellType)i);
 	}
 
 	private BaseSpell CreateSpell(BaseSpell.SpellType spellType)
@@ -127,7 +138,9 @@ public sealed class PlayerSpellcastingController : Component
 		{
 			if (CanCastSpell(_activeSpell))
 			{
-				_castingSpell = CreateSpell(_activeSpell);
+				_castingSpell = _spellBuffer[(int)_activeSpell];
+				_spellBuffer[(int)_activeSpell] = CreateSpell(_activeSpell);
+
 				_castingSpell.CasterEyeOrigin = PlayerControllerRef.EyePosition;
 				_castingSpell.CastDirection =
 					PlayerControllerRef.EyeAngles.Forward;
