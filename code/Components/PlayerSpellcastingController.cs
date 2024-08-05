@@ -3,6 +3,22 @@ public sealed class PlayerSpellcastingController : Component
 	[Property]
 	public PlayerController PlayerControllerRef { get; set; }
 
+	[Property]
+	public float MaxMana { get; set; } = 100.0f;
+
+	[Property]
+	public float ManaRefundAmount { get; set; } = 0.5f;
+
+	// Mana per second
+	[Property]
+	public float ManaRegenRate { get; set; } = 5.0f;
+
+	// Time after casting when mana regens
+	[Property]
+	public float ManaRegenDelay { get; set; } = 1.0f;
+
+	public float Mana { get; set; }
+
 	private BaseSpell.SpellType _activeSpell = BaseSpell.SpellType.Fireball;
 
 	// TODO: is there a better data type for this?
@@ -14,8 +30,9 @@ public sealed class PlayerSpellcastingController : Component
 	private bool _castingSpellIsHeld;
 
 	private float[] _spellNextCastTime;
-
 	private UInt64 _unlockedSpellsMask;
+
+	private float _manaRegenStartTime;
 
 	// This makes a strange architectural format for the spell system. I really
 	// want to know things like `ManaCost` without needing an object but C#
@@ -36,6 +53,9 @@ public sealed class PlayerSpellcastingController : Component
 		_spellBuffer = new BaseSpell[(int)BaseSpell.SpellType.SpellTypeMax];
 		for (int i = 0; i < _spellBuffer.Length; i++)
 			_spellBuffer[i] = CreateSpell((BaseSpell.SpellType)i);
+
+		Mana = MaxMana;
+		_manaRegenStartTime = 0.0f;
 	}
 
 	private BaseSpell CreateSpell(BaseSpell.SpellType spellType)
@@ -55,15 +75,14 @@ public sealed class PlayerSpellcastingController : Component
 
 	private bool CanCastSpell(BaseSpell.SpellType spellType)
 	{
-		// TODO: we should also consider mana cost here
-
 		// Spell type is valid
 		return spellType > BaseSpell.SpellType.SpellTypeMin &&
 			   spellType < BaseSpell.SpellType.SpellTypeMax &&
 			   // Spell isn't on cooldown
 			   _spellNextCastTime[(int)spellType] <= Time.Now &&
 			   // Spell is unlocked
-			   (_unlockedSpellsMask & (1ul << (int)spellType)) != 0ul;
+			   (_unlockedSpellsMask & (1ul << (int)spellType)) != 0ul &&
+			   Mana >= _spellBuffer[(int)spellType].ManaCost;
 	}
 
 	public void SetSpellUnlocked(BaseSpell.SpellType spellType, bool unlocked)
@@ -97,6 +116,9 @@ public sealed class PlayerSpellcastingController : Component
 
 	protected override void OnFixedUpdate()
 	{
+		if (_manaRegenStartTime <= Time.Now && Mana < MaxMana)
+			Mana = Math.Min(Mana + ManaRegenRate * Time.Delta, MaxMana);
+
 		if (_castingSpell != null)
 		{
 			_castingSpell.OnFixedUpdate();
@@ -111,13 +133,16 @@ public sealed class PlayerSpellcastingController : Component
 				_castingSpell.OnDestroy += OnSpellDestroyed;
 				_castSpells.Add(_castingSpell);
 				_castingSpell.CancelCasting();
+				Mana += _castingSpell.ManaCost * ManaRefundAmount;
+				// Cancel => start regen immediately?
+				_manaRegenStartTime = Time.Now;
 				_castingSpell = null;
-				// TODO: partial mana refund?
 			}
 
 			_castingSpellIsHeld &= Input.Down("attack1");
 			if (!_castingSpellIsHeld && _castingSpell.CanFinishCasting())
 			{
+				// TODO: fully charged spells should cost more mana (maybe?)
 				_castingSpell.FinishCasting();
 				// TODO: replace magic 100 with "PlayerWeight" or something
 				var pushback =
@@ -127,6 +152,7 @@ public sealed class PlayerSpellcastingController : Component
 				PlayerControllerRef.Controller.Punch(pushback);
 				_castingSpell.OnDestroy += OnSpellDestroyed;
 				_castSpells.Add(_castingSpell);
+				_manaRegenStartTime = Time.Now + ManaRegenDelay;
 				// TODO: interesting gameplay question here of:
 				// "does cancelling a cast result in no cooldown?"
 				_spellNextCastTime[(int)_activeSpell] =
@@ -140,6 +166,10 @@ public sealed class PlayerSpellcastingController : Component
 			{
 				_castingSpell = _spellBuffer[(int)_activeSpell];
 				_spellBuffer[(int)_activeSpell] = CreateSpell(_activeSpell);
+
+				// TODO: it would be cool if this is progressively taken during
+				// the casting process. But that's not needed for now.
+				Mana -= _castingSpell.ManaCost;
 
 				_castingSpell.CasterEyeOrigin = PlayerControllerRef.EyePosition;
 				_castingSpell.CastDirection =
