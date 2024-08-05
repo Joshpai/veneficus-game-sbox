@@ -116,8 +116,6 @@ public sealed class PlayerSpellcastingController : Component
 
 	protected override void OnFixedUpdate()
 	{
-		if (_manaRegenStartTime <= Time.Now && Mana < MaxMana)
-			Mana = Math.Min(Mana + ManaRegenRate * Time.Delta, MaxMana);
 
 		if (_castingSpell != null)
 		{
@@ -177,6 +175,11 @@ public sealed class PlayerSpellcastingController : Component
 				_castingSpell.StartCasting();
 				_castingSpellIsHeld = true;
 			}
+		}
+		// Implicit preconditions include that we aren't casting a spell now
+		else if (_manaRegenStartTime <= Time.Now && Mana < MaxMana)
+		{
+			Mana = Math.Min(Mana + ManaRegenRate * Time.Delta, MaxMana);
 		}
 
 		foreach (BaseSpell spell in _castSpells)
