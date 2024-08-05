@@ -19,7 +19,7 @@ public sealed class PlayerSpellcastingController : Component
 
 	public float Mana { get; set; }
 
-	private BaseSpell.SpellType _activeSpell = BaseSpell.SpellType.Fireball;
+	public BaseSpell.SpellType ActiveSpell { get; private set; }
 
 	// TODO: is there a better data type for this?
 	private List<BaseSpell> _castSpells = new List<BaseSpell>();
@@ -50,6 +50,7 @@ public sealed class PlayerSpellcastingController : Component
 		// TODO: This will need to be serialised in some player data thing
 		_unlockedSpellsMask = 0xfffffffffffffffful;
 
+		ActiveSpell = BaseSpell.SpellType.Fireball;
 		_spellBuffer = new BaseSpell[(int)BaseSpell.SpellType.SpellTypeMax];
 		for (int i = 0; i < _spellBuffer.Length; i++)
 			_spellBuffer[i] = CreateSpell((BaseSpell.SpellType)i);
@@ -97,7 +98,7 @@ public sealed class PlayerSpellcastingController : Component
 	{
 		if (spellType > BaseSpell.SpellType.SpellTypeMin &&
 			spellType < BaseSpell.SpellType.SpellTypeMax)
-			_activeSpell = spellType;
+			ActiveSpell = spellType;
 	}
 
 	protected override void OnUpdate()
@@ -153,17 +154,17 @@ public sealed class PlayerSpellcastingController : Component
 				_manaRegenStartTime = Time.Now + ManaRegenDelay;
 				// TODO: interesting gameplay question here of:
 				// "does cancelling a cast result in no cooldown?"
-				_spellNextCastTime[(int)_activeSpell] =
+				_spellNextCastTime[(int)ActiveSpell] =
 					Time.Now + _castingSpell.Cooldown;
 				_castingSpell = null;
 			}
 		}
 		else if (Input.Pressed("attack1"))
 		{
-			if (CanCastSpell(_activeSpell))
+			if (CanCastSpell(ActiveSpell))
 			{
-				_castingSpell = _spellBuffer[(int)_activeSpell];
-				_spellBuffer[(int)_activeSpell] = CreateSpell(_activeSpell);
+				_castingSpell = _spellBuffer[(int)ActiveSpell];
+				_spellBuffer[(int)ActiveSpell] = CreateSpell(ActiveSpell);
 
 				// TODO: it would be cool if this is progressively taken during
 				// the casting process. But that's not needed for now.
