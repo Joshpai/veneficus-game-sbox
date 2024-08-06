@@ -50,7 +50,7 @@ public sealed class PlayerSpellcastingController : Component
 		// TODO: This will need to be serialised in some player data thing
 		_unlockedSpellsMask = 0xfffffffffffffffful;
 
-		ActiveSpell = BaseSpell.SpellType.Polymorph;
+		ActiveSpell = BaseSpell.SpellType.SpellTypeMin + 1;
 		_spellBuffer = new BaseSpell[(int)BaseSpell.SpellType.SpellTypeMax];
 		for (int i = 0; i < _spellBuffer.Length; i++)
 			_spellBuffer[i] = CreateSpell((BaseSpell.SpellType)i);
@@ -128,6 +128,17 @@ public sealed class PlayerSpellcastingController : Component
 
 	protected override void OnFixedUpdate()
 	{
+		// This is very ugly because C# forces explicit casting :(
+		if (Input.Pressed("SlotNext"))
+			ActiveSpell =
+				((int)ActiveSpell + 1 < (int)BaseSpell.SpellType.SpellTypeMax)
+				? (BaseSpell.SpellType)((int)ActiveSpell + 1)
+				: BaseSpell.SpellType.SpellTypeMin + 1;
+		else if (Input.Pressed("SlotPrev"))
+			ActiveSpell =
+				((int)ActiveSpell - 1 > (int)BaseSpell.SpellType.SpellTypeMin)
+				? (BaseSpell.SpellType)((int)ActiveSpell - 1)
+				: BaseSpell.SpellType.SpellTypeMax - 1;
 
 		if (_castingSpell != null)
 		{
