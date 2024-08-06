@@ -5,6 +5,7 @@ public abstract class BaseSpell
 		SpellTypeMin,
 		// The above must be at the front, so add new types below here!
 		Fireball,
+		Polymorph,
 		// The below must be at the end, so add new types above here!
 		SpellTypeMax
 	}

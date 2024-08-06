@@ -47,6 +47,8 @@ public class FireballSpell : BaseSpell
 		_fireballObject.Transform.ClearInterpolation();
 
 		// Update the fireball damage according to the charge amount
+		// TODO: get this earlier and only enable it now? Or better handle this
+		// destroying us before the spellcasting controller expects.
 		var collisionComponent = _fireballObject.Components.Get<FireballCollisionComponent>();
 		collisionComponent.DamageMultiplier *= (1 + GetChargeAmount());
 	}

@@ -50,7 +50,7 @@ public sealed class PlayerSpellcastingController : Component
 		// TODO: This will need to be serialised in some player data thing
 		_unlockedSpellsMask = 0xfffffffffffffffful;
 
-		ActiveSpell = BaseSpell.SpellType.Fireball;
+		ActiveSpell = BaseSpell.SpellType.Polymorph;
 		_spellBuffer = new BaseSpell[(int)BaseSpell.SpellType.SpellTypeMax];
 		for (int i = 0; i < _spellBuffer.Length; i++)
 			_spellBuffer[i] = CreateSpell((BaseSpell.SpellType)i);
@@ -65,6 +65,7 @@ public sealed class PlayerSpellcastingController : Component
 		return spellType switch
 		{
 			BaseSpell.SpellType.Fireball => new FireballSpell(caster),
+			BaseSpell.SpellType.Polymorph => new PolymorphSpell(caster),
 			_ => null,
 		};
 	}
