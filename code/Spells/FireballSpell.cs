@@ -10,7 +10,7 @@ public class FireballSpell : BaseSpell
 	public override event EventHandler OnDestroy;
 
 	private GameObject _fireballObject;
-	private TimeSince _timeSincefireballSpawn;
+	private TimeSince _timeSinceFireballSpawn;
 
 	const float START_OFFSET = 50.0f;
 	const float DURATION = 5.0f;
@@ -38,7 +38,7 @@ public class FireballSpell : BaseSpell
 
 	public override void OnFinishCasting()
 	{
-		_timeSincefireballSpawn = 0.0f;
+		_timeSinceFireballSpawn = 0.0f;
 		_fireballObject.SetParent(null, true);
 		// Reparenting currently messes with interpolation is weird ways that I
 		// haven't bothered reading enough about to understand. But without the
@@ -83,7 +83,7 @@ public class FireballSpell : BaseSpell
 		else
 		{
 			// Despawn after 5 seconds
-			if (_timeSincefireballSpawn >= DURATION)
+			if (_timeSinceFireballSpawn >= DURATION)
 			{
 				OnDestroy?.Invoke(this, EventArgs.Empty);
 				_fireballObject.Destroy();
