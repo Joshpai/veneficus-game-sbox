@@ -128,19 +128,4 @@ public sealed class PlayerMovementController : Component
 		_cameraReference = new Transform(EyePosition + CameraFollowPosition,
 										 Transform.Rotation);
 	}
-
-	protected override void OnEnabled()
-	{
-		base.OnEnabled();
-	}
-
-	protected override void OnDisabled()
-	{
-		base.OnDisabled();
-	}
-
-	protected override void OnDestroy()
-	{
-		base.OnDestroy();
-	}
 }
