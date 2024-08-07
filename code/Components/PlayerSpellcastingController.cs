@@ -1,7 +1,7 @@
 public sealed class PlayerSpellcastingController : Component
 {
 	[Property]
-	public PlayerController PlayerControllerRef { get; set; }
+	public PlayerMovementController PlayerMovementControllerRef { get; set; }
 
 	[Property]
 	public float MaxMana { get; set; } = 100.0f;
@@ -77,6 +77,8 @@ public sealed class PlayerSpellcastingController : Component
 
 	private bool CanCastSpell(BaseSpell.SpellType spellType)
 	{
+		// TODO: don't let player cast spells if polymorphed!
+
 		// Spell type is valid
 		return spellType > BaseSpell.SpellType.SpellTypeMin &&
 			   spellType < BaseSpell.SpellType.SpellTypeMax &&
@@ -116,7 +118,8 @@ public sealed class PlayerSpellcastingController : Component
 	{
 		if (_castingSpell != null)
 		{
-			_castingSpell.CastDirection = PlayerControllerRef.EyeAngles.Forward;
+			_castingSpell.CastDirection =
+				PlayerMovementControllerRef.EyeAngles.Forward;
 			_castingSpell.OnUpdate();
 		}
 
@@ -169,8 +172,8 @@ public sealed class PlayerSpellcastingController : Component
 				var pushback =
 					_castingSpell.SpellMass * _castingSpell.SpellSpeed /
 					100.0f * (1.0f + _castingSpell.GetChargeAmount()) *
-					-PlayerControllerRef.EyeAngles.Forward;
-				PlayerControllerRef.Controller.Punch(pushback);
+					-PlayerMovementControllerRef.EyeAngles.Forward;
+				PlayerMovementControllerRef.Controller.Punch(pushback);
 				_castingSpell.OnDestroy += OnSpellDestroyed;
 				_castSpells.Add(_castingSpell);
 				_manaRegenStartTime = Time.Now + ManaRegenDelay;
@@ -192,9 +195,10 @@ public sealed class PlayerSpellcastingController : Component
 				// the casting process. But that's not needed for now.
 				Mana -= _castingSpell.ManaCost;
 
-				_castingSpell.CasterEyeOrigin = PlayerControllerRef.EyePosition;
+				_castingSpell.CasterEyeOrigin =
+					PlayerMovementControllerRef.EyePosition;
 				_castingSpell.CastDirection =
-					PlayerControllerRef.EyeAngles.Forward;
+					PlayerMovementControllerRef.EyeAngles.Forward;
 				_castingSpell.StartCasting();
 				_castingSpellIsHeld = true;
 			}

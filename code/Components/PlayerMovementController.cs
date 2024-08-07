@@ -1,6 +1,6 @@
 using Sandbox.Citizen;
 
-public sealed class PlayerController : Component
+public sealed class PlayerMovementController : Component
 {
 	[Property]
 	public GameObject Body { get; set; }
@@ -113,9 +113,9 @@ public sealed class PlayerController : Component
 		base.OnStart();
 
 		if (Body == null || Camera == null || Controller == null)
-			throw new ArgumentException("PlayerController must have all of " +
-										"Body, Camera, Controller set to " +
-										"some value!");
+			throw new ArgumentException("PlayerMovementController must have " +
+										"all of Body, Camera, Controller " +
+										"set to some value!");
 
 		_animationHelper = Body.Components.Get<CitizenAnimationHelper>();
 		if (_animationHelper == null)

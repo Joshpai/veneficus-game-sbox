@@ -18,7 +18,7 @@
         "UseCollisionRules": false
       },
       {
-        "__type": "PlayerController",
+        "__type": "PlayerMovementController",
         "__guid": "8b1cbddb-d250-48f9-8481-5e1002d93f6a",
         "Body": {
           "_type": "gameobject",
@@ -55,11 +55,11 @@
         "ManaRegenDelay": 5,
         "ManaRegenRate": 5,
         "MaxMana": 100,
-        "PlayerControllerRef": {
+        "PlayerMovementControllerRef": {
           "_type": "component",
           "component_id": "8b1cbddb-d250-48f9-8481-5e1002d93f6a",
           "go": "b650359f-3468-4456-b249-1e8c3686c0cf",
-          "component_type": "PlayerController"
+          "component_type": "PlayerMovementController"
         }
       },
       {
