@@ -30,6 +30,7 @@
         },
         "CameraFollowDirection": "-1,0,0",
         "CameraFollowDistance": 125,
+        "CameraHeightInterpolationRate": 8,
         "CameraPitchClamp": 85,
         "Controller": {
           "_type": "component",
@@ -38,8 +39,12 @@
           "component_type": "CharacterController"
         },
         "HumanEyePosition": "0,0,62",
-        "JumpStrength": 273,
+        "HumanMass": 80,
+        "InitialJumpAmount": 0.5,
+        "JumpDuration": 0.8,
+        "MaxJumpHoldLength": 0.3,
         "PolymorphedEyePosition": "0,0,20",
+        "PolymorphedMass": 10,
         "WalkSpeed": 250
       },
       {

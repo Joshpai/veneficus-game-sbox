@@ -35,8 +35,31 @@ public sealed class PlayerMovementController : Component
 	[Property]
 	public float WalkSpeed { get; set; } = 250.0f;
 
+	// In a full jump, how long should the player be in the air for? In reality
+	// this will actually be a little shorter than set here as we make some
+	// inaccurate assumptions in calculations - but it's approximately right.
 	[Property]
-	public float JumpStrength { get; set; } = 273.0f;
+	public float JumpDuration { get; set; } = 0.8f;
+
+	// How long do we hold jump to get a max jump?
+	[Property]
+	public float MaxJumpHoldLength { get; set; } = 0.3f;
+
+	// What percentage of the total jump force is exerted instantaneously?
+	[Property]
+	public float InitialJumpAmount { get; set; } = 0.5f;
+
+	[Property]
+	public float HumanMass { get; set; } = 80.0f;
+
+	[Property]
+	public float PolymorphedMass { get; set; } = 10.0f;
+
+	private float _currentMass;
+
+	int _airJumpRemainingTicks;
+	Vector3 _airJumpForce;
+	bool _canAirJump;
 
 	private Vector3 _cameraFollowDirectionNormalised;
 
@@ -64,6 +87,10 @@ public sealed class PlayerMovementController : Component
 									 : HumanEyePosition;
 		_cameraReference = _isPolymorphed ? _cameraReferencePolymorphed
 										  : _cameraReferenceHuman;
+
+		_currentMass = _isPolymorphed ? PolymorphedMass : HumanMass;
+
+		// TODO: update controller: height & bounding box
 	}
 
 	protected override void DrawGizmos()
@@ -122,6 +149,35 @@ public sealed class PlayerMovementController : Component
 		Camera.Transform.Rotation = cameraTransform.Rotation;
 	}
 
+	// Short dump on design justification for this feature:
+	// I want to allow players to jump as a human, polymorph, and jump
+	// higher as a result. This makes sense if the exact instant they
+	// exert force to jump, they become a frog (F_net = F_jump - mg).
+	// To make this easier to achieve, we steal 2D platformer tech and
+	// exert the jump force over a few ticks, and only if the jump
+	// button is held. We get the second part for free honestly, and it
+	// might make platforming for speed faster and more skillful.
+	private void GroundJump()
+	{
+		// This is derived from suvat: s = ut - 0.5at^2 => u = 0.5at (s=0)
+		var vel = 0.5f * -Scene.PhysicsWorld.Gravity * JumpDuration;
+		// F = ma = mv / t
+		var jumpForce = (vel / Time.Delta) * _currentMass;
+		var groundJumpForce = InitialJumpAmount * jumpForce;
+
+		_airJumpRemainingTicks = (int)(MaxJumpHoldLength / Time.Delta);
+		_airJumpForce = (1.0f - InitialJumpAmount) * jumpForce;
+		_airJumpForce /= _airJumpRemainingTicks;
+
+		_canAirJump = true;
+		Controller.Punch(groundJumpForce * Time.Delta / _currentMass);
+	}
+
+	private void AirJump()
+	{
+		Controller.Velocity += _airJumpForce * Time.Delta / _currentMass;
+	}
+
 	protected override void OnFixedUpdate()
 	{
 		base.OnFixedUpdate();
@@ -134,13 +190,16 @@ public sealed class PlayerMovementController : Component
 
 			Controller.ApplyFriction(5.0f, 20.0f);
 
+			// TODO: also allow coyote frames
 			if (Input.Pressed("Jump"))
-			{
-				Controller.Punch(Vector3.Up * JumpStrength);
-			}
+				GroundJump();
 		}
 		else
 		{
+			_canAirJump &= Input.Down("Jump");
+			if (_canAirJump && (_airJumpRemainingTicks--) > 0)
+				AirJump();
+
 			Controller.Velocity += Scene.PhysicsWorld.Gravity * Time.Delta;
 		}
 
@@ -180,5 +239,6 @@ public sealed class PlayerMovementController : Component
 		EyePosition = HumanEyePosition;
 		_cameraReference = _cameraReferenceHuman;
 		_cameraReferenceInterpolated = _cameraReference;
+		_currentMass = HumanMass;
 	}
 }
