@@ -9,11 +9,14 @@ public class PolymorphSpell : BaseSpell
 
 	public override event EventHandler OnDestroy;
 
+	private PlayerMovementController _playerMovementController;
 	private ModelRenderer _modelRenderer;
 	private String _modelPath = "models/citizen_props/beachball.vmdl";
 	private Model _model;
 	private Model _oldModel;
 
+	// TODO: I think I prefer giving the user control over polymorphing back by
+	// casting the spell again, but this might be tricky to fit in.
 	private TimeSince _timeSincePolymorphed;
 	private float _spellDuration = 3.0f;
 
@@ -22,6 +25,10 @@ public class PolymorphSpell : BaseSpell
 	public PolymorphSpell(GameObject caster)
 		: base(caster)
 	{
+		_playerMovementController =
+			_caster.Components
+				   .GetInDescendantsOrSelf<PlayerMovementController>();
+
 		_model = Model.Load(_modelPath);
 		_modelRenderer = _caster.Components
 								.GetInDescendantsOrSelf<ModelRenderer>();
@@ -43,6 +50,8 @@ public class PolymorphSpell : BaseSpell
 		_smokePuff.UpdateFromPrefab();
 
 		// TODO: update camera follow position to be lower
+		if (_playerMovementController != null)
+			_playerMovementController.TogglePolymorph();
 	 }
 
 	public override void OnStartCasting()

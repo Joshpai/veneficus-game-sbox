@@ -12,6 +12,11 @@ public sealed class PlayerMovementController : Component
 	public CharacterController Controller { get; set; }
 
 	[Property]
+	public Vector3 HumanEyePosition { get; set; }
+
+	[Property]
+	public Vector3 PolymorphedEyePosition { get; set; }
+
 	public Vector3 EyePosition { get; set; }
 
 	// NOTE: Not necessarily normalised!
@@ -38,8 +43,26 @@ public sealed class PlayerMovementController : Component
 	public Angles EyeAngles = new Angles();
 
 	private Transform _cameraReference;
+	private Transform _cameraReferenceHuman;
+	private Transform _cameraReferencePolymorphed;
 
 	private CitizenAnimationHelper _animationHelper;
+
+	private bool _isPolymorphed;
+
+	public void TogglePolymorph()
+	{
+		// We aren't in charge of changing the model here, just the behaviour
+		// of the player movement itself.
+		_isPolymorphed = !_isPolymorphed;
+
+		EyePosition = _isPolymorphed ? PolymorphedEyePosition
+									 : HumanEyePosition;
+		// TODO: can we give the camera position some LERP? Such a large snap
+		// is a bit jarring.
+		_cameraReference = _isPolymorphed ? _cameraReferencePolymorphed
+										  : _cameraReferenceHuman;
+	}
 
 	protected override void DrawGizmos()
 	{
@@ -48,12 +71,14 @@ public sealed class PlayerMovementController : Component
 		if (!Gizmo.IsSelected)
 			return;
 
-		Gizmo.Draw.LineSphere(EyePosition, 10.0f);
+		Gizmo.Draw.LineSphere(HumanEyePosition, 10.0f);
+		Gizmo.Draw.LineSphere(PolymorphedEyePosition, 10.0f);
 		// NOTE: this function is called outside of a context with `OnStart`,
 		// so we need to do this calculation ourselves, which is fine because
 		// we don't care about being super fast here.
 		Gizmo.Draw.LineSphere(
-			EyePosition + CameraFollowDirection.Normal * CameraFollowDistance,
+			HumanEyePosition + CameraFollowDirection.Normal *
+							   CameraFollowDistance,
 			10.0f
 		);
 	}
@@ -125,7 +150,19 @@ public sealed class PlayerMovementController : Component
 		// effect of caching this is that we can't edit this value live. Maybe
 		// worth only including this "optimisation" iff we're in Release?
 		_cameraFollowDirectionNormalised = CameraFollowDirection.Normal;
-		_cameraReference = new Transform(EyePosition + CameraFollowPosition,
-										 Transform.Rotation);
+		_cameraReferenceHuman = new Transform(
+				HumanEyePosition + CameraFollowPosition,
+				// TODO: should this be FollowPosition.LookAt(EyePosition)?
+				Transform.Rotation
+		);
+		_cameraReferencePolymorphed = new Transform(
+				PolymorphedEyePosition + CameraFollowPosition,
+				Transform.Rotation
+		);
+
+		_isPolymorphed = false;
+		EyePosition = HumanEyePosition;
+		_cameraReference = _cameraReferenceHuman;
+
 	}
 }
