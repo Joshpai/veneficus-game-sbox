@@ -75,9 +75,9 @@ public sealed class PlayerMovementController : Component
 
 	private float _currentMass;
 
-	int _airJumpRemainingTicks;
-	Vector3 _airJumpForce;
-	bool _canAirJump;
+	private int _airJumpRemainingTicks;
+	private Vector3 _airJumpForce;
+	private bool _canAirJump;
 
 	private Vector3 _cameraFollowDirectionNormalised;
 
