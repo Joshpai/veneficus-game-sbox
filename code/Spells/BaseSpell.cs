@@ -19,6 +19,8 @@ public abstract class BaseSpell
 	// A heavier spell will push the player back more on cast.
 	public abstract float SpellMass { get; }
 	public abstract float SpellSpeed { get; }
+	// Stateful spells must be kept in memory and reused (i.e., are singletons)
+	public abstract bool IsStateful { get; }
 
 	public abstract event EventHandler OnDestroy;
 

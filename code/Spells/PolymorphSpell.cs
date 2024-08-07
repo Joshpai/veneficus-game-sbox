@@ -6,21 +6,15 @@ public class PolymorphSpell : BaseSpell
 	public override float MaxChargeTime => 0.3f;
 	public override float SpellMass => 0.0f;
 	public override float SpellSpeed => 0.0f;
+	public override bool IsStateful => true;
 
 	public override event EventHandler OnDestroy;
 
 	private PlayerMovementController _playerMovementController;
 	private ModelRenderer _modelRenderer;
 	private String _modelPath = "models/citizen_props/beachball.vmdl";
-	private Model _model;
-	private Model _oldModel;
-
-	// TODO: I think I prefer giving the user control over polymorphing back by
-	// casting the spell again, but this might be tricky to fit in.
-	private TimeSince _timeSincePolymorphed;
-	private float _spellDuration = 3.0f;
-
-	private bool _canPolymorphBack;
+	private Model _nextModel;
+	private Model _currentModel;
 
 	public PolymorphSpell(GameObject caster)
 		: base(caster)
@@ -29,10 +23,10 @@ public class PolymorphSpell : BaseSpell
 			_caster.Components
 				   .GetInDescendantsOrSelf<PlayerMovementController>();
 
-		_model = Model.Load(_modelPath);
 		_modelRenderer = _caster.Components
 								.GetInDescendantsOrSelf<ModelRenderer>();
-		_canPolymorphBack = false;
+		_currentModel = _modelRenderer.Model;
+		_nextModel = Model.Load(_modelPath);
 	}
 
 	private void ChangeModel(Model to)
@@ -40,7 +34,6 @@ public class PolymorphSpell : BaseSpell
 		if (_modelRenderer == null)
 			return;
 
-		_oldModel = _modelRenderer.Model;
 		_modelRenderer.Model = to;
 
 		// TODO: would be nice if the smoke puff followed the player.
@@ -49,7 +42,6 @@ public class PolymorphSpell : BaseSpell
 		_smokePuff.SetPrefabSource("prefabs/SmokePuff.prefab");
 		_smokePuff.UpdateFromPrefab();
 
-		// TODO: update camera follow position to be lower
 		if (_playerMovementController != null)
 			_playerMovementController.TogglePolymorph();
 	 }
@@ -65,10 +57,11 @@ public class PolymorphSpell : BaseSpell
 
 	public override void OnFinishCasting()
 	{
-		_timeSincePolymorphed = 0.0f;
-		_canPolymorphBack = true;
-		_spellDuration *= (1 + GetChargeAmount());
-		ChangeModel(_model);
+		Model temp = _currentModel;
+		_currentModel = _nextModel;
+		_nextModel = temp;
+
+		ChangeModel(_currentModel);
 	}
 
 	public override void OnUpdate()
@@ -77,16 +70,8 @@ public class PolymorphSpell : BaseSpell
 
 	public override void OnFixedUpdate()
 	{
-		if (!HasFinishedCasting && WasCancelled)
-		{
-			OnDestroy?.Invoke(this, EventArgs.Empty);
-		}
-		else if (_timeSincePolymorphed > _spellDuration && _canPolymorphBack)
-		{
-			ChangeModel(_oldModel);
-			_canPolymorphBack = false;
-			OnDestroy?.Invoke(this, EventArgs.Empty);
-		}
+		// We don't need to use these update functions, so just leave us alone
+		OnDestroy?.Invoke(this, EventArgs.Empty);
 	}
 
 	public override BaseSpell.SpellType GetSpellType()

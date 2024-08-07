@@ -189,7 +189,10 @@ public sealed class PlayerSpellcastingController : Component
 			if (CanCastSpell(ActiveSpell))
 			{
 				_castingSpell = _spellBuffer[(int)ActiveSpell];
-				_spellBuffer[(int)ActiveSpell] = CreateSpell(ActiveSpell);
+				// Stateful spells are singletons, so only recreate spells that
+				// aren't stateful!
+				if (!_spellBuffer[(int)ActiveSpell].IsStateful)
+					_spellBuffer[(int)ActiveSpell] = CreateSpell(ActiveSpell);
 
 				// TODO: it would be cool if this is progressively taken during
 				// the casting process. But that's not needed for now.
