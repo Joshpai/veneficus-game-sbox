@@ -17,6 +17,9 @@ public sealed class PlayerMovementController : Component
 	[Property]
 	public Vector3 PolymorphedEyePosition { get; set; }
 
+	[Property]
+	public float CameraHeightInterpolationRate { get; set; } = 8.0f;
+
 	public Vector3 EyePosition { get; set; }
 
 	// NOTE: Not necessarily normalised!
@@ -43,6 +46,7 @@ public sealed class PlayerMovementController : Component
 	public Angles EyeAngles = new Angles();
 
 	private Transform _cameraReference;
+	private Transform _cameraReferenceInterpolated;
 	private Transform _cameraReferenceHuman;
 	private Transform _cameraReferencePolymorphed;
 
@@ -58,8 +62,6 @@ public sealed class PlayerMovementController : Component
 
 		EyePosition = _isPolymorphed ? PolymorphedEyePosition
 									 : HumanEyePosition;
-		// TODO: can we give the camera position some LERP? Such a large snap
-		// is a bit jarring.
 		_cameraReference = _isPolymorphed ? _cameraReferencePolymorphed
 										  : _cameraReferenceHuman;
 	}
@@ -97,12 +99,27 @@ public sealed class PlayerMovementController : Component
 		// Rotate the player body to align with the camera direction
 		Body.Transform.Rotation = Rotation.FromYaw(EyeAngles.yaw);
 
+		// If we have just polymorphed, then our camera height probably changed
+		// so we want to move towards the new height.
+		var currentPos = _cameraReferenceInterpolated.Position;
+		var targetPos = _cameraReference.Position;
+		if (currentPos.AlmostEqual(targetPos))
+		{
+			_cameraReferenceInterpolated = _cameraReference;
+		}
+		else
+		{
+			_cameraReferenceInterpolated.Position =
+				Vector3.Lerp(currentPos, targetPos,
+							 CameraHeightInterpolationRate  * Time.Delta);
+		}
+
 		// Update the transform of the camera to orbit around the EyePosition
-		var cameraTransform = _cameraReference.RotateAround(EyePosition,
-															EyeAngles);
-		var worldPos = Transform.Local.PointToWorld(cameraTransform.Position);
-		Camera.Transform.Position = worldPos;
-		Camera.Transform.LocalRotation = cameraTransform.Rotation;
+		var cameraTransform =
+			_cameraReferenceInterpolated.RotateAround(EyePosition, EyeAngles);
+		Camera.Transform.Position =
+			Transform.Local.PointToWorld(cameraTransform.Position);
+		Camera.Transform.Rotation = cameraTransform.Rotation;
 	}
 
 	protected override void OnFixedUpdate()
@@ -152,7 +169,6 @@ public sealed class PlayerMovementController : Component
 		_cameraFollowDirectionNormalised = CameraFollowDirection.Normal;
 		_cameraReferenceHuman = new Transform(
 				HumanEyePosition + CameraFollowPosition,
-				// TODO: should this be FollowPosition.LookAt(EyePosition)?
 				Transform.Rotation
 		);
 		_cameraReferencePolymorphed = new Transform(
@@ -163,6 +179,6 @@ public sealed class PlayerMovementController : Component
 		_isPolymorphed = false;
 		EyePosition = HumanEyePosition;
 		_cameraReference = _cameraReferenceHuman;
-
+		_cameraReferenceInterpolated = _cameraReference;
 	}
 }
