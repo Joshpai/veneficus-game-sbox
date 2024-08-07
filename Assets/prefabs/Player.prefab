@@ -39,12 +39,18 @@
           "component_type": "CharacterController"
         },
         "HumanEyePosition": "0,0,62",
+        "HumanHeight": 64,
         "HumanMass": 80,
+        "HumanRadius": 16,
+        "HumanStepHeight": 18,
         "InitialJumpAmount": 0.5,
         "JumpDuration": 0.8,
         "MaxJumpHoldLength": 0.3,
         "PolymorphedEyePosition": "0,0,20",
+        "PolymorphedHeight": 22,
         "PolymorphedMass": 10,
+        "PolymorphedRadius": 12,
+        "PolymorphedStepHeight": 5,
         "WalkSpeed": 250
       },
       {

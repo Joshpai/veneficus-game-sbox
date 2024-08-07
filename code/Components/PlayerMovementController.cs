@@ -55,6 +55,24 @@ public sealed class PlayerMovementController : Component
 	[Property]
 	public float PolymorphedMass { get; set; } = 10.0f;
 
+	[Property]
+	public float HumanHeight { get; set; } = 64.0f;
+
+	[Property]
+	public float PolymorphedHeight { get; set; } = 22.0f;
+
+	[Property]
+	public float HumanRadius { get; set; } = 16.0f;
+
+	[Property]
+	public float PolymorphedRadius { get; set; } = 12.0f;
+
+	[Property]
+	public float HumanStepHeight { get; set; } = 18.0f;
+
+	[Property]
+	public float PolymorphedStepHeight { get; set; } = 5.0f;
+
 	private float _currentMass;
 
 	int _airJumpRemainingTicks;
@@ -90,7 +108,10 @@ public sealed class PlayerMovementController : Component
 
 		_currentMass = _isPolymorphed ? PolymorphedMass : HumanMass;
 
-		// TODO: update controller: height & bounding box
+		Controller.Height = _isPolymorphed ? PolymorphedHeight : HumanHeight;
+		Controller.Radius = _isPolymorphed ? PolymorphedRadius : HumanRadius;
+		Controller.StepHeight = _isPolymorphed ? PolymorphedStepHeight
+											   : HumanStepHeight;
 	}
 
 	protected override void DrawGizmos()
@@ -240,5 +261,8 @@ public sealed class PlayerMovementController : Component
 		_cameraReference = _cameraReferenceHuman;
 		_cameraReferenceInterpolated = _cameraReference;
 		_currentMass = HumanMass;
+		Controller.Height = HumanHeight;
+		Controller.Radius = HumanRadius;
+		Controller.StepHeight = HumanStepHeight;
 	}
 }
