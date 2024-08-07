@@ -49,6 +49,10 @@ public sealed class PlayerMovementController : Component
 	[Property]
 	public float InitialJumpAmount { get; set; } = 0.5f;
 
+	// How long after falling off something can the player still jump?
+	[Property]
+	public float JumpCoyoteTime { get; set; } = 0.15f;
+
 	[Property]
 	public float HumanMass { get; set; } = 80.0f;
 
@@ -78,6 +82,8 @@ public sealed class PlayerMovementController : Component
 	private int _airJumpRemainingTicks;
 	private Vector3 _airJumpForce;
 	private bool _canAirJump;
+	private bool _didJump;
+	private float _airStartTime;
 
 	private Vector3 _cameraFollowDirectionNormalised;
 
@@ -226,7 +232,17 @@ public sealed class PlayerMovementController : Component
 		_airJumpForce = (1.0f - InitialJumpAmount) * jumpForce;
 		_airJumpForce /= _airJumpRemainingTicks;
 
+		if (!_didJump)
+		{
+			_didJump = true;
+			// If we're coyote jumping, then be a bit nice and cancel out the
+			// already applied gravity to give a bigger jump. I'm sure there
+			// will be some exploit with this to increase max jump but it's ok.
+			Controller.Velocity = Controller.Velocity.WithZ(0.0f);
+		}
+
 		_canAirJump = true;
+
 		Controller.Punch(groundJumpForce * Time.Delta / _currentMass);
 	}
 
@@ -247,12 +263,17 @@ public sealed class PlayerMovementController : Component
 
 			Controller.ApplyFriction(5.0f, 20.0f);
 
-			// TODO: also allow coyote frames
-			if (Input.Pressed("Jump"))
+			_airStartTime = Time.Now;
+			_didJump = Input.Pressed("Jump");
+			if (_didJump)
 				GroundJump();
 		}
 		else
 		{
+			if (!_didJump && Input.Pressed("Jump") &&
+				Time.Now - _airStartTime <= JumpCoyoteTime)
+				GroundJump();
+
 			_canAirJump &= Input.Down("Jump");
 			if (_canAirJump && (_airJumpRemainingTicks--) > 0)
 				AirJump();
