@@ -95,6 +95,42 @@ public sealed class PlayerMovementController : Component
 
 	private bool _isPolymorphed;
 
+	protected override void OnStart()
+	{
+		base.OnStart();
+
+		if (Body == null || Camera == null || Controller == null)
+			throw new ArgumentException("PlayerMovementController must have " +
+										"all of Body, Camera, Controller " +
+										"set to some value!");
+
+		_animationHelper = Body.Components.Get<CitizenAnimationHelper>();
+		if (_animationHelper == null)
+			throw new ArgumentException("Body must have a CitizenAnimationHelper");
+
+		// NOTE: we must set this before using CameraFollowPosition! A side
+		// effect of caching this is that we can't edit this value live. Maybe
+		// worth only including this "optimisation" iff we're in Release?
+		_cameraFollowDirectionNormalised = CameraFollowDirection.Normal;
+		_cameraReferenceHuman = new Transform(
+				HumanEyePosition + CameraFollowPosition,
+				Transform.Rotation
+		);
+		_cameraReferencePolymorphed = new Transform(
+				PolymorphedEyePosition + CameraFollowPosition,
+				Transform.Rotation
+		);
+
+		_isPolymorphed = false;
+		EyePosition = HumanEyePosition;
+		_cameraReference = _cameraReferenceHuman;
+		_cameraReferenceInterpolated = _cameraReference;
+		_currentMass = HumanMass;
+		Controller.Height = HumanHeight;
+		Controller.Radius = HumanRadius;
+		Controller.StepHeight = HumanStepHeight;
+	}
+
 	public void TogglePolymorph()
 	{
 		// We aren't in charge of changing the model here, just the behaviour
@@ -228,41 +264,5 @@ public sealed class PlayerMovementController : Component
 
 		_animationHelper.IsGrounded = Controller.IsOnGround;
 		_animationHelper.WithVelocity(Controller.Velocity);
-	}
-
-	protected override void OnStart()
-	{
-		base.OnStart();
-
-		if (Body == null || Camera == null || Controller == null)
-			throw new ArgumentException("PlayerMovementController must have " +
-										"all of Body, Camera, Controller " +
-										"set to some value!");
-
-		_animationHelper = Body.Components.Get<CitizenAnimationHelper>();
-		if (_animationHelper == null)
-			throw new ArgumentException("Body must have a CitizenAnimationHelper");
-
-		// NOTE: we must set this before using CameraFollowPosition! A side
-		// effect of caching this is that we can't edit this value live. Maybe
-		// worth only including this "optimisation" iff we're in Release?
-		_cameraFollowDirectionNormalised = CameraFollowDirection.Normal;
-		_cameraReferenceHuman = new Transform(
-				HumanEyePosition + CameraFollowPosition,
-				Transform.Rotation
-		);
-		_cameraReferencePolymorphed = new Transform(
-				PolymorphedEyePosition + CameraFollowPosition,
-				Transform.Rotation
-		);
-
-		_isPolymorphed = false;
-		EyePosition = HumanEyePosition;
-		_cameraReference = _cameraReferenceHuman;
-		_cameraReferenceInterpolated = _cameraReference;
-		_currentMass = HumanMass;
-		Controller.Height = HumanHeight;
-		Controller.Radius = HumanRadius;
-		Controller.StepHeight = HumanStepHeight;
 	}
 }
