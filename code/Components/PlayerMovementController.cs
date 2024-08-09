@@ -35,6 +35,9 @@ public sealed class PlayerMovementController : Component
 	[Property]
 	public float WalkSpeed { get; set; } = 250.0f;
 
+	[Property]
+	public float AirSpeed { get; set; } = 30.0f;
+
 	// In a full jump, how long should the player be in the air for? In reality
 	// this will actually be a little shorter than set here as we make some
 	// inaccurate assumptions in calculations - but it's approximately right.
@@ -255,11 +258,10 @@ public sealed class PlayerMovementController : Component
 	{
 		base.OnFixedUpdate();
 
+		Vector3 direction = Input.AnalogMove.Normal * Body.Transform.Rotation;
 		if (Controller.IsOnGround)
 		{
-			var speed = WalkSpeed;
-			var velocity = Input.AnalogMove.Normal * speed * Body.Transform.Rotation;
-			Controller.Accelerate(velocity);
+			Controller.Accelerate(direction * WalkSpeed);
 
 			Controller.ApplyFriction(5.0f, 20.0f);
 
@@ -270,6 +272,10 @@ public sealed class PlayerMovementController : Component
 		}
 		else
 		{
+			// Let the player have a tiny bit of air movement, otherwise trying
+			// to jump up small ledges is awful.
+			Controller.Accelerate(direction * AirSpeed);
+
 			if (!_didJump && Input.Pressed("Jump") &&
 				Time.Now - _airStartTime <= JumpCoyoteTime)
 				GroundJump();

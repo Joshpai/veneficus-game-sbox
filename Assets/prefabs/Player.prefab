@@ -9,7 +9,7 @@
         "__type": "Sandbox.CharacterController",
         "__guid": "1e79be70-ed9c-44b8-99b3-2bdcf907e4ad",
         "Acceleration": 10,
-        "Bounciness": 0.3,
+        "Bounciness": 0,
         "GroundAngle": 45,
         "Height": 64,
         "IgnoreLayers": "player",
