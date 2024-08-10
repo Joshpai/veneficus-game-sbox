@@ -15,6 +15,10 @@
           "MapName": "maps/testmap.vmap",
           "NoOrigin": false,
           "UseMapFromLaunch": false
+        },
+        {
+          "__type": "MapPlayerSpawner",
+          "__guid": "168fd593-9dfc-439e-943e-6f3c1334fa51"
         }
       ],
       "Children": []
