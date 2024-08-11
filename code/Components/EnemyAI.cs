@@ -128,9 +128,31 @@ public sealed class EnemyAI : Component
 				break;
 			}
 		}
+
+		_passive = !AlwaysActive;
 	}
 
-	protected override void OnFixedUpdate()
+	private void MoveTo(Vector3 destination)
+	{
+		Agent.MoveTo(destination);
+	}
+
+	private void OnFixedUpdatePassive()
+	{
+		Vector3 playerOffset = Transform.Position - _player.Transform.Position;
+		float angleToPlayer =
+			MathF.Acos(-playerOffset.Normal.Dot(Transform.Rotation.Forward));
+
+		if (playerOffset.Length < VisionRange && angleToPlayer < VisionAngle)
+		{
+			_passive = false;
+			// get an early headstart?
+			OnFixedUpdateActive();
+			return;
+		}
+	}
+
+	private void OnFixedUpdateActive()
 	{
 		List<Vector3> x =
 			Scene.NavMesh.GetSimplePath(
@@ -146,10 +168,22 @@ public sealed class EnemyAI : Component
 		bool reachable = terminal.DistanceSquared(_player.Transform.Position) < 10.0f;
 		Log.Info(reachable);
 
-		Agent.MoveTo(_player.Transform.Position);
+		MoveTo(_player.Transform.Position);
 		// TODO: this works (ish, angles are correct), but slows the agent to a
 		// crawl. Probably need to roll our own movement in that case or maybe
 		// change the rotation of a parent/child or something instead.
 		// Transform.Rotation = (_player.Transform.Position - Transform.Position).EulerAngles;
+	}
+
+	protected override void OnFixedUpdate()
+	{
+		if (_passive)
+		{
+			OnFixedUpdatePassive();
+		}
+		else
+		{
+			OnFixedUpdateActive();
+		}
 	}
 }
