@@ -6,35 +6,8 @@
     "Enabled": true,
     "Components": [
       {
-        "__type": "Sandbox.SkinnedModelRenderer",
-        "__guid": "ed3bc571-fd5c-4a3f-9739-e52aa6b99403",
-        "BodyGroups": 18446744073709551615,
-        "CreateBoneObjects": false,
-        "Model": "models/citizen/heads/head_zombie_02/models/head_zombie_02.vmdl",
-        "RenderType": "On",
-        "Tint": "1,1,1,1",
-        "UseAnimGraph": true
-      },
-      {
-        "__type": "Sandbox.NavMeshAgent",
-        "__guid": "17428d61-0a69-4cfa-a453-008a7b48d310",
-        "Acceleration": 50,
-        "Height": 64,
-        "MaxSpeed": 120,
-        "Radius": 16,
-        "Separation": 0.25,
-        "UpdatePosition": true,
-        "UpdateRotation": false
-      },
-      {
         "__type": "EnemyAI",
-        "__guid": "00cad306-08d9-4365-a386-2c9c91c81e22",
-        "Agent": {
-          "_type": "component",
-          "component_id": "17428d61-0a69-4cfa-a453-008a7b48d310",
-          "go": "17ed16d0-7ff0-4360-a350-d7ddbcb374d3",
-          "component_type": "NavMeshAgent"
-        },
+        "__guid": "51c2d292-17ad-4912-9500-351a55eb2b4d",
         "AlwaysActive": false,
         "AttackRate": 1,
         "AvoidSpells": true,
@@ -53,36 +26,56 @@
         "MaxRouteLength": 3000,
         "MaxSpeed": 250,
         "PassiveMode": "Stationary",
+        "PatrolPath": [],
         "VisionAngle": 0.7853982,
         "VisionRange": 300,
         "WantHighground": false
       },
       {
-        "__type": "Sandbox.CapsuleCollider",
-        "__guid": "8e29502b-d451-43a7-ba1b-7837805e5d05",
-        "End": "0,0,48",
-        "IsTrigger": false,
-        "Radius": 16,
-        "Start": "0,0,16",
-        "Static": false
+        "__type": "Sandbox.SkinnedModelRenderer",
+        "__guid": "923a41b0-c057-461a-bc0f-30bc9f2ed43a",
+        "BodyGroups": 18446744073709551615,
+        "CreateBoneObjects": false,
+        "Model": "models/citizen/heads/head_zombie_02/models/head_zombie_02.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1",
+        "UseAnimGraph": true
       },
       {
-        "__type": "Sandbox.Rigidbody",
-        "__guid": "73549416-f598-4dd7-82f1-af053a421dcd",
-        "AngularDamping": 0,
-        "Gravity": false,
-        "LinearDamping": 0,
-        "Locking": {},
-        "MassCenterOverride": "0,0,0",
-        "MassOverride": 0,
-        "MotionEnabled": false,
-        "OverrideMassCenter": false,
-        "RigidbodyFlags": 0,
-        "StartAsleep": false
+        "__type": "Sandbox.NavMeshAgent",
+        "__guid": "f9dac23c-df09-497f-9605-8c5165871acf",
+        "Acceleration": 50,
+        "Height": 64,
+        "MaxSpeed": 120,
+        "Radius": 16,
+        "Separation": 0.25,
+        "UpdatePosition": true,
+        "UpdateRotation": false
       }
     ],
     "Children": [],
-    "__variables": []
+    "__variables": [
+      {
+        "Id": "Patrol Path",
+        "Title": "Patrol Path",
+        "Targets": [
+          {
+            "Id": "51c2d292-17ad-4912-9500-351a55eb2b4d",
+            "Property": "PatrolPath"
+          }
+        ]
+      },
+      {
+        "Id": "Passive Mode",
+        "Title": "Passive Mode",
+        "Targets": [
+          {
+            "Id": "51c2d292-17ad-4912-9500-351a55eb2b4d",
+            "Property": "PassiveMode"
+          }
+        ]
+      }
+    ]
   },
   "ShowInMenu": false,
   "MenuPath": null,

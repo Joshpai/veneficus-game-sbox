@@ -240,10 +240,17 @@
       "__guid": "2ff61d7c-d7b9-4e08-b13f-0afb5c20fddc",
       "Flags": 0,
       "Name": "fireenemy1",
-      "Position": "-755.5612,-39.17828,0",
+      "Position": "-1100.481,-39.17828,0",
       "Enabled": true,
       "__Prefab": "prefabs/fireenemy1.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Patrol Path": [
+          "0,0,0",
+          "0,200,0",
+          "200,200,0",
+          "200,0,0"
+        ]
+      }
     },
     {
       "__guid": "23ca1c74-46d6-444d-88e8-bc8604f8bb74",
