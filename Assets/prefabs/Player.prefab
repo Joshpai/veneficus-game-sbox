@@ -48,6 +48,7 @@
         "JumpCoyoteTime": 0.15,
         "JumpDuration": 0.8,
         "MaxJumpHoldLength": 0.3,
+        "NextScene": "scenes/testmap2.scene",
         "PolymorphedEyePosition": "0,0,20",
         "PolymorphedHeight": 22,
         "PolymorphedMass": 10,

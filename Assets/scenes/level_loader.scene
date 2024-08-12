@@ -1,0 +1,48 @@
+{
+  "__guid": "f28db34c-1917-44c7-a040-dcff80cf3540",
+  "GameObjects": [
+    {
+      "__guid": "b31108fb-bdea-4110-b6da-da3a40d6687c",
+      "Flags": 0,
+      "Name": "LevelLoader",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "LevelManager",
+          "__guid": "729a7b21-8f23-4106-87ff-f9e7508e2eb8",
+          "LoadingScreen": {
+            "_type": "gameobject",
+            "prefab": "prefabs/loading_screen.prefab"
+          },
+          "StartingLevel": "scenes/testmap.scene"
+        }
+      ]
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 30,
+    "NetworkInterpolation": true,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true,
+    "NavMesh": {
+      "Enabled": false,
+      "IncludeStaticBodies": true,
+      "IncludeKeyframedBodies": true,
+      "EditorAutoUpdate": true,
+      "AgentHeight": 64,
+      "AgentRadius": 16,
+      "AgentStepSize": 18,
+      "AgentMaxSlope": 40,
+      "ExcludedBodies": "",
+      "IncludedBodies": ""
+    }
+  },
+  "Title": "level_loader",
+  "Description": "",
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

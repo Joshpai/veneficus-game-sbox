@@ -3,6 +3,9 @@ using Sandbox.Citizen;
 public sealed class PlayerMovementController : Component
 {
 	[Property]
+	public SceneFile NextScene { get; set; }
+
+	[Property]
 	public GameObject Body { get; set; }
 
 	[Property]
@@ -257,6 +260,11 @@ public sealed class PlayerMovementController : Component
 	protected override void OnFixedUpdate()
 	{
 		base.OnFixedUpdate();
+
+		if (Input.Pressed("Duck"))
+		{
+			LevelManager.LoadLevel(NextScene);
+		}
 
 		Vector3 direction = Input.AnalogMove.Normal * Body.Transform.Rotation;
 		if (Controller.IsOnGround)

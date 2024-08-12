@@ -228,15 +228,6 @@
       ]
     },
     {
-      "__guid": "3834b09f-ef6a-423b-a3ad-b698a5be66f2",
-      "Flags": 0,
-      "Name": "player",
-      "Position": "-193.4727,55.03728,135.2977",
-      "Enabled": true,
-      "__Prefab": "prefabs/player.prefab",
-      "__PrefabVariables": {}
-    },
-    {
       "__guid": "2ff61d7c-d7b9-4e08-b13f-0afb5c20fddc",
       "Flags": 0,
       "Name": "fireenemy1",
@@ -2847,6 +2838,20 @@
         "Patrol Path": [],
         "Passive Mode": "Stationary"
       }
+    },
+    {
+      "__guid": "50ba66cc-3a2c-4947-95da-847c6e09bfb8",
+      "Flags": 0,
+      "Name": "Object",
+      "Position": "390.1254,-415.4193,134.1721",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SpawnPoint",
+          "__guid": "6cda62cb-da78-4dcc-bcca-3d49d70d3fca",
+          "Color": "0.8902,0.31765,0.05098,1"
+        }
+      ]
     }
   ],
   "SceneProperties": {
