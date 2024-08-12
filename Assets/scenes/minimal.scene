@@ -248,8 +248,11 @@
           "0,0,0",
           "0,200,0",
           "200,200,0",
-          "200,0,0"
-        ]
+          "200,0,0",
+          "400,0,0",
+          "400,200,0"
+        ],
+        "Passive Mode": "Patrol"
       }
     },
     {
@@ -2820,6 +2823,30 @@
           "Static": true
         }
       ]
+    },
+    {
+      "__guid": "e2c9b2af-783f-461a-b284-f5f36b9041b4",
+      "Flags": 0,
+      "Name": "fireenemy1 (1)",
+      "Position": "-928.8813,473.7882,4",
+      "Enabled": true,
+      "__Prefab": "prefabs/fireenemy1.prefab",
+      "__PrefabVariables": {
+        "Patrol Path": [],
+        "Passive Mode": "Wander"
+      }
+    },
+    {
+      "__guid": "80126748-e4de-446c-b794-5fbe0a16da7a",
+      "Flags": 0,
+      "Name": "fireenemy1 (2)",
+      "Position": "-1125.772,301.566,4",
+      "Enabled": true,
+      "__Prefab": "prefabs/fireenemy1.prefab",
+      "__PrefabVariables": {
+        "Patrol Path": [],
+        "Passive Mode": "Stationary"
+      }
     }
   ],
   "SceneProperties": {

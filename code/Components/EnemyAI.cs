@@ -40,7 +40,6 @@ public sealed class EnemyAI : Component
 	[Property, Group("Passive")]
 	public List<Vector3> PatrolPath { get; set; }
 
-	[Property, Group("Passive")]
 	private List<Vector3> _patrolPathWorld;
 
 	[Property, Group("Passive")]
@@ -174,10 +173,11 @@ public sealed class EnemyAI : Component
 
 	private int _patrolNextIndex = -1;
 	private int _patrolDirection = 1;
+	private float _passiveNextWanderTime = 0.0f;
 
 	private void OnFixedUpdatePassive()
 	{
-		if (_passive && PassiveMode == PassiveBehaviour.Patrol &&
+		if (PassiveMode == PassiveBehaviour.Patrol &&
 			_patrolPathWorld.Count > 0)
 		{
 			// Magic uninited number
@@ -188,7 +188,7 @@ public sealed class EnemyAI : Component
 				MoveTo(_patrolPathWorld[_patrolNextIndex]);
 			}
 
-			if (Transform.Position.Distance(_patrolPathWorld[_patrolNextIndex]) < 30.0f)
+			if (Transform.Position.Distance(_patrolPathWorld[_patrolNextIndex]) < 10.0f)
 			{
 				_patrolNextIndex += _patrolDirection;
 
@@ -200,6 +200,22 @@ public sealed class EnemyAI : Component
 				}
 
 				MoveTo(_patrolPathWorld[_patrolNextIndex]);
+			}
+		}
+		else if (PassiveMode == PassiveBehaviour.Wander)
+		{
+			if (_passiveNextWanderTime < Time.Now)
+			{
+				var pos = Scene.NavMesh.GetRandomPoint(Transform.Position, 100.0f);
+				if (pos != null)
+					MoveTo(pos.Value);
+				_passiveNextWanderTime = Time.Now + 5.0f;
+			}
+
+			if (_agent.TargetPosition != null &&
+				Transform.Position.Distance(_agent.TargetPosition.Value) < 10.0f)
+			{
+				_agent.Stop();
 			}
 		}
 
