@@ -22,6 +22,19 @@
         }
       ],
       "Children": []
+    },
+    {
+      "__guid": "3fc5ef1c-0146-4c63-8802-a13e5509798a",
+      "Flags": 0,
+      "Name": "level_end",
+      "Position": "381.268,25.73338,32.00001",
+      "Tags": "interactable",
+      "Enabled": true,
+      "__Prefab": "prefabs/level_end.prefab",
+      "__PrefabVariables": {
+        "Next Level": "scenes/minimal.scene",
+        "Deferred Next Level": null
+      }
     }
   ],
   "SceneProperties": {

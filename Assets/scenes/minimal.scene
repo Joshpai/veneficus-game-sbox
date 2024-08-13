@@ -2852,6 +2852,19 @@
           "Color": "0.8902,0.31765,0.05098,1"
         }
       ]
+    },
+    {
+      "__guid": "85eed7cc-f272-419e-b828-908b014fda25",
+      "Flags": 0,
+      "Name": "level_end",
+      "Position": "-22.00011,427.5349,160.0001",
+      "Tags": "interactable",
+      "Enabled": true,
+      "__Prefab": "prefabs/level_end.prefab",
+      "__PrefabVariables": {
+        "Next Level": "scenes/testmap.scene",
+        "Deferred Next Level": null
+      }
     }
   ],
   "SceneProperties": {

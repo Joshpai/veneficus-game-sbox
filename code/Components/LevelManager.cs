@@ -40,7 +40,7 @@ public sealed class LevelManager : Component
 		Scene.TimeScale = oldTimeScale;
 		
 		// TODO: automatically add MapPlayerSpawner component
-
+		// Currently causes errors because the player doesn't exist.
 	}
 
 	protected override void OnStart()
