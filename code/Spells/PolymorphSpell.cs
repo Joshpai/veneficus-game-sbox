@@ -57,9 +57,8 @@ public class PolymorphSpell : BaseSpell
 
 	public override void OnFinishCasting()
 	{
-		Model temp = _currentModel;
 		_currentModel = _nextModel;
-		_nextModel = temp;
+		_nextModel = _modelRenderer.Model;
 
 		ChangeModel(_currentModel);
 	}
