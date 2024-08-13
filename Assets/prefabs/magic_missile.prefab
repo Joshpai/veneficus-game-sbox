@@ -1,0 +1,42 @@
+{
+  "RootObject": {
+    "__guid": "c56165d2-743f-4d75-a0fb-6f9d9a248610",
+    "Flags": 0,
+    "Name": "magic_missile",
+    "Tags": "projectile",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.ModelRenderer",
+        "__guid": "b56aeb2b-3c14-4405-bea9-31be5c3348ac",
+        "BodyGroups": 18446744073709551615,
+        "Model": "models/dev/sphere.vmdl",
+        "RenderType": "On",
+        "Tint": "0.16794,0.8,0.0707,1"
+      },
+      {
+        "__type": "Sandbox.SphereCollider",
+        "__guid": "f3459cca-3efa-4b86-b3f2-917243f2d42f",
+        "Center": "0,0,0",
+        "IsTrigger": false,
+        "Radius": 32.90002,
+        "Static": false
+      },
+      {
+        "__type": "ProjectileSpellCollisionComponent",
+        "__guid": "153e5231-7485-40eb-b456-5c2ee62d021f",
+        "ContactDamage": 5,
+        "DoesExplode": false,
+        "SplashDamage": 0
+      }
+    ],
+    "Children": [],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

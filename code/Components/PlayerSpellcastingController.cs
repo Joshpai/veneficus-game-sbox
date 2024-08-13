@@ -64,8 +64,9 @@ public sealed class PlayerSpellcastingController : Component
 		GameObject caster = this.GameObject;
 		return spellType switch
 		{
-			BaseSpell.SpellType.Fireball => new FireballSpell(caster),
 			BaseSpell.SpellType.Polymorph => new PolymorphSpell(caster),
+			BaseSpell.SpellType.MagicMissile => new MagicMissileSpell(caster),
+			BaseSpell.SpellType.Fireball => new FireballSpell(caster),
 			_ => null,
 		};
 	}
