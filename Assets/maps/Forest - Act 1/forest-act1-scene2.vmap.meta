@@ -1,0 +1,19 @@
+{
+  "publish": {
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "forest-act1-scene2",
+      "Type": "map",
+      "Org": "local",
+      "Ident": "forest-act1-scene2",
+      "Schema": 0,
+      "IncludeSourceFiles": false,
+      "Resources": null,
+      "PackageReferences": [],
+      "EditorReferences": [],
+      "Metadata": {
+        "SingleAssetSource": "maps/forest - act 1/forest-act1-scene2.vmap"
+      }
+    }
+  }
+}

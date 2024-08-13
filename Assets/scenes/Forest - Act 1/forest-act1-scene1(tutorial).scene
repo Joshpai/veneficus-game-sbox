@@ -1,0 +1,54 @@
+{
+  "__guid": "ce10a778-6162-4816-b7ca-174f8bf7cd76",
+  "GameObjects": [
+    {
+      "__guid": "7f804814-e0d1-487f-9759-7af06f324ac8",
+      "Flags": 0,
+      "Name": "Map",
+      "Position": "0.01845046,0.01937642,0.02930105",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.MapInstance",
+          "__guid": "1bf43f51-061d-4e79-8707-afe3e3b08760",
+          "__version": 1,
+          "EnableCollision": true,
+          "MapName": "maps/forest-act1-scene1(tutorial).vmap",
+          "NoOrigin": false,
+          "UseMapFromLaunch": false
+        },
+        {
+          "__type": "MapPlayerSpawner",
+          "__guid": "db93134a-a3a5-4124-95bc-d03583ecf05a"
+        }
+      ],
+      "Children": []
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 30,
+    "NetworkInterpolation": true,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true,
+    "NavMesh": {
+      "Enabled": false,
+      "IncludeStaticBodies": true,
+      "IncludeKeyframedBodies": true,
+      "EditorAutoUpdate": true,
+      "AgentHeight": 64,
+      "AgentRadius": 16,
+      "AgentStepSize": 18,
+      "AgentMaxSlope": 40,
+      "ExcludedBodies": "",
+      "IncludedBodies": ""
+    }
+  },
+  "Title": "forest-act1-scene1(tutorial)",
+  "Description": "",
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

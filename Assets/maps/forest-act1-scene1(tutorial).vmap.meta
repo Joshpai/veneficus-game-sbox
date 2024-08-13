@@ -1,0 +1,19 @@
+{
+  "publish": {
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "forest-act1-scene1(tutorial)",
+      "Type": "map",
+      "Org": "local",
+      "Ident": "forest-act1-scene1tutorial",
+      "Schema": 0,
+      "IncludeSourceFiles": false,
+      "Resources": null,
+      "PackageReferences": [],
+      "EditorReferences": [],
+      "Metadata": {
+        "SingleAssetSource": "maps/forest-act1-scene1(tutorial).vmap"
+      }
+    }
+  }
+}
