@@ -23,9 +23,10 @@
         "Static": false
       },
       {
-        "__type": "FireballCollisionComponent",
-        "__guid": "27f8579a-94fb-4f6b-b1d1-ee2fce65a1b5",
+        "__type": "ProjectileSpellCollisionComponent",
+        "__guid": "153e5231-7485-40eb-b456-5c2ee62d021f",
         "ContactDamage": 50,
+        "DoesExplode": true,
         "SplashDamage": 20
       }
     ],
