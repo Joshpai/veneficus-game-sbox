@@ -2,7 +2,7 @@
 @using Sandbox.UI;
 @inherits PanelComponent
 
-@if (LevelManager.IsLoading) return;
+@if (LevelManagerStaticStore.IsLoading) return;
 
 <root>
 	<div>Health: @Health.Health</div>

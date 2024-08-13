@@ -1,3 +1,4 @@
+// NOTE: can be used as a quick hack, but best just use LevelManager
 public sealed class MapPlayerSpawner : Component
 {
 	private MapInstance _map;

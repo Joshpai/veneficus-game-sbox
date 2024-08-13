@@ -271,25 +271,6 @@ public sealed class PlayerMovementController : Component
 	{
 		base.OnFixedUpdate();
 
-		if (Input.Pressed("use"))
-		{
-			var startPos = Transform.Position + EyePosition;
-			var endPos = startPos + EyeAngles.Forward * InteractRange;
-			var trace = Scene.Trace.Ray(startPos, endPos)
-								   .WithTag("interactable")
-								   .Run();
-			if (trace.Hit)
-			{
-				var interactable =
-					trace.GameObject.Components
-									.GetInChildrenOrSelf<InteractableComponent>();
-				if (interactable != null)
-				{
-					interactable.Interact(GameObject);
-				}
-			}
-		}
-
 		Vector3 direction = Input.AnalogMove.Normal * Body.Transform.Rotation;
 		if (Controller.IsOnGround)
 		{
@@ -323,5 +304,26 @@ public sealed class PlayerMovementController : Component
 
 		_animationHelper.IsGrounded = Controller.IsOnGround;
 		_animationHelper.WithVelocity(Controller.Velocity);
+
+		// DO THIS AT THE END! We might load a new level.
+		if (Input.Pressed("use"))
+		{
+			var startPos = Transform.Position + EyePosition;
+			var endPos = startPos + EyeAngles.Forward * InteractRange;
+			var trace = Scene.Trace.Ray(startPos, endPos)
+								   .WithTag("interactable")
+								   .Run();
+			if (trace.Hit)
+			{
+				var interactable =
+					trace.GameObject.Components
+									.GetInChildrenOrSelf<InteractableComponent>();
+				if (interactable != null)
+				{
+					interactable.Interact(GameObject);
+				}
+			}
+		}
+
 	}
 }

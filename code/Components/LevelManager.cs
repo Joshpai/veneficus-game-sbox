@@ -1,3 +1,9 @@
+public class LevelManagerStaticStore
+{
+	public static LevelManager Instance { get; set; }
+	public static bool IsLoading { get; set; }
+}
+
 public sealed class LevelManager : Component
 {
 	[Property]
@@ -6,19 +12,37 @@ public sealed class LevelManager : Component
 	[Property]
 	public GameObject LoadingScreen { get; set; }
 
-	private static LevelManager _instance;
-	public static bool IsLoading = false;
-
 	public static void LoadLevel(SceneFile newScene)
 	{
-		_instance.LoadLevelInternal(newScene);
+		LevelManagerStaticStore.Instance.LoadLevelInternal(newScene);
+	}
+
+	void SpawnPlayer()
+	{
+		var player = new GameObject();
+		player.SetPrefabSource("prefabs/player.prefab");
+		player.UpdateFromPrefab();
+
+		var controller = player.Components.Get<PlayerMovementController>();
+		if (controller == null)
+			return;
+
+		var spawnPoints = Scene.GetAllComponents<SpawnPoint>();
+		foreach (var spawn in spawnPoints)
+		{
+		    controller.Transform.Position = spawn.Transform.Position;
+		    controller.EyeAngles = spawn.Transform.Rotation.Angles();
+			break;
+		}
 	}
 
 	private void LoadLevelInternal(SceneFile newScene)
 	{
-		IsLoading = true;
+		if (Scene.IsLoading)
+			return;
 
-		Log.Info(newScene.SceneProperties);
+		LevelManagerStaticStore.IsLoading = true;
+
 		var oldTimeScale = newScene.SceneProperties.ContainsKey("TimeScale")
 						 ? newScene.SceneProperties["TimeScale"].GetValue<float>()
 						 : 1.0f;
@@ -35,18 +59,20 @@ public sealed class LevelManager : Component
 
 		Scene.Load(options);
 
+		SpawnPlayer();
+
 		loadingScreen.DestroyImmediate();
-		IsLoading = false;
+		LevelManagerStaticStore.IsLoading = false;
 		Scene.TimeScale = oldTimeScale;
-		
-		// TODO: automatically add MapPlayerSpawner component
-		// Currently causes errors because the player doesn't exist.
 	}
 
 	protected override void OnStart()
 	{
-		_instance = this;
+		LevelManagerStaticStore.Instance = this;
 		GameObject.Flags |= GameObjectFlags.DontDestroyOnLoad;
-		LoadLevelInternal(StartingLevel);
+		if (!Scene.IsLoading && StartingLevel != null)
+		{
+			LoadLevelInternal(StartingLevel);
+		}
 	}
 }
