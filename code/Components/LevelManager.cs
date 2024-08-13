@@ -17,7 +17,7 @@ public sealed class LevelManager : Component
 		LevelManagerStaticStore.Instance.LoadLevelInternal(newScene);
 	}
 
-	void SpawnPlayer()
+	PlayerMovementController SpawnPlayer()
 	{
 		var player = new GameObject();
 		player.SetPrefabSource("prefabs/player.prefab");
@@ -25,7 +25,7 @@ public sealed class LevelManager : Component
 
 		var controller = player.Components.Get<PlayerMovementController>();
 		if (controller == null)
-			return;
+			return null;
 
 		var spawnPoints = Scene.GetAllComponents<SpawnPoint>();
 		foreach (var spawn in spawnPoints)
@@ -34,6 +34,8 @@ public sealed class LevelManager : Component
 		    controller.EyeAngles = spawn.Transform.Rotation.Angles();
 			break;
 		}
+
+		return controller;
 	}
 
 	private void LoadLevelInternal(SceneFile newScene)
@@ -59,7 +61,8 @@ public sealed class LevelManager : Component
 
 		Scene.Load(options);
 
-		SpawnPlayer();
+		var playerController = SpawnPlayer();
+		playerController.SetPlayerNotStarted();
 
 		loadingScreen.DestroyImmediate();
 		LevelManagerStaticStore.IsLoading = false;

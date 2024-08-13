@@ -112,6 +112,10 @@ public sealed class PlayerMovementController : Component
 
 	private bool _isPolymorphed;
 
+	private bool _levelStarted = true;
+	private ModelRenderer _modelRenderer;
+	private Model _oldModel;
+
 	protected override void OnStart()
 	{
 		base.OnStart();
@@ -146,6 +150,35 @@ public sealed class PlayerMovementController : Component
 		Controller.Height = HumanHeight;
 		Controller.Radius = HumanRadius;
 		Controller.StepHeight = HumanStepHeight;
+	}
+
+	public void SetPlayerNotStarted()
+	{
+		_modelRenderer = Components.GetInDescendantsOrSelf<ModelRenderer>();
+		if (_modelRenderer != null)
+		{
+			_oldModel = _modelRenderer.Model;
+			// _modelRenderer.Model = Model.Builder.Create();
+			// TODO: spawn a prefab portal here instead. This offset business
+			// is temporary as the sphere's origin is inside of it.
+			_modelRenderer.Model = Model.Sphere;
+			_modelRenderer.Transform.Position += Vector3.Up * 32.0f;
+		}
+		Transform.Position += HumanEyePosition;
+		EyePosition = Vector3.Zero;
+		_levelStarted = false;
+	}
+
+	private void StartLevel()
+	{
+		if (_modelRenderer != null)
+		{
+			_modelRenderer.Model = _oldModel;
+			_modelRenderer.Transform.Position -= Vector3.Up * 32.0f;
+		}
+		Transform.Position -= HumanEyePosition;
+		EyePosition = HumanEyePosition;
+		_levelStarted = true;
 	}
 
 	public void TogglePolymorph()
@@ -271,6 +304,18 @@ public sealed class PlayerMovementController : Component
 	{
 		base.OnFixedUpdate();
 
+		if (!_levelStarted)
+		{
+			if (Input.Pressed("use"))
+			{
+				StartLevel();
+			}
+			else
+			{
+				return;
+			}
+		}
+
 		Vector3 direction = Input.AnalogMove.Normal * Body.Transform.Rotation;
 		if (Controller.IsOnGround)
 		{
@@ -324,6 +369,5 @@ public sealed class PlayerMovementController : Component
 				}
 			}
 		}
-
 	}
 }
