@@ -2,6 +2,8 @@
 @using Sandbox.UI;
 @inherits PanelComponent
 
+@if (LevelManager.IsLoading) return;
+
 <root>
 	<div>Health: @Health.Health</div>
 	<div>Mana: @Spellcasting.Mana</div>

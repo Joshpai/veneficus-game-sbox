@@ -1,0 +1,62 @@
+{
+  "RootObject": {
+    "__guid": "60a245f1-93dd-4c7c-ba1e-b1fed465d5c1",
+    "Flags": 0,
+    "Name": "level_end",
+    "Tags": "interactable",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.SphereCollider",
+        "__guid": "c5353bef-20ea-47b2-a091-fddf6987e4ef",
+        "Center": "0,0,0",
+        "IsTrigger": false,
+        "Radius": 35,
+        "Static": false
+      },
+      {
+        "__type": "Sandbox.SkinnedModelRenderer",
+        "__guid": "0a9afabe-b06f-4fc6-a7d9-fe8eb492dba9",
+        "BodyGroups": 18446744073709551615,
+        "CreateBoneObjects": false,
+        "Model": "models/dev/sphere.vmdl",
+        "RenderType": "On",
+        "Tint": "0,0.66667,0.86667,1",
+        "UseAnimGraph": true
+      },
+      {
+        "__type": "LevelEnd",
+        "__guid": "aecb641e-d6b2-4741-9950-279543944415"
+      }
+    ],
+    "Children": [],
+    "__variables": [
+      {
+        "Id": "Next Level",
+        "Title": "Next Level",
+        "Targets": [
+          {
+            "Id": "aecb641e-d6b2-4741-9950-279543944415",
+            "Property": "NextLevel"
+          }
+        ]
+      },
+      {
+        "Id": "Deferred Next Level",
+        "Title": "Deferred Next Level",
+        "Targets": [
+          {
+            "Id": "aecb641e-d6b2-4741-9950-279543944415",
+            "Property": "DeferredNextLevel"
+          }
+        ]
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

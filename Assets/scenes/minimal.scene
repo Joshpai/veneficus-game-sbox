@@ -228,22 +228,23 @@
       ]
     },
     {
-      "__guid": "3834b09f-ef6a-423b-a3ad-b698a5be66f2",
-      "Flags": 0,
-      "Name": "player",
-      "Position": "-193.4727,55.03728,135.2977",
-      "Enabled": true,
-      "__Prefab": "prefabs/player.prefab",
-      "__PrefabVariables": {}
-    },
-    {
       "__guid": "2ff61d7c-d7b9-4e08-b13f-0afb5c20fddc",
       "Flags": 0,
       "Name": "fireenemy1",
-      "Position": "-755.5612,-39.17828,0",
+      "Position": "-1100.481,-39.17828,0",
       "Enabled": true,
       "__Prefab": "prefabs/fireenemy1.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Patrol Path": [
+          "0,0,0",
+          "0,200,0",
+          "200,200,0",
+          "200,0,0",
+          "400,0,0",
+          "400,200,0"
+        ],
+        "Passive Mode": "Patrol"
+      }
     },
     {
       "__guid": "23ca1c74-46d6-444d-88e8-bc8604f8bb74",
@@ -2813,6 +2814,57 @@
           "Static": true
         }
       ]
+    },
+    {
+      "__guid": "e2c9b2af-783f-461a-b284-f5f36b9041b4",
+      "Flags": 0,
+      "Name": "fireenemy1 (1)",
+      "Position": "-928.8813,473.7882,4",
+      "Enabled": true,
+      "__Prefab": "prefabs/fireenemy1.prefab",
+      "__PrefabVariables": {
+        "Patrol Path": [],
+        "Passive Mode": "Wander"
+      }
+    },
+    {
+      "__guid": "80126748-e4de-446c-b794-5fbe0a16da7a",
+      "Flags": 0,
+      "Name": "fireenemy1 (2)",
+      "Position": "-1125.772,301.566,4",
+      "Enabled": true,
+      "__Prefab": "prefabs/fireenemy1.prefab",
+      "__PrefabVariables": {
+        "Patrol Path": [],
+        "Passive Mode": "Stationary"
+      }
+    },
+    {
+      "__guid": "50ba66cc-3a2c-4947-95da-847c6e09bfb8",
+      "Flags": 0,
+      "Name": "Object",
+      "Position": "390.1254,-415.4193,134.1721",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SpawnPoint",
+          "__guid": "6cda62cb-da78-4dcc-bcca-3d49d70d3fca",
+          "Color": "0.8902,0.31765,0.05098,1"
+        }
+      ]
+    },
+    {
+      "__guid": "85eed7cc-f272-419e-b828-908b014fda25",
+      "Flags": 0,
+      "Name": "level_end",
+      "Position": "-22.00011,427.5349,160.0001",
+      "Tags": "interactable",
+      "Enabled": true,
+      "__Prefab": "prefabs/level_end.prefab",
+      "__PrefabVariables": {
+        "Next Level": "scenes/testmap.scene",
+        "Deferred Next Level": null
+      }
     }
   ],
   "SceneProperties": {

@@ -1,8 +1,5 @@
 public sealed class EnemyAI : Component
 {
-	[Property, Group("References")]
-	public NavMeshAgent Agent { get; set; }
-
 	[Property, Group("Basic Definitions")]
 	public BaseSpell.SpellType EnemySpell { get; set; }
 
@@ -39,6 +36,11 @@ public sealed class EnemyAI : Component
 
 	[Property, Group("Passive")]
 	public PassiveBehaviour PassiveMode { get; set; }
+
+	[Property, Group("Passive")]
+	public List<Vector3> PatrolPath { get; set; }
+
+	private List<Vector3> _patrolPathWorld;
 
 	[Property, Group("Passive")]
 	public bool AlwaysActive { get; set; } = false;
@@ -96,9 +98,13 @@ public sealed class EnemyAI : Component
 	[Property, Group("Passive")]
 	public GiveUpBehaviour GiveUpMode { get; set; }
 
+	private NavMeshAgent _agent { get; set; }
+
 	private PlayerMovementController _player;
 
 	private bool _passive;
+
+	private Vector3 _startingPosition;
 
 	protected override void DrawGizmos()
 	{
@@ -107,18 +113,39 @@ public sealed class EnemyAI : Component
 		if (!Gizmo.IsSelected)
 			return;
 
-		var lookDirection = new Vector3(1, 0, 0);
+		var lookDirection = Transform.Rotation.Forward;
+		Gizmo.Transform = global::Transform.Zero;
 		Gizmo.Draw.Color = new Color(1.0f, 1.0f, 1.0f, 0.2f);
-		Gizmo.Draw.SolidCone(EyePosition + lookDirection * VisionRange,
+		Gizmo.Draw.SolidCone(Transform.Position + EyePosition +
+							 lookDirection * VisionRange,
 							 -lookDirection * VisionRange,
 							 VisionRange * MathF.Tan(VisionAngle));
 
 		Gizmo.Draw.Color = Color.White;
-		Gizmo.Draw.LineSphere(EyePosition, HearingRadius);
+		Gizmo.Draw.LineSphere(Transform.Position + EyePosition, HearingRadius);
+
+		Gizmo.Draw.LineThickness = 16.0f;
+		var offset = (_startingPosition == Vector3.Zero) ? Transform.Position
+														 : _startingPosition;
+		for (int i = 0; i < PatrolPath.Count - 1; i++)
+		{
+			if (i == 0)
+				Gizmo.Draw.Color = Color.Green;
+			else if (i == PatrolPath.Count - 2)
+				Gizmo.Draw.Color = Color.Red;
+			else
+				Gizmo.Draw.Color = ((i & 0x1) == 0) ? Color.Orange : Color.Cyan;
+
+			Gizmo.Draw.Line(offset + PatrolPath[i],
+							offset + PatrolPath[i+1]);
+		}
 	}
 
 	protected override void OnStart()
 	{
+		_agent = Components.GetInChildrenOrSelf<NavMeshAgent>();
+		_startingPosition = Transform.Position;
+
 		var players = Scene.GetAllComponents<PlayerMovementController>();
 		foreach (var player in players)
 		{
@@ -130,15 +157,68 @@ public sealed class EnemyAI : Component
 		}
 
 		_passive = !AlwaysActive;
+		if (_passive)
+			_agent.UpdateRotation = true;
+
+		_patrolPathWorld = new List<Vector3>();
+		foreach (var pos in PatrolPath)
+			_patrolPathWorld.Add(pos + _startingPosition);
 	}
 
 	private void MoveTo(Vector3 destination)
 	{
-		Agent.MoveTo(destination);
+		Log.Info($"Moving to {destination}");
+		_agent.MoveTo(destination);
 	}
+
+	private int _patrolNextIndex = -1;
+	private int _patrolDirection = 1;
+	private float _passiveNextWanderTime = 0.0f;
 
 	private void OnFixedUpdatePassive()
 	{
+		if (PassiveMode == PassiveBehaviour.Patrol &&
+			_patrolPathWorld.Count > 0)
+		{
+			// Magic uninited number
+			if (_patrolNextIndex == -1)
+			{
+				_patrolNextIndex = 1;
+				_patrolDirection = 1;
+				MoveTo(_patrolPathWorld[_patrolNextIndex]);
+			}
+
+			if (Transform.Position.Distance(_patrolPathWorld[_patrolNextIndex]) < 10.0f)
+			{
+				_patrolNextIndex += _patrolDirection;
+
+				if (_patrolNextIndex < 0 ||
+					_patrolNextIndex >= _patrolPathWorld.Count)
+				{
+					_patrolDirection *= -1;
+					_patrolNextIndex += 2 * _patrolDirection;
+				}
+
+				MoveTo(_patrolPathWorld[_patrolNextIndex]);
+			}
+		}
+		else if (PassiveMode == PassiveBehaviour.Wander)
+		{
+			if (_passiveNextWanderTime < Time.Now)
+			{
+				var pos = Scene.NavMesh.GetRandomPoint(Transform.Position, 100.0f);
+				if (pos != null)
+					MoveTo(pos.Value);
+				_passiveNextWanderTime = Time.Now + 5.0f;
+			}
+
+			if (_agent.TargetPosition != null &&
+				Transform.Position.Distance(_agent.TargetPosition.Value) < 10.0f)
+			{
+				_agent.Stop();
+			}
+		}
+
 		Vector3 playerOffset = Transform.Position - _player.Transform.Position;
 		float angleToPlayer =
 			MathF.Acos(-playerOffset.Normal.Dot(Transform.Rotation.Forward));
@@ -146,33 +226,70 @@ public sealed class EnemyAI : Component
 		if (playerOffset.Length < VisionRange && angleToPlayer < VisionAngle)
 		{
 			_passive = false;
-			// get an early headstart?
-			OnFixedUpdateActive();
 			return;
 		}
 	}
 
+	private bool PointIsReachableByPath(List<Vector3> path, Vector3 dest)
+	{
+		// TODO: this function doesn't work that well where the destination is
+		// floating in the air. For example, if the player is jumping.
+
+		if (path.Count == 0)
+			return Transform.Position.DistanceSquared(dest) < 10.0f;
+
+		Vector3 ultimateDest = path[path.Count - 1];
+
+		// 2*Agent.Radius?
+		if (ultimateDest.Distance(dest) > 50.0f)
+			return false;
+
+		Vector3 penultimateDest = path.Count > 2 ? path[path.Count - 2]
+												 : Transform.Position;
+		Vector3 finalStep = ultimateDest - penultimateDest;
+		var slopeAngle = MathF.Atan(finalStep.z / finalStep.WithZ(0).Length);
+		if (slopeAngle > Scene.NavMesh.AgentMaxSlope)
+			return false;
+
+		return true;
+	}
+
 	private void OnFixedUpdateActive()
 	{
-		List<Vector3> x =
+		List<Vector3> pathToPlayer =
 			Scene.NavMesh.GetSimplePath(
 				Transform.Position,
 				_player.Transform.Position
 			);
 
-		if (x.Count == 0)
+		bool reachable = PointIsReachableByPath(pathToPlayer, _player.Transform.Position);
+		// Log.Info(reachable);
+
+		if (!reachable)
 			return;
 
-		Vector3 terminal = x[x.Count - 1];
-		// 10 is arbitrary
-		bool reachable = terminal.DistanceSquared(_player.Transform.Position) < 10.0f;
-		Log.Info(reachable);
-
 		MoveTo(_player.Transform.Position);
-		// TODO: this works (ish, angles are correct), but slows the agent to a
-		// crawl. Probably need to roll our own movement in that case or maybe
-		// change the rotation of a parent/child or something instead.
-		// Transform.Rotation = (_player.Transform.Position - Transform.Position).EulerAngles;
+	}
+
+	protected override void OnUpdate()
+	{
+		if (!_agent.UpdateRotation)
+		{
+			// TODO: look direction if target not dest
+			// var lookAhead = _agent.GetLookAhead(30.0f);
+			// Vector3 vector = lookAhead - Transform.Position;
+			// vector.z = 0f;
+			// if (vector.Length > 0.1f)
+			// {
+			// 	Rotation wantRotation = Rotation.LookAt(_player.Transform.Position);
+			// 	_agent.SyncAgentPosition = false;
+			// 	Transform.Rotation = wantRotation;
+			// 	// Transform.Rotation = Rotation.Slerp(Transform.Rotation,
+			// 	// 									wantRotation,
+			// 	// 									Time.Delta * 3f);
+			// 	_agent.SyncAgentPosition = true;
+			// }
+		}
 	}
 
 	protected override void OnFixedUpdate()

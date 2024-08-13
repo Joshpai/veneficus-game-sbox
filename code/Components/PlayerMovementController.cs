@@ -3,6 +3,9 @@ using Sandbox.Citizen;
 public sealed class PlayerMovementController : Component
 {
 	[Property]
+	public SceneFile NextScene { get; set; }
+
+	[Property]
 	public GameObject Body { get; set; }
 
 	[Property]
@@ -79,6 +82,11 @@ public sealed class PlayerMovementController : Component
 
 	[Property]
 	public float PolymorphedStepHeight { get; set; } = 5.0f;
+
+	// Too small a thing to fit elsewhere. Maximum range of an item the player
+	// can interact with.
+	[Property]
+	public float InteractRange { get; set; } = 64.0f;
 
 	private float _currentMass;
 
@@ -176,6 +184,11 @@ public sealed class PlayerMovementController : Component
 							   CameraFollowDistance,
 			10.0f
 		);
+
+		Gizmo.Draw.LineThickness = 16.0f;
+		var startPos = HumanEyePosition;
+		var endPos = startPos - CameraFollowDirection.Normal * InteractRange;
+		Gizmo.Draw.Line(startPos, endPos);
 	}
 
 	protected override void OnUpdate()
@@ -257,6 +270,25 @@ public sealed class PlayerMovementController : Component
 	protected override void OnFixedUpdate()
 	{
 		base.OnFixedUpdate();
+
+		if (Input.Pressed("use"))
+		{
+			var startPos = Transform.Position + EyePosition;
+			var endPos = startPos + EyeAngles.Forward * InteractRange;
+			var trace = Scene.Trace.Ray(startPos, endPos)
+								   .WithTag("interactable")
+								   .Run();
+			if (trace.Hit)
+			{
+				var interactable =
+					trace.GameObject.Components
+									.GetInChildrenOrSelf<InteractableComponent>();
+				if (interactable != null)
+				{
+					interactable.Interact(GameObject);
+				}
+			}
+		}
 
 		Vector3 direction = Input.AnalogMove.Normal * Body.Transform.Rotation;
 		if (Controller.IsOnGround)
