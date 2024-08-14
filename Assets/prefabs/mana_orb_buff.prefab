@@ -1,0 +1,57 @@
+{
+  "RootObject": {
+    "__guid": "1a4b1f58-7165-4a7f-99b5-9579fa6ec17e",
+    "Flags": 0,
+    "Name": "mana_orb_buff",
+    "Tags": "trigger",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.SkinnedModelRenderer",
+        "__guid": "105e7cab-5ed3-478a-83ff-699d1d073773",
+        "BodyGroups": 18446744073709551615,
+        "CreateBoneObjects": false,
+        "Model": "models/dev/sphere.vmdl",
+        "RenderType": "On",
+        "Tint": "0.3,0.06598,0.56744,1",
+        "UseAnimGraph": false
+      },
+      {
+        "__type": "Sandbox.SphereCollider",
+        "__guid": "c49f0aeb-6ec2-4181-a17e-57129f98f283",
+        "Center": "0,0,0",
+        "IsTrigger": true,
+        "Radius": 34.499958,
+        "Static": true
+      },
+      {
+        "__type": "MaxManaBuff",
+        "__guid": "daa0b1e0-e2f7-466b-ba5c-3061d6a4c834",
+        "MaxManaValue": 25
+      },
+      {
+        "__type": "Sandbox.Rigidbody",
+        "__guid": "f1e21337-0750-4435-b869-74a4fc012533",
+        "__enabled": false,
+        "AngularDamping": 0,
+        "Gravity": false,
+        "LinearDamping": 0,
+        "Locking": {},
+        "MassCenterOverride": "0,0,0",
+        "MassOverride": 0,
+        "MotionEnabled": false,
+        "OverrideMassCenter": false,
+        "RigidbodyFlags": 0,
+        "StartAsleep": false
+      }
+    ],
+    "Children": [],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

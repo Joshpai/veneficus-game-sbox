@@ -3,9 +3,6 @@ using Sandbox.Citizen;
 public sealed class PlayerMovementController : Component
 {
 	[Property]
-	public SceneFile NextScene { get; set; }
-
-	[Property]
 	public GameObject Body { get; set; }
 
 	[Property]
