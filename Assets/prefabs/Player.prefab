@@ -95,6 +95,12 @@
           "go": "b650359f-3468-4456-b249-1e8c3686c0cf",
           "component_type": "HealthComponent"
         },
+        "Movement": {
+          "_type": "component",
+          "component_id": "8b1cbddb-d250-48f9-8481-5e1002d93f6a",
+          "go": "b650359f-3468-4456-b249-1e8c3686c0cf",
+          "component_type": "PlayerMovementController"
+        },
         "Spellcasting": {
           "_type": "component",
           "component_id": "06d5e6b4-10f6-4af0-a0d9-55593bbf8591",

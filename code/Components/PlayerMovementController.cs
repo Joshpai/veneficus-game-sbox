@@ -112,7 +112,7 @@ public sealed class PlayerMovementController : Component
 
 	private bool _isPolymorphed;
 
-	private bool _levelStarted = true;
+	public bool LevelStarted { get; private set; }= true;
 	private ModelRenderer _modelRenderer;
 	private Model _oldModel;
 
@@ -166,7 +166,7 @@ public sealed class PlayerMovementController : Component
 		}
 		Transform.Position += HumanEyePosition;
 		EyePosition = Vector3.Zero;
-		_levelStarted = false;
+		LevelStarted = false;
 	}
 
 	private void StartLevel()
@@ -178,7 +178,7 @@ public sealed class PlayerMovementController : Component
 		}
 		Transform.Position -= HumanEyePosition;
 		EyePosition = HumanEyePosition;
-		_levelStarted = true;
+		LevelStarted = true;
 	}
 
 	public void TogglePolymorph()
@@ -304,7 +304,7 @@ public sealed class PlayerMovementController : Component
 	{
 		base.OnFixedUpdate();
 
-		if (!_levelStarted)
+		if (!LevelStarted)
 		{
 			if (Input.Pressed("use"))
 			{
