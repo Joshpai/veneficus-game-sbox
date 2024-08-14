@@ -1,6 +1,7 @@
 public class LevelManagerStaticStore
 {
 	public static LevelManager Instance { get; set; }
+	public static SceneFile ActiveScene { get; set; }
 	public static bool IsLoading { get; set; }
 }
 
@@ -12,9 +13,32 @@ public sealed class LevelManager : Component
 	[Property]
 	public GameObject LoadingScreen { get; set; }
 
-	public static void LoadLevel(SceneFile newScene)
+	public static void LoadLevelImmediate(SceneFile newScene,
+										  bool showLoadingScreen)
 	{
-		LevelManagerStaticStore.Instance.LoadLevelInternal(newScene);
+		var instance = LevelManagerStaticStore.Instance;
+
+		if (instance.Scene.IsLoading)
+			return;
+
+		float timescale =
+			instance.LoadLevelInternal(newScene, showLoadingScreen);
+
+		LevelManagerStaticStore.IsLoading = false;
+		instance.Scene.TimeScale = timescale;
+	}
+
+	public static float? LoadLevel(SceneFile newScene, bool showLoadingScreen)
+	{
+		var instance = LevelManagerStaticStore.Instance;
+
+		if (instance.Scene.IsLoading)
+			return null;
+
+		float timescale =
+			instance.LoadLevelInternal(newScene, showLoadingScreen);
+
+		return timescale;
 	}
 
 	PlayerMovementController SpawnPlayer()
@@ -38,11 +62,8 @@ public sealed class LevelManager : Component
 		return controller;
 	}
 
-	private void LoadLevelInternal(SceneFile newScene)
+	private float LoadLevelInternal(SceneFile newScene, bool showLoadingScreen)
 	{
-		if (Scene.IsLoading)
-			return;
-
 		LevelManagerStaticStore.IsLoading = true;
 
 		var oldTimeScale = newScene.SceneProperties.ContainsKey("TimeScale")
@@ -51,8 +72,12 @@ public sealed class LevelManager : Component
 		newScene.SceneProperties.Remove("TimeScale");
 		Scene.TimeScale = 0.0f;
 
-		var loadingScreen = LoadingScreen.Clone();
-		loadingScreen.Flags |= GameObjectFlags.DontDestroyOnLoad;
+		GameObject loadingScreen = null;
+		if (showLoadingScreen)
+		{
+			loadingScreen = LoadingScreen.Clone();
+			loadingScreen.Flags |= GameObjectFlags.DontDestroyOnLoad;
+		}
 
 		SceneLoadOptions options = new SceneLoadOptions();
 		options.SetScene(newScene);
@@ -64,9 +89,12 @@ public sealed class LevelManager : Component
 		var playerController = SpawnPlayer();
 		playerController.SetPlayerNotStarted();
 
-		loadingScreen.DestroyImmediate();
-		LevelManagerStaticStore.IsLoading = false;
-		Scene.TimeScale = oldTimeScale;
+		if (showLoadingScreen)
+			loadingScreen.DestroyImmediate();
+
+		LevelManagerStaticStore.ActiveScene = newScene;
+
+		return oldTimeScale;
 	}
 
 	protected override void OnStart()
@@ -75,7 +103,7 @@ public sealed class LevelManager : Component
 		GameObject.Flags |= GameObjectFlags.DontDestroyOnLoad;
 		if (!Scene.IsLoading && StartingLevel != null)
 		{
-			LoadLevelInternal(StartingLevel);
+			LoadLevelImmediate(StartingLevel, true);
 		}
 	}
 }

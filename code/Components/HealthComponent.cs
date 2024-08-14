@@ -9,6 +9,9 @@ public sealed class HealthComponent : Component
 	[Property]
 	public float HealMultiplier { get; set; } = 1.0f;
 
+	[Property]
+	public bool DestroyOnDeath { get; set; } = true;
+
 	public float Health { get; private set; }
 
 	public bool Alive { get; private set; } = false;
@@ -53,6 +56,7 @@ public sealed class HealthComponent : Component
 
 		OnDeath?.Invoke();
 
-		GameObject.Destroy();
+		if (DestroyOnDeath)
+			GameObject.Destroy();
 	}
 }

@@ -60,6 +60,7 @@
         "__type": "HealthComponent",
         "__guid": "c83f3b30-ed4a-4ad7-b0b4-e6acac06664d",
         "DamageMultiplier": 1,
+        "DestroyOnDeath": false,
         "HealMultiplier": 1,
         "MaxHealth": 100
       },
@@ -99,6 +100,20 @@
           "component_id": "06d5e6b4-10f6-4af0-a0d9-55593bbf8591",
           "go": "b650359f-3468-4456-b249-1e8c3686c0cf",
           "component_type": "PlayerSpellcastingController"
+        }
+      },
+      {
+        "__type": "PlayerDeathManager",
+        "__guid": "e60520c2-ec32-4795-bd39-4755f6550f55",
+        "DeathScreen": {
+          "_type": "gameobject",
+          "prefab": "prefabs/death_screen.prefab"
+        },
+        "PlayerHealthComponent": {
+          "_type": "component",
+          "component_id": "c83f3b30-ed4a-4ad7-b0b4-e6acac06664d",
+          "go": "b650359f-3468-4456-b249-1e8c3686c0cf",
+          "component_type": "HealthComponent"
         }
       }
     ],
