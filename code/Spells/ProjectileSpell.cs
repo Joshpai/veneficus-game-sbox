@@ -9,6 +9,7 @@ public abstract class ProjectileSpell : BaseSpell
 	public abstract float Duration { get; }
 
 	protected GameObject _projectileObject;
+	protected ProjectileSpellCollisionComponent _collisionComponent;
 	protected TimeSince _timeSinceProjectileSpawn;
 
 	public ProjectileSpell(GameObject caster)
@@ -25,6 +26,10 @@ public abstract class ProjectileSpell : BaseSpell
 		_projectileObject.Transform.Scale = ProjectileScale;
 
 		// NOTE: collision is handled in ProjectileSpellCollisionComponent.
+		_collisionComponent =
+			_projectileObject.Components.Get<ProjectileSpellCollisionComponent>();
+		if (_collisionComponent != null)
+			_collisionComponent.Enabled = false;
 
 		_projectileObject.SetParent(_caster);
 		_projectileObject.Transform.LocalPosition =
@@ -42,11 +47,11 @@ public abstract class ProjectileSpell : BaseSpell
 		_projectileObject.Transform.ClearInterpolation();
 
 		// Update the fireball damage according to the charge amount
-		// TODO: get this earlier and only enable it now? Or better handle this
-		// destroying us before the spellcasting controller expects.
-		var collisionComponent = _projectileObject.Components.Get<ProjectileSpellCollisionComponent>();
-		if (collisionComponent != null)
-			collisionComponent.DamageMultiplier *= (1 + GetChargeAmount());
+		if (_collisionComponent != null)
+		{
+			_collisionComponent.Enabled = true;
+			_collisionComponent.DamageMultiplier *= (1 + GetChargeAmount());
+		}
 	}
 
 	public override void OnUpdate()
