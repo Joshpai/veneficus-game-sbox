@@ -2884,7 +2884,7 @@
       "Flags": 0,
       "Name": "player",
       "Position": "242.9886,170.5641,132.0117",
-      "Tags": "trigger,player",
+      "Tags": "player,trigger",
       "Enabled": true,
       "__Prefab": "prefabs/player.prefab",
       "__PrefabVariables": {}

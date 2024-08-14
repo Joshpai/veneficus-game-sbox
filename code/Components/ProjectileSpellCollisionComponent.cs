@@ -1,5 +1,5 @@
 public sealed class ProjectileSpellCollisionComponent
-	: Component, Component.ICollisionListener
+	: Component, Component.ICollisionListener, Component.ITriggerListener
 {
 	[Property]
 	public float ContactDamage { get; set; } = 20.0f;
@@ -12,10 +12,9 @@ public sealed class ProjectileSpellCollisionComponent
 
 	public float DamageMultiplier { get; set; } = 1.0f;
 
-	public void OnCollisionStart(Collision collision)
+	private void HandleCollision(GameObject otherObj)
 	{
-		var otherObj = collision.Other.GameObject;
-		var collisionPoint = collision.Contact.Point;
+		var collisionPoint = Transform.Position;
 		var hp = otherObj.Components.GetInDescendantsOrSelf<HealthComponent>();
 		if (hp != null)
 			hp.Damage(ContactDamage * DamageMultiplier);
@@ -23,11 +22,11 @@ public sealed class ProjectileSpellCollisionComponent
 		if (DoesExplode)
 		{
 			GameObject explosionObj = new GameObject();
-			explosionObj.Transform.Position = collision.Contact.Point;
+			explosionObj.Transform.Position = collisionPoint;
 			explosionObj.SetPrefabSource("prefabs/explosion.prefab");
 			explosionObj.UpdateFromPrefab();
 			var explosion = explosionObj.Components.Get<ExplosionManagerComponent>();
-			explosion.ExplosionOrigin = collision.Contact.Point;
+			explosion.ExplosionOrigin = collisionPoint;
 			explosion.ExplosionRadius *= 100 * DamageMultiplier;
 			explosion.ExplosionDamage = SplashDamage;
 			explosion.DamageMultiplier *= DamageMultiplier;
@@ -36,5 +35,15 @@ public sealed class ProjectileSpellCollisionComponent
 		}
 
 		GameObject.Destroy();
+	}
+
+	public void OnTriggerEnter(Collider other)
+	{
+		HandleCollision(other.GameObject);
+	}
+
+	public void OnCollisionStart(Collision collision)
+	{
+		HandleCollision(collision.Other.GameObject);
 	}
 }

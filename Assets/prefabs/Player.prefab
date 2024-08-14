@@ -3,7 +3,7 @@
     "__guid": "b650359f-3468-4456-b249-1e8c3686c0cf",
     "Flags": 0,
     "Name": "player",
-    "Tags": "player",
+    "Tags": "player,trigger",
     "Enabled": true,
     "Components": [
       {
@@ -127,7 +127,7 @@
         "__type": "Sandbox.CapsuleCollider",
         "__guid": "5ee98dd1-b9c9-41a6-ab47-4fbd207ba2c4",
         "End": "0,0,56",
-        "IsTrigger": false,
+        "IsTrigger": true,
         "Radius": 16,
         "Start": "0,0,16",
         "Static": false
