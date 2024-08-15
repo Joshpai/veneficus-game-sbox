@@ -53,19 +53,20 @@ public sealed class PlayerSpellcastingController : Component
 		ActiveSpell = BaseSpell.SpellType.SpellTypeMin + 1;
 		_spellBuffer = new BaseSpell[(int)BaseSpell.SpellType.SpellTypeMax];
 		for (int i = 0; i < _spellBuffer.Length; i++)
-			_spellBuffer[i] = CreateSpell((BaseSpell.SpellType)i);
+			_spellBuffer[i] = CreateSpell(GameObject, (BaseSpell.SpellType)i);
 
 		Mana = MaxMana;
 		_manaRegenStartTime = 0.0f;
 	}
 
-	private BaseSpell CreateSpell(BaseSpell.SpellType spellType)
+	public static BaseSpell CreateSpell(GameObject caster,
+										BaseSpell.SpellType spellType)
 	{
-		GameObject caster = this.GameObject;
 		return spellType switch
 		{
-			BaseSpell.SpellType.Fireball => new FireballSpell(caster),
 			BaseSpell.SpellType.Polymorph => new PolymorphSpell(caster),
+			BaseSpell.SpellType.MagicMissile => new MagicMissileSpell(caster),
+			BaseSpell.SpellType.Fireball => new FireballSpell(caster),
 			_ => null,
 		};
 	}
@@ -192,7 +193,8 @@ public sealed class PlayerSpellcastingController : Component
 				// Stateful spells are singletons, so only recreate spells that
 				// aren't stateful!
 				if (!_spellBuffer[(int)ActiveSpell].IsStateful)
-					_spellBuffer[(int)ActiveSpell] = CreateSpell(ActiveSpell);
+					_spellBuffer[(int)ActiveSpell] =
+						CreateSpell(GameObject, ActiveSpell);
 
 				// TODO: it would be cool if this is progressively taken during
 				// the casting process. But that's not needed for now.

@@ -1,0 +1,32 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+
+<root>
+	<div class="title">You Die xdddd</div>
+	<div class="title">@DeathReason</div>
+	<button @onclick=@(() => Respawn())>Respawn</button>
+</root>
+
+@code
+{
+	[Property]
+	public string DeathReason { get; set; } = "skill issue";
+
+	[Property]
+	public float? TimeScale { get; set; } = null;
+
+	void Respawn()
+	{
+		Log.Info("Respawn");
+		LevelManagerStaticStore.IsLoading = false;
+		Scene.TimeScale = (TimeScale != null) ? TimeScale.Value : 1.0f;
+		GameObject.Destroy();
+	}
+
+	/// <summary>
+	/// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
+	/// </summary>
+	protected override int BuildHash() =>
+		System.HashCode.Combine(DeathReason, TimeScale);
+}

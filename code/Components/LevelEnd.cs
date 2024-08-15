@@ -13,10 +13,9 @@ public sealed class LevelEnd : InteractableComponent
 
 	public override void Interact(GameObject interacter)
 	{
-		Log.Info("Use LevelEnd");
 		if (NextLevel != null)
 		{
-			LevelManager.LoadLevel(NextLevel);
+			LevelManager.LoadLevelImmediate(NextLevel, true);
 		}
 	}
 }

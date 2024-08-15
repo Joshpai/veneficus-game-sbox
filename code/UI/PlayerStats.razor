@@ -2,7 +2,7 @@
 @using Sandbox.UI;
 @inherits PanelComponent
 
-@if (LevelManager.IsLoading) return;
+@if (!Movement.LevelStarted) return;
 
 <root>
 	<div>Health: @Health.Health</div>
@@ -18,6 +18,9 @@
 	public HealthComponent Health { get; set; }
 
 	[Property]
+	public PlayerMovementController Movement { get; set; }
+
+	[Property]
 	public PlayerSpellcastingController Spellcasting { get; set; }
 
 	/// <summary>
@@ -26,5 +29,6 @@
 	protected override int BuildHash() =>
 		System.HashCode.Combine(Health.Health, Spellcasting.Mana,
 								Spellcasting.ActiveSpell,
-								Spellcasting.GetActiveSpellCooldown());
+								Spellcasting.GetActiveSpellCooldown(),
+								Movement.LevelStarted);
 }

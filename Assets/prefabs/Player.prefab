@@ -3,6 +3,7 @@
     "__guid": "b650359f-3468-4456-b249-1e8c3686c0cf",
     "Flags": 0,
     "Name": "player",
+    "Tags": "player,trigger",
     "Enabled": true,
     "Components": [
       {
@@ -15,7 +16,7 @@
         "IgnoreLayers": "player",
         "Radius": 16,
         "StepHeight": 18,
-        "UseCollisionRules": false
+        "UseCollisionRules": true
       },
       {
         "__type": "PlayerMovementController",
@@ -60,6 +61,7 @@
         "__type": "HealthComponent",
         "__guid": "c83f3b30-ed4a-4ad7-b0b4-e6acac06664d",
         "DamageMultiplier": 1,
+        "DestroyOnDeath": false,
         "HealMultiplier": 1,
         "MaxHealth": 100
       },
@@ -94,12 +96,41 @@
           "go": "b650359f-3468-4456-b249-1e8c3686c0cf",
           "component_type": "HealthComponent"
         },
+        "Movement": {
+          "_type": "component",
+          "component_id": "8b1cbddb-d250-48f9-8481-5e1002d93f6a",
+          "go": "b650359f-3468-4456-b249-1e8c3686c0cf",
+          "component_type": "PlayerMovementController"
+        },
         "Spellcasting": {
           "_type": "component",
           "component_id": "06d5e6b4-10f6-4af0-a0d9-55593bbf8591",
           "go": "b650359f-3468-4456-b249-1e8c3686c0cf",
           "component_type": "PlayerSpellcastingController"
         }
+      },
+      {
+        "__type": "PlayerDeathManager",
+        "__guid": "e60520c2-ec32-4795-bd39-4755f6550f55",
+        "DeathScreen": {
+          "_type": "gameobject",
+          "prefab": "prefabs/death_screen.prefab"
+        },
+        "PlayerHealthComponent": {
+          "_type": "component",
+          "component_id": "c83f3b30-ed4a-4ad7-b0b4-e6acac06664d",
+          "go": "b650359f-3468-4456-b249-1e8c3686c0cf",
+          "component_type": "HealthComponent"
+        }
+      },
+      {
+        "__type": "Sandbox.CapsuleCollider",
+        "__guid": "5ee98dd1-b9c9-41a6-ab47-4fbd207ba2c4",
+        "End": "0,0,56",
+        "IsTrigger": true,
+        "Radius": 16,
+        "Start": "0,0,16",
+        "Static": false
       }
     ],
     "Children": [

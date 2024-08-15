@@ -1,0 +1,31 @@
+{
+  "RootObject": {
+    "__guid": "26e4f23a-f382-4300-a2fa-ae4516ec6007",
+    "Flags": 0,
+    "Name": "death_screen",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.ScreenPanel",
+        "__guid": "d274edfe-8ce0-4dad-bff2-f3bd8f80a7b7",
+        "AutoScreenScale": true,
+        "Opacity": 1,
+        "Scale": 1,
+        "ZIndex": 100
+      },
+      {
+        "__type": "DeathScreen",
+        "__guid": "94113ecc-40b4-42bb-bf85-82fcce0ef0e4",
+        "DeathReason": "skill issue"
+      }
+    ],
+    "Children": [],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

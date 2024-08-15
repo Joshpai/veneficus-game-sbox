@@ -254,6 +254,50 @@ public sealed class EnemyAI : Component
 		return true;
 	}
 
+	private TimeSince lastAttack = 0.0f;
+	private List<BaseSpell> _castSpells = new List<BaseSpell>();
+	private List<BaseSpell> _deferredSpellRemovals = new List<BaseSpell>();
+
+	private void OnSpellDestroyed(object spell, EventArgs e)
+	{
+		_deferredSpellRemovals.Add((BaseSpell)spell);
+	}
+
+	private void OnUpdateSpells()
+	{
+		foreach (BaseSpell spell in _castSpells)
+			spell.OnUpdate();
+	}
+
+
+	private void OnFixedUpdateSpells()
+	{
+		foreach (BaseSpell spell in _castSpells)
+			spell.OnFixedUpdate();
+
+		foreach (BaseSpell spell in _deferredSpellRemovals)
+			_castSpells.Remove(spell);
+	}
+
+	private void AttackPlayer()
+	{
+		// TODO: bursts
+		if (lastAttack < 3.0f)
+			return;
+
+		var spell =
+			PlayerSpellcastingController.CreateSpell(GameObject, EnemySpell);
+		spell.CasterEyeOrigin = EyePosition;
+		// TODO: prediction?
+		// TODO: this also shoots in a weird direction... tricky to debug
+		spell.CastDirection =
+			(_player.Transform.Position - Transform.Position).Normal;
+		spell.StartCasting();
+		spell.FinishCasting();
+		_castSpells.Add(spell);
+		lastAttack = 0.0f;
+	}
+
 	private void OnFixedUpdateActive()
 	{
 		List<Vector3> pathToPlayer =
@@ -262,13 +306,23 @@ public sealed class EnemyAI : Component
 				_player.Transform.Position
 			);
 
-		bool reachable = PointIsReachableByPath(pathToPlayer, _player.Transform.Position);
-		// Log.Info(reachable);
+		bool pathEndsCloserToPlayer = true;
+		bool pathTooLong = false;
+		if (pathEndsCloserToPlayer && !pathTooLong)
+		{
+			MoveTo(_player.Transform.Position);
+		}
 
-		if (!reachable)
-			return;
+		bool playerInAttackRange = true;
+		bool canAttack = true;
+		if (playerInAttackRange && canAttack)
+		{
+			AttackPlayer();
+		}
 
-		MoveTo(_player.Transform.Position);
+		// bool reachable = PointIsReachableByPath(pathToPlayer, _player.Transform.Position);
+		// if (!reachable)
+		// 	return;
 	}
 
 	protected override void OnUpdate()
@@ -290,6 +344,8 @@ public sealed class EnemyAI : Component
 			// 	_agent.SyncAgentPosition = true;
 			// }
 		}
+
+		OnUpdateSpells();
 	}
 
 	protected override void OnFixedUpdate()
@@ -302,5 +358,7 @@ public sealed class EnemyAI : Component
 		{
 			OnFixedUpdateActive();
 		}
+
+		OnFixedUpdateSpells();
 	}
 }

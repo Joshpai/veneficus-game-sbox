@@ -1,3 +1,10 @@
+public class LevelManagerStaticStore
+{
+	public static LevelManager Instance { get; set; }
+	public static SceneFile ActiveScene { get; set; }
+	public static bool IsLoading { get; set; }
+}
+
 public sealed class LevelManager : Component
 {
 	[Property]
@@ -6,27 +13,71 @@ public sealed class LevelManager : Component
 	[Property]
 	public GameObject LoadingScreen { get; set; }
 
-	private static LevelManager _instance;
-	public static bool IsLoading = false;
-
-	public static void LoadLevel(SceneFile newScene)
+	public static void LoadLevelImmediate(SceneFile newScene,
+										  bool showLoadingScreen)
 	{
-		_instance.LoadLevelInternal(newScene);
+		var instance = LevelManagerStaticStore.Instance;
+
+		if (instance.Scene.IsLoading)
+			return;
+
+		float timescale =
+			instance.LoadLevelInternal(newScene, showLoadingScreen);
+
+		LevelManagerStaticStore.IsLoading = false;
+		instance.Scene.TimeScale = timescale;
 	}
 
-	private void LoadLevelInternal(SceneFile newScene)
+	public static float? LoadLevel(SceneFile newScene, bool showLoadingScreen)
 	{
-		IsLoading = true;
+		var instance = LevelManagerStaticStore.Instance;
 
-		Log.Info(newScene.SceneProperties);
+		if (instance.Scene.IsLoading)
+			return null;
+
+		float timescale =
+			instance.LoadLevelInternal(newScene, showLoadingScreen);
+
+		return timescale;
+	}
+
+	PlayerMovementController SpawnPlayer()
+	{
+		var player = new GameObject();
+		player.SetPrefabSource("prefabs/player.prefab");
+		player.UpdateFromPrefab();
+
+		var controller = player.Components.Get<PlayerMovementController>();
+		if (controller == null)
+			return null;
+
+		var spawnPoints = Scene.GetAllComponents<SpawnPoint>();
+		foreach (var spawn in spawnPoints)
+		{
+		    controller.Transform.Position = spawn.Transform.Position;
+		    controller.EyeAngles = spawn.Transform.Rotation.Angles();
+			break;
+		}
+
+		return controller;
+	}
+
+	private float LoadLevelInternal(SceneFile newScene, bool showLoadingScreen)
+	{
+		LevelManagerStaticStore.IsLoading = true;
+
 		var oldTimeScale = newScene.SceneProperties.ContainsKey("TimeScale")
 						 ? newScene.SceneProperties["TimeScale"].GetValue<float>()
 						 : 1.0f;
 		newScene.SceneProperties.Remove("TimeScale");
 		Scene.TimeScale = 0.0f;
 
-		var loadingScreen = LoadingScreen.Clone();
-		loadingScreen.Flags |= GameObjectFlags.DontDestroyOnLoad;
+		GameObject loadingScreen = null;
+		if (showLoadingScreen)
+		{
+			loadingScreen = LoadingScreen.Clone();
+			loadingScreen.Flags |= GameObjectFlags.DontDestroyOnLoad;
+		}
 
 		SceneLoadOptions options = new SceneLoadOptions();
 		options.SetScene(newScene);
@@ -35,18 +86,24 @@ public sealed class LevelManager : Component
 
 		Scene.Load(options);
 
-		loadingScreen.DestroyImmediate();
-		IsLoading = false;
-		Scene.TimeScale = oldTimeScale;
-		
-		// TODO: automatically add MapPlayerSpawner component
-		// Currently causes errors because the player doesn't exist.
+		var playerController = SpawnPlayer();
+		playerController.SetPlayerNotStarted();
+
+		if (showLoadingScreen)
+			loadingScreen.DestroyImmediate();
+
+		LevelManagerStaticStore.ActiveScene = newScene;
+
+		return oldTimeScale;
 	}
 
 	protected override void OnStart()
 	{
-		_instance = this;
+		LevelManagerStaticStore.Instance = this;
 		GameObject.Flags |= GameObjectFlags.DontDestroyOnLoad;
-		LoadLevelInternal(StartingLevel);
+		if (!Scene.IsLoading && StartingLevel != null)
+		{
+			LoadLevelImmediate(StartingLevel, true);
+		}
 	}
 }

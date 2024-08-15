@@ -124,6 +124,7 @@
           "__type": "HealthComponent",
           "__guid": "3a8c4ac7-b265-4d58-bc31-387d0d77bcca",
           "DamageMultiplier": 1,
+          "DestroyOnDeath": true,
           "HealMultiplier": 1,
           "MaxHealth": 100
         }
@@ -173,6 +174,7 @@
           "__type": "HealthComponent",
           "__guid": "7abfbdd5-a184-4b92-af7a-b01c1df874ec",
           "DamageMultiplier": 1,
+          "DestroyOnDeath": true,
           "HealMultiplier": 1,
           "MaxHealth": 100
         }
@@ -222,6 +224,7 @@
           "__type": "HealthComponent",
           "__guid": "11b6c669-3797-43d7-b0ef-e9ee7669f9f6",
           "DamageMultiplier": 1,
+          "DestroyOnDeath": true,
           "HealMultiplier": 1,
           "MaxHealth": 100
         }
@@ -2865,6 +2868,26 @@
         "Next Level": "scenes/testmap.scene",
         "Deferred Next Level": null
       }
+    },
+    {
+      "__guid": "32d0652d-6cec-4da4-ba0f-84db488c639e",
+      "Flags": 0,
+      "Name": "mana_orb_buff",
+      "Position": "115.0271,441.4775,160.0001",
+      "Tags": "trigger",
+      "Enabled": true,
+      "__Prefab": "prefabs/mana_orb_buff.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "f0745550-4ad6-4dcc-bb9b-4fcaeb24c927",
+      "Flags": 0,
+      "Name": "player",
+      "Position": "242.9886,170.5641,132.0117",
+      "Tags": "player,trigger",
+      "Enabled": true,
+      "__Prefab": "prefabs/player.prefab",
+      "__PrefabVariables": {}
     }
   ],
   "SceneProperties": {
