@@ -1,0 +1,85 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+
+@if (!Movement.LevelStarted) return;
+
+<root>
+	<div class="health">
+		Health
+	</div>
+
+	<div class="spells">
+		@for (int i = (int)BaseSpell.SpellType.SpellTypeMin + 1;
+			  i < (int)BaseSpell.SpellType.SpellTypeMax; i++)
+		{
+			var spellType = (BaseSpell.SpellType)i;
+
+			if (!Spellcasting.IsSpellUnlocked(spellType))
+				continue;
+
+			var active = ((int)Spellcasting.ActiveSpell == i)
+					   ? "active" : "inactive";
+			var spellXpAmount = (100.0f * i) / (float)(BaseSpell.SpellType.SpellTypeMax);
+			var xpCol = "red";
+			var cooldownCol = "rgba(0, 0, 0, 0.9)";
+			//var cooldownAmount = 100.0f - (100.0f * i) / (float)(BaseSpell.SpellType.SpellTypeMax);
+			var cooldownAmount = Spellcasting.GetSpellCooldownPercent(spellType);
+			// Invert the cooldown (so we rotate counter-clockwise) and scale
+			cooldownAmount = 100.0f * (cooldownAmount);
+			var cost = Spellcasting.GetSpellCost(spellType);
+
+			<!-- Outer circle shows XP, Inner darkened shows cooldown,
+				 roman numberal inside shows level. Mana cost? -->
+			<div class="spell @active">
+				<div class="xp"
+					 style="background-image:
+						conic-gradient(@xpCol 0%, @xpCol @spellXpAmount%,
+									   transparent @spellXpAmount%)">
+					<div class="spell-internal-wrapper">
+						<div>@spellType</div>
+						<!-- <div>Spell Image @i</div> -->
+						<div class="spell-level">III</div>
+						<div class="spell-cost">@cost</div>
+						<div class="cooldown"
+							 style="background-image:
+								conic-gradient(@cooldownCol 0%,
+											   @cooldownCol @cooldownAmount%,
+											   transparent @cooldownAmount%)">
+						</div>
+					</div>
+				</div>
+			</div>
+		}
+	</div>
+
+	<div class="mana">
+		Mana
+	</div>
+</root>
+
+@code
+{
+	[Property]
+	public HealthComponent Health { get; set; }
+
+	[Property]
+	public PlayerMovementController Movement { get; set; }
+
+	[Property]
+	public PlayerSpellcastingController Spellcasting { get; set; }
+
+	/// <summary>
+	/// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
+	/// </summary>
+	protected override int BuildHash() =>
+		System.HashCode.Combine(
+			Health.Health,
+			Spellcasting.Mana,
+			Spellcasting.ActiveSpell,
+			Spellcasting.GetSpellCooldown(BaseSpell.SpellType.Fireball),
+			Spellcasting.GetSpellCooldown(BaseSpell.SpellType.Polymorph),
+			Spellcasting.GetSpellCooldown(BaseSpell.SpellType.MagicMissile),
+			Movement.LevelStarted
+		);
+}

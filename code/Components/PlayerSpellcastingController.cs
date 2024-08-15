@@ -49,6 +49,7 @@ public sealed class PlayerSpellcastingController : Component
 		// Default to having all spells unlocked
 		// TODO: This will need to be serialised in some player data thing
 		_unlockedSpellsMask = 0xfffffffffffffffful;
+		// _unlockedSpellsMask = 0x6ul;
 
 		ActiveSpell = BaseSpell.SpellType.SpellTypeMin + 1;
 		_spellBuffer = new BaseSpell[(int)BaseSpell.SpellType.SpellTypeMax];
@@ -98,21 +99,33 @@ public sealed class PlayerSpellcastingController : Component
 			_unlockedSpellsMask &= ~(1ul << (int)spellType);
 	}
 
+	public bool IsSpellUnlocked(BaseSpell.SpellType spellType)
+	{
+		return (_unlockedSpellsMask & (1ul << (int)spellType)) != 0;
+	}
+
 	public void SetActiveSpell(BaseSpell.SpellType spellType)
 	{
 		if (spellType > BaseSpell.SpellType.SpellTypeMin &&
-			spellType < BaseSpell.SpellType.SpellTypeMax)
+			spellType < BaseSpell.SpellType.SpellTypeMax &&
+			IsSpellUnlocked(spellType))
 			ActiveSpell = spellType;
 	}
 
-	public float GetActiveSpellCost()
+	public float GetSpellCost(BaseSpell.SpellType spellType)
 	{
-		return _spellBuffer[(int)ActiveSpell].ManaCost;
+		return _spellBuffer[(int)spellType].ManaCost;
 	}
 
-	public float GetActiveSpellCooldown()
+	public float GetSpellCooldown(BaseSpell.SpellType spellType)
 	{
-		return Math.Max(_spellNextCastTime[(int)ActiveSpell] - Time.Now, 0.0f);
+		return Math.Max(_spellNextCastTime[(int)spellType] - Time.Now, 0.0f);
+	}
+
+	public float GetSpellCooldownPercent(BaseSpell.SpellType spellType)
+	{
+		float cooldownMax = _spellBuffer[(int)spellType].Cooldown;
+		return GetSpellCooldown(spellType) / cooldownMax;
 	}
 
 	protected override void OnUpdate()
@@ -130,19 +143,65 @@ public sealed class PlayerSpellcastingController : Component
 		}
 	}
 
+	private void SelectNextUnlockedSpell()
+	{
+		int i;
+
+		// I really would prefer some bit magic here, but it doesn't look like
+		// C# doesn't come with some of the intrinsics I'm used to, e.g., ffs.
+
+		for (i = (int)ActiveSpell + 1;
+			 i < (int)BaseSpell.SpellType.SpellTypeMax; i++)
+		{
+			if (IsSpellUnlocked((BaseSpell.SpellType)i))
+			{
+				ActiveSpell = (BaseSpell.SpellType)i;
+				return;
+			}
+		}
+
+		for (i = (int)BaseSpell.SpellType.SpellTypeMin + 1;
+			 i < (int)ActiveSpell; i++)
+		{
+			if (IsSpellUnlocked((BaseSpell.SpellType)i))
+			{
+				ActiveSpell = (BaseSpell.SpellType)i;
+				return;
+			}
+		}
+	}
+
+	private void SelectPrevUnlockedSpell()
+	{
+		int i;
+
+		for (i = (int)ActiveSpell - 1;
+			 i > (int)BaseSpell.SpellType.SpellTypeMin; i--)
+		{
+			if (IsSpellUnlocked((BaseSpell.SpellType)i))
+			{
+				ActiveSpell = (BaseSpell.SpellType)i;
+				return;
+			}
+		}
+
+		for (i = (int)BaseSpell.SpellType.SpellTypeMax - 1;
+			 i > (int)ActiveSpell; i--)
+		{
+			if (IsSpellUnlocked((BaseSpell.SpellType)i))
+			{
+				ActiveSpell = (BaseSpell.SpellType)i;
+				return;
+			}
+		}
+	}
+
 	protected override void OnFixedUpdate()
 	{
-		// This is very ugly because C# forces explicit casting :(
 		if (Input.Pressed("SlotNext"))
-			ActiveSpell =
-				((int)ActiveSpell + 1 < (int)BaseSpell.SpellType.SpellTypeMax)
-				? (BaseSpell.SpellType)((int)ActiveSpell + 1)
-				: BaseSpell.SpellType.SpellTypeMin + 1;
+			SelectNextUnlockedSpell();
 		else if (Input.Pressed("SlotPrev"))
-			ActiveSpell =
-				((int)ActiveSpell - 1 > (int)BaseSpell.SpellType.SpellTypeMin)
-				? (BaseSpell.SpellType)((int)ActiveSpell - 1)
-				: BaseSpell.SpellType.SpellTypeMax - 1;
+			SelectPrevUnlockedSpell();
 
 		if (_castingSpell != null)
 		{
