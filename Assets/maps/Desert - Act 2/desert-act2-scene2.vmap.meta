@@ -2,17 +2,17 @@
   "publish": {
     "Enabled": false,
     "ProjectConfig": {
-      "Title": "forest-act1-scene5",
+      "Title": "desert-act2-scene2",
       "Type": "map",
       "Org": "local",
-      "Ident": "forest-act1-scene5",
+      "Ident": "desert-act2-scene2",
       "Schema": 0,
       "IncludeSourceFiles": false,
       "Resources": null,
       "PackageReferences": [],
       "EditorReferences": [],
       "Metadata": {
-        "SingleAssetSource": "maps/forest - act 1/forest-act1-scene3.vmap"
+        "SingleAssetSource": "maps/desert - act 2/desert-act2-scene2.vmap"
       }
     }
   }

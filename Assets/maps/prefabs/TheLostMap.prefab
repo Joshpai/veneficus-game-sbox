@@ -1,0 +1,26 @@
+{
+  "RootObject": {
+    "__guid": "a0b7e7a8-1ad5-45d6-894c-cc1113918aa7",
+    "Flags": 0,
+    "Name": "Map (1)",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.MapInstance",
+        "__guid": "96f7e848-d4be-43bd-bdb9-eb47cdedafd1",
+        "__version": 1,
+        "EnableCollision": true,
+        "MapName": "maps/forest - act 1/forest-act1-scene3.vmap",
+        "NoOrigin": false,
+        "UseMapFromLaunch": false
+      }
+    ],
+    "Children": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

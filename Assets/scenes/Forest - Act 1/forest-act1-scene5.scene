@@ -1,26 +1,27 @@
 {
-  "__guid": "ce10a778-6162-4816-b7ca-174f8bf7cd76",
+  "__guid": "77aa8bbd-dc06-4397-88e1-39cfff9a72b9",
   "GameObjects": [
     {
-      "__guid": "5d772045-a0f9-4f47-b100-81c9f3f97e8e",
+      "__guid": "dc4d6be4-4b5d-4709-92ba-48765293baa6",
       "Flags": 0,
       "Name": "Map",
       "Enabled": true,
       "Components": [
         {
           "__type": "Sandbox.MapInstance",
-          "__guid": "210bd759-0e5c-4b0a-b0a0-9689be1e3393",
+          "__guid": "6072a178-afe1-49a8-94f0-f344465eb2a5",
           "__version": 1,
           "EnableCollision": true,
-          "MapName": "maps/forest - act 1/forest-act1-scene1(tutorial).vmap",
+          "MapName": "maps/forest - act 1/forest-act1-scene5.vmap",
           "NoOrigin": false,
           "UseMapFromLaunch": false
         },
         {
           "__type": "MapPlayerSpawner",
-          "__guid": "596c6e23-e76f-43a7-96f9-ac6ca2f385d8"
+          "__guid": "25e19ac5-6987-4835-bee3-c41a672447bc"
         }
-      ]
+      ],
+      "Children": []
     }
   ],
   "SceneProperties": {
@@ -44,7 +45,7 @@
       "IncludedBodies": ""
     }
   },
-  "Title": "forest-act1-scene1(tutorial)",
+  "Title": "forest-act1-scene5",
   "Description": "",
   "ResourceVersion": 1,
   "__references": [],

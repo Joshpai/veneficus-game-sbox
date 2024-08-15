@@ -2,10 +2,10 @@
   "publish": {
     "Enabled": false,
     "ProjectConfig": {
-      "Title": "forest-act1-scene5",
+      "Title": "forest-act1-scene3",
       "Type": "map",
       "Org": "local",
-      "Ident": "forest-act1-scene5",
+      "Ident": "forest-act1-scene3",
       "Schema": 0,
       "IncludeSourceFiles": false,
       "Resources": null,
