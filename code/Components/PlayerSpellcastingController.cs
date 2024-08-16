@@ -68,6 +68,7 @@ public sealed class PlayerSpellcastingController : Component
 			BaseSpell.SpellType.Polymorph => new PolymorphSpell(caster),
 			BaseSpell.SpellType.MagicMissile => new MagicMissileSpell(caster),
 			BaseSpell.SpellType.Fireball => new FireballSpell(caster),
+			BaseSpell.SpellType.WaterBeam => new WaterBeamSpell(caster),
 			_ => null,
 		};
 	}

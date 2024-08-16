@@ -1,0 +1,52 @@
+{
+  "RootObject": {
+    "__guid": "c56165d2-743f-4d75-a0fb-6f9d9a248610",
+    "Flags": 0,
+    "Name": "water_beam",
+    "Tags": "projectile",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.SphereCollider",
+        "__guid": "f3459cca-3efa-4b86-b3f2-917243f2d42f",
+        "Center": "47.30003,0,0",
+        "IsTrigger": false,
+        "Radius": 10,
+        "Static": false
+      },
+      {
+        "__type": "ProjectileSpellCollisionComponent",
+        "__guid": "153e5231-7485-40eb-b456-5c2ee62d021f",
+        "ContactDamage": 1,
+        "DoesExplode": false,
+        "SplashDamage": 0
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "a90d0070-da4a-4d97-a614-049e542b91a3",
+        "Flags": 0,
+        "Name": "Object",
+        "Rotation": "0,0.7071067,0,0.7071068",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "c4e5503b-3361-405f-be5b-84530d7519cd",
+            "BodyGroups": 18446744073709551615,
+            "Model": "models/citizen_props/balloontall01.vmdl",
+            "RenderType": "On",
+            "Tint": "0.07442,0.69147,1,1"
+          }
+        ]
+      }
+    ],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}
