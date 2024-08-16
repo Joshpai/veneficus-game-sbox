@@ -279,6 +279,9 @@ public sealed class PlayerSpellcastingController : Component
 
 	protected override void OnFixedUpdate()
 	{
+		if (!PlayerMovementControllerRef.LevelStarted)
+			return;
+
 		HandleSpellSelection();
 
 		if (_castingSpell != null)
