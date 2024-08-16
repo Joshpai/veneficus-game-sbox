@@ -16,7 +16,8 @@ public class WaterBeamSpell : ProjectileSpell
 	public WaterBeamSpell(GameObject caster)
 		: base(caster)
 	{
-
+		// TODO: this could be improved to not be a projectile, it really only
+		// warrants a single game object that extends to a ray trace length.
 	}
 
 	public override BaseSpell.SpellType GetSpellType()

@@ -2,8 +2,8 @@ public class PolymorphSpell : BaseSpell
 {
 	public override float ManaCost => 25.0f;
 	public override float Cooldown => 2.0f;
-	public override float CastTime => 0.1f;
-	public override float MaxChargeTime => 0.3f;
+	public override float CastTime => 0.0f;
+	public override float MaxChargeTime => 0.0f;
 	public override float SpellMass => 0.0f;
 	public override float SpellSpeed => 0.0f;
 	public override bool IsStateful => true;
