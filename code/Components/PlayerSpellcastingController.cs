@@ -69,12 +69,15 @@ public sealed class PlayerSpellcastingController : Component
 	public static BaseSpell CreateSpell(GameObject caster,
 										BaseSpell.SpellType spellType)
 	{
+		// TODO: this really belongs in BaseSpell or something like that but
+		// I have unilaterally decided that it is too much effort to move it :)
 		return spellType switch
 		{
 			BaseSpell.SpellType.Polymorph => new PolymorphSpell(caster),
 			BaseSpell.SpellType.MagicMissile => new MagicMissileSpell(caster),
 			BaseSpell.SpellType.Fireball => new FireballSpell(caster),
 			BaseSpell.SpellType.WaterBeam => new WaterBeamSpell(caster),
+			BaseSpell.SpellType.RendingGale => new RendingGaleSpell(caster),
 			_ => null,
 		};
 	}
@@ -159,8 +162,7 @@ public sealed class PlayerSpellcastingController : Component
 
 	public float GetSpellCooldownPercent(BaseSpell.SpellType spellType)
 	{
-		float cooldownMax = _spellBuffer[(int)spellType].Cooldown;
-		return GetSpellCooldown(spellType) / cooldownMax;
+		return GetSpellCooldown(spellType) / GetSpellCooldownMax(spellType);
 	}
 
 	protected override void OnUpdate()
@@ -275,7 +277,6 @@ public sealed class PlayerSpellcastingController : Component
 			SelectNextUnlockedSpell();
 		else if (Input.Pressed("SlotPrev") || mouseScroll.y > 0)
 			SelectPrevUnlockedSpell();
-
 
 		for (int slot = 0; slot < _availableSpells.Count; slot++)
 		{

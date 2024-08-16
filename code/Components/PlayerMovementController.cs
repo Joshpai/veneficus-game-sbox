@@ -113,6 +113,8 @@ public sealed class PlayerMovementController : Component
 	private ModelRenderer _modelRenderer;
 	private Model _oldModel;
 
+	public Vector3 WishDir;
+
 	protected override void OnStart()
 	{
 		base.OnStart();
@@ -313,10 +315,10 @@ public sealed class PlayerMovementController : Component
 			}
 		}
 
-		Vector3 direction = Input.AnalogMove.Normal * Body.Transform.Rotation;
+		WishDir = Input.AnalogMove.Normal * Body.Transform.Rotation;
 		if (Controller.IsOnGround)
 		{
-			Controller.Accelerate(direction * WalkSpeed);
+			Controller.Accelerate(WishDir * WalkSpeed);
 
 			Controller.ApplyFriction(5.0f, 20.0f);
 
@@ -329,7 +331,7 @@ public sealed class PlayerMovementController : Component
 		{
 			// Let the player have a tiny bit of air movement, otherwise trying
 			// to jump up small ledges is awful.
-			Controller.Accelerate(direction * AirSpeed);
+			Controller.Accelerate(WishDir * AirSpeed);
 
 			if (!_didJump && Input.Pressed("Jump") &&
 				Time.Now - _airStartTime <= JumpCoyoteTime)
