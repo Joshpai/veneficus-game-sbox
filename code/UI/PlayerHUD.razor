@@ -6,7 +6,18 @@
 
 <root>
 	<div class="health">
-		Health
+		<div class="flask-container">
+			<div class="flask-tip"></div>
+			<div class="flask-orb">
+				<div class="liquid-container">
+					<div class="liquid"
+						 style="height: @(100.0f * Health.Health / Health.MaxHealth)%;"></div>
+					<div class="liquid-overlay radial-gradient"></div>
+					<div class="liquid-overlay linear-gradient"></div>
+				</div>
+				<div class="value">@MathF.Ceiling(Health.Health)</div>
+			</div>
+		</div>
 	</div>
 
 	<div class="spells">
@@ -51,10 +62,6 @@
 				</div>
 			</div>
 		}
-	</div>
-
-	<div class="mana">
-		Mana
 	</div>
 </root>
 
