@@ -31,6 +31,8 @@ public sealed class PlayerSpellcastingController : Component
 
 	private float[] _spellNextCastTime;
 	private UInt64 _unlockedSpellsMask;
+	private List<BaseSpell.SpellType> _availableSpells;
+	private int _selectedSpellIdx;
 
 	private float _manaRegenStartTime;
 
@@ -52,6 +54,8 @@ public sealed class PlayerSpellcastingController : Component
 		// TODO: This will need to be serialised in some player data thing
 		_unlockedSpellsMask = 0xfffffffffffffffful;
 		// _unlockedSpellsMask = 0x6ul;
+		UpdateUnlockedSpells();
+		_selectedSpellIdx = 0;
 
 		ActiveSpell = BaseSpell.SpellType.SpellTypeMin + 1;
 		_spellBuffer = new BaseSpell[(int)BaseSpell.SpellType.SpellTypeMax];
@@ -100,11 +104,25 @@ public sealed class PlayerSpellcastingController : Component
 			_unlockedSpellsMask |= (1ul << (int)spellType);
 		else
 			_unlockedSpellsMask &= ~(1ul << (int)spellType);
+		UpdateUnlockedSpells();
 	}
 
 	public bool IsSpellUnlocked(BaseSpell.SpellType spellType)
 	{
 		return (_unlockedSpellsMask & (1ul << (int)spellType)) != 0;
+	}
+
+	private void UpdateUnlockedSpells()
+	{
+		_availableSpells = new List<BaseSpell.SpellType>();
+		for (int i = (int)BaseSpell.SpellType.SpellTypeMin + 1;
+			 i < (int)BaseSpell.SpellType.SpellTypeMax; i++)
+		{
+			if (IsSpellUnlocked((BaseSpell.SpellType)i))
+			{
+				_availableSpells.Add((BaseSpell.SpellType)i);
+			}
+		}
 	}
 
 	public void SetActiveSpell(BaseSpell.SpellType spellType)
@@ -151,57 +169,24 @@ public sealed class PlayerSpellcastingController : Component
 		}
 	}
 
+	private void SelectSpellSlot(int slot)
+	{
+		_selectedSpellIdx = slot;
+		ActiveSpell = _availableSpells[_selectedSpellIdx];
+	}
+
 	private void SelectNextUnlockedSpell()
 	{
-		int i;
-
-		// I really would prefer some bit magic here, but it doesn't look like
-		// C# doesn't come with some of the intrinsics I'm used to, e.g., ffs.
-
-		for (i = (int)ActiveSpell + 1;
-			 i < (int)BaseSpell.SpellType.SpellTypeMax; i++)
-		{
-			if (IsSpellUnlocked((BaseSpell.SpellType)i))
-			{
-				ActiveSpell = (BaseSpell.SpellType)i;
-				return;
-			}
-		}
-
-		for (i = (int)BaseSpell.SpellType.SpellTypeMin + 1;
-			 i < (int)ActiveSpell; i++)
-		{
-			if (IsSpellUnlocked((BaseSpell.SpellType)i))
-			{
-				ActiveSpell = (BaseSpell.SpellType)i;
-				return;
-			}
-		}
+		int slot = (_selectedSpellIdx + 1 < _availableSpells.Count)
+				 ? _selectedSpellIdx + 1 : 0;
+		SelectSpellSlot(slot);
 	}
 
 	private void SelectPrevUnlockedSpell()
 	{
-		int i;
-
-		for (i = (int)ActiveSpell - 1;
-			 i > (int)BaseSpell.SpellType.SpellTypeMin; i--)
-		{
-			if (IsSpellUnlocked((BaseSpell.SpellType)i))
-			{
-				ActiveSpell = (BaseSpell.SpellType)i;
-				return;
-			}
-		}
-
-		for (i = (int)BaseSpell.SpellType.SpellTypeMax - 1;
-			 i > (int)ActiveSpell; i--)
-		{
-			if (IsSpellUnlocked((BaseSpell.SpellType)i))
-			{
-				ActiveSpell = (BaseSpell.SpellType)i;
-				return;
-			}
-		}
+		int slot = (_selectedSpellIdx - 1 >= 0)
+				 ? _selectedSpellIdx - 1 : _availableSpells.Count - 1;
+		SelectSpellSlot(slot);
 	}
 
 	private void StartCasting()
@@ -274,12 +259,27 @@ public sealed class PlayerSpellcastingController : Component
 			   _spellBuffer[(int)ActiveSpell].CastTime == 0.0f;
 	}
 
+	private void HandleSpellSelection()
+	{
+		var mouseScroll = Input.MouseWheel;
+		if (Input.Pressed("SlotNext") || mouseScroll.y < 0)
+			SelectNextUnlockedSpell();
+		else if (Input.Pressed("SlotPrev") || mouseScroll.y > 0)
+			SelectPrevUnlockedSpell();
+
+
+		for (int slot = 0; slot < _availableSpells.Count; slot++)
+		{
+			if (Input.Pressed($"slot{slot + 1}"))
+			{
+				SelectSpellSlot(slot);
+			}
+		}
+	}
+
 	protected override void OnFixedUpdate()
 	{
-		if (Input.Pressed("SlotNext"))
-			SelectNextUnlockedSpell();
-		else if (Input.Pressed("SlotPrev"))
-			SelectPrevUnlockedSpell();
+		HandleSpellSelection();
 
 		if (_castingSpell != null)
 		{
