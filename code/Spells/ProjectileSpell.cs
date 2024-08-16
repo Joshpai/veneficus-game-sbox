@@ -24,6 +24,9 @@ public abstract class ProjectileSpell : BaseSpell
 		_projectileObject.SetPrefabSource(ProjectilePrefabPath);
 		_projectileObject.UpdateFromPrefab();
 		_projectileObject.Transform.Scale = ProjectileScale;
+		_projectileObject.Transform.LocalRotation =
+			CastDirection.EulerAngles;
+
 
 		// NOTE: collision is handled in ProjectileSpellCollisionComponent.
 		_collisionComponent =

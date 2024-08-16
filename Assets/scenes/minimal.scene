@@ -2878,16 +2878,6 @@
       "Enabled": true,
       "__Prefab": "prefabs/mana_orb_buff.prefab",
       "__PrefabVariables": {}
-    },
-    {
-      "__guid": "f0745550-4ad6-4dcc-bb9b-4fcaeb24c927",
-      "Flags": 0,
-      "Name": "player",
-      "Position": "242.9886,170.5641,132.0117",
-      "Tags": "player,trigger",
-      "Enabled": true,
-      "__Prefab": "prefabs/player.prefab",
-      "__PrefabVariables": {}
     }
   ],
   "SceneProperties": {

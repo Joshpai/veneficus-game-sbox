@@ -7,6 +7,7 @@ public abstract class BaseSpell
 		Polymorph,
 		MagicMissile,
 		Fireball,
+		WaterBeam,
 		// The below must be at the end, so add new types above here!
 		SpellTypeMax
 	}

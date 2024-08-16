@@ -85,7 +85,7 @@ public sealed class PlayerMovementController : Component
 	[Property]
 	public float InteractRange { get; set; } = 64.0f;
 
-	private float _currentMass;
+	public float Mass;
 
 	private int _airJumpRemainingTicks;
 	private Vector3 _airJumpForce;
@@ -143,7 +143,7 @@ public sealed class PlayerMovementController : Component
 		EyePosition = HumanEyePosition;
 		_cameraReference = _cameraReferenceHuman;
 		_cameraReferenceInterpolated = _cameraReference;
-		_currentMass = HumanMass;
+		Mass = HumanMass;
 		Controller.Height = HumanHeight;
 		Controller.Radius = HumanRadius;
 		Controller.StepHeight = HumanStepHeight;
@@ -189,7 +189,7 @@ public sealed class PlayerMovementController : Component
 		_cameraReference = _isPolymorphed ? _cameraReferencePolymorphed
 										  : _cameraReferenceHuman;
 
-		_currentMass = _isPolymorphed ? PolymorphedMass : HumanMass;
+		Mass = _isPolymorphed ? PolymorphedMass : HumanMass;
 
 		Controller.Height = _isPolymorphed ? PolymorphedHeight : HumanHeight;
 		Controller.Radius = _isPolymorphed ? PolymorphedRadius : HumanRadius;
@@ -271,7 +271,7 @@ public sealed class PlayerMovementController : Component
 		// This is derived from suvat: s = ut - 0.5at^2 => u = 0.5at (s=0)
 		var vel = 0.5f * -Scene.PhysicsWorld.Gravity * JumpDuration;
 		// F = ma = mv / t
-		var jumpForce = (vel / Time.Delta) * _currentMass;
+		var jumpForce = (vel / Time.Delta) * Mass;
 		var groundJumpForce = InitialJumpAmount * jumpForce;
 
 		_airJumpRemainingTicks = (int)(MaxJumpHoldLength / Time.Delta);
@@ -289,12 +289,12 @@ public sealed class PlayerMovementController : Component
 
 		_canAirJump = true;
 
-		Controller.Punch(groundJumpForce * Time.Delta / _currentMass);
+		Controller.Punch(groundJumpForce * Time.Delta / Mass);
 	}
 
 	private void AirJump()
 	{
-		Controller.Velocity += _airJumpForce * Time.Delta / _currentMass;
+		Controller.Velocity += _airJumpForce * Time.Delta / Mass;
 	}
 
 	protected override void OnFixedUpdate()
