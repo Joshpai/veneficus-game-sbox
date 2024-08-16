@@ -107,7 +107,7 @@ public sealed class PlayerMovementController : Component
 
 	private CitizenAnimationHelper _animationHelper;
 
-	private bool _isPolymorphed;
+	public bool IsPolymorphed;
 
 	public bool LevelStarted { get; private set; }= true;
 	private ModelRenderer _modelRenderer;
@@ -139,7 +139,7 @@ public sealed class PlayerMovementController : Component
 				Transform.Rotation
 		);
 
-		_isPolymorphed = false;
+		IsPolymorphed = false;
 		EyePosition = HumanEyePosition;
 		_cameraReference = _cameraReferenceHuman;
 		_cameraReferenceInterpolated = _cameraReference;
@@ -182,18 +182,18 @@ public sealed class PlayerMovementController : Component
 	{
 		// We aren't in charge of changing the model here, just the behaviour
 		// of the player movement itself.
-		_isPolymorphed = !_isPolymorphed;
+		IsPolymorphed = !IsPolymorphed;
 
-		EyePosition = _isPolymorphed ? PolymorphedEyePosition
+		EyePosition = IsPolymorphed ? PolymorphedEyePosition
 									 : HumanEyePosition;
-		_cameraReference = _isPolymorphed ? _cameraReferencePolymorphed
+		_cameraReference = IsPolymorphed ? _cameraReferencePolymorphed
 										  : _cameraReferenceHuman;
 
-		Mass = _isPolymorphed ? PolymorphedMass : HumanMass;
+		Mass = IsPolymorphed ? PolymorphedMass : HumanMass;
 
-		Controller.Height = _isPolymorphed ? PolymorphedHeight : HumanHeight;
-		Controller.Radius = _isPolymorphed ? PolymorphedRadius : HumanRadius;
-		Controller.StepHeight = _isPolymorphed ? PolymorphedStepHeight
+		Controller.Height = IsPolymorphed ? PolymorphedHeight : HumanHeight;
+		Controller.Radius = IsPolymorphed ? PolymorphedRadius : HumanRadius;
+		Controller.StepHeight = IsPolymorphed ? PolymorphedStepHeight
 											   : HumanStepHeight;
 	}
 

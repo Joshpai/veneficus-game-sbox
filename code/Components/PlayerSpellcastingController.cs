@@ -84,6 +84,13 @@ public sealed class PlayerSpellcastingController : Component
 		_deferredRemovals.Add((BaseSpell)spell);
 	}
 
+	public bool IsSpellBlocked(BaseSpell.SpellType spellType)
+	{
+		// Player is polymorphed implies only able to cast polymorph
+		return (PlayerMovementControllerRef.IsPolymorphed &&
+				spellType != BaseSpell.SpellType.Polymorph);
+	}
+
 	private bool CanCastSpell(BaseSpell.SpellType spellType)
 	{
 		// TODO: don't let player cast spells if polymorphed!
@@ -95,7 +102,9 @@ public sealed class PlayerSpellcastingController : Component
 			   _spellNextCastTime[(int)spellType] <= Time.Now &&
 			   // Spell is unlocked
 			   (_unlockedSpellsMask & (1ul << (int)spellType)) != 0ul &&
-			   Mana >= _spellBuffer[(int)spellType].ManaCost;
+			   // Sufficient mana to cast
+			   Mana >= _spellBuffer[(int)spellType].ManaCost &&
+			   !IsSpellBlocked(spellType);
 	}
 
 	public void SetSpellUnlocked(BaseSpell.SpellType spellType, bool unlocked)

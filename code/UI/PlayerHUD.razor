@@ -42,6 +42,10 @@
 			// Short cooldowns look silly, so just don't render them.
 			if (Spellcasting.GetSpellCooldownMax(spellType) < 0.1f)
 				cooldownAmount = 0.0f;
+			// If the spell is blocked, then show this as a max cooldown
+			if (Spellcasting.IsSpellBlocked(spellType))
+				cooldownAmount = 100.0f;
+
 			var cost = Spellcasting.GetSpellCost(spellType);
 
 			<!-- Outer circle shows XP, Inner darkened shows cooldown,
