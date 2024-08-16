@@ -125,6 +125,11 @@ public sealed class PlayerSpellcastingController : Component
 		return Math.Max(_spellNextCastTime[(int)spellType] - Time.Now, 0.0f);
 	}
 
+	public float GetSpellCooldownMax(BaseSpell.SpellType spellType)
+	{
+		return _spellBuffer[(int)spellType].Cooldown;
+	}
+
 	public float GetSpellCooldownPercent(BaseSpell.SpellType spellType)
 	{
 		float cooldownMax = _spellBuffer[(int)spellType].Cooldown;

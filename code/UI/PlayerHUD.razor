@@ -39,6 +39,9 @@
 			var cooldownAmount = Spellcasting.GetSpellCooldownPercent(spellType);
 			// Invert the cooldown (so we rotate counter-clockwise) and scale
 			cooldownAmount = 100.0f * (cooldownAmount);
+			// Short cooldowns look silly, so just don't render them.
+			if (Spellcasting.GetSpellCooldownMax(spellType) < 0.1f)
+				cooldownAmount = 0.0f;
 			var cost = Spellcasting.GetSpellCost(spellType);
 
 			<!-- Outer circle shows XP, Inner darkened shows cooldown,
@@ -64,6 +67,16 @@
 				</div>
 			</div>
 		}
+	</div>
+
+	<div class="mana-container">
+		<div class="mana-wrapper"
+			 style="height: @(1.5f * Spellcasting.MaxMana)px">
+			<!-- Simple mana bar (vertical), changes colour depending on mana -->
+			<div class="mana"
+				 style="height: @(1.5f * Spellcasting.Mana)px">
+			</div>
+		</div>
 	</div>
 </root>
 
