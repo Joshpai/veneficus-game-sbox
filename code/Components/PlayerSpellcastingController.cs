@@ -41,6 +41,8 @@ public sealed class PlayerSpellcastingController : Component
 	// spells and just grab the one we need (and replace it).
 	private BaseSpell[] _spellBuffer;
 
+	private bool _attackHeldAfterSwitch = false;
+
 	protected override void OnStart()
 	{
 		// This should be zeroed by definition. It should be noted that this
@@ -197,6 +199,76 @@ public sealed class PlayerSpellcastingController : Component
 		}
 	}
 
+	private void StartCasting()
+	{
+		_castingSpell = _spellBuffer[(int)ActiveSpell];
+		// Stateful spells are singletons, so only recreate spells that
+		// aren't stateful!
+		if (!_spellBuffer[(int)ActiveSpell].IsStateful)
+			_spellBuffer[(int)ActiveSpell] =
+				CreateSpell(GameObject, ActiveSpell);
+
+		// TODO: it would be cool if this is progressively taken during
+		// the casting process. But that's not needed for now.
+		Mana -= _castingSpell.ManaCost;
+
+		_castingSpell.CasterEyeOrigin =
+			PlayerMovementControllerRef.EyePosition;
+		_castingSpell.CastDirection =
+			PlayerMovementControllerRef.EyeAngles.Forward;
+		_castingSpell.StartCasting();
+		_castingSpellIsHeld = true;
+	}
+
+	private void CancelCasting()
+	{
+		// Even though the spell is cancelled, we still want to service
+		// it as if it wasn't cancelled. We don't really care about the
+		// difference and it just gives a nice way to allow cancel
+		// animations (for example).
+		_castingSpell.OnDestroy += OnSpellDestroyed;
+		_castSpells.Add(_castingSpell);
+		_castingSpell.CancelCasting();
+		Mana += _castingSpell.ManaCost * ManaRefundAmount;
+		// Cancel => start regen immediately?
+		_manaRegenStartTime = Time.Now;
+		_castingSpell = null;
+	}
+
+	private void FinishCasting()
+	{
+		// TODO: fully charged spells should cost more mana (maybe?)
+		_castingSpell.FinishCasting();
+
+		if (_castingSpell.SpellMass != 0.0f)
+		{
+			var pushback =
+				_castingSpell.SpellMass * _castingSpell.SpellSpeed /
+				PlayerMovementControllerRef.Mass *
+				(1.0f + _castingSpell.GetChargeAmount()) *
+				-PlayerMovementControllerRef.EyeAngles.Forward;
+			PlayerMovementControllerRef.Controller.Punch(pushback);
+		}
+
+		_castingSpell.OnDestroy += OnSpellDestroyed;
+		_castSpells.Add(_castingSpell);
+		_manaRegenStartTime = Time.Now + ManaRegenDelay;
+		// TODO: interesting gameplay question here of:
+		// "does cancelling a cast result in no cooldown?"
+		_spellNextCastTime[(int)ActiveSpell] =
+			Time.Now + _castingSpell.Cooldown;
+		_castingSpell = null;
+	}
+
+	private bool CanHoldCastSpell()
+	{
+		// If a spell is "instant", then we can hold to cast it. This is mainly
+		// for water beam which acts as a rapid fire spell.
+		return !_attackHeldAfterSwitch &&
+			   _spellBuffer[(int)ActiveSpell].MaxChargeTime == 0.0f &&
+			   _spellBuffer[(int)ActiveSpell].CastTime == 0.0f;
+	}
+
 	protected override void OnFixedUpdate()
 	{
 		if (Input.Pressed("SlotNext"))
@@ -211,61 +283,27 @@ public sealed class PlayerSpellcastingController : Component
 			// Cancel the spell
 			if (Input.Pressed("attack2"))
 			{
-				// Even though the spell is cancelled, we still want to service
-				// it as if it wasn't cancelled. We don't really care about the
-				// difference and it just gives a nice way to allow cancel
-				// animations (for example).
-				_castingSpell.OnDestroy += OnSpellDestroyed;
-				_castSpells.Add(_castingSpell);
-				_castingSpell.CancelCasting();
-				Mana += _castingSpell.ManaCost * ManaRefundAmount;
-				// Cancel => start regen immediately?
-				_manaRegenStartTime = Time.Now;
-				_castingSpell = null;
+				CancelCasting();
 			}
 
 			_castingSpellIsHeld &= Input.Down("attack1");
 			if (!_castingSpellIsHeld && _castingSpell.CanFinishCasting())
 			{
-				// TODO: fully charged spells should cost more mana (maybe?)
-				_castingSpell.FinishCasting();
-				// TODO: replace magic 100 with "PlayerWeight" or something
-				var pushback =
-					_castingSpell.SpellMass * _castingSpell.SpellSpeed /
-					100.0f * (1.0f + _castingSpell.GetChargeAmount()) *
-					-PlayerMovementControllerRef.EyeAngles.Forward;
-				PlayerMovementControllerRef.Controller.Punch(pushback);
-				_castingSpell.OnDestroy += OnSpellDestroyed;
-				_castSpells.Add(_castingSpell);
-				_manaRegenStartTime = Time.Now + ManaRegenDelay;
-				// TODO: interesting gameplay question here of:
-				// "does cancelling a cast result in no cooldown?"
-				_spellNextCastTime[(int)ActiveSpell] =
-					Time.Now + _castingSpell.Cooldown;
-				_castingSpell = null;
+				FinishCasting();
 			}
 		}
-		else if (Input.Pressed("attack1"))
+		else if (Input.Pressed("attack1") ||
+				 (Input.Down("attack1") && CanHoldCastSpell()))
 		{
 			if (CanCastSpell(ActiveSpell))
 			{
-				_castingSpell = _spellBuffer[(int)ActiveSpell];
-				// Stateful spells are singletons, so only recreate spells that
-				// aren't stateful!
-				if (!_spellBuffer[(int)ActiveSpell].IsStateful)
-					_spellBuffer[(int)ActiveSpell] =
-						CreateSpell(GameObject, ActiveSpell);
+				StartCasting();
 
-				// TODO: it would be cool if this is progressively taken during
-				// the casting process. But that's not needed for now.
-				Mana -= _castingSpell.ManaCost;
-
-				_castingSpell.CasterEyeOrigin =
-					PlayerMovementControllerRef.EyePosition;
-				_castingSpell.CastDirection =
-					PlayerMovementControllerRef.EyeAngles.Forward;
-				_castingSpell.StartCasting();
-				_castingSpellIsHeld = true;
+				if (_castingSpell.CastTime == 0.0f &&
+					_castingSpell.MaxChargeTime == 0.0f)
+				{
+					FinishCasting();
+				}
 			}
 		}
 		// Implicit preconditions include that we aren't casting a spell now
