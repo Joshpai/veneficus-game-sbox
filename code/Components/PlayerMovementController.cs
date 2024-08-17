@@ -85,6 +85,8 @@ public sealed class PlayerMovementController : Component
 	[Property]
 	public float InteractRange { get; set; } = 64.0f;
 
+	public bool IsDashing { get; set; } = false;
+
 	public float Mass;
 
 	private int _airJumpRemainingTicks;
@@ -327,6 +329,9 @@ public sealed class PlayerMovementController : Component
 		WishDir = Input.AnalogMove.Normal * Body.Transform.Rotation;
 		if (Controller.IsOnGround)
 		{
+			// Reset the IsDashing flag if we're on the ground as we don't care
+			IsDashing = false;
+
 			Controller.Accelerate(WishDir * WalkSpeed);
 
 			Controller.ApplyFriction(5.0f, 20.0f);
@@ -351,6 +356,10 @@ public sealed class PlayerMovementController : Component
 				AirJump();
 
 			Controller.Velocity += Scene.PhysicsWorld.Gravity * Time.Delta;
+
+			// Lock vertical movement during a dash
+			if (IsDashing)
+				Controller.Velocity = Controller.Velocity.WithZ(0.0f);
 		}
 
 		Controller.Move();

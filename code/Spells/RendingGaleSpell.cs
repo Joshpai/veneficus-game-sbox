@@ -12,7 +12,10 @@ public class RendingGaleSpell : BaseSpell
 	public override event EventHandler OnDestroy;
 
 	private const float BOOST_AMOUNT = 500.0f;
+	// TODO: calculate this somehow?
+	private const float DASH_DURATION = 0.1f;
 	private PlayerMovementController _playerMovementController;
+	private float _finishDashingTime;
 
 	public RendingGaleSpell(GameObject caster)
 		: base(caster)
@@ -38,6 +41,8 @@ public class RendingGaleSpell : BaseSpell
 		_playerMovementController.Controller.Velocity =
 			_playerMovementController.Controller.Velocity.WithZ(0.0f);
 		_playerMovementController.Controller.Punch(boost);
+		_playerMovementController.IsDashing = true;
+		_finishDashingTime = Time.Now + DASH_DURATION;
 
 		return true;
 	}
@@ -52,8 +57,11 @@ public class RendingGaleSpell : BaseSpell
 
 	public override void OnFixedUpdate()
 	{
-		// We don't need to use these update functions, so just leave us alone
-		OnDestroy?.Invoke(this, EventArgs.Empty);
+		if (_finishDashingTime < Time.Now)
+		{
+			_playerMovementController.IsDashing = false;
+			OnDestroy?.Invoke(this, EventArgs.Empty);
+		}
 	}
 
 	public override BaseSpell.SpellType GetSpellType()
