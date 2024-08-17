@@ -134,14 +134,16 @@ PlayerHUD
 
       .xp
       {
+        position: relative;
         width: 100%;
         height: 100%;
+        padding: 5px;
 
         .spell-internal-wrapper
         {
           position: relative;
-          margin: 5px;
           width: 100%;
+          height: 100%;
           flex-direction: column;
           background-color: white;
 
@@ -149,7 +151,12 @@ PlayerHUD
           {
             position: absolute;
             bottom: 0;
-            right: 0;
+            /* There is a weird bug with doing right: 0; after adding the 8th
+             * spell. This will just dissapper. Doing some quick debugging, it
+             * happens around .spell-internal-wrapper with width: 120px, but I
+             * don't really care enough to work out what's going on, and
+             * .spell-cost is now unused, so just shift this left... */
+            left: 0;
             font-family: "Times New Roman";
             font-size: 40px;
             letter-spacing: 3px;
