@@ -1,0 +1,449 @@
+{
+  "RootObject": {
+    "__guid": "d71c1839-39d0-406b-acfd-578d984f849b",
+    "Flags": 0,
+    "Name": "lightning_strike",
+    "Tags": "particles",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.ParticleEffect",
+        "__guid": "2fb6f05a-d81c-4d6f-aaf0-941a3aa0f1a9",
+        "Alpha": {
+          "Constants": "1,0,0,0"
+        },
+        "ApplyColor": true,
+        "ApplyRotation": false,
+        "ApplyShape": true,
+        "Bounce": {
+          "Constants": "1,0,0,0"
+        },
+        "Brightness": {
+          "Constants": "1,0,0,0"
+        },
+        "Bumpiness": {},
+        "Collision": false,
+        "CollisionRadius": 1,
+        "Damping": {},
+        "DieOnCollisionChance": {},
+        "Force": false,
+        "ForceDirection": "0,0,0",
+        "ForceScale": {
+          "Constants": "1,0,0,0"
+        },
+        "Friction": {
+          "Constants": "1,0,0,0"
+        },
+        "Gradient": {
+          "GradientA": {
+            "color": [
+              {
+                "t": 0.5,
+                "c": "1,1,1,1"
+              }
+            ],
+            "alpha": []
+          },
+          "GradientB": {
+            "color": [
+              {
+                "t": 0.5,
+                "c": "1,1,1,1"
+              }
+            ],
+            "alpha": []
+          },
+          "ConstantA": "1,1,1,1",
+          "ConstantB": "1,1,1,1"
+        },
+        "Lifetime": {
+          "Constants": "1,0,0,0"
+        },
+        "MaxParticles": 50,
+        "OrbitalForce": {},
+        "OrbitalPull": {},
+        "PerParticleTimeScale": {
+          "Constants": "1,0,0,0"
+        },
+        "Pitch": {},
+        "PreWarm": 0,
+        "PushStrength": {},
+        "Roll": {},
+        "Scale": {
+          "Constants": "5,0,0,0"
+        },
+        "SequenceId": {},
+        "SequenceSpeed": {
+          "Constants": "1,0,0,0"
+        },
+        "SequenceTime": {
+          "Constants": "1,0,0,0"
+        },
+        "SheetSequence": false,
+        "Space": "World",
+        "StartDelay": {},
+        "StartVelocity": {
+          "Constants": "1,0,0,0"
+        },
+        "Stretch": {},
+        "TimeScale": 1,
+        "Tint": "1,0.9,0,1",
+        "Yaw": {}
+      },
+      {
+        "__type": "Sandbox.ParticleSpriteRenderer",
+        "__guid": "a873c86c-c2a1-4b47-8198-cfc2e7e5763a",
+        "Additive": false,
+        "Alignment": "LookAtCamera",
+        "BlurAmount": 1,
+        "BlurOpacity": 1,
+        "BlurSpacing": 1,
+        "DepthFeather": 0,
+        "FaceVelocity": false,
+        "FogStrength": 1,
+        "LeadingTrail": false,
+        "Lighting": false,
+        "MotionBlur": false,
+        "Opaque": false,
+        "RotationOffset": 0,
+        "Scale": 1,
+        "Shadows": false,
+        "SortMode": "Unsorted"
+      },
+      {
+        "__type": "Sandbox.ParticleRingEmitter",
+        "__guid": "ccc96f60-82ad-4af3-a0fa-29e98e575a02",
+        "Angle": {
+          "Constants": "360,0,0,0"
+        },
+        "AngleStart": {},
+        "Burst": 100,
+        "Delay": 0,
+        "DestroyOnEnd": false,
+        "Duration": 0.2,
+        "Flatness": {},
+        "Loop": false,
+        "Radius": {
+          "Constants": "50,0,0,0"
+        },
+        "Rate": 0,
+        "RateOverDistance": 0,
+        "Thickness": {
+          "Constants": "10,0,0,0"
+        },
+        "VelocityFromCenter": {
+          "Constants": "100,0,0,0"
+        },
+        "VelocityFromRing": {}
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "291b3af5-f01a-4035-9689-ac848b18c740",
+        "Flags": 0,
+        "Name": "Line (2)",
+        "Rotation": "0,0,0.7933534,-0.6087614",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.LineRenderer",
+            "__guid": "97632d14-68f1-4b84-8f14-15f0140100ed",
+            "CastShadows": false,
+            "Color": {
+              "color": [
+                {
+                  "t": 0.19017094,
+                  "c": "1,0.98333,0,1"
+                }
+              ],
+              "alpha": []
+            },
+            "EndCap": "Triangle",
+            "Opaque": false,
+            "Points": [
+              {
+                "_type": "gameobject",
+                "go": "e707e148-b93b-4575-8f9f-c75323ab215f"
+              },
+              {
+                "_type": "gameobject",
+                "go": "afd3ba46-e476-45cc-8136-4b9c1fdaad9b"
+              },
+              {
+                "_type": "gameobject",
+                "go": "b821418b-f23b-4c05-a8e8-65728cd869a4"
+              },
+              {
+                "_type": "gameobject",
+                "go": "0b82fbcc-3e89-421f-af93-1401582978a4"
+              },
+              {
+                "_type": "gameobject",
+                "go": "104bd262-bda4-41d1-beaf-bc83124a3572"
+              }
+            ],
+            "SplineBias": 0,
+            "SplineContinuity": 0,
+            "SplineInterpolation": 10,
+            "SplineTension": 0.31,
+            "StartCap": "Triangle",
+            "UseVectorPoints": false,
+            "VectorPoints": [],
+            "Width": [
+              {
+                "y": 1
+              },
+              {
+                "x": 1
+              }
+            ],
+            "Wireframe": false
+          }
+        ],
+        "Children": [
+          {
+            "__guid": "e707e148-b93b-4575-8f9f-c75323ab215f",
+            "Flags": 0,
+            "Name": "Point 1",
+            "Position": "-23.86697,-9.82729,-0.000001422583",
+            "Enabled": true
+          },
+          {
+            "__guid": "afd3ba46-e476-45cc-8136-4b9c1fdaad9b",
+            "Flags": 0,
+            "Name": "Point 2",
+            "Position": "-20.78326,24.12687,94.39344",
+            "Enabled": true
+          },
+          {
+            "__guid": "b821418b-f23b-4c05-a8e8-65728cd869a4",
+            "Flags": 0,
+            "Name": "Point 3",
+            "Position": "15.9996,-23.06931,144.3414",
+            "Enabled": true
+          },
+          {
+            "__guid": "0b82fbcc-3e89-421f-af93-1401582978a4",
+            "Flags": 0,
+            "Name": "Point 4",
+            "Position": "-40.90236,90.2719,363.8582",
+            "Enabled": true
+          },
+          {
+            "__guid": "104bd262-bda4-41d1-beaf-bc83124a3572",
+            "Flags": 0,
+            "Name": "Point 5",
+            "Position": "-40.90236,90.2719,858.981",
+            "Enabled": true
+          }
+        ]
+      },
+      {
+        "__guid": "fcc46e6f-495c-453d-a17b-fe6aa322e9a7",
+        "Flags": 0,
+        "Name": "Line (1)",
+        "Rotation": "0,0,0.8660254,0.5000001",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.LineRenderer",
+            "__guid": "e9da9ba6-d158-4c3f-9f69-a1eb5a7fcf43",
+            "CastShadows": false,
+            "Color": {
+              "color": [
+                {
+                  "t": 0.19017094,
+                  "c": "1,0.98333,0,1"
+                }
+              ],
+              "alpha": []
+            },
+            "EndCap": "Triangle",
+            "Opaque": false,
+            "Points": [
+              {
+                "_type": "gameobject",
+                "go": "93136552-0421-4c82-8c0d-aa3cd938ffc2"
+              },
+              {
+                "_type": "gameobject",
+                "go": "1b19d399-0c39-4883-8d87-7bbc39416748"
+              },
+              {
+                "_type": "gameobject",
+                "go": "7c8a0cd7-068e-427b-ba56-950940498910"
+              },
+              {
+                "_type": "gameobject",
+                "go": "cb8a3336-2149-4c4b-a673-088fbc78b4d8"
+              },
+              {
+                "_type": "gameobject",
+                "go": "41c55a6d-b5d1-4949-93ef-5ef8d161eadc"
+              }
+            ],
+            "SplineBias": 0,
+            "SplineContinuity": 0,
+            "SplineInterpolation": 10,
+            "SplineTension": 0.31,
+            "StartCap": "Triangle",
+            "UseVectorPoints": false,
+            "VectorPoints": [],
+            "Width": [
+              {
+                "y": 1
+              },
+              {
+                "x": 1
+              }
+            ],
+            "Wireframe": false
+          }
+        ],
+        "Children": [
+          {
+            "__guid": "93136552-0421-4c82-8c0d-aa3cd938ffc2",
+            "Flags": 0,
+            "Name": "Point 1",
+            "Position": "-13.9479,-16.04097,-0.0000008313607",
+            "Enabled": true
+          },
+          {
+            "__guid": "1b19d399-0c39-4883-8d87-7bbc39416748",
+            "Flags": 0,
+            "Name": "Point 2",
+            "Position": "-20.78337,14.92821,53.23652",
+            "Enabled": true
+          },
+          {
+            "__guid": "7c8a0cd7-068e-427b-ba56-950940498910",
+            "Flags": 0,
+            "Name": "Point 3",
+            "Position": "15.99967,-17.67169,101.7523",
+            "Enabled": true
+          },
+          {
+            "__guid": "cb8a3336-2149-4c4b-a673-088fbc78b4d8",
+            "Flags": 0,
+            "Name": "Point 4",
+            "Position": "-40.90236,90.2719,363.8582",
+            "Enabled": true
+          },
+          {
+            "__guid": "41c55a6d-b5d1-4949-93ef-5ef8d161eadc",
+            "Flags": 0,
+            "Name": "Point 5",
+            "Position": "-40.90236,90.2719,858.981",
+            "Enabled": true
+          }
+        ]
+      },
+      {
+        "__guid": "875191de-4024-4e03-81b4-5ed4f9a8d66a",
+        "Flags": 0,
+        "Name": "Line",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.LineRenderer",
+            "__guid": "1cd97a44-fcc2-4ddd-86c0-f7594bb6f9f2",
+            "CastShadows": false,
+            "Color": {
+              "color": [
+                {
+                  "t": 0.19017094,
+                  "c": "1,0.98333,0,1"
+                }
+              ],
+              "alpha": []
+            },
+            "EndCap": "Triangle",
+            "Opaque": false,
+            "Points": [
+              {
+                "_type": "gameobject",
+                "go": "bd503c98-0919-41a6-9c32-ee37c39a8153"
+              },
+              {
+                "_type": "gameobject",
+                "go": "367ab832-f1a4-4768-9bd0-4f2e321d7c56"
+              },
+              {
+                "_type": "gameobject",
+                "go": "933564d8-c2f4-43f6-89ca-823cbd968641"
+              },
+              {
+                "_type": "gameobject",
+                "go": "71f9eb97-f718-438a-a1c7-7f8d4093c12a"
+              },
+              {
+                "_type": "gameobject",
+                "go": "ec06b5da-4b5c-465f-844f-f942663fc5ea"
+              }
+            ],
+            "SplineBias": 0,
+            "SplineContinuity": 0,
+            "SplineInterpolation": 10,
+            "SplineTension": 0.31,
+            "StartCap": "Triangle",
+            "UseVectorPoints": false,
+            "VectorPoints": [],
+            "Width": [
+              {
+                "y": 1
+              },
+              {
+                "x": 1
+              }
+            ],
+            "Wireframe": false
+          }
+        ],
+        "Children": [
+          {
+            "__guid": "bd503c98-0919-41a6-9c32-ee37c39a8153",
+            "Flags": 0,
+            "Name": "Point 1",
+            "Position": "-15.90647,-4.754392,-0.0000009481",
+            "Enabled": true
+          },
+          {
+            "__guid": "367ab832-f1a4-4768-9bd0-4f2e321d7c56",
+            "Flags": 0,
+            "Name": "Point 2",
+            "Position": "-20.78336,16.32131,58.93309",
+            "Enabled": true
+          },
+          {
+            "__guid": "933564d8-c2f4-43f6-89ca-823cbd968641",
+            "Flags": 0,
+            "Name": "Point 3",
+            "Position": "15.99967,-28.22144,126.6314",
+            "Enabled": true
+          },
+          {
+            "__guid": "71f9eb97-f718-438a-a1c7-7f8d4093c12a",
+            "Flags": 0,
+            "Name": "Point 4",
+            "Position": "-40.90236,90.2719,363.8582",
+            "Enabled": true
+          },
+          {
+            "__guid": "ec06b5da-4b5c-465f-844f-f942663fc5ea",
+            "Flags": 0,
+            "Name": "Point 5",
+            "Position": "-40.90236,90.2719,858.981",
+            "Enabled": true
+          }
+        ]
+      }
+    ],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

@@ -80,6 +80,7 @@ public sealed class PlayerSpellcastingController : Component
 			BaseSpell.SpellType.RendingGale => new RendingGaleSpell(caster),
 			BaseSpell.SpellType.MagicBarrier => new MagicBarrierSpell(caster),
 			BaseSpell.SpellType.RockArmour => new RockArmourSpell(caster),
+			BaseSpell.SpellType.LightningStrike => new LightningStrikeSpell(caster),
 			_ => null,
 		};
 	}

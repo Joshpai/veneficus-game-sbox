@@ -11,6 +11,7 @@ public abstract class BaseSpell
 		RendingGale,
 		MagicBarrier,
 		RockArmour,
+		LightningStrike,
 		// The below must be at the end, so add new types above here!
 		SpellTypeMax
 	}
