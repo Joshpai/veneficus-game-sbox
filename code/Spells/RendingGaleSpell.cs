@@ -39,6 +39,10 @@ public class RendingGaleSpell : BaseSpell
 		_playerMovementController.Controller.Punch(boost);
 	}
 
+	public override void OnCancelCasting()
+	{
+	}
+
 	public override void OnUpdate()
 	{
 	}

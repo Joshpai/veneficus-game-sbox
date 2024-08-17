@@ -66,6 +66,10 @@ public class WaterBeamSpell : BaseSpell
 	{
 	}
 
+	public override void OnCancelCasting()
+	{
+	}
+
 	public override void OnUpdate()
 	{
 		UpdateWaterBeamTransform();

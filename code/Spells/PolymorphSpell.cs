@@ -63,6 +63,10 @@ public class PolymorphSpell : BaseSpell
 		ChangeModel(_currentModel);
 	}
 
+	public override void OnCancelCasting()
+	{
+	}
+
 	public override void OnUpdate()
 	{
 	}

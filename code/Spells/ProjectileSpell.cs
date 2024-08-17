@@ -57,6 +57,10 @@ public abstract class ProjectileSpell : BaseSpell
 		}
 	}
 
+	public override void OnCancelCasting()
+	{
+	}
+
 	public override void OnUpdate()
 	{
 		if (!HasFinishedCasting)

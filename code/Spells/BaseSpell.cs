@@ -70,6 +70,7 @@ public abstract class BaseSpell
 	public void CancelCasting()
 	{
 		WasCancelled = true;
+		OnCancelCasting();
 	}
 
 	public float GetChargeAmount()
@@ -81,6 +82,7 @@ public abstract class BaseSpell
 
 	public abstract void OnStartCasting();
 	public abstract void OnFinishCasting();
+	public abstract void OnCancelCasting();
 
 	public abstract void OnFixedUpdate();
 	public abstract void OnUpdate();

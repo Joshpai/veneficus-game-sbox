@@ -132,6 +132,10 @@ public abstract class WorldPlacementSpell : BaseSpell
 			_placedObjects.AddLast(placedObject);
 	}
 
+	public override void OnCancelCasting()
+	{
+	}
+
 	public override void OnUpdate()
 	{
 		UpdatePlacementIndicator();

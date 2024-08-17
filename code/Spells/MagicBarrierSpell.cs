@@ -58,6 +58,10 @@ public class MagicBarrierSpell : BaseSpell
 									 ? BARRIER_DAMAGE_REDUCTION : 1.0f;
 	}
 
+	public override void OnCancelCasting()
+	{
+	}
+
 	public override void OnUpdate()
 	{
 	}
