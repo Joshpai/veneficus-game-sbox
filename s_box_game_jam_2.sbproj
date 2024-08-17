@@ -21,7 +21,7 @@
     "PerMapRanking": false,
     "LeaderboardType": "None",
     "CsProjName": "",
-    "StartupScene": "scenes/minimal.scene",
+    "StartupScene": "scenes/level_loader.scene",
     "ControlModes": {
       "Keyboard": true,
       "Gamepad": true
@@ -216,6 +216,7 @@
         }
       ],
       "__guid": "dc0633df-db06-4462-a687-375bc24dd655"
-    }
+    },
+    "LaunchMode": "Normal"
   }
 }
