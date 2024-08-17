@@ -134,6 +134,7 @@ public abstract class WorldPlacementSpell : BaseSpell
 
 	public override void OnCancelCasting()
 	{
+		_placementIndicator.Enabled = false;
 	}
 
 	public override void OnUpdate()
