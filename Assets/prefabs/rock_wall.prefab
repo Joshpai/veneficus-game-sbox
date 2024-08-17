@@ -1,0 +1,51 @@
+{
+  "RootObject": {
+    "__guid": "00f7974b-6849-4373-84ce-495cd36f0d0e",
+    "Flags": 0,
+    "Name": "rock_wall",
+    "Enabled": true,
+    "Children": [
+      {
+        "__guid": "e8ae64e8-1d37-4d3d-9ed7-55228c9d38b7",
+        "Flags": 0,
+        "Name": "Cube",
+        "Position": "0,0,50",
+        "Scale": "0.25,3,2",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "3d51087b-80fd-46a5-9342-e6f298f0d3cc",
+            "BodyGroups": 18446744073709551615,
+            "Model": "models/dev/box.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "Sandbox.BoxCollider",
+            "__guid": "916ffdca-0680-43a1-8fad-1171c79a7c04",
+            "Center": "0,0,0",
+            "IsTrigger": false,
+            "Scale": "50,50,50",
+            "Static": true
+          },
+          {
+            "__type": "HealthComponent",
+            "__guid": "a59bc345-5afb-4b31-aa76-a64cc9ff0760",
+            "DamageMultiplier": 1,
+            "DestroyOnDeath": false,
+            "HealMultiplier": 1,
+            "MaxHealth": 300
+          }
+        ]
+      }
+    ],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

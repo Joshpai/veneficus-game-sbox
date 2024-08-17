@@ -10,6 +10,7 @@ public abstract class BaseSpell
 		WaterBeam,
 		RendingGale,
 		MagicBarrier,
+		RockArmour,
 		// The below must be at the end, so add new types above here!
 		SpellTypeMax
 	}
