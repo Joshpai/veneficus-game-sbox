@@ -2,6 +2,7 @@ public abstract class WorldPlacementSpell : BaseSpell
 {
 	// allow some number to be placed in the world?
 	public override bool IsStateful => true;
+	public override ManaTakeTime TakeManaTime => ManaTakeTime.OnFinishCasting;
 	public override event EventHandler OnDestroy;
 
 	public string PlacementIndicatorPrefab { get; } =

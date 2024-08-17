@@ -213,7 +213,8 @@ public sealed class PlayerSpellcastingController : Component
 
 		// TODO: it would be cool if this is progressively taken during
 		// the casting process. But that's not needed for now.
-		Mana -= _castingSpell.ManaCost;
+		if (_castingSpell.TakeManaTime == BaseSpell.ManaTakeTime.OnStartCasting)
+			Mana -= _castingSpell.ManaCost;
 
 		_castingSpell.CasterEyeOrigin =
 			PlayerMovementControllerRef.EyePosition;
@@ -246,6 +247,9 @@ public sealed class PlayerSpellcastingController : Component
 			_castingSpell = null;
 			return;
 		}
+
+		if (_castingSpell.TakeManaTime == BaseSpell.ManaTakeTime.OnFinishCasting)
+			Mana -= _castingSpell.ManaCost;
 
 		if (_castingSpell.SpellMass != 0.0f)
 		{

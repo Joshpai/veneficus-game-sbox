@@ -1,6 +1,7 @@
 public abstract class ProjectileSpell : BaseSpell
 {
 	public override bool IsStateful => false;
+	public override ManaTakeTime TakeManaTime => ManaTakeTime.OnStartCasting;
 	public override event EventHandler OnDestroy;
 
 	public abstract String ProjectilePrefabPath { get; }

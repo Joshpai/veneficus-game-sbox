@@ -15,6 +15,12 @@ public abstract class BaseSpell
 		SpellTypeMax
 	}
 
+	public enum ManaTakeTime
+	{
+		OnStartCasting,
+		OnFinishCasting
+	}
+
 	public abstract float ManaCost { get; }
 	public abstract float Cooldown { get; }
 	public abstract float CastTime { get; }
@@ -26,6 +32,7 @@ public abstract class BaseSpell
 	public abstract float SpellSpeed { get; }
 	// Stateful spells must be kept in memory and reused (i.e., are singletons)
 	public abstract bool IsStateful { get; }
+	public abstract ManaTakeTime TakeManaTime { get; }
 
 	public abstract event EventHandler OnDestroy;
 

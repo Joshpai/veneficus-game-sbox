@@ -7,6 +7,7 @@ public class RendingGaleSpell : BaseSpell
 	public override float SpellMass => 0.0f;
 	public override float SpellSpeed => 0.0f;
 	public override bool IsStateful => false;
+	public override ManaTakeTime TakeManaTime => ManaTakeTime.OnStartCasting;
 
 	public override event EventHandler OnDestroy;
 

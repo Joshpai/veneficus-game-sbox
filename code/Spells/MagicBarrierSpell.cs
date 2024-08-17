@@ -7,6 +7,8 @@ public class MagicBarrierSpell : BaseSpell
 	public override float SpellMass => 0.0f;
 	public override float SpellSpeed => 0.0f;
 	public override bool IsStateful => true;
+	// TODO: "custom" or "ontick"?
+	public override ManaTakeTime TakeManaTime => ManaTakeTime.OnStartCasting;
 
 	private const String BARRIER_PREFAB = "prefabs/magic_barrier.prefab";
 	// This is the damage multiplier, so a value of 0.75f would mean we reduce

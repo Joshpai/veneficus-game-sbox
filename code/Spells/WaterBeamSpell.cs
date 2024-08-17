@@ -14,6 +14,7 @@ public class WaterBeamSpell : BaseSpell
 	// here how we're treated, so really the less resource intensive version
 	// should be used (i.e., set stateful).
 	public override bool IsStateful => true;
+	public override ManaTakeTime TakeManaTime => ManaTakeTime.OnStartCasting;
 
 	public override event EventHandler OnDestroy;
 
