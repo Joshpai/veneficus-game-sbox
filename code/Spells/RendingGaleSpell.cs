@@ -30,6 +30,8 @@ public class RendingGaleSpell : BaseSpell
 	{
 		Vector3 direction = _playerMovementController.WishDir;
 		Vector3 boost = direction * BOOST_AMOUNT;
+		_playerMovementController.Controller.Velocity =
+			_playerMovementController.Controller.Velocity.WithZ(0.0f);
 		_playerMovementController.Controller.Punch(boost);
 	}
 
