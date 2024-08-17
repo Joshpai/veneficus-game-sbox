@@ -31,7 +31,7 @@ public sealed class MapPlayerSpawner : Component
 
 	void SpawnPlayer()
 	{
-		var player = new GameObject();
+		var player = new GameObject(true, "Player");
 		player.SetPrefabSource("prefabs/player.prefab");
 		player.UpdateFromPrefab();
 

@@ -37,7 +37,7 @@ public class PolymorphSpell : BaseSpell
 		_modelRenderer.Model = to;
 
 		// TODO: would be nice if the smoke puff followed the player.
-		var _smokePuff = new GameObject();
+		var _smokePuff = new GameObject(true, "PolymorphSmokePuff");
 		_smokePuff.Transform.Position = _caster.Transform.Position;
 		_smokePuff.SetPrefabSource("prefabs/SmokePuff.prefab");
 		_smokePuff.UpdateFromPrefab();

@@ -52,7 +52,7 @@ public class WaterBeamSpell : BaseSpell
 
 	public override void OnStartCasting()
 	{
-		_waterBeam = new GameObject();
+		_waterBeam = new GameObject(true, "WaterBeam");
 		_waterBeam.SetPrefabSource(WATER_BEAM_PREFAB);
 		_waterBeam.UpdateFromPrefab();
 		_waterBeam.Transform.Scale = new Vector3(1.0f, 1.0f, 1.0f);
@@ -64,8 +64,6 @@ public class WaterBeamSpell : BaseSpell
 
 	public override void OnFinishCasting()
 	{
-		OnDestroy?.Invoke(this, EventArgs.Empty);
-		_waterBeam.Destroy();
 	}
 
 	public override void OnUpdate()
@@ -90,6 +88,12 @@ public class WaterBeamSpell : BaseSpell
 
 	public override void OnFixedUpdate()
 	{
+		if (HasFinishedCasting)
+		{
+			OnDestroy?.Invoke(this, EventArgs.Empty);
+			_waterBeam.Destroy();
+		}
+
 		if (_nextDamageTime >= Time.Now)
 			return;
 

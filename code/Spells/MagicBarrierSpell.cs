@@ -18,7 +18,6 @@ public class MagicBarrierSpell : BaseSpell
 	private PlayerMovementController _playerMovementController;
 	private HealthComponent _health;
 	private GameObject _barrierObj;
-	private SkinnedModelRenderer _barrierModel;
 	private bool _enabled;
 
 	public MagicBarrierSpell(GameObject caster)
@@ -34,18 +33,11 @@ public class MagicBarrierSpell : BaseSpell
 				   .GetInDescendantsOrSelf<HealthComponent>();
 
 
-		_barrierObj = new GameObject();
+		_barrierObj = new GameObject(false, "MagicBarrier");
 		_barrierObj.SetPrefabSource(BARRIER_PREFAB);
 		_barrierObj.UpdateFromPrefab();
 		_barrierObj.SetParent(_caster);
 		_barrierObj.Transform.LocalPosition = Vector3.Zero;
-
-		// NOTE: we only want to get this in the descendents, as we have the
-		// player model rendered in the root for reference.
-		_barrierModel =
-			_barrierObj.Components.GetInDescendants<SkinnedModelRenderer>();
-		if (_barrierModel != null)
-			_barrierModel.Enabled = _enabled;
 	}
 
 	public override void OnStartCasting()
@@ -56,8 +48,7 @@ public class MagicBarrierSpell : BaseSpell
 	{
 		_enabled = !_enabled;
 
-		if (_barrierModel != null)
-			_barrierModel.Enabled = _enabled;
+		_barrierObj.Enabled = _enabled;
 
 		// TODO: this assumes nothing else will modify the damage multiplier
 		// and that the default value is 1.0, which may not necessarily be
@@ -73,6 +64,7 @@ public class MagicBarrierSpell : BaseSpell
 
 	public override void OnFixedUpdate()
 	{
+		// TODO: we actually want to constantly draw mana when enabled
 		OnDestroy?.Invoke(this, EventArgs.Empty);
 	}
 

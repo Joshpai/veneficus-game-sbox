@@ -20,7 +20,7 @@ public abstract class ProjectileSpell : BaseSpell
 
 	public override void OnStartCasting()
 	{
-		_projectileObject = new GameObject();
+		_projectileObject = new GameObject(true, GetSpellType().ToString());
 		_projectileObject.SetPrefabSource(ProjectilePrefabPath);
 		_projectileObject.UpdateFromPrefab();
 		_projectileObject.Transform.Scale = ProjectileScale;
