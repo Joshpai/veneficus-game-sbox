@@ -3,6 +3,7 @@ public class LevelManagerStaticStore
 	public static LevelManager Instance { get; set; }
 	public static SceneFile ActiveScene { get; set; }
 	public static bool IsLoading { get; set; }
+	public static SaveData SaveDataInstance { get; set; }
 }
 
 public sealed class LevelManager : Component
@@ -12,6 +13,13 @@ public sealed class LevelManager : Component
 
 	[Property]
 	public GameObject LoadingScreen { get; set; }
+
+	public LevelManager()
+		: base()
+	{
+		LevelManagerStaticStore.SaveDataInstance = new SaveData();
+		SaveData.Load();
+	}
 
 	public static void LoadLevelImmediate(SceneFile newScene,
 										  bool showLoadingScreen)

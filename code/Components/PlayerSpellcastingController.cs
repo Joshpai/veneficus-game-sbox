@@ -3,8 +3,16 @@ public sealed class PlayerSpellcastingController : Component
 	[Property]
 	public PlayerMovementController PlayerMovementControllerRef { get; set; }
 
-	[Property]
-	public float MaxMana { get; set; } = 100.0f;
+	// NOTE: The default value for this must be set in SaveDataFormat, as we
+	// will end up overwriting this value if we have it as a property!
+	public float MaxMana
+	{
+		get { return SaveData.Instance.Data.MaxMana; }
+		set {
+			SaveData.Instance.Data.MaxMana = value;
+			SaveData.Save();
+		}
+	}
 
 	[Property]
 	public float ManaRefundAmount { get; set; } = 0.5f;
@@ -30,7 +38,15 @@ public sealed class PlayerSpellcastingController : Component
 	private bool _castingSpellIsHeld;
 
 	private float[] _spellNextCastTime;
-	private UInt64 _unlockedSpellsMask;
+
+	private UInt64 _unlockedSpellsMask {
+		get { return SaveData.Instance.Data.UnlockedSpells; }
+		set {
+			SaveData.Instance.Data.UnlockedSpells = value;
+			SaveData.Save();
+		}
+	}
+
 	private List<BaseSpell.SpellType> _availableSpells;
 	private int _selectedSpellIdx;
 
@@ -50,10 +66,9 @@ public sealed class PlayerSpellcastingController : Component
 		// This should be zeroed by definition. It should be noted that this
 		// allocates 2 more floats than necessary, but it's probably fine.
 		_spellNextCastTime = new float[(int)BaseSpell.SpellType.SpellTypeMax];
-		// Default to having all spells unlocked
-		// TODO: This will need to be serialised in some player data thing
-		_unlockedSpellsMask = 0xfffffffffffffffful;
-		// _unlockedSpellsMask = 0x6ul;
+
+		// _unlockedSpellsMask = 0xfffffffffffffffful;
+		_unlockedSpellsMask = SaveData.Instance.Data.UnlockedSpells;
 		UpdateUnlockedSpells();
 		_selectedSpellIdx = 0;
 
@@ -119,6 +134,9 @@ public sealed class PlayerSpellcastingController : Component
 			_unlockedSpellsMask |= (1ul << (int)spellType);
 		else
 			_unlockedSpellsMask &= ~(1ul << (int)spellType);
+
+		SaveData.Instance.Data.UnlockedSpells = _unlockedSpellsMask;
+
 		UpdateUnlockedSpells();
 	}
 
