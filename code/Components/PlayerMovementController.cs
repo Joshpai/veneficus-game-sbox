@@ -255,9 +255,18 @@ public sealed class PlayerMovementController : Component
 		// Update the transform of the camera to orbit around the EyePosition
 		var cameraTransform =
 			_cameraReferenceInterpolated.RotateAround(EyePosition, EyeAngles);
-		Camera.Transform.Position =
-			Transform.Local.PointToWorld(cameraTransform.Position);
 		Camera.Transform.Rotation = cameraTransform.Rotation;
+
+		var cameraPos = Transform.Local.PointToWorld(cameraTransform.Position);
+		var startPos = Transform.Position + EyePosition;
+		var endPos = cameraPos;
+		var tr = Scene.Trace.Ray(startPos, endPos)
+							.IgnoreGameObjectHierarchy(GameObject)
+							.Size(1.0f)
+							.Run();
+		cameraPos = (tr.Hit) ? tr.HitPosition : cameraPos;
+
+		Camera.Transform.Position = cameraPos;
 	}
 
 	// Short dump on design justification for this feature:
