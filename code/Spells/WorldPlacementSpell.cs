@@ -12,6 +12,7 @@ public abstract class WorldPlacementSpell : BaseSpell
 	protected PlayerMovementController _playerMovementController;
 	protected GameObject _placementIndicator;
 	protected ModelRenderer _placementIndicatorRenderer;
+	private bool _isPlaceable;
 
 	private LinkedList<GameObject> _placedObjects;
 
@@ -22,6 +23,7 @@ public abstract class WorldPlacementSpell : BaseSpell
 			new GameObject(false, GetSpellType().ToString() + "PlacementIndicator");
 		_placementIndicator.SetPrefabSource(PlacementIndicatorPrefab);
 		_placementIndicator.UpdateFromPrefab();
+		_isPlaceable = false;
 
 		// Silly dance to stop the compiler screaming and crying
 		OnDestroy = null;
@@ -71,17 +73,9 @@ public abstract class WorldPlacementSpell : BaseSpell
 			_placementIndicator.Components
 							   .GetInDescendantsOrSelf<SkinnedModelRenderer>();
 		
+		_isPlaceable = (placePos != null);
 		if (placePos == null)
-		{
 			placePos = endPos;
-			if (_placementIndicatorRenderer != null)
-				_placementIndicatorRenderer.Tint = Color.Red;
-		}
-		else
-		{
-			if (_placementIndicatorRenderer != null)
-				_placementIndicatorRenderer.Tint = Color.Green;
-		}
 
 		_placementIndicator.Transform.Position = placePos.Value;
 
@@ -120,6 +114,9 @@ public abstract class WorldPlacementSpell : BaseSpell
 	public override bool OnFinishCasting()
 	{
 		_placementIndicator.Enabled = false;
+
+		if (!_isPlaceable)
+			return false;
 			
 		if (_placedObjects.Count >= MaxPlacedObjects)
 		{
@@ -142,6 +139,9 @@ public abstract class WorldPlacementSpell : BaseSpell
 	public override void OnUpdate()
 	{
 		UpdatePlacementIndicator();
+		if (_placementIndicatorRenderer != null)
+			_placementIndicatorRenderer.Tint =
+				(_isPlaceable) ? Color.Green : Color.Red;
 	}
 
 	public override void OnFixedUpdate()
