@@ -1,0 +1,50 @@
+{
+  "RootObject": {
+    "__guid": "4c535122-403c-459d-90bf-19ffa0cda0cf",
+    "Flags": 0,
+    "Name": "magic_barrier",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.SkinnedModelRenderer",
+        "__guid": "3aacb18f-7235-4c08-bdc7-e1c96f95691d",
+        "__enabled": false,
+        "BodyGroups": 341,
+        "CreateBoneObjects": false,
+        "Model": "models/citizen/citizen.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1",
+        "UseAnimGraph": true
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "be299d00-c864-4c77-9b11-9ae42bfc410f",
+        "Flags": 0,
+        "Name": "Barrier",
+        "Position": "0,0,38.17241",
+        "Scale": "1.25,1.25,1.25",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.SkinnedModelRenderer",
+            "__guid": "a76a7756-bad7-4a71-8bea-e4f89c030046",
+            "BodyGroups": 18446744073709551615,
+            "CreateBoneObjects": false,
+            "Model": "models/dev/sphere.vmdl",
+            "RenderType": "On",
+            "Tint": "0.24922,0.89302,0.81791,0.25",
+            "UseAnimGraph": true
+          }
+        ]
+      }
+    ],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

@@ -78,6 +78,7 @@ public sealed class PlayerSpellcastingController : Component
 			BaseSpell.SpellType.Fireball => new FireballSpell(caster),
 			BaseSpell.SpellType.WaterBeam => new WaterBeamSpell(caster),
 			BaseSpell.SpellType.RendingGale => new RendingGaleSpell(caster),
+			BaseSpell.SpellType.MagicBarrier => new MagicBarrierSpell(caster),
 			_ => null,
 		};
 	}
