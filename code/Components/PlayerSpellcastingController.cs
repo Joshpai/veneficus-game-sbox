@@ -241,7 +241,11 @@ public sealed class PlayerSpellcastingController : Component
 	private void FinishCasting()
 	{
 		// TODO: fully charged spells should cost more mana (maybe?)
-		_castingSpell.FinishCasting();
+		if (!_castingSpell.FinishCasting())
+		{
+			_castingSpell = null;
+			return;
+		}
 
 		if (_castingSpell.SpellMass != 0.0f)
 		{

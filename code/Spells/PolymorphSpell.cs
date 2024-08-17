@@ -55,12 +55,14 @@ public class PolymorphSpell : BaseSpell
 		// to discriminate between them?
 	}
 
-	public override void OnFinishCasting()
+	public override bool OnFinishCasting()
 	{
 		_currentModel = _nextModel;
 		_nextModel = _modelRenderer.Model;
 
 		ChangeModel(_currentModel);
+
+		return true;
 	}
 
 	public override void OnCancelCasting()

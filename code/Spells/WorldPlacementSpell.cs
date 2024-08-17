@@ -117,7 +117,7 @@ public abstract class WorldPlacementSpell : BaseSpell
 		_placementIndicator.Enabled = true;
 	}
 
-	public override void OnFinishCasting()
+	public override bool OnFinishCasting()
 	{
 		_placementIndicator.Enabled = false;
 			
@@ -130,6 +130,8 @@ public abstract class WorldPlacementSpell : BaseSpell
 		var placedObject = OnPlaced(_placementIndicator.Transform);
 		if (placedObject != null)
 			_placedObjects.AddLast(placedObject);
+
+		return true;
 	}
 
 	public override void OnCancelCasting()

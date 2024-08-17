@@ -61,10 +61,10 @@ public abstract class BaseSpell
 		OnStartCasting();
 	}
 
-	public void FinishCasting()
+	public bool FinishCasting()
 	{
 		HasFinishedCasting = true;
-		OnFinishCasting();
+		return OnFinishCasting();
 	}
 
 	public void CancelCasting()
@@ -81,7 +81,7 @@ public abstract class BaseSpell
 	}
 
 	public abstract void OnStartCasting();
-	public abstract void OnFinishCasting();
+	public abstract bool OnFinishCasting();
 	public abstract void OnCancelCasting();
 
 	public abstract void OnFixedUpdate();

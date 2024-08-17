@@ -44,7 +44,7 @@ public class MagicBarrierSpell : BaseSpell
 	{
 	}
 
-	public override void OnFinishCasting()
+	public override bool OnFinishCasting()
 	{
 		_enabled = !_enabled;
 
@@ -56,6 +56,8 @@ public class MagicBarrierSpell : BaseSpell
 		if (_health != null)
 			_health.DamageMultiplier = (_enabled)
 									 ? BARRIER_DAMAGE_REDUCTION : 1.0f;
+
+		return true;
 	}
 
 	public override void OnCancelCasting()

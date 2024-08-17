@@ -26,7 +26,7 @@ public class RendingGaleSpell : BaseSpell
 	{
 	}
 
-	public override void OnFinishCasting()
+	public override bool OnFinishCasting()
 	{
 		Vector3 direction = _playerMovementController.WishDir;
 		Vector3 boost = direction * BOOST_AMOUNT;
@@ -37,6 +37,8 @@ public class RendingGaleSpell : BaseSpell
 		_playerMovementController.Controller.Velocity =
 			_playerMovementController.Controller.Velocity.WithZ(0.0f);
 		_playerMovementController.Controller.Punch(boost);
+
+		return true;
 	}
 
 	public override void OnCancelCasting()

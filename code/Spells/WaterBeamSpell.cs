@@ -62,8 +62,9 @@ public class WaterBeamSpell : BaseSpell
 		UpdateWaterBeamTransform();
 	}
 
-	public override void OnFinishCasting()
+	public override bool OnFinishCasting()
 	{
+		return true;
 	}
 
 	public override void OnCancelCasting()

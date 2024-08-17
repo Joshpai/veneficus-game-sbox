@@ -39,7 +39,7 @@ public abstract class ProjectileSpell : BaseSpell
 			CasterEyeOrigin + CastDirection * StartOffset;
 	}
 
-	public override void OnFinishCasting()
+	public override bool OnFinishCasting()
 	{
 		_timeSinceProjectileSpawn = 0.0f;
 		_projectileObject.SetParent(null, true);
@@ -55,6 +55,8 @@ public abstract class ProjectileSpell : BaseSpell
 			_collisionComponent.Enabled = true;
 			_collisionComponent.DamageMultiplier *= (1 + GetChargeAmount());
 		}
+
+		return true;
 	}
 
 	public override void OnCancelCasting()
