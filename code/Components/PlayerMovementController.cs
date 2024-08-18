@@ -361,7 +361,7 @@ public sealed class PlayerMovementController : Component
 			Controller.Velocity += Scene.PhysicsWorld.Gravity * Time.Delta;
 
 			// Lock vertical movement during a dash
-			if (IsDashing)
+			if (IsDashing && Controller.Velocity.z < 0.0f)
 				Controller.Velocity = Controller.Velocity.WithZ(0.0f);
 		}
 

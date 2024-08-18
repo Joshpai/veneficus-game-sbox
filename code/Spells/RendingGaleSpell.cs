@@ -34,12 +34,6 @@ public class RendingGaleSpell : BaseSpell
 	{
 		Vector3 direction = _playerMovementController.WishDir;
 		Vector3 boost = direction * BOOST_AMOUNT;
-		// TODO: also disable gravity for a short period of time
-		// Think a bit more about this, as disabling gravity could lead to very
-		// funky situations where any external upwards forces are no longer
-		// opposed. For example, an enemy sending a fireball or other at you.
-		_playerMovementController.Controller.Velocity =
-			_playerMovementController.Controller.Velocity.WithZ(0.0f);
 		_playerMovementController.Controller.Punch(boost);
 		_playerMovementController.IsDashing = true;
 		_finishDashingTime = Time.Now + DASH_DURATION;
