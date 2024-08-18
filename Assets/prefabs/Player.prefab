@@ -71,7 +71,6 @@
         "ManaRefundAmount": 0.5,
         "ManaRegenDelay": 1,
         "ManaRegenRate": 100,
-        "MaxMana": 100,
         "PlayerMovementControllerRef": {
           "_type": "component",
           "component_id": "8b1cbddb-d250-48f9-8481-5e1002d93f6a",
@@ -182,7 +181,7 @@
             "IsMainCamera": true,
             "Orthographic": false,
             "OrthographicHeight": 1204,
-            "Priority": 1,
+            "Priority": 16,
             "RenderExcludeTags": "",
             "RenderTags": "",
             "TargetEye": "None",

@@ -6,7 +6,7 @@ LevelFinishSummary
    * this way, it just gives up rendering some children after being too far
    * to the right of the screen. Very odd. */
   /* transform: translate(-50%, -50%); */
-  width: 25%;
+  width: 30%;
   flex-shrink: 1;
   overflow: hidden;
   align-items: center;
@@ -149,12 +149,12 @@ LevelFinishSummary
         padding: 20px;
       }
 
-      button:nth-child(1)
+      button:first-child
       {
         border-bottom-left-radius: 20px;
       }
 
-      button:nth-child(2)
+      button:last-child
       {
         border-bottom-right-radius: 20px;
       }

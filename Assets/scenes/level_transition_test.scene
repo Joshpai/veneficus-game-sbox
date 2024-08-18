@@ -6,8 +6,122 @@
       "Flags": 0,
       "Name": "level_transition",
       "Enabled": true,
-      "__Prefab": "prefabs/level_transition.prefab",
-      "__PrefabVariables": {}
+      "Children": [
+        {
+          "__guid": "544d1957-1672-43c6-9210-2fdfc8fce3bf",
+          "Flags": 0,
+          "Name": "CameraContainer",
+          "Rotation": "0.0005960698,0.02139732,-0.02784003,0.9993832",
+          "Tags": "maincamera",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ScreenPanel",
+              "__guid": "aeb4ce60-fb2c-4883-8a27-3bf4fc6a5cac",
+              "AutoScreenScale": true,
+              "Opacity": 1,
+              "Scale": 1,
+              "ZIndex": 100
+            },
+            {
+              "__type": "LevelFinishSummary",
+              "__guid": "e387a677-fcfb-4c08-8b70-91115d61422a",
+              "ChallengeCompleted": false,
+              "ChallengeDescription": "This is my placeholder challenge description that might be quite a long sentence describing the challenge of this level.",
+              "CompletionTime": "00:00.000",
+              "CompletionTimeRank": "D",
+              "DeathCount": 0,
+              "DeathRank": "D",
+              "EnemiesKilled": 0,
+              "EnemiesKilledRank": "D",
+              "FinalRank": "D",
+              "MaxEnemies": 0,
+              "SecretCollectedBitmask": 0,
+              "SecretCount": 0
+            },
+            {
+              "__type": "SpinComponent",
+              "__guid": "a4ae4d0a-4b5f-4db1-8fcf-09d80074dc43",
+              "SpinPeriod": 120
+            },
+            {
+              "__type": "Sandbox.CameraComponent",
+              "__guid": "8e3c9b0c-1a24-495a-8320-dcbd65b4d714",
+              "BackgroundColor": "0.33333,0.46275,0.52157,1",
+              "ClearFlags": "All",
+              "FieldOfView": 113.27,
+              "IsMainCamera": true,
+              "Orthographic": false,
+              "OrthographicHeight": 1204,
+              "Priority": 1,
+              "RenderExcludeTags": "",
+              "RenderTags": "",
+              "TargetEye": "None",
+              "Viewport": "0,0,1,1",
+              "ZFar": 10000,
+              "ZNear": 10
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "a9b4657b-4eb8-4cf6-808c-d4d664749a6a",
+              "Flags": 0,
+              "Name": "PlayerModel",
+              "Position": "84.86139,16.0685,-37.7085",
+              "Rotation": "-0,0,1,-0.00000004371139",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.SkinnedModelRenderer",
+                  "__guid": "314d6a09-be1e-494e-8b1d-4a4a02753a67",
+                  "BodyGroups": 341,
+                  "CreateBoneObjects": false,
+                  "MaterialGroup": "default",
+                  "Model": "models/citizen/citizen.vmdl",
+                  "RenderType": "Off",
+                  "Tint": "1,1,1,1",
+                  "UseAnimGraph": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "129492b2-e706-41a3-b1de-12db46be789a",
+          "Flags": 0,
+          "Name": "Sun",
+          "Position": "-64.48355,0,0",
+          "Tags": "light_directional,light",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.DirectionalLight",
+              "__guid": "7fc9dcbe-d3fe-4905-a1c4-52ccca473f75",
+              "FogMode": "Enabled",
+              "FogStrength": 1,
+              "LightColor": "0.91373,0.98039,1,1",
+              "Shadows": true,
+              "SkyColor": "0,0,0,0"
+            }
+          ]
+        },
+        {
+          "__guid": "7054c292-ad87-4b24-a962-a5521892c694",
+          "Flags": 0,
+          "Name": "Object",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "a6605f4c-d1e0-4ba5-9218-9747c05641e4",
+              "BodyGroups": 18446744073709551615,
+              "Model": "models/dev/error.vmdl",
+              "RenderType": "Off",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        }
+      ]
     }
   ],
   "SceneProperties": {

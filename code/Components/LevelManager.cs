@@ -2,7 +2,12 @@ public class LevelStats
 {
 	public float LevelStartTime { get; set; } = 0.0f;
 	public int EnemiesKilled { get; set; } = 0;
+	public int MaxEnemies { get; set; } = 0;
 	public int DeathCount { get; set; } = 0;
+	public String ChallengeDescription { get; set; } = "";
+	public bool ChallengeCompleted { get; set; } = false;
+	public int SecretCount { get; set; } = 0;
+	public uint SecretCollectedBitmask { get; set; } = 0;
 }
 
 public class LevelManagerStaticStore
@@ -12,6 +17,7 @@ public class LevelManagerStaticStore
 	public static bool IsLoading { get; set; }
 	public static SaveData SaveDataInstance { get; set; }
 	public static LevelStats Stats { get; set; }
+	public static GameObject Player { get; set; }
 }
 
 public sealed class LevelManager : Component
@@ -63,6 +69,8 @@ public sealed class LevelManager : Component
 		var player = new GameObject(true, "Player");
 		player.SetPrefabSource("prefabs/player.prefab");
 		player.UpdateFromPrefab();
+
+		LevelManagerStaticStore.Player = player;
 
 		var controller = player.Components.Get<PlayerMovementController>();
 		if (controller == null)

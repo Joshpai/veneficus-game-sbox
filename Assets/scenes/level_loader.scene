@@ -14,7 +14,7 @@
             "_type": "gameobject",
             "prefab": "prefabs/loading_screen.prefab"
           },
-          "StartingLevel": "scenes/testmap.scene"
+          "StartingLevel": "scenes/minimal.scene"
         },
         {
           "__type": "MapPlayerSpawner",

@@ -9,7 +9,6 @@
         "__guid": "0afe7abf-9a4e-4053-a2e2-912c40a1135c",
         "Flags": 0,
         "Name": "Map",
-        "Enabled": true,
         "Components": [
           {
             "__type": "Sandbox.MapInstance",
@@ -20,34 +19,16 @@
             "NoOrigin": false,
             "UseMapFromLaunch": false
           }
-        ],
-        "Children": []
+        ]
       },
       {
         "__guid": "bb2cf8cb-d572-48bd-a6d2-02f63a632320",
         "Flags": 0,
-        "Name": "Camera",
+        "Name": "CameraContainer",
         "Rotation": "0.0005960698,0.02139732,-0.02784003,0.9993832",
         "Tags": "maincamera",
         "Enabled": true,
         "Components": [
-          {
-            "__type": "Sandbox.CameraComponent",
-            "__guid": "9ff14a2d-ff86-462e-9f67-de3b429573eb",
-            "BackgroundColor": "0.33333,0.46275,0.52157,1",
-            "ClearFlags": "All",
-            "FieldOfView": 109.78,
-            "IsMainCamera": false,
-            "Orthographic": false,
-            "OrthographicHeight": 1204,
-            "Priority": 1,
-            "RenderExcludeTags": "",
-            "RenderTags": "",
-            "TargetEye": "None",
-            "Viewport": "0,0,1,1",
-            "ZFar": 6210,
-            "ZNear": 1
-          },
           {
             "__type": "Sandbox.ScreenPanel",
             "__guid": "f378200b-313e-4a47-b043-0bcf8c9c6b90",
@@ -60,12 +41,39 @@
             "__type": "LevelFinishSummary",
             "__guid": "725220d5-1e15-4ce9-8dea-e8943263b31e",
             "ChallengeCompleted": false,
-            "ChallengeDescription": "This is my placeholder challenge description that might be quite a long sentence describing the challenge of this level."
+            "ChallengeDescription": "This is my placeholder challenge description that might be quite a long sentence describing the challenge of this level.",
+            "CompletionTime": "00:00.000",
+            "CompletionTimeRank": "D",
+            "DeathCount": 0,
+            "DeathRank": "D",
+            "EnemiesKilled": 0,
+            "EnemiesKilledRank": "D",
+            "FinalRank": "D",
+            "MaxEnemies": 0,
+            "SecretCollectedBitmask": 0,
+            "SecretCount": 0
           },
           {
             "__type": "SpinComponent",
             "__guid": "84c045b7-bd2c-4b69-894b-e77571c1bc84",
             "SpinPeriod": 120
+          },
+          {
+            "__type": "Sandbox.CameraComponent",
+            "__guid": "25a556d9-89b6-4342-8694-7de89e15a894",
+            "BackgroundColor": "0.33333,0.46275,0.52157,1",
+            "ClearFlags": "All",
+            "FieldOfView": 113.27,
+            "IsMainCamera": true,
+            "Orthographic": false,
+            "OrthographicHeight": 1204,
+            "Priority": 1,
+            "RenderExcludeTags": "",
+            "RenderTags": "",
+            "TargetEye": "None",
+            "Viewport": "0,0,1,1",
+            "ZFar": 10000,
+            "ZNear": 10
           }
         ],
         "Children": [
@@ -108,6 +116,22 @@
             "LightColor": "0.91373,0.98039,1,1",
             "Shadows": true,
             "SkyColor": "0,0,0,0"
+          }
+        ]
+      },
+      {
+        "__guid": "63e094fb-30ea-437d-b417-95eed5258251",
+        "Flags": 0,
+        "Name": "Object",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "c2088437-f37a-454b-9ab5-046ce5e52ebe",
+            "BodyGroups": 18446744073709551615,
+            "Model": "models/level_transition.vmdl",
+            "RenderType": "Off",
+            "Tint": "1,1,1,1"
           }
         ]
       }

@@ -29,8 +29,29 @@
       "__Prefab": "prefabs/level_end.prefab",
       "__PrefabVariables": {
         "Next Level": "scenes/minimal.scene",
-        "Deferred Next Level": null
+        "Deferred Next Level": null,
+        "Target Finish Time S": 0,
+        "Target Finish Time A": 0,
+        "Target Finish Time B": 0,
+        "Target Finish Time D": 0,
+        "Target Enemies Killed Percent S": 1,
+        "Target Enemies Killed Percent A": 0.9,
+        "Target Enemies Killed Percent B": 0.75,
+        "Target Enemies Killed Percent C": 0.5,
+        "LevelTransition": {
+          "_type": "gameobject",
+          "go": "c0e49116-406f-4271-98a5-b9b70245f451"
+        }
       }
+    },
+    {
+      "__guid": "c0e49116-406f-4271-98a5-b9b70245f451",
+      "Flags": 0,
+      "Name": "level_transition",
+      "Position": "-345.1349,430.9247,-822.859",
+      "Enabled": true,
+      "__Prefab": "prefabs/level_transition.prefab",
+      "__PrefabVariables": {}
     }
   ],
   "SceneProperties": {

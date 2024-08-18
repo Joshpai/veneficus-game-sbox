@@ -138,6 +138,16 @@
             "Property": "TargetEnemiesKilledPercent_C"
           }
         ]
+      },
+      {
+        "Id": "LevelTransition",
+        "Title": "LevelTransition",
+        "Targets": [
+          {
+            "Id": "aecb641e-d6b2-4741-9950-279543944415",
+            "Property": "LevelTransition"
+          }
+        ]
       }
     ]
   },

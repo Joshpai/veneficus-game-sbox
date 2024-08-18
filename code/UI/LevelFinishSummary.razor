@@ -12,35 +12,26 @@
 				<div class="stat">
 					<div class="stat-name">Completion Time</div>
 					<div class="stat-data">
-						<div class="stat-value">07:50.124</div>
+						<div class="stat-value">@CompletionTime</div>
 						<div class="stat-target"></div>
-						<div class="stat-rank">(S)</div>
+						<div class="stat-rank">(@CompletionTimeRank)</div>
 					</div>
 				</div>
 				<div class="stat">
 					<div class="stat-name">Enemies Killed</div>
 					<div class="stat-data">
-						<div class="stat-value">50</div>
-						<div class="stat-target">75</div>
-						<div class="stat-rank">(A)</div>
-					</div>
-				</div>
-				<!-- Is a "magic" field a good idea, players won't know how to improve
-					 this stat if it isn't that transparent? -->
-				<div class="stat">
-					<div class="stat-name">Spell Variety</div>
-					<div class="stat-data">
-						<div class="stat-value"></div>
-						<div class="stat-target"></div>
-						<div class="stat-rank">(B)</div>
+						<div class="stat-value">@EnemiesKilled</div>
+						<div class="stat-slash">/</div>
+						<div class="stat-target">@MaxEnemies</div>
+						<div class="stat-rank">(@EnemiesKilledRank)</div>
 					</div>
 				</div>
 				<div class="stat">
 					<div class="stat-name">Deaths</div>
 					<div class="stat-data">
-						<div class="stat-value">3</div>
+						<div class="stat-value">@DeathCount</div>
 						<div class="stat-target"></div>
-						<div class="stat-rank">(C)</div>
+						<div class="stat-rank">(@DeathRank)</div>
 					</div>
 				</div>
 			</div>
@@ -56,24 +47,26 @@
 				<div class="challenge-description">@ChallengeDescription</div>
 			</div>
 			<div class="secrets">
-				<!-- TODO: replace "3" with level secret amount -->
-				@for (var i = 0; i < 3; i++)
+				@for (var i = 0; i < SecretCount; i++)
 				{
-					// TODO: implement this properly
-					var collected = (i % 2 == 0) ? "collected" : "missed";
+					var collected = (((1 << i) & SecretCollectedBitmask) != 0)
+								  ? "collected" : "missed";
 					<div class="secret @collected"></div>
 				}
 			</div>
 			<div class="rank">
 				<div class="rank-name">Final Rank</div>
-				<div class="rank-value">D</div>
+				<div class="rank-value">@FinalRank</div>
 			</div>
 			<div class="buttons">
-				<button onclick=@( () => Log.Info("Retry") )>
-					⟲ Retry
+				<button onclick=@( () => OnRetryLevel?.Invoke() )>
+					&#10226; Retry
 				</button>
-				<button onclick=@( () => Log.Info("Next Level") )>
-					Next Level →
+				<button onclick=@( () => OnMainMenu?.Invoke() )>
+					&#119064; Menu
+				</button>
+				<button onclick=@( () => OnNextLevel?.Invoke() )>
+					Next Level &#8594;
 				</button>
 			</div>
 		</div>
@@ -82,18 +75,48 @@
 
 @code
 {
-	[Property, TextArea]
-	public String ChallengeDescription { get; set; } = "";
+	[Property]
+	public String CompletionTime { get; set; } = "00:00.000";
+	[Property]
+	public String CompletionTimeRank { get; set; } = "D";
 
 	[Property]
+	public int EnemiesKilled { get; set; } = 0;
+	[Property]
+	public int MaxEnemies { get; set; } = 0;
+	[Property]
+	public String EnemiesKilledRank { get; set; } = "D";
+
+	[Property]
+	public int DeathCount { get; set; } = 0;
+	[Property]
+	public String DeathRank { get; set; } = "D";
+
+	[Property, TextArea]
+	public String ChallengeDescription { get; set; } = "";
+	[Property]
 	public bool ChallengeCompleted { get; set; } = false;
+
+	[Property]
+	public String FinalRank { get; set; } = "D";
+
+	[Property]
+	public int SecretCount { get; set; } = 0;
+	[Property]
+	public uint SecretCollectedBitmask { get; set; } = 0;
+
+	[Property]
+	public Action OnRetryLevel { get; set; }
+	[Property]
+	public Action OnMainMenu { get; set; }
+	[Property]
+	public Action OnNextLevel { get; set; }
 
 	/// <summary>
 	/// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
 	/// </summary>
 	protected override int BuildHash() =>
 		System.HashCode.Combine(
-			ChallengeDescription,
-			ChallengeCompleted
+			FinalRank
 		);
 }
