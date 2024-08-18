@@ -277,7 +277,7 @@ public sealed class PlayerSpellcastingController : Component
 		_castingSpell.OnDestroy += OnSpellDestroyed;
 		_castSpells.Add(_castingSpell);
 		_manaRegenStartTime = Time.Now + ManaRegenDelay;
-		_spellNextCastTime[(int)ActiveSpell] =
+		_spellNextCastTime[(int)_castingSpell.GetSpellType()] =
 			Time.Now + _castingSpell.Cooldown;
 		_castingSpell = null;
 	}
