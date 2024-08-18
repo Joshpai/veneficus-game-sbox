@@ -15,10 +15,6 @@
           "MapName": "maps/desert - act 2/testact2.vmap",
           "NoOrigin": false,
           "UseMapFromLaunch": false
-        },
-        {
-          "__type": "MapPlayerSpawner",
-          "__guid": "0433e204-fd50-4727-a84a-3010649c3024"
         }
       ],
       "Children": []

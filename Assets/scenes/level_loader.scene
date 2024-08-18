@@ -14,11 +14,7 @@
             "_type": "gameobject",
             "prefab": "prefabs/loading_screen.prefab"
           },
-          "StartingLevel": "scenes/minimal.scene"
-        },
-        {
-          "__type": "MapPlayerSpawner",
-          "__guid": "23b52b90-b105-42a9-ba6c-86bb761f969e"
+          "StartingLevel": "scenes/desert - act 2/act2.scene"
         }
       ]
     }
