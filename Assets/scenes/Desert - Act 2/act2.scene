@@ -1,0 +1,53 @@
+{
+  "__guid": "85e6307c-b1f7-42ea-b5d1-8a9bf8916139",
+  "GameObjects": [
+    {
+      "__guid": "4a6421a8-579c-4467-85c8-eba5a4c4d60f",
+      "Flags": 0,
+      "Name": "Map",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.MapInstance",
+          "__guid": "fa1ee993-2f18-44a5-9985-354b32ad7b73",
+          "__version": 1,
+          "EnableCollision": true,
+          "MapName": "maps/desert - act 2/testact2.vmap",
+          "NoOrigin": false,
+          "UseMapFromLaunch": false
+        },
+        {
+          "__type": "MapPlayerSpawner",
+          "__guid": "0433e204-fd50-4727-a84a-3010649c3024"
+        }
+      ],
+      "Children": []
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 30,
+    "NetworkInterpolation": true,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true,
+    "NavMesh": {
+      "Enabled": false,
+      "IncludeStaticBodies": true,
+      "IncludeKeyframedBodies": true,
+      "EditorAutoUpdate": true,
+      "AgentHeight": 64,
+      "AgentRadius": 16,
+      "AgentStepSize": 18,
+      "AgentMaxSlope": 40,
+      "ExcludedBodies": "",
+      "IncludedBodies": ""
+    }
+  },
+  "Title": "act2",
+  "Description": "",
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}
