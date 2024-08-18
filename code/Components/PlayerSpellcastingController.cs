@@ -68,7 +68,6 @@ public sealed class PlayerSpellcastingController : Component
 		_spellNextCastTime = new float[(int)BaseSpell.SpellType.SpellTypeMax];
 
 		// _unlockedSpellsMask = 0xfffffffffffffffful;
-		_unlockedSpellsMask = SaveData.Instance.Data.UnlockedSpells;
 		UpdateUnlockedSpells();
 		_selectedSpellIdx = 0;
 
