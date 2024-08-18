@@ -7,7 +7,7 @@ public class RendingGaleSpell : BaseSpell
 	public override float SpellMass => 0.0f;
 	public override float SpellSpeed => 0.0f;
 	public override bool IsStateful => false;
-	public override ManaTakeTime TakeManaTime => ManaTakeTime.OnStartCasting;
+	public override ManaTakeTime TakeManaTime => ManaTakeTime.OnFinishCasting;
 
 	public override event EventHandler OnDestroy;
 
@@ -34,6 +34,10 @@ public class RendingGaleSpell : BaseSpell
 	{
 		Vector3 direction = _playerMovementController.WishDir;
 		Vector3 boost = direction * BOOST_AMOUNT;
+
+		if (direction.IsNearlyZero())
+			return false;
+
 		_playerMovementController.Controller.Punch(boost);
 		_playerMovementController.IsDashing = true;
 		_finishDashingTime = Time.Now + DASH_DURATION;
