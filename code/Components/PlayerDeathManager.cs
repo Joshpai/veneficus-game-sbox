@@ -14,6 +14,8 @@ public sealed class PlayerDeathManager : Component
 
 	private void HandleDeath()
 	{
+		LevelManagerStaticStore.Stats.DeathCount++;
+
 		// NOTE: The death screen is responsible for it's own lifetime. In
 		// actuality, it will outlive us, so we can't be responsible for it.
 		var deathScreen = DeathScreen.Clone();

@@ -14,6 +14,8 @@ public sealed class ProjectileSpellCollisionComponent
 
 	private void HandleCollision(GameObject otherObj)
 	{
+		// TODO: this can collide with other projectiles. Maybe we should set
+		// some "size" value such that bigger projectiles absorb smaller ones?
 		var collisionPoint = Transform.Position;
 		var hp = otherObj.Components.GetInDescendantsOrSelf<HealthComponent>();
 		if (hp != null)

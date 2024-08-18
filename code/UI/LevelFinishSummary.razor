@@ -1,0 +1,99 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+
+<root>
+	<div class="container-wrapper">
+		<div class="container">
+			<div class="title-wrapper">
+				<div class="title">Level Summary</div>
+			</div>
+			<div class="stats">
+				<div class="stat">
+					<div class="stat-name">Completion Time</div>
+					<div class="stat-data">
+						<div class="stat-value">07:50.124</div>
+						<div class="stat-target"></div>
+						<div class="stat-rank">(S)</div>
+					</div>
+				</div>
+				<div class="stat">
+					<div class="stat-name">Enemies Killed</div>
+					<div class="stat-data">
+						<div class="stat-value">50</div>
+						<div class="stat-target">75</div>
+						<div class="stat-rank">(A)</div>
+					</div>
+				</div>
+				<!-- Is a "magic" field a good idea, players won't know how to improve
+					 this stat if it isn't that transparent? -->
+				<div class="stat">
+					<div class="stat-name">Spell Variety</div>
+					<div class="stat-data">
+						<div class="stat-value"></div>
+						<div class="stat-target"></div>
+						<div class="stat-rank">(B)</div>
+					</div>
+				</div>
+				<div class="stat">
+					<div class="stat-name">Deaths</div>
+					<div class="stat-data">
+						<div class="stat-value">3</div>
+						<div class="stat-target"></div>
+						<div class="stat-rank">(C)</div>
+					</div>
+				</div>
+			</div>
+			<div class="challenge">
+				<div class="challenge-title">
+					<div class="challenge-name">Challenge</div>
+					<div class="challenge-completed @(
+						ChallengeCompleted ? "complete" : "incomplete"
+					)">
+						@(ChallengeCompleted ? "Completed" : "Incomplete")
+					</div>
+				</div>
+				<div class="challenge-description">@ChallengeDescription</div>
+			</div>
+			<div class="secrets">
+				<!-- TODO: replace "3" with level secret amount -->
+				@for (var i = 0; i < 3; i++)
+				{
+					// TODO: implement this properly
+					var collected = (i % 2 == 0) ? "collected" : "missed";
+					<div class="secret @collected"></div>
+				}
+			</div>
+			<div class="rank">
+				<div class="rank-name">Final Rank</div>
+				<div class="rank-value">D</div>
+			</div>
+			<div class="buttons">
+				<button onclick=@( () => Log.Info("Retry") )>
+					⟲ Retry
+				</button>
+				<button onclick=@( () => Log.Info("Next Level") )>
+					Next Level →
+				</button>
+			</div>
+		</div>
+	</div>
+</root>
+
+@code
+{
+	[Property, TextArea]
+	public String ChallengeDescription { get; set; } = "";
+
+	[Property]
+	public bool ChallengeCompleted { get; set; } = false;
+
+	/// <summary>
+	/// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
+	/// </summary>
+	protected override int BuildHash() =>
+		System.HashCode.Combine(
+			ChallengeDescription,
+			ChallengeCompleted
+		);
+}

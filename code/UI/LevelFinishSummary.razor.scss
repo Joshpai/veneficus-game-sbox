@@ -1,0 +1,163 @@
+LevelFinishSummary
+{
+  position: relative;
+  left: 65%;
+  /* NOTE: this is the silly bug! it seems that if a panel is translated in
+   * this way, it just gives up rendering some children after being too far
+   * to the right of the screen. Very odd. */
+  /* transform: translate(-50%, -50%); */
+  width: 25%;
+  flex-shrink: 1;
+  overflow: hidden;
+  align-items: center;
+  pointer-events: all;
+
+  .container-wrapper
+  {
+    align-items: baseline;
+  }
+
+  .container
+  {
+    flex-direction: column;
+    width: 100%;
+    color: #fff;
+    overflow: hidden;
+    background-color: rgba(80, 80, 80, 0.7);
+    border-radius: 20px;
+
+    .title-wrapper
+    {
+      width: 100%;
+      border-bottom: 10px solid black;
+
+      .title
+      {
+        width: 100%;
+        font-size: 65px;
+        font-family: Poppins;
+        justify-content: center;
+      }
+    }
+
+    .stats
+    {
+      flex-direction: column;
+      padding: 15px;
+      font-size: 40px;
+      gap: 10px;
+
+      .stat
+      {
+        border-bottom: 1px solid black;
+
+        .stat-data
+        {
+          margin-left: auto;
+          gap: 5px;
+        }
+      }
+    }
+
+    .secrets
+    {
+      width: 100%;
+      height: 75px;
+      background-color: rgba(80, 80, 80, 0.3);
+      gap: 30px;
+      justify-content: center;
+      padding: 10px;
+      margin-top: 10px;
+
+      .secret
+      {
+        height: 100%;
+        aspect-ratio: 1;
+        border-radius: 50%;
+
+        &.missed
+        {
+          background-color: rgb(200, 50, 50);
+        }
+
+        &.collected
+        {
+          background-color: rgb(50, 200, 50);
+        }
+      }
+    }
+
+    .challenge
+    {
+      gap: 10px;
+      width: 100%;
+      height: auto;
+      background-color: rgba(80, 80, 80, 0.3);
+      /* margin-top: 10px; */
+      padding: 10px;
+      font-size: 35px;
+      flex-direction: column;
+
+      .challenge-title
+      {
+        border-bottom: 1px solid #aaa;
+
+        .challenge-completed
+        {
+          margin-left: auto;
+
+          &.complete
+          {
+            color: rgb(50, 200, 50);
+          }
+
+          &.incomplete
+          {
+            color: rgb(200, 50, 50);
+          }
+        }
+      }
+    }
+
+    .rank
+    {
+      gap: 10px;
+      width: 100%;
+      height: auto;
+      background-color: rgba(80, 80, 80, 0.3);
+      margin-top: 10px;
+      padding: 10px;
+      justify-content: center;
+      font-size: 45px;
+      font-weight: bolder;
+    }
+
+    .buttons
+    {
+      margin-top: 10px;
+      width: 100%;
+      gap: 5px;
+      font-size: 40px;
+
+      button
+      {
+        background-color: black;
+        width: 50%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      button:nth-child(1)
+      {
+        border-bottom-left-radius: 20px;
+      }
+
+      button:nth-child(2)
+      {
+        border-bottom-right-radius: 20px;
+      }
+    }
+  }
+}

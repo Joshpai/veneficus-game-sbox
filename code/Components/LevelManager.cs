@@ -1,9 +1,17 @@
+public class LevelStats
+{
+	public float LevelStartTime { get; set; } = 0.0f;
+	public int EnemiesKilled { get; set; } = 0;
+	public int DeathCount { get; set; } = 0;
+}
+
 public class LevelManagerStaticStore
 {
 	public static LevelManager Instance { get; set; }
 	public static SceneFile ActiveScene { get; set; }
 	public static bool IsLoading { get; set; }
 	public static SaveData SaveDataInstance { get; set; }
+	public static LevelStats Stats { get; set; }
 }
 
 public sealed class LevelManager : Component
@@ -17,6 +25,7 @@ public sealed class LevelManager : Component
 	public LevelManager()
 		: base()
 	{
+		LevelManagerStaticStore.Stats = new LevelStats();
 		LevelManagerStaticStore.SaveDataInstance = new SaveData();
 		SaveData.Load();
 	}

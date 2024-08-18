@@ -26,7 +26,15 @@
       },
       {
         "__type": "LevelEnd",
-        "__guid": "aecb641e-d6b2-4741-9950-279543944415"
+        "__guid": "aecb641e-d6b2-4741-9950-279543944415",
+        "TargetEnemiesKilledPercent_A": 0.9,
+        "TargetEnemiesKilledPercent_B": 0.75,
+        "TargetEnemiesKilledPercent_C": 0.5,
+        "TargetEnemiesKilledPercent_S": 1,
+        "TargetFinishTime_A": 0,
+        "TargetFinishTime_B": 0,
+        "TargetFinishTime_C": 0,
+        "TargetFinishTime_S": 0
       }
     ],
     "Children": [],
@@ -48,6 +56,86 @@
           {
             "Id": "aecb641e-d6b2-4741-9950-279543944415",
             "Property": "DeferredNextLevel"
+          }
+        ]
+      },
+      {
+        "Id": "Target Finish Time S",
+        "Title": "Target Finish Time S",
+        "Targets": [
+          {
+            "Id": "aecb641e-d6b2-4741-9950-279543944415",
+            "Property": "TargetFinishTime_S"
+          }
+        ]
+      },
+      {
+        "Id": "Target Finish Time A",
+        "Title": "Target Finish Time A",
+        "Targets": [
+          {
+            "Id": "aecb641e-d6b2-4741-9950-279543944415",
+            "Property": "TargetFinishTime_A"
+          }
+        ]
+      },
+      {
+        "Id": "Target Finish Time B",
+        "Title": "Target Finish Time B",
+        "Targets": [
+          {
+            "Id": "aecb641e-d6b2-4741-9950-279543944415",
+            "Property": "TargetFinishTime_B"
+          }
+        ]
+      },
+      {
+        "Id": "Target Finish Time D",
+        "Title": "Target Finish Time D",
+        "Targets": [
+          {
+            "Id": "aecb641e-d6b2-4741-9950-279543944415",
+            "Property": "TargetFinishTime_C"
+          }
+        ]
+      },
+      {
+        "Id": "Target Enemies Killed Percent S",
+        "Title": "Target Enemies Killed Percent S",
+        "Targets": [
+          {
+            "Id": "aecb641e-d6b2-4741-9950-279543944415",
+            "Property": "TargetEnemiesKilledPercent_S"
+          }
+        ]
+      },
+      {
+        "Id": "Target Enemies Killed Percent A",
+        "Title": "Target Enemies Killed Percent A",
+        "Targets": [
+          {
+            "Id": "aecb641e-d6b2-4741-9950-279543944415",
+            "Property": "TargetEnemiesKilledPercent_A"
+          }
+        ]
+      },
+      {
+        "Id": "Target Enemies Killed Percent B",
+        "Title": "Target Enemies Killed Percent B",
+        "Targets": [
+          {
+            "Id": "aecb641e-d6b2-4741-9950-279543944415",
+            "Property": "TargetEnemiesKilledPercent_B"
+          }
+        ]
+      },
+      {
+        "Id": "Target Enemies Killed Percent C",
+        "Title": "Target Enemies Killed Percent C",
+        "Targets": [
+          {
+            "Id": "aecb641e-d6b2-4741-9950-279543944415",
+            "Property": "TargetEnemiesKilledPercent_C"
           }
         ]
       }

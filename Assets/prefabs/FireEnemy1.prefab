@@ -51,6 +51,23 @@
         "Separation": 0.25,
         "UpdatePosition": true,
         "UpdateRotation": false
+      },
+      {
+        "__type": "HealthComponent",
+        "__guid": "1edf647f-2466-4f25-8db3-dcdc0c68e5b8",
+        "DamageMultiplier": 1,
+        "DestroyOnDeath": true,
+        "HealMultiplier": 1,
+        "MaxHealth": 100
+      },
+      {
+        "__type": "Sandbox.CapsuleCollider",
+        "__guid": "d9251c92-1fda-45c3-80ce-64161d34de85",
+        "End": "0,0,58",
+        "IsTrigger": true,
+        "Radius": 16,
+        "Start": "0,0,16",
+        "Static": false
       }
     ],
     "Children": [],

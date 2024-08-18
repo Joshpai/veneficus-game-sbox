@@ -141,6 +141,13 @@ public sealed class EnemyAI : Component
 		}
 	}
 
+	private void HandleEnemyDeath()
+	{
+		// TODO: if restarting a level, we should make sure that enemies aren't
+		// counted twice! Perhaps this value gets reset to the last "SavePoint"
+		LevelManagerStaticStore.Stats.EnemiesKilled++;
+	}
+
 	protected override void OnStart()
 	{
 		_agent = Components.GetInChildrenOrSelf<NavMeshAgent>();
@@ -155,6 +162,10 @@ public sealed class EnemyAI : Component
 				break;
 			}
 		}
+
+		var health = Components.GetInDescendantsOrSelf<HealthComponent>();
+		if (health != null)
+			health.OnDeath += HandleEnemyDeath;
 
 		_passive = !AlwaysActive;
 		if (_passive)

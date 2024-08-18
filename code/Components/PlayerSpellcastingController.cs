@@ -114,8 +114,6 @@ public sealed class PlayerSpellcastingController : Component
 
 	private bool CanCastSpell(BaseSpell.SpellType spellType)
 	{
-		// TODO: don't let player cast spells if polymorphed!
-
 		// Spell type is valid
 		return spellType > BaseSpell.SpellType.SpellTypeMin &&
 			   spellType < BaseSpell.SpellType.SpellTypeMax &&
@@ -230,8 +228,6 @@ public sealed class PlayerSpellcastingController : Component
 			_spellBuffer[(int)ActiveSpell] =
 				CreateSpell(GameObject, ActiveSpell);
 
-		// TODO: it would be cool if this is progressively taken during
-		// the casting process. But that's not needed for now.
 		if (_castingSpell.TakeManaTime == BaseSpell.ManaTakeTime.OnStartCasting)
 			Mana -= _castingSpell.ManaCost;
 
@@ -260,7 +256,6 @@ public sealed class PlayerSpellcastingController : Component
 
 	private void FinishCasting()
 	{
-		// TODO: fully charged spells should cost more mana (maybe?)
 		if (!_castingSpell.FinishCasting())
 		{
 			_castingSpell = null;
@@ -283,8 +278,6 @@ public sealed class PlayerSpellcastingController : Component
 		_castingSpell.OnDestroy += OnSpellDestroyed;
 		_castSpells.Add(_castingSpell);
 		_manaRegenStartTime = Time.Now + ManaRegenDelay;
-		// TODO: interesting gameplay question here of:
-		// "does cancelling a cast result in no cooldown?"
 		_spellNextCastTime[(int)ActiveSpell] =
 			Time.Now + _castingSpell.Cooldown;
 		_castingSpell = null;
