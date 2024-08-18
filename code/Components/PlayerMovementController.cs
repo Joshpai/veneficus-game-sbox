@@ -56,6 +56,16 @@ public sealed class PlayerMovementController : Component
 	[Property]
 	public float JumpCoyoteTime { get; set; } = 0.15f;
 
+	// If the player polymorphs after jumping within this period, they get the
+	// absolute maximum jump height.
+	[Property]
+	public float PolyJumpGracePeriod { get; set; } = 0.1f;
+
+	// If we activate the grace period, this is the minimum jump height we get
+	// as a percentage of the maximum jump height
+	[Property]
+	public float PolyJumpGraceHeightPercent { get; set; } = 0.7f;
+
 	[Property]
 	public float HumanMass { get; set; } = 80.0f;
 
@@ -89,7 +99,10 @@ public sealed class PlayerMovementController : Component
 
 	public float Mass;
 
+	private bool _airJumpStartedPolymorphed;
 	private int _airJumpRemainingTicks;
+	private int _airJumpRemainingTicksMax;
+	private int _polyJumpRemainingTicks;
 	private Vector3 _airJumpForce;
 	private bool _canAirJump;
 	private bool _didJump;
@@ -290,7 +303,10 @@ public sealed class PlayerMovementController : Component
 		var jumpForce = (vel / Time.Delta) * Mass;
 		var groundJumpForce = InitialJumpAmount * jumpForce;
 
+		_airJumpStartedPolymorphed = IsPolymorphed;
 		_airJumpRemainingTicks = (int)(MaxJumpHoldLength / Time.Delta);
+		_airJumpRemainingTicksMax = (int)(MaxJumpHoldLength / Time.Delta);
+		_polyJumpRemainingTicks = (int)(PolyJumpGracePeriod / Time.Delta);
 		_airJumpForce = (1.0f - InitialJumpAmount) * jumpForce;
 		_airJumpForce /= _airJumpRemainingTicks;
 
@@ -310,6 +326,46 @@ public sealed class PlayerMovementController : Component
 
 	private void AirJump()
 	{
+		// Keep old behaviour even if this looks a bit wrong!
+		if (_airJumpRemainingTicks-- <= 0)
+			return;
+
+		// The below handles the poly jump grace period. This is maybe able to
+		// be simplified, but I don't want to think so the compiler can for me
+		if (_polyJumpRemainingTicks-- > 0 &&
+			IsPolymorphed != _airJumpStartedPolymorphed)
+		{
+			var oldMass =
+				(_airJumpStartedPolymorphed) ? PolymorphedMass : HumanMass;
+			var newMass =
+				(IsPolymorphed) ? PolymorphedMass : HumanMass;
+
+			var totalWantedVelocityPerTick =
+				_airJumpForce * Time.Delta / newMass;
+			var totalVelocitySoFarPerTick =
+				_airJumpForce * Time.Delta / oldMass;
+			var elapsedTicks =
+				_airJumpRemainingTicksMax - _airJumpRemainingTicks;
+
+			// PolyJumpGraceHeightPercent;
+
+			var wantVelocityTotal =
+				PolyJumpGraceHeightPercent *
+					totalWantedVelocityPerTick * _airJumpRemainingTicksMax +
+				(1.0f - PolyJumpGraceHeightPercent) *
+					totalVelocitySoFarPerTick * _airJumpRemainingTicksMax;
+			var actualVelocity = totalVelocitySoFarPerTick * elapsedTicks;
+
+			var remainingVelocity = wantVelocityTotal - actualVelocity;
+
+			var remainingForce = (remainingVelocity / Time.Delta) * newMass;
+
+			_airJumpForce = remainingForce / _airJumpRemainingTicks;
+
+			_polyJumpRemainingTicks = 0;
+		}
+
+		// F = mv / t => v = Ft / m
 		Controller.Velocity += _airJumpForce * Time.Delta / Mass;
 	}
 
@@ -355,7 +411,7 @@ public sealed class PlayerMovementController : Component
 				GroundJump();
 
 			_canAirJump &= Input.Down("Jump");
-			if (_canAirJump && (_airJumpRemainingTicks--) > 0)
+			if (_canAirJump)
 				AirJump();
 
 			Controller.Velocity += Scene.PhysicsWorld.Gravity * Time.Delta;

@@ -2,6 +2,27 @@
   "__guid": "8cca5173-1f50-41fd-8698-bad56d17f69b",
   "GameObjects": [
     {
+      "__guid": "b31108fb-bdea-4110-b6da-da3a40d6687c",
+      "Flags": 128,
+      "Name": "LevelLoader",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "LevelManager",
+          "__guid": "729a7b21-8f23-4106-87ff-f9e7508e2eb8",
+          "LoadingScreen": {
+            "_type": "gameobject",
+            "prefab": "prefabs/loading_screen.prefab"
+          },
+          "StartingLevel": "scenes/minimal.scene"
+        },
+        {
+          "__type": "MapPlayerSpawner",
+          "__guid": "23b52b90-b105-42a9-ba6c-86bb761f969e"
+        }
+      ]
+    },
+    {
       "__guid": "bfc59c12-1ed2-4f91-8956-a95a315eac3c",
       "Flags": 0,
       "Name": "Sun",
@@ -84,8 +105,8 @@
       "__guid": "3c2490ef-54a0-49bb-8f13-490e40aa51d1",
       "Flags": 0,
       "Name": "Cube",
-      "Position": "77.57649,-4.503101,13.33075",
-      "Rotation": "-0.01645755,-0.007062099,0.3051221,0.9521449",
+      "Position": "77.56438,-4.457278,13.33349",
+      "Rotation": "-0.0158317,-0.006538679,0.3051147,0.9521616",
       "Scale": "0.5632889,0.5632889,0.5632889",
       "Enabled": true,
       "Components": [
@@ -134,8 +155,8 @@
       "__guid": "63e28f45-1543-4e79-96d7-e26daf7f03b3",
       "Flags": 0,
       "Name": "Cube (1)",
-      "Position": "27.50898,65.09804,13.29629",
-      "Rotation": "0.001952379,-0.001158708,0.3052454,0.9522712",
+      "Position": "27.52106,65.09468,13.2937",
+      "Rotation": "0.001767231,-0.0009114082,0.3052363,0.9522746",
       "Scale": "0.5632889,0.5632889,0.5632889",
       "Enabled": true,
       "Components": [
@@ -184,8 +205,8 @@
       "__guid": "5b483a09-bbf2-4949-98c7-a73b789d0ee7",
       "Flags": 0,
       "Name": "Cube (2)",
-      "Position": "48.99977,33.8388,103.9679",
-      "Rotation": "0.001675301,-0.001343912,0.3057305,0.9521157",
+      "Position": "49.05975,33.91761,103.9713",
+      "Rotation": "0.001465832,-0.0009821323,0.3057959,0.9520955",
       "Scale": "0.5632889,1.663291,3.063288",
       "Enabled": true,
       "Components": [
@@ -234,8 +255,8 @@
       "__guid": "2ff61d7c-d7b9-4e08-b13f-0afb5c20fddc",
       "Flags": 0,
       "Name": "fireenemy1",
-      "Position": "-868.6605,-142.824,0.3421534",
-      "Rotation": "0,0,0.2007372,0.9796452",
+      "Position": "-866.237,-166.0202,0.3361282",
+      "Rotation": "0,0,-0.6824164,-0.7309642",
       "Enabled": true,
       "__Prefab": "prefabs/fireenemy1.prefab",
       "__PrefabVariables": {
@@ -2823,8 +2844,8 @@
       "__guid": "e2c9b2af-783f-461a-b284-f5f36b9041b4",
       "Flags": 0,
       "Name": "fireenemy1 (1)",
-      "Position": "-851.116,671.4976,0.3361282",
-      "Rotation": "0,0,-0.9953936,-0.09587034",
+      "Position": "-374.8656,-761.0321,0.3361282",
+      "Rotation": "0,0,-0.6555286,0.7551703",
       "Enabled": true,
       "__Prefab": "prefabs/fireenemy1.prefab",
       "__PrefabVariables": {
@@ -2836,7 +2857,7 @@
       "__guid": "80126748-e4de-446c-b794-5fbe0a16da7a",
       "Flags": 0,
       "Name": "fireenemy1 (2)",
-      "Position": "-1125.772,301.566,0.3361282",
+      "Position": "-1123.415,322.7761,0.3361282",
       "Enabled": true,
       "__Prefab": "prefabs/fireenemy1.prefab",
       "__PrefabVariables": {
@@ -3025,8 +3046,230 @@
       "Flags": 0,
       "Name": "level_transition",
       "Position": "-1609.28,-20.64789,-775.2865",
-      "Enabled": true,
       "__Prefab": "prefabs/level_transition.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "cb4147c3-cdfc-4a6f-9d73-409f2fc075f1",
+      "Flags": 0,
+      "Name": "Player",
+      "Position": "986.466,67.73817,445.9808",
+      "Tags": "player,trigger",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.CharacterController",
+          "__guid": "8a950a4c-5a26-4e7f-84e2-15e4f77874be",
+          "Acceleration": 10,
+          "Bounciness": 0,
+          "GroundAngle": 45,
+          "Height": 22,
+          "IgnoreLayers": "player",
+          "Radius": 12,
+          "StepHeight": 5,
+          "UseCollisionRules": true
+        },
+        {
+          "__type": "PlayerMovementController",
+          "__guid": "d6ebd8e6-3e8c-404e-8c1b-538797e65026",
+          "AirSpeed": 30,
+          "Body": {
+            "_type": "gameobject",
+            "go": "ceb353b5-9d22-4999-9ac3-e40035404a96"
+          },
+          "Camera": {
+            "_type": "gameobject",
+            "go": "03641a2c-338c-4e20-ba6e-a9f0d7a6a885"
+          },
+          "CameraFollowDirection": "-1,-0.1,0",
+          "CameraFollowDistance": 125,
+          "CameraHeightInterpolationRate": 8,
+          "CameraPitchClamp": 85,
+          "Controller": {
+            "_type": "component",
+            "component_id": "8a950a4c-5a26-4e7f-84e2-15e4f77874be",
+            "go": "cb4147c3-cdfc-4a6f-9d73-409f2fc075f1",
+            "component_type": "CharacterController"
+          },
+          "HumanEyePosition": "0,0,62",
+          "HumanHeight": 64,
+          "HumanMass": 80,
+          "HumanRadius": 16,
+          "HumanStepHeight": 18,
+          "InitialJumpAmount": 0.5,
+          "InteractRange": 64,
+          "JumpCoyoteTime": 0.15,
+          "JumpDuration": 0.8,
+          "MaxJumpHoldLength": 0.3,
+          "PolyJumpGraceHeightPercent": 0.7,
+          "PolyJumpGracePeriod": 0.1,
+          "PolymorphedEyePosition": "0,0,20",
+          "PolymorphedHeight": 22,
+          "PolymorphedMass": 10,
+          "PolymorphedRadius": 12,
+          "PolymorphedStepHeight": 5,
+          "WalkSpeed": 250
+        },
+        {
+          "__type": "HealthComponent",
+          "__guid": "b07e8225-efa0-446c-87cd-11251205528e",
+          "DamageMultiplier": 1,
+          "DestroyOnDeath": false,
+          "HealMultiplier": 1,
+          "MaxHealth": 100
+        },
+        {
+          "__type": "PlayerSpellcastingController",
+          "__guid": "ef0120fe-1be3-4890-a6d6-89ffe4da18b9",
+          "ManaRefundAmount": 0.5,
+          "ManaRegenDelay": 1,
+          "ManaRegenRate": 100,
+          "PlayerMovementControllerRef": {
+            "_type": "component",
+            "component_id": "d6ebd8e6-3e8c-404e-8c1b-538797e65026",
+            "go": "cb4147c3-cdfc-4a6f-9d73-409f2fc075f1",
+            "component_type": "PlayerMovementController"
+          }
+        },
+        {
+          "__type": "Sandbox.ScreenPanel",
+          "__guid": "567ac065-4c29-4181-b78a-7ce38ad5e036",
+          "AutoScreenScale": true,
+          "Opacity": 1,
+          "Scale": 1,
+          "ZIndex": 100
+        },
+        {
+          "__type": "PlayerDeathManager",
+          "__guid": "3e5f4a79-a0f6-4841-857d-5149849e5743",
+          "DeathScreen": {
+            "_type": "gameobject",
+            "prefab": "prefabs/death_screen.prefab"
+          },
+          "PlayerHealthComponent": {
+            "_type": "component",
+            "component_id": "b07e8225-efa0-446c-87cd-11251205528e",
+            "go": "cb4147c3-cdfc-4a6f-9d73-409f2fc075f1",
+            "component_type": "HealthComponent"
+          }
+        },
+        {
+          "__type": "Sandbox.CapsuleCollider",
+          "__guid": "50cbb6d5-be2d-4fe2-be48-2331657641c9",
+          "End": "0,0,56",
+          "IsTrigger": true,
+          "Radius": 16,
+          "Start": "0,0,16",
+          "Static": false
+        },
+        {
+          "__type": "PlayerHUD",
+          "__guid": "2e750b52-c3f3-4156-af41-b9c311f7cf2d",
+          "Health": {
+            "_type": "component",
+            "component_id": "b07e8225-efa0-446c-87cd-11251205528e",
+            "go": "cb4147c3-cdfc-4a6f-9d73-409f2fc075f1",
+            "component_type": "HealthComponent"
+          },
+          "Movement": {
+            "_type": "component",
+            "component_id": "d6ebd8e6-3e8c-404e-8c1b-538797e65026",
+            "go": "cb4147c3-cdfc-4a6f-9d73-409f2fc075f1",
+            "component_type": "PlayerMovementController"
+          },
+          "Spellcasting": {
+            "_type": "component",
+            "component_id": "ef0120fe-1be3-4890-a6d6-89ffe4da18b9",
+            "go": "cb4147c3-cdfc-4a6f-9d73-409f2fc075f1",
+            "component_type": "PlayerSpellcastingController"
+          }
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "ceb353b5-9d22-4999-9ac3-e40035404a96",
+          "Flags": 0,
+          "Name": "Body",
+          "Position": "0,0,0",
+          "Rotation": "0,0,0.9999183,0.01278445",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "582f02ee-0bcd-4ddd-a9d4-7285c88a809e",
+              "BodyGroups": 18446744073709551615,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen_props/beachball.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1",
+              "UseAnimGraph": true
+            },
+            {
+              "__type": "Sandbox.Citizen.CitizenAnimationHelper",
+              "__guid": "d8459a59-cd02-4d94-98c2-0b6d0b7e979a",
+              "BodyWeight": 1,
+              "EyesWeight": 1,
+              "HeadWeight": 1,
+              "LookAtEnabled": false,
+              "Target": {
+                "_type": "component",
+                "component_id": "582f02ee-0bcd-4ddd-a9d4-7285c88a809e",
+                "go": "ceb353b5-9d22-4999-9ac3-e40035404a96",
+                "component_type": "SkinnedModelRenderer"
+              }
+            }
+          ]
+        },
+        {
+          "__guid": "03641a2c-338c-4e20-ba6e-a9f0d7a6a885",
+          "Flags": 0,
+          "Name": "Camera",
+          "Position": "117.9912,9.424385,60.17761",
+          "Rotation": "-0.1637078,0.002093085,0.986426,0.01261194",
+          "Tags": "maincamera",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.CameraComponent",
+              "__guid": "8c48c402-bc80-4cf7-ada5-708df40a8eda",
+              "BackgroundColor": "0.33333,0.46275,0.52157,1",
+              "ClearFlags": "All",
+              "FieldOfView": 90,
+              "IsMainCamera": true,
+              "Orthographic": false,
+              "OrthographicHeight": 1204,
+              "Priority": 16,
+              "RenderExcludeTags": "",
+              "RenderTags": "",
+              "TargetEye": "None",
+              "Viewport": "0,0,1,1",
+              "ZFar": 10000,
+              "ZNear": 0.1
+            }
+          ]
+        },
+        {
+          "__guid": "0aee8743-bfec-4292-8c40-b8bf0b114f0e",
+          "Flags": 0,
+          "Name": "MagicBarrier",
+          "Position": "0,0,0",
+          "__Prefab": "prefabs/magic_barrier.prefab",
+          "__PrefabVariables": {}
+        }
+      ]
+    },
+    {
+      "__guid": "0b99e96c-421a-4adc-a949-0ad98f9ca4fd",
+      "Flags": 0,
+      "Name": "RockArmourPlacementIndicator",
+      "__Prefab": "prefabs/spell_placement_indicator.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "f399e20d-4c45-429d-a18e-7cc05e65ae69",
+      "Flags": 0,
+      "Name": "LightningStrikePlacementIndicator",
+      "__Prefab": "prefabs/spell_placement_indicator.prefab",
       "__PrefabVariables": {}
     }
   ],

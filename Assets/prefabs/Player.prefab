@@ -50,6 +50,8 @@
         "JumpCoyoteTime": 0.15,
         "JumpDuration": 0.8,
         "MaxJumpHoldLength": 0.3,
+        "PolyJumpGraceHeightPercent": 0.7,
+        "PolyJumpGracePeriod": 0.1,
         "PolymorphedEyePosition": "0,0,20",
         "PolymorphedHeight": 22,
         "PolymorphedMass": 10,
