@@ -1,5 +1,5 @@
 {
-  "__guid": "f28db34c-1917-44c7-a040-dcff80cf3540",
+  "__guid": "e0d9a518-68ef-4b24-bce4-30c78c7d006d",
   "GameObjects": [
     {
       "__guid": "b31108fb-bdea-4110-b6da-da3a40d6687c",
@@ -14,7 +14,7 @@
             "_type": "gameobject",
             "prefab": "prefabs/loading_screen.prefab"
           },
-          "StartingLevel": "scenes/desert - act 2/act2.scene"
+          "StartingLevel": "scenes/minimal.scene"
         }
       ]
     }

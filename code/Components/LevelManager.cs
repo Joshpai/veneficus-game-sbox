@@ -1,13 +1,20 @@
 public class LevelStats
 {
 	public float LevelStartTime { get; set; } = 0.0f;
-	public int EnemiesKilled { get; set; } = 0;
+	public int EnemiesKilled = 0;
 	public int MaxEnemies { get; set; } = 0;
 	public int DeathCount { get; set; } = 0;
 	public String ChallengeDescription { get; set; } = "";
 	public bool ChallengeCompleted { get; set; } = false;
 	public int SecretCount { get; set; } = 0;
 	public uint SecretCollectedBitmask { get; set; } = 0;
+}
+
+public class LevelCheckpointData
+{
+	public GameObject RespawnPoint { get; set; } = null;
+	public HashSet<Guid> UsedObjects { get; set; } = new HashSet<Guid>();
+	public int EnemiesKilled = 0;
 }
 
 public class LevelManagerStaticStore
@@ -18,6 +25,8 @@ public class LevelManagerStaticStore
 	public static SaveData SaveDataInstance { get; set; }
 	public static LevelStats Stats { get; set; }
 	public static GameObject Player { get; set; }
+	public static LevelCheckpointData CheckpointData { get; set; }
+	public static HashSet<Guid> UsedObjects { get; set; }
 }
 
 public sealed class LevelManager : Component
@@ -32,6 +41,8 @@ public sealed class LevelManager : Component
 		: base()
 	{
 		LevelManagerStaticStore.Stats = new LevelStats();
+		LevelManagerStaticStore.CheckpointData = new LevelCheckpointData();
+		LevelManagerStaticStore.UsedObjects = new HashSet<Guid>();
 		LevelManagerStaticStore.SaveDataInstance = new SaveData();
 		SaveData.Load();
 	}

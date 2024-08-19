@@ -100,6 +100,12 @@
           "component_id": "c83f3b30-ed4a-4ad7-b0b4-e6acac06664d",
           "go": "b650359f-3468-4456-b249-1e8c3686c0cf",
           "component_type": "HealthComponent"
+        },
+        "PlayerMovement": {
+          "_type": "component",
+          "component_id": "8b1cbddb-d250-48f9-8481-5e1002d93f6a",
+          "go": "b650359f-3468-4456-b249-1e8c3686c0cf",
+          "component_type": "PlayerMovementController"
         }
       },
       {

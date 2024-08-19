@@ -143,9 +143,8 @@ public sealed class EnemyAI : Component
 
 	private void HandleEnemyDeath()
 	{
-		// TODO: if restarting a level, we should make sure that enemies aren't
-		// counted twice! Perhaps this value gets reset to the last "SavePoint"
 		LevelManagerStaticStore.Stats.EnemiesKilled++;
+		LevelManagerStaticStore.UsedObjects.Add(GameObject.Id);
 	}
 
 	protected override void OnStart()
@@ -178,7 +177,7 @@ public sealed class EnemyAI : Component
 
 	private void MoveTo(Vector3 destination)
 	{
-		Log.Info($"Moving to {destination}");
+		// Log.Info($"Moving to {destination}");
 		_agent.MoveTo(destination);
 	}
 

@@ -25,6 +25,36 @@ public sealed class PlayerDeathManager : Component
 		float? timeScale =
 			LevelManager.LoadLevel(LevelManagerStaticStore.ActiveScene, false);
 
+		// Load the checkpoint data
+		// NOTE: we currently no longer exist (as a game object) so lets
+		// piggyback on top of the player's scene reference
+		foreach (var obj in LevelManagerStaticStore.Player.Scene.GetAllObjects(false))
+		{
+			if (LevelManagerStaticStore.CheckpointData.UsedObjects.Contains(obj.Id))
+			{
+				obj.Destroy();
+			}
+		}
+
+		LevelManagerStaticStore.UsedObjects =
+			new HashSet<Guid>(LevelManagerStaticStore.CheckpointData.UsedObjects);
+		LevelManagerStaticStore.Stats.EnemiesKilled =
+			LevelManagerStaticStore.CheckpointData.EnemiesKilled;
+
+		if (LevelManagerStaticStore.CheckpointData.RespawnPoint != null)
+		{
+			var controller =
+				LevelManagerStaticStore.Player.Components
+				.GetInDescendantsOrSelf<PlayerMovementController>();
+			if (controller != null)
+			{
+				LevelManagerStaticStore.Player.Transform.Position =
+					LevelManagerStaticStore.CheckpointData.RespawnPoint.Transform.Position;
+				controller.EyeAngles =
+					LevelManagerStaticStore.CheckpointData.RespawnPoint.Transform.Rotation;
+			}
+		}
+
 		var deathScreenComponent =
 			deathScreen.Components.GetInDescendantsOrSelf<DeathScreen>();
 		if (deathScreenComponent != null)
