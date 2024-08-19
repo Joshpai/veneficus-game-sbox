@@ -417,7 +417,7 @@ public sealed class PlayerMovementController : Component
 				Time.Now - _airStartTime <= JumpCoyoteTime)
 				GroundJump();
 
-			_canAirJump &= Input.Down("Jump");
+			//_canAirJump &= Input.Down("Jump");
 			if (_canAirJump)
 				AirJump();
 
