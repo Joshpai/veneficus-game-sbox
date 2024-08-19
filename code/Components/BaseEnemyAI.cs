@@ -114,6 +114,13 @@ public class BaseEnemyAI : Component
 		LevelManagerStaticStore.UsedObjects.Add(GameObject.Id);
 	}
 
+	private void HandleEnemyHealthChanged(float amount)
+	{
+		// TODO: only go into aggro mode if the player hurt us?
+		if (amount < 0)
+			_passive = false;
+	}
+
 	protected override void OnStart()
 	{
 		_agent = Components.GetInChildrenOrSelf<NavMeshAgent>();
@@ -143,7 +150,10 @@ public class BaseEnemyAI : Component
 
 		var health = Components.GetInDescendantsOrSelf<HealthComponent>();
 		if (health != null)
+		{
 			health.OnDeath += HandleEnemyDeath;
+			health.OnHealthChanged += HandleEnemyHealthChanged;
+		}
 
 		_passive = !AlwaysActive;
 		if (_passive)
