@@ -57,12 +57,6 @@ public class BaseEnemyAI : Component
 	[Property, Group("Combat")]
 	public float AttackCooldown { get; set; } = 1.0f;
 
-	[Property, Group("Combat")]
-	public float BurstCount { get; set; } = 1.0f;
-
-	[Property, Group("Combat")]
-	public float BurstRate { get; set; } = 0.15f;
-
 	protected NavMeshAgent _agent { get; set; }
 
 	protected PlayerMovementController _player;
@@ -263,7 +257,7 @@ public class BaseEnemyAI : Component
 			return false;
 
 		Vector3 playerOffset = Transform.Position - _player.Transform.Position;
-		return playerOffset.Length < range;
+		return playerOffset.Length <= range;
 	}
 
 	protected bool PlayerObscured()
@@ -273,8 +267,9 @@ public class BaseEnemyAI : Component
 
 		// TODO: this could be improved to check a few set positions over the
 		// player, but this should be fine-ish.
-		var tr = Scene.Trace.Ray(Transform.Position + EyePosition,
-								 _player.Transform.Position)
+		var playerEyePos = _player.Transform.Position + _player.EyePosition;
+		var enemyEyePos = Transform.Position + EyePosition;
+		var tr = Scene.Trace.Ray(enemyEyePos, playerEyePos)
 							.WithoutTags("player")
 							.Run();
 
@@ -299,6 +294,8 @@ public class BaseEnemyAI : Component
 		if (direction.IsNearlyZero())
 			return;
 
+		// TODO: can we angle the head instead with the Z component?
+		direction.z = 0.0f;
 		Rotation wantRotation = Rotation.LookAt(direction);
 		_agent.SyncAgentPosition = false;
 		Transform.Rotation = Rotation.Slerp(Transform.Rotation,
@@ -312,7 +309,10 @@ public class BaseEnemyAI : Component
 		if (_player == null)
 			return;
 
-		LookInDirection(_player.Transform.Position - Transform.Position);
+		var playerEyePos = _player.Transform.Position + _player.EyePosition;
+		var enemyEyePos = Transform.Position + EyePosition;
+
+		LookInDirection(playerEyePos - enemyEyePos);
 	}
 
 	protected bool CanAttack()
@@ -327,23 +327,7 @@ public class BaseEnemyAI : Component
 
 	protected override void OnUpdate()
 	{
-		if (!_agent.UpdateRotation)
-		{
-			// TODO: look direction if target not dest
-			// var lookAhead = _agent.GetLookAhead(30.0f);
-			// Vector3 vector = lookAhead - Transform.Position;
-			// vector.z = 0f;
-			// if (vector.Length > 0.1f)
-			// {
-			// 	Rotation wantRotation = Rotation.LookAt(_player.Transform.Position);
-			// 	_agent.SyncAgentPosition = false;
-			// 	Transform.Rotation = wantRotation;
-			// 	// Transform.Rotation = Rotation.Slerp(Transform.Rotation,
-			// 	// 									wantRotation,
-			// 	// 									Time.Delta * 3f);
-			// 	_agent.SyncAgentPosition = true;
-			// }
-		}
+		_agent.UpdateRotation = _passive;
 	}
 
 	protected override void OnFixedUpdate()

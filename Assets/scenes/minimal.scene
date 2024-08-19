@@ -3015,6 +3015,16 @@
       "Enabled": true,
       "__Prefab": "prefabs/enemies/fire_enemy.prefab",
       "__PrefabVariables": {}
+    },
+    {
+      "__guid": "29b6f258-d3ce-4365-a9e5-b7317fab275a",
+      "Flags": 0,
+      "Name": "magic_missile_enemy",
+      "Position": "-147.9696,-580.447,4",
+      "Rotation": "0,0,-0.8660254,0.5000001",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
     }
   ],
   "SceneProperties": {

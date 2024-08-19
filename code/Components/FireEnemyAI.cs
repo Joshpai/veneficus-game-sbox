@@ -44,6 +44,8 @@ public sealed class FireEnemyAI : BaseEnemyAI
 		{
 			_fireball.OnFixedUpdate();
 
+			// TODO: consider what we should do for determining how long this
+			// enemy type should charge the fireball for.
 			bool shouldFinishCasting = true;
 			if (shouldFinishCasting)
 			{
