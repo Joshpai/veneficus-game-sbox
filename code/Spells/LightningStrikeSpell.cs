@@ -46,7 +46,10 @@ public class LightningStrikeSpell : WorldPlacementSpell
 		var capBottom = transform.Position;
 		var capTop = transform.Position + Vector3.Up * DAMAGE_HEIGHT;
 		var cap = new Capsule(capBottom, capTop, DAMAGE_RADIUS);
-		var trace = _placedObject.Scene.Trace.Capsule(cap).RunAll();
+		var trace = _placedObject.Scene.Trace
+									   .Capsule(cap)
+									   .HitTriggers()
+									   .RunAll();
 		foreach (var hit in trace)
 		{
 			if (!hit.Hit)

@@ -19,6 +19,7 @@ public sealed class ExplosionManagerComponent : Component
 		var trace =
 			Scene.Trace
 			     .Sphere(ExplosionRadius, ExplosionOrigin, ExplosionOrigin)
+				 .HitTriggers()
 				 .RunAll();
 
 		// TODO: should we consider "cover" when applying damage? If an entity
