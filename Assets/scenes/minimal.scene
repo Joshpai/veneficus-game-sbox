@@ -2980,21 +2980,8 @@
       "Flags": 0,
       "Name": "level_transition",
       "Position": "-1609.28,-20.64789,-775.2865",
+      "Enabled": true,
       "__Prefab": "prefabs/level_transition.prefab",
-      "__PrefabVariables": {}
-    },
-    {
-      "__guid": "0b99e96c-421a-4adc-a949-0ad98f9ca4fd",
-      "Flags": 0,
-      "Name": "RockArmourPlacementIndicator",
-      "__Prefab": "prefabs/spell_placement_indicator.prefab",
-      "__PrefabVariables": {}
-    },
-    {
-      "__guid": "f399e20d-4c45-429d-a18e-7cc05e65ae69",
-      "Flags": 0,
-      "Name": "LightningStrikePlacementIndicator",
-      "__Prefab": "prefabs/spell_placement_indicator.prefab",
       "__PrefabVariables": {}
     },
     {
@@ -3021,70 +3008,13 @@
       "Enabled": true
     },
     {
-      "__guid": "88333508-f6ca-4f4d-8046-0279eff7e8a0",
+      "__guid": "3a914127-b54b-4649-aaa9-78e850a22c9a",
       "Flags": 0,
       "Name": "fire_enemy",
-      "Position": "-938.9626,420.5075,4",
+      "Position": "-1024.395,456.3957,4",
       "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.SkinnedModelRenderer",
-          "__guid": "8929de79-2dcf-48e9-94e4-fe10feab08ac",
-          "BodyGroups": 18446744073709551615,
-          "CreateBoneObjects": false,
-          "Model": "models/citizen/heads/head_zombie_02/models/head_zombie_02.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1",
-          "UseAnimGraph": true
-        },
-        {
-          "__type": "Sandbox.NavMeshAgent",
-          "__guid": "71ccfd69-53e8-4694-b8b4-79569297b9e7",
-          "Acceleration": 50,
-          "Height": 64,
-          "MaxSpeed": 120,
-          "Radius": 16,
-          "Separation": 0.25,
-          "UpdatePosition": true,
-          "UpdateRotation": false
-        },
-        {
-          "__type": "HealthComponent",
-          "__guid": "ab07af71-5450-4c4c-96e2-8f15b9c4c40f",
-          "DamageMultiplier": 1,
-          "DestroyOnDeath": true,
-          "HealMultiplier": 1,
-          "MaxHealth": 100
-        },
-        {
-          "__type": "Sandbox.CapsuleCollider",
-          "__guid": "ba7970a2-3b11-490f-854c-33eb38fe5e55",
-          "End": "0,0,58",
-          "IsTrigger": true,
-          "Radius": 16,
-          "Start": "0,0,16",
-          "Static": false
-        },
-        {
-          "__type": "FireEnemyAI",
-          "__guid": "6746f9db-4e32-4d9f-84bb-8af1bf27711e",
-          "AlwaysActive": false,
-          "AttackRangeIdeal": 100,
-          "AttackRangeMax": 300,
-          "AttackRate": 1,
-          "AvoidSpells": false,
-          "BurstCount": 1,
-          "BurstRate": 0.15,
-          "EnemyLevel": 1,
-          "EyePosition": "0,0,64",
-          "HearingRadius": 125,
-          "MaxSpeed": 0,
-          "PassiveMode": "Stationary",
-          "PatrolPath": [],
-          "VisionAngle": 0.7853982,
-          "VisionRange": 300
-        }
-      ]
+      "__Prefab": "prefabs/enemies/fire_enemy.prefab",
+      "__PrefabVariables": {}
     }
   ],
   "SceneProperties": {

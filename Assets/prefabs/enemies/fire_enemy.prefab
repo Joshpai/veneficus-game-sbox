@@ -47,9 +47,9 @@
         "__type": "FireEnemyAI",
         "__guid": "eede35f3-a5fa-4704-bd0b-5ee38719770c",
         "AlwaysActive": false,
+        "AttackCooldown": 1,
         "AttackRangeIdeal": 100,
         "AttackRangeMax": 300,
-        "AttackRate": 1,
         "AvoidSpells": false,
         "BurstCount": 1,
         "BurstRate": 0.15,
@@ -59,6 +59,7 @@
         "MaxSpeed": 0,
         "PassiveMode": "Stationary",
         "PatrolPath": [],
+        "RotationSpeed": 3,
         "VisionAngle": 0.7853982,
         "VisionRange": 300
       }
