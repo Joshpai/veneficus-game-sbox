@@ -8,6 +8,7 @@ public class LightningStrikeSpell : WorldPlacementSpell
 	public override float SpellMass => 0.0f;
 	public override float SpellSpeed => 0.0f;
 	// WorldPlacementSpell
+	public override float MinRange => 75.0f;
 	public override float MaxRange => 250.0f;
 	public override int MaxPlacedObjects => 1;
 

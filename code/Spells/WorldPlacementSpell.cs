@@ -7,6 +7,7 @@ public abstract class WorldPlacementSpell : BaseSpell
 
 	public string PlacementIndicatorPrefab { get; } =
 		"prefabs/spell_placement_indicator.prefab";
+	public abstract float MinRange { get; }
 	public abstract float MaxRange { get; }
 	public abstract int MaxPlacedObjects { get; }
 
@@ -74,7 +75,10 @@ public abstract class WorldPlacementSpell : BaseSpell
 			_placementIndicator.Components
 							   .GetInDescendantsOrSelf<SkinnedModelRenderer>();
 		
-		_isPlaceable = (placePos != null);
+		_isPlaceable = (
+			placePos != null &&
+			(placePos.Value - startPos).Length >= MinRange
+		);
 		if (placePos == null)
 			placePos = endPos;
 
