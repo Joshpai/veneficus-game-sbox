@@ -1,0 +1,49 @@
+{
+  "__guid": "af6fa9e8-18d7-41b6-b21f-5b14b2e8af64",
+  "GameObjects": [
+    {
+      "__guid": "d92fc934-8594-464d-ae06-8f807b8f9d65",
+      "Flags": 0,
+      "Name": "Map",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.MapInstance",
+          "__guid": "183e15a0-fe63-4a86-8c34-810654a80fcb",
+          "__version": 1,
+          "EnableCollision": true,
+          "MapName": "maps/mines - act 3/testact3.vmap",
+          "NoOrigin": false,
+          "UseMapFromLaunch": false
+        }
+      ],
+      "Children": []
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 30,
+    "NetworkInterpolation": true,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true,
+    "NavMesh": {
+      "Enabled": false,
+      "IncludeStaticBodies": true,
+      "IncludeKeyframedBodies": true,
+      "EditorAutoUpdate": true,
+      "AgentHeight": 64,
+      "AgentRadius": 16,
+      "AgentStepSize": 18,
+      "AgentMaxSlope": 40,
+      "ExcludedBodies": "",
+      "IncludedBodies": ""
+    }
+  },
+  "Title": "act3scene",
+  "Description": "",
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}
