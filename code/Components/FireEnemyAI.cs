@@ -9,11 +9,8 @@ public sealed class FireEnemyAI : BaseEnemyAI
 
 	private void UpdateSpellCastDirection()
 	{
-		// NOTE: unlike the player controller, we just want to cast spells
-		// "forwards" as we will always try to face the place we want to shoot
-		// with our body (this is seperate in the player).
 		if (_fireball != null)
-			_fireball.CastDirection = Transform.Rotation.Forward;
+			_fireball.CastDirection = GetDirectionToPlayerEyes().Normal;
 	}
 
 	protected override void OnUpdate()

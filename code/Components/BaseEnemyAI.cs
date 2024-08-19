@@ -250,6 +250,13 @@ public class BaseEnemyAI : Component
 			MoveTo(_player.Transform.Position);
 	}
 
+	protected Vector3 GetDirectionToPlayerEyes()
+	{
+		var playerEyePos = _player.Transform.Position + _player.EyePosition;
+		var enemyEyePos = Transform.Position + EyePosition;
+		return playerEyePos - enemyEyePos;
+	}
+
 	protected bool PlayerInRange(float range)
 	{
 		if (_player == null)
