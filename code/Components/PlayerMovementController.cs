@@ -38,6 +38,11 @@ public sealed class PlayerMovementController : Component
 	[Property]
 	public float AirSpeed { get; set; } = 30.0f;
 
+	// Override the gravity for all objects!!
+	[Property]
+	public Vector3 SceneGravity { get; set; }
+		= new Vector3(0.0f, 0.0f, -850.0f);
+
 	// In a full jump, how long should the player be in the air for? In reality
 	// this will actually be a little shorter than set here as we make some
 	// inaccurate assumptions in calculations - but it's approximately right.
@@ -164,6 +169,8 @@ public sealed class PlayerMovementController : Component
 		Controller.Height = HumanHeight;
 		Controller.Radius = HumanRadius;
 		Controller.StepHeight = HumanStepHeight;
+
+		Scene.PhysicsWorld.Gravity = SceneGravity;
 	}
 
 	public void SetPlayerNotStarted()
