@@ -44,6 +44,8 @@ public class RockArmourSpell : WorldPlacementSpell
 			health.OnDeath += HandleDestroyed(placedObject);
 		}
 
+		placedObject.Scene.NavMesh.SetDirty();
+
 		return placedObject;
 	}
 
