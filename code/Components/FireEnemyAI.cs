@@ -20,14 +20,11 @@ public sealed class FireEnemyAI : BaseEnemyAI
 	{
 		base.OnUpdate();
 
-		// NOTE: because we are always shooting forwards (see above), we don't
-		// actually need to update the fireball, and this will actually save
-		// us from the double spinning issue.
-		// if (_fireball != null)
-		// {
-		// 	UpdateSpellCastDirection();
-		// 	_fireball.OnUpdate();
-		// }
+		if (_fireball != null)
+		{
+			UpdateSpellCastDirection();
+			_fireball.OnUpdate();
+		}
 
 		if (!_passive)
 			TurnToFacePlayer();

@@ -36,7 +36,10 @@ public abstract class ProjectileSpell : BaseSpell
 
 		_projectileObject.SetParent(_caster);
 		_projectileObject.Transform.LocalPosition =
-			CasterEyeOrigin + CastDirection * StartOffset;
+			_caster.Transform.World.PointToLocal(
+				_caster.Transform.Position +
+				CasterEyeOrigin + CastDirection * StartOffset
+			);
 	}
 
 	public override bool OnFinishCasting()
@@ -68,7 +71,10 @@ public abstract class ProjectileSpell : BaseSpell
 		if (!HasFinishedCasting)
 		{
 			_projectileObject.Transform.LocalPosition =
-				CasterEyeOrigin + CastDirection * StartOffset;
+				_caster.Transform.World.PointToLocal(
+					_caster.Transform.Position +
+					CasterEyeOrigin + CastDirection * StartOffset
+				);
 		}
 	}
 

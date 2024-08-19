@@ -6,27 +6,6 @@
     "Enabled": true,
     "Components": [
       {
-        "__type": "Sandbox.SkinnedModelRenderer",
-        "__guid": "923a41b0-c057-461a-bc0f-30bc9f2ed43a",
-        "BodyGroups": 18446744073709551615,
-        "CreateBoneObjects": false,
-        "Model": "models/citizen/heads/head_zombie_02/models/head_zombie_02.vmdl",
-        "RenderType": "On",
-        "Tint": "1,1,1,1",
-        "UseAnimGraph": true
-      },
-      {
-        "__type": "Sandbox.NavMeshAgent",
-        "__guid": "f9dac23c-df09-497f-9605-8c5165871acf",
-        "Acceleration": 50,
-        "Height": 64,
-        "MaxSpeed": 120,
-        "Radius": 16,
-        "Separation": 0.25,
-        "UpdatePosition": true,
-        "UpdateRotation": false
-      },
-      {
         "__type": "HealthComponent",
         "__guid": "1edf647f-2466-4f25-8db3-dcdc0c68e5b8",
         "DamageMultiplier": 1,
@@ -64,29 +43,38 @@
         "VisionRange": 300
       }
     ],
-    "Children": [],
-    "__variables": [
+    "Children": [
       {
-        "Id": "Patrol Path",
-        "Title": "Patrol Path",
-        "Targets": [
+        "__guid": "39202f06-e59e-417d-8cde-756ff04e5726",
+        "Flags": 0,
+        "Name": "NavMeshBody",
+        "Enabled": true,
+        "Components": [
           {
-            "Id": "51c2d292-17ad-4912-9500-351a55eb2b4d",
-            "Property": "PatrolPath"
-          }
-        ]
-      },
-      {
-        "Id": "Passive Mode",
-        "Title": "Passive Mode",
-        "Targets": [
+            "__type": "Sandbox.SkinnedModelRenderer",
+            "__guid": "e91f557f-f901-4fb6-a33e-caf6c4518c53",
+            "BodyGroups": 18446744073709551615,
+            "CreateBoneObjects": false,
+            "Model": "models/citizen/heads/head_zombie_02/models/head_zombie_02.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1",
+            "UseAnimGraph": true
+          },
           {
-            "Id": "51c2d292-17ad-4912-9500-351a55eb2b4d",
-            "Property": "PassiveMode"
+            "__type": "Sandbox.NavMeshAgent",
+            "__guid": "55d700c7-3ca2-482a-bece-d363ca9095a1",
+            "Acceleration": 50,
+            "Height": 64,
+            "MaxSpeed": 120,
+            "Radius": 16,
+            "Separation": 0.25,
+            "UpdatePosition": true,
+            "UpdateRotation": false
           }
         ]
       }
-    ]
+    ],
+    "__variables": []
   },
   "ShowInMenu": false,
   "MenuPath": null,
