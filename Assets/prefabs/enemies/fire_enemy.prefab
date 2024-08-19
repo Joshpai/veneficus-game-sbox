@@ -1,0 +1,96 @@
+{
+  "RootObject": {
+    "__guid": "17ed16d0-7ff0-4360-a350-d7ddbcb374d3",
+    "Flags": 0,
+    "Name": "fire_enemy",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.SkinnedModelRenderer",
+        "__guid": "923a41b0-c057-461a-bc0f-30bc9f2ed43a",
+        "BodyGroups": 18446744073709551615,
+        "CreateBoneObjects": false,
+        "Model": "models/citizen/heads/head_zombie_02/models/head_zombie_02.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1",
+        "UseAnimGraph": true
+      },
+      {
+        "__type": "Sandbox.NavMeshAgent",
+        "__guid": "f9dac23c-df09-497f-9605-8c5165871acf",
+        "Acceleration": 50,
+        "Height": 64,
+        "MaxSpeed": 120,
+        "Radius": 16,
+        "Separation": 0.25,
+        "UpdatePosition": true,
+        "UpdateRotation": false
+      },
+      {
+        "__type": "HealthComponent",
+        "__guid": "1edf647f-2466-4f25-8db3-dcdc0c68e5b8",
+        "DamageMultiplier": 1,
+        "DestroyOnDeath": true,
+        "HealMultiplier": 1,
+        "MaxHealth": 100
+      },
+      {
+        "__type": "Sandbox.CapsuleCollider",
+        "__guid": "d9251c92-1fda-45c3-80ce-64161d34de85",
+        "End": "0,0,58",
+        "IsTrigger": true,
+        "Radius": 16,
+        "Start": "0,0,16",
+        "Static": false
+      },
+      {
+        "__type": "FireEnemyAI",
+        "__guid": "eede35f3-a5fa-4704-bd0b-5ee38719770c",
+        "AlwaysActive": false,
+        "AttackRangeIdeal": 100,
+        "AttackRangeMax": 300,
+        "AttackRate": 1,
+        "AvoidSpells": false,
+        "BurstCount": 1,
+        "BurstRate": 0.15,
+        "EnemyLevel": 1,
+        "EyePosition": "0,0,64",
+        "HearingRadius": 125,
+        "MaxSpeed": 0,
+        "PassiveMode": "Stationary",
+        "PatrolPath": [],
+        "VisionAngle": 0.7853982,
+        "VisionRange": 300
+      }
+    ],
+    "Children": [],
+    "__variables": [
+      {
+        "Id": "Patrol Path",
+        "Title": "Patrol Path",
+        "Targets": [
+          {
+            "Id": "51c2d292-17ad-4912-9500-351a55eb2b4d",
+            "Property": "PatrolPath"
+          }
+        ]
+      },
+      {
+        "Id": "Passive Mode",
+        "Title": "Passive Mode",
+        "Targets": [
+          {
+            "Id": "51c2d292-17ad-4912-9500-351a55eb2b4d",
+            "Property": "PassiveMode"
+          }
+        ]
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

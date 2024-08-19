@@ -28,7 +28,6 @@ public abstract class ProjectileSpell : BaseSpell
 		_projectileObject.Transform.LocalRotation =
 			CastDirection.EulerAngles;
 
-
 		// NOTE: collision is handled in ProjectileSpellCollisionComponent.
 		_collisionComponent =
 			_projectileObject.Components.Get<ProjectileSpellCollisionComponent>();

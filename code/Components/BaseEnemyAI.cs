@@ -1,8 +1,5 @@
-public sealed class EnemyAI : Component
+public class BaseEnemyAI : Component
 {
-	[Property, Group("Basic Definitions")]
-	public BaseSpell.SpellType EnemySpell { get; set; }
-
 	[Property, Group("Basic Definitions")]
 	public int EnemyLevel { get; set; } = 1;
 
@@ -10,17 +7,10 @@ public sealed class EnemyAI : Component
 	public float MaxSpeed { get; set; } = 250.0f;
 
 	[Property, Group("Movement")]
-	public float JumpPower { get; set; } = 273.0f;
-
-	// This may be set for things like ranged enemies
-	[Property, Group("Movement")]
-	public bool WantHighground { get; set; } = false;
-
-	[Property, Group("Movement")]
-	public bool CanSpellJump { get; set; } = false;
-
-	[Property, Group("Movement")]
 	public bool AvoidSpells { get; set; } = true;
+
+	[Property, Group("Movement")]
+	public float RotationSpeed { get; set; } = 3.0f;
 
 	public enum PassiveBehaviour
 	{
@@ -29,8 +19,6 @@ public sealed class EnemyAI : Component
 		// Move aimlessly in a small area
 		Wander,
 		// Move along a pre-defined route
-		// TODO: how to define and set? Probably create an empty child to which
-		// we can attach a "PatrolPathComponent" and use that to define it.
 		Patrol
 	}
 
@@ -51,18 +39,6 @@ public sealed class EnemyAI : Component
 	[Property, Group("Passive")]
 	public float VisionRange { get; set; } = 300.0f;
 
-	// If the route to the player is longer than this, give up, or try to pass
-	// a message to other enemies with the last player location instead.
-	[Property, Group("Passive")]
-	public float MaxRouteLength { get; set; } = 3000.0f;
-
-	[Property, Group("Passive")]
-	public bool CanPassMessage { get; set; } = true;
-
-	// After this, enemies won't continue the chain of message passing.
-	[Property, Group("Passive")]
-	public int MaxMessageChainLength { get; set; } = 5;
-
 	// Angle, in radians, of vision cone
 	[Property, Range(0.01f, MathF.PI, MathF.PI / 25.0f), Group("Passive")]
 	public float VisionAngle { get; set; } = MathF.PI / 4.0f;
@@ -70,8 +46,16 @@ public sealed class EnemyAI : Component
 	[Property, Group("Basic Definitions")]
 	public Vector3 EyePosition { get; set; } = new Vector3(0.0f, 0.0f, 64.0f);
 
+	// Try to be in this range while attacking
 	[Property, Group("Combat")]
-	public float AttackRate { get; set; } = 1.0f;
+	public float AttackRangeIdeal { get; set; } = 100.0f;
+
+	// Start attacking in this range
+	[Property, Group("Combat")]
+	public float AttackRangeMax { get; set; } = 500.0f;
+
+	[Property, Group("Combat")]
+	public float AttackCooldown { get; set; } = 1.0f;
 
 	[Property, Group("Combat")]
 	public float BurstCount { get; set; } = 1.0f;
@@ -79,32 +63,21 @@ public sealed class EnemyAI : Component
 	[Property, Group("Combat")]
 	public float BurstRate { get; set; } = 0.15f;
 
-	// If we haven't made much progress at getting to the player, e.g., they
-	// are unreachable, they're too good at dodging, we lost track of them, etc
-	// then give up.
-	[Property, Group("Passive")]
-	public float GiveUpAfter { get; set; } = 35.0f;
+	protected NavMeshAgent _agent { get; set; }
 
-	public enum GiveUpBehaviour
-	{
-		ReturnToOrigin,
-		WanderEndLocation,
-		// Start going back to our origin, and if we find any other enemies to
-		// help us then enlist their support and go back. Otherwise, cheat and
-		// search for all enemies on the map and path to one.
-		FindHelp
-	}
+	protected PlayerMovementController _player;
 
-	[Property, Group("Passive")]
-	public GiveUpBehaviour GiveUpMode { get; set; }
+	protected bool _passive;
 
-	private NavMeshAgent _agent { get; set; }
+	protected Vector3 _startingPosition;
 
-	private PlayerMovementController _player;
+	protected EnemyManager _enemyManager { get; set; } = null;
 
-	private bool _passive;
+	private int _patrolNextIndex = -1;
+	private int _patrolDirection = 1;
+	private float _passiveNextWanderTime = 0.0f;
 
-	private Vector3 _startingPosition;
+	private float _nextAttackTime = 0.0f;
 
 	protected override void DrawGizmos()
 	{
@@ -161,6 +134,18 @@ public sealed class EnemyAI : Component
 				break;
 			}
 		}
+		if (_player == null)
+			Log.Error("Unable to find PlayerMovementController!");
+
+		// _enemyManager
+		var enemyManagers = Scene.GetAllComponents<EnemyManager>();
+		foreach (var enemyManager in enemyManagers)
+		{
+			_enemyManager = enemyManager;
+			break;
+		}
+		if (_enemyManager == null)
+			Log.Error("Unable to find EnemyManager!");
 
 		var health = Components.GetInDescendantsOrSelf<HealthComponent>();
 		if (health != null)
@@ -181,59 +166,54 @@ public sealed class EnemyAI : Component
 		_agent.MoveTo(destination);
 	}
 
-	private int _patrolNextIndex = -1;
-	private int _patrolDirection = 1;
-	private float _passiveNextWanderTime = 0.0f;
-
 	private void OnFixedUpdatePassive()
 	{
-		if (PassiveMode == PassiveBehaviour.Patrol &&
-			_patrolPathWorld.Count > 0)
+		if (MaxSpeed != 0.0f)
 		{
-			// Magic uninited number
-			if (_patrolNextIndex == -1)
+			if (PassiveMode == PassiveBehaviour.Patrol &&
+					_patrolPathWorld.Count > 0)
 			{
-				_patrolNextIndex = 1;
-				_patrolDirection = 1;
-				MoveTo(_patrolPathWorld[_patrolNextIndex]);
-			}
-
-			if (Transform.Position.Distance(_patrolPathWorld[_patrolNextIndex]) < 10.0f)
-			{
-				_patrolNextIndex += _patrolDirection;
-
-				if (_patrolNextIndex < 0 ||
-					_patrolNextIndex >= _patrolPathWorld.Count)
+				// Magic uninited number
+				if (_patrolNextIndex == -1)
 				{
-					_patrolDirection *= -1;
-					_patrolNextIndex += 2 * _patrolDirection;
+					_patrolNextIndex = 1;
+					_patrolDirection = 1;
+					MoveTo(_patrolPathWorld[_patrolNextIndex]);
 				}
 
-				MoveTo(_patrolPathWorld[_patrolNextIndex]);
+				if (Transform.Position.Distance(_patrolPathWorld[_patrolNextIndex]) < 10.0f)
+				{
+					_patrolNextIndex += _patrolDirection;
+
+					if (_patrolNextIndex < 0 ||
+							_patrolNextIndex >= _patrolPathWorld.Count)
+					{
+						_patrolDirection *= -1;
+						_patrolNextIndex += 2 * _patrolDirection;
+					}
+
+					MoveTo(_patrolPathWorld[_patrolNextIndex]);
+				}
+			}
+			else if (PassiveMode == PassiveBehaviour.Wander)
+			{
+				if (_passiveNextWanderTime < Time.Now)
+				{
+					var pos = Scene.NavMesh.GetRandomPoint(Transform.Position, 100.0f);
+					if (pos != null)
+						MoveTo(pos.Value);
+					_passiveNextWanderTime = Time.Now + 5.0f;
+				}
+
+				if (_agent.TargetPosition != null &&
+						Transform.Position.Distance(_agent.TargetPosition.Value) < 10.0f)
+				{
+					_agent.Stop();
+				}
 			}
 		}
-		else if (PassiveMode == PassiveBehaviour.Wander)
-		{
-			if (_passiveNextWanderTime < Time.Now)
-			{
-				var pos = Scene.NavMesh.GetRandomPoint(Transform.Position, 100.0f);
-				if (pos != null)
-					MoveTo(pos.Value);
-				_passiveNextWanderTime = Time.Now + 5.0f;
-			}
 
-			if (_agent.TargetPosition != null &&
-				Transform.Position.Distance(_agent.TargetPosition.Value) < 10.0f)
-			{
-				_agent.Stop();
-			}
-		}
-
-		Vector3 playerOffset = Transform.Position - _player.Transform.Position;
-		float angleToPlayer =
-			MathF.Acos(-playerOffset.Normal.Dot(Transform.Rotation.Forward));
-
-		if (playerOffset.Length < VisionRange && angleToPlayer < VisionAngle)
+		if (PlayerInVisionCone())
 		{
 			_passive = false;
 			return;
@@ -264,75 +244,78 @@ public sealed class EnemyAI : Component
 		return true;
 	}
 
-	private TimeSince lastAttack = 0.0f;
-	private List<BaseSpell> _castSpells = new List<BaseSpell>();
-	private List<BaseSpell> _deferredSpellRemovals = new List<BaseSpell>();
-
-	private void OnSpellDestroyed(object spell, EventArgs e)
+	protected void MoveToPlayer()
 	{
-		_deferredSpellRemovals.Add((BaseSpell)spell);
+		if (_player != null)
+			MoveTo(_player.Transform.Position);
 	}
 
-	private void OnUpdateSpells()
+	protected bool PlayerInRange(float range)
 	{
-		foreach (BaseSpell spell in _castSpells)
-			spell.OnUpdate();
+		if (_player == null)
+			return false;
+
+		Vector3 playerOffset = Transform.Position - _player.Transform.Position;
+		return playerOffset.Length < range;
 	}
 
-
-	private void OnFixedUpdateSpells()
+	protected bool PlayerObscured()
 	{
-		foreach (BaseSpell spell in _castSpells)
-			spell.OnFixedUpdate();
+		if (_player == null)
+			return false;
 
-		foreach (BaseSpell spell in _deferredSpellRemovals)
-			_castSpells.Remove(spell);
+		// TODO: this could be improved to check a few set positions over the
+		// player, but this should be fine-ish.
+		var tr = Scene.Trace.Ray(Transform.Position + EyePosition,
+								 _player.Transform.Position)
+							.WithoutTags("player")
+							.Run();
+
+		return tr.Hit;
 	}
 
-	private void AttackPlayer()
+	protected bool PlayerInVisionCone()
 	{
-		// TODO: bursts
-		if (lastAttack < 3.0f)
+		if (_player == null)
+			return false;
+
+		Vector3 playerOffset = Transform.Position - _player.Transform.Position;
+		float angleToPlayer =
+			MathF.Acos(-playerOffset.Normal.Dot(Transform.Rotation.Forward));
+
+		return playerOffset.Length < VisionRange &&
+			   angleToPlayer < VisionAngle;
+	}
+
+	private void LookInDirection(Vector3 direction)
+	{
+		if (direction.IsNearlyZero())
 			return;
 
-		var spell =
-			PlayerSpellcastingController.CreateSpell(GameObject, EnemySpell);
-		spell.CasterEyeOrigin = EyePosition;
-		// TODO: prediction?
-		// TODO: this also shoots in a weird direction... tricky to debug
-		spell.CastDirection =
-			(_player.Transform.Position - Transform.Position).Normal;
-		spell.StartCasting();
-		spell.FinishCasting();
-		_castSpells.Add(spell);
-		lastAttack = 0.0f;
+		Rotation wantRotation = Rotation.LookAt(direction);
+		_agent.SyncAgentPosition = false;
+		Transform.Rotation = Rotation.Slerp(Transform.Rotation,
+											wantRotation,
+											Time.Delta * RotationSpeed);
+		_agent.SyncAgentPosition = true;
 	}
 
-	private void OnFixedUpdateActive()
+	protected void TurnToFacePlayer()
 	{
-		List<Vector3> pathToPlayer =
-			Scene.NavMesh.GetSimplePath(
-				Transform.Position,
-				_player.Transform.Position
-			);
+		if (_player == null)
+			return;
 
-		bool pathEndsCloserToPlayer = true;
-		bool pathTooLong = false;
-		if (pathEndsCloserToPlayer && !pathTooLong)
-		{
-			MoveTo(_player.Transform.Position);
-		}
+		LookInDirection(_player.Transform.Position - Transform.Position);
+	}
 
-		bool playerInAttackRange = true;
-		bool canAttack = true;
-		if (playerInAttackRange && canAttack)
-		{
-			AttackPlayer();
-		}
+	protected bool CanAttack()
+	{
+		return _nextAttackTime <= Time.Now;
+	}
 
-		// bool reachable = PointIsReachableByPath(pathToPlayer, _player.Transform.Position);
-		// if (!reachable)
-		// 	return;
+	protected void SetAttackCooldown()
+	{
+		_nextAttackTime = Time.Now + AttackCooldown;
 	}
 
 	protected override void OnUpdate()
@@ -354,8 +337,6 @@ public sealed class EnemyAI : Component
 			// 	_agent.SyncAgentPosition = true;
 			// }
 		}
-
-		OnUpdateSpells();
 	}
 
 	protected override void OnFixedUpdate()
@@ -364,11 +345,6 @@ public sealed class EnemyAI : Component
 		{
 			OnFixedUpdatePassive();
 		}
-		else
-		{
-			OnFixedUpdateActive();
-		}
-
-		OnFixedUpdateSpells();
+		// Active behaviour should be handled by subclasses!
 	}
 }

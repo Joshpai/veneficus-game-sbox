@@ -362,5 +362,6 @@ public sealed class PlayerSpellcastingController : Component
 		{
 			_castSpells.Remove(spell);
 		}
+		_deferredRemovals.Clear();
 	}
 }

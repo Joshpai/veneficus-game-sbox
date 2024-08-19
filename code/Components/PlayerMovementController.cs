@@ -311,8 +311,8 @@ public sealed class PlayerMovementController : Component
 		var groundJumpForce = InitialJumpAmount * jumpForce;
 
 		_airJumpStartedPolymorphed = IsPolymorphed;
-		_airJumpRemainingTicks = (int)(MaxJumpHoldLength / Time.Delta);
-		_airJumpRemainingTicksMax = (int)(MaxJumpHoldLength / Time.Delta);
+		_airJumpRemainingTicksMax = (int)(MaxJumpHoldLength / Time.Delta) + 1;
+		_airJumpRemainingTicks = _airJumpRemainingTicksMax;
 		_polyJumpRemainingTicks = (int)(PolyJumpGracePeriod / Time.Delta);
 		_airJumpForce = (1.0f - InitialJumpAmount) * jumpForce;
 		_airJumpForce /= _airJumpRemainingTicks;
@@ -333,8 +333,7 @@ public sealed class PlayerMovementController : Component
 
 	private void AirJump()
 	{
-		// Keep old behaviour even if this looks a bit wrong!
-		if (_airJumpRemainingTicks-- <= 0)
+		if (--_airJumpRemainingTicks <= 0)
 			return;
 
 		// The below handles the poly jump grace period. This is maybe able to
@@ -353,8 +352,6 @@ public sealed class PlayerMovementController : Component
 				_airJumpForce * Time.Delta / oldMass;
 			var elapsedTicks =
 				_airJumpRemainingTicksMax - _airJumpRemainingTicks;
-
-			// PolyJumpGraceHeightPercent;
 
 			var wantVelocityTotal =
 				PolyJumpGraceHeightPercent *
