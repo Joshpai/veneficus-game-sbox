@@ -35,7 +35,8 @@ public sealed class FireEnemyAI : BaseEnemyAI
 
 	private bool ShouldCastFireball()
 	{
-		return _fireball == null &&
+		return !_passive &&
+			   _fireball == null &&
 			   PlayerInRange(AttackRangeMax) &&
 			   !PlayerObscured() &&
 			   CanAttack();
