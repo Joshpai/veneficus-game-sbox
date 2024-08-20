@@ -157,6 +157,7 @@ public sealed class LevelEnd : InteractableComponent
 
 	private void RestartCurrentLevel()
 	{
+		LevelManagerStaticStore.Stats = new LevelStats();
 		LevelManager.LoadLevelImmediate(LevelManagerStaticStore.ActiveScene, true);
 	}
 
@@ -170,6 +171,7 @@ public sealed class LevelEnd : InteractableComponent
 	{
 		// TODO: convert "NextLevel" to a stack of next levels. (maybe?)
 		// We want to be able to go to a level summary screen first.
+		LevelManagerStaticStore.Stats = new LevelStats();
 		if (NextLevel != null)
 			LevelManager.LoadLevelImmediate(NextLevel, true);
 	}
