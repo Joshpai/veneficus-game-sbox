@@ -37,6 +37,7 @@ public class WaterBeamSpell : BaseSpell
 	private void UpdateWaterBeamTransform()
 	{
 		_waterBeam.Transform.LocalPosition =
+			_caster.Transform.Position +
 			CasterEyeOrigin + CastDirection * START_OFFSET;
 		_waterBeam.Transform.LocalRotation =
 			CastDirection.EulerAngles;
@@ -49,8 +50,10 @@ public class WaterBeamSpell : BaseSpell
 		_waterBeam.UpdateFromPrefab();
 		_waterBeam.Transform.Scale = new Vector3(1.0f, 1.0f, 1.0f);
 
-		_waterBeam.SetParent(_caster);
 		_waterBeam.Transform.ClearInterpolation();
+		_waterBeam.Transform.LocalPosition =
+			_caster.Transform.Position +
+			CasterEyeOrigin + CastDirection * START_OFFSET;
 		UpdateWaterBeamTransform();
 	}
 
