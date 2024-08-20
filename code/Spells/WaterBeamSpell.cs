@@ -117,7 +117,7 @@ public class WaterBeamSpell : BaseSpell
 		if (_playerSpellcastingController.Mana <= 0.0f)
 		{
 			_playerSpellcastingController.Mana = 0.0f;
-			OnFinishCasting();
+			FinishCasting();
 		}
 
 		_nextDamageTime = Time.Now + TIME_BETWEEN_DAMAGE;
