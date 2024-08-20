@@ -26,7 +26,7 @@ public class WaterBeamSpell : BaseSpell
 	private const float TIME_BETWEEN_DAMAGE = 0.05f;
 	private const float DAMAGE_PER_PROC = 1.0f;
 	private const float START_OFFSET = 1.0f;
-	private String WATER_BEAM_PREFAB = "prefabs/water_beam.prefab";
+	private String WATER_BEAM_PREFAB = "prefabs/spells/water_beam.prefab";
 
 	private float _nextDamageTime = 0.0f;
 

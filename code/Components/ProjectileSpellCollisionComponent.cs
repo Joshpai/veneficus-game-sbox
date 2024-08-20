@@ -25,7 +25,7 @@ public sealed class ProjectileSpellCollisionComponent
 		{
 			GameObject explosionObj = new GameObject();
 			explosionObj.Transform.Position = collisionPoint;
-			explosionObj.SetPrefabSource("prefabs/explosion.prefab");
+			explosionObj.SetPrefabSource("prefabs/particles/explosion.prefab");
 			explosionObj.UpdateFromPrefab();
 			var explosion = explosionObj.Components.Get<ExplosionManagerComponent>();
 			explosion.ExplosionOrigin = collisionPoint;

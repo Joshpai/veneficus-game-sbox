@@ -26,7 +26,7 @@
       "Position": "381.268,25.73338,32.00001",
       "Tags": "interactable",
       "Enabled": true,
-      "__Prefab": "prefabs/level_end.prefab",
+      "__Prefab": "prefabs/objects/level_end.prefab",
       "__PrefabVariables": {
         "Next Level": "scenes/minimal.scene",
         "Deferred Next Level": null,
@@ -50,7 +50,7 @@
       "Name": "level_transition",
       "Position": "-345.1349,430.9247,-822.859",
       "Enabled": true,
-      "__Prefab": "prefabs/level_transition.prefab",
+      "__Prefab": "prefabs/objects/level_transition.prefab",
       "__PrefabVariables": {}
     }
   ],

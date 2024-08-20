@@ -10,7 +10,7 @@ public class MagicBarrierSpell : BaseSpell
 	// TODO: "custom" or "ontick"?
 	public override ManaTakeTime TakeManaTime => ManaTakeTime.OnStartCasting;
 
-	private const String BARRIER_PREFAB = "prefabs/magic_barrier.prefab";
+	private const String BARRIER_PREFAB = "prefabs/spells/magic_barrier.prefab";
 	// This is the damage multiplier, so a value of 0.75f would mean we reduce
 	// damage taken by 25%.
 	private const float BARRIER_DAMAGE_REDUCTION = 0.5f;

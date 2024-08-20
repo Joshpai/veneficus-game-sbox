@@ -8,7 +8,8 @@ public class FireballSpell : ProjectileSpell
 	public override float SpellMass => 100.0f;
 	public override float SpellSpeed => 300.0f;
 	// ProjectileSpell
-	public override String ProjectilePrefabPath => "prefabs/fireball.prefab";
+	public override String ProjectilePrefabPath =>
+		"prefabs/spells/fireball.prefab";
 	public override float ProjectileScale => 0.1f;
 	public override float StartOffset => 75.0f;
 	public override float Duration => 5.0f;

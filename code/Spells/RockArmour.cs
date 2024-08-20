@@ -12,7 +12,7 @@ public class RockArmourSpell : WorldPlacementSpell
 	public override float MaxRange => 250.0f;
 	public override int MaxPlacedObjects => 3;
 
-	private const string WALL_PREFAB = "prefabs/rock_wall.prefab";
+	private const string WALL_PREFAB = "prefabs/spells/rock_wall.prefab";
 
 	public RockArmourSpell(GameObject caster)
 		: base(caster)

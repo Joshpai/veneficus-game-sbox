@@ -40,7 +40,7 @@ public class PolymorphSpell : BaseSpell
 		// TODO: would be nice if the smoke puff followed the player.
 		var _smokePuff = new GameObject(true, "PolymorphSmokePuff");
 		_smokePuff.Transform.Position = _caster.Transform.Position;
-		_smokePuff.SetPrefabSource("prefabs/SmokePuff.prefab");
+		_smokePuff.SetPrefabSource("prefabs/particles/SmokePuff.prefab");
 		_smokePuff.UpdateFromPrefab();
 
 		if (_playerMovementController != null)

@@ -12,7 +12,8 @@ public class LightningStrikeSpell : WorldPlacementSpell
 	public override float MaxRange => 250.0f;
 	public override int MaxPlacedObjects => 1;
 
-	private const string LIGHTNING_PREFAB = "prefabs/lightning_strike.prefab";
+	private const string LIGHTNING_PREFAB =
+		"prefabs/particles/lightning_strike.prefab";
 	// TODO: could get this from the particle effect, but for now this works
 	private const float LIFETIME = 0.7f;
 	// Radius of capsule representing damage area

@@ -2820,7 +2820,7 @@
       "Position": "-22.00011,427.5349,160.0001",
       "Tags": "interactable",
       "Enabled": true,
-      "__Prefab": "prefabs/level_end.prefab",
+      "__Prefab": "prefabs/objects/level_end.prefab",
       "__PrefabVariables": {
         "Next Level": "scenes/testmap.scene",
         "Deferred Next Level": null,
@@ -2845,7 +2845,7 @@
       "Position": "115.0271,441.4775,160.0001",
       "Tags": "trigger",
       "Enabled": true,
-      "__Prefab": "prefabs/mana_orb_buff.prefab",
+      "__Prefab": "prefabs/objects/mana_orb_buff.prefab",
       "__PrefabVariables": {}
     },
     {
@@ -2981,7 +2981,7 @@
       "Name": "level_transition",
       "Position": "-1609.28,-20.64789,-775.2865",
       "Enabled": true,
-      "__Prefab": "prefabs/level_transition.prefab",
+      "__Prefab": "prefabs/objects/level_transition.prefab",
       "__PrefabVariables": {}
     },
     {
@@ -2991,7 +2991,7 @@
       "Position": "880.5865,197.5247,445.9495",
       "Scale": "2.258174,2.258174,2.258174",
       "Enabled": true,
-      "__Prefab": "prefabs/checkpoint_trigger.prefab",
+      "__Prefab": "prefabs/triggers/checkpoint_trigger.prefab",
       "__PrefabVariables": {
         "Respawn Point Marker": {
           "_type": "gameobject",
@@ -3041,7 +3041,7 @@
       "Position": "972.0214,-277.838,0",
       "Scale": "5.149464,5.149464,5.149464",
       "Enabled": true,
-      "__Prefab": "prefabs/push_trigger.prefab",
+      "__Prefab": "prefabs/triggers/push_trigger.prefab",
       "__PrefabVariables": {
         "PushVector": "0,100.7,0"
       }

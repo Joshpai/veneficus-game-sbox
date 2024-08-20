@@ -8,7 +8,8 @@ public class MagicMissileSpell : ProjectileSpell
 	public override float SpellMass => 5.0f;
 	public override float SpellSpeed => 500.0f;
 	// ProjectileSpell
-	public override String ProjectilePrefabPath => "prefabs/magic_missile.prefab";
+	public override String ProjectilePrefabPath =>
+		"prefabs/spells/magic_missile.prefab";
 	public override float ProjectileScale => 0.1f;
 	public override float StartOffset => 75.0f;
 	public override float Duration => 20.0f;

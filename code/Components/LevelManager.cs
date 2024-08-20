@@ -78,7 +78,7 @@ public sealed class LevelManager : Component
 	PlayerMovementController SpawnPlayer()
 	{
 		var player = new GameObject(true, "Player");
-		player.SetPrefabSource("prefabs/player.prefab");
+		player.SetPrefabSource("prefabs/objects/player.prefab");
 		player.UpdateFromPrefab();
 
 		LevelManagerStaticStore.Player = player;

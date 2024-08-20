@@ -6,7 +6,7 @@ public abstract class WorldPlacementSpell : BaseSpell
 	public override event EventHandler OnDestroy;
 
 	public string PlacementIndicatorPrefab { get; } =
-		"prefabs/spell_placement_indicator.prefab";
+		"prefabs/spells/spell_placement_indicator.prefab";
 	public abstract float MinRange { get; }
 	public abstract float MaxRange { get; }
 	public abstract int MaxPlacedObjects { get; }
