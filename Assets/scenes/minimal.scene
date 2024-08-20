@@ -3043,8 +3043,21 @@
       "Enabled": true,
       "__Prefab": "prefabs/triggers/push_trigger.prefab",
       "__PrefabVariables": {
-        "PushVector": "0,100.7,0"
+        "PushVector": "0,100.7,0",
+        "Pushable Tags": [
+          "player",
+          "enemy"
+        ]
       }
+    },
+    {
+      "__guid": "3cb6606b-d4d0-460b-98ea-b86a11d71ce7",
+      "Flags": 0,
+      "Name": "water_beam_enemy",
+      "Position": "916.4249,-638.4326,3.999769",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/water_beam_enemy.prefab",
+      "__PrefabVariables": {}
     }
   ],
   "SceneProperties": {

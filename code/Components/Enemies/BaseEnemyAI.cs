@@ -26,7 +26,7 @@ public class BaseEnemyAI : Component
 	public PassiveBehaviour PassiveMode { get; set; }
 
 	[Property, Group("Passive")]
-	public List<Vector3> PatrolPath { get; set; }
+	public List<Vector3> PatrolPath { get; set; } = new List<Vector3>();
 
 	private List<Vector3> _patrolPathWorld;
 

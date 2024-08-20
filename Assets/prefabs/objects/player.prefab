@@ -3,7 +3,7 @@
     "__guid": "b650359f-3468-4456-b249-1e8c3686c0cf",
     "Flags": 0,
     "Name": "player",
-    "Tags": "player,trigger",
+    "Tags": "player",
     "Enabled": true,
     "Components": [
       {
@@ -94,7 +94,7 @@
         "__guid": "e60520c2-ec32-4795-bd39-4755f6550f55",
         "DeathScreen": {
           "_type": "gameobject",
-          "prefab": "prefabs/UI/death_screen.prefab"
+          "prefab": "prefabs/ui/death_screen.prefab"
         },
         "PlayerHealthComponent": {
           "_type": "component",

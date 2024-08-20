@@ -14,7 +14,7 @@ public class WaterBeamSpell : BaseSpell
 	// here how we're treated, so really the less resource intensive version
 	// should be used (i.e., set stateful).
 	public override bool IsStateful => true;
-	public override ManaTakeTime TakeManaTime => ManaTakeTime.OnStartCasting;
+	public override ManaTakeTime TakeManaTime => ManaTakeTime.OnTick;
 
 	public override event EventHandler OnDestroy;
 
@@ -51,9 +51,6 @@ public class WaterBeamSpell : BaseSpell
 		_waterBeam.Transform.Scale = new Vector3(1.0f, 1.0f, 1.0f);
 
 		_waterBeam.Transform.ClearInterpolation();
-		_waterBeam.Transform.LocalPosition =
-			_caster.Transform.Position +
-			CasterEyeOrigin + CastDirection * START_OFFSET;
 		UpdateWaterBeamTransform();
 	}
 
@@ -74,12 +71,12 @@ public class WaterBeamSpell : BaseSpell
 
 	private SceneTraceResult RunEyeTrace()
 	{
-		Vector3 startPos = CasterEyeOrigin;
-		Vector3 endPos =
-			startPos + CastDirection.EulerAngles.Forward * MAX_RANGE;
+		Vector3 startPos = _caster.Transform.Position + CasterEyeOrigin;
+		Vector3 endPos = startPos + CastDirection * MAX_RANGE;
 
 		return _caster.Scene.Trace.Ray(startPos, endPos)
 								  .IgnoreGameObjectHierarchy(_caster)
+								  .HitTriggers()
 								  .Size(TRACE_WIDTH)
 								  .Run();
 	}
