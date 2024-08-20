@@ -15,10 +15,6 @@
           "MapName": "maps/forest - act 1/forest-act1-scene1(tutorial).vmap",
           "NoOrigin": false,
           "UseMapFromLaunch": false
-        },
-        {
-          "__type": "MapPlayerSpawner",
-          "__guid": "596c6e23-e76f-43a7-96f9-ac6ca2f385d8"
         }
       ],
       "Children": []
@@ -30,7 +26,7 @@
       "Position": "129.514,-1664.703,945.6701",
       "Tags": "interactable",
       "Enabled": true,
-      "__Prefab": "prefabs/level_end.prefab",
+      "__Prefab": "prefabs/objects/level_end.prefab",
       "__PrefabVariables": {
         "Next Level": "scenes/forest - act 1/fullact1.scene",
         "Deferred Next Level": null,
@@ -42,8 +38,20 @@
         "Target Enemies Killed Percent A": 0.9,
         "Target Enemies Killed Percent B": 0.75,
         "Target Enemies Killed Percent C": 0.5,
-        "LevelTransition": null
+        "LevelTransition": {
+          "_type": "gameobject",
+          "go": "75f7d354-033f-43a9-988f-cefc1a81c648"
+        }
       }
+    },
+    {
+      "__guid": "75f7d354-033f-43a9-988f-cefc1a81c648",
+      "Flags": 0,
+      "Name": "level_transition",
+      "Position": "2745.618,-3084.278,569",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/level_transition.prefab",
+      "__PrefabVariables": {}
     }
   ],
   "SceneProperties": {

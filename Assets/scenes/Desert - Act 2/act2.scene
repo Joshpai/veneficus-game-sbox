@@ -20,33 +20,33 @@
       "Children": []
     },
     {
-      "__guid": "7dc722c5-34e1-4307-ac97-ba354bea96d0",
+      "__guid": "35017f01-7318-47ff-a80f-f0610d865aa2",
       "Flags": 0,
       "Name": "mana_orb_buff",
-      "Position": "4101.191,-9469.496,3844.934",
+      "Position": "4105.77,-9469.855,3853.391",
       "Tags": "trigger",
       "Enabled": true,
-      "__Prefab": "prefabs/mana_orb_buff.prefab",
+      "__Prefab": "prefabs/objects/mana_orb_buff.prefab",
       "__PrefabVariables": {}
     },
     {
-      "__guid": "18c86ff4-bed8-46a0-b3b4-a9523e0ddc44",
+      "__guid": "dae23c55-f59b-4a4f-91ab-f9ae9b9e845d",
       "Flags": 0,
       "Name": "mana_orb_buff (1)",
-      "Position": "4425.035,-16619.26,4598.861",
+      "Position": "3350.967,-15703.86,4573.764",
       "Tags": "trigger",
       "Enabled": true,
-      "__Prefab": "prefabs/mana_orb_buff.prefab",
+      "__Prefab": "prefabs/objects/mana_orb_buff.prefab",
       "__PrefabVariables": {}
     },
     {
-      "__guid": "7058a1ab-b482-4e87-adad-26d2adf0bb4a",
+      "__guid": "6f0cebfd-3d51-468d-b6e7-26bce2d15bfa",
       "Flags": 0,
       "Name": "level_end",
-      "Position": "-3920.217,-11983.68,4572.586",
+      "Position": "-3935.72,-11994.96,4557.121",
       "Tags": "interactable",
       "Enabled": true,
-      "__Prefab": "prefabs/level_end.prefab",
+      "__Prefab": "prefabs/objects/level_end.prefab",
       "__PrefabVariables": {
         "Next Level": "scenes/mines - act 3/act3scene.scene",
         "Deferred Next Level": null,
@@ -58,8 +58,20 @@
         "Target Enemies Killed Percent A": 0.9,
         "Target Enemies Killed Percent B": 0.75,
         "Target Enemies Killed Percent C": 0.5,
-        "LevelTransition": null
+        "LevelTransition": {
+          "_type": "gameobject",
+          "go": "7b48ab69-f445-4a5c-b81e-e0e1f9fc8d35"
+        }
       }
+    },
+    {
+      "__guid": "7b48ab69-f445-4a5c-b81e-e0e1f9fc8d35",
+      "Flags": 0,
+      "Name": "level_transition",
+      "Position": "-7728.287,-17446.84,569.001",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/level_transition.prefab",
+      "__PrefabVariables": {}
     }
   ],
   "SceneProperties": {

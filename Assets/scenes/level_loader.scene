@@ -12,9 +12,9 @@
           "__guid": "729a7b21-8f23-4106-87ff-f9e7508e2eb8",
           "LoadingScreen": {
             "_type": "gameobject",
-            "prefab": "prefabs/UI/loading_screen.prefab"
+            "prefab": "prefabs/ui/loading_screen.prefab"
           },
-          "StartingLevel": "scenes/minimal.scene"
+          "StartingLevel": "scenes/mines - act 3/act3scene.scene"
         },
         {
           "__type": "EnemyManager",
