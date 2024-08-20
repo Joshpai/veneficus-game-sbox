@@ -1,0 +1,83 @@
+{
+  "RootObject": {
+    "__guid": "a96433bb-866f-474f-b5ab-1b586f06a60f",
+    "Flags": 0,
+    "Name": "key_trigger",
+    "Enabled": true,
+    "Children": [
+      {
+        "__guid": "50a2cc8a-1136-4bff-ac74-53269a790ad0",
+        "Flags": 0,
+        "Name": "Object",
+        "Position": "0,0,25",
+        "Tags": "trigger",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "d7b6e0b5-75a0-49a1-a130-059da4e16802",
+            "BodyGroups": 18446744073709551615,
+            "MaterialOverride": "materials/tools/toolstrigger.vmat",
+            "RenderType": "Off",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "Sandbox.BoxCollider",
+            "__guid": "5abe1846-dd04-42c9-9ee5-d53d3799d4bd",
+            "Center": "0,0,0",
+            "IsTrigger": true,
+            "Scale": "50,50,50",
+            "Static": true
+          },
+          {
+            "__type": "TriggerRenderer",
+            "__guid": "b8310340-b410-4a31-809c-fbc3714539b2",
+            "ActiveColour": "1,0,0,1",
+            "PassiveColour": "1,1,1,1"
+          },
+          {
+            "__type": "PushTrigger",
+            "__guid": "9a806b3f-37ad-44c1-98b1-275a67f0ed06",
+            "PushableTags": [
+              "player",
+              "enemy"
+            ],
+            "PushVector": "0,50,0"
+          },
+          {
+            "__type": "KeyTrigger",
+            "__guid": "18c6fb8d-1f06-42e6-80e1-6a5d9275a1d7"
+          }
+        ]
+      }
+    ],
+    "__variables": [
+      {
+        "Id": "PushVector",
+        "Title": "PushVector",
+        "Targets": [
+          {
+            "Id": "9a806b3f-37ad-44c1-98b1-275a67f0ed06",
+            "Property": "PushVector"
+          }
+        ]
+      },
+      {
+        "Id": "Pushable Tags",
+        "Title": "Pushable Tags",
+        "Targets": [
+          {
+            "Id": "9a806b3f-37ad-44c1-98b1-275a67f0ed06",
+            "Property": "PushableTags"
+          }
+        ]
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}
