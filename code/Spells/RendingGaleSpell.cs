@@ -53,13 +53,15 @@ public class RendingGaleSpell : BaseSpell
 	{
 	}
 
-	public override void OnFixedUpdate()
+	public override bool OnFixedUpdate()
 	{
 		if (_finishDashingTime < Time.Now)
 		{
 			_playerMovementController.IsDashing = false;
 			OnDestroy?.Invoke(this, EventArgs.Empty);
 		}
+
+		return false;
 	}
 
 	public override BaseSpell.SpellType GetSpellType()

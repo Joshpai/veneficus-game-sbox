@@ -80,19 +80,17 @@ public class WaterBeamSpell : BaseSpell
 
 	private SceneTraceResult RunEyeTrace()
 	{
-		Vector3 startPos =
-			_caster.Transform.Position + _playerMovementController.EyePosition;
+		Vector3 startPos = CasterEyeOrigin;
 		Vector3 endPos =
-			startPos + _playerMovementController.EyeAngles.Forward * MAX_RANGE;
+			startPos + CastDirection.EulerAngles.Forward * MAX_RANGE;
 
 		return _caster.Scene.Trace.Ray(startPos, endPos)
 								  .IgnoreGameObjectHierarchy(_caster)
 								  .Size(TRACE_WIDTH)
 								  .Run();
-
 	}
 
-	public override void OnFixedUpdate()
+	public override bool OnFixedUpdate()
 	{
 		if (HasFinishedCasting)
 		{
@@ -101,7 +99,7 @@ public class WaterBeamSpell : BaseSpell
 		}
 
 		if (_nextDamageTime >= Time.Now)
-			return;
+			return false;
 
 		SceneTraceResult tr = RunEyeTrace();
 		if (tr.Hit)
@@ -112,15 +110,9 @@ public class WaterBeamSpell : BaseSpell
 				hp.Damage(DAMAGE_PER_PROC);
 		}
 
-		_playerSpellcastingController.Mana -= ManaCost;
-
-		if (_playerSpellcastingController.Mana <= 0.0f)
-		{
-			_playerSpellcastingController.Mana = 0.0f;
-			FinishCasting();
-		}
-
 		_nextDamageTime = Time.Now + TIME_BETWEEN_DAMAGE;
+
+		return true;
 	}
 
 	public override BaseSpell.SpellType GetSpellType()

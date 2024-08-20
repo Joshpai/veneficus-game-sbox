@@ -149,8 +149,9 @@ public abstract class WorldPlacementSpell : BaseSpell
 				(_isPlaceable) ? Color.Green : Color.Red;
 	}
 
-	public override void OnFixedUpdate()
+	public override bool OnFixedUpdate()
 	{
+		return false;
 	}
 
 	public abstract GameObject OnPlaced(GameTransform transform);
