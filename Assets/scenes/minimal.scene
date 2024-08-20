@@ -1,5 +1,5 @@
 {
-  "__guid": "8cca5173-1f50-41fd-8698-bad56d17f69b",
+  "__guid": "b7953d14-469e-451d-9ea8-5c0d2a1dcf7b",
   "GameObjects": [
     {
       "__guid": "bfc59c12-1ed2-4f91-8956-a95a315eac3c",
@@ -3025,6 +3025,14 @@
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {}
+    },
+    {
+      "__guid": "c5bd4fec-d16a-484e-9dcc-15164398236e",
+      "Flags": 0,
+      "Name": "death_trigger",
+      "Position": "971.1722,-502.2104,18.48472",
+      "Scale": "3.281686,3.281686,3.281686",
+      "Enabled": true
     }
   ],
   "SceneProperties": {

@@ -109,6 +109,7 @@ public abstract class ProjectileSpell : BaseSpell
 
 			if (_projectileObject != null)
 			{
+				// TODO: should this add the caster's speed too?
 				_projectileObject.Transform.Position +=
 					CastDirection * SpellSpeed * Time.Delta;
 			}

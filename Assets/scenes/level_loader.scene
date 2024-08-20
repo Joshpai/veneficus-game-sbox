@@ -15,6 +15,10 @@
             "prefab": "prefabs/loading_screen.prefab"
           },
           "StartingLevel": "scenes/mines - act 3/act3scene.scene"
+        },
+        {
+          "__type": "EnemyManager",
+          "__guid": "4d063d4a-d39b-430d-a707-89d1c405e640"
         }
       ]
     }
