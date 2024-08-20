@@ -1,5 +1,5 @@
 {
-  "__guid": "b7953d14-469e-451d-9ea8-5c0d2a1dcf7b",
+  "__guid": "50d75c2c-f925-45a1-ad22-00d4db32206f",
   "GameObjects": [
     {
       "__guid": "bfc59c12-1ed2-4f91-8956-a95a315eac3c",
@@ -3057,6 +3057,16 @@
       "Position": "916.4249,-638.4326,3.999769",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/water_beam_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "90a74f3b-7c5e-4835-bd7a-6a281b876a4c",
+      "Flags": 0,
+      "Name": "rock_armour_enemy",
+      "Position": "1015.286,579.7231,4",
+      "Rotation": "0,0,0.9999998,0.0000001788139",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
       "__PrefabVariables": {}
     }
   ],

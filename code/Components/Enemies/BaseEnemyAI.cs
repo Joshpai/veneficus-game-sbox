@@ -57,7 +57,7 @@ public class BaseEnemyAI : Component
 	[Property, Group("Combat")]
 	public float AttackCooldown { get; set; } = 1.0f;
 
-	protected NavMeshAgent _agent { get; set; }
+	public NavMeshAgent Agent { get; set; }
 
 	protected PlayerMovementController _player;
 
@@ -123,7 +123,7 @@ public class BaseEnemyAI : Component
 
 	protected override void OnStart()
 	{
-		_agent = Components.GetInChildrenOrSelf<NavMeshAgent>();
+		Agent = Components.GetInChildrenOrSelf<NavMeshAgent>();
 		_startingPosition = Transform.Position;
 
 		var players = Scene.GetAllComponents<PlayerMovementController>();
@@ -157,7 +157,7 @@ public class BaseEnemyAI : Component
 
 		_passive = !AlwaysActive;
 		if (_passive)
-			_agent.UpdateRotation = true;
+			Agent.UpdateRotation = true;
 
 		_patrolPathWorld = new List<Vector3>();
 		foreach (var pos in PatrolPath)
@@ -167,7 +167,7 @@ public class BaseEnemyAI : Component
 	private void MoveTo(Vector3 destination)
 	{
 		// Log.Info($"Moving to {destination}");
-		_agent.MoveTo(destination);
+		Agent.MoveTo(destination);
 	}
 
 	private void OnFixedUpdatePassive()
@@ -209,10 +209,10 @@ public class BaseEnemyAI : Component
 					_passiveNextWanderTime = Time.Now + 5.0f;
 				}
 
-				if (_agent.TargetPosition != null &&
-						Transform.Position.Distance(_agent.TargetPosition.Value) < 10.0f)
+				if (Agent.TargetPosition != null &&
+						Transform.Position.Distance(Agent.TargetPosition.Value) < 10.0f)
 				{
-					_agent.Stop();
+					Agent.Stop();
 				}
 			}
 		}
@@ -299,7 +299,7 @@ public class BaseEnemyAI : Component
 			   angleToPlayer < VisionAngle;
 	}
 
-	private void LookInDirection(Vector3 direction)
+	protected void LookInDirection(Vector3 direction)
 	{
 		if (direction.IsNearlyZero())
 			return;
@@ -307,11 +307,11 @@ public class BaseEnemyAI : Component
 		// TODO: can we angle the head instead with the Z component?
 		direction.z = 0.0f;
 		Rotation wantRotation = Rotation.LookAt(direction);
-		_agent.SyncAgentPosition = false;
+		Agent.SyncAgentPosition = false;
 		Transform.Rotation = Rotation.Slerp(Transform.Rotation,
 											wantRotation,
 											Time.Delta * RotationSpeed);
-		_agent.SyncAgentPosition = true;
+		Agent.SyncAgentPosition = true;
 	}
 
 	protected void TurnToFacePlayer()
@@ -337,7 +337,7 @@ public class BaseEnemyAI : Component
 
 	protected override void OnUpdate()
 	{
-		_agent.UpdateRotation = _passive;
+		Agent.UpdateRotation = _passive;
 	}
 
 	protected override void OnFixedUpdate()
