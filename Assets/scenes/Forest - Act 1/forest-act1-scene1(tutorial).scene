@@ -20,7 +20,30 @@
           "__type": "MapPlayerSpawner",
           "__guid": "596c6e23-e76f-43a7-96f9-ac6ca2f385d8"
         }
-      ]
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "76343d47-8b4f-47c0-918d-a4d8383e58f3",
+      "Flags": 0,
+      "Name": "level_end",
+      "Position": "129.514,-1664.703,945.6701",
+      "Tags": "interactable",
+      "Enabled": true,
+      "__Prefab": "prefabs/level_end.prefab",
+      "__PrefabVariables": {
+        "Next Level": "scenes/forest - act 1/fullact1.scene",
+        "Deferred Next Level": null,
+        "Target Finish Time S": 0,
+        "Target Finish Time A": 0,
+        "Target Finish Time B": 0,
+        "Target Finish Time D": 0,
+        "Target Enemies Killed Percent S": 1,
+        "Target Enemies Killed Percent A": 0.9,
+        "Target Enemies Killed Percent B": 0.75,
+        "Target Enemies Killed Percent C": 0.5,
+        "LevelTransition": null
+      }
     }
   ],
   "SceneProperties": {

@@ -22,6 +22,40 @@
         }
       ],
       "Children": []
+    },
+    {
+      "__guid": "67e315fc-d2c1-4812-b095-e3dd3432ddb7",
+      "Flags": 0,
+      "Name": "mana_orb_buff",
+      "Position": "-4820.005,-5252.314,4399.509",
+      "Rotation": "0.0000006267801,0.00001710653,-0.0183407,0.9998318",
+      "Tags": "trigger",
+      "Enabled": true,
+      "__Prefab": "prefabs/mana_orb_buff.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "46283ed3-9dc9-4cd0-851c-dd567275f71e",
+      "Flags": 0,
+      "Name": "level_end",
+      "Position": "-5268.522,-11604.5,-39.14186",
+      "Rotation": "-0.00004598498,0.00003236532,0.4607069,0.8875522",
+      "Tags": "interactable",
+      "Enabled": true,
+      "__Prefab": "prefabs/level_end.prefab",
+      "__PrefabVariables": {
+        "Next Level": "scenes/desert - act 2/act2.scene",
+        "Deferred Next Level": null,
+        "Target Finish Time S": 0,
+        "Target Finish Time A": 0,
+        "Target Finish Time B": 0,
+        "Target Finish Time D": 0,
+        "Target Enemies Killed Percent S": 1,
+        "Target Enemies Killed Percent A": 0.9,
+        "Target Enemies Killed Percent B": 0.75,
+        "Target Enemies Killed Percent C": 0.5,
+        "LevelTransition": null
+      }
     }
   ],
   "SceneProperties": {
