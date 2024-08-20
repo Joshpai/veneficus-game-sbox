@@ -18,9 +18,6 @@ public class WaterBeamSpell : BaseSpell
 
 	public override event EventHandler OnDestroy;
 
-	private PlayerMovementController _playerMovementController;
-	private PlayerSpellcastingController _playerSpellcastingController;
-
 	private const float MAX_RANGE = 500.0f;
 	private const float TRACE_WIDTH = 10.0f;
 	private const float TIME_BETWEEN_DAMAGE = 0.05f;
@@ -35,20 +32,14 @@ public class WaterBeamSpell : BaseSpell
 	public WaterBeamSpell(GameObject caster)
 		: base(caster)
 	{
-		_playerMovementController =
-			_caster.Components
-				   .GetInDescendantsOrSelf<PlayerMovementController>();
-		_playerSpellcastingController =
-			_caster.Components
-				   .GetInDescendantsOrSelf<PlayerSpellcastingController>();
 	}
 
 	private void UpdateWaterBeamTransform()
 	{
 		_waterBeam.Transform.LocalPosition =
-			_playerMovementController.EyePosition +
-			_playerMovementController.EyeAngles.Forward * START_OFFSET;
-		_waterBeam.Transform.Rotation = _playerMovementController.EyeAngles;
+			CasterEyeOrigin + CastDirection * START_OFFSET;
+		_waterBeam.Transform.LocalRotation =
+			CastDirection.EulerAngles;
 	}
 
 	public override void OnStartCasting()
