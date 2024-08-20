@@ -2,7 +2,7 @@
   "RootObject": {
     "__guid": "a96433bb-866f-474f-b5ab-1b586f06a60f",
     "Flags": 0,
-    "Name": "death_trigger",
+    "Name": "push_trigger",
     "Enabled": true,
     "Children": [
       {
@@ -36,13 +36,39 @@
             "PassiveColour": "1,1,1,1"
           },
           {
-            "__type": "DeathTrigger",
-            "__guid": "bb0a4d6d-d5eb-4a57-a231-4b631c94aa88"
+            "__type": "PushTrigger",
+            "__guid": "9a806b3f-37ad-44c1-98b1-275a67f0ed06",
+            "PushableTags": [
+              "player",
+              "enemy"
+            ],
+            "PushVector": "0,50,0"
           }
         ]
       }
     ],
-    "__variables": []
+    "__variables": [
+      {
+        "Id": "PushVector",
+        "Title": "PushVector",
+        "Targets": [
+          {
+            "Id": "9a806b3f-37ad-44c1-98b1-275a67f0ed06",
+            "Property": "PushVector"
+          }
+        ]
+      },
+      {
+        "Id": "Pushable Tags",
+        "Title": "Pushable Tags",
+        "Targets": [
+          {
+            "Id": "9a806b3f-37ad-44c1-98b1-275a67f0ed06",
+            "Property": "PushableTags"
+          }
+        ]
+      }
+    ]
   },
   "ShowInMenu": false,
   "MenuPath": null,

@@ -3033,6 +3033,18 @@
       "Position": "971.1722,-502.2104,18.48472",
       "Scale": "3.281686,3.281686,3.281686",
       "Enabled": true
+    },
+    {
+      "__guid": "858ece0a-449d-40cd-a214-0a8a26add028",
+      "Flags": 0,
+      "Name": "push_trigger",
+      "Position": "972.0214,-277.838,0",
+      "Scale": "5.149464,5.149464,5.149464",
+      "Enabled": true,
+      "__Prefab": "prefabs/push_trigger.prefab",
+      "__PrefabVariables": {
+        "PushVector": "0,100.7,0"
+      }
     }
   ],
   "SceneProperties": {
