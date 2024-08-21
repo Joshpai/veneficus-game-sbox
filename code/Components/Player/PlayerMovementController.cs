@@ -136,6 +136,7 @@ public sealed class PlayerMovementController : Component
 	public Vector3 WishDir;
 
 	private MovingPlatform _movingPlatform = null;
+	private GameObject _oldParent = null;
 
 	protected override void OnStart()
 	{
@@ -162,6 +163,7 @@ public sealed class PlayerMovementController : Component
 				PolymorphedEyePosition + CameraFollowPosition,
 				Transform.Rotation
 		);
+		Camera.SetParent(null, true);
 
 		IsPolymorphed = false;
 		EyePosition = HumanEyePosition;
@@ -282,9 +284,10 @@ public sealed class PlayerMovementController : Component
 		// Update the transform of the camera to orbit around the EyePosition
 		var cameraTransform =
 			_cameraReferenceInterpolated.RotateAround(EyePosition, EyeAngles);
+
 		Camera.Transform.Rotation = cameraTransform.Rotation;
 
-		var cameraPos = Transform.Local.PointToWorld(cameraTransform.Position);
+		var cameraPos = Transform.Position + cameraTransform.Position;
 		var startPos = Transform.Position + EyePosition;
 		var endPos = cameraPos;
 		var tr = Scene.Trace.Ray(startPos, endPos)
@@ -401,21 +404,27 @@ public sealed class PlayerMovementController : Component
 			// Reset the IsDashing flag if we're on the ground as we don't care
 			IsDashing = false;
 
-			// TODO: the performance of this worries me...
-			var movingPlatform =
-				Controller.GroundObject.Components
-									   .GetInDescendantsOrSelf<MovingPlatform>();
-			if (movingPlatform != _movingPlatform)
+			if (Controller.GroundObject != null)
 			{
-				if (_movingPlatform != null)
-					_movingPlatform.PlayerTouching = false;
-				_movingPlatform = movingPlatform;
+				// TODO: the performance of this worries me...
+				var movingPlatform =
+					Controller.GroundObject.Components
+						.GetInDescendantsOrSelf<MovingPlatform>();
+				if (movingPlatform != _movingPlatform)
+				{
+					if (_movingPlatform != null)
+						_movingPlatform.PlayerTouching = false;
+					_movingPlatform = movingPlatform;
 
-				// TODO: improve adding base velocity, it's pretty rough atm,
-				// parenting would be ideal but that messed with the camera
-				// in scary ways.
-				if (_movingPlatform != null)
-					_movingPlatform.PlayerTouching = true;
+					if (_movingPlatform != null)
+					{
+						_oldParent = GameObject.Parent;
+						GameObject.SetParent(Controller.GroundObject, true);
+						Transform.ClearInterpolation();
+						Camera.Transform.ClearInterpolation();
+						_movingPlatform.PlayerTouching = true;
+					}
+				}
 			}
 
 			Controller.Accelerate(WishDir * WalkSpeed);
@@ -425,9 +434,11 @@ public sealed class PlayerMovementController : Component
 			_airStartTime = Time.Now;
 			_didJump = Input.Pressed("Jump");
 			if (_didJump)
+			{
 				GroundJump();
-			else if (_movingPlatform != null)
-				Controller.Velocity += _movingPlatform.Velocity;
+				if (_movingPlatform != null)
+					Controller.Velocity += _movingPlatform.Velocity;
+			}
 		}
 		else
 		{
@@ -450,10 +461,14 @@ public sealed class PlayerMovementController : Component
 				Controller.Velocity = Controller.Velocity.WithZ(0.0f);
 		}
 
-		Controller.Move();
+		if (!Controller.IsOnGround && GameObject.Parent != _oldParent)
+		{
+			GameObject.SetParent(_oldParent, true);
+			Camera.Transform.ClearInterpolation();
+			Transform.ClearInterpolation();
+		}
 
-		if (Controller.IsOnGround && _movingPlatform != null)
-			Controller.Velocity -= _movingPlatform.Velocity;
+		Controller.Move();
 
 		_animationHelper.IsGrounded = Controller.IsOnGround;
 		_animationHelper.WithVelocity(Controller.Velocity);
