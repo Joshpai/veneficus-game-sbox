@@ -4760,6 +4760,14 @@
             {
               "_type": "gameobject",
               "go": "ab34911a-1ae7-44dd-a608-54fa48a90c56"
+            },
+            {
+              "_type": "gameobject",
+              "go": "421d1bec-1388-4f1b-9ff5-4ad21b0bd219"
+            },
+            {
+              "_type": "gameobject",
+              "go": "2c94d06a-1551-41ea-80d2-c852bd92a9dd"
             }
           ],
           "OpenDistance": 100,
@@ -7348,10 +7356,20 @@
       "__guid": "2c94d06a-1551-41ea-80d2-c852bd92a9dd",
       "Flags": 0,
       "Name": "rending_gale_enemy",
-      "Position": "947.9367,-889.1578,4",
+      "Position": "632.4222,-1306.146,4.000687",
       "Rotation": "0,0,0.7071067,0.7071068",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rending_gale_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "8ac5b5a1-bfb9-4429-bf07-6be2bedc04f9",
+      "Flags": 0,
+      "Name": "lightning_strike_enemy",
+      "Position": "1271.272,320.6473,3.999699",
+      "Rotation": "0,0,-0.6087614,0.7933534",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/lightning_strike_enemy.prefab",
       "__PrefabVariables": {}
     }
   ],

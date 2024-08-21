@@ -93,8 +93,6 @@ public sealed class RendingGaleEnemyAI : BaseEnemyAI
 	{
 		base.OnFixedUpdate();
 
-		Log.Info(_state);
-
 		HandleMovement();
 		HandleAttacks();
 	}
