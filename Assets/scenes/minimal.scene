@@ -1,5 +1,5 @@
 {
-  "__guid": "ff329ac9-1335-44e7-98ac-40056957504e",
+  "__guid": "7cf4cb82-ef87-49cf-9770-25a7f5980a95",
   "GameObjects": [
     {
       "__guid": "bfc59c12-1ed2-4f91-8956-a95a315eac3c",
@@ -3009,10 +3009,10 @@
     {
       "__guid": "3a914127-b54b-4649-aaa9-78e850a22c9a",
       "Flags": 0,
-      "Name": "fire_enemy",
+      "Name": "fireball_enemy",
       "Position": "-1024.395,456.3957,4",
       "Enabled": true,
-      "__Prefab": "prefabs/enemies/fire_enemy.prefab",
+      "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
       "__PrefabVariables": {}
     },
     {

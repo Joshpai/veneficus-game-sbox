@@ -2,7 +2,7 @@
   "RootObject": {
     "__guid": "17ed16d0-7ff0-4360-a350-d7ddbcb374d3",
     "Flags": 0,
-    "Name": "fire_enemy",
+    "Name": "fireball_enemy",
     "Enabled": true,
     "Components": [
       {
@@ -23,7 +23,7 @@
         "Static": false
       },
       {
-        "__type": "FireEnemyAI",
+        "__type": "FireballEnemyAI",
         "__guid": "eede35f3-a5fa-4704-bd0b-5ee38719770c",
         "AlwaysActive": false,
         "AttackCooldown": 1,
