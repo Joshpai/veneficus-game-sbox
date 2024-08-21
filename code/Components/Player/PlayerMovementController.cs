@@ -135,6 +135,8 @@ public sealed class PlayerMovementController : Component
 
 	public Vector3 WishDir;
 
+	private MovingPlatform _movingPlatform = null;
+
 	protected override void OnStart()
 	{
 		base.OnStart();
@@ -328,6 +330,10 @@ public sealed class PlayerMovementController : Component
 
 		_canAirJump = true;
 
+		// if we're jumping, we definitely aren't on the platform
+		if (_movingPlatform != null)
+			_movingPlatform.PlayerTouching = false;
+
 		Controller.Punch(groundJumpForce * Time.Delta / Mass);
 	}
 
@@ -395,6 +401,23 @@ public sealed class PlayerMovementController : Component
 			// Reset the IsDashing flag if we're on the ground as we don't care
 			IsDashing = false;
 
+			// TODO: the performance of this worries me...
+			var movingPlatform =
+				Controller.GroundObject.Components
+									   .GetInDescendantsOrSelf<MovingPlatform>();
+			if (movingPlatform != _movingPlatform)
+			{
+				if (_movingPlatform != null)
+					_movingPlatform.PlayerTouching = false;
+				_movingPlatform = movingPlatform;
+
+				// TODO: improve adding base velocity, it's pretty rough atm,
+				// parenting would be ideal but that messed with the camera
+				// in scary ways.
+				if (_movingPlatform != null)
+					_movingPlatform.PlayerTouching = true;
+			}
+
 			Controller.Accelerate(WishDir * WalkSpeed);
 
 			Controller.ApplyFriction(5.0f, 20.0f);
@@ -403,6 +426,8 @@ public sealed class PlayerMovementController : Component
 			_didJump = Input.Pressed("Jump");
 			if (_didJump)
 				GroundJump();
+			else if (_movingPlatform != null)
+				Controller.Velocity += _movingPlatform.Velocity;
 		}
 		else
 		{
@@ -426,6 +451,9 @@ public sealed class PlayerMovementController : Component
 		}
 
 		Controller.Move();
+
+		if (Controller.IsOnGround && _movingPlatform != null)
+			Controller.Velocity -= _movingPlatform.Velocity;
 
 		_animationHelper.IsGrounded = Controller.IsOnGround;
 		_animationHelper.WithVelocity(Controller.Velocity);
