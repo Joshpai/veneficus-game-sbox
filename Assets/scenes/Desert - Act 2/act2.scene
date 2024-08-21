@@ -72,6 +72,73 @@
       "Enabled": true,
       "__Prefab": "prefabs/objects/level_transition.prefab",
       "__PrefabVariables": {}
+    },
+    {
+      "__guid": "bd3cacb1-3067-4d4b-97cd-9259df3c14fb",
+      "Flags": 0,
+      "Name": "CheckpointOneTrigger",
+      "Position": "3490.732,-7692.893,3776",
+      "Scale": "20.89134,1,37.08456",
+      "Enabled": true,
+      "__Prefab": "prefabs/triggers/checkpoint_trigger.prefab",
+      "__PrefabVariables": {
+        "Respawn Point Marker": {
+          "_type": "gameobject",
+          "go": "cd17df40-3bb3-4dad-8464-dd76702da062"
+        }
+      }
+    },
+    {
+      "__guid": "cd17df40-3bb3-4dad-8464-dd76702da062",
+      "Flags": 0,
+      "Name": "CheckpointOneRespawn",
+      "Position": "3497.829,-4654.848,4071.65",
+      "Rotation": "0,0,1,0.0000001947072",
+      "Scale": "1.004822,1.004822,1.004822",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "eddca67e-0747-4def-8a64-6ede32e31b11",
+          "__enabled": false,
+          "BodyGroups": 18446744073709551615,
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ]
+    },
+    {
+      "__guid": "c2a02a63-4187-4007-bf76-54aef84e0062",
+      "Flags": 0,
+      "Name": "CheckpointTwoTrigger",
+      "Position": "3502.516,-15110.04,4480",
+      "Scale": "10.91446,1,9.133854",
+      "Enabled": true,
+      "__Prefab": "prefabs/triggers/checkpoint_trigger.prefab",
+      "__PrefabVariables": {
+        "Respawn Point Marker": {
+          "_type": "gameobject",
+          "go": "5defce41-9dff-49c1-8907-7439acc727de"
+        }
+      }
+    },
+    {
+      "__guid": "5defce41-9dff-49c1-8907-7439acc727de",
+      "Flags": 0,
+      "Name": "CheckpointTwoRespawn",
+      "Position": "3489.485,-14743.94,4651.249",
+      "Rotation": "0,0,1,0.0000001947072",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "33103bad-31c0-449f-a03b-ed8917c1085c",
+          "__enabled": false,
+          "BodyGroups": 18446744073709551615,
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ]
     }
   ],
   "SceneProperties": {
