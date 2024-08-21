@@ -5555,12 +5555,12 @@
               "0.25,0.05659187"
             ],
             "TextureOffset": [
-              "197.5996,168.7333",
-              "197.5996,168.7333",
-              "168.7333,409.3441",
-              "343.2667,409.3442",
-              "314.4004,409.3441",
-              "197.5996,409.3442"
+              "197.6001,168.7332",
+              "197.6001,168.7332",
+              "168.7332,409.3441",
+              "343.2668,409.3441",
+              "314.3999,409.3441",
+              "197.6001,409.3441"
             ],
             "MaterialIndex": [
               0,
@@ -5601,7 +5601,7 @@
             ]
           },
           "SmoothingAngle": 40,
-          "Static": false
+          "Static": true
         },
         {
           "__type": "MovingPlatform",
@@ -5614,7 +5614,12 @@
             "0,0,0"
           ],
           "MoveSpeed": 200,
-          "MoveType": "Always"
+          "MoveType": "Always",
+          "RepeatPath": true,
+          "ReturnMoveDelay": 1,
+          "ShouldResetTouchedAtEnd": false,
+          "ShouldResetTouchedAtStart": false,
+          "StartMoveDelay": 0
         }
       ]
     },
@@ -5687,20 +5692,20 @@
               "-0,0,-1"
             ],
             "TextureScale": [
-              "0.25,0.25",
-              "0.25,0.25",
+              "0.2499998,0.25",
+              "0.2499998,0.25",
               "0.25,0.05659187",
               "0.25,0.05659187",
-              "0.25,0.05659187",
-              "0.25,0.05659187"
+              "0.2499998,0.05659187",
+              "0.2499998,0.05659187"
             ],
             "TextureOffset": [
-              "37.15869,168.7333",
-              "37.15869,168.7333",
-              "168.7333,409.3441",
-              "343.2667,409.3442",
-              "474.8413,409.3441",
-              "37.15869,409.3442"
+              "37.15479,168.7332",
+              "37.15479,168.7332",
+              "168.7332,409.3441",
+              "343.2668,409.3441",
+              "474.8452,409.3441",
+              "37.15479,409.3441"
             ],
             "MaterialIndex": [
               0,
@@ -5756,7 +5761,12 @@
             "0,0,0"
           ],
           "MoveSpeed": 200,
-          "MoveType": "AfterPlayerTouch"
+          "MoveType": "AfterPlayerTouch",
+          "RepeatPath": false,
+          "ReturnMoveDelay": 1,
+          "ShouldResetTouchedAtEnd": false,
+          "ShouldResetTouchedAtStart": false,
+          "StartMoveDelay": 0
         }
       ]
     },
@@ -5837,12 +5847,12 @@
               "0.25,0.05659187"
             ],
             "TextureOffset": [
-              "197.5996,167.2947",
-              "197.5996,167.2947",
-              "167.2947,409.3441",
-              "344.7053,409.3442",
-              "314.4004,409.3441",
-              "197.5996,409.3442"
+              "197.6001,167.2949",
+              "197.6001,167.2949",
+              "167.2949,409.3441",
+              "344.7051,409.3441",
+              "314.3999,409.3441",
+              "197.6001,409.3441"
             ],
             "MaterialIndex": [
               0,
@@ -5896,7 +5906,12 @@
             "0,0,0"
           ],
           "MoveSpeed": 200,
-          "MoveType": "AfterPlayerTouch"
+          "MoveType": "AfterPlayerTouch",
+          "RepeatPath": false,
+          "ReturnMoveDelay": 1,
+          "ShouldResetTouchedAtEnd": false,
+          "ShouldResetTouchedAtStart": false,
+          "StartMoveDelay": 0
         }
       ]
     },
@@ -5977,12 +5992,12 @@
               "0.25,0.05659187"
             ],
             "TextureOffset": [
-              "197.5996,151.6333",
-              "197.5996,151.6333",
+              "197.6001,151.6333",
+              "197.6001,151.6333",
               "151.6333,409.3441",
-              "360.3667,409.3442",
-              "314.4004,409.3441",
-              "197.5996,409.3442"
+              "360.3667,409.3441",
+              "314.3999,409.3441",
+              "197.6001,409.3441"
             ],
             "MaterialIndex": [
               0,
@@ -6036,7 +6051,12 @@
             "0,0,0"
           ],
           "MoveSpeed": 200,
-          "MoveType": "WhilePlayerTouching"
+          "MoveType": "WhilePlayerTouching",
+          "RepeatPath": false,
+          "ReturnMoveDelay": 1,
+          "ShouldResetTouchedAtEnd": false,
+          "ShouldResetTouchedAtStart": false,
+          "StartMoveDelay": 0
         }
       ]
     }
