@@ -50,6 +50,9 @@ public sealed class MovingPlatform : Component
 	{
 		base.DrawGizmos();
 
+		if (!Gizmo.IsSelected)
+			return;
+
 		Gizmo.Draw.LineThickness = 16.0f;
 		for (int i = 0; i < MovePathRelative.Count - 1; i++)
 		{
