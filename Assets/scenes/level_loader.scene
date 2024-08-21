@@ -14,7 +14,7 @@
             "_type": "gameobject",
             "prefab": "prefabs/ui/loading_screen.prefab"
           },
-          "StartingLevel": "scenes/forest - act 1/fullact1.scene"
+          "StartingLevel": "scenes/forest - act 1/forest-act1-scene1(tutorial).scene"
         },
         {
           "__type": "EnemyManager",
