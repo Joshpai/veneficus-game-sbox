@@ -14,7 +14,7 @@
 						remaps = 
 						[
 							{
-								from = "material.001.vmat"
+								from = "material.vmat"
 								to = "materials/playermaterials/frog/frogbasemat.vmat"
 							},
 						]
@@ -30,7 +30,7 @@
 					{
 						_class = "RenderMeshFile"
 						filename = "models/PlayerModels/Frog/PlayerFrog.fbx"
-						import_translation = [ 0.0, 0.0, 8.0 ]
+						import_translation = [ 0.0, 0.0, 0.0 ]
 						import_rotation = [ 0.0, 0.0, 0.0 ]
 						import_scale = 1.0
 						align_origin_x_type = "None"
@@ -44,6 +44,36 @@
 						}
 					},
 				]
+			},
+			{
+				_class = "AnimationList"
+				children = 
+				[
+					{
+						_class = "AnimFile"
+						name = "PlayerFrog"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/PlayerModels/Frog/PlayerFrog.fbx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+				]
+				default_root_bone_name = ""
 			},
 		]
 		model_archetype = "default"
