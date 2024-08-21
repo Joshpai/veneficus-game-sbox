@@ -29,7 +29,7 @@ public sealed class ProjectileSpellCollisionComponent
 			explosionObj.UpdateFromPrefab();
 			var explosion = explosionObj.Components.Get<ExplosionManagerComponent>();
 			explosion.ExplosionOrigin = collisionPoint;
-			explosion.ExplosionRadius *= 100 * DamageMultiplier;
+			explosion.ExplosionRadius *= DamageMultiplier;
 			explosion.ExplosionDamage = SplashDamage;
 			explosion.DamageMultiplier *= DamageMultiplier;
 			explosion.Explode();

@@ -65,7 +65,7 @@ public class LightningStrikeSpell : WorldPlacementSpell
 		return _placedObject;
 	}
 
-	public override void OnFixedUpdate()
+	public override bool OnFixedUpdate()
 	{
 		base.OnFixedUpdate();
 
@@ -73,6 +73,8 @@ public class LightningStrikeSpell : WorldPlacementSpell
 		{
 			DestroyPlacedObject(_placedObject);
 		}
+
+		return false;
 	}
 
 	public override BaseSpell.SpellType GetSpellType()

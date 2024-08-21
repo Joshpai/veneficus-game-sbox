@@ -70,10 +70,13 @@ public class MagicBarrierSpell : BaseSpell
 	{
 	}
 
-	public override void OnFixedUpdate()
+	public override bool OnFixedUpdate()
 	{
 		// TODO: we actually want to constantly draw mana when enabled
 		OnDestroy?.Invoke(this, EventArgs.Empty);
+
+		// TODO: this should be true when above is fixed.
+		return false;
 	}
 
 	public override BaseSpell.SpellType GetSpellType()

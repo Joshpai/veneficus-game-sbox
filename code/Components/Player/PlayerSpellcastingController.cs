@@ -99,6 +99,21 @@ public sealed class PlayerSpellcastingController : Component
 		};
 	}
 
+	private bool TakeCastingSpellMana()
+	{
+		if (_castingSpell == null)
+			return false;
+
+		Mana -= _castingSpell.ManaCost;
+		if (Mana <= 0.0f)
+		{
+			Mana = 0.0f;
+			return true;
+		}
+
+		return false;
+	}
+
 	private void OnSpellDestroyed(object spell, EventArgs e)
 	{
 		_deferredRemovals.Add((BaseSpell)spell);
@@ -228,7 +243,7 @@ public sealed class PlayerSpellcastingController : Component
 				CreateSpell(GameObject, ActiveSpell);
 
 		if (_castingSpell.TakeManaTime == BaseSpell.ManaTakeTime.OnStartCasting)
-			Mana -= _castingSpell.ManaCost;
+			TakeCastingSpellMana();
 
 		_castingSpell.CasterEyeOrigin =
 			PlayerMovementControllerRef.EyePosition;
@@ -262,7 +277,7 @@ public sealed class PlayerSpellcastingController : Component
 		}
 
 		if (_castingSpell.TakeManaTime == BaseSpell.ManaTakeTime.OnFinishCasting)
-			Mana -= _castingSpell.ManaCost;
+			TakeCastingSpellMana();
 
 		if (_castingSpell.SpellMass != 0.0f)
 		{
@@ -317,7 +332,14 @@ public sealed class PlayerSpellcastingController : Component
 
 		if (_castingSpell != null)
 		{
-			_castingSpell.OnFixedUpdate();
+			bool takeMana = _castingSpell.OnFixedUpdate();
+			if (_castingSpell.TakeManaTime == BaseSpell.ManaTakeTime.OnTick &&
+				takeMana)
+			{
+				bool outOfMana = TakeCastingSpellMana();
+				if (outOfMana)
+					FinishCasting();
+			}
 
 			// Cancel the spell
 			if (Input.Pressed("attack2"))

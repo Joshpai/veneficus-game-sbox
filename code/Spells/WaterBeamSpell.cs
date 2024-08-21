@@ -14,12 +14,9 @@ public class WaterBeamSpell : BaseSpell
 	// here how we're treated, so really the less resource intensive version
 	// should be used (i.e., set stateful).
 	public override bool IsStateful => true;
-	public override ManaTakeTime TakeManaTime => ManaTakeTime.OnStartCasting;
+	public override ManaTakeTime TakeManaTime => ManaTakeTime.OnTick;
 
 	public override event EventHandler OnDestroy;
-
-	private PlayerMovementController _playerMovementController;
-	private PlayerSpellcastingController _playerSpellcastingController;
 
 	private const float MAX_RANGE = 500.0f;
 	private const float TRACE_WIDTH = 10.0f;
@@ -35,20 +32,15 @@ public class WaterBeamSpell : BaseSpell
 	public WaterBeamSpell(GameObject caster)
 		: base(caster)
 	{
-		_playerMovementController =
-			_caster.Components
-				   .GetInDescendantsOrSelf<PlayerMovementController>();
-		_playerSpellcastingController =
-			_caster.Components
-				   .GetInDescendantsOrSelf<PlayerSpellcastingController>();
 	}
 
 	private void UpdateWaterBeamTransform()
 	{
 		_waterBeam.Transform.LocalPosition =
-			_playerMovementController.EyePosition +
-			_playerMovementController.EyeAngles.Forward * START_OFFSET;
-		_waterBeam.Transform.Rotation = _playerMovementController.EyeAngles;
+			_caster.Transform.Position +
+			CasterEyeOrigin + CastDirection * START_OFFSET;
+		_waterBeam.Transform.LocalRotation =
+			CastDirection.EulerAngles;
 	}
 
 	public override void OnStartCasting()
@@ -58,7 +50,6 @@ public class WaterBeamSpell : BaseSpell
 		_waterBeam.UpdateFromPrefab();
 		_waterBeam.Transform.Scale = new Vector3(1.0f, 1.0f, 1.0f);
 
-		_waterBeam.SetParent(_caster);
 		_waterBeam.Transform.ClearInterpolation();
 		UpdateWaterBeamTransform();
 	}
@@ -80,19 +71,17 @@ public class WaterBeamSpell : BaseSpell
 
 	private SceneTraceResult RunEyeTrace()
 	{
-		Vector3 startPos =
-			_caster.Transform.Position + _playerMovementController.EyePosition;
-		Vector3 endPos =
-			startPos + _playerMovementController.EyeAngles.Forward * MAX_RANGE;
+		Vector3 startPos = _caster.Transform.Position + CasterEyeOrigin;
+		Vector3 endPos = startPos + CastDirection * MAX_RANGE;
 
 		return _caster.Scene.Trace.Ray(startPos, endPos)
 								  .IgnoreGameObjectHierarchy(_caster)
+								  .HitTriggers()
 								  .Size(TRACE_WIDTH)
 								  .Run();
-
 	}
 
-	public override void OnFixedUpdate()
+	public override bool OnFixedUpdate()
 	{
 		if (HasFinishedCasting)
 		{
@@ -101,7 +90,7 @@ public class WaterBeamSpell : BaseSpell
 		}
 
 		if (_nextDamageTime >= Time.Now)
-			return;
+			return false;
 
 		SceneTraceResult tr = RunEyeTrace();
 		if (tr.Hit)
@@ -112,15 +101,9 @@ public class WaterBeamSpell : BaseSpell
 				hp.Damage(DAMAGE_PER_PROC);
 		}
 
-		_playerSpellcastingController.Mana -= ManaCost;
-
-		if (_playerSpellcastingController.Mana <= 0.0f)
-		{
-			_playerSpellcastingController.Mana = 0.0f;
-			FinishCasting();
-		}
-
 		_nextDamageTime = Time.Now + TIME_BETWEEN_DAMAGE;
+
+		return true;
 	}
 
 	public override BaseSpell.SpellType GetSpellType()

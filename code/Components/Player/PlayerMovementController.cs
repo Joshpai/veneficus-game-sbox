@@ -135,6 +135,9 @@ public sealed class PlayerMovementController : Component
 
 	public Vector3 WishDir;
 
+	private MovingPlatform _movingPlatform = null;
+	private GameObject _oldParent = null;
+
 	protected override void OnStart()
 	{
 		base.OnStart();
@@ -160,6 +163,7 @@ public sealed class PlayerMovementController : Component
 				PolymorphedEyePosition + CameraFollowPosition,
 				Transform.Rotation
 		);
+		Camera.SetParent(null, true);
 
 		IsPolymorphed = false;
 		EyePosition = HumanEyePosition;
@@ -280,9 +284,10 @@ public sealed class PlayerMovementController : Component
 		// Update the transform of the camera to orbit around the EyePosition
 		var cameraTransform =
 			_cameraReferenceInterpolated.RotateAround(EyePosition, EyeAngles);
+
 		Camera.Transform.Rotation = cameraTransform.Rotation;
 
-		var cameraPos = Transform.Local.PointToWorld(cameraTransform.Position);
+		var cameraPos = Transform.Position + cameraTransform.Position;
 		var startPos = Transform.Position + EyePosition;
 		var endPos = cameraPos;
 		var tr = Scene.Trace.Ray(startPos, endPos)
@@ -327,6 +332,10 @@ public sealed class PlayerMovementController : Component
 		}
 
 		_canAirJump = true;
+
+		// if we're jumping, we definitely aren't on the platform
+		if (_movingPlatform != null)
+			_movingPlatform.PlayerTouching = false;
 
 		Controller.Punch(groundJumpForce * Time.Delta / Mass);
 	}
@@ -395,6 +404,29 @@ public sealed class PlayerMovementController : Component
 			// Reset the IsDashing flag if we're on the ground as we don't care
 			IsDashing = false;
 
+			if (Controller.GroundObject != null)
+			{
+				// TODO: the performance of this worries me...
+				var movingPlatform =
+					Controller.GroundObject.Components
+						.GetInDescendantsOrSelf<MovingPlatform>();
+				if (movingPlatform != _movingPlatform)
+				{
+					if (_movingPlatform != null)
+						_movingPlatform.PlayerTouching = false;
+					_movingPlatform = movingPlatform;
+
+					if (_movingPlatform != null)
+					{
+						_oldParent = GameObject.Parent;
+						GameObject.SetParent(Controller.GroundObject, true);
+						Transform.ClearInterpolation();
+						Camera.Transform.ClearInterpolation();
+						_movingPlatform.PlayerTouching = true;
+					}
+				}
+			}
+
 			Controller.Accelerate(WishDir * WalkSpeed);
 
 			Controller.ApplyFriction(5.0f, 20.0f);
@@ -402,7 +434,11 @@ public sealed class PlayerMovementController : Component
 			_airStartTime = Time.Now;
 			_didJump = Input.Pressed("Jump");
 			if (_didJump)
+			{
 				GroundJump();
+				if (_movingPlatform != null)
+					Controller.Velocity += _movingPlatform.Velocity;
+			}
 		}
 		else
 		{
@@ -423,6 +459,13 @@ public sealed class PlayerMovementController : Component
 			// Lock vertical movement during a dash
 			if (IsDashing && Controller.Velocity.z < 0.0f)
 				Controller.Velocity = Controller.Velocity.WithZ(0.0f);
+		}
+
+		if (!Controller.IsOnGround && GameObject.Parent != _oldParent)
+		{
+			GameObject.SetParent(_oldParent, true);
+			Camera.Transform.ClearInterpolation();
+			Transform.ClearInterpolation();
 		}
 
 		Controller.Move();

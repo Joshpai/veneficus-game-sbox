@@ -15,34 +15,19 @@
           "MapName": "maps/forest - act 1/testact1.vmap",
           "NoOrigin": false,
           "UseMapFromLaunch": false
-        },
-        {
-          "__type": "MapPlayerSpawner",
-          "__guid": "51d995b1-3eb8-4b99-bc14-1e8489782799"
         }
       ],
       "Children": []
     },
     {
-      "__guid": "67e315fc-d2c1-4812-b095-e3dd3432ddb7",
-      "Flags": 0,
-      "Name": "mana_orb_buff",
-      "Position": "-4820.005,-5252.314,4399.509",
-      "Rotation": "0.0000006267801,0.00001710653,-0.0183407,0.9998318",
-      "Tags": "trigger",
-      "Enabled": true,
-      "__Prefab": "prefabs/mana_orb_buff.prefab",
-      "__PrefabVariables": {}
-    },
-    {
-      "__guid": "46283ed3-9dc9-4cd0-851c-dd567275f71e",
+      "__guid": "d30dbbde-007d-4185-ae45-1f6c7157556e",
       "Flags": 0,
       "Name": "level_end",
-      "Position": "-5268.522,-11604.5,-39.14186",
+      "Position": "-5546.776,-11563.27,-26.11203",
       "Rotation": "-0.00004598498,0.00003236532,0.4607069,0.8875522",
       "Tags": "interactable",
       "Enabled": true,
-      "__Prefab": "prefabs/level_end.prefab",
+      "__Prefab": "prefabs/objects/level_end.prefab",
       "__PrefabVariables": {
         "Next Level": "scenes/desert - act 2/act2.scene",
         "Deferred Next Level": null,
@@ -54,8 +39,31 @@
         "Target Enemies Killed Percent A": 0.9,
         "Target Enemies Killed Percent B": 0.75,
         "Target Enemies Killed Percent C": 0.5,
-        "LevelTransition": null
+        "LevelTransition": {
+          "_type": "gameobject",
+          "go": "484a0b5c-b194-450b-8210-dc06902e1923"
+        }
       }
+    },
+    {
+      "__guid": "484a0b5c-b194-450b-8210-dc06902e1923",
+      "Flags": 0,
+      "Name": "level_transition",
+      "Position": "-5685.901,-14090.99,569",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/level_transition.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "73628467-008c-452a-aa97-1e5bf0625c4b",
+      "Flags": 0,
+      "Name": "mana_orb_buff",
+      "Position": "-4808.238,-5242.061,429.5291",
+      "Rotation": "0.0000006295741,0.00001719594,-0.0183407,0.9998318",
+      "Tags": "trigger",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/mana_orb_buff.prefab",
+      "__PrefabVariables": {}
     }
   ],
   "SceneProperties": {

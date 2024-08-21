@@ -19,7 +19,8 @@ public abstract class BaseSpell
 	public enum ManaTakeTime
 	{
 		OnStartCasting,
-		OnFinishCasting
+		OnFinishCasting,
+		OnTick
 	}
 
 	public abstract float ManaCost { get; }
@@ -92,8 +93,8 @@ public abstract class BaseSpell
 	public abstract bool OnFinishCasting();
 	public abstract void OnCancelCasting();
 
-	public abstract void OnFixedUpdate();
+	public abstract bool OnFixedUpdate();
 	public abstract void OnUpdate();
-	// This should just help avoid forgetting to create a SpellType.
+
 	public abstract SpellType GetSpellType();
 }

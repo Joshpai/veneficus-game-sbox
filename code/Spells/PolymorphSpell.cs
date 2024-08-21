@@ -74,10 +74,12 @@ public class PolymorphSpell : BaseSpell
 	{
 	}
 
-	public override void OnFixedUpdate()
+	public override bool OnFixedUpdate()
 	{
 		// We don't need to use these update functions, so just leave us alone
 		OnDestroy?.Invoke(this, EventArgs.Empty);
+
+		return false;
 	}
 
 	public override BaseSpell.SpellType GetSpellType()

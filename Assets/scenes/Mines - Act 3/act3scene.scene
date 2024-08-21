@@ -20,25 +20,15 @@
       "Children": []
     },
     {
-      "__guid": "c942ba4f-1fff-4579-bac2-a1b481091d84",
-      "Flags": 0,
-      "Name": "mana_orb_buff",
-      "Position": "-2377.604,-4569.203,-2503.649",
-      "Tags": "trigger",
-      "Enabled": true,
-      "__Prefab": "prefabs/mana_orb_buff.prefab",
-      "__PrefabVariables": {}
-    },
-    {
-      "__guid": "a638896d-8471-4e4a-bafb-93e16d3bbacb",
+      "__guid": "4c40fb88-d67b-4cc7-863b-7fafda984a51",
       "Flags": 0,
       "Name": "level_end",
-      "Position": "-40906.29,-6667.779,-20371.23",
+      "Position": "-40709.92,-6645.414,-20421.35",
       "Tags": "interactable",
       "Enabled": true,
-      "__Prefab": "prefabs/level_end.prefab",
+      "__Prefab": "prefabs/objects/level_end.prefab",
       "__PrefabVariables": {
-        "Next Level": null,
+        "Next Level": "scenes/forest - act 1/forest-act1-scene1(tutorial).scene",
         "Deferred Next Level": null,
         "Target Finish Time S": 0,
         "Target Finish Time A": 0,
@@ -48,8 +38,30 @@
         "Target Enemies Killed Percent A": 0.9,
         "Target Enemies Killed Percent B": 0.75,
         "Target Enemies Killed Percent C": 0.5,
-        "LevelTransition": null
+        "LevelTransition": {
+          "_type": "gameobject",
+          "go": "3908587f-2efa-4525-b9cc-0a657ae4de84"
+        }
       }
+    },
+    {
+      "__guid": "3908587f-2efa-4525-b9cc-0a657ae4de84",
+      "Flags": 0,
+      "Name": "level_transition",
+      "Position": "-41360.93,1513.653,-16182.4",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/level_transition.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "5585d1e6-8124-466b-9e5f-b040147f4c24",
+      "Flags": 0,
+      "Name": "mana_orb_buff",
+      "Position": "-2061.042,-4560.866,-2587.02",
+      "Tags": "trigger",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/mana_orb_buff.prefab",
+      "__PrefabVariables": {}
     }
   ],
   "SceneProperties": {

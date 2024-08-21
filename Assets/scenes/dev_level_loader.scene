@@ -14,7 +14,7 @@
             "_type": "gameobject",
             "prefab": "prefabs/ui/loading_screen.prefab"
           },
-          "StartingLevel": "scenes/mines - act 3/act3scene.scene"
+          "StartingLevel": "scenes/minimal.scene"
         },
         {
           "__type": "EnemyManager",

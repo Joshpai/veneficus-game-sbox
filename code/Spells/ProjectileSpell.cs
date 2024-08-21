@@ -78,7 +78,7 @@ public abstract class ProjectileSpell : BaseSpell
 		}
 	}
 
-	public override void OnFixedUpdate()
+	public override bool OnFixedUpdate()
 	{
 		if (!HasFinishedCasting)
 		{
@@ -114,5 +114,7 @@ public abstract class ProjectileSpell : BaseSpell
 					CastDirection * SpellSpeed * Time.Delta;
 			}
 		}
+
+		return false;
 	}
 }
