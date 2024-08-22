@@ -11,6 +11,7 @@
       "Resources": null,
       "PackageReferences": [],
       "EditorReferences": [],
+      "IsWhitelistDisabled": false,
       "Metadata": {
         "SingleAssetSource": "maps/forest - act 1/testact1.vmap"
       }
