@@ -1,0 +1,74 @@
+{
+  "RootObject": {
+    "__guid": "17ed16d0-7ff0-4360-a350-d7ddbcb374d3",
+    "Flags": 0,
+    "Name": "rending_gale_enemy",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "HealthComponent",
+        "__guid": "1edf647f-2466-4f25-8db3-dcdc0c68e5b8",
+        "DamageMultiplier": 1,
+        "DestroyOnDeath": true,
+        "HealMultiplier": 1,
+        "MaxHealth": 100
+      },
+      {
+        "__type": "Sandbox.CapsuleCollider",
+        "__guid": "d9251c92-1fda-45c3-80ce-64161d34de85",
+        "End": "0,0,58",
+        "IsTrigger": true,
+        "Radius": 16,
+        "Start": "0,0,16",
+        "Static": false
+      },
+      {
+        "__type": "Sandbox.SkinnedModelRenderer",
+        "__guid": "c795ac71-7dc0-4a84-a7a0-7bbe8e2f87ad",
+        "BodyGroups": 18446744073709551615,
+        "CreateBoneObjects": false,
+        "Model": "models/citizen/heads/head_zombie_02/models/head_zombie_02.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1",
+        "UseAnimGraph": true
+      },
+      {
+        "__type": "Sandbox.NavMeshAgent",
+        "__guid": "9f4491c2-978a-456d-bb10-dab18a57df2a",
+        "Acceleration": 50,
+        "Height": 64,
+        "MaxSpeed": 120,
+        "Radius": 16,
+        "Separation": 0.25,
+        "UpdatePosition": true,
+        "UpdateRotation": false
+      },
+      {
+        "__type": "RendingGaleEnemyAI",
+        "__guid": "2401b88b-bd5a-471a-bc1f-077cc1f0612c",
+        "AlwaysActive": false,
+        "AttackCooldown": 1,
+        "AttackRangeIdeal": 35,
+        "AttackRangeMax": 250,
+        "AvoidSpells": true,
+        "EnemyLevel": 1,
+        "EyePosition": "0,0,64",
+        "HearingRadius": 125,
+        "MaxSpeed": 650,
+        "PassiveMode": "Stationary",
+        "PatrolPath": [],
+        "RotationSpeed": 3,
+        "VisionAngle": 0.7853982,
+        "VisionRange": 750
+      }
+    ],
+    "Children": [],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

@@ -136,7 +136,6 @@ public sealed class PlayerMovementController : Component
 	public Vector3 WishDir;
 
 	private MovingPlatform _movingPlatform = null;
-	private GameObject _oldParent = null;
 
 	protected override void OnStart()
 	{
@@ -418,11 +417,16 @@ public sealed class PlayerMovementController : Component
 
 					if (_movingPlatform != null)
 					{
-						_oldParent = GameObject.Parent;
 						GameObject.SetParent(Controller.GroundObject, true);
 						Transform.ClearInterpolation();
 						Camera.Transform.ClearInterpolation();
 						_movingPlatform.PlayerTouching = true;
+					}
+					else
+					{
+						GameObject.SetParent(null, true);
+						Transform.ClearInterpolation();
+						Camera.Transform.ClearInterpolation();
 					}
 				}
 			}
@@ -461,9 +465,9 @@ public sealed class PlayerMovementController : Component
 				Controller.Velocity = Controller.Velocity.WithZ(0.0f);
 		}
 
-		if (!Controller.IsOnGround && GameObject.Parent != _oldParent)
+		if (!Controller.IsOnGround && GameObject.Parent != Scene)
 		{
-			GameObject.SetParent(_oldParent, true);
+			GameObject.SetParent(null, true);
 			Camera.Transform.ClearInterpolation();
 			Transform.ClearInterpolation();
 		}

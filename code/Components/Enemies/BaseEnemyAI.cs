@@ -164,7 +164,7 @@ public class BaseEnemyAI : Component
 			_patrolPathWorld.Add(pos + _startingPosition);
 	}
 
-	private void MoveTo(Vector3 destination)
+	protected void MoveTo(Vector3 destination)
 	{
 		// Log.Info($"Moving to {destination}");
 		Agent.MoveTo(destination);

@@ -1,4 +1,4 @@
-public sealed class FireEnemyAI : BaseEnemyAI
+public sealed class FireballEnemyAI : BaseEnemyAI
 {
 	private FireballSpell _fireball = null;
 

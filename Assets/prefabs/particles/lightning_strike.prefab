@@ -5,138 +5,6 @@
     "Name": "lightning_strike",
     "Tags": "particles",
     "Enabled": true,
-    "Components": [
-      {
-        "__type": "Sandbox.ParticleEffect",
-        "__guid": "2fb6f05a-d81c-4d6f-aaf0-941a3aa0f1a9",
-        "Alpha": {
-          "Constants": "1,0,0,0"
-        },
-        "ApplyColor": true,
-        "ApplyRotation": false,
-        "ApplyShape": true,
-        "Bounce": {
-          "Constants": "1,0,0,0"
-        },
-        "Brightness": {
-          "Constants": "1,0,0,0"
-        },
-        "Bumpiness": {},
-        "Collision": false,
-        "CollisionRadius": 1,
-        "Damping": {},
-        "DieOnCollisionChance": {},
-        "Force": false,
-        "ForceDirection": "0,0,0",
-        "ForceScale": {
-          "Constants": "1,0,0,0"
-        },
-        "Friction": {
-          "Constants": "1,0,0,0"
-        },
-        "Gradient": {
-          "GradientA": {
-            "color": [
-              {
-                "t": 0.5,
-                "c": "1,1,1,1"
-              }
-            ],
-            "alpha": []
-          },
-          "GradientB": {
-            "color": [
-              {
-                "t": 0.5,
-                "c": "1,1,1,1"
-              }
-            ],
-            "alpha": []
-          },
-          "ConstantA": "1,1,1,1",
-          "ConstantB": "1,1,1,1"
-        },
-        "Lifetime": {
-          "Constants": "1,0,0,0"
-        },
-        "MaxParticles": 50,
-        "OrbitalForce": {},
-        "OrbitalPull": {},
-        "PerParticleTimeScale": {
-          "Constants": "1,0,0,0"
-        },
-        "Pitch": {},
-        "PreWarm": 0,
-        "PushStrength": {},
-        "Roll": {},
-        "Scale": {
-          "Constants": "5,0,0,0"
-        },
-        "SequenceId": {},
-        "SequenceSpeed": {
-          "Constants": "1,0,0,0"
-        },
-        "SequenceTime": {
-          "Constants": "1,0,0,0"
-        },
-        "SheetSequence": false,
-        "Space": "World",
-        "StartDelay": {},
-        "StartVelocity": {
-          "Constants": "1,0,0,0"
-        },
-        "Stretch": {},
-        "TimeScale": 1,
-        "Tint": "1,0.9,0,1",
-        "Yaw": {}
-      },
-      {
-        "__type": "Sandbox.ParticleSpriteRenderer",
-        "__guid": "a873c86c-c2a1-4b47-8198-cfc2e7e5763a",
-        "Additive": false,
-        "Alignment": "LookAtCamera",
-        "BlurAmount": 1,
-        "BlurOpacity": 1,
-        "BlurSpacing": 1,
-        "DepthFeather": 0,
-        "FaceVelocity": false,
-        "FogStrength": 1,
-        "LeadingTrail": false,
-        "Lighting": false,
-        "MotionBlur": false,
-        "Opaque": false,
-        "RotationOffset": 0,
-        "Scale": 1,
-        "Shadows": false,
-        "SortMode": "Unsorted"
-      },
-      {
-        "__type": "Sandbox.ParticleRingEmitter",
-        "__guid": "ccc96f60-82ad-4af3-a0fa-29e98e575a02",
-        "Angle": {
-          "Constants": "360,0,0,0"
-        },
-        "AngleStart": {},
-        "Burst": 100,
-        "Delay": 0,
-        "DestroyOnEnd": false,
-        "Duration": 0.2,
-        "Flatness": {},
-        "Loop": false,
-        "Radius": {
-          "Constants": "50,0,0,0"
-        },
-        "Rate": 0,
-        "RateOverDistance": 0,
-        "Thickness": {
-          "Constants": "10,0,0,0"
-        },
-        "VelocityFromCenter": {
-          "Constants": "100,0,0,0"
-        },
-        "VelocityFromRing": {}
-      }
-    ],
     "Children": [
       {
         "__guid": "291b3af5-f01a-4035-9689-ac848b18c740",
@@ -434,6 +302,144 @@
             "Name": "Point 5",
             "Position": "-40.90236,90.2719,858.981",
             "Enabled": true
+          }
+        ]
+      },
+      {
+        "__guid": "5f2a543f-92e0-4f63-abe3-46a573fd2656",
+        "Flags": 0,
+        "Name": "Particles",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.ParticleEffect",
+            "__guid": "ab9c48c5-860f-4657-82cc-7499dd2ba45c",
+            "Alpha": {
+              "Constants": "1,0,0,0"
+            },
+            "ApplyColor": true,
+            "ApplyRotation": false,
+            "ApplyShape": true,
+            "Bounce": {
+              "Constants": "1,0,0,0"
+            },
+            "Brightness": {
+              "Constants": "1,0,0,0"
+            },
+            "Bumpiness": {},
+            "Collision": false,
+            "CollisionRadius": 1,
+            "Damping": {},
+            "DieOnCollisionChance": {},
+            "Force": false,
+            "ForceDirection": "0,0,0",
+            "ForceScale": {
+              "Constants": "1,0,0,0"
+            },
+            "Friction": {
+              "Constants": "1,0,0,0"
+            },
+            "Gradient": {
+              "GradientA": {
+                "color": [
+                  {
+                    "t": 0.5,
+                    "c": "1,1,1,1"
+                  }
+                ],
+                "alpha": []
+              },
+              "GradientB": {
+                "color": [
+                  {
+                    "t": 0.5,
+                    "c": "1,1,1,1"
+                  }
+                ],
+                "alpha": []
+              },
+              "ConstantA": "1,1,1,1",
+              "ConstantB": "1,1,1,1"
+            },
+            "Lifetime": {
+              "Constants": "1,0,0,0"
+            },
+            "MaxParticles": 50,
+            "OrbitalForce": {},
+            "OrbitalPull": {},
+            "PerParticleTimeScale": {
+              "Constants": "1,0,0,0"
+            },
+            "Pitch": {},
+            "PreWarm": 0,
+            "PushStrength": {},
+            "Roll": {},
+            "Scale": {
+              "Constants": "5,0,0,0"
+            },
+            "SequenceId": {},
+            "SequenceSpeed": {
+              "Constants": "1,0,0,0"
+            },
+            "SequenceTime": {
+              "Constants": "1,0,0,0"
+            },
+            "SheetSequence": false,
+            "Space": "World",
+            "StartDelay": {},
+            "StartVelocity": {
+              "Constants": "1,0,0,0"
+            },
+            "Stretch": {},
+            "TimeScale": 1,
+            "Tint": "1,0.9,0,1",
+            "Yaw": {}
+          },
+          {
+            "__type": "Sandbox.ParticleSpriteRenderer",
+            "__guid": "1e4b41d8-d79f-4990-853f-b358da75e91f",
+            "Additive": false,
+            "Alignment": "LookAtCamera",
+            "BlurAmount": 1,
+            "BlurOpacity": 1,
+            "BlurSpacing": 1,
+            "DepthFeather": 0,
+            "FaceVelocity": false,
+            "FogStrength": 1,
+            "LeadingTrail": false,
+            "Lighting": false,
+            "MotionBlur": false,
+            "Opaque": false,
+            "RotationOffset": 0,
+            "Scale": 1,
+            "Shadows": false,
+            "SortMode": "Unsorted"
+          },
+          {
+            "__type": "Sandbox.ParticleRingEmitter",
+            "__guid": "4cbf2f7c-ff9b-402a-a862-684df6c2a377",
+            "Angle": {
+              "Constants": "360,0,0,0"
+            },
+            "AngleStart": {},
+            "Burst": 100,
+            "Delay": 0,
+            "DestroyOnEnd": false,
+            "Duration": 0.2,
+            "Flatness": {},
+            "Loop": false,
+            "Radius": {
+              "Constants": "50,0,0,0"
+            },
+            "Rate": 0,
+            "RateOverDistance": 0,
+            "Thickness": {
+              "Constants": "10,0,0,0"
+            },
+            "VelocityFromCenter": {
+              "Constants": "100,0,0,0"
+            },
+            "VelocityFromRing": {}
           }
         ]
       }

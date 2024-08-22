@@ -25,7 +25,7 @@
       {
         "__type": "ProjectileSpellCollisionComponent",
         "__guid": "153e5231-7485-40eb-b456-5c2ee62d021f",
-        "ContactDamage": 5,
+        "ContactDamage": 17,
         "DoesExplode": false,
         "SplashDamage": 0
       }

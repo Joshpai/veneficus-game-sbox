@@ -64,6 +64,381 @@
       "Enabled": true,
       "__Prefab": "prefabs/objects/mana_orb_buff.prefab",
       "__PrefabVariables": {}
+    },
+    {
+      "__guid": "61ca1908-444f-454b-a198-092345c02bc3",
+      "Flags": 0,
+      "Name": "magic_missile_enemy",
+      "Position": "501.0057,-1769.595,116",
+      "Rotation": "0,0,0.9659257,0.2588191",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "6379e73f-7f75-4c12-a049-5951662751bf",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (1)",
+      "Position": "-1040.753,-2277.751,52.00002",
+      "Rotation": "0,0,0.4999999,0.8660253",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "4d636776-4006-46f7-91ca-5fe8a51adf62",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (2)",
+      "Position": "-1034.069,-1778.986,180",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "af1335e5-fd7d-4730-9653-ce3267eeb8d6",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (3)",
+      "Position": "-2398.103,-3666.308,396",
+      "Rotation": "0,0,0.7933531,0.6087614",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "f92db8ed-2348-4016-a8c5-07dd40bf3a21",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (4)",
+      "Position": "-2820.204,-3846.805,572",
+      "Rotation": "0,0,0.7071066,0.7071067",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "e8364621-01d6-4759-a733-90ef89ac8390",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (5)",
+      "Position": "-3348.824,-3849.206,476",
+      "Rotation": "0,0,0.4999999,0.8660253",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "6f0be2f6-7f7b-4f8b-9305-3e407921e3da",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (6)",
+      "Position": "-3027.196,-1977.971,356",
+      "Rotation": "0,0,-0.7071066,0.7071067",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "233bd0ff-6a95-49dc-8e8e-eab0d17c12fe",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (7)",
+      "Position": "-3623.162,-2090.627,532",
+      "Rotation": "0,0,-0.4999999,0.8660253",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "77c354e3-2c86-48cd-9065-d4c0b7e1a993",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (8)",
+      "Position": "-4013.957,-2364.56,356",
+      "Rotation": "0,0,-0.258819,0.9659257",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "a4a45488-a276-4c3e-b0de-31c637a4dc95",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (9)",
+      "Position": "-2529.97,-2212.202,57.5",
+      "Rotation": "0,0,-0.7071067,0.7071068",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "4d080d79-ffa5-41d0-88cf-1ba7c9c2048d",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (10)",
+      "Position": "-2576.315,-3502.119,57.5",
+      "Rotation": "0,0,0.7071067,0.7071068",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "fe4b45f3-e256-417f-819b-0d459187acee",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (11)",
+      "Position": "-3541.959,-3497.128,57.5",
+      "Rotation": "0,0,0.258819,0.9659257",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "c2bab529-5a79-4a8a-a282-100de884c14d",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (12)",
+      "Position": "-3875.854,-3063.771,57.5",
+      "Rotation": "0,0,0.1305262,0.9914448",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "44186726-cc01-40ba-a777-f1bb54ea8ad0",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (13)",
+      "Position": "-3754.43,-2523.574,57.5",
+      "Rotation": "0,0,-0.1305262,0.9914448",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "c38aabfc-6de1-45df-8e5b-318c8f404cf1",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (14)",
+      "Position": "-3401.504,-3149.299,-438.5",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "2ffcf5da-1a2f-4b60-9449-de5cff9478af",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (15)",
+      "Position": "-3440.001,-2785.643,-438.5001",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "f62439a2-ad6d-4989-b361-03cee55209ba",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (16)",
+      "Position": "-2759.224,-3103.03,-438.5",
+      "Rotation": "0,0,0.9914448,0.1305264",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "cce2e887-3298-4965-b420-e52f67718877",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (17)",
+      "Position": "-2773.98,-2794.094,-438.5",
+      "Rotation": "0,0,1,0.0000001947072",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "fad38192-9cd7-481a-8f2d-3e679451ba0b",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (18)",
+      "Position": "-4192.087,-4745.989,-804",
+      "Rotation": "0,0,0.8660253,0.5",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "13560af1-5b1d-48e2-ac74-3f28b6be07b8",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (19)",
+      "Position": "-4575.106,-4753.701,-1096",
+      "Rotation": "0,0,0.1305262,0.9914448",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "d9fea9e0-b5d4-44f9-b9e9-7b1652dddb68",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (20)",
+      "Position": "-5963.909,-7445.211,-1132",
+      "Rotation": "0,0,-0.6087613,0.7933533",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "f15a4485-f239-4532-9524-3b159d6db68a",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (21)",
+      "Position": "-5603.387,-7445.214,-1132",
+      "Rotation": "0,0,-0.7071066,0.7071067",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "d318b9f6-87f2-465f-998e-6da845e939a0",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (22)",
+      "Position": "-5198.012,-7445.218,-1132",
+      "Rotation": "0,0,-0.8660251,0.4999999",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "d4b6aadb-fe5e-423b-830f-4eb6c81e4d11",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (23)",
+      "Position": "-6473.401,-8995.584,-1440.031",
+      "Rotation": "-0.00003746152,-0.00006488525,0.5,0.8660253",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "a90d4123-ab52-44e6-a59f-f61add6c676a",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (24)",
+      "Position": "-4604.266,-8970.06,-1440.044",
+      "Rotation": "0.00006488525,0.00003746152,0.8660253,0.5",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "eb3954de-562b-4298-a31d-1ad9ea8ae00a",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (25)",
+      "Position": "-6391.997,-9402.685,-1238.317",
+      "Rotation": "-0.001833499,0.0003539696,0.3293734,0.9441979",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "b3dfcf4f-b9cb-4964-baa6-959bff3bef31",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (26)",
+      "Position": "-5893.966,-9380.408,-1238.135",
+      "Rotation": "-0.001287289,0.0009673449,0.6181686,0.7860439",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "b2fb6210-a4fc-43d1-995b-08034ab23368",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (27)",
+      "Position": "-5276.452,-9384.048,-1238.117",
+      "Rotation": "-0.0008902046,0.001385528,0.7395132,0.6731401",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "6a5200c8-aafb-4099-93c3-b6ddfc5d3937",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (28)",
+      "Position": "-5281.949,-9638.314,-1938",
+      "Rotation": "0,0,0.7071067,0.7071068",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "645aa29a-275a-4a87-8b7d-5c1250a05b2e",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (29)",
+      "Position": "-5889.846,-9603.555,-1938",
+      "Rotation": "0,0,0.7071067,0.7071068",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "6cb2c47f-c96a-4a40-824c-9a17c9ee7f8d",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (30)",
+      "Position": "-4642.073,-9367.747,-1238.519",
+      "Rotation": "-0.0005012706,0.001568719,0.8885364,0.4588033",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "42f4d89f-c7e6-4dd9-bad6-beda5e38c47b",
+      "Flags": 0,
+      "Name": "CheckpointOneTrigger",
+      "Position": "-3816.095,-3770.224,54.00006",
+      "Rotation": "0,0,-0.258819,0.9659258",
+      "Scale": "2.8559,1,12.82503",
+      "Enabled": true,
+      "__Prefab": "prefabs/triggers/checkpoint_trigger.prefab",
+      "__PrefabVariables": {
+        "Respawn Point Marker": {
+          "_type": "gameobject",
+          "go": "00c42542-2cb9-4514-9034-186fd8882e29"
+        }
+      }
+    },
+    {
+      "__guid": "00c42542-2cb9-4514-9034-186fd8882e29",
+      "Flags": 0,
+      "Name": "CheckpointOneRespawn",
+      "Position": "-3722.507,-3594.704,285.7088",
+      "Rotation": "0,0,0.9659258,0.2588192",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "5fd3c91d-1b4a-4c8f-b94a-3cba052671fd",
+          "__enabled": false,
+          "BodyGroups": 18446744073709551615,
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ]
+    },
+    {
+      "__guid": "d75d74e5-c69e-4d17-b8c1-d467556f22d0",
+      "Flags": 0,
+      "Name": "CheckpointTwoTrigger",
+      "Position": "-5571.081,-10232.07,-1237.834",
+      "Rotation": "-0.005238593,0.005642474,0.6804035,0.7327973",
+      "Scale": "1,2.935027,5.168543",
+      "Enabled": true,
+      "__Prefab": "prefabs/triggers/checkpoint_trigger.prefab",
+      "__PrefabVariables": {
+        "Respawn Point Marker": {
+          "_type": "gameobject",
+          "go": "bba10a44-f9e9-44f9-b82e-023a34167f57"
+        }
+      }
+    },
+    {
+      "__guid": "bba10a44-f9e9-44f9-b82e-023a34167f57",
+      "Flags": 0,
+      "Name": "CheckpointTwoRespawn",
+      "Position": "-5572.845,-9903.432,-1014.231",
+      "Rotation": "0,0,1,0.0000001947072",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "86c2d67a-5378-45ca-819e-aa4dd5e0481a",
+          "__enabled": false,
+          "BodyGroups": 18446744073709551615,
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ]
     }
   ],
   "SceneProperties": {

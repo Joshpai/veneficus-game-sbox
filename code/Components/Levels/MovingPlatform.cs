@@ -17,6 +17,21 @@ public sealed class MovingPlatform : Component
 	[Property]
 	public float MoveSpeed { get; set; } = 200.0f;
 
+	[Property]
+	public bool RepeatPath { get; set; } = false;
+
+	[Property]
+	public bool ShouldResetTouchedAtEnd { get; set; } = false;
+
+	[Property]
+	public bool ShouldResetTouchedAtStart { get; set; } = false;
+
+	[Property]
+	public float StartMoveDelay { get; set; } = 0.0f;
+
+	[Property]
+	public float ReturnMoveDelay { get; set; } = 1.0f;
+
 	public bool PlayerTouching { get; set; } = false;
 
 	public Vector3 Velocity { get; private set; } = Vector3.Zero;
@@ -27,10 +42,16 @@ public sealed class MovingPlatform : Component
 
 	private List<Vector3> _movePathWorld = new List<Vector3>();
 	private int _moveNextIndex = 0;
+	private int _pathDirection = 1;
+
+	private float _startMoveTime = 0.0f;
 
 	protected override void DrawGizmos()
 	{
 		base.DrawGizmos();
+
+		if (!Gizmo.IsSelected)
+			return;
 
 		Gizmo.Draw.LineThickness = 16.0f;
 		for (int i = 0; i < MovePathRelative.Count - 1; i++)
@@ -57,7 +78,8 @@ public sealed class MovingPlatform : Component
 
 	private bool CanMove()
 	{
-		return _moveNextIndex < _movePathWorld.Count;
+		return _moveNextIndex >= 0 && _moveNextIndex < _movePathWorld.Count &&
+			   _startMoveTime <= Time.Now;
 	}
 
 	private bool IsMoving()
@@ -69,10 +91,18 @@ public sealed class MovingPlatform : Component
 				PlayerTouching);
 	}
 
+	private float GetStartDelayTime()
+	{
+		return (_pathDirection == 1) ? StartMoveDelay : ReturnMoveDelay;
+	}
+
 	protected override void OnFixedUpdate()
 	{
 		if (!_playerTouched && PlayerTouching)
+		{
 			_playerTouched = true;
+			_startMoveTime = Time.Now + StartMoveDelay;
+		}
 
 		if (CanMove() && IsMoving())
 		{
@@ -81,17 +111,29 @@ public sealed class MovingPlatform : Component
 			Vector3 direction = remainingOffset.Normal;
 			Vector3 moveAmount = MoveSpeed * direction * Time.Delta;
 
-
 			if (remainingOffset.Length <= moveAmount.Length)
 			{
 				Velocity = remainingOffset;
 				Transform.Position = destination;
-				_moveNextIndex++;
+				_moveNextIndex += _pathDirection;
 			}
 			else
 			{
 				Velocity = MoveSpeed * direction;
 				Transform.Position += moveAmount;
+			}
+
+			// we have reached the end
+			if (!CanMove() && RepeatPath)
+			{
+				_pathDirection = -_pathDirection;
+				_moveNextIndex += 2 * _pathDirection;
+				if (ShouldResetTouchedAtStart && _pathDirection == 1)
+					_playerTouched = false;
+				else if (ShouldResetTouchedAtEnd && _pathDirection == -1)
+					_playerTouched = false;
+				else
+					_startMoveTime = Time.Now + GetStartDelayTime();
 			}
 		}
 	}

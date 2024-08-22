@@ -1,0 +1,152 @@
+{
+  "__guid": "7428e07f-d752-43f3-a324-dbe175d195e9",
+  "GameObjects": [
+    {
+      "__guid": "80060495-5eaa-41ed-b006-7cd4b5e4a7b8",
+      "Flags": 0,
+      "Name": "Plane",
+      "Scale": "10,10,1",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "f6e76c45-f5ae-4622-b630-1ca1ae8881ba",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/dev/plane.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ]
+    },
+    {
+      "__guid": "802483b8-ae89-46ff-93b0-5eeeb2fefc99",
+      "Flags": 0,
+      "Name": "Camera",
+      "Position": "428.8397,-245.5206,176.7339",
+      "Rotation": "0,0,0.9848078,0.1736483",
+      "Tags": "maincamera",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.CameraComponent",
+          "__guid": "5c1d1bac-69c4-42b6-a5f9-b34751ad1569",
+          "BackgroundColor": "0.33333,0.46275,0.52157,1",
+          "ClearFlags": "All",
+          "FieldOfView": 90,
+          "IsMainCamera": true,
+          "Orthographic": false,
+          "OrthographicHeight": 1204,
+          "Priority": 1,
+          "RenderExcludeTags": "",
+          "RenderTags": "",
+          "TargetEye": "None",
+          "Viewport": "0,0,1,1",
+          "ZFar": 10000,
+          "ZNear": 10
+        }
+      ]
+    },
+    {
+      "__guid": "ae0ce6de-6ddd-4ebd-ac56-08bfaf09710e",
+      "Flags": 0,
+      "Name": "2D Skybox",
+      "Tags": "skybox",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SkyBox2D",
+          "__guid": "0c81fe1e-a5d8-4f53-9e4d-4a43a28a837e",
+          "SkyMaterial": "materials/skybox/skybox_sunrise_01.vmat",
+          "Tint": "1,1,1,1"
+        }
+      ]
+    },
+    {
+      "__guid": "73a95d05-00af-4a68-a1bc-0f126733f326",
+      "Flags": 0,
+      "Name": "Cube",
+      "Position": "-128.9341,-88.944,24.99927",
+      "Rotation": "0,0,0.08715574,0.9961948",
+      "Scale": "6.153661,3.315721,0.9999996",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "696b8939-931d-4545-8668-98f9f92e7291",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/dev/box.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ]
+    },
+    {
+      "__guid": "227b724a-cd5d-4132-89d0-f9a0845d235d",
+      "Flags": 0,
+      "Name": "Object",
+      "Position": "-69.54515,-97.22935,50.46815",
+      "Rotation": "0,0,0.8660254,0.5",
+      "Scale": "3.144962,3.144962,3.144962",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SkinnedModelRenderer",
+          "__guid": "a866f3f0-e4da-4e5e-b0b6-f2136d9bc320",
+          "BodyGroups": 18446744073709551615,
+          "CreateBoneObjects": false,
+          "Model": "models/playermodels/frog/playerfrog.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1",
+          "UseAnimGraph": true
+        }
+      ]
+    },
+    {
+      "__guid": "ebbd93d6-8afe-4aa5-8932-16e12fb52d41",
+      "Flags": 0,
+      "Name": "Screen",
+      "Position": "115.0115,-272.2751,283.8139",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ScreenPanel",
+          "__guid": "f5360af7-fe78-4ac9-8289-5a071cc80be6",
+          "AutoScreenScale": true,
+          "Opacity": 1,
+          "Scale": 1,
+          "ZIndex": 100
+        },
+        {
+          "__type": "MainMenu",
+          "__guid": "be469723-e482-43a1-8903-2d9209c2f6fd"
+        }
+      ]
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 30,
+    "NetworkInterpolation": true,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true,
+    "NavMesh": {
+      "Enabled": false,
+      "IncludeStaticBodies": true,
+      "IncludeKeyframedBodies": true,
+      "EditorAutoUpdate": true,
+      "AgentHeight": 64,
+      "AgentRadius": 16,
+      "AgentStepSize": 18,
+      "AgentMaxSlope": 40,
+      "ExcludedBodies": "",
+      "IncludedBodies": ""
+    }
+  },
+  "Title": "main_menu",
+  "Description": "",
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

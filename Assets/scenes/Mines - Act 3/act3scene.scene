@@ -62,6 +62,77 @@
       "Enabled": true,
       "__Prefab": "prefabs/objects/mana_orb_buff.prefab",
       "__PrefabVariables": {}
+    },
+    {
+      "__guid": "7be63ebb-82ab-4a18-bd9d-a3246f23acd3",
+      "Flags": 0,
+      "Name": "mana_orb_buff (1)",
+      "Position": "-192.1416,621.3812,71.57082",
+      "Tags": "trigger",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/mana_orb_buff.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "23238707-3da4-4999-ac9a-4dd6b6dc5d14",
+      "Flags": 0,
+      "Name": "CheckpointOneTrigger",
+      "Position": "131.7754,-4672,-8452.523",
+      "Rotation": "-0.5,0.5,0.5,0.5",
+      "Scale": "1,4.921585,5.552709",
+      "Enabled": true,
+      "__Prefab": "prefabs/triggers/checkpoint_trigger.prefab",
+      "__PrefabVariables": {
+        "Respawn Point Marker": null
+      }
+    },
+    {
+      "__guid": "94dc6380-2052-46b2-a924-a336fd5d7ce0",
+      "Flags": 0,
+      "Name": "CheckpointOneRespawn",
+      "Position": "125.3598,-4208.208,2757.185",
+      "Rotation": "0,0,1,0.0000001947072",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "f26f5bc5-9145-49f9-b4b5-e03bcccd47c7",
+          "__enabled": false,
+          "BodyGroups": 18446744073709551615,
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ]
+    },
+    {
+      "__guid": "73bf74d1-0959-4bed-99cb-399d9702c77b",
+      "Flags": 0,
+      "Name": "CheckpointTwoTrigger",
+      "Position": "128.1057,-6396.974,-14559.11",
+      "Scale": "5.15965,1,7.634994",
+      "Enabled": true,
+      "__Prefab": "prefabs/triggers/checkpoint_trigger.prefab",
+      "__PrefabVariables": {
+        "Respawn Point Marker": null
+      }
+    },
+    {
+      "__guid": "9c25d0d3-cc62-4e28-8afd-eb4831a882b4",
+      "Flags": 0,
+      "Name": "CheckpointTwoRespawn",
+      "Position": "123.6588,-5916.409,-14388.84",
+      "Rotation": "0,0,1,0.0000001947072",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "2c5498af-f843-4f77-b4e7-aa628898914c",
+          "__enabled": false,
+          "BodyGroups": 18446744073709551615,
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ]
     }
   ],
   "SceneProperties": {

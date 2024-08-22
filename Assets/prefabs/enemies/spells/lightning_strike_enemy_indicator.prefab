@@ -1,0 +1,35 @@
+{
+  "RootObject": {
+    "__guid": "f431d8e7-aa6f-4cad-9ee9-5ac2889b9591",
+    "Flags": 0,
+    "Name": "lightning_strike_enemy_indicator",
+    "Enabled": true,
+    "Children": [
+      {
+        "__guid": "f095000e-2531-405e-88d2-5413face4dd8",
+        "Flags": 0,
+        "Name": "Plane",
+        "Scale": "2,2,1",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "538cd651-cafb-48f8-878b-9e01614a6559",
+            "BodyGroups": 18446744073709551615,
+            "MaterialOverride": "materials/dev/target_circle.vmat",
+            "Model": "models/dev/plane.vmdl",
+            "RenderType": "Off",
+            "Tint": "1,1,1,1"
+          }
+        ]
+      }
+    ],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

@@ -1,0 +1,26 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+
+<root>
+	<div class="title-container">
+		<div class="title">
+			<p>Veneficus</p>
+		</div>
+	</div>
+	<div class="selection-container">
+		<div class="selections">
+			<button>Play Story Mode</button>
+			<button>Settings</button>
+			<button>Exit Game</button>
+		</div>
+	</div>
+</root>
+
+@code
+{
+	/// <summary>
+	/// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
+	/// </summary>
+	protected override int BuildHash() => System.HashCode.Combine( Time.Now );
+}
