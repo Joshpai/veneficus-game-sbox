@@ -1,0 +1,70 @@
+MainMenu
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-weight: bold;
+  border-radius: 20px;
+  pointer-events: all;
+
+  .title-container
+  {
+    position: absolute;
+    top: 15%;
+    width: 100%;
+    background-image:
+      linear-gradient(
+        180deg,
+        transparent 0%,
+        #999 40%,
+        #999 60%,
+        transparent 100%
+      );
+    align-items: center;
+    justify-content: center;
+
+    .title
+    {
+      font-size: 100px;
+      color: black;
+    }
+  }
+
+  .selection-container
+  {
+    position: absolute;
+    left: 50px;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+
+    .selections
+    {
+      flex-direction: column;
+      gap: 15px;
+      font-size: 50px;
+
+      button
+      {
+        padding: 10px;
+        background-color: red;
+        background-image:
+          linear-gradient(180deg, black 0%, transparent 100%)
+      }
+
+      button:hover
+      {
+        background-color: green;
+        sound-in: "sounds/UI/belt-buckle-01.sound";
+      }
+
+      button:active
+      {
+        background-color: blue;
+        sound-in: "sounds/UI/belt-buckle-05.sound";
+      }
+    }
+  }
+}
