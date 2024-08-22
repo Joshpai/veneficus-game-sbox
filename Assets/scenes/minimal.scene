@@ -147,6 +147,8 @@
           "DamageMultiplier": 1,
           "DestroyOnDeath": true,
           "HealMultiplier": 1,
+          "HealthRegenDelay": 10,
+          "HealthRegenRate": 10,
           "MaxHealth": 100
         }
       ]
@@ -197,6 +199,8 @@
           "DamageMultiplier": 1,
           "DestroyOnDeath": true,
           "HealMultiplier": 1,
+          "HealthRegenDelay": 10,
+          "HealthRegenRate": 10,
           "MaxHealth": 100
         }
       ]
@@ -247,6 +251,8 @@
           "DamageMultiplier": 1,
           "DestroyOnDeath": true,
           "HealMultiplier": 1,
+          "HealthRegenDelay": 10,
+          "HealthRegenRate": 10,
           "MaxHealth": 100
         }
       ]
@@ -8323,6 +8329,15 @@
       "Rotation": "0,0,-0.6087614,0.7933534",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/lightning_strike_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "dd63b5eb-0e8c-4334-beca-4436a9e0de13",
+      "Flags": 0,
+      "Name": "spell_unlock",
+      "Position": "545.821,-371.7086,128.0775",
+      "Enabled": true,
+      "__Prefab": "prefabs/triggers/spell_unlock.prefab",
       "__PrefabVariables": {}
     }
   ],
