@@ -16,13 +16,13 @@ PlayerHUD
       .flask-tip
       {
         border: 3px solid white;
-        position: absolute;
+        position: relative;
         top: 0;
         width: 50px;
         height: 35px;
         background-color: #e39191;
-        left: 50%;
-        transform: translateX(-50%);
+        margin-left: auto;
+        margin-right: auto;
         border-bottom: none;
       }
 
@@ -99,102 +99,114 @@ PlayerHUD
           }
         }
 
-        .value
+        .value-container
         {
           position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          font-size: 50px;
-          text-shadow: 0 0 3px #e39191;
+          width: 100%;
+          height: 100%;
+
+          .value
+          {
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+            text-shadow: 0 0 3px #e39191;
+          }
         }
       }
     }
   }
 
-  .spells
+  .spells-container
   {
-    /* background-color: green; */
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
     bottom: 10px;
-    gap: 5px;
+    left: 0;
+    right: 0;
 
-    .spell
+    .spells
     {
-      width: 100px;
-      height: 100px;
-      margin-top: auto;
-      background-color: black;
+      position: relative;
+      gap: 5px;
+      margin-right: auto;
+      margin-left: auto;
 
-      transition: filter 0.2s ease;
-      transition: width 0.2s ease;
-      transition: height 0.2s ease;
-
-      .xp
+      .spell
       {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        padding: 5px;
+        width: 100px;
+        height: 100px;
+        margin-top: auto;
+        background-color: black;
 
-        .spell-internal-wrapper
+        transition: filter 0.2s ease;
+        transition: width 0.2s ease;
+        transition: height 0.2s ease;
+
+        .xp
         {
           position: relative;
           width: 100%;
           height: 100%;
-          flex-direction: column;
-          background-color: white;
+          padding: 5px;
 
-          .spell-level
+          .spell-internal-wrapper
           {
-            position: absolute;
-            bottom: 0;
-            /* There is a weird bug with doing right: 0; after adding the 8th
-             * spell. This will just dissapper. Doing some quick debugging, it
-             * happens around .spell-internal-wrapper with width: 120px, but I
-             * don't really care enough to work out what's going on, and
-             * .spell-cost is now unused, so just shift this left... */
-            left: 0;
-            font-family: "Times New Roman";
-            font-size: 40px;
-            letter-spacing: 3px;
-            text-shadow: 0px 0px 5px red;
-          }
+            position: relative;
+            width: 100%;
+            height: 100%;
+            flex-direction: column;
+            background-color: white;
 
-          .spell-cost
-          {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            font-size: 40px;
-            letter-spacing: 3px;
-            text-shadow: 0px 0px 2px blue;
-          }
+            .spell-level
+            {
+              position: absolute;
+              bottom: 0;
+              /* There is a weird bug with doing right: 0; after adding the 8th
+               * spell. This will just dissapper. Doing some quick debugging, it
+               * happens around .spell-internal-wrapper with width: 120px, but I
+               * don't really care enough to work out what's going on, and
+               * .spell-cost is now unused, so just shift this left... */
+              left: 0;
+              font-family: "Times New Roman";
+              font-size: 40px;
+              letter-spacing: 3px;
+              text-shadow: 0px 0px 5px red;
+            }
 
-          .cooldown
-          {
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            top: 0;
-            right: 0;
-            padding: 0;
+            .spell-cost
+            {
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              font-size: 40px;
+              letter-spacing: 3px;
+              text-shadow: 0px 0px 2px blue;
+            }
+
+            .cooldown
+            {
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              top: 0;
+              right: 0;
+              padding: 0;
+            }
           }
         }
       }
-    }
 
-    .inactive
-    {
-      filter: brightness(50%);
-    }
+      .inactive
+      {
+        filter: brightness(50%);
+      }
 
-    .active
-    {
-      width: 150px;
-      height: 150px;
+      .active
+      {
+        width: 150px;
+        height: 150px;
+      }
     }
   }
 

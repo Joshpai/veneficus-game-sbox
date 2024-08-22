@@ -45,7 +45,7 @@
 				[
 					{
 						_class = "AnimFile"
-						name = "Wizard"
+						name = "Wizard_Idle"
 						activity_name = ""
 						activity_weight = 1
 						weight_list_name = ""
@@ -63,7 +63,99 @@
 						start_frame = -1
 						end_frame = -1
 						framerate = -1.0
+						take = 8
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Wizard_Forward"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/PlayerModels/Wizard/Wizard.fbx"
+						start_frame = 24
+						end_frame = 71
+						framerate = -1.0
+						take = 2
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Wizard_Backward"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/PlayerModels/Wizard/Wizard.fbx"
+						start_frame = 28
+						end_frame = -1
+						framerate = -1.0
 						take = 3
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Wizard_Jump"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/PlayerModels/Wizard/Wizard.fbx"
+						start_frame = 0
+						end_frame = 59
+						framerate = -1.0
+						take = 5
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Wizard_CastSpell"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/PlayerModels/Wizard/Wizard.fbx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						take = 6
 						reverse = false
 					},
 				]
@@ -72,7 +164,7 @@
 		]
 		model_archetype = ""
 		primary_associated_entity = ""
-		anim_graph_name = ""
+		anim_graph_name = "animgraphs/player_wizard.vanmgrph"
 		base_model_name = ""
 	}
 }

@@ -95,6 +95,12 @@ public sealed class PlayerMovementController : Component
 	[Property]
 	public float PolymorphedStepHeight { get; set; } = 5.0f;
 
+	[Property]
+	public AnimationGraph PolymorphedAnimGraph { get; set; } = null;
+
+	[Property]
+	public AnimationGraph HumanAnimGraph { get; set; } = null;
+
 	// Too small a thing to fit elsewhere. Maximum range of an item the player
 	// can interact with.
 	[Property]
@@ -125,12 +131,10 @@ public sealed class PlayerMovementController : Component
 	private Transform _cameraReferenceHuman;
 	private Transform _cameraReferencePolymorphed;
 
-	private CitizenAnimationHelper _animationHelper;
-
 	public bool IsPolymorphed;
 
 	public bool LevelStarted { get; private set; }= true;
-	private ModelRenderer _modelRenderer;
+	private SkinnedModelRenderer _modelRenderer;
 	private Model _oldModel;
 
 	public Vector3 WishDir;
@@ -146,9 +150,8 @@ public sealed class PlayerMovementController : Component
 										"all of Body, Camera, Controller " +
 										"set to some value!");
 
-		_animationHelper = Body.Components.Get<CitizenAnimationHelper>();
-		if (_animationHelper == null)
-			throw new ArgumentException("Body must have a CitizenAnimationHelper");
+		_modelRenderer =
+			Components.GetInDescendantsOrSelf<SkinnedModelRenderer>();
 
 		// NOTE: we must set this before using CameraFollowPosition! A side
 		// effect of caching this is that we can't edit this value live. Maybe
@@ -178,7 +181,9 @@ public sealed class PlayerMovementController : Component
 
 	public void SetPlayerNotStarted()
 	{
-		_modelRenderer = Components.GetInDescendantsOrSelf<ModelRenderer>();
+		_modelRenderer =
+			Components.GetInDescendantsOrSelf<SkinnedModelRenderer>();
+
 		if (_modelRenderer != null)
 		{
 			_oldModel = _modelRenderer.Model;
@@ -225,6 +230,9 @@ public sealed class PlayerMovementController : Component
 		Controller.Radius = IsPolymorphed ? PolymorphedRadius : HumanRadius;
 		Controller.StepHeight = IsPolymorphed ? PolymorphedStepHeight
 											   : HumanStepHeight;
+
+		_modelRenderer.SceneModel.AnimationGraph =
+			IsPolymorphed ? PolymorphedAnimGraph : HumanAnimGraph;
 	}
 
 	protected override void DrawGizmos()
@@ -296,6 +304,7 @@ public sealed class PlayerMovementController : Component
 		cameraPos = (tr.Hit) ? tr.HitPosition : cameraPos;
 
 		Camera.Transform.Position = cameraPos;
+
 	}
 
 	// Short dump on design justification for this feature:
@@ -474,8 +483,18 @@ public sealed class PlayerMovementController : Component
 
 		Controller.Move();
 
-		_animationHelper.IsGrounded = Controller.IsOnGround;
-		_animationHelper.WithVelocity(Controller.Velocity);
+		var normVel = Controller.Velocity.WithZ(0.0f) / WalkSpeed;
+		var forback = (normVel.Dot(EyeAngles.Forward) + 1.0f) / 2.0f;
+		forback =
+			MathX.Lerp(
+				_modelRenderer.GetFloat("forward_backward"),
+				forback,
+				15.0f * Time.Delta
+			);
+		_modelRenderer.Set("forward_backward", forback);
+		_modelRenderer.Set("left_right", 0.0f);
+		_modelRenderer.Set("b_jumping", !Controller.IsOnGround && _didJump);
+		_modelRenderer.Set("b_on_ground", !Controller.IsOnGround);
 
 		// DO THIS AT THE END! We might load a new level.
 		if (Input.Pressed("use"))

@@ -5,6 +5,10 @@
 @if (!Movement.LevelStarted) return;
 
 <root>
+	<div class="crosshair-container">
+		<div class="crosshair"></div>
+	</div>
+
 	<div class="health">
 		<div class="flask-container">
 			<div class="flask-tip"></div>
@@ -16,60 +20,64 @@
 					<div class="liquid-overlay linear-gradient"></div>
 					<!-- <div class="liquid-overlay underlight"></div> -->
 				</div>
-				<div class="value">@MathF.Ceiling(Health.Health)</div>
+				<div class="value-container">
+					<div class="value">@MathF.Ceiling(Health.Health)</div>
+				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="spells">
-		@for (int i = (int)BaseSpell.SpellType.SpellTypeMin + 1;
-			  i < (int)BaseSpell.SpellType.SpellTypeMax; i++)
-		{
-			var spellType = (BaseSpell.SpellType)i;
+	<div class="spells-container">
+		<div class="spells">
+			@for (int i = (int)BaseSpell.SpellType.SpellTypeMin + 1;
+				  i < (int)BaseSpell.SpellType.SpellTypeMax; i++)
+			{
+				var spellType = (BaseSpell.SpellType)i;
 
-			if (!Spellcasting.IsSpellUnlocked(spellType))
-				continue;
+				if (!Spellcasting.IsSpellUnlocked(spellType))
+					continue;
 
-			var active = ((int)Spellcasting.ActiveSpell == i)
-					   ? "active" : "inactive";
-			var spellXpAmount = (100.0f * i) / (float)(BaseSpell.SpellType.SpellTypeMax);
-			var xpCol = "red";
-			var cooldownCol = "rgba(0, 0, 0, 0.9)";
-			//var cooldownAmount = 100.0f - (100.0f * i) / (float)(BaseSpell.SpellType.SpellTypeMax);
-			var cooldownAmount = Spellcasting.GetSpellCooldownPercent(spellType);
-			// Invert the cooldown (so we rotate counter-clockwise) and scale
-			cooldownAmount = 100.0f * (cooldownAmount);
-			// Short cooldowns look silly, so just don't render them.
-			if (Spellcasting.GetSpellCooldownMax(spellType) < 0.1f)
-				cooldownAmount = 0.0f;
-			// If the spell is blocked, then show this as a max cooldown
-			if (Spellcasting.IsSpellBlocked(spellType))
-				cooldownAmount = 100.0f;
+				var active = ((int)Spellcasting.ActiveSpell == i)
+						   ? "active" : "inactive";
+				var spellXpAmount = (100.0f * i) / (float)(BaseSpell.SpellType.SpellTypeMax);
+				var xpCol = "red";
+				var cooldownCol = "rgba(0, 0, 0, 0.9)";
+				//var cooldownAmount = 100.0f - (100.0f * i) / (float)(BaseSpell.SpellType.SpellTypeMax);
+				var cooldownAmount = Spellcasting.GetSpellCooldownPercent(spellType);
+				// Invert the cooldown (so we rotate counter-clockwise) and scale
+				cooldownAmount = 100.0f * (cooldownAmount);
+				// Short cooldowns look silly, so just don't render them.
+				if (Spellcasting.GetSpellCooldownMax(spellType) < 0.1f)
+					cooldownAmount = 0.0f;
+				// If the spell is blocked, then show this as a max cooldown
+				if (Spellcasting.IsSpellBlocked(spellType))
+					cooldownAmount = 100.0f;
 
-			var cost = Spellcasting.GetSpellCost(spellType);
+				var cost = Spellcasting.GetSpellCost(spellType);
 
-			<!-- Outer circle shows XP, Inner darkened shows cooldown,
-				 roman numberal inside shows level. Mana cost? -->
-			<!-- TODO: visualise spell charge up time? -->
-			<div class="spell @active">
-				<div class="xp"
-					 style="background-image:
-						conic-gradient(@xpCol 0%, @xpCol @spellXpAmount%,
-									   transparent @spellXpAmount%)">
-					<div class="spell-internal-wrapper">
-						<div>@spellType</div>
-						<!-- <div>Spell Image @i</div> -->
-						<div class="spell-level">III</div>
-						<div class="cooldown"
-							 style="background-image:
-								conic-gradient(@cooldownCol 0%,
-											   @cooldownCol @cooldownAmount%,
-											   transparent @cooldownAmount%)">
+				<!-- Outer circle shows XP, Inner darkened shows cooldown,
+					 roman numberal inside shows level. Mana cost? -->
+				<!-- TODO: visualise spell charge up time? -->
+				<div class="spell @active">
+					<div class="xp"
+						 style="background-image:
+							conic-gradient(@xpCol 0%, @xpCol @spellXpAmount%,
+										   transparent @spellXpAmount%)">
+						<div class="spell-internal-wrapper">
+							<div>@spellType</div>
+							<!-- <div>Spell Image @i</div> -->
+							<div class="spell-level">III</div>
+							<div class="cooldown"
+								 style="background-image:
+									conic-gradient(@cooldownCol 0%,
+												   @cooldownCol @cooldownAmount%,
+												   transparent @cooldownAmount%)">
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		}
+			}
+		</div>
 	</div>
 
 	<div class="mana-container">

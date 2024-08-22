@@ -51,7 +51,7 @@
 				[
 					{
 						_class = "AnimFile"
-						name = "PlayerFrog"
+						name = "Frog_Forward"
 						activity_name = ""
 						activity_weight = 1
 						weight_list_name = ""
@@ -69,7 +69,99 @@
 						start_frame = -1
 						end_frame = -1
 						framerate = -1.0
-						take = 5
+						take = 1
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Frog_Backward"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/PlayerModels/Frog/PlayerFrog.fbx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						take = 4
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Frog_Jump"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/PlayerModels/Frog/PlayerFrog.fbx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						take = 2
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Frog_Idle"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.8
+						fade_out_time = 0.8
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = true
+						enable_scale = false
+						source_filename = "models/PlayerModels/Frog/PlayerFrog.fbx"
+						start_frame = 27
+						end_frame = 28
+						framerate = 1.0
+						take = 3
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Frog_Fall"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = true
+						enable_scale = false
+						source_filename = "models/PlayerModels/Frog/PlayerFrog.fbx"
+						start_frame = 55
+						end_frame = 55
+						framerate = -1.0
+						take = 2
 						reverse = false
 					},
 				]
@@ -78,7 +170,7 @@
 		]
 		model_archetype = "default"
 		primary_associated_entity = ""
-		anim_graph_name = ""
+		anim_graph_name = "animgraphs/player_frog.vanmgrph"
 		base_model_name = ""
 	}
 }
