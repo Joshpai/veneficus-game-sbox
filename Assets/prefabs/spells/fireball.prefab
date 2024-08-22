@@ -3,7 +3,7 @@
     "__guid": "c56165d2-743f-4d75-a0fb-6f9d9a248610",
     "Flags": 0,
     "Name": "fireball",
-    "Tags": "projectile,trigger",
+    "Tags": "projectile",
     "Enabled": true,
     "Components": [
       {
@@ -28,6 +28,27 @@
         "ContactDamage": 50,
         "DoesExplode": true,
         "SplashDamage": 20
+      },
+      {
+        "__type": "Sandbox.Rigidbody",
+        "__guid": "b50e53f5-032e-4092-a633-a8d1dcf8276f",
+        "AngularDamping": 0,
+        "Gravity": false,
+        "LinearDamping": 0,
+        "Locking": {
+          "X": true,
+          "Y": true,
+          "Z": true,
+          "Pitch": true,
+          "Yaw": true,
+          "Roll": true
+        },
+        "MassCenterOverride": "0,0,0",
+        "MassOverride": 0,
+        "MotionEnabled": false,
+        "OverrideMassCenter": false,
+        "RigidbodyFlags": 0,
+        "StartAsleep": false
       }
     ],
     "Children": [],

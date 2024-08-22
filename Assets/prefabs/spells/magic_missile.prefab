@@ -28,6 +28,27 @@
         "ContactDamage": 17,
         "DoesExplode": false,
         "SplashDamage": 0
+      },
+      {
+        "__type": "Sandbox.Rigidbody",
+        "__guid": "44bb6f93-6850-4cd0-bf60-fa705b1d2b46",
+        "AngularDamping": 0,
+        "Gravity": false,
+        "LinearDamping": 0,
+        "Locking": {
+          "X": true,
+          "Y": true,
+          "Z": true,
+          "Pitch": true,
+          "Yaw": true,
+          "Roll": true
+        },
+        "MassCenterOverride": "0,0,0",
+        "MassOverride": 0,
+        "MotionEnabled": false,
+        "OverrideMassCenter": false,
+        "RigidbodyFlags": 0,
+        "StartAsleep": false
       }
     ],
     "Children": [],
