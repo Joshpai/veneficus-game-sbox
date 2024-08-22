@@ -10,15 +10,27 @@
 	</div>
 	<div class="selection-container">
 		<div class="selections">
-			<button>Play Story Mode</button>
-			<button>Settings</button>
-			<button>Exit Game</button>
+			<div class="button-container">
+				<button onclick=@( () => Log.Info("Play") )>Play Story Mode</button>
+			</div>
+			<div class="button-container">
+				<button onclick=@( () => Log.Info("Settings") )>Settings</button>
+			</div>
+			<div class="button-container">
+				<button onclick=@( () => ExitGame() )>Exit Game</button>
+			</div>
 		</div>
 	</div>
 </root>
 
 @code
 {
+	public void ExitGame()
+	{
+		Log.Info("Exit");
+		Game.Close();
+	}
+
 	/// <summary>
 	/// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
 	/// </summary>
