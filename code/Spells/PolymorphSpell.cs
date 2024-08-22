@@ -13,7 +13,7 @@ public class PolymorphSpell : BaseSpell
 
 	private PlayerMovementController _playerMovementController;
 	private ModelRenderer _modelRenderer;
-	private String _modelPath = "models/citizen_props/beachball.vmdl";
+	private String _modelPath = "models/PlayerModels/Frog/playerfrog.vmdl";
 	private Model _nextModel;
 	private Model _currentModel;
 
