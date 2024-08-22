@@ -11,6 +11,8 @@
         "DamageMultiplier": 1,
         "DestroyOnDeath": true,
         "HealMultiplier": 1,
+        "HealthRegenDelay": 0,
+        "HealthRegenRate": 0,
         "MaxHealth": 100
       },
       {
@@ -30,8 +32,6 @@
         "AttackRangeIdeal": 100,
         "AttackRangeMax": 300,
         "AvoidSpells": false,
-        "BurstCount": 1,
-        "BurstRate": 0.15,
         "EnemyLevel": 1,
         "EyePosition": "0,0,64",
         "HearingRadius": 125,

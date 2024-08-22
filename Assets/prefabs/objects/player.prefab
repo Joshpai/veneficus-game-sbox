@@ -66,6 +66,8 @@
         "DamageMultiplier": 1,
         "DestroyOnDeath": false,
         "HealMultiplier": 1,
+        "HealthRegenDelay": 3,
+        "HealthRegenRate": 10,
         "MaxHealth": 100
       },
       {
