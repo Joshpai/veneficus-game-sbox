@@ -11,7 +11,7 @@ public sealed class CheckpointTrigger : Component, Component.ITriggerListener
 		if (playerController == null)
 			return;
 
-		Log.Info("Checkpoint");
+		// Log.Info("Checkpoint");
 
 		LevelManagerStaticStore.UsedObjects.Add(GameObject.Parent.Id);
 

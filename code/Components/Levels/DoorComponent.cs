@@ -9,7 +9,8 @@ public sealed class DoorComponent : Component
 		MoveDown,
 		MoveLeft,
 		MoveRight,
-		Delete
+		Delete,
+		Rotate
 	}
 
 	[Property]
@@ -21,12 +22,25 @@ public sealed class DoorComponent : Component
 	[Property]
 	public float OpenTime { get; set; } = 1.0f;
 
+	[Property]
+	public Vector3 RotationAxis { get; set; } = new Vector3(1.0f, 0.0f, 0.0f);
+
+	[Property]
+	public float RotationAmount { get; set; } = 90.0f;
+
+	[Property]
+	public float RotationSpeed { get; set; } = 3.0f;
+
 	private Vector3 _startPos;
 	private float _startOpenTime = 0.0f;
+	private Rotation _targetRotation;
 
 	protected override void OnStart()
 	{
 		_startPos = Transform.Position;
+
+		_targetRotation =
+			Transform.Rotation.RotateAroundAxis(RotationAxis, RotationAmount);
 	}
 
 	private bool ShouldOpen()
@@ -59,12 +73,22 @@ public sealed class DoorComponent : Component
 		if (_startOpenTime != 0.0f && Time.Now - _startOpenTime < OpenTime)
 		{
 			var closedAmount = (Time.Now - _startOpenTime) / OpenTime;
-			Transform.Position =
-				Vector3.Lerp(
-					_startPos,
-					_startPos + GetOpenDirection() * OpenDistance,
-					closedAmount
-				);
+			if (OpenType == DoorOpenType.Rotate)
+			{
+				Transform.Rotation =
+					Rotation.Slerp(Transform.Rotation,
+								   _targetRotation,
+								   Time.Delta * RotationSpeed);
+			}
+			else
+			{
+				Transform.Position =
+					Vector3.Lerp(
+						_startPos,
+						_startPos + GetOpenDirection() * OpenDistance,
+						closedAmount
+					);
+			}
 		}
 	}
 

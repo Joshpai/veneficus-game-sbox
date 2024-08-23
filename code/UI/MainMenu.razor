@@ -127,13 +127,13 @@
 	
 	public void PlayGame()
 	{
-		Log.Info("Play Game");
+		// Log.Info("Play Game");
 		_selectedScreen = MainMenuScreens.PlaySaveSelect;
 	}
 
 	public void NewSave()
 	{
-		Log.Info("New Save");
+		// Log.Info("New Save");
 		if (FirstLevel != null)
 			LevelManager.LoadLevelImmediate(FirstLevel, true, true);
 	}
@@ -141,8 +141,8 @@
 	public Action SelectSave(int saveIdx)
 	{
 		return () => {
-			Log.Info("Select Save");
-			Log.Info(saveIdx);
+			// Log.Info("Select Save");
+			// Log.Info(saveIdx);
 			_selectedScreen = MainMenuScreens.PlayLevelSelect;
 		};
 	}
@@ -160,7 +160,7 @@
 	public Action SelectAct(int actIdx)
 	{
 		return () => {
-			Log.Info(actIdx);
+			// Log.Info(actIdx);
 			if (actIdx < ActScenes.Count && ActScenes[actIdx] != null)
 				LevelManager.LoadLevelImmediate(ActScenes[actIdx], true, true);
 		};

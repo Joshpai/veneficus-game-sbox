@@ -152,15 +152,15 @@ public sealed class LightningStrikeEnemyAI : BaseEnemyAI
 		{
 			if (IsIndicatingAttack())
 			{
-				Log.Info("Indicating");
+				// Log.Info("Indicating");
 			}
 			else if (IsAttackLockedIn())
 			{
-				Log.Info("Locked in");
+				// Log.Info("Locked in");
 			}
 			else if (IsAttackReady() && _indicator.Enabled)
 			{
-				Log.Info("Attacking");
+				// Log.Info("Attacking");
 				_indicator.Enabled = false;
 
 				if (LightningPrefab != null)
