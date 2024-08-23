@@ -11,6 +11,8 @@
         "DamageMultiplier": 1,
         "DestroyOnDeath": true,
         "HealMultiplier": 1,
+        "HealthRegenDelay": 0,
+        "HealthRegenRate": 0,
         "MaxHealth": 100
       },
       {
@@ -47,6 +49,12 @@
         "AvoidSpells": false,
         "EnemyLevel": 1,
         "EyePosition": "0,0,64",
+        "Health": {
+          "_type": "component",
+          "component_id": "1edf647f-2466-4f25-8db3-dcdc0c68e5b8",
+          "go": "17ed16d0-7ff0-4360-a350-d7ddbcb374d3",
+          "component_type": "HealthComponent"
+        },
         "HearingRadius": 125,
         "MaxSpeed": 25,
         "PassiveMode": "Stationary",

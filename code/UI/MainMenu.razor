@@ -3,31 +3,63 @@
 @inherits PanelComponent
 
 <root>
-	<div class="title-container">
-		<div class="title">
-			<p>Veneficus</p>
+	<div class="screen-container">
+		<div class="screen @(_selectedScreen == MainMenuScreens.Title ? "" : "hidden")">
+			<div class="title-container">
+				<div class="title">
+					<p>Veneficus</p>
+				</div>
+			</div>
+			<div class="selection-container">
+				<div class="selections">
+					<div class="button-container">
+						<button onclick=@PlayGame>Play Story Mode</button>
+					</div>
+					<!-- TODO: later
+					<div class="button-container">
+						<button onclick=@Settings>Settings</button>
+					</div>
+					-->
+					<div class="button-container">
+						<button onclick=@ExitGame>Exit Game</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="screen @(_selectedScreen == MainMenuScreens.PlaySaveSelect ? "" : "hidden")">
+			Save Select
+		</div>
+		<div class="screen @(_selectedScreen == MainMenuScreens.PlayLevelSelect ? "" : "hidden")">
+			Level Select
 		</div>
 	</div>
-	<div class="selection-container">
-		<div class="selections">
-			<div class="button-container">
-				<button onclick=@( () => Log.Info("Play") )>Play Story Mode</button>
-			</div>
-			<div class="button-container">
-				<button onclick=@( () => Log.Info("Settings") )>Settings</button>
-			</div>
-			<div class="button-container">
-				<button onclick=@( () => ExitGame() )>Exit Game</button>
-			</div>
-		</div>
-	</div>
+
 </root>
 
 @code
 {
+	private enum MainMenuScreens
+	{
+		Title = 0,
+		PlaySaveSelect = 1,
+		PlayLevelSelect = 2
+	}
+
+	private MainMenuScreens _selectedScreen = MainMenuScreens.Title;
+	
+	public void PlayGame()
+	{
+		Log.Info("Play Game");
+		_selectedScreen = MainMenuScreens.PlaySaveSelect;
+	}
+
+	public void Settings()
+	{
+
+	}
+
 	public void ExitGame()
 	{
-		Log.Info("Exit");
 		Game.Close();
 	}
 

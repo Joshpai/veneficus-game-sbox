@@ -9,6 +9,14 @@ MainMenu
   border-radius: 20px;
   pointer-events: all;
 
+  .screen-container
+  {
+    .hidden
+    {
+      display: none;
+    }
+  }
+
   .title-container
   {
     position: absolute;

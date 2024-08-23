@@ -12,12 +12,20 @@ public sealed class HealthComponent : Component
 	[Property]
 	public bool DestroyOnDeath { get; set; } = true;
 
+	[Property]
+	public float HealthRegenRate { get; set; } = 0.0f;
+
+	[Property]
+	public float HealthRegenDelay { get; set; } = 0.0f;
+
 	public float Health { get; private set; }
 
 	public bool Alive { get; private set; } = false;
 
 	public event Action<float> OnHealthChanged;
 	public event Action OnDeath;
+
+	private float _regenStartTime = 0.0f;
 
 	protected override void OnStart()
 	{
@@ -42,6 +50,7 @@ public sealed class HealthComponent : Component
 	public void Damage(float amount)
 	{
 		AddHealth(DamageMultiplier * -amount);
+		_regenStartTime = Time.Now + HealthRegenDelay;
 	}
 
 	public void Heal(float amount)
@@ -58,5 +67,14 @@ public sealed class HealthComponent : Component
 
 		if (DestroyOnDeath)
 			GameObject.Destroy();
+	}
+
+	protected override void OnFixedUpdate()
+	{
+		if (Health < MaxHealth && _regenStartTime <= Time.Now)
+		{
+			var healAmount = HealthRegenRate * Time.Delta;
+			AddHealth(healAmount);
+		}
 	}
 }

@@ -88,10 +88,10 @@
               {
                 "__type": "Sandbox.SkinnedModelRenderer",
                 "__guid": "bdc6b977-bf54-4ca6-86f9-4fec2a568689",
-                "BodyGroups": 341,
+                "AnimationGraph": "animgraphs/player_wizard_idle.vanmgrph",
+                "BodyGroups": 18446744073709551615,
                 "CreateBoneObjects": false,
-                "MaterialGroup": "default",
-                "Model": "models/citizen/citizen.vmdl",
+                "Model": "models/playermodels/wizard/wizard.vmdl",
                 "RenderType": "Off",
                 "Tint": "1,1,1,1",
                 "UseAnimGraph": true

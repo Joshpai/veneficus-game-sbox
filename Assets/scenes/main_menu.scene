@@ -92,12 +92,13 @@
         {
           "__type": "Sandbox.SkinnedModelRenderer",
           "__guid": "a866f3f0-e4da-4e5e-b0b6-f2136d9bc320",
+          "AnimationGraph": "animgraphs/player_frog.vanmgrph",
           "BodyGroups": 18446744073709551615,
           "CreateBoneObjects": false,
           "Model": "models/playermodels/frog/playerfrog.vmdl",
           "RenderType": "On",
           "Tint": "1,1,1,1",
-          "UseAnimGraph": true
+          "UseAnimGraph": false
         }
       ]
     },

@@ -1,5 +1,8 @@
 public sealed class LightningStrikeEnemyAI : BaseEnemyAI
 {
+	[Property]
+	public HealthComponent Health { get; set; }
+
 	[Property, Group("Combat")]
 	public float DamageRadius = 100.0f;
 
@@ -32,9 +35,17 @@ public sealed class LightningStrikeEnemyAI : BaseEnemyAI
 
 	private float _attackStartTime = 0.0f;
 
+	private void CleanupSpell()
+	{
+		if (_indicator != null)
+			_indicator.Destroy();
+	}
+
 	protected override void OnStart()
 	{
 		base.OnStart();
+
+		Health.OnDeath += CleanupSpell;
 
 		if (LightningStrikeEnemyIndicator != null)
 		{

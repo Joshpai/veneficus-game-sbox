@@ -55,10 +55,11 @@ public sealed class LevelEnd : InteractableComponent
 		LevelTransition.Enabled = true;
 		LevelManagerStaticStore.Player.Enabled = false;
 
-		var camera =
-			LevelManagerStaticStore.Player.Components
-								   .GetInDescendantsOrSelf<CameraComponent>();
-
+		// NOTE: this camera used to be parented to the player, but with the
+		// addition of moving platforms, it was parented to the scene itself
+		// to work around some weirdness. There shouldn't be any other cameras
+		// in the scene that are direct children of the scene.
+		var camera = Scene.Components.GetInChildren<CameraComponent>();
 		if (camera != null)
 			camera.Destroy();
 

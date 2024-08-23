@@ -1,5 +1,8 @@
 public sealed class WaterBeamEnemyAI : BaseEnemyAI
 {
+	[Property]
+	public HealthComponent Health { get; set; }
+
 	// How long can we continuously shoot a beam for?
 	[Property, Group("Combat")]
 	public float BeamDuration { get; set; } = 3.0f;
@@ -13,9 +16,17 @@ public sealed class WaterBeamEnemyAI : BaseEnemyAI
 	private float _beamChargeFinishTime = 0.0f;
 	private float _beamEndTime = 0.0f;
 
+	private void CleanupSpell()
+	{
+		if (_beam != null)
+			_beam.FinishCasting();
+	}
+
 	protected override void OnStart()
 	{
 		base.OnStart();
+
+		Health.OnDeath += CleanupSpell;
 	}
 
 	private void UpdateSpellCastDirection()

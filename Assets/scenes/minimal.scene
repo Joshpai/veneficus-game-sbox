@@ -77,6 +77,27 @@
           "IsTrigger": false,
           "Scale": "100,100,10",
           "Static": false
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "d1ac42c7-ef0d-44d7-a8d7-89e29f51bad9",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ]
     },
@@ -126,6 +147,8 @@
           "DamageMultiplier": 1,
           "DestroyOnDeath": true,
           "HealMultiplier": 1,
+          "HealthRegenDelay": 10,
+          "HealthRegenRate": 10,
           "MaxHealth": 100
         }
       ]
@@ -176,6 +199,8 @@
           "DamageMultiplier": 1,
           "DestroyOnDeath": true,
           "HealMultiplier": 1,
+          "HealthRegenDelay": 10,
+          "HealthRegenRate": 10,
           "MaxHealth": 100
         }
       ]
@@ -226,6 +251,8 @@
           "DamageMultiplier": 1,
           "DestroyOnDeath": true,
           "HealMultiplier": 1,
+          "HealthRegenDelay": 10,
+          "HealthRegenRate": 10,
           "MaxHealth": 100
         }
       ]
@@ -354,6 +381,35 @@
           },
           "SmoothingAngle": 40,
           "Static": true
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "4f8b2898-b2ec-4e2f-9c43-3b195cfb7ed8",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "d3bfb6a7-3af7-4e19-bbb2-ea440b6605c7",
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Scale": "143.9,118.1,127.7998",
+          "Static": false
         }
       ]
     },
@@ -481,6 +537,27 @@
           },
           "SmoothingAngle": 40,
           "Static": true
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "6f410613-3cad-4615-bb29-1298bc92990b",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ]
     },
@@ -608,6 +685,27 @@
           },
           "SmoothingAngle": 40,
           "Static": true
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "80b0ab59-08cf-459c-b778-a58bffb01ad2",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ]
     },
@@ -735,6 +833,27 @@
           },
           "SmoothingAngle": 40,
           "Static": true
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "5ab241dd-fe47-42b5-94e3-21d17710ae92",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ]
     },
@@ -862,6 +981,27 @@
           },
           "SmoothingAngle": 40,
           "Static": true
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "1f866972-1361-4255-9308-3805aecc27e2",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ]
     },
@@ -989,6 +1129,27 @@
           },
           "SmoothingAngle": 40,
           "Static": true
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "0285ca3a-6d5a-49e5-8d26-03fad47cd3fc",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ]
     },
@@ -1116,6 +1277,27 @@
           },
           "SmoothingAngle": 40,
           "Static": true
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "9d0332de-5d8c-4256-8cc9-c48db9abd143",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ]
     },
@@ -1243,6 +1425,27 @@
           },
           "SmoothingAngle": 40,
           "Static": true
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "ba1bb0ad-d5d6-44b1-b764-ef29e61ea528",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ]
     },
@@ -1370,6 +1573,27 @@
           },
           "SmoothingAngle": 40,
           "Static": true
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "0cf2fc84-2495-4d4c-bf65-47cf3b7c81de",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ]
     },
@@ -1497,6 +1721,27 @@
           },
           "SmoothingAngle": 40,
           "Static": true
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "e1883fce-fbb7-4dec-998b-f8bde6236033",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ]
     },
@@ -2730,6 +2975,27 @@
           },
           "SmoothingAngle": 40,
           "Static": true
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "039e60ef-ab2f-4581-aa63-0ade2969aa06",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ]
     },
@@ -2796,6 +3062,27 @@
           },
           "SmoothingAngle": 40,
           "Static": true
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "963e0cda-31fa-4adc-a002-5cb37f86e82e",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ]
     },
@@ -2972,6 +3259,27 @@
           },
           "SmoothingAngle": 40,
           "Static": true
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "e7912d5d-f758-4e31-9e35-866f05216af4",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ]
     },
@@ -3176,6 +3484,27 @@
           },
           "SmoothingAngle": 40,
           "Static": true
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "c2997172-d302-4dad-81f5-ccc5688f65e7",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ]
     },
@@ -3303,6 +3632,27 @@
           },
           "SmoothingAngle": 40,
           "Static": true
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "af9fc4b4-a99c-4602-8d19-8e5767c8e750",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ]
     },
@@ -3430,6 +3780,27 @@
           },
           "SmoothingAngle": 40,
           "Static": true
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "3dead38b-4ef8-411b-a562-e0622aa9a072",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ]
     },
@@ -3557,6 +3928,27 @@
           },
           "SmoothingAngle": 40,
           "Static": true
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "25b3b4ea-6e16-4326-a945-15513bcc89e2",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ]
     },
@@ -3684,6 +4076,27 @@
           },
           "SmoothingAngle": 40,
           "Static": true
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "aabcea43-e113-454b-b1b9-47b89cd822eb",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ]
     },
@@ -3811,6 +4224,27 @@
           },
           "SmoothingAngle": 40,
           "Static": true
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "c686a697-0efa-46b2-a4ad-7fa95682b502",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ]
     },
@@ -3951,6 +4385,27 @@
           "OpenDistance": 100,
           "OpenTime": 1,
           "OpenType": "MoveLeft"
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "633f35e3-2e4a-4ef3-8711-d4e6ec1d4ca5",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ]
     },
@@ -4078,6 +4533,27 @@
           },
           "SmoothingAngle": 40,
           "Static": true
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "e0ab1755-147d-48bf-b318-4daf4765f572",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ]
     },
@@ -4218,6 +4694,27 @@
           "OpenDistance": 100,
           "OpenTime": 1,
           "OpenType": "MoveUp"
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "2e1fa974-2d12-4bad-a0d2-dc9a431ee133",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ]
     },
@@ -4345,6 +4842,27 @@
           },
           "SmoothingAngle": 40,
           "Static": true
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "2ef198da-a672-4a40-8dc6-999f8d5e97b1",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ]
     },
@@ -4485,6 +5003,27 @@
           "OpenDistance": 100,
           "OpenTime": 1,
           "OpenType": "MoveDown"
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "2ebc1297-aee7-4087-9ee7-93f9174e39cd",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ]
     },
@@ -4625,6 +5164,27 @@
           "OpenDistance": 100,
           "OpenTime": 1,
           "OpenType": "Delete"
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "baac67b9-41c6-49d4-a0d1-c5afa3fb4445",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ]
     },
@@ -4773,6 +5333,27 @@
           "OpenDistance": 100,
           "OpenTime": 1,
           "OpenType": "MoveRight"
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "65bb912c-4508-4726-9aca-404c5284f4cd",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ]
     },
@@ -4900,6 +5481,27 @@
           },
           "SmoothingAngle": 40,
           "Static": true
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "b2a9aae0-c906-4f3e-ad9c-adb18385fc97",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ]
     },
@@ -5042,6 +5644,27 @@
           "ShouldResetTouchedAtEnd": false,
           "ShouldResetTouchedAtStart": true,
           "StartMoveDelay": 1
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "f3d96d47-c794-4ec2-9835-453f89f9021d",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ]
     },
@@ -5184,6 +5807,27 @@
           "ShouldResetTouchedAtEnd": false,
           "ShouldResetTouchedAtStart": true,
           "StartMoveDelay": 1
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "042ca306-cacd-4bbb-9272-be16a539a81f",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ]
     },
@@ -5326,6 +5970,27 @@
           "ShouldResetTouchedAtEnd": false,
           "ShouldResetTouchedAtStart": true,
           "StartMoveDelay": 1
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "12f80006-2c38-434d-8201-3869bfb5b3d9",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ]
     },
@@ -5468,6 +6133,27 @@
           "ShouldResetTouchedAtEnd": false,
           "ShouldResetTouchedAtStart": true,
           "StartMoveDelay": 1
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "9126db87-eecf-46be-8f79-6fa93cf5ed71",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ]
     },
@@ -5610,6 +6296,27 @@
           "ShouldResetTouchedAtEnd": false,
           "ShouldResetTouchedAtStart": true,
           "StartMoveDelay": 1
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "9b1feec1-4780-4b4d-b035-77ae2ca4ce4e",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ]
     },
@@ -5752,6 +6459,27 @@
           "ShouldResetTouchedAtEnd": false,
           "ShouldResetTouchedAtStart": true,
           "StartMoveDelay": 1
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "a4a39336-96a2-422e-bb97-68068641c857",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ]
     },
@@ -5894,6 +6622,27 @@
           "ShouldResetTouchedAtEnd": false,
           "ShouldResetTouchedAtStart": true,
           "StartMoveDelay": 1
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "3674ae4d-6d7e-47b1-9782-e50e518346a9",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ]
     },
@@ -6021,6 +6770,27 @@
           },
           "SmoothingAngle": 40,
           "Static": true
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "a2369243-2327-434e-9ea1-a171a761f3df",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ]
     },
@@ -6148,6 +6918,27 @@
           },
           "SmoothingAngle": 40,
           "Static": true
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "ad622fb1-7685-4a92-81e0-56f9fb53128b",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ]
     },
@@ -6275,6 +7066,27 @@
           },
           "SmoothingAngle": 40,
           "Static": true
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "d87286b3-a427-4768-a4dc-9b23c8c6bdcb",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ]
     },
@@ -6402,6 +7214,27 @@
           },
           "SmoothingAngle": 40,
           "Static": true
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "7cd35ef9-01ab-4723-bc22-03060006a87d",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ]
     },
@@ -6622,6 +7455,27 @@
           "ShouldResetTouchedAtEnd": false,
           "ShouldResetTouchedAtStart": false,
           "StartMoveDelay": 0
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "03bf5369-ab6e-47e5-b67a-fd68cde65c8f",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ]
     },
@@ -6769,6 +7623,27 @@
           "ShouldResetTouchedAtEnd": false,
           "ShouldResetTouchedAtStart": false,
           "StartMoveDelay": 0
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "0da84911-5134-42f6-bd6f-84ab03f4712a",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ]
     },
@@ -6914,6 +7789,27 @@
           "ShouldResetTouchedAtEnd": false,
           "ShouldResetTouchedAtStart": false,
           "StartMoveDelay": 0
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "c4745aec-2de2-49be-9076-337b4eee5272",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ]
     },
@@ -7059,6 +7955,27 @@
           "ShouldResetTouchedAtEnd": true,
           "ShouldResetTouchedAtStart": false,
           "StartMoveDelay": 0
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "e1cc25f1-ec59-403e-bed4-e3d9342550ae",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ]
     },
@@ -7204,6 +8121,27 @@
           "ShouldResetTouchedAtEnd": true,
           "ShouldResetTouchedAtStart": true,
           "StartMoveDelay": 0
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "13a877ba-b635-41bb-9c16-732a9c18fbd9",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ]
     },
@@ -7349,6 +8287,27 @@
           "ShouldResetTouchedAtEnd": false,
           "ShouldResetTouchedAtStart": false,
           "StartMoveDelay": 0
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "2d3d77e0-807c-4449-ab88-29345362ae10",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ]
     },
@@ -7370,6 +8329,15 @@
       "Rotation": "0,0,-0.6087614,0.7933534",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/lightning_strike_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "dd63b5eb-0e8c-4334-beca-4436a9e0de13",
+      "Flags": 0,
+      "Name": "spell_unlock",
+      "Position": "545.821,-371.7086,128.0775",
+      "Enabled": true,
+      "__Prefab": "prefabs/triggers/spell_unlock.prefab",
       "__PrefabVariables": {}
     }
   ],
