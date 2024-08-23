@@ -119,7 +119,26 @@
         },
         {
           "__type": "MainMenu",
-          "__guid": "be469723-e482-43a1-8903-2d9209c2f6fd"
+          "__guid": "be469723-e482-43a1-8903-2d9209c2f6fd",
+          "ActImages": [
+            "materials\\world\\CaveWater\\1\u002B_diffuseOriginal.png",
+            "materials\\world\\CaveWater\\1\u002B_diffuseOriginal.png",
+            "materials\\world\\CaveWater\\1\u002B_diffuseOriginal.png",
+            "materials\\world\\CaveWater\\1\u002B_diffuseOriginal.png"
+          ],
+          "ActNames": [
+            "Act 0 - Tutorial",
+            "Act 1 - Forest",
+            "Act 2 - Desert",
+            "Act 3 - Mines"
+          ],
+          "ActScenes": [
+            "scenes/forest - act 1/forest-act1-scene1(tutorial).scene",
+            "scenes/forest - act 1/fullact1.scene",
+            "scenes/desert - act 2/act2.scene",
+            "scenes/mines - act 3/act3scene.scene"
+          ],
+          "FirstLevel": "scenes/forest - act 1/forest-act1-scene1(tutorial).scene"
         }
       ]
     }

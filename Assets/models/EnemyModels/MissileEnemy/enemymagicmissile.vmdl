@@ -45,7 +45,7 @@
 				[
 					{
 						_class = "AnimFile"
-						name = "Wizard"
+						name = "EnemyMagicMissile"
 						activity_name = ""
 						activity_weight = 1
 						weight_list_name = ""
@@ -59,7 +59,7 @@
 						disable_compression = false
 						disable_interpolation = false
 						enable_scale = false
-						source_filename = "models/PlayerModels/Wizard/Wizard.fbx"
+						source_filename = "models/EnemyModels/MissileEnemy/EnemyMagicMissile.fbx"
 						start_frame = -1
 						end_frame = -1
 						framerate = -1.0
