@@ -11,6 +11,7 @@
       "Resources": null,
       "PackageReferences": [],
       "EditorReferences": [],
+      "IsWhitelistDisabled": false,
       "Metadata": {
         "SingleAssetSource": "maps/desert - act 2/testact2.vmap"
       }
