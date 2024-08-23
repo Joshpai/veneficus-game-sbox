@@ -7,6 +7,8 @@ public class RockArmourSpell : WorldPlacementSpell
 	public override float MaxChargeTime => 0.1f; // Non-zero, doesn't matter
 	public override float SpellMass => 0.0f;
 	public override float SpellSpeed => 0.0f;
+	public override String IconPath =>
+		"materials/PlayerMaterials/Spells/rockarmour.png";
 	// WorldPlacementSpell
 	public override float MinRange => 75.0f;
 	public override float MaxRange => 250.0f;

@@ -35,6 +35,7 @@ public abstract class BaseSpell
 	// Stateful spells must be kept in memory and reused (i.e., are singletons)
 	public abstract bool IsStateful { get; }
 	public abstract ManaTakeTime TakeManaTime { get; }
+	public abstract String IconPath { get; }
 
 	public abstract event EventHandler OnDestroy;
 

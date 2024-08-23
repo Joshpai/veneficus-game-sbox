@@ -190,6 +190,11 @@ public sealed class PlayerSpellcastingController : Component
 		return _spellBuffer[(int)spellType].ManaCost;
 	}
 
+	public String GetSpellImagePath(BaseSpell.SpellType spellType)
+	{
+		return _spellBuffer[(int)spellType].IconPath;
+	}
+
 	public float GetSpellCooldown(BaseSpell.SpellType spellType)
 	{
 		return Math.Max(_spellNextCastTime[(int)spellType] - Time.Now, 0.0f);

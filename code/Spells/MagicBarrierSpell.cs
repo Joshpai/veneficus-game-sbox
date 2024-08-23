@@ -7,6 +7,8 @@ public class MagicBarrierSpell : BaseSpell
 	public override float SpellMass => 0.0f;
 	public override float SpellSpeed => 0.0f;
 	public override bool IsStateful => true;
+	public override String IconPath =>
+		"materials/PlayerMaterials/Spells/manabarrier.png";
 	// TODO: "custom" or "ontick"?
 	public override ManaTakeTime TakeManaTime => ManaTakeTime.OnStartCasting;
 

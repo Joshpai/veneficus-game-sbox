@@ -42,7 +42,8 @@
 				var active = ((int)Spellcasting.ActiveSpell == i)
 						   ? "active" : "inactive";
 				var spellXpAmount = (100.0f * i) / (float)(BaseSpell.SpellType.SpellTypeMax);
-				var xpCol = "red";
+				var xpCol = "black";
+				var image = Spellcasting.GetSpellImagePath(spellType);
 				var cooldownCol = "rgba(0, 0, 0, 0.9)";
 				//var cooldownAmount = 100.0f - (100.0f * i) / (float)(BaseSpell.SpellType.SpellTypeMax);
 				var cooldownAmount = Spellcasting.GetSpellCooldownPercent(spellType);
@@ -66,9 +67,10 @@
 							conic-gradient(@xpCol 0%, @xpCol @spellXpAmount%,
 										   transparent @spellXpAmount%)">
 						<div class="spell-internal-wrapper">
-							<div>@spellType</div>
+							<!-- <div>@spellType</div> -->
+							<img src="@image" />
 							<!-- <div>Spell Image @i</div> -->
-							<div class="spell-level">III</div>
+							<!-- <div class="spell-level">III</div> -->
 							<div class="cooldown"
 								 style="background-image:
 									conic-gradient(@cooldownCol 0%,

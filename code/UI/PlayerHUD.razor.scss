@@ -165,15 +165,23 @@ PlayerHUD
           position: relative;
           width: 100%;
           height: 100%;
-          padding: 5px;
+          padding: 2px;
 
           .spell-internal-wrapper
           {
             position: relative;
             width: 100%;
             height: 100%;
+            padding: 0;
             flex-direction: column;
             background-color: white;
+
+            img
+            {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+            }
 
             .spell-level
             {

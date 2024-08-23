@@ -7,6 +7,8 @@ public class RendingGaleSpell : BaseSpell
 	public override float SpellMass => 0.0f;
 	public override float SpellSpeed => 0.0f;
 	public override bool IsStateful => false;
+	public override String IconPath =>
+		"materials/PlayerMaterials/Spells/rendinggale.png";
 	public override ManaTakeTime TakeManaTime => ManaTakeTime.OnFinishCasting;
 
 	public override event EventHandler OnDestroy;

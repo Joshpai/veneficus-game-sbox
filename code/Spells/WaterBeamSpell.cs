@@ -14,6 +14,8 @@ public class WaterBeamSpell : BaseSpell
 	// here how we're treated, so really the less resource intensive version
 	// should be used (i.e., set stateful).
 	public override bool IsStateful => true;
+	public override String IconPath =>
+		"materials/PlayerMaterials/Spells/waterbeam.png";
 	public override ManaTakeTime TakeManaTime => ManaTakeTime.OnTick;
 
 	public override event EventHandler OnDestroy;

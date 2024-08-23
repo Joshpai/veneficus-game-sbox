@@ -7,6 +7,8 @@ public class MagicMissileSpell : ProjectileSpell
 	public override float MaxChargeTime => 0.1f;
 	public override float SpellMass => 5.0f;
 	public override float SpellSpeed => 500.0f;
+	public override String IconPath =>
+		"materials/PlayerMaterials/Spells/magicmissile.png";
 	// ProjectileSpell
 	public override String ProjectilePrefabPath =>
 		"prefabs/spells/magic_missile.prefab";

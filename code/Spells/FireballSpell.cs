@@ -7,6 +7,8 @@ public class FireballSpell : ProjectileSpell
 	public override float MaxChargeTime => 0.5f;
 	public override float SpellMass => 100.0f;
 	public override float SpellSpeed => 300.0f;
+	public override String IconPath =>
+		"materials/PlayerMaterials/Spells/fireball.png";
 	// ProjectileSpell
 	public override String ProjectilePrefabPath =>
 		"prefabs/spells/fireball.prefab";
