@@ -1,5 +1,5 @@
 {
-  "__guid": "7cf4cb82-ef87-49cf-9770-25a7f5980a95",
+  "__guid": "102f2f24-75cf-4915-bfa7-80ffe697ba8f",
   "GameObjects": [
     {
       "__guid": "bfc59c12-1ed2-4f91-8956-a95a315eac3c",
@@ -3122,7 +3122,11 @@
         "LevelTransition": {
           "_type": "gameobject",
           "go": "49ded8fd-59fd-43eb-94ae-f8bd28fefd29"
-        }
+        },
+        "Death Count S": 0,
+        "Death Count A": 2,
+        "Death Count B": 5,
+        "Death Count C": 10
       }
     },
     {
@@ -4384,7 +4388,10 @@
           ],
           "OpenDistance": 100,
           "OpenTime": 1,
-          "OpenType": "MoveLeft"
+          "OpenType": "MoveLeft",
+          "RotationAmount": 90,
+          "RotationAxis": "0,-1,0",
+          "RotationSpeed": 3
         },
         {
           "__type": "Sandbox.Rigidbody",
@@ -4693,7 +4700,10 @@
           ],
           "OpenDistance": 100,
           "OpenTime": 1,
-          "OpenType": "MoveUp"
+          "OpenType": "MoveUp",
+          "RotationAmount": 90,
+          "RotationAxis": "0,-1,0",
+          "RotationSpeed": 3
         },
         {
           "__type": "Sandbox.Rigidbody",
@@ -5002,7 +5012,10 @@
           ],
           "OpenDistance": 100,
           "OpenTime": 1,
-          "OpenType": "MoveDown"
+          "OpenType": "MoveDown",
+          "RotationAmount": 90,
+          "RotationAxis": "0,-1,0",
+          "RotationSpeed": 3
         },
         {
           "__type": "Sandbox.Rigidbody",
@@ -5163,7 +5176,10 @@
           ],
           "OpenDistance": 100,
           "OpenTime": 1,
-          "OpenType": "Delete"
+          "OpenType": "Delete",
+          "RotationAmount": 90,
+          "RotationAxis": "0,-1,0",
+          "RotationSpeed": 3
         },
         {
           "__type": "Sandbox.Rigidbody",
@@ -5332,7 +5348,10 @@
           ],
           "OpenDistance": 100,
           "OpenTime": 1,
-          "OpenType": "MoveRight"
+          "OpenType": "MoveRight",
+          "RotationAmount": 90,
+          "RotationAxis": "0,-1,0",
+          "RotationSpeed": 3
         },
         {
           "__type": "Sandbox.Rigidbody",
@@ -7314,6 +7333,21 @@
       }
     },
     {
+      "__guid": "7ef80424-0499-4e17-bed4-7d7fcc89471b",
+      "Flags": 0,
+      "Name": "key_trigger (5)",
+      "Position": "1193.56,-1133.727,15.75144",
+      "Enabled": true,
+      "__Prefab": "prefabs/triggers/key_trigger.prefab",
+      "__PrefabVariables": {
+        "PushVector": "0,50,0",
+        "Pushable Tags": [
+          "player",
+          "enemy"
+        ]
+      }
+    },
+    {
       "__guid": "3836abc8-fca5-4cf2-8583-59baa1a4f918",
       "Flags": 0,
       "Name": "Box",
@@ -8338,7 +8372,62 @@
       "Position": "545.821,-371.7086,128.0775",
       "Enabled": true,
       "__Prefab": "prefabs/triggers/spell_unlock.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Unlock Spell": "MagicMissile"
+      }
+    },
+    {
+      "__guid": "471ee72b-6a27-4aab-ad17-81090995aa89",
+      "Flags": 0,
+      "Name": "Object",
+      "Position": "1201.063,-1307.442,-5.821381",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "DoorComponent",
+          "__guid": "b5205456-f317-415d-a91c-9afb8efb005a",
+          "Keys": [
+            {
+              "_type": "gameobject",
+              "go": "7ef80424-0499-4e17-bed4-7d7fcc89471b"
+            }
+          ],
+          "OpenDistance": 100,
+          "OpenTime": 1,
+          "OpenType": "Rotate",
+          "RotationAmount": 90,
+          "RotationAxis": "1,0,0",
+          "RotationSpeed": 3
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "30fd7b2d-f7f0-4bea-83ee-ceba2ef813dd",
+          "Flags": 0,
+          "Name": "Cube",
+          "Position": "0,0,250",
+          "Scale": "1,1,10",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "5813925a-d084-4c39-af1a-4e4307f7a082",
+              "BodyGroups": 18446744073709551615,
+              "Model": "models/dev/box.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "c54901bf-c9a7-4e34-bb08-0347c4cc12c3",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "50,50,50",
+              "Static": false
+            }
+          ]
+        }
+      ]
     }
   ],
   "SceneProperties": {
