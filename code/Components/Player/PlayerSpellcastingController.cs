@@ -63,6 +63,7 @@ public sealed class PlayerSpellcastingController : Component
 
 	private SkinnedModelRenderer _modelRenderer;
 	private float _stopCastTime = -1000.0f;
+	private BaseSpell.SpellType _lastSpellType;
 
 	protected override void OnStart()
 	{
@@ -216,7 +217,9 @@ public sealed class PlayerSpellcastingController : Component
 		if (_modelRenderer != null)
 		{
 			bool attacking = (_castingSpell != null);
-			bool stopping = (Time.Now - _stopCastTime < 1.6f);
+			bool stopping =
+				(Time.Now - _stopCastTime < 1.6f) &&
+				_lastSpellType != BaseSpell.SpellType.Polymorph;
 			_modelRenderer.Set("b_attacking", attacking || stopping);
 			_modelRenderer.Set("b_stop_attack", stopping);
 		}
@@ -285,6 +288,7 @@ public sealed class PlayerSpellcastingController : Component
 	private void FinishCasting()
 	{
 		_stopCastTime = Time.Now;
+		_lastSpellType = _castingSpell.GetSpellType();
 
 		if (!_castingSpell.FinishCasting())
 		{
