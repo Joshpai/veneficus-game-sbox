@@ -531,7 +531,9 @@
       "Position": "7104,224,2976",
       "Enabled": true,
       "__Prefab": "prefabs/triggers/spell_unlock.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Unlock Spell": "Fireball"
+      }
     },
     {
       "__guid": "7c4a8deb-73ed-4b38-8049-bc7fbbd3b09d",
@@ -567,10 +569,12 @@
       "__guid": "eb500c5f-deb5-4c76-bce1-f8404f7062c2",
       "Flags": 0,
       "Name": "spell_unlock (1)",
-      "Position": "3520,-15744,4480",
+      "Position": "3681.714,-15744,4480",
       "Enabled": true,
       "__Prefab": "prefabs/triggers/spell_unlock.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Unlock Spell": "Fireball"
+      }
     },
     {
       "__guid": "268d035c-96ef-474e-94f6-59f258995fcf",
@@ -789,6 +793,35 @@
           "OpenDistance": 500,
           "OpenTime": 3,
           "OpenType": "MoveDown"
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "21e0eaf3-4536-4abb-95dd-a92f1d5464bc",
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Scale": "50,50,50",
+          "Static": false
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "3ebe48bf-5235-4d5c-a477-8b4e40e0ab9c",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ]
     },
@@ -826,6 +859,35 @@
           "OpenDistance": 500,
           "OpenTime": 1,
           "OpenType": "MoveDown"
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "d7eebcaf-33c3-4761-a655-2ab9f0c23a35",
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Scale": "50,50,50",
+          "Static": false
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "17f1696e-3b89-4a33-be31-e145357a27a6",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ]
     },
@@ -872,7 +934,9 @@
       "Position": "-1504,-12672,4480",
       "Enabled": true,
       "__Prefab": "prefabs/triggers/spell_unlock.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Unlock Spell": "RendingGale"
+      }
     },
     {
       "__guid": "54723793-7e15-466d-a369-a5257a6ece1e",
@@ -903,8 +967,77 @@
           "OpenDistance": 500,
           "OpenTime": 3,
           "OpenType": "MoveUp"
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "89d8222d-eb01-40b6-b143-0009aa6333f2",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "8778dd13-beed-422c-9fc8-308cb036da7d",
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Scale": "50,50,50",
+          "Static": false
         }
       ]
+    },
+    {
+      "__guid": "cccd6f10-18a0-45ef-bb8b-5b4338ad3bf7",
+      "Flags": 0,
+      "Name": "death_trigger",
+      "Position": "891.4039,-9046.606,3616",
+      "Scale": "37.72601,27.61312,0.16113",
+      "Enabled": true,
+      "__Prefab": "prefabs/triggers/death_trigger.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "b6215acf-d6ba-4d96-8a72-c5f521ee54d8",
+      "Flags": 0,
+      "Name": "death_trigger (1)",
+      "Position": "6733.375,-9046.606,3728.79",
+      "Scale": "37.91206,36.1964,0.16113",
+      "Enabled": true,
+      "__Prefab": "prefabs/triggers/death_trigger.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "93245edd-5a16-4d9f-b062-1ca7e144f34f",
+      "Flags": 0,
+      "Name": "death_trigger (2)",
+      "Position": "3513.878,-13190.7,1792",
+      "Scale": "52.68495,33.23991,1",
+      "Enabled": true,
+      "__Prefab": "prefabs/triggers/death_trigger.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "0ae614d0-9e17-482f-8e3b-770a80a6604b",
+      "Flags": 0,
+      "Name": "death_trigger (3)",
+      "Position": "476.645,-16751.64,4250.851",
+      "Scale": "107.3209,24.97069,1",
+      "Enabled": true,
+      "__Prefab": "prefabs/triggers/death_trigger.prefab",
+      "__PrefabVariables": {}
     }
   ],
   "SceneProperties": {

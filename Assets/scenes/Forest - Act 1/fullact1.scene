@@ -491,7 +491,9 @@
       "Rotation": "-0.0005762013,0.000542192,0.9747961,0.2230963",
       "Enabled": true,
       "__Prefab": "prefabs/triggers/spell_unlock.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Unlock Spell": "RockArmour"
+      }
     },
     {
       "__guid": "f03a80e0-a2f1-450c-b512-11bd8a2b3e99",
@@ -646,6 +648,35 @@
           "OpenDistance": 500,
           "OpenTime": 1,
           "OpenType": "MoveDown"
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "2028acae-9ea7-4dc0-82f0-1c03c71a2e61",
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Scale": "50,50,50",
+          "Static": false
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "785271bb-dc9c-4254-93a4-4bdb78c18f2e",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ]
     },
@@ -679,6 +710,35 @@
           "OpenDistance": 500,
           "OpenTime": 1,
           "OpenType": "MoveDown"
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "700578f5-350f-4966-97c4-b8ac16912b7e",
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Scale": "50,50,50",
+          "Static": false
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "348fb36a-23cd-4630-8220-72e487cc5b2f",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ]
     },
@@ -768,8 +828,71 @@
           "OpenDistance": 500,
           "OpenTime": 3,
           "OpenType": "Delete"
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "41f72c69-9e47-4362-8baf-08b81a54af3a",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "55c03725-1246-4e68-8426-a25b2f6d8e95",
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Scale": "50,50,50",
+          "Static": false
         }
       ]
+    },
+    {
+      "__guid": "f63b0bba-5376-42ef-a04c-b618ba6310e1",
+      "Flags": 0,
+      "Name": "spell_unlock (1)",
+      "Position": "-5571.685,-10305.55,-1236.717",
+      "Rotation": "-0.005474299,0.005817503,0.6852784,0.7282375",
+      "Enabled": true,
+      "__Prefab": "prefabs/triggers/spell_unlock.prefab",
+      "__PrefabVariables": {
+        "Unlock Spell": "MagicBarrier"
+      }
+    },
+    {
+      "__guid": "db18a575-e41b-4775-93ff-9a8e08ee4342",
+      "Flags": 0,
+      "Name": "spell_unlock (2)",
+      "Position": "-5571.685,-10305.55,-1236.717",
+      "Rotation": "-0.005474299,0.005817503,0.6852784,0.7282375",
+      "Enabled": true,
+      "__Prefab": "prefabs/triggers/spell_unlock.prefab",
+      "__PrefabVariables": {
+        "Unlock Spell": "MagicBarrier"
+      }
+    },
+    {
+      "__guid": "9feee171-4476-4ebc-b387-5afc4b0cbaed",
+      "Flags": 0,
+      "Name": "death_trigger",
+      "Position": "-5606.025,-10710.93,-4323.684",
+      "Scale": "15.29823,17.3129,1",
+      "Enabled": true,
+      "__Prefab": "prefabs/triggers/death_trigger.prefab",
+      "__PrefabVariables": {}
     }
   ],
   "SceneProperties": {

@@ -661,7 +661,9 @@
       "Position": "-4000,-6688,-16032",
       "Enabled": true,
       "__Prefab": "prefabs/triggers/spell_unlock.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Unlock Spell": "WaterBeam"
+      }
     },
     {
       "__guid": "a69b55eb-8948-4c01-8edb-65c0d7e552c0",
@@ -1097,7 +1099,9 @@
       "Position": "-37312,-6656,-20576",
       "Enabled": true,
       "__Prefab": "prefabs/triggers/spell_unlock.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Unlock Spell": "MagicMissile"
+      }
     },
     {
       "__guid": "6c1d33e9-eb55-41e0-a3fb-bc25748036ac",
@@ -1156,6 +1160,157 @@
       "Enabled": true,
       "__Prefab": "prefabs/enemies/water_beam_enemy.prefab",
       "__PrefabVariables": {}
+    },
+    {
+      "__guid": "cfa4d347-9bb0-421e-9b2d-9d14eb4878a7",
+      "Flags": 0,
+      "Name": "Cube",
+      "Position": "-4595.656,-6642.396,-16735.38",
+      "Scale": "3.341862,2.085497,1",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "db2ba8e9-e84b-426a-9af6-fdc6b626656c",
+          "BodyGroups": 18446744073709551615,
+          "MaterialOverride": "materials/world/cavewall1/cavewall1.vmat",
+          "Model": "models/dev/box.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "MovingPlatform",
+          "__guid": "03fa32f7-a2a0-44e9-beb6-9bae8a3877c0",
+          "MovePathRelative": [
+            "0,0,0",
+            "-9478.208,0,0"
+          ],
+          "MoveSpeed": 220,
+          "MoveType": "WhilePlayerTouching",
+          "RepeatPath": false,
+          "ReturnMoveDelay": 1,
+          "ShouldResetTouchedAtEnd": false,
+          "ShouldResetTouchedAtStart": false,
+          "StartMoveDelay": 2
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "22a9fd7a-3b57-4527-80ae-74ea0efb57b6",
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Scale": "50,50,50",
+          "Static": false
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "5ce9bc4b-252f-4428-9f35-0ac3029f5b18",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        }
+      ]
+    },
+    {
+      "__guid": "960a5ff8-6b90-488e-afbb-a8466db2204b",
+      "Flags": 0,
+      "Name": "Cube",
+      "Position": "129.3771,-6119.743,-14353.13",
+      "Scale": "5.454374,1,8.58479",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "f4d77c21-2bd6-4c8b-a605-742d689a88b3",
+          "BodyGroups": 18446744073709551615,
+          "MaterialOverride": "materials/world/cavewall1/cavewall1.vmat",
+          "Model": "models/dev/box.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "DoorComponent",
+          "__guid": "e802d8ad-d6e6-4aec-9e8a-5c82b91204be",
+          "Keys": [],
+          "OpenDistance": 500,
+          "OpenTime": 1,
+          "OpenType": "MoveDown"
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "7cd8aec1-d149-4b90-8e5a-5515e39a5385",
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Scale": "50,50,50",
+          "Static": false
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "d46036e1-12b1-43ed-a395-b18e031941a2",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        }
+      ]
+    },
+    {
+      "__guid": "913f95ce-6a3c-45df-814c-5b69f241b8bf",
+      "Flags": 0,
+      "Name": "push_trigger",
+      "Position": "-20972.73,-6647.104,-16848",
+      "Scale": "625.7699,24.28187,2.536632",
+      "Enabled": true,
+      "__Prefab": "prefabs/triggers/push_trigger.prefab",
+      "__PrefabVariables": {
+        "PushVector": "-50,0,0",
+        "Pushable Tags": [
+          "player",
+          "enemy"
+        ]
+      }
+    },
+    {
+      "__guid": "860c26af-d4e7-4a5e-831e-60bd133da0b6",
+      "Flags": 0,
+      "Name": "push_trigger",
+      "Position": "-4900.463,-6647.104,-16848",
+      "Scale": "17.17776,24.28187,2.536632",
+      "Enabled": true,
+      "__Prefab": "prefabs/triggers/push_trigger.prefab",
+      "__PrefabVariables": {
+        "PushVector": "-50,0,0",
+        "Pushable Tags": [
+          "player",
+          "enemy"
+        ]
+      }
     }
   ],
   "SceneProperties": {
