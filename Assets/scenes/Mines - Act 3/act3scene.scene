@@ -658,7 +658,7 @@
       "__guid": "e2125858-ecb5-4427-a6c5-d173698fd302",
       "Flags": 0,
       "Name": "spell_unlock",
-      "Position": "-4000,-6688,-16032",
+      "Position": "-4002.864,-6688,-16032",
       "Enabled": true,
       "__Prefab": "prefabs/triggers/spell_unlock.prefab",
       "__PrefabVariables": {
@@ -1236,7 +1236,7 @@
           "__type": "Sandbox.ModelRenderer",
           "__guid": "f4d77c21-2bd6-4c8b-a605-742d689a88b3",
           "BodyGroups": 18446744073709551615,
-          "MaterialOverride": "materials/world/cavewall1/cavewall1.vmat",
+          "MaterialOverride": "materials/world/rockdoor/rockdoor.vmat",
           "Model": "models/dev/box.vmdl",
           "RenderType": "On",
           "Tint": "1,1,1,1"
@@ -1247,7 +1247,10 @@
           "Keys": [],
           "OpenDistance": 500,
           "OpenTime": 1,
-          "OpenType": "MoveDown"
+          "OpenType": "MoveDown",
+          "RotationAmount": 90,
+          "RotationAxis": "1,0,0",
+          "RotationSpeed": 3
         },
         {
           "__type": "Sandbox.BoxCollider",
@@ -1311,6 +1314,86 @@
           "enemy"
         ]
       }
+    },
+    {
+      "__guid": "2ec21527-4aa7-42b1-8cdc-b29e35a36c4a",
+      "Flags": 0,
+      "Name": "waterbeam",
+      "Position": "-4003.488,-6687.145,-16007.66",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SpriteRenderer",
+          "__guid": "b1172070-d6a4-43f8-9c8c-bf7bd071490f",
+          "Additive": false,
+          "CastShadows": false,
+          "Color": "1,1,1,1",
+          "DepthFeather": 0,
+          "FlipHorizontal": false,
+          "FlipVertical": false,
+          "FogStrength": 1,
+          "Lighting": false,
+          "Opaque": false,
+          "Size": "25,25",
+          "Texture": "materials/playermaterials/spells/waterbeam.vtex"
+        },
+        {
+          "__type": "DoorComponent",
+          "__guid": "fa0885e3-b40f-4a11-8424-15bd428a00f0",
+          "Keys": [
+            {
+              "_type": "gameobject",
+              "go": "e2125858-ecb5-4427-a6c5-d173698fd302"
+            }
+          ],
+          "OpenDistance": 100,
+          "OpenTime": 1,
+          "OpenType": "Delete",
+          "RotationAmount": 90,
+          "RotationAxis": "1,0,0",
+          "RotationSpeed": 3
+        }
+      ]
+    },
+    {
+      "__guid": "3b28faa9-e0e6-4373-9266-733097a334ba",
+      "Flags": 0,
+      "Name": "waterbeam",
+      "Position": "-37310.24,-6656.128,-20551.41",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SpriteRenderer",
+          "__guid": "55b9ee29-65c7-4fbf-9147-cfb4f66629df",
+          "Additive": false,
+          "CastShadows": false,
+          "Color": "1,1,1,1",
+          "DepthFeather": 0,
+          "FlipHorizontal": false,
+          "FlipVertical": false,
+          "FogStrength": 1,
+          "Lighting": false,
+          "Opaque": false,
+          "Size": "25,25",
+          "Texture": "materials/playermaterials/spells/waterbeam.vtex"
+        },
+        {
+          "__type": "DoorComponent",
+          "__guid": "eb7e300f-233f-4bd9-9634-077d8ce38a60",
+          "Keys": [
+            {
+              "_type": "gameobject",
+              "go": "8e54aa1b-6089-4cd8-b671-e3201a3fbcff"
+            }
+          ],
+          "OpenDistance": 100,
+          "OpenTime": 1,
+          "OpenType": "Delete",
+          "RotationAmount": 90,
+          "RotationAxis": "1,0,0",
+          "RotationSpeed": 3
+        }
+      ]
     }
   ],
   "SceneProperties": {

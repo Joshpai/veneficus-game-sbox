@@ -484,18 +484,6 @@
       "__PrefabVariables": {}
     },
     {
-      "__guid": "fca9c087-8abb-4006-86e0-6f67a74f9216",
-      "Flags": 0,
-      "Name": "spell_unlock",
-      "Position": "-4993.607,-5915.94,-2388.651",
-      "Rotation": "-0.0005762013,0.000542192,0.9747961,0.2230963",
-      "Enabled": true,
-      "__Prefab": "prefabs/triggers/spell_unlock.prefab",
-      "__PrefabVariables": {
-        "Unlock Spell": "RockArmour"
-      }
-    },
-    {
       "__guid": "f03a80e0-a2f1-450c-b512-11bd8a2b3e99",
       "Flags": 0,
       "Name": "rock_armour_enemy (1)",
@@ -567,7 +555,7 @@
           "__type": "Sandbox.ModelRenderer",
           "__guid": "8715622f-543d-4d20-b93c-316edfa47e91",
           "BodyGroups": 18446744073709551615,
-          "MaterialOverride": "materials/world/cavewall1/cavewall1.vmat",
+          "MaterialOverride": "materials/world/rockdoor/rockdoor.vmat",
           "Model": "models/dev/box.vmdl",
           "RenderType": "On",
           "Tint": "1,1,1,1"
@@ -647,7 +635,10 @@
           ],
           "OpenDistance": 500,
           "OpenTime": 1,
-          "OpenType": "MoveDown"
+          "OpenType": "MoveDown",
+          "RotationAmount": 90,
+          "RotationAxis": "1,0,0",
+          "RotationSpeed": 3
         },
         {
           "__type": "Sandbox.BoxCollider",
@@ -693,7 +684,7 @@
           "__type": "Sandbox.ModelRenderer",
           "__guid": "7b746852-e80c-48d5-9d2d-9707c17bcbdf",
           "BodyGroups": 18446744073709551615,
-          "MaterialOverride": "materials/world/cavewall1/cavewall1.vmat",
+          "MaterialOverride": "materials/world/rockdoor/rockdoor.vmat",
           "Model": "models/dev/box.vmdl",
           "RenderType": "On",
           "Tint": "1,1,1,1"
@@ -709,7 +700,10 @@
           ],
           "OpenDistance": 500,
           "OpenTime": 1,
-          "OpenType": "MoveDown"
+          "OpenType": "MoveDown",
+          "RotationAmount": 90,
+          "RotationAxis": "1,0,0",
+          "RotationSpeed": 3
         },
         {
           "__type": "Sandbox.BoxCollider",
@@ -827,7 +821,10 @@
           ],
           "OpenDistance": 500,
           "OpenTime": 3,
-          "OpenType": "Delete"
+          "OpenType": "Delete",
+          "RotationAmount": 90,
+          "RotationAxis": "1,0,0",
+          "RotationSpeed": 3
         },
         {
           "__type": "Sandbox.Rigidbody",
@@ -861,18 +858,6 @@
       ]
     },
     {
-      "__guid": "f63b0bba-5376-42ef-a04c-b618ba6310e1",
-      "Flags": 0,
-      "Name": "spell_unlock (1)",
-      "Position": "-5571.685,-10305.55,-1236.717",
-      "Rotation": "-0.005474299,0.005817503,0.6852784,0.7282375",
-      "Enabled": true,
-      "__Prefab": "prefabs/triggers/spell_unlock.prefab",
-      "__PrefabVariables": {
-        "Unlock Spell": "MagicBarrier"
-      }
-    },
-    {
       "__guid": "db18a575-e41b-4775-93ff-9a8e08ee4342",
       "Flags": 0,
       "Name": "spell_unlock (2)",
@@ -893,6 +878,100 @@
       "Enabled": true,
       "__Prefab": "prefabs/triggers/death_trigger.prefab",
       "__PrefabVariables": {}
+    },
+    {
+      "__guid": "fca9c087-8abb-4006-86e0-6f67a74f9216",
+      "Flags": 0,
+      "Name": "spell_unlock",
+      "Position": "-4997.083,-5917.126,-2388.653",
+      "Rotation": "-0.0005762013,0.000542192,0.9747961,0.2230963",
+      "Enabled": true,
+      "__Prefab": "prefabs/triggers/spell_unlock.prefab",
+      "__PrefabVariables": {
+        "Unlock Spell": "RockArmour"
+      }
+    },
+    {
+      "__guid": "bafc1679-973b-4a2d-82ca-a4d2b99a269a",
+      "Flags": 0,
+      "Name": "rockarmour",
+      "Position": "-4991.362,-5912.432,-2363.208",
+      "Rotation": "-0.0006968975,0.0003745854,0.8838392,0.4677902",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SpriteRenderer",
+          "__guid": "8aceac16-95a0-4524-a857-c21463056a8c",
+          "Additive": false,
+          "CastShadows": false,
+          "Color": "1,1,1,1",
+          "DepthFeather": 0,
+          "FlipHorizontal": false,
+          "FlipVertical": false,
+          "FogStrength": 1,
+          "Lighting": false,
+          "Opaque": false,
+          "Size": "25,25",
+          "Texture": "materials/playermaterials/spells/rockarmour.vtex"
+        },
+        {
+          "__type": "DoorComponent",
+          "__guid": "bc46be90-6a94-4e49-984a-0fd2f1d0bbba",
+          "Keys": [
+            {
+              "_type": "gameobject",
+              "go": "fca9c087-8abb-4006-86e0-6f67a74f9216"
+            }
+          ],
+          "OpenDistance": 0,
+          "OpenTime": 1,
+          "OpenType": "Delete",
+          "RotationAmount": 90,
+          "RotationAxis": "1,0,0",
+          "RotationSpeed": 3
+        }
+      ]
+    },
+    {
+      "__guid": "bdcf92fb-abe6-423d-ad32-c958fc7fbc53",
+      "Flags": 0,
+      "Name": "manabarrier",
+      "Position": "-5570.375,-10306.86,-1213.423",
+      "Rotation": "-0.005474299,0.005817503,0.6852784,0.7282375",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SpriteRenderer",
+          "__guid": "e718cb5e-5b72-40cd-bc87-1780c8f90a23",
+          "Additive": false,
+          "CastShadows": false,
+          "Color": "1,1,1,1",
+          "DepthFeather": 0,
+          "FlipHorizontal": false,
+          "FlipVertical": false,
+          "FogStrength": 1,
+          "Lighting": false,
+          "Opaque": false,
+          "Size": "25,25",
+          "Texture": "materials/playermaterials/spells/manabarrier.vtex"
+        },
+        {
+          "__type": "DoorComponent",
+          "__guid": "796e7f5f-68f8-474c-88cc-7c086d40d92c",
+          "Keys": [
+            {
+              "_type": "gameobject",
+              "go": "db18a575-e41b-4775-93ff-9a8e08ee4342"
+            }
+          ],
+          "OpenDistance": 0,
+          "OpenTime": 1,
+          "OpenType": "Delete",
+          "RotationAmount": 90,
+          "RotationAxis": "1,0,0",
+          "RotationSpeed": 3
+        }
+      ]
     }
   ],
   "SceneProperties": {

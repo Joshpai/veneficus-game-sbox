@@ -728,7 +728,7 @@
           "__type": "Sandbox.ModelRenderer",
           "__guid": "0c5f2f98-5e5e-4dfe-a783-833b7a1f1024",
           "BodyGroups": 18446744073709551615,
-          "MaterialOverride": "materials/world/cavewall1/cavewall1.vmat",
+          "MaterialOverride": "materials/world/rockdoor/rockdoor.vmat",
           "Model": "models/dev/box.vmdl",
           "RenderType": "On",
           "Tint": "1,1,1,1"
@@ -792,7 +792,10 @@
           ],
           "OpenDistance": 500,
           "OpenTime": 3,
-          "OpenType": "MoveDown"
+          "OpenType": "MoveDown",
+          "RotationAmount": 90,
+          "RotationAxis": "1,0,0",
+          "RotationSpeed": 3
         },
         {
           "__type": "Sandbox.BoxCollider",
@@ -838,7 +841,7 @@
           "__type": "Sandbox.ModelRenderer",
           "__guid": "c0878ad3-a975-453d-a8a1-be0caefb8af7",
           "BodyGroups": 18446744073709551615,
-          "MaterialOverride": "materials/world/cavewall1/cavewall1.vmat",
+          "MaterialOverride": "materials/world/rockdoor/rockdoor.vmat",
           "Model": "models/dev/box.vmdl",
           "RenderType": "On",
           "Tint": "1,1,1,1"
@@ -858,7 +861,10 @@
           ],
           "OpenDistance": 500,
           "OpenTime": 1,
-          "OpenType": "MoveDown"
+          "OpenType": "MoveDown",
+          "RotationAmount": 90,
+          "RotationAxis": "1,0,0",
+          "RotationSpeed": 3
         },
         {
           "__type": "Sandbox.BoxCollider",
@@ -903,7 +909,7 @@
           "__type": "Sandbox.ModelRenderer",
           "__guid": "edccc8ac-6d67-43a9-9d3a-3919569c3648",
           "BodyGroups": 18446744073709551615,
-          "MaterialOverride": "materials/world/cavewall1/cavewall1.vmat",
+          "MaterialOverride": "materials/world/rockdoor/rockdoor.vmat",
           "Model": "models/dev/box.vmdl",
           "RenderType": "On",
           "Tint": "1,1,1,1"
@@ -923,7 +929,10 @@
           ],
           "OpenDistance": 500,
           "OpenTime": 1,
-          "OpenType": "MoveDown"
+          "OpenType": "MoveDown",
+          "RotationAmount": 90,
+          "RotationAxis": "1,0,0",
+          "RotationSpeed": 3
         }
       ]
     },
@@ -950,7 +959,7 @@
           "__type": "Sandbox.ModelRenderer",
           "__guid": "6be61813-a641-4273-9037-1b6a57b2df21",
           "BodyGroups": 18446744073709551615,
-          "MaterialOverride": "materials/world/cavewall1/cavewall1.vmat",
+          "MaterialOverride": "materials/world/rockdoor/rockdoor.vmat",
           "Model": "models/dev/box.vmdl",
           "RenderType": "On",
           "Tint": "1,1,1,1"
@@ -966,7 +975,10 @@
           ],
           "OpenDistance": 500,
           "OpenTime": 3,
-          "OpenType": "MoveUp"
+          "OpenType": "MoveUp",
+          "RotationAmount": 90,
+          "RotationAxis": "1,0,0",
+          "RotationSpeed": 3
         },
         {
           "__type": "Sandbox.Rigidbody",
@@ -1038,6 +1050,348 @@
       "Enabled": true,
       "__Prefab": "prefabs/triggers/death_trigger.prefab",
       "__PrefabVariables": {}
+    },
+    {
+      "__guid": "a1a886d4-41d2-4601-954a-039b5d6da047",
+      "Flags": 0,
+      "Name": "Object",
+      "Position": "3504.726,-7384.134,3775.719",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "DoorComponent",
+          "__guid": "46d3b354-7a99-4349-b8a7-962249d18a34",
+          "Keys": [
+            {
+              "_type": "gameobject",
+              "go": "fde1e366-e0ea-4621-91a9-3ad80290d54b"
+            }
+          ],
+          "OpenDistance": 100,
+          "OpenTime": 1,
+          "OpenType": "Rotate",
+          "RotationAmount": -95,
+          "RotationAxis": "1,0,0",
+          "RotationSpeed": 3
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "d84e74f7-ea46-49c4-8123-7a9368555c8b",
+          "Flags": 0,
+          "Name": "Cube",
+          "Position": "-6.600098,-27.00732,980.3008",
+          "Scale": "20.63942,0.6624536,39.99419",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "0d2175d1-5f05-44ba-954a-62a3ff7dc058",
+              "BodyGroups": 18446744073709551615,
+              "MaterialOverride": "materials/world/rockdoor/rockdoor.vmat",
+              "Model": "models/dev/box.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "Sandbox.Rigidbody",
+              "__guid": "c1e32981-b69f-4bc2-9b4b-6353f5460fad",
+              "AngularDamping": 0,
+              "Gravity": false,
+              "LinearDamping": 0,
+              "Locking": {
+                "X": true,
+                "Y": true,
+                "Z": true,
+                "Pitch": true,
+                "Yaw": true,
+                "Roll": true
+              },
+              "MassCenterOverride": "0,0,0",
+              "MassOverride": 0,
+              "MotionEnabled": false,
+              "OverrideMassCenter": false,
+              "RigidbodyFlags": 0,
+              "StartAsleep": false
+            },
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "4ad56e3a-f1c0-41ab-8fb3-0af021d3028f",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "50,50,50",
+              "Static": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "fde1e366-e0ea-4621-91a9-3ad80290d54b",
+      "Flags": 0,
+      "Name": "key_trigger (2)",
+      "Position": "110.2001,-362.2075,0.001953125",
+      "Rotation": "-0.000001817942,-0.000002130866,0.9088984,-0.4170178",
+      "Enabled": true,
+      "__Prefab": "prefabs/triggers/key_trigger.prefab",
+      "__PrefabVariables": {
+        "PushVector": "0,50,0",
+        "Pushable Tags": [
+          "player",
+          "enemy"
+        ]
+      }
+    },
+    {
+      "__guid": "621fa1c3-febf-4337-a10a-9a93465e0812",
+      "Flags": 0,
+      "Name": "fireball",
+      "Position": "7103.438,224.8266,3001.875",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SpriteRenderer",
+          "__guid": "1a5b161b-9329-459b-8c5f-ceb4fc69bddf",
+          "Additive": false,
+          "CastShadows": false,
+          "Color": "1,1,1,1",
+          "DepthFeather": 0,
+          "FlipHorizontal": false,
+          "FlipVertical": false,
+          "FogStrength": 1,
+          "Lighting": false,
+          "Opaque": false,
+          "Size": "25,25",
+          "Texture": "materials/playermaterials/spells/fireball.vtex"
+        },
+        {
+          "__type": "DoorComponent",
+          "__guid": "b99076d1-1c8b-48f4-b2f2-f4be82b9a21b",
+          "Keys": [
+            {
+              "_type": "gameobject",
+              "go": "260b6926-3a11-45f8-ae93-3f31c40b1dba"
+            }
+          ],
+          "OpenDistance": 0,
+          "OpenTime": 1,
+          "OpenType": "Delete",
+          "RotationAmount": 90,
+          "RotationAxis": "1,0,0",
+          "RotationSpeed": 3
+        }
+      ]
+    },
+    {
+      "__guid": "174d8ede-4d51-4264-ad6a-2f375a60304b",
+      "Flags": 0,
+      "Name": "key2",
+      "Position": "256.3575,-9153.76,3692.37",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SpriteRenderer",
+          "__guid": "83ca566b-e39a-45b7-bdf6-fe08cddf2021",
+          "Additive": false,
+          "CastShadows": false,
+          "Color": "1,1,1,1",
+          "DepthFeather": 0,
+          "FlipHorizontal": false,
+          "FlipVertical": false,
+          "FogStrength": 1,
+          "Lighting": false,
+          "Opaque": false,
+          "Size": "25,50",
+          "Texture": "materials/world/keys/key2.vtex"
+        },
+        {
+          "__type": "DoorComponent",
+          "__guid": "699b854a-18c2-416a-9b01-c6b5effda0ba",
+          "Keys": [
+            {
+              "_type": "gameobject",
+              "go": "30954c2e-ebdf-4b50-adc6-48e8ddac9261"
+            }
+          ],
+          "OpenDistance": 0,
+          "OpenTime": 1,
+          "OpenType": "Delete",
+          "RotationAmount": 90,
+          "RotationAxis": "1,0,0",
+          "RotationSpeed": 3
+        }
+      ]
+    },
+    {
+      "__guid": "29d503dc-d93e-4baf-8157-9a35bb2a980d",
+      "Flags": 0,
+      "Name": "key2",
+      "Position": "7394.005,-9602.121,3808.134",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SpriteRenderer",
+          "__guid": "536b0bdc-e613-4f62-8234-3d4c0ea69e55",
+          "Additive": false,
+          "CastShadows": false,
+          "Color": "1,1,1,1",
+          "DepthFeather": 0,
+          "FlipHorizontal": false,
+          "FlipVertical": false,
+          "FogStrength": 1,
+          "Lighting": false,
+          "Opaque": false,
+          "Size": "25,50",
+          "Texture": "materials/world/keys/key2.vtex"
+        },
+        {
+          "__type": "DoorComponent",
+          "__guid": "cc1c1ba6-f338-4667-9a9e-cdcccc12f445",
+          "Keys": [
+            {
+              "_type": "gameobject",
+              "go": "7c4a8deb-73ed-4b38-8049-bc7fbbd3b09d"
+            }
+          ],
+          "OpenDistance": 100,
+          "OpenTime": 1,
+          "OpenType": "Delete",
+          "RotationAmount": 90,
+          "RotationAxis": "1,0,0",
+          "RotationSpeed": 3
+        }
+      ]
+    },
+    {
+      "__guid": "dc07fa66-6892-4f10-8649-3692dfcbb08c",
+      "Flags": 0,
+      "Name": "fireball",
+      "Position": "3682.476,-15743.64,4506.023",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SpriteRenderer",
+          "__guid": "6ac5248c-349b-4527-8272-9406ccd70501",
+          "Additive": false,
+          "CastShadows": false,
+          "Color": "1,1,1,1",
+          "DepthFeather": 0,
+          "FlipHorizontal": false,
+          "FlipVertical": false,
+          "FogStrength": 1,
+          "Lighting": false,
+          "Opaque": false,
+          "Size": "25,25",
+          "Texture": "materials/playermaterials/spells/fireball.vtex"
+        },
+        {
+          "__type": "DoorComponent",
+          "__guid": "7ebd7eb4-67c9-4ba7-86b8-327f6a33eac8",
+          "Keys": [
+            {
+              "_type": "gameobject",
+              "go": "eb500c5f-deb5-4c76-bce1-f8404f7062c2"
+            }
+          ],
+          "OpenDistance": 0,
+          "OpenTime": 1,
+          "OpenType": "Delete",
+          "RotationAmount": 90,
+          "RotationAxis": "1,0,0",
+          "RotationSpeed": 3
+        }
+      ]
+    },
+    {
+      "__guid": "d809fcd2-f4fd-4750-aead-d1c58394af27",
+      "Flags": 0,
+      "Name": "rendinggale",
+      "Position": "-1504.394,-12669.28,4503.712",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SpriteRenderer",
+          "__guid": "aa0a6886-f6d0-484f-8372-a84aba273eb4",
+          "Additive": false,
+          "CastShadows": false,
+          "Color": "1,1,1,1",
+          "DepthFeather": 0,
+          "FlipHorizontal": false,
+          "FlipVertical": false,
+          "FogStrength": 1,
+          "Lighting": false,
+          "Opaque": false,
+          "Size": "25,25",
+          "Texture": "materials/playermaterials/spells/rendinggale.vtex"
+        },
+        {
+          "__type": "DoorComponent",
+          "__guid": "0002d30e-c7c6-41c7-96be-aecc501c6c30",
+          "Keys": [
+            {
+              "_type": "gameobject",
+              "go": "e000013a-ebb6-4422-bdd4-608a5d1da117"
+            }
+          ],
+          "OpenDistance": 0,
+          "OpenTime": 1,
+          "OpenType": "Delete",
+          "RotationAmount": 90,
+          "RotationAxis": "1,0,0",
+          "RotationSpeed": 3
+        }
+      ]
+    },
+    {
+      "__guid": "85339c72-a0a0-45a0-9c3d-5e82c53ab076",
+      "Flags": 0,
+      "Name": "spell_unlock (3)",
+      "Position": "-2314.714,-11511.39,2384",
+      "Enabled": true,
+      "__Prefab": "prefabs/triggers/spell_unlock.prefab",
+      "__PrefabVariables": {
+        "Unlock Spell": "RendingGale"
+      }
+    },
+    {
+      "__guid": "1d772d00-7d3b-4181-be8c-950cd85d027e",
+      "Flags": 0,
+      "Name": "rendinggale",
+      "Position": "-2314.656,-11512.48,2411.895",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SpriteRenderer",
+          "__guid": "6dabc44d-ee69-4076-9fe8-2b56cfbeed4c",
+          "Additive": false,
+          "CastShadows": false,
+          "Color": "1,1,1,1",
+          "DepthFeather": 0,
+          "FlipHorizontal": false,
+          "FlipVertical": false,
+          "FogStrength": 1,
+          "Lighting": false,
+          "Opaque": false,
+          "Size": "25,25",
+          "Texture": "materials/playermaterials/spells/rendinggale.vtex"
+        },
+        {
+          "__type": "DoorComponent",
+          "__guid": "e1bc5337-3d09-4b5a-8ab5-91701fc48546",
+          "Keys": [
+            {
+              "_type": "gameobject",
+              "go": "85339c72-a0a0-45a0-9c3d-5e82c53ab076"
+            }
+          ],
+          "OpenDistance": 0,
+          "OpenTime": 1,
+          "OpenType": "Delete",
+          "RotationAmount": 90,
+          "RotationAxis": "1,0,0",
+          "RotationSpeed": 3
+        }
+      ]
     }
   ],
   "SceneProperties": {
