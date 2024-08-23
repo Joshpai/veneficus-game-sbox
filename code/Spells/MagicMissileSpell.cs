@@ -11,7 +11,7 @@ public class MagicMissileSpell : ProjectileSpell
 	public override String ProjectilePrefabPath =>
 		"prefabs/spells/magic_missile.prefab";
 	public override float ProjectileScale => 0.1f;
-	public override float StartOffset => 75.0f;
+	public override float StartOffset => 150.0f;
 	public override float Duration => 20.0f;
 
 	public MagicMissileSpell(GameObject caster)
