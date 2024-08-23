@@ -41,7 +41,11 @@
         "LevelTransition": {
           "_type": "gameobject",
           "go": "3908587f-2efa-4525-b9cc-0a657ae4de84"
-        }
+        },
+        "Death Count S": 0,
+        "Death Count A": 2,
+        "Death Count B": 5,
+        "Death Count C": 10
       }
     },
     {
@@ -133,6 +137,1025 @@
           "Tint": "1,1,1,1"
         }
       ]
+    },
+    {
+      "__guid": "5f900fb3-d86f-4c28-8052-0ac9801dd752",
+      "Flags": 0,
+      "Name": "rending_gale_enemy",
+      "Position": "-7264,-192,3.999756",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/rending_gale_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "8c3e4266-073c-4e54-9f5a-78f68b3536e0",
+      "Flags": 0,
+      "Name": "rending_gale_enemy (1)",
+      "Position": "-7232,64,3.999756",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/rending_gale_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "5eb7e3d2-0a65-42b0-9007-8ada5a974573",
+      "Flags": 0,
+      "Name": "rending_gale_enemy (2)",
+      "Position": "-7488,-64,3.999756",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/rending_gale_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "a217056a-92c8-45ec-8d93-bb1185cff2cc",
+      "Flags": 0,
+      "Name": "rending_gale_enemy (3)",
+      "Position": "-7424,192,3.999756",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/rending_gale_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "31b126b0-c6e6-48f4-a27b-776311182bc5",
+      "Flags": 0,
+      "Name": "rock_armour_enemy",
+      "Position": "-7552,1248,3.999756",
+      "Rotation": "0,0,-0.7071066,0.7071067",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "c0364e52-a75c-48ac-babb-6769608278c0",
+      "Flags": 0,
+      "Name": "rock_armour_enemy (1)",
+      "Position": "-7456,704,3.999756",
+      "Rotation": "0,0,-0.7071066,0.7071067",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "d3533ea1-e068-4b0e-90ac-db79a441e92b",
+      "Flags": 0,
+      "Name": "rock_armour_enemy (2)",
+      "Position": "-2944,4032,2564",
+      "Rotation": "0,0,-1,0.0000001947072",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "17bb34f3-4d39-4735-acf8-4a1efcde3c6c",
+      "Flags": 0,
+      "Name": "rending_gale_enemy (4)",
+      "Position": "-352,3744,2564",
+      "Rotation": "0,0,0.3826834,0.9238796",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/rending_gale_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "115561fe-ca28-4faa-80d8-785c35ddfa8e",
+      "Flags": 0,
+      "Name": "rending_gale_enemy (5)",
+      "Position": "-352,4384,2564",
+      "Rotation": "0,0,-0.3826834,0.9238796",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/rending_gale_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "47eb4492-86dd-401c-aafd-779a85db9e0c",
+      "Flags": 0,
+      "Name": "rock_armour_enemy (3)",
+      "Position": "95.99998,2144,2564",
+      "Rotation": "0,0,0.7071067,0.7071068",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "cf4137b8-c381-44dc-af0c-00a4631e47a5",
+      "Flags": 0,
+      "Name": "rock_armour_enemy (4)",
+      "Position": "95.99968,543.9999,2564",
+      "Rotation": "0,0,0.7071067,0.7071068",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "07a325f5-b9a0-4265-8b72-d65d0dd225f0",
+      "Flags": 0,
+      "Name": "rock_armour_enemy (5)",
+      "Position": "95.99927,-1696,2564",
+      "Rotation": "0,0,0.7071067,0.7071068",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "c6da552b-ed3b-47ee-83de-550b085a273c",
+      "Flags": 0,
+      "Name": "rock_armour_enemy (6)",
+      "Position": "95.99895,-3392,2564",
+      "Rotation": "0,0,0.7071067,0.7071068",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "15e4b17f-453f-4308-820a-7ce199d7da77",
+      "Flags": 0,
+      "Name": "fireball_enemy",
+      "Position": "384,1472,2564",
+      "Rotation": "0,0,0.7071068,0.7071068",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "237af894-39ae-41b8-b143-f39022c572e2",
+      "Flags": 0,
+      "Name": "fireball_enemy (3)",
+      "Position": "384.0003,-1920,2564",
+      "Rotation": "0,0,0.7071068,0.7071068",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "15375b63-b03e-4ef7-86d7-b4d10faeaf4d",
+      "Flags": 0,
+      "Name": "fireball_enemy (1)",
+      "Position": "-160.0002,1472,2564",
+      "Rotation": "0,0,0.7071068,0.7071068",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "ad1441c7-3883-4e77-9371-feec33c6dddd",
+      "Flags": 0,
+      "Name": "fireball_enemy (2)",
+      "Position": "-159.9998,-2112,2564",
+      "Rotation": "0,0,0.7071068,0.7071068",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "d228d0b5-ea3e-4784-9d1a-fe3dc5d34345",
+      "Flags": 0,
+      "Name": "magic_missile_enemy",
+      "Position": "384,-160,2564",
+      "Rotation": "0,0,0.7071067,0.7071068",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "13450334-4ec1-4b4e-bb26-5ae3b50021a8",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (1)",
+      "Position": "-160,-159.9999,2564",
+      "Rotation": "0,0,0.7071067,0.7071068",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "0123c009-35e1-4956-855a-e2240e4b4c16",
+      "Flags": 0,
+      "Name": "rending_gale_enemy (6)",
+      "Position": "-224.0007,-4287.999,2564",
+      "Rotation": "0,0,0.7071067,0.7071068",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/rending_gale_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "8529dec2-4a1f-48e4-a912-663b1c607828",
+      "Flags": 0,
+      "Name": "rending_gale_enemy (7)",
+      "Position": "447.9992,-4287.998,2564",
+      "Rotation": "0,0,0.7071067,0.7071068",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/rending_gale_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "f814aef1-a66c-42fc-8bc2-4d94d287238b",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (2)",
+      "Position": "-192,-4160,-14482",
+      "Rotation": "0,0,-0.4999999,0.8660253",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "d7681b4f-fa13-4a18-b528-336f3073e341",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (3)",
+      "Position": "480,-4864,-14482",
+      "Rotation": "0,0,0.9238795,0.3826834",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "838c29a1-9019-427a-90ba-93cecf445fd2",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (4)",
+      "Position": "448,-4192,-14482",
+      "Rotation": "0,0,-0.9238795,0.3826834",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "d384936c-19b5-4819-be93-00192713d90b",
+      "Flags": 0,
+      "Name": "rending_gale_enemy (8)",
+      "Position": "288,-2688,-14556",
+      "Rotation": "0,0,-0.7071068,0.7071068",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/rending_gale_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "67b33746-3dc2-48b0-aca4-4547a3045d4d",
+      "Flags": 0,
+      "Name": "rending_gale_enemy (9)",
+      "Position": "639.9998,-2688,-14556",
+      "Rotation": "0,0,-0.7071068,0.7071068",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/rending_gale_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "f461e167-64de-43aa-a9b3-03d28c4ad6f7",
+      "Flags": 0,
+      "Name": "rending_gale_enemy (10)",
+      "Position": "991.9999,-2688,-14556",
+      "Rotation": "0,0,-0.7071068,0.7071068",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/rending_gale_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "e9ac2f4e-9c60-44f7-9cb0-575b2e85902d",
+      "Flags": 0,
+      "Name": "rending_gale_enemy (15)",
+      "Position": "1056.003,-6335.998,-14556",
+      "Rotation": "0,0,-0.7071069,-0.7071066",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/rending_gale_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "554f7859-a0dc-4a03-9045-c4e01339681b",
+      "Flags": 0,
+      "Name": "rending_gale_enemy (16)",
+      "Position": "832.0029,-6335.998,-14556",
+      "Rotation": "0,0,-0.7071069,-0.7071066",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/rending_gale_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "91d25342-e151-4aca-b499-a16f9082040e",
+      "Flags": 0,
+      "Name": "rending_gale_enemy (17)",
+      "Position": "608.0029,-6335.998,-14556",
+      "Rotation": "0,0,-0.7071069,-0.7071066",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/rending_gale_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "8f7eabbf-5ba9-4ddc-aa82-4573148e22ce",
+      "Flags": 0,
+      "Name": "rending_gale_enemy (11)",
+      "Position": "1920,-4448,-14556",
+      "Rotation": "0,0,-1,0.0000001947072",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/rending_gale_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "c528e834-8ea1-4b98-8daf-0e3d5741506a",
+      "Flags": 0,
+      "Name": "rending_gale_enemy (12)",
+      "Position": "1920,-4767.999,-14556",
+      "Rotation": "0,0,-1,0.0000001947072",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/rending_gale_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "0f7eefb0-bf0e-4439-9f16-397c56fb71a2",
+      "Flags": 0,
+      "Name": "rending_gale_enemy (13)",
+      "Position": "1920,-5087.999,-14556",
+      "Rotation": "0,0,-1,0.0000001947072",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/rending_gale_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "f92da122-d834-4775-9b67-0ec8b3124014",
+      "Flags": 0,
+      "Name": "rock_armour_enemy (7)",
+      "Position": "1472,-3136,-14556",
+      "Rotation": "0,0,-0.9999999,0.0000001947072",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "d74cbf37-17fc-4938-8d9d-31a180a18e37",
+      "Flags": 0,
+      "Name": "rock_armour_enemy (8)",
+      "Position": "1536,-5888,-14556",
+      "Rotation": "0,0,0.7071067,0.7071068",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "55dc17a9-f0ba-41e1-8f0c-72dc9323433d",
+      "Flags": 0,
+      "Name": "rending_gale_enemy (14)",
+      "Position": "-1152,-5888,-14556",
+      "Rotation": "0,0,0.3826834,0.9238796",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/rending_gale_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "c5f80a46-1a9c-4be9-9b82-582ae4ed4079",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (5)",
+      "Position": "736,-3776,-16220",
+      "Rotation": "0,0,-0.9238794,0.3826834",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "db2617a0-0689-4c4e-a3db-76e94aa64fe0",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (6)",
+      "Position": "1024,-3552,-15836",
+      "Rotation": "0,0,-0.9659257,0.2588191",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "d1c7efc2-b186-44e0-9093-5c6030c7eca8",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (7)",
+      "Position": "768,-5344,-16220",
+      "Rotation": "0,0,-0.9238794,-0.3826832",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "59503b55-8258-464f-8b4a-a205097b3927",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (8)",
+      "Position": "992,-5536,-15836",
+      "Rotation": "0,0,0.9238794,0.3826834",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "c1aa52e6-d48d-43e4-bc96-859ce71635cc",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (9)",
+      "Position": "-512,-3776,-16220",
+      "Rotation": "0,0,-0.3826834,0.9238796",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "ea23d6c6-dedd-4317-baa1-352061176c2b",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (10)",
+      "Position": "-480,-5312,-16220",
+      "Rotation": "0,0,0.3826833,0.9238794",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "47bbb30d-b392-423b-9410-6a14d1f807b8",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (11)",
+      "Position": "-736,-5504,-15836",
+      "Rotation": "0,0,0.3826833,0.9238794",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "fcaebda9-8b14-496c-b4e3-e9c08993ccf0",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (12)",
+      "Position": "-736,-3584,-15836",
+      "Rotation": "0,0,-0.3826833,0.9238794",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "aca04ad9-56a3-4084-a42c-aeb0a655d278",
+      "Flags": 0,
+      "Name": "fireball_enemy (4)",
+      "Position": "-992,-3392,-15452",
+      "Rotation": "0,0,-0.3826833,0.9238794",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "b331f851-4bd3-4bb5-80d8-d7a329d879ec",
+      "Flags": 0,
+      "Name": "fireball_enemy (5)",
+      "Position": "1216,-3392,-15452",
+      "Rotation": "0,0,-0.9238794,0.3826834",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "f7668c31-5df3-4556-8431-9aef5b2a4cb1",
+      "Flags": 0,
+      "Name": "fireball_enemy (6)",
+      "Position": "1280,-5696,-15452",
+      "Rotation": "0,0,-0.9238794,-0.3826832",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "6e5ffc10-fc13-4660-a654-47ba6e6da94a",
+      "Flags": 0,
+      "Name": "fireball_enemy (7)",
+      "Position": "-992,-5696,-15452",
+      "Rotation": "0,0,0.3826833,0.9238794",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "b15d0e66-8c25-47a4-9ba1-4303d947d470",
+      "Flags": 0,
+      "Name": "rock_armour_enemy (9)",
+      "Position": "-1280,-3136,-15068",
+      "Rotation": "0,0,-0.7071067,0.7071068",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "7aab4273-6df2-4fbc-a8e5-58d30ad6b5e5",
+      "Flags": 0,
+      "Name": "rending_gale_enemy (18)",
+      "Position": "-2368,-6656,-16604",
+      "Rotation": "0,0,-1,0.0000001947072",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/rending_gale_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "b26db7e0-6f52-4c1a-b92b-dc1a9d534309",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (13)",
+      "Position": "-2400,-6304,-16604",
+      "Rotation": "0,0,-0.9659258,0.2588192",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "d4c69e44-6b20-426b-b37e-3df40c330c0c",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (14)",
+      "Position": "-2368,-7104,-16604",
+      "Rotation": "0,0,0.9238795,0.3826834",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "e2125858-ecb5-4427-a6c5-d173698fd302",
+      "Flags": 0,
+      "Name": "spell_unlock",
+      "Position": "-4000,-6688,-16032",
+      "Enabled": true,
+      "__Prefab": "prefabs/triggers/spell_unlock.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "a69b55eb-8948-4c01-8edb-65c0d7e552c0",
+      "Flags": 0,
+      "Name": "water_beam_enemy",
+      "Position": "-7328,-6144,-16700",
+      "Rotation": "0,0,-0.3826833,0.9238794",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/water_beam_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "266b6903-6122-4db9-bde6-b8e891f85236",
+      "Flags": 0,
+      "Name": "water_beam_enemy (1)",
+      "Position": "-7680,-7168,-16700",
+      "Rotation": "0,0,0.258819,0.9659257",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/water_beam_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "bfc80e8b-ab3e-47a5-8813-c48f4ab1d195",
+      "Flags": 0,
+      "Name": "water_beam_enemy (2)",
+      "Position": "-10432,-6144,-16700",
+      "Rotation": "0,0,-0.3826833,0.9238794",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/water_beam_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "ca030dcf-43d5-4628-850f-9dccdb0adecc",
+      "Flags": 0,
+      "Name": "water_beam_enemy (3)",
+      "Position": "-10784,-7168,-16700",
+      "Rotation": "0,0,0.258819,0.9659257",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/water_beam_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "ade7dbf9-5080-4adb-b5f1-d5bf336ef7cb",
+      "Flags": 0,
+      "Name": "fireball_enemy (8)",
+      "Position": "-12896,-7168,-16700",
+      "Rotation": "0,0,0.258819,0.9659258",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "0841ff15-7eeb-40c4-a8e4-bcbe851f4eff",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (15)",
+      "Position": "-14208,-7168,-16700",
+      "Rotation": "0,0,0.3826833,0.9238794",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "05bcf7ab-428b-46c1-a4c5-d0d8890cd7b4",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (16)",
+      "Position": "-13824,-6144,-16700",
+      "Rotation": "0,0,-0.4999999,0.8660253",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "80bc2e69-4145-4c1f-86f0-1df126d04cbe",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (17)",
+      "Position": "-14688,-6176,-16700",
+      "Rotation": "0,0,-0.3826833,0.9238794",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "c7e5dffe-685e-4403-9f7e-28ddc7e4d180",
+      "Flags": 0,
+      "Name": "fireball_enemy (9)",
+      "Position": "-16224,-7168,-16700",
+      "Rotation": "0,0,0.258819,0.9659257",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "34124857-ad68-4b17-8785-1f2c020836b1",
+      "Flags": 0,
+      "Name": "water_beam_enemy (4)",
+      "Position": "-17152,-6144,-16700",
+      "Rotation": "0,0,-0.3826833,0.9238794",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/water_beam_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "f30865de-5a45-4932-85e9-7139ef9b7214",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (18)",
+      "Position": "-17984,-7168,-16700",
+      "Rotation": "0,0,0.3826833,0.9238794",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "ee7fa46b-91a7-4035-b8a1-2f4ce9404324",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (19)",
+      "Position": "-18688,-7168,-16700",
+      "Rotation": "0,0,0.258819,0.9659257",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "fee05834-1a14-4e15-b6f5-a92fc9c2cb76",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (20)",
+      "Position": "-19264,-6144,-16700",
+      "Rotation": "0,0,-0.3826833,0.9238794",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "82ea6806-4bbc-4124-9131-063b6bb34680",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (21)",
+      "Position": "-20320,-7168,-16700",
+      "Rotation": "0,0,0.258819,0.9659257",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "c48feb6a-942d-4fdb-8f98-21e0f8b5a0b2",
+      "Flags": 0,
+      "Name": "fireball_enemy (10)",
+      "Position": "-21312,-7168,-16700",
+      "Rotation": "0,0,0.258819,0.9659257",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "ac1a8667-d188-4a3a-83bb-68ea4c99637c",
+      "Flags": 0,
+      "Name": "water_beam_enemy (5)",
+      "Position": "-21760,-6144,-16700",
+      "Rotation": "0,0,-0.3826833,0.9238794",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/water_beam_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "9b4bb956-591e-4aa5-b860-d4cdf12a50ea",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (22)",
+      "Position": "-23200,-7168,-16700",
+      "Rotation": "0,0,0.258819,0.9659257",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "9cb5b487-63cc-431c-8de3-7c5d95cec5bf",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (23)",
+      "Position": "-22912,-6144,-16700",
+      "Rotation": "0,0,-0.3826833,0.9238794",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "0e5abebf-f626-4c50-8fda-5c3652d18256",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (24)",
+      "Position": "-23648,-7168,-16700",
+      "Rotation": "0,0,0.258819,0.9659257",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "e4f09dc5-3b2e-4e0c-ade1-bf2c3723c63d",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (25)",
+      "Position": "-24000,-6144,-16700",
+      "Rotation": "0,0,-0.3826834,0.9238796",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "1652d409-e824-472b-8b1c-0d61b27ee364",
+      "Flags": 0,
+      "Name": "water_beam_enemy (6)",
+      "Position": "-25120,-7168,-16700",
+      "Rotation": "0,0,0.258819,0.9659257",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/water_beam_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "13f04b5a-a0a9-4bf3-8da1-48e2b0b460cf",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (26)",
+      "Position": "-25920,-6144,-16700",
+      "Rotation": "0,0,-0.3826834,0.9238796",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "2efa8cd0-a1ac-49b5-b450-961d9f286062",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (27)",
+      "Position": "-26528,-6144,-16700",
+      "Rotation": "0,0,-0.258819,0.9659257",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "d6e8aaf5-800c-498e-8765-7ef7d13cef2c",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (28)",
+      "Position": "-27392,-7168,-16700",
+      "Rotation": "0,0,0.258819,0.9659257",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "ebe191f4-2c1a-468c-8b4a-a97b4fce7453",
+      "Flags": 0,
+      "Name": "water_beam_enemy (7)",
+      "Position": "-27840,-7168,-16700",
+      "Rotation": "0,0,0.258819,0.9659257",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/water_beam_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "381deed7-7640-41e4-a42a-1ca9f7dff6c4",
+      "Flags": 0,
+      "Name": "fireball_enemy (11)",
+      "Position": "-28736,-6144,-16700",
+      "Rotation": "0,0,-0.3826834,0.9238796",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "8d95e153-05eb-4bbc-b99b-0ed5389dd2b1",
+      "Flags": 0,
+      "Name": "fireball_enemy (12)",
+      "Position": "-29152,-7168,-16700",
+      "Rotation": "0,0,0.258819,0.9659257",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "1e4c1e8a-cb77-4471-9a2c-dfbaba995d36",
+      "Flags": 0,
+      "Name": "water_beam_enemy (8)",
+      "Position": "-29728,-6144,-16700",
+      "Rotation": "0,0,-0.258819,0.9659258",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/water_beam_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "448df3de-c677-406e-8b85-63ca454aaf17",
+      "Flags": 0,
+      "Name": "water_beam_enemy (9)",
+      "Position": "-30016,-7168,-16700",
+      "Rotation": "0,0,0.258819,0.9659257",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/water_beam_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "5b4cd032-9e92-4e8f-9874-9fe79e3f44ef",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (29)",
+      "Position": "-30400,-6144,-16700",
+      "Rotation": "0,0,-0.258819,0.9659257",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "f0fdf42b-a9bf-4ef8-acf3-d80e17391ef5",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (30)",
+      "Position": "-31392,-7168,-16700",
+      "Rotation": "0,0,0.258819,0.9659257",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "6ccd763a-b977-4b30-8a78-2f76f7903c83",
+      "Flags": 0,
+      "Name": "fireball_enemy (13)",
+      "Position": "-31808,-6144,-16700",
+      "Rotation": "0,0,-0.258819,0.9659257",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "e47cd18b-51f7-4a9a-b199-691a042e5b5a",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (31)",
+      "Position": "-32768,-7168,-16700",
+      "Rotation": "0,0,0.258819,0.9659258",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "97b9248c-d60d-42ad-a869-633a6831115e",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (32)",
+      "Position": "-33056,-6144,-16700",
+      "Rotation": "0,0,-0.258819,0.9659257",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "5883b685-9b09-40a8-aae7-91ec251e4e0d",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (33)",
+      "Position": "-33664,-7168,-16700",
+      "Rotation": "0,0,0.258819,0.9659257",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "94140d51-b4b7-48a1-93b6-f719d34145d6",
+      "Flags": 0,
+      "Name": "water_beam_enemy (10)",
+      "Position": "-34048,-7168,-16700",
+      "Rotation": "0,0,0.258819,0.9659258",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/water_beam_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "a4feba99-e8ce-4fe9-abbe-e8c6665249b3",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (34)",
+      "Position": "-34528,-6144,-16700",
+      "Rotation": "0,0,-0.258819,0.9659257",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "fc65d70d-6054-47ff-b523-386bf8d3307b",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (35)",
+      "Position": "-35040,-7168,-16700",
+      "Rotation": "0,0,0.258819,0.9659257",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "6a194756-d924-4367-a1a0-f04b0687ae09",
+      "Flags": 0,
+      "Name": "magic_missile_enemy",
+      "Position": "-35552,-7168,-16700",
+      "Rotation": "0,0,0.258819,0.9659257",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "7e56edb7-cb1d-40d8-83f1-cefca5a691c8",
+      "Flags": 0,
+      "Name": "magic_missile_enemy",
+      "Position": "-35552,-6144,-16700",
+      "Rotation": "0,0,-0.258819,0.9659258",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "7a462f0e-0047-4c5e-bb17-9fc0840ea0a1",
+      "Flags": 0,
+      "Name": "fireball_enemy",
+      "Position": "-37728,-7072,-16700",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "62176a39-f5df-403e-b394-35d9edf8e16d",
+      "Flags": 0,
+      "Name": "fireball_enemy",
+      "Position": "-37728,-6656,-16700",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "34acb4f4-2b97-47c6-a8f6-5e243a76bde6",
+      "Flags": 0,
+      "Name": "fireball_enemy",
+      "Position": "-37728,-6240,-16700",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "8e54aa1b-6089-4cd8-b671-e3201a3fbcff",
+      "Flags": 0,
+      "Name": "spell_unlock",
+      "Position": "-37312,-6656,-20576",
+      "Enabled": true,
+      "__Prefab": "prefabs/triggers/spell_unlock.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "6c1d33e9-eb55-41e0-a3fb-bc25748036ac",
+      "Flags": 0,
+      "Name": "water_beam_enemy",
+      "Position": "-38304,-7168,-20508",
+      "Rotation": "0,0,0.258819,0.9659257",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/water_beam_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "278e30a9-e883-4c85-b476-f02e8c6557b0",
+      "Flags": 0,
+      "Name": "water_beam_enemy",
+      "Position": "-38272,-6176,-20508",
+      "Rotation": "0,0,-0.3826833,0.9238794",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/water_beam_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "a59b731d-b909-4fc6-9c3f-72d230d46ae7",
+      "Flags": 0,
+      "Name": "water_beam_enemy",
+      "Position": "-38656,-7104,-20508",
+      "Rotation": "0,0,0.1305262,0.9914448",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/water_beam_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "95fdd615-da72-441e-b319-234b0016dc01",
+      "Flags": 0,
+      "Name": "water_beam_enemy",
+      "Position": "-38592,-6240,-20508",
+      "Rotation": "0,0,-0.258819,0.9659257",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/water_beam_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "9ac4b6a4-ac70-4d06-8908-979877fec7b4",
+      "Flags": 0,
+      "Name": "rock_armour_enemy",
+      "Position": "-39200,-6656,-20508",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "7d0be4c7-d733-42eb-b97e-52b3ea7b92a0",
+      "Flags": 0,
+      "Name": "water_beam_enemy",
+      "Position": "-38592,-6656,-20508",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/water_beam_enemy.prefab",
+      "__PrefabVariables": {}
     }
   ],
   "SceneProperties": {

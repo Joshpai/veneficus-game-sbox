@@ -42,7 +42,11 @@
         "LevelTransition": {
           "_type": "gameobject",
           "go": "484a0b5c-b194-450b-8210-dc06902e1923"
-        }
+        },
+        "Death Count S": 0,
+        "Death Count A": 2,
+        "Death Count B": 5,
+        "Death Count C": 10
       }
     },
     {
@@ -439,6 +443,115 @@
           "Tint": "1,1,1,1"
         }
       ]
+    },
+    {
+      "__guid": "77c83aad-9bc2-4a37-bae5-059785f714bb",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (31)",
+      "Position": "-4338.641,-4237.361,-1259",
+      "Rotation": "0,0,-0.7071066,0.7071067",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "b5b152de-1336-46c0-8d30-9721f3d9c884",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (32)",
+      "Position": "-4663.188,-4473.147,132.0001",
+      "Rotation": "0,0,-0.1305262,0.991445",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "9f5a4291-4f7b-4e6d-9320-9b28c3f03d98",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (33)",
+      "Position": "-4672,-4576,-1990",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "ed4f90c2-8a95-4caa-9046-861545719a26",
+      "Flags": 0,
+      "Name": "rock_armour_enemy",
+      "Position": "-4656.196,-5510.59,-2384.748",
+      "Rotation": "0.000006944833,-0.00000004283856,0.5526106,0.8334396",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "fca9c087-8abb-4006-86e0-6f67a74f9216",
+      "Flags": 0,
+      "Name": "spell_unlock",
+      "Position": "-4993.607,-5915.94,-2388.651",
+      "Rotation": "-0.0005762013,0.000542192,0.9747961,0.2230963",
+      "Enabled": true,
+      "__Prefab": "prefabs/triggers/spell_unlock.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "f03a80e0-a2f1-450c-b512-11bd8a2b3e99",
+      "Flags": 0,
+      "Name": "rock_armour_enemy (1)",
+      "Position": "-5568.001,-9439.996,-1938",
+      "Rotation": "0,0,0.7071067,0.7071068",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "873ecde5-ea25-4281-8c8a-c276dacbbebe",
+      "Flags": 0,
+      "Name": "rock_armour_enemy (2)",
+      "Position": "-5888,-9183.998,-1938",
+      "Rotation": "0,0,0.7071067,0.7071068",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "7cedce37-6c86-470c-972e-f929483b800f",
+      "Flags": 0,
+      "Name": "rock_armour_enemy (3)",
+      "Position": "-5312.001,-9183.996,-1938",
+      "Rotation": "0,0,0.7071067,0.7071068",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "85a267f0-99d1-4802-b7b0-6ec432f4e2bd",
+      "Flags": 0,
+      "Name": "rock_armour_enemy (4)",
+      "Position": "-4978.851,-9804.327,-1236.757",
+      "Rotation": "-0.001090795,0.001119822,0.6983488,0.7157558",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "f4d78f5b-db70-4992-8dea-b0378ab58f25",
+      "Flags": 0,
+      "Name": "rock_armour_enemy (5)",
+      "Position": "-6194.48,-9774.396,-1236.753",
+      "Rotation": "-0.001090795,0.001119822,0.6983488,0.7157558",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "3e769ba4-2534-4f68-85ee-32263b1de8af",
+      "Flags": 0,
+      "Name": "rock_armour_enemy (6)",
+      "Position": "-5586.665,-9789.363,-1236.755",
+      "Rotation": "-0.001090795,0.001119822,0.6983488,0.7157558",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
+      "__PrefabVariables": {}
     }
   ],
   "SceneProperties": {
