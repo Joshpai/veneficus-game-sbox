@@ -41,7 +41,11 @@
         "LevelTransition": {
           "_type": "gameobject",
           "go": "75f7d354-033f-43a9-988f-cefc1a81c648"
-        }
+        },
+        "Death Count S": 0,
+        "Death Count A": 2,
+        "Death Count B": 5,
+        "Death Count C": 10
       }
     },
     {
