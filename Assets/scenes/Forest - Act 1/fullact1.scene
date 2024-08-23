@@ -552,6 +552,224 @@
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
       "__PrefabVariables": {}
+    },
+    {
+      "__guid": "e7a83d0a-d00f-4769-abe5-13f41834a54c",
+      "Flags": 0,
+      "Name": "Cube",
+      "Position": "-5566.216,-10144,-1120",
+      "Scale": "2.652823,1,5.418931",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "8715622f-543d-4d20-b93c-316edfa47e91",
+          "BodyGroups": 18446744073709551615,
+          "MaterialOverride": "materials/world/cavewall1/cavewall1.vmat",
+          "Model": "models/dev/box.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "DoorComponent",
+          "__guid": "30736381-e9a3-4bb7-9819-64a577636d07",
+          "Keys": [
+            {
+              "_type": "gameobject",
+              "go": "85a267f0-99d1-4802-b7b0-6ec432f4e2bd"
+            },
+            {
+              "_type": "gameobject",
+              "go": "3e769ba4-2534-4f68-85ee-32263b1de8af"
+            },
+            {
+              "_type": "gameobject",
+              "go": "f4d78f5b-db70-4992-8dea-b0378ab58f25"
+            },
+            {
+              "_type": "gameobject",
+              "go": "eb3954de-562b-4298-a31d-1ad9ea8ae00a"
+            },
+            {
+              "_type": "gameobject",
+              "go": "b3dfcf4f-b9cb-4964-baa6-959bff3bef31"
+            },
+            {
+              "_type": "gameobject",
+              "go": "b2fb6210-a4fc-43d1-995b-08034ab23368"
+            },
+            {
+              "_type": "gameobject",
+              "go": "6cb2c47f-c96a-4a40-824c-9a17c9ee7f8d"
+            },
+            {
+              "_type": "gameobject",
+              "go": "a90d4123-ab52-44e6-a59f-f61add6c676a"
+            },
+            {
+              "_type": "gameobject",
+              "go": "d4b6aadb-fe5e-423b-830f-4eb6c81e4d11"
+            },
+            {
+              "_type": "gameobject",
+              "go": "645aa29a-275a-4a87-8b7d-5c1250a05b2e"
+            },
+            {
+              "_type": "gameobject",
+              "go": "6a5200c8-aafb-4099-93c3-b6ddfc5d3937"
+            },
+            {
+              "_type": "gameobject",
+              "go": "d9fea9e0-b5d4-44f9-b9e9-7b1652dddb68"
+            },
+            {
+              "_type": "gameobject",
+              "go": "f15a4485-f239-4532-9524-3b159d6db68a"
+            },
+            {
+              "_type": "gameobject",
+              "go": "d318b9f6-87f2-465f-998e-6da845e939a0"
+            },
+            {
+              "_type": "gameobject",
+              "go": "f03a80e0-a2f1-450c-b512-11bd8a2b3e99"
+            },
+            {
+              "_type": "gameobject",
+              "go": "873ecde5-ea25-4281-8c8a-c276dacbbebe"
+            },
+            {
+              "_type": "gameobject",
+              "go": "7cedce37-6c86-470c-972e-f929483b800f"
+            }
+          ],
+          "OpenDistance": 500,
+          "OpenTime": 1,
+          "OpenType": "MoveDown"
+        }
+      ]
+    },
+    {
+      "__guid": "0b495891-85ec-4376-a605-c75d3c4095a9",
+      "Flags": 0,
+      "Name": "Cube (1)",
+      "Position": "-4736,-5632,-2272",
+      "Rotation": "0,0,-0.258819,0.9659258",
+      "Scale": "3.457649,1,5.418931",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "7b746852-e80c-48d5-9d2d-9707c17bcbdf",
+          "BodyGroups": 18446744073709551615,
+          "MaterialOverride": "materials/world/cavewall1/cavewall1.vmat",
+          "Model": "models/dev/box.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "DoorComponent",
+          "__guid": "2d135715-b689-480f-b793-52b62e13c756",
+          "Keys": [
+            {
+              "_type": "gameobject",
+              "go": "ed4f90c2-8a95-4caa-9046-861545719a26"
+            }
+          ],
+          "OpenDistance": 500,
+          "OpenTime": 1,
+          "OpenType": "MoveDown"
+        }
+      ]
+    },
+    {
+      "__guid": "e119a9f7-0b35-4687-a41d-c26ae05d70d1",
+      "Flags": 0,
+      "Name": "Cube",
+      "Position": "-3795.363,-3757.764,384",
+      "Rotation": "0,0,-0.258819,0.9659258",
+      "Scale": "4.369918,1,14.18136",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "ea96f5b8-b802-49fe-8a03-acac25ecaafd",
+          "BodyGroups": 18446744073709551615,
+          "MaterialOverride": "materials/world/log/log.vmat",
+          "Model": "models/dev/box.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "DoorComponent",
+          "__guid": "297f6694-9231-46be-9d90-e7a83badcfe1",
+          "Keys": [
+            {
+              "_type": "gameobject",
+              "go": "af1335e5-fd7d-4730-9653-ce3267eeb8d6"
+            },
+            {
+              "_type": "gameobject",
+              "go": "f92db8ed-2348-4016-a8c5-07dd40bf3a21"
+            },
+            {
+              "_type": "gameobject",
+              "go": "e8364621-01d6-4759-a733-90ef89ac8390"
+            },
+            {
+              "_type": "gameobject",
+              "go": "6f0be2f6-7f7b-4f8b-9305-3e407921e3da"
+            },
+            {
+              "_type": "gameobject",
+              "go": "233bd0ff-6a95-49dc-8e8e-eab0d17c12fe"
+            },
+            {
+              "_type": "gameobject",
+              "go": "77c354e3-2c86-48cd-9065-d4c0b7e1a993"
+            },
+            {
+              "_type": "gameobject",
+              "go": "a4a45488-a276-4c3e-b0de-31c637a4dc95"
+            },
+            {
+              "_type": "gameobject",
+              "go": "4d080d79-ffa5-41d0-88cf-1ba7c9c2048d"
+            },
+            {
+              "_type": "gameobject",
+              "go": "fe4b45f3-e256-417f-819b-0d459187acee"
+            },
+            {
+              "_type": "gameobject",
+              "go": "c2bab529-5a79-4a8a-a282-100de884c14d"
+            },
+            {
+              "_type": "gameobject",
+              "go": "44186726-cc01-40ba-a777-f1bb54ea8ad0"
+            },
+            {
+              "_type": "gameobject",
+              "go": "c38aabfc-6de1-45df-8e5b-318c8f404cf1"
+            },
+            {
+              "_type": "gameobject",
+              "go": "2ffcf5da-1a2f-4b60-9449-de5cff9478af"
+            },
+            {
+              "_type": "gameobject",
+              "go": "f62439a2-ad6d-4989-b361-03cee55209ba"
+            },
+            {
+              "_type": "gameobject",
+              "go": "cce2e887-3298-4965-b420-e52f67718877"
+            }
+          ],
+          "OpenDistance": 500,
+          "OpenTime": 3,
+          "OpenType": "Delete"
+        }
+      ]
     }
   ],
   "SceneProperties": {
