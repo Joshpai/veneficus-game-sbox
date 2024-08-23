@@ -29,7 +29,7 @@
         "__guid": "c795ac71-7dc0-4a84-a7a0-7bbe8e2f87ad",
         "BodyGroups": 18446744073709551615,
         "CreateBoneObjects": false,
-        "Model": "models/citizen/heads/head_zombie_02/models/head_zombie_02.vmdl",
+        "Model": "models/enemymodels/windenemy/enemywind.vmdl",
         "RenderType": "On",
         "Tint": "1,1,1,1",
         "UseAnimGraph": true

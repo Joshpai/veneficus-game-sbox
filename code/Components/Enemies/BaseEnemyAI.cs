@@ -73,6 +73,8 @@ public class BaseEnemyAI : Component
 
 	private float _nextAttackTime = 0.0f;
 
+	protected SkinnedModelRenderer _modelRenderer;
+
 	protected override void DrawGizmos()
 	{
 		base.DrawGizmos();
@@ -125,6 +127,8 @@ public class BaseEnemyAI : Component
 	{
 		Agent = Components.GetInChildrenOrSelf<NavMeshAgent>();
 		_startingPosition = Transform.Position;
+		_modelRenderer =
+			Components.GetInDescendantsOrSelf<SkinnedModelRenderer>();
 
 		var players = Scene.GetAllComponents<PlayerMovementController>();
 		foreach (var player in players)

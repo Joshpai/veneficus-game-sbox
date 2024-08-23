@@ -11,6 +11,8 @@ public sealed class MagicMissileEnemyAI : BaseEnemyAI
 	private float _nextBurstShotTime = 0.0f;
 	private int _remainingBurstShots = 0;
 
+	private float _finishSpellTime = 0.0f;
+
 	protected override void OnStart()
 	{
 		base.OnStart();
@@ -25,6 +27,11 @@ public sealed class MagicMissileEnemyAI : BaseEnemyAI
 	protected override void OnUpdate()
 	{
 		base.OnUpdate();
+
+		_modelRenderer.Set("b_attacking", _missile != null);
+		// TODO: maybe a derived variable would be better here
+		_modelRenderer.Set("b_walking",
+						   !_passive && !PlayerInRange(AttackRangeIdeal));
 
 		if (_missile != null)
 		{
@@ -65,6 +72,13 @@ public sealed class MagicMissileEnemyAI : BaseEnemyAI
 		if (_passive)
 			return;
 
+		// HACK: temporary measure: I haven't worked out how to use bone masks
+		// so please I beg do not attack and move!!!!
+		if (_missile != null)
+		{
+			Agent.Velocity = Vector3.Zero;
+			TurnToFacePlayer();
+		}
 		if (!PlayerInRange(AttackRangeIdeal))
 			MoveToPlayer();
 		else
@@ -77,9 +91,7 @@ public sealed class MagicMissileEnemyAI : BaseEnemyAI
 		{
 			_missile.OnFixedUpdate();
 
-			// TODO: consider what we should do for determining how long this
-			// enemy type should charge the fireball for.
-			bool shouldFinishCasting = true;
+			bool shouldFinishCasting = _finishSpellTime <= Time.Now;
 			if (shouldFinishCasting)
 			{
 				_missile.FinishCasting();
@@ -105,7 +117,8 @@ public sealed class MagicMissileEnemyAI : BaseEnemyAI
 			{
 				// We have already shot one!
 				_remainingBurstShots = BurstCount - 1;
-				_nextBurstShotTime = Time.Now + TimeBetweenBurstShots;
+				_finishSpellTime = Time.Now + 4.5f;
+				_nextBurstShotTime = Time.Now + 4.5f + TimeBetweenBurstShots;
 			}
 			else
 			{

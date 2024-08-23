@@ -55,7 +55,7 @@
             "__guid": "e91f557f-f901-4fb6-a33e-caf6c4518c53",
             "BodyGroups": 18446744073709551615,
             "CreateBoneObjects": false,
-            "Model": "models/citizen/heads/head_zombie_02/models/head_zombie_02.vmdl",
+            "Model": "models/enemymodels/fireenemy/enemyfire.vmdl",
             "RenderType": "On",
             "Tint": "1,1,1,1",
             "UseAnimGraph": true
