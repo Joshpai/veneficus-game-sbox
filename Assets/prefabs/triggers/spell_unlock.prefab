@@ -45,22 +45,12 @@
     ],
     "__variables": [
       {
-        "Id": "PushVector",
-        "Title": "PushVector",
+        "Id": "Unlock Spell",
+        "Title": "Unlock Spell",
         "Targets": [
           {
-            "Id": "9a806b3f-37ad-44c1-98b1-275a67f0ed06",
-            "Property": "PushVector"
-          }
-        ]
-      },
-      {
-        "Id": "Pushable Tags",
-        "Title": "Pushable Tags",
-        "Targets": [
-          {
-            "Id": "9a806b3f-37ad-44c1-98b1-275a67f0ed06",
-            "Property": "PushableTags"
+            "Id": "2c299275-304c-49d5-babc-891313e569ed",
+            "Property": "UnlockSpell"
           }
         ]
       }
