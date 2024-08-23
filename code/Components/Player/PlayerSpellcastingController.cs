@@ -61,6 +61,9 @@ public sealed class PlayerSpellcastingController : Component
 
 	private bool _attackHeldAfterSwitch = false;
 
+	private SkinnedModelRenderer _modelRenderer;
+	private float _stopCastTime = -1000.0f;
+
 	protected override void OnStart()
 	{
 		// This should be zeroed by definition. It should be noted that this
@@ -78,6 +81,9 @@ public sealed class PlayerSpellcastingController : Component
 
 		Mana = MaxMana;
 		_manaRegenStartTime = 0.0f;
+
+		_modelRenderer =
+			Components.GetInDescendantsOrSelf<SkinnedModelRenderer>();
 	}
 
 	public static BaseSpell CreateSpell(GameObject caster,
@@ -207,6 +213,14 @@ public sealed class PlayerSpellcastingController : Component
 			_castingSpell.OnUpdate();
 		}
 
+		if (_modelRenderer != null)
+		{
+			bool attacking = (_castingSpell != null);
+			bool stopping = (Time.Now - _stopCastTime < 1.6f);
+			_modelRenderer.Set("b_attacking", attacking || stopping);
+			_modelRenderer.Set("b_stop_attack", stopping);
+		}
+
 		foreach (BaseSpell spell in _castSpells)
 		{
 			spell.OnUpdate();
@@ -270,6 +284,8 @@ public sealed class PlayerSpellcastingController : Component
 
 	private void FinishCasting()
 	{
+		_stopCastTime = Time.Now;
+
 		if (!_castingSpell.FinishCasting())
 		{
 			_castingSpell = null;
