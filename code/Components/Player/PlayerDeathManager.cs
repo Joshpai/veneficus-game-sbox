@@ -23,7 +23,7 @@ public sealed class PlayerDeathManager : Component
 
 		// TODO: delay of some kind? for artistic effect?
 		float? timeScale =
-			LevelManager.LoadLevel(LevelManagerStaticStore.ActiveScene, false);
+			LevelManager.LoadLevel(LevelManagerStaticStore.ActiveScene, false, true);
 
 		// Load the checkpoint data
 		// NOTE: we currently no longer exist (as a game object) so lets

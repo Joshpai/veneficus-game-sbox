@@ -1,5 +1,3 @@
-using Sandbox.Citizen;
-
 public sealed class PlayerMovementController : Component
 {
 	[Property]
@@ -304,7 +302,6 @@ public sealed class PlayerMovementController : Component
 		cameraPos = (tr.Hit) ? tr.HitPosition : cameraPos;
 
 		Camera.Transform.Position = cameraPos;
-
 	}
 
 	// Short dump on design justification for this feature:

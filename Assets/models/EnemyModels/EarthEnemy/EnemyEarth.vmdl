@@ -6,24 +6,13 @@
 		children = 
 		[
 			{
-				_class = "MaterialGroupList"
-				children = 
-				[
-					{
-						_class = "DefaultMaterialGroup"
-						remaps = [  ]
-						use_global_default = true
-						global_default_material = "materials/enemymaterials/magicmissile/magicmissle.vmat"
-					},
-				]
-			},
-			{
 				_class = "RenderMeshList"
 				children = 
 				[
 					{
 						_class = "RenderMeshFile"
-						filename = "models/EnemyModels/MissileEnemy/EnemyMagicMissile.fbx"
+						name = "EnemyEarth"
+						filename = "models/EnemyModels/EarthEnemy/EnemyEarth.fbx"
 						import_translation = [ 0.0, 0.0, 0.0 ]
 						import_rotation = [ 0.0, 0.0, 0.0 ]
 						import_scale = 1.0
@@ -40,12 +29,24 @@
 				]
 			},
 			{
+				_class = "MaterialGroupList"
+				children = 
+				[
+					{
+						_class = "DefaultMaterialGroup"
+						remaps = [  ]
+						use_global_default = true
+						global_default_material = "materials/enemymaterials/earthenemy/earthenemy.vmat"
+					},
+				]
+			},
+			{
 				_class = "AnimationList"
 				children = 
 				[
 					{
 						_class = "AnimFile"
-						name = "EnemyMagicMissile"
+						name = "EnemyEarth"
 						activity_name = ""
 						activity_weight = 1
 						weight_list_name = ""
@@ -59,18 +60,18 @@
 						disable_compression = false
 						disable_interpolation = false
 						enable_scale = false
-						source_filename = "models/EnemyModels/MissileEnemy/EnemyMagicMissile.fbx"
+						source_filename = "models/EnemyModels/EarthEnemy/EnemyEarth.fbx"
 						start_frame = -1
 						end_frame = -1
 						framerate = -1.0
-						take = 2
+						take = 0
 						reverse = false
 					},
 				]
 				default_root_bone_name = ""
 			},
 		]
-		model_archetype = ""
+		model_archetype = "default"
 		primary_associated_entity = ""
 		anim_graph_name = ""
 		base_model_name = ""

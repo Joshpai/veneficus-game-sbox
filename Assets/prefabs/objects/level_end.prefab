@@ -27,6 +27,11 @@
       {
         "__type": "LevelEnd",
         "__guid": "aecb641e-d6b2-4741-9950-279543944415",
+        "DeathCount_A": 2,
+        "DeathCount_B": 5,
+        "DeathCount_C": 10,
+        "DeathCount_S": 0,
+        "MainMenu": "scenes/main_menu.scene",
         "TargetEnemiesKilledPercent_A": 0.9,
         "TargetEnemiesKilledPercent_B": 0.75,
         "TargetEnemiesKilledPercent_C": 0.5,
@@ -146,6 +151,46 @@
           {
             "Id": "aecb641e-d6b2-4741-9950-279543944415",
             "Property": "LevelTransition"
+          }
+        ]
+      },
+      {
+        "Id": "Death Count S",
+        "Title": "Death Count S",
+        "Targets": [
+          {
+            "Id": "aecb641e-d6b2-4741-9950-279543944415",
+            "Property": "DeathCount_S"
+          }
+        ]
+      },
+      {
+        "Id": "Death Count A",
+        "Title": "Death Count A",
+        "Targets": [
+          {
+            "Id": "aecb641e-d6b2-4741-9950-279543944415",
+            "Property": "DeathCount_A"
+          }
+        ]
+      },
+      {
+        "Id": "Death Count B",
+        "Title": "Death Count B",
+        "Targets": [
+          {
+            "Id": "aecb641e-d6b2-4741-9950-279543944415",
+            "Property": "DeathCount_B"
+          }
+        ]
+      },
+      {
+        "Id": "Death Count C",
+        "Title": "Death Count C",
+        "Targets": [
+          {
+            "Id": "aecb641e-d6b2-4741-9950-279543944415",
+            "Property": "DeathCount_C"
           }
         ]
       }

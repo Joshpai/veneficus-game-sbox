@@ -27,17 +27,95 @@
 			</div>
 		</div>
 		<div class="screen @(_selectedScreen == MainMenuScreens.PlaySaveSelect ? "" : "hidden")">
-			Save Select
+			<div class="saves-container">
+				<div class="saves">
+					<div class="saves-title">Select a Save</div>
+					<button class="save-new" onclick=@NewSave>
+						<p>+ Create a New Save</p>
+					</button>
+					<div class="saves-list">
+						@for (int i = 0; i < 10; i++)
+						{
+							var currentAct = $"Act {i}";
+							String[] spells = new String[]{"P", "F", "M"};
+							String[] ranks = new String[]{"S", "A", "B"};
+
+							<button class="save"
+								onclick=@(SelectSave(i))>
+								<div class="save-current-act">
+									Current Act: @currentAct
+								</div>
+								<div class="save-spells">
+									<div>Unlocked Spells: </div>
+									@foreach (var spell in spells)
+									{
+										<div>@spell</div>
+									}
+								</div>
+								<div class="save-ranks">
+									<div>Act Ranks: </div>
+									@foreach (var rank in ranks)
+									{
+										<div>@rank</div>
+									}
+								</div>
+							</button>
+							<!-- TODO:
+								 - last played?
+								 - total deaths
+								 - total items collected?
+								 - total time played
+								 -->
+						}
+					</div>
+					<button class="saves-back" onclick=@ReturnToMainMenu>
+						<p>&#8592; Return</p>
+					</button>
+				</div>
+			</div>
 		</div>
 		<div class="screen @(_selectedScreen == MainMenuScreens.PlayLevelSelect ? "" : "hidden")">
-			Level Select
+			<div class="acts-container">
+				<div class="acts">
+					<div class="acts-title">Select an Act</div>
+					<div class="acts-list">
+						@for (int i = 0; i < ActScenes.Count; i++)
+						{
+							// TODO: only show unlocked acts
+							// if (!ActIsUnlocked(i)) return;
+
+							<button class="act"
+								onclick=@SelectAct(i)>
+								<div class="act-name">
+									@ActNames[i]
+								</div>
+								<img class="act-image" src="@ActImages[i]" />
+							</button>
+						}
+					</div>
+					<button class="acts-back" onclick=@ReturnToSaves>
+						<p>&#8592; Return</p>
+					</button>
+				</div>
+			</div>
 		</div>
 	</div>
-
 </root>
 
 @code
 {
+	[Property]
+	public SceneFile FirstLevel { get; set; }
+
+	[Property]
+	public List<SceneFile> ActScenes { get; set; }
+
+	[Property]
+	public List<String> ActNames { get; set; }
+
+	[Property]
+	public List<String> ActImages { get; set; }
+
 	private enum MainMenuScreens
 	{
 		Title = 0,
@@ -51,6 +129,41 @@
 	{
 		Log.Info("Play Game");
 		_selectedScreen = MainMenuScreens.PlaySaveSelect;
+	}
+
+	public void NewSave()
+	{
+		Log.Info("New Save");
+		if (FirstLevel != null)
+			LevelManager.LoadLevelImmediate(FirstLevel, true, true);
+	}
+
+	public Action SelectSave(int saveIdx)
+	{
+		return () => {
+			Log.Info("Select Save");
+			Log.Info(saveIdx);
+			_selectedScreen = MainMenuScreens.PlayLevelSelect;
+		};
+	}
+
+	public void ReturnToMainMenu()
+	{
+		_selectedScreen = MainMenuScreens.Title;
+	}
+
+	public void ReturnToSaves()
+	{
+		_selectedScreen = MainMenuScreens.PlaySaveSelect;
+	}
+
+	public Action SelectAct(int actIdx)
+	{
+		return () => {
+			Log.Info(actIdx);
+			if (actIdx < ActScenes.Count && ActScenes[actIdx] != null)
+				LevelManager.LoadLevelImmediate(ActScenes[actIdx], true, true);
+		};
 	}
 
 	public void Settings()

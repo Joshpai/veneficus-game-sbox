@@ -9,6 +9,17 @@ MainMenu
   border-radius: 20px;
   pointer-events: all;
 
+  /* Button hover and click sounds */
+  button:hover
+  {
+    sound-in: "sounds/UI/belt-buckle-01.sound";
+  }
+
+  button:active
+  {
+    sound-in: "sounds/UI/belt-buckle-05.sound";
+  }
+
   .screen-container
   {
     .hidden
@@ -71,13 +82,175 @@ MainMenu
       button:hover
       {
         background-color: #aaa;
-        sound-in: "sounds/UI/belt-buckle-01.sound";
       }
 
       button:active
       {
         background-color: #666;
-        sound-in: "sounds/UI/belt-buckle-05.sound";
+      }
+    }
+  }
+
+  .saves-container
+  {
+    width: 100%;
+    height: 75%;
+    margin: auto;
+    /* overflow: hidden; */
+
+    .saves {
+      width: 45%;
+      margin: auto;
+      flex-direction: column;
+      /* background-color: teal; */
+      backdrop-filter: blur(10px);
+      padding: 50px;
+
+      .saves-title
+      {
+        font-size: 50px;
+        margin: auto;
+        padding: 15px;
+        border-bottom: 3px solid black;
+        margin-bottom: 15px;
+      }
+
+      .save-new
+      {
+        width: 100%;
+        font-size: 40px;
+        padding: 10px;
+        background-color: #bbb;
+        border: 3px solid #222;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 15px;
+      }
+
+      .saves-list
+      {
+        overflow-y: scroll;
+        flex-direction: column;
+        gap: 25px;
+        width: 100%;
+        /* background-color: blue; */
+        height: 500px;
+
+        .save
+        {
+          position: relative;
+          display: flex;
+          width: 100%;
+          /* height: 100px; */
+          flex-shrink: 0;
+          background-color: #bbb;
+          border: 1px solid white;
+          flex-direction: column;
+          gap: 5px;
+          padding: 10px;
+
+          .save-current-act
+          {
+            color: black;
+            gap: 10px;
+          }
+
+          .save-spells
+          {
+            color: black;
+            gap: 10px;
+          }
+
+          .save-ranks
+          {
+            color: black;
+            gap: 10px;
+          }
+        }
+      }
+
+      .saves-back
+      {
+        width: 100%;
+        font-size: 40px;
+        padding: 10px;
+        background-color: #bbb;
+        border: 3px solid #222;
+        align-items: center;
+        justify-content: center;
+        margin-top: 15px;
+      }
+    }
+  }
+
+  .acts-container
+  {
+    width: 100%;
+    height: 75%;
+    margin: auto;
+
+    .acts {
+      width: 45%;
+      margin: auto;
+      flex-direction: column;
+      /* background-color: teal; */
+      backdrop-filter: blur(10px);
+      padding: 50px;
+
+      .acts-title
+      {
+        font-size: 50px;
+        margin: auto;
+        padding: 15px;
+        border-bottom: 3px solid black;
+        margin-bottom: 15px;
+      }
+
+      .acts-list
+      {
+        flex-direction: row;
+        gap: 25px;
+        width: 100%;
+        /* background-color: blue; */
+        height: 500px;
+
+        .act
+        {
+          /* position: relative; */
+          /* display: flex; */
+          /* height: 100%; */
+          aspect-ratio: 1;
+          background-color: #bbb;
+          border: 1px solid white;
+          flex-direction: column;
+          gap: 15px;
+          padding: 10px;
+
+          .act-name
+          {
+            color: black;
+            gap: 10px;
+            margin: auto;
+          }
+
+          .act-image
+          {
+            margin: auto;
+            aspect-ratio: 1;
+          }
+        }
+      }
+
+      .acts-back
+      {
+        width: 100%;
+        font-size: 40px;
+        padding: 10px;
+        background-color: #bbb;
+        border: 3px solid #222;
+        align-items: center;
+        justify-content: center;
+        margin-top: 15px;
       }
     }
   }

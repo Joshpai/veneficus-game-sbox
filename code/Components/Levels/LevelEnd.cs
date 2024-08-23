@@ -3,6 +3,9 @@ public sealed class LevelEnd : InteractableComponent
 	[Property]
 	public SceneFile NextLevel { get; set; }
 
+	[Property]
+	public SceneFile MainMenu { get; set; }
+
 	// Relevant for later scenes. For example, if we want to send players to
 	// the ethereal tavern at the end, but don't necessarily want to recreate
 	// the tavern scene for each individual time we use it. In such cases:
@@ -159,13 +162,13 @@ public sealed class LevelEnd : InteractableComponent
 	private void RestartCurrentLevel()
 	{
 		LevelManagerStaticStore.Stats = new LevelStats();
-		LevelManager.LoadLevelImmediate(LevelManagerStaticStore.ActiveScene, true);
+		LevelManager.LoadLevelImmediate(LevelManagerStaticStore.ActiveScene, true, true);
 	}
 
 	private void ReturnToMainMenu()
 	{
-		// TODO: once we have a main menu
-		Log.Info("main menu in another place");
+		if (MainMenu != null)
+			LevelManager.LoadLevelImmediate(MainMenu, true, false);
 	}
 
 	private void StartNextLevel()
@@ -174,6 +177,6 @@ public sealed class LevelEnd : InteractableComponent
 		// We want to be able to go to a level summary screen first.
 		LevelManagerStaticStore.Stats = new LevelStats();
 		if (NextLevel != null)
-			LevelManager.LoadLevelImmediate(NextLevel, true);
+			LevelManager.LoadLevelImmediate(NextLevel, true, true);
 	}
 }
