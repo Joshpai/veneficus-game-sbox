@@ -24,8 +24,7 @@
     "CsProjName": "",
     "StartupScene": "scenes/level_loader.scene",
     "ControlModes": {
-      "Keyboard": true,
-      "Gamepad": true
+      "Keyboard": true
     },
     "InputSettings": {
       "Actions": [

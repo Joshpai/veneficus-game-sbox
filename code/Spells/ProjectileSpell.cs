@@ -10,6 +10,7 @@ public abstract class ProjectileSpell : BaseSpell
 	public abstract float Duration { get; }
 
 	protected GameObject _projectileObject;
+	protected Collider _collider;
 	protected ProjectileSpellCollisionComponent _collisionComponent;
 	protected TimeSince _timeSinceProjectileSpawn;
 
@@ -27,6 +28,11 @@ public abstract class ProjectileSpell : BaseSpell
 		_projectileObject.Transform.Scale = ProjectileScale;
 		_projectileObject.Transform.LocalRotation =
 			CastDirection.EulerAngles;
+
+		_collider =
+			_projectileObject.Components.GetInDescendantsOrSelf<Collider>();
+		if (_collider != null)
+			_collider.Enabled = false;
 
 		// NOTE: collision is handled in ProjectileSpellCollisionComponent.
 		_collisionComponent =
@@ -51,6 +57,9 @@ public abstract class ProjectileSpell : BaseSpell
 		// below line, the object will be set to the origin for a few frames
 		// and looks rubbish as it jumps around.
 		_projectileObject.Transform.ClearInterpolation();
+
+		if (_collider != null)
+			_collider.Enabled = true;
 
 		// Update the fireball damage according to the charge amount
 		if (_collisionComponent != null)

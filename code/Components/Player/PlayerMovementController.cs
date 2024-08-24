@@ -318,6 +318,7 @@ public sealed class PlayerMovementController : Component
 		var endPos = cameraPos;
 		var tr = Scene.Trace.Ray(startPos, endPos)
 							.IgnoreGameObjectHierarchy(GameObject)
+							.WithoutTags("projectile")
 							.Size(1.0f)
 							.Run();
 		cameraPos = (tr.Hit) ? tr.HitPosition : cameraPos;
