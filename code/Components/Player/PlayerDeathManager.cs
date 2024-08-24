@@ -61,7 +61,7 @@ public sealed class PlayerDeathManager : Component
 		{
 			deathScreenComponent.TimeScale = timeScale;
 			// TODO: make this more random and related to the death reason.
-			deathScreenComponent.DeathReason = "L + Ratio + Dead + your mum";
+			// deathScreenComponent.DeathReason = "L + Ratio + Dead + your mum";
 		}
 	}
 

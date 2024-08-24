@@ -25,9 +25,6 @@ public sealed class PlayerMovementController : Component
 	public Vector3 CameraFollowDirection { get; set; }
 
 	[Property]
-	public float CameraFollowDistance { get; set; }
-
-	[Property]
 	public float CameraPitchClamp { get; set; } = 85.0f;
 
 	[Property]
@@ -102,12 +99,20 @@ public sealed class PlayerMovementController : Component
 	[Property]
 	public AnimationGraph HumanAnimGraph { get; set; } = null;
 
+	[Property]
+	public float HumanCameraFollowDistance { get; set; } = 200.0f;
+
+	[Property]
+	public float PolymorphCameraFollowDistance { get; set; } = 100.0f;
+
 	// Too small a thing to fit elsewhere. Maximum range of an item the player
 	// can interact with.
 	[Property]
 	public float InteractRange { get; set; } = 64.0f;
 
 	public bool IsDashing { get; set; } = false;
+
+	public float CameraFollowDistance;
 
 	public float Mass;
 
@@ -159,11 +164,11 @@ public sealed class PlayerMovementController : Component
 		// worth only including this "optimisation" iff we're in Release?
 		_cameraFollowDirectionNormalised = CameraFollowDirection.Normal;
 		_cameraReferenceHuman = new Transform(
-				HumanEyePosition + CameraFollowPosition,
+				HumanEyePosition + CameraFollowDirection * HumanCameraFollowDistance,
 				Transform.Rotation
 		);
 		_cameraReferencePolymorphed = new Transform(
-				PolymorphedEyePosition + CameraFollowPosition,
+				PolymorphedEyePosition + CameraFollowDirection * PolymorphCameraFollowDistance,
 				Transform.Rotation
 		);
 		Camera.SetParent(null, true);
@@ -250,7 +255,7 @@ public sealed class PlayerMovementController : Component
 		// we don't care about being super fast here.
 		Gizmo.Draw.LineSphere(
 			HumanEyePosition + CameraFollowDirection.Normal *
-							   CameraFollowDistance,
+							   HumanCameraFollowDistance,
 			10.0f
 		);
 
