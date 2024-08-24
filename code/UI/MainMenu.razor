@@ -134,6 +134,7 @@
 	public void NewSave()
 	{
 		// Log.Info("New Save");
+		SaveData.CreateNewSave();
 		if (FirstLevel != null)
 			LevelManager.LoadLevelImmediate(FirstLevel, true, true);
 	}
