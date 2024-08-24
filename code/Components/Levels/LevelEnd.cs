@@ -1,5 +1,26 @@
+public class LevelSummaryData
+{
+	public int LevelIndex { get; set; } = -1;
+
+	public String CompletionTime { get; set; } = "00:00.000";
+	public String CompletionTimeRank { get; set; } = "D";
+	public String EnemiesKilledRank { get; set; } = "D";
+	public String DeathRank { get; set; } = "D";
+
+	// TODO: the below may not be included :)
+	public bool ChallengeCompleted { get; set; } = false;
+	public int SecretCount { get; set; } = 0;
+	public uint SecretCollectedBitmask { get; set; } = 0;
+
+	public String FinalRank { get; set; } = "D";
+	public int FinalRankValue { get; set; } = -1;
+}
+
 public sealed class LevelEnd : InteractableComponent
 {
+	[Property]
+	public int LevelIndex { get; set; } = -1;
+
 	[Property]
 	public SceneFile NextLevel { get; set; }
 
@@ -51,6 +72,34 @@ public sealed class LevelEnd : InteractableComponent
 
 	public override void Interact(GameObject interacter)
 	{
+		var completionTime =
+			Time.Now - LevelManagerStaticStore.Stats.LevelStartTime;
+		var completionTimeSpan = TimeSpan.FromSeconds(completionTime);
+		// Cheat and add an extra "D" on the end because I don't want to
+		// bounds check after doing an operation I know can overflow.
+		String[] ranks = {"S", "A", "B", "C", "D", "D"};
+		float[] finishTimes = {
+			TargetFinishTime_S,
+			TargetFinishTime_A,
+			TargetFinishTime_B,
+			TargetFinishTime_C
+		};
+		float[] killPercents = {
+			TargetEnemiesKilledPercent_S,
+			TargetEnemiesKilledPercent_A,
+			TargetEnemiesKilledPercent_B,
+			TargetEnemiesKilledPercent_C
+		};
+		float killPercent = 1.0f;
+		int[] deathCounts = {
+			DeathCount_S,
+			DeathCount_A,
+			DeathCount_B,
+			DeathCount_C
+		};
+		int i;
+		int totalRank = 0;
+
 		// We don't want a level transition, so create a "level transition"
 		// prefab, which we place in the level (somewhere). Delete the player
 		// now, and the camera should hopefully jump to the level end. That
@@ -78,85 +127,95 @@ public sealed class LevelEnd : InteractableComponent
 			}
 		}
 
+		LevelSummaryData summaryData = new LevelSummaryData();
+		summaryData.CompletionTime =
+			completionTimeSpan.ToString(@"mm\:ss\.fff");
+		summaryData.ChallengeCompleted =
+			LevelManagerStaticStore.Stats.ChallengeCompleted;
+		summaryData.SecretCount = LevelManagerStaticStore.Stats.SecretCount;
+		summaryData.SecretCollectedBitmask =
+			LevelManagerStaticStore.Stats.SecretCollectedBitmask;
+
+		for (i = 0; i < finishTimes.Length; i++)
+			if (completionTime < finishTimes[i])
+				break;
+		summaryData.CompletionTimeRank = ranks[i];
+		totalRank += i;
+
+		var kills = LevelManagerStaticStore.Stats.EnemiesKilled;
+		var maxKills = LevelManagerStaticStore.Stats.MaxEnemies;
+		if (maxKills != 0)
+			killPercent = (float)kills / maxKills;
+		for (i = 0; i < killPercents.Length; i++)
+			if (killPercent >= killPercents[i])
+				break;
+		summaryData.EnemiesKilledRank = ranks[i];
+		totalRank += i;
+
+		for (i = 0; i < deathCounts.Length; i++)
+			if (LevelManagerStaticStore.Stats.DeathCount <= deathCounts[i])
+				break;
+		summaryData.DeathRank = ranks[i];
+		totalRank += i;
+
+		int finalRank = (int)MathF.Ceiling(totalRank / 3.0f);
+		summaryData.FinalRank = ranks[finalRank];
+		summaryData.FinalRankValue = finalRank;
+
 		var finishSummary =
 			LevelTransition.Components
 						   .GetInDescendantsOrSelf<LevelFinishSummary>();
 		if (finishSummary != null)
 		{
-			var completionTime =
-				Time.Now - LevelManagerStaticStore.Stats.LevelStartTime;
-			var completionTimeSpan = TimeSpan.FromSeconds(completionTime);
-			// Cheat and add an extra "D" on the end because I don't want to
-			// bounds check after doing an operation I know can overflow.
-			String[] ranks = {"S", "A", "B", "C", "D", "D"};
-			float[] finishTimes = {
-				TargetFinishTime_S,
-				TargetFinishTime_A,
-				TargetFinishTime_B,
-				TargetFinishTime_C
-			};
-			float[] killPercents = {
-				TargetEnemiesKilledPercent_S,
-				TargetEnemiesKilledPercent_A,
-				TargetEnemiesKilledPercent_B,
-				TargetEnemiesKilledPercent_C
-			};
-			float killPercent = 1.0f;
-			int[] deathCounts = {
-				DeathCount_S,
-				DeathCount_A,
-				DeathCount_B,
-				DeathCount_C
-			};
-			int i;
-			int totalRank = 0;
+			finishSummary.CompletionTime = summaryData.CompletionTime;
+			finishSummary.CompletionTimeRank = summaryData.CompletionTimeRank;
 
-			finishSummary.CompletionTime =
-				completionTimeSpan.ToString(@"mm\:ss\.fff");
-			for (i = 0; i < finishTimes.Length; i++)
-				if (completionTime < finishTimes[i])
-					break;
-			finishSummary.CompletionTimeRank = ranks[i];
-			totalRank += i;
-
-			finishSummary.EnemiesKilled =
-				LevelManagerStaticStore.Stats.EnemiesKilled;
-			finishSummary.MaxEnemies =
-				LevelManagerStaticStore.Stats.MaxEnemies;
-			if (finishSummary.MaxEnemies != 0)
-				killPercent =
-					finishSummary.EnemiesKilled / finishSummary.MaxEnemies;
-			for (i = 0; i < killPercents.Length; i++)
-				if (killPercent >= killPercents[i])
-					break;
-			finishSummary.EnemiesKilledRank = ranks[i];
-			totalRank += i;
+			finishSummary.EnemiesKilled = kills;
+			finishSummary.MaxEnemies = maxKills;
+			finishSummary.EnemiesKilledRank = summaryData.EnemiesKilledRank;
 
 			finishSummary.DeathCount =
 				LevelManagerStaticStore.Stats.DeathCount;
-			for (i = 0; i < deathCounts.Length; i++)
-				if (finishSummary.DeathCount <= deathCounts[i])
-					break;
-			finishSummary.DeathRank = ranks[i];
-			totalRank += i;
+			summaryData.DeathRank = summaryData.DeathRank;
 
 			finishSummary.ChallengeDescription =
 				LevelManagerStaticStore.Stats.ChallengeDescription;
-			finishSummary.ChallengeCompleted =
-				LevelManagerStaticStore.Stats.ChallengeCompleted;
+			finishSummary.ChallengeCompleted = summaryData.ChallengeCompleted;
 
-			finishSummary.SecretCount =
-				LevelManagerStaticStore.Stats.SecretCount;
+			finishSummary.SecretCount = summaryData.SecretCount;
 			finishSummary.SecretCollectedBitmask =
-				LevelManagerStaticStore.Stats.SecretCollectedBitmask;
+				summaryData.SecretCollectedBitmask;
 
-			int finalRank = (int)MathF.Ceiling(totalRank / 3.0f);
-			finishSummary.FinalRank = ranks[finalRank];
+			finishSummary.FinalRank = summaryData.FinalRank;
 
 			finishSummary.OnRetryLevel += RestartCurrentLevel;
 			finishSummary.OnMainMenu += ReturnToMainMenu;
 			finishSummary.OnNextLevel += StartNextLevel;
 		}
+
+		UpdateSaveDataLevelSummary(summaryData);
+	}
+
+	private void UpdateSaveDataLevelSummary(LevelSummaryData summaryData)
+	{
+		// If there's already data here, only overwrite it if the final rank
+		// is better than the existing one.
+		if (SaveData.Instance.Data.CompletedLevelData.ContainsKey(LevelIndex))
+		{
+			var last = SaveData.Instance.Data.CompletedLevelData[LevelIndex];
+			if (last.FinalRankValue > summaryData.FinalRankValue)
+				return;
+			SaveData.Instance.Data.CompletedLevelData[LevelIndex] = summaryData;
+		}
+		else
+		{
+			SaveData.Instance.Data.CompletedLevelData.Add(LevelIndex, summaryData);
+		}
+
+		SaveData.Instance.Data.GreatestCompletedLevel =
+			(SaveData.Instance.Data.GreatestCompletedLevel < LevelIndex)
+			? LevelIndex : SaveData.Instance.Data.GreatestCompletedLevel;
+		SaveData.Save();
 	}
 
 	private void RestartCurrentLevel()

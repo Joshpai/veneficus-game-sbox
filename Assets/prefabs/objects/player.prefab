@@ -46,7 +46,7 @@
         "HumanRadius": 16,
         "HumanStepHeight": 18,
         "InitialJumpAmount": 0.5,
-        "InteractRange": 64,
+        "InteractRange": 250,
         "JumpCoyoteTime": 0.15,
         "JumpDuration": 0.8,
         "MaxJumpHoldLength": 0.31,

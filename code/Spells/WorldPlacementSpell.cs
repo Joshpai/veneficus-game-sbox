@@ -21,6 +21,9 @@ public abstract class WorldPlacementSpell : BaseSpell
 	public WorldPlacementSpell(GameObject caster)
 		: base(caster)
 	{
+		if (caster == null)
+			return;
+
 		_placementIndicator =
 			new GameObject(false, GetSpellType().ToString() + "PlacementIndicator");
 		_placementIndicator.SetPrefabSource(PlacementIndicatorPrefab);

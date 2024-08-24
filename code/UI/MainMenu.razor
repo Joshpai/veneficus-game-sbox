@@ -34,22 +34,38 @@
 						<p>+ Create a New Save</p>
 					</button>
 					<div class="saves-list">
-						@for (int i = 0; i < 10; i++)
+						@for (int i = 0; i < SaveData.GetSaveCount(); i++)
 						{
-							var currentAct = $"Act {i}";
-							String[] spells = new String[]{"P", "F", "M"};
-							String[] ranks = new String[]{"S", "A", "B"};
+							var saveData = SaveData.GetSave(i);
+
+							var currentAct = $"Act {saveData.GreatestCompletedLevel + 1}";
+							List<String> ranks = new List<String>();
+							for (int j = 0; j <= saveData.GreatestCompletedLevel; j++)
+							{
+								ranks.Add(saveData.CompletedLevelData[j].FinalRank);
+							}
 
 							<button class="save"
 								onclick=@(SelectSave(i))>
 								<div class="save-current-act">
-									Current Act: @currentAct
+									Next Act: @currentAct
 								</div>
 								<div class="save-spells">
 									<div>Unlocked Spells: </div>
-									@foreach (var spell in spells)
+									@for (int spellType = (int)BaseSpell.SpellType.SpellTypeMin + 1;
+										  spellType < (int)BaseSpell.SpellType.SpellTypeMax;
+										  spellType++)
 									{
-										<div>@spell</div>
+										var unlocked =
+											((saveData.UnlockedSpells & (1ul << spellType)) != 0)
+											? "unlocked" : "locked";
+										BaseSpell spell =
+											PlayerSpellcastingController.CreateSpell(
+												null,
+												(BaseSpell.SpellType)spellType
+											);
+										<img src="@spell.IconPath"
+											 class="spell-image @unlocked"/>
 									}
 								</div>
 								<div class="save-ranks">
@@ -79,11 +95,8 @@
 				<div class="acts">
 					<div class="acts-title">Select an Act</div>
 					<div class="acts-list">
-						@for (int i = 0; i < ActScenes.Count; i++)
+						@for (int i = 0; i <= SaveData.Instance.Data.GreatestCompletedLevel + 1; i++)
 						{
-							// TODO: only show unlocked acts
-							// if (!ActIsUnlocked(i)) return;
-
 							<button class="act"
 								onclick=@SelectAct(i)>
 								<div class="act-name">
@@ -142,8 +155,7 @@
 	public Action SelectSave(int saveIdx)
 	{
 		return () => {
-			// Log.Info("Select Save");
-			// Log.Info(saveIdx);
+			SaveData.SelectSaveIndex(saveIdx);
 			_selectedScreen = MainMenuScreens.PlayLevelSelect;
 		};
 	}
@@ -161,8 +173,8 @@
 	public Action SelectAct(int actIdx)
 	{
 		return () => {
-			// Log.Info(actIdx);
-			if (actIdx < ActScenes.Count && ActScenes[actIdx] != null)
+			if (actIdx <= SaveData.Instance.Data.GreatestCompletedLevel + 1 &&
+				actIdx < ActScenes.Count && ActScenes[actIdx] != null)
 				LevelManager.LoadLevelImmediate(ActScenes[actIdx], true, true);
 		};
 	}
@@ -180,5 +192,8 @@
 	/// <summary>
 	/// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
 	/// </summary>
-	protected override int BuildHash() => System.HashCode.Combine( Time.Now );
+	protected override int BuildHash() =>
+		System.HashCode.Combine(
+			_selectedScreen
+		);
 }

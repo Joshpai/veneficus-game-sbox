@@ -22,6 +22,9 @@ public class RendingGaleSpell : BaseSpell
 	public RendingGaleSpell(GameObject caster)
 		: base(caster)
 	{
+		if (caster == null)
+			return;
+
 		// Dash in movement direction
 		_playerMovementController =
 			_caster.Components

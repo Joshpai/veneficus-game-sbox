@@ -27,6 +27,9 @@ public class MagicBarrierSpell : BaseSpell
 	public MagicBarrierSpell(GameObject caster)
 		: base(caster)
 	{
+		if (caster == null)
+			return;
+
 		_enabled = false;
 
 		_playerMovementController =

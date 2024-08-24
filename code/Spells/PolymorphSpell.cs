@@ -22,6 +22,9 @@ public class PolymorphSpell : BaseSpell
 	public PolymorphSpell(GameObject caster)
 		: base(caster)
 	{
+		if (caster == null)
+			return;
+
 		_playerMovementController =
 			_caster.Components
 				   .GetInDescendantsOrSelf<PlayerMovementController>();

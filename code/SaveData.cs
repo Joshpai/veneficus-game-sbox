@@ -6,6 +6,10 @@ public class SaveDataFormat
 	// would care about max mana buffs for example, as we don't want players
 	// to replay a level and get infinite max mana.
 	public HashSet<Guid> ConsumedMapItems { get; set; } = new HashSet<Guid>();
+
+	public Dictionary<int, LevelSummaryData> CompletedLevelData { get; set; } =
+		new Dictionary<int, LevelSummaryData>();
+	public int GreatestCompletedLevel { get; set; } = -1;
 }
 
 public class SaveData
@@ -15,14 +19,17 @@ public class SaveData
 
 	private const String SAVE_DIRECTORY = "saves";
 	private String _saveFilePath = "";
+	private int _selectedSave = -1;
 
 	private List<String> _saveFiles;
+	private List<SaveDataFormat> _allSaveData;
 
 	public SaveData()
 	{
 		Instance = this;
 		Data = new SaveDataFormat();
 		_saveFiles = new List<String>();
+		_allSaveData = new List<SaveDataFormat>();
 
 		FileSystem.Data.CreateDirectory(SAVE_DIRECTORY);
 		var saves =
@@ -30,7 +37,7 @@ public class SaveData
 		foreach (var save in saves)
 		{
 			_saveFiles.Add(save);
-			Log.Info(save);
+			_allSaveData.Add(ParseSaveFile(save));
 		}
 	}
 
@@ -39,7 +46,7 @@ public class SaveData
 		String creationTime = DateTime.UtcNow.ToString("yyyy-MM-ddTHH-mm-ssZ");
 		String saveFile = $"{SAVE_DIRECTORY}/player_save-{creationTime}.json";
 		Instance._saveFiles.Add(saveFile);
-
+		Instance._selectedSave = Instance._saveFiles.Count;
 		Instance._saveFilePath = saveFile;
 		Instance.Data = new SaveDataFormat();
 		Save();
@@ -50,14 +57,26 @@ public class SaveData
 		if (saveIdx < 0 || saveIdx >= Instance._saveFiles.Count)
 			return false;
 
-		Instance._saveFilePath = Instance._saveFiles[saveIdx];
+		Instance._saveFilePath = $"{SAVE_DIRECTORY}/{Instance._saveFiles[saveIdx]}";
+		Instance._selectedSave = saveIdx;
 		return true;
 	}
 
 	public static void Save()
 	{
 		if (Instance._saveFilePath != "" && Instance.Data != null)
+		{
+			Instance._allSaveData[Instance._selectedSave] = Instance.Data;
 			FileSystem.Data.WriteJson(Instance._saveFilePath, Instance.Data);
+		}
+	}
+
+	private static SaveDataFormat ParseSaveFile(String path)
+	{
+		return FileSystem.Data.ReadJsonOrDefault<SaveDataFormat>(
+			path,
+			new SaveDataFormat()
+		);
 	}
 
 	public static void Load()
@@ -69,13 +88,19 @@ public class SaveData
 			return;
 		}
 
-		var data = FileSystem.Data.ReadJsonOrDefault<SaveDataFormat>(
-			Instance._saveFilePath,
-			new SaveDataFormat()
-		);
+		Instance.Data = ParseSaveFile(Instance._saveFilePath);
+	}
 
-		// TODO: data validation?
+	public static int GetSaveCount()
+	{
+		return Instance._allSaveData.Count;
+	}
 
-		Instance.Data = data;
+	public static SaveDataFormat GetSave(int saveIdx)
+	{
+		if (saveIdx < 0 || saveIdx > Instance._allSaveData.Count)
+			return null;
+
+		return Instance._allSaveData[saveIdx];
 	}
 }

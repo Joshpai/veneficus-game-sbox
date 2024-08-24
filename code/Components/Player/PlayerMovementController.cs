@@ -496,7 +496,7 @@ public sealed class PlayerMovementController : Component
 		// DO THIS AT THE END! We might load a new level.
 		if (Input.Pressed("use"))
 		{
-			var startPos = Transform.Position + EyePosition;
+			var startPos = Camera.Transform.Position;
 			var endPos = startPos + EyeAngles.Forward * InteractRange;
 			var trace = Scene.Trace.Ray(startPos, endPos)
 								   .WithTag("interactable")

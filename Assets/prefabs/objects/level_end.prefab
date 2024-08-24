@@ -31,6 +31,7 @@
         "DeathCount_B": 5,
         "DeathCount_C": 10,
         "DeathCount_S": 0,
+        "LevelIndex": -1,
         "MainMenu": "scenes/main_menu.scene",
         "TargetEnemiesKilledPercent_A": 0.9,
         "TargetEnemiesKilledPercent_B": 0.75,
@@ -191,6 +192,16 @@
           {
             "Id": "aecb641e-d6b2-4741-9950-279543944415",
             "Property": "DeathCount_C"
+          }
+        ]
+      },
+      {
+        "Id": "LevelIndex",
+        "Title": "LevelIndex",
+        "Targets": [
+          {
+            "Id": "aecb641e-d6b2-4741-9950-279543944415",
+            "Property": "LevelIndex"
           }
         ]
       }
