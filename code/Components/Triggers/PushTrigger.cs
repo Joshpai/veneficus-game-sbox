@@ -11,7 +11,8 @@ public sealed class PushTrigger : Component, Component.ITriggerListener
 
 	// TODO: is a hash set actually what we want here? I wanted a tree, really,
 	// but I think HashSets are typically implemented as trees.
-	private HashSet<GameObject> _insideObjects;
+	private HashSet<Rigidbody> _insideObjects;
+	private PlayerMovementController _insidePlayer;
 
 	protected override void DrawGizmos()
 	{
@@ -27,7 +28,7 @@ public sealed class PushTrigger : Component, Component.ITriggerListener
 
 	protected override void OnStart()
 	{
-		_insideObjects = new HashSet<GameObject>();
+		_insideObjects = new HashSet<Rigidbody>();
 		_pushableTags = new HashSet<String>(PushableTags);
 	}
 
@@ -38,13 +39,29 @@ public sealed class PushTrigger : Component, Component.ITriggerListener
 			_pushableTags == null)
 			return;
 
-		if (other.GameObject.Tags.HasAny(_pushableTags))
-			_insideObjects.Add(other.GameObject);
+		if (!other.GameObject.Tags.HasAny(_pushableTags))
+			return;
+
+		var rigidBody =
+			other.GameObject.Components.GetInDescendantsOrSelf<Rigidbody>();
+		if (rigidBody != null)
+			_insideObjects.Add(rigidBody);
+
+		_insidePlayer =
+			other.GameObject.Components.GetInDescendantsOrSelf<PlayerMovementController>();
 	}
 
 	public void OnTriggerExit(Collider other)
 	{
-		_insideObjects.Remove(other.GameObject);
+		var rigidBody =
+			other.GameObject.Components.GetInDescendantsOrSelf<Rigidbody>();
+		if (rigidBody != null)
+			_insideObjects.Remove(rigidBody);
+
+		var player =
+			other.GameObject.Components.GetInDescendantsOrSelf<PlayerMovementController>();
+		if (player != null)
+			_insidePlayer = null;
 	}
 
 	protected override void OnFixedUpdate()
@@ -53,5 +70,8 @@ public sealed class PushTrigger : Component, Component.ITriggerListener
 		{
 			obj.Transform.Position += PushVector * Time.Delta;
 		}
+
+		if (_insidePlayer != null)
+			_insidePlayer.Controller.Velocity += PushVector * Time.Delta;
 	}
 }

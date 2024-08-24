@@ -3,6 +3,7 @@
     "__guid": "17ed16d0-7ff0-4360-a350-d7ddbcb374d3",
     "Flags": 0,
     "Name": "magic_missile_enemy",
+    "Tags": "enemy",
     "Enabled": true,
     "Components": [
       {

@@ -3126,7 +3126,8 @@
         "Death Count S": 0,
         "Death Count A": 2,
         "Death Count B": 5,
-        "Death Count C": 10
+        "Death Count C": 10,
+        "LevelIndex": -1
       }
     },
     {
@@ -3323,6 +3324,7 @@
       "Flags": 0,
       "Name": "fireball_enemy",
       "Position": "-1024.395,456.3957,4",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
       "__PrefabVariables": {}
@@ -3333,6 +3335,7 @@
       "Name": "magic_missile_enemy",
       "Position": "-147.9696,-580.447,4",
       "Rotation": "0,0,-0.8660254,0.5000001",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {}
@@ -3350,6 +3353,7 @@
       "Flags": 0,
       "Name": "water_beam_enemy",
       "Position": "38.09747,-917.1796,3.999557",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/water_beam_enemy.prefab",
       "__PrefabVariables": {}
@@ -3360,6 +3364,7 @@
       "Name": "rock_armour_enemy",
       "Position": "1015.286,579.7231,4",
       "Rotation": "0,0,0.9999998,0.0000001788139",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
       "__PrefabVariables": {}
@@ -8351,6 +8356,7 @@
       "Name": "rending_gale_enemy",
       "Position": "632.4222,-1306.146,4.000687",
       "Rotation": "0,0,0.7071067,0.7071068",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rending_gale_enemy.prefab",
       "__PrefabVariables": {}
@@ -8361,6 +8367,7 @@
       "Name": "lightning_strike_enemy",
       "Position": "1271.272,320.6473,3.999699",
       "Rotation": "0,0,-0.6087614,0.7933534",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/lightning_strike_enemy.prefab",
       "__PrefabVariables": {}
@@ -8428,6 +8435,22 @@
           ]
         }
       ]
+    },
+    {
+      "__guid": "0b7258e0-cf66-4c39-953f-64b24a882b65",
+      "Flags": 0,
+      "Name": "push_trigger",
+      "Position": "-244.5377,-760.8943,0",
+      "Scale": "24.27445,17.17355,1",
+      "Enabled": true,
+      "__Prefab": "prefabs/triggers/push_trigger.prefab",
+      "__PrefabVariables": {
+        "PushVector": "0,220.7,0",
+        "Pushable Tags": [
+          "player",
+          "enemy"
+        ]
+      }
     }
   ],
   "SceneProperties": {
@@ -8447,7 +8470,7 @@
       "AgentRadius": 16,
       "AgentStepSize": 18,
       "AgentMaxSlope": 40,
-      "ExcludedBodies": "",
+      "ExcludedBodies": "trigger,enemy,player",
       "IncludedBodies": ""
     }
   },
