@@ -253,7 +253,7 @@ public sealed class PlayerMovementController : Component
 
 		Gizmo.Draw.LineThickness = 16.0f;
 		var startPos = HumanEyePosition;
-		var endPos = startPos - CameraFollowDirection.Normal * InteractRange;
+		var endPos = startPos + EyeAngles.Forward * InteractRange;
 		Gizmo.Draw.Line(startPos, endPos);
 	}
 

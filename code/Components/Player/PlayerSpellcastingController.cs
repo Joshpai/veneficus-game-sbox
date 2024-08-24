@@ -214,8 +214,7 @@ public sealed class PlayerSpellcastingController : Component
 	{
 		if (_castingSpell != null)
 		{
-			_castingSpell.CastDirection =
-				PlayerMovementControllerRef.EyeAngles.Forward;
+			UpdateCastingSpellDirection();
 			_castingSpell.OnUpdate();
 		}
 
@@ -255,6 +254,23 @@ public sealed class PlayerSpellcastingController : Component
 		SelectSpellSlot(slot);
 	}
 
+	private void UpdateCastingSpellDirection()
+	{
+		var cameraStart =
+			PlayerMovementControllerRef.Camera.Transform.Position;
+		// TODO: make the number below a variable? must be very big, but is
+		// less important at longer distance as the offset error will reduce.
+		var hitEnd =
+			cameraStart + PlayerMovementControllerRef.EyeAngles.Forward * 100000.0f;
+
+		var tr = Scene.Trace.Ray(cameraStart, hitEnd).Run();
+
+		_castingSpell.CastDirection =
+			(tr.HitPosition -
+			 (PlayerMovementControllerRef.Transform.Position +
+			  PlayerMovementControllerRef.EyePosition)).Normal;
+	}
+
 	private void StartCasting()
 	{
 		_castingSpell = _spellBuffer[(int)ActiveSpell];
@@ -269,8 +285,7 @@ public sealed class PlayerSpellcastingController : Component
 
 		_castingSpell.CasterEyeOrigin =
 			PlayerMovementControllerRef.EyePosition;
-		_castingSpell.CastDirection =
-			PlayerMovementControllerRef.EyeAngles.Forward;
+		UpdateCastingSpellDirection();
 		_castingSpell.StartCasting();
 		_castingSpellIsHeld = true;
 	}
