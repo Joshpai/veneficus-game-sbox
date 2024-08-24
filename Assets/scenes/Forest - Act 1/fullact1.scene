@@ -47,7 +47,7 @@
         "Death Count A": 2,
         "Death Count B": 5,
         "Death Count C": 10,
-        "LevelIndex": -1
+        "LevelIndex": 1
       }
     },
     {
@@ -76,6 +76,7 @@
       "Name": "magic_missile_enemy",
       "Position": "501.0057,-1769.595,116",
       "Rotation": "0,0,0.9659257,0.2588191",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {}
@@ -86,6 +87,7 @@
       "Name": "magic_missile_enemy (1)",
       "Position": "-1040.753,-2277.751,52.00002",
       "Rotation": "0,0,0.4999999,0.8660253",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {}
@@ -95,6 +97,7 @@
       "Flags": 0,
       "Name": "magic_missile_enemy (2)",
       "Position": "-1034.069,-1778.986,180",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {}
@@ -105,6 +108,7 @@
       "Name": "magic_missile_enemy (3)",
       "Position": "-2398.103,-3666.308,396",
       "Rotation": "0,0,0.7933531,0.6087614",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {}
@@ -115,6 +119,7 @@
       "Name": "magic_missile_enemy (4)",
       "Position": "-2820.204,-3846.805,572",
       "Rotation": "0,0,0.7071066,0.7071067",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {}
@@ -125,6 +130,7 @@
       "Name": "magic_missile_enemy (5)",
       "Position": "-3348.824,-3849.206,476",
       "Rotation": "0,0,0.4999999,0.8660253",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {}
@@ -135,6 +141,7 @@
       "Name": "magic_missile_enemy (6)",
       "Position": "-3027.196,-1977.971,356",
       "Rotation": "0,0,-0.7071066,0.7071067",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {}
@@ -145,6 +152,7 @@
       "Name": "magic_missile_enemy (7)",
       "Position": "-3623.162,-2090.627,532",
       "Rotation": "0,0,-0.4999999,0.8660253",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {}
@@ -155,6 +163,7 @@
       "Name": "magic_missile_enemy (8)",
       "Position": "-4013.957,-2364.56,356",
       "Rotation": "0,0,-0.258819,0.9659257",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {}
@@ -165,6 +174,7 @@
       "Name": "magic_missile_enemy (9)",
       "Position": "-2529.97,-2212.202,57.5",
       "Rotation": "0,0,-0.7071067,0.7071068",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {}
@@ -175,6 +185,7 @@
       "Name": "magic_missile_enemy (10)",
       "Position": "-2576.315,-3502.119,57.5",
       "Rotation": "0,0,0.7071067,0.7071068",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {}
@@ -185,6 +196,7 @@
       "Name": "magic_missile_enemy (11)",
       "Position": "-3541.959,-3497.128,57.5",
       "Rotation": "0,0,0.258819,0.9659257",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {}
@@ -195,6 +207,7 @@
       "Name": "magic_missile_enemy (12)",
       "Position": "-3875.854,-3063.771,57.5",
       "Rotation": "0,0,0.1305262,0.9914448",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {}
@@ -205,6 +218,7 @@
       "Name": "magic_missile_enemy (13)",
       "Position": "-3754.43,-2523.574,57.5",
       "Rotation": "0,0,-0.1305262,0.9914448",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {}
@@ -214,6 +228,7 @@
       "Flags": 0,
       "Name": "magic_missile_enemy (14)",
       "Position": "-3401.504,-3149.299,-438.5",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {}
@@ -223,6 +238,7 @@
       "Flags": 0,
       "Name": "magic_missile_enemy (15)",
       "Position": "-3440.001,-2785.643,-438.5001",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {}
@@ -233,6 +249,7 @@
       "Name": "magic_missile_enemy (16)",
       "Position": "-2759.224,-3103.03,-438.5",
       "Rotation": "0,0,0.9914448,0.1305264",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {}
@@ -243,6 +260,7 @@
       "Name": "magic_missile_enemy (17)",
       "Position": "-2773.98,-2794.094,-438.5",
       "Rotation": "0,0,1,0.0000001947072",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {}
@@ -253,6 +271,7 @@
       "Name": "magic_missile_enemy (18)",
       "Position": "-4192.087,-4745.989,-804",
       "Rotation": "0,0,0.8660253,0.5",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {}
@@ -263,6 +282,7 @@
       "Name": "magic_missile_enemy (19)",
       "Position": "-4575.106,-4753.701,-1096",
       "Rotation": "0,0,0.1305262,0.9914448",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {}
@@ -273,6 +293,7 @@
       "Name": "magic_missile_enemy (20)",
       "Position": "-5963.909,-7445.211,-1132",
       "Rotation": "0,0,-0.6087613,0.7933533",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {}
@@ -283,6 +304,7 @@
       "Name": "magic_missile_enemy (21)",
       "Position": "-5603.387,-7445.214,-1132",
       "Rotation": "0,0,-0.7071066,0.7071067",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {}
@@ -293,6 +315,7 @@
       "Name": "magic_missile_enemy (22)",
       "Position": "-5198.012,-7445.218,-1132",
       "Rotation": "0,0,-0.8660251,0.4999999",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {}
@@ -303,6 +326,7 @@
       "Name": "magic_missile_enemy (23)",
       "Position": "-6473.401,-8995.584,-1440.031",
       "Rotation": "-0.00003746152,-0.00006488525,0.5,0.8660253",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {}
@@ -313,6 +337,7 @@
       "Name": "magic_missile_enemy (24)",
       "Position": "-4604.266,-8970.06,-1440.044",
       "Rotation": "0.00006488525,0.00003746152,0.8660253,0.5",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {}
@@ -323,6 +348,7 @@
       "Name": "magic_missile_enemy (25)",
       "Position": "-6391.997,-9402.685,-1238.317",
       "Rotation": "-0.001833499,0.0003539696,0.3293734,0.9441979",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {}
@@ -333,6 +359,7 @@
       "Name": "magic_missile_enemy (26)",
       "Position": "-5893.966,-9380.408,-1238.135",
       "Rotation": "-0.001287289,0.0009673449,0.6181686,0.7860439",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {}
@@ -343,6 +370,7 @@
       "Name": "magic_missile_enemy (27)",
       "Position": "-5276.452,-9384.048,-1238.117",
       "Rotation": "-0.0008902046,0.001385528,0.7395132,0.6731401",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {}
@@ -353,6 +381,7 @@
       "Name": "magic_missile_enemy (28)",
       "Position": "-5281.949,-9638.314,-1938",
       "Rotation": "0,0,0.7071067,0.7071068",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {}
@@ -363,6 +392,7 @@
       "Name": "magic_missile_enemy (29)",
       "Position": "-5889.846,-9603.555,-1938",
       "Rotation": "0,0,0.7071067,0.7071068",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {}
@@ -373,6 +403,7 @@
       "Name": "magic_missile_enemy (30)",
       "Position": "-4642.073,-9367.747,-1238.519",
       "Rotation": "-0.0005012706,0.001568719,0.8885364,0.4588033",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {}
@@ -451,6 +482,7 @@
       "Name": "magic_missile_enemy (31)",
       "Position": "-4338.641,-4237.361,-1259",
       "Rotation": "0,0,-0.7071066,0.7071067",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {}
@@ -461,6 +493,7 @@
       "Name": "magic_missile_enemy (32)",
       "Position": "-4663.188,-4473.147,132.0001",
       "Rotation": "0,0,-0.1305262,0.991445",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {}
@@ -470,6 +503,7 @@
       "Flags": 0,
       "Name": "magic_missile_enemy (33)",
       "Position": "-4672,-4576,-1990",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {}
@@ -480,6 +514,7 @@
       "Name": "rock_armour_enemy",
       "Position": "-4656.196,-5510.59,-2384.748",
       "Rotation": "0.000006944833,-0.00000004283856,0.5526106,0.8334396",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
       "__PrefabVariables": {}
@@ -490,6 +525,7 @@
       "Name": "rock_armour_enemy (1)",
       "Position": "-5568.001,-9439.996,-1938",
       "Rotation": "0,0,0.7071067,0.7071068",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
       "__PrefabVariables": {}
@@ -500,6 +536,7 @@
       "Name": "rock_armour_enemy (2)",
       "Position": "-5888,-9183.998,-1938",
       "Rotation": "0,0,0.7071067,0.7071068",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
       "__PrefabVariables": {}
@@ -510,6 +547,7 @@
       "Name": "rock_armour_enemy (3)",
       "Position": "-5312.001,-9183.996,-1938",
       "Rotation": "0,0,0.7071067,0.7071068",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
       "__PrefabVariables": {}
@@ -520,6 +558,7 @@
       "Name": "rock_armour_enemy (4)",
       "Position": "-4978.851,-9804.327,-1236.757",
       "Rotation": "-0.001090795,0.001119822,0.6983488,0.7157558",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
       "__PrefabVariables": {}
@@ -530,6 +569,7 @@
       "Name": "rock_armour_enemy (5)",
       "Position": "-6194.48,-9774.396,-1236.753",
       "Rotation": "-0.001090795,0.001119822,0.6983488,0.7157558",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
       "__PrefabVariables": {}
@@ -540,6 +580,7 @@
       "Name": "rock_armour_enemy (6)",
       "Position": "-5586.665,-9789.363,-1236.755",
       "Rotation": "-0.001090795,0.001119822,0.6983488,0.7157558",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
       "__PrefabVariables": {}
