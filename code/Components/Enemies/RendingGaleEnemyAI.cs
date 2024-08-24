@@ -17,8 +17,9 @@ public sealed class RendingGaleEnemyAI : BaseEnemyAI
 	{
 		base.OnStart();
 		_state = State.Chase;
-		_playerHealth =
-			_player.Components.GetInDescendantsOrSelf<HealthComponent>();
+		if (_player != null && _player.IsValid)
+			_playerHealth =
+				_player.Components.GetInDescendantsOrSelf<HealthComponent>();
 	}
 
 	protected override void OnUpdate()

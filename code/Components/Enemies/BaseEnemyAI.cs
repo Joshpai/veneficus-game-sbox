@@ -133,11 +133,8 @@ public class BaseEnemyAI : Component
 		var players = Scene.GetAllComponents<PlayerMovementController>();
 		foreach (var player in players)
 		{
-			if (!player.IsProxy)
-			{
-				_player = player;
-				break;
-			}
+			_player = player;
+			break;
 		}
 		if (_player == null)
 			Log.Error("Unable to find PlayerMovementController!");
@@ -267,7 +264,7 @@ public class BaseEnemyAI : Component
 
 	protected bool PlayerInRange(float range)
 	{
-		if (_player == null)
+		if (_player == null || !_player.IsValid)
 			return false;
 
 		Vector3 playerOffset = Transform.Position - _player.Transform.Position;
@@ -276,7 +273,7 @@ public class BaseEnemyAI : Component
 
 	protected bool PlayerObscured()
 	{
-		if (_player == null)
+		if (_player == null || !_player.IsValid)
 			return false;
 
 		// TODO: this could be improved to check a few set positions over the
@@ -292,7 +289,7 @@ public class BaseEnemyAI : Component
 
 	protected bool PlayerInVisionCone()
 	{
-		if (_player == null)
+		if (_player == null || !_player.IsValid)
 			return false;
 
 		Vector3 playerOffset = Transform.Position - _player.Transform.Position;

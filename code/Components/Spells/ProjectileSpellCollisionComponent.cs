@@ -42,7 +42,8 @@ public sealed class ProjectileSpellCollisionComponent
 			// NOTE: the above should clean itself up!
 		}
 
-		GameObject.Destroy();
+		if (GameObject != null && GameObject.IsValid)
+			GameObject.Destroy();
 	}
 
 	public void OnTriggerEnter(Collider other)
