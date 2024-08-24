@@ -176,6 +176,25 @@ PlayerHUD
             flex-direction: column;
             background-color: white;
 
+            .spell-name
+            {
+              position: absolute;
+              /* (width - 150) / 2 -> 150px is active size! */
+              left: -75px;
+              min-width: 300px;
+              /* background-color: red; */
+
+              transition: top 0.1s ease;
+              transition: opacity 0.1s ease;
+
+              p {
+                margin: auto;
+                font-size: 40px;
+                font-weight: bolder;
+                text-stroke: 5px white;
+              }
+            }
+
             img
             {
               position: absolute;
@@ -225,12 +244,24 @@ PlayerHUD
       .inactive
       {
         filter: brightness(50%);
+
+        .spell-name
+        {
+          top: 0px;
+          opacity: 0;
+        }
       }
 
       .active
       {
         width: 150px;
         height: 150px;
+
+        .spell-name
+        {
+          top: -50px;
+          opacity: 1;
+        }
       }
     }
   }

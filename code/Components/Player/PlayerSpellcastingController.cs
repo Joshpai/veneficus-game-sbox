@@ -195,6 +195,22 @@ public sealed class PlayerSpellcastingController : Component
 		return _spellBuffer[(int)spellType].IconPath;
 	}
 
+	public String GetSpellNiceName(BaseSpell.SpellType spellType)
+	{
+		return spellType switch
+		{
+			BaseSpell.SpellType.Polymorph => "Polymorph",
+			BaseSpell.SpellType.MagicMissile => "Magic Missile",
+			BaseSpell.SpellType.Fireball => "Fireball",
+			BaseSpell.SpellType.WaterBeam => "Water Beam",
+			BaseSpell.SpellType.RendingGale => "Rending Gale",
+			BaseSpell.SpellType.MagicBarrier => "Magic Barrier",
+			BaseSpell.SpellType.RockArmour => "Rock Armour",
+			BaseSpell.SpellType.LightningStrike => "Lightning Strike",
+			_ => null,
+		};
+	}
+
 	public float GetSpellCooldown(BaseSpell.SpellType spellType)
 	{
 		return Math.Max(_spellNextCastTime[(int)spellType] - Time.Now, 0.0f);
