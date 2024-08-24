@@ -50,6 +50,7 @@
         "JumpCoyoteTime": 0.15,
         "JumpDuration": 0.8,
         "MaxJumpHoldLength": 0.31,
+        "PlayerFriction": 10,
         "PolyJumpGraceHeightPercent": 0.6,
         "PolyJumpGracePeriod": 0.3,
         "PolymorphedEyePosition": "0,0,20",
@@ -58,7 +59,7 @@
         "PolymorphedRadius": 12,
         "PolymorphedStepHeight": 5,
         "SceneGravity": "0,0,-950",
-        "WalkSpeed": 325
+        "WalkSpeed": 400
       },
       {
         "__type": "HealthComponent",

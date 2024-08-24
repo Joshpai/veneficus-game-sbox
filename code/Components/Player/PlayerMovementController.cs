@@ -36,6 +36,9 @@ public sealed class PlayerMovementController : Component
 	[Property]
 	public float AirSpeed { get; set; } = 30.0f;
 
+	[Property]
+	public float PlayerFriction { get; set; } = 5.0f;
+
 	// Override the gravity for all objects!!
 	[Property]
 	public Vector3 SceneGravity { get; set; }
@@ -437,9 +440,8 @@ public sealed class PlayerMovementController : Component
 				}
 			}
 
+			Controller.ApplyFriction(PlayerFriction, 0.9f * WalkSpeed);
 			Controller.Accelerate(WishDir * WalkSpeed);
-
-			Controller.ApplyFriction(5.0f, 20.0f);
 
 			_airStartTime = Time.Now;
 			_didJump = Input.Pressed("Jump");
