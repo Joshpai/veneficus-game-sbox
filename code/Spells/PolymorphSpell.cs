@@ -1,7 +1,11 @@
 public class PolymorphSpell : BaseSpell
 {
+	const float COOLDOWN_INTO_FROG = 0.3f;
+	const float COOLDOWN_INTO_HUMAN = 2.0f;
+	private float _cooldown = COOLDOWN_INTO_FROG;
+
 	public override float ManaCost => 25.0f;
-	public override float Cooldown => 2.0f;
+	public override float Cooldown => _cooldown;
 	public override float CastTime => 0.0f;
 	public override float MaxChargeTime => 0.0f;
 	public override float SpellMass => 0.0f;
@@ -67,6 +71,9 @@ public class PolymorphSpell : BaseSpell
 		_nextModel = _modelRenderer.Model;
 
 		ChangeModel(_currentModel);
+
+		_cooldown = !_playerMovementController.IsPolymorphed
+				  ? COOLDOWN_INTO_HUMAN : COOLDOWN_INTO_FROG;
 
 		return true;
 	}
