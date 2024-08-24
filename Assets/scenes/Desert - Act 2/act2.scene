@@ -151,6 +151,7 @@
       "Name": "magic_missile_enemy",
       "Position": "2592,-4032,1796",
       "Rotation": "0,0,-0.9659257,0.2588192",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {}
@@ -161,6 +162,7 @@
       "Name": "rock_armour_enemy",
       "Position": "2240,-1920,2212",
       "Rotation": "0,0,-0.7933533,0.6087615",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
       "__PrefabVariables": {}
@@ -171,6 +173,7 @@
       "Name": "magic_missile_enemy (1)",
       "Position": "3424,-2784,2480",
       "Rotation": "0,0,0.9914447,0.1305263",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {}
@@ -181,6 +184,7 @@
       "Name": "magic_missile_enemy (2)",
       "Position": "4896,-4640,2546",
       "Rotation": "0,0,-0.7933534,-0.6087613",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {}
@@ -191,6 +195,7 @@
       "Name": "rock_armour_enemy (1)",
       "Position": "6208,-5376,2780",
       "Rotation": "0,0,-0.9659258,0.2588192",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
       "__PrefabVariables": {}
@@ -200,6 +205,7 @@
       "Flags": 0,
       "Name": "rock_armour_enemy (2)",
       "Position": "5376,-5088,3092",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
       "__PrefabVariables": {}
@@ -209,6 +215,7 @@
       "Flags": 0,
       "Name": "magic_missile_enemy (3)",
       "Position": "4928,-4864,3532",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {}
@@ -219,6 +226,7 @@
       "Name": "fireball_enemy",
       "Position": "4224,-4864,3844",
       "Rotation": "0,0,0.5,0.8660254",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
       "__PrefabVariables": {}
@@ -229,6 +237,7 @@
       "Name": "fireball_enemy (1)",
       "Position": "4224,-2944,3844",
       "Rotation": "0,0,-0.7933533,0.6087615",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
       "__PrefabVariables": {}
@@ -239,6 +248,7 @@
       "Name": "fireball_enemy (2)",
       "Position": "2560,-2944,3844",
       "Rotation": "0,0,-0.258819,0.9659258",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
       "__PrefabVariables": {}
@@ -249,6 +259,7 @@
       "Name": "fireball_enemy (3)",
       "Position": "2560,-4800,3844",
       "Rotation": "0,0,0.258819,0.9659258",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
       "__PrefabVariables": {}
@@ -258,6 +269,7 @@
       "Flags": 0,
       "Name": "fireball_enemy (4)",
       "Position": "2560,-3776,3844",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
       "__PrefabVariables": {}
@@ -267,6 +279,7 @@
       "Flags": 0,
       "Name": "rock_armour_enemy (3)",
       "Position": "3297.995,-4320,3844",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
       "__PrefabVariables": {}
@@ -276,6 +289,7 @@
       "Flags": 0,
       "Name": "rock_armour_enemy (4)",
       "Position": "3552,-3520,3844",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
       "__PrefabVariables": {}
@@ -285,6 +299,7 @@
       "Flags": 0,
       "Name": "magic_missile_enemy (4)",
       "Position": "3072,-4032,3844",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {}
@@ -294,6 +309,7 @@
       "Flags": 0,
       "Name": "magic_missile_enemy (5)",
       "Position": "3040,-3520,3844",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {}
@@ -304,6 +320,7 @@
       "Name": "fireball_enemy (5)",
       "Position": "1024,-9504,3828",
       "Rotation": "0,0,0.258819,0.9659257",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
       "__PrefabVariables": {}
@@ -314,6 +331,7 @@
       "Name": "fireball_enemy (6)",
       "Position": "416,-8608,3988",
       "Rotation": "0,0,-0.258819,0.9659257",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
       "__PrefabVariables": {}
@@ -324,6 +342,7 @@
       "Name": "magic_missile_enemy (6)",
       "Position": "672,-9344,3988",
       "Rotation": "0,0,0.1305262,0.9914448",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {}
@@ -334,6 +353,7 @@
       "Name": "magic_missile_enemy (7)",
       "Position": "1280,-8736,3828",
       "Rotation": "0,0,-0.4999999,0.8660253",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {}
@@ -344,6 +364,7 @@
       "Name": "magic_missile_enemy (8)",
       "Position": "1536,-9632,3668",
       "Rotation": "0,0,0.3826833,0.9238794",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {}
@@ -354,6 +375,7 @@
       "Name": "fireball_enemy (7)",
       "Position": "4160,-14176,3780",
       "Rotation": "0,0,0.7071066,0.7071067",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
       "__PrefabVariables": {}
@@ -364,6 +386,7 @@
       "Name": "fireball_enemy (8)",
       "Position": "3871.991,-14176,3780",
       "Rotation": "0,0,0.7071066,0.7071067",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
       "__PrefabVariables": {}
@@ -374,6 +397,7 @@
       "Name": "fireball_enemy (9)",
       "Position": "2751.991,-14176,3780",
       "Rotation": "0,0,0.7071066,0.7071067",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
       "__PrefabVariables": {}
@@ -384,6 +408,7 @@
       "Name": "fireball_enemy (10)",
       "Position": "3039.991,-14176,3780",
       "Rotation": "0,0,0.7071066,0.7071067",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
       "__PrefabVariables": {}
@@ -394,6 +419,7 @@
       "Name": "fireball_enemy (11)",
       "Position": "3487.991,-14176,3780",
       "Rotation": "0,0,0.7071066,0.7071067",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
       "__PrefabVariables": {}
@@ -404,6 +430,7 @@
       "Name": "magic_missile_enemy (9)",
       "Position": "4576,-10912,4484",
       "Rotation": "0,0,-0.9999999,0.0000001947072",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {}
@@ -414,6 +441,7 @@
       "Name": "magic_missile_enemy (10)",
       "Position": "4576.002,-11199.99,4484",
       "Rotation": "0,0,-0.9999999,0.0000001947072",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {}
@@ -423,6 +451,7 @@
       "Flags": 0,
       "Name": "magic_missile_enemy (12)",
       "Position": "2400.003,-11199.99,4484",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {}
@@ -432,6 +461,7 @@
       "Flags": 0,
       "Name": "magic_missile_enemy (13)",
       "Position": "2400.003,-11616,4484",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {}
@@ -441,6 +471,7 @@
       "Flags": 0,
       "Name": "magic_missile_enemy (14)",
       "Position": "2400.003,-10752,4484",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {}
@@ -451,6 +482,7 @@
       "Name": "magic_missile_enemy (11)",
       "Position": "4576,-11519.99,4484",
       "Rotation": "0,0,-0.9999999,0.0000001947072",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {}
@@ -461,6 +493,7 @@
       "Name": "rock_armour_enemy (5)",
       "Position": "4736,-14656,4484",
       "Rotation": "0,0,0.7071066,0.7071067",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
       "__PrefabVariables": {}
@@ -471,6 +504,7 @@
       "Name": "rock_armour_enemy (8)",
       "Position": "4735.992,-12800,4484",
       "Rotation": "0,0,0.7071066,0.7071067",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
       "__PrefabVariables": {}
@@ -481,6 +515,7 @@
       "Name": "rock_armour_enemy (6)",
       "Position": "2239.991,-14656,4484",
       "Rotation": "0,0,0.7071066,0.7071067",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
       "__PrefabVariables": {}
@@ -491,6 +526,7 @@
       "Name": "rock_armour_enemy (7)",
       "Position": "2239.992,-12896,4484",
       "Rotation": "0,0,0.7071066,0.7071067",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
       "__PrefabVariables": {}
@@ -501,6 +537,7 @@
       "Name": "rock_armour_enemy (9)",
       "Position": "3904,-12128,3780",
       "Rotation": "0,0,0.7071067,0.7071068",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
       "__PrefabVariables": {}
@@ -511,6 +548,7 @@
       "Name": "rock_armour_enemy (10)",
       "Position": "3007.997,-12128,3780",
       "Rotation": "0,0,0.7071067,0.7071068",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
       "__PrefabVariables": {}
@@ -521,6 +559,7 @@
       "Name": "rock_armour_enemy (11)",
       "Position": "3423.997,-11840,3780",
       "Rotation": "0,0,0.7071067,0.7071068",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
       "__PrefabVariables": {}
@@ -583,6 +622,7 @@
       "Name": "fireball_enemy (12)",
       "Position": "2048,-16448,4404",
       "Rotation": "0,0,-0.4999999,0.8660253",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
       "__PrefabVariables": {}
@@ -593,6 +633,7 @@
       "Name": "fireball_enemy (13)",
       "Position": "768,-17056,4404",
       "Rotation": "0,0,0.3826833,0.9238794",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
       "__PrefabVariables": {}
@@ -603,6 +644,7 @@
       "Name": "fireball_enemy (14)",
       "Position": "-192,-16480,4404",
       "Rotation": "0,0,-0.3826833,0.9238794",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
       "__PrefabVariables": {}
@@ -613,6 +655,7 @@
       "Name": "fireball_enemy (15)",
       "Position": "-1312,-17024,4404",
       "Rotation": "0,0,0.258819,0.9659257",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
       "__PrefabVariables": {}
@@ -623,6 +666,7 @@
       "Name": "fireball_enemy (16)",
       "Position": "-1920,-17152,4404",
       "Rotation": "0,0,0.258819,0.9659257",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
       "__PrefabVariables": {}
@@ -633,6 +677,7 @@
       "Name": "fireball_enemy (17)",
       "Position": "-1952,-16384,4404",
       "Rotation": "0,0,-0.3826833,0.9238794",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
       "__PrefabVariables": {}
@@ -643,6 +688,7 @@
       "Name": "rending_gale_enemy",
       "Position": "-1664,-15232,4484",
       "Rotation": "0,0,-0.9238794,0.3826834",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rending_gale_enemy.prefab",
       "__PrefabVariables": {}
@@ -653,6 +699,7 @@
       "Name": "rending_gale_enemy (1)",
       "Position": "-1248,-14624,4484",
       "Rotation": "0,0,-0.7933532,0.6087614",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rending_gale_enemy.prefab",
       "__PrefabVariables": {}
@@ -663,6 +710,7 @@
       "Name": "rending_gale_enemy (2)",
       "Position": "-1824,-13920,4484",
       "Rotation": "0,0,-0.3826833,0.9238794",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rending_gale_enemy.prefab",
       "__PrefabVariables": {}
@@ -673,6 +721,7 @@
       "Name": "rending_gale_enemy (3)",
       "Position": "-1376,-13152,4484",
       "Rotation": "0,0,-0.9659256,0.2588192",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rending_gale_enemy.prefab",
       "__PrefabVariables": {}
@@ -683,6 +732,7 @@
       "Name": "rock_armour_enemy (12)",
       "Position": "-2368,-13280,1956",
       "Rotation": "0,0,-0.3826834,0.9238796",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
       "__PrefabVariables": {}
@@ -693,6 +743,7 @@
       "Name": "rock_armour_enemy (13)",
       "Position": "-832,-13280,1956",
       "Rotation": "0,0,-0.9659258,0.2588192",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
       "__PrefabVariables": {}
@@ -703,6 +754,7 @@
       "Name": "rock_armour_enemy (14)",
       "Position": "-864,-15840,1956",
       "Rotation": "0,0,0.8660254,0.5000001",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
       "__PrefabVariables": {}
@@ -713,6 +765,7 @@
       "Name": "rock_armour_enemy (15)",
       "Position": "-2368,-15808,1956",
       "Rotation": "0,0,0.5,0.8660254",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
       "__PrefabVariables": {}
@@ -1000,7 +1053,7 @@
           "Keys": [
             {
               "_type": "gameobject",
-              "go": "e000013a-ebb6-4422-bdd4-608a5d1da117"
+              "go": "f4c978af-ce9d-4a9c-8f92-0f896ccc70d0"
             }
           ],
           "OpenDistance": 500,
@@ -1404,7 +1457,7 @@
           "Keys": [
             {
               "_type": "gameobject",
-              "go": "e000013a-ebb6-4422-bdd4-608a5d1da117"
+              "go": "f4c978af-ce9d-4a9c-8f92-0f896ccc70d0"
             }
           ],
           "OpenDistance": 0,
@@ -1482,6 +1535,21 @@
           "Tint": "1,1,1,1"
         }
       ]
+    },
+    {
+      "__guid": "f4c978af-ce9d-4a9c-8f92-0f896ccc70d0",
+      "Flags": 0,
+      "Name": "key_trigger (2)",
+      "Position": "-1502.865,-12671.22,4480",
+      "Enabled": true,
+      "__Prefab": "prefabs/triggers/key_trigger.prefab",
+      "__PrefabVariables": {
+        "PushVector": "0,50,0",
+        "Pushable Tags": [
+          "player",
+          "enemy"
+        ]
+      }
     }
   ],
   "SceneProperties": {
