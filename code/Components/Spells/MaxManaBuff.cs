@@ -9,6 +9,11 @@ public sealed class MaxManaBuff : Component, Component.ITriggerListener
 	{
 		base.OnStart();
 
+		if (SaveData.Instance == null || SaveData.Instance.Data == null ||
+			SaveData.Instance.Data.ConsumedMapItems == null ||
+			GameObject == null || !GameObject.IsValid)
+			return;
+
 		_hasBeenCollected =
 			SaveData.Instance.Data.ConsumedMapItems.Contains(GameObject.Id);
 
@@ -20,7 +25,7 @@ public sealed class MaxManaBuff : Component, Component.ITriggerListener
 				modelRenderer =
 					GameObject.Components.GetInDescendantsOrSelf<ModelRenderer>();
 
-			if (modelRenderer != null)
+			if (modelRenderer != null && modelRenderer.IsValid)
 			{
 				modelRenderer.Tint = modelRenderer.Tint.WithAlpha(0.25f);
 			}
@@ -29,6 +34,9 @@ public sealed class MaxManaBuff : Component, Component.ITriggerListener
 
 	public void OnTriggerEnter( Collider collider )
 	{
+		if (collider.GameObject == null || !collider.GameObject.IsValid)
+			return;
+
 		var other = collider.GameObject.Components;
 		var player =
 			other.GetInDescendantsOrSelf<PlayerSpellcastingController>();

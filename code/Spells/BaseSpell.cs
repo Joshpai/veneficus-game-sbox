@@ -6,11 +6,11 @@ public abstract class BaseSpell
 		// The above must be at the front, so add new types below here!
 		Polymorph,
 		MagicMissile,
-		Fireball,
-		WaterBeam,
-		RendingGale,
-		MagicBarrier,
 		RockArmour,
+		MagicBarrier,
+		Fireball,
+		RendingGale,
+		WaterBeam,
 		LightningStrike,
 		// The below must be at the end, so add new types above here!
 		SpellTypeMax
@@ -85,6 +85,9 @@ public abstract class BaseSpell
 
 	public float GetChargeAmount()
 	{
+		if (MaxChargeTime == 0.0f)
+			return 1.0f;
+
 		float chargeAmount = (Time.Now - _castTime - CastTime) / MaxChargeTime;
 		chargeAmount = Math.Min(chargeAmount, 1.0f);
 		return chargeAmount;

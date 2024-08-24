@@ -170,12 +170,12 @@ public sealed class PlayerMovementController : Component
 		// worth only including this "optimisation" iff we're in Release?
 		_cameraFollowDirectionNormalised = CameraFollowDirection.Normal;
 		_cameraReferenceHuman = new Transform(
-				HumanEyePosition + CameraFollowDirection * HumanCameraFollowDistance,
-				Transform.Rotation
+			HumanEyePosition + CameraFollowDirection * HumanCameraFollowDistance,
+			Transform.Rotation
 		);
 		_cameraReferencePolymorphed = new Transform(
-				PolymorphedEyePosition + CameraFollowDirection * PolymorphCameraFollowDistance,
-				Transform.Rotation
+			PolymorphedEyePosition + CameraFollowDirection * PolymorphCameraFollowDistance,
+			Transform.Rotation
 		);
 		Camera.SetParent(null, true);
 
@@ -325,8 +325,11 @@ public sealed class PlayerMovementController : Component
 		var cameraDistance =
 			(cameraPos.WithZ(0.0f) - startPos.WithZ(0.0f)).Length;
 		var playerAlpha = 1.0f;
-		float PlayerDitherDistance = 150.0f;
-		if (cameraDistance < PlayerDitherDistance && clampedPitch < 70.0f)
+		float PlayerDitherDistance =
+			IsPolymorphed ? PolymorphCameraFollowDistance
+						  : HumanCameraFollowDistance;
+		PlayerDitherDistance /= 3.0f;
+		if (cameraDistance < PlayerDitherDistance && clampedPitch < 65.0f)
 			playerAlpha = MathF.Max(
 				0.0f,
 				1.0f -
