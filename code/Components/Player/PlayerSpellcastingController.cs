@@ -205,7 +205,7 @@ public sealed class PlayerSpellcastingController : Component
 			BaseSpell.SpellType.WaterBeam => "Water Beam",
 			BaseSpell.SpellType.RendingGale => "Rending Gale",
 			BaseSpell.SpellType.MagicBarrier => "Magic Barrier",
-			BaseSpell.SpellType.RockArmour => "Rock Armour",
+			BaseSpell.SpellType.RockArmour => "Rock Wall",
 			BaseSpell.SpellType.LightningStrike => "Lightning Strike",
 			_ => null,
 		};
