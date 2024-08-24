@@ -88,6 +88,7 @@ public sealed class RockArmourEnemyAI : BaseEnemyAI
 			else if (_chargeState == ChargeState.Slowdown &&
 					 _chargeTime < Time.Now)
 			{
+				_modelRenderer.SceneModel.CurrentSequence.Name = "";
 				_chargeState = ChargeState.None;
 			}
 
@@ -106,7 +107,6 @@ public sealed class RockArmourEnemyAI : BaseEnemyAI
 				}
 			case ChargeState.Charge:
 				{
-					// do nothing
 					break;
 				}
 			case ChargeState.Slowdown:
@@ -134,6 +134,7 @@ public sealed class RockArmourEnemyAI : BaseEnemyAI
 		else if (ShouldCharge())
 		{
 			_chargeState = ChargeState.Speedup;
+			_modelRenderer.SceneModel.CurrentSequence.Name = "ERW_Charge";
 			_chargeTime = Time.Now + ChargeStartupDuration;
 			if (_collisionManager != null)
 				_collisionManager.Enabled = true;
