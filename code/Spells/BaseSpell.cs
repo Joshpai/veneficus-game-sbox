@@ -85,6 +85,9 @@ public abstract class BaseSpell
 
 	public float GetChargeAmount()
 	{
+		if (MaxChargeTime == 0.0f)
+			return 1.0f;
+
 		float chargeAmount = (Time.Now - _castTime - CastTime) / MaxChargeTime;
 		chargeAmount = Math.Min(chargeAmount, 1.0f);
 		return chargeAmount;
