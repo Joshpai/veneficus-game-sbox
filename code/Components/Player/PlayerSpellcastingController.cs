@@ -273,15 +273,17 @@ public sealed class PlayerSpellcastingController : Component
 	private void UpdateCastingSpellDirection()
 	{
 		var cameraStart =
-			PlayerMovementControllerRef.Camera.Transform.Position;
+			PlayerMovementControllerRef.Camera.Transform.Position +
+			PlayerMovementControllerRef.EyeAngles.Forward * 1.5f;
 		// TODO: make the number below a variable? must be very big, but is
 		// less important at longer distance as the offset error will reduce.
 		var hitEnd =
 			cameraStart + PlayerMovementControllerRef.EyeAngles.Forward * 100000.0f;
 
+		string[] ignoreTags = new string[] {"projectile", "player"};
 		var tr = Scene.Trace.Ray(cameraStart, hitEnd)
 							.HitTriggers()
-							.WithoutTags("projectile")
+							.WithoutTags(ignoreTags)
 							.Run();
 
 		_castingSpell.CastDirection =

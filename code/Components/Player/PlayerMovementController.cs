@@ -322,6 +322,19 @@ public sealed class PlayerMovementController : Component
 							.Run();
 		cameraPos = (tr.Hit) ? tr.HitPosition : cameraPos;
 
+		var cameraDistance =
+			(cameraPos.WithZ(0.0f) - startPos.WithZ(0.0f)).Length;
+		var playerAlpha = 1.0f;
+		float PlayerDitherDistance = 150.0f;
+		if (cameraDistance < PlayerDitherDistance && clampedPitch < 70.0f)
+			playerAlpha = MathF.Max(
+				0.0f,
+				1.0f -
+				2.0f * (PlayerDitherDistance - cameraDistance)
+				/ PlayerDitherDistance
+			);
+		_modelRenderer.Tint = _modelRenderer.Tint.WithAlpha(playerAlpha);
+
 		Camera.Transform.Position = cameraPos;
 	}
 
