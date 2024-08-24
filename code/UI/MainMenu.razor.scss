@@ -198,7 +198,7 @@ MainMenu
   .acts-container
   {
     width: 100%;
-    height: 75%;
+    height: 90%;
     margin: auto;
 
     .acts {
@@ -225,24 +225,27 @@ MainMenu
         gap: 25px;
         width: 100%;
         /* background-color: blue; */
-        height: 500px;
+        height: 600px;
 
         .act
         {
-          /* position: relative; */
-          /* display: flex; */
-          /* height: 100%; */
-          aspect-ratio: 1;
+          position: relative;
+          display: flex;
+          flex-grow: 1;
           background-color: #bbb;
           border: 1px solid white;
           flex-direction: column;
           gap: 15px;
           padding: 10px;
+          font-size: 26px;
 
           .act-name
           {
+            height: auto;
+            padding: 8px;
+            align-items: center;
+            border-bottom: 3px solid black;
             color: black;
-            gap: 10px;
             margin: auto;
           }
 
@@ -250,6 +253,20 @@ MainMenu
           {
             margin: auto;
             aspect-ratio: 1;
+          }
+
+          .act-data
+          {
+            height: auto;
+            padding: 8px;
+            align-items: center;
+            border-bottom: 3px solid black;
+            border-bottom: 1px solid black;
+          }
+
+          .act-data div:last-child
+          {
+            margin-left: auto;
           }
         }
       }

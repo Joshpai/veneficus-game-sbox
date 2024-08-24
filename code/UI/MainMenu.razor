@@ -97,12 +97,41 @@
 					<div class="acts-list">
 						@for (int i = 0; i <= SaveData.Instance.Data.GreatestCompletedLevel + 1; i++)
 						{
+							String completionTime = "Incomplete";
+							String enemiesKilled = "Incomplete";
+							String deaths = "Incomplete";
+							String finalRank = "Incomplete";
+							if (SaveData.Instance.Data.CompletedLevelData.ContainsKey(i))
+							{
+								var actData = SaveData.Instance.Data.CompletedLevelData[i];
+								completionTime = $"{actData.CompletionTime} ({actData.CompletionTimeRank})";
+								enemiesKilled = $"{actData.EnemiesKilledRank}";
+								deaths = $"{actData.DeathRank}";
+								finalRank = $"{actData.FinalRank}";
+							}
+
 							<button class="act"
 								onclick=@SelectAct(i)>
 								<div class="act-name">
 									@ActNames[i]
 								</div>
 								<img class="act-image" src="@ActImages[i]" />
+								<div class="act-data">
+									<div>Completion Time:</div>
+									<div>@completionTime</div>
+								</div>
+								<div class="act-data">
+									<div>Enemies Killed:</div>
+									<div>@enemiesKilled</div>
+								</div>
+								<div class="act-data">
+									<div>Deaths:</div>
+									<div>@deaths</div>
+								</div>
+								<div class="act-data">
+									<div>Final Rank:</div>
+									<div>@finalRank</div>
+								</div>
 							</button>
 						}
 					</div>
