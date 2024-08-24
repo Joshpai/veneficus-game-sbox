@@ -56,6 +56,7 @@ public abstract class ProjectileSpell : BaseSpell
 		if (_collisionComponent != null)
 		{
 			_collisionComponent.Enabled = true;
+			_collisionComponent.Body.Velocity = CastDirection * SpellSpeed;
 			_collisionComponent.DamageMultiplier *= (1 + GetChargeAmount());
 		}
 
@@ -105,13 +106,6 @@ public abstract class ProjectileSpell : BaseSpell
 			{
 				OnDestroy?.Invoke(this, EventArgs.Empty);
 				_projectileObject.Destroy();
-			}
-
-			if (_projectileObject != null)
-			{
-				// TODO: should this add the caster's speed too?
-				_projectileObject.Transform.Position +=
-					CastDirection * SpellSpeed * Time.Delta;
 			}
 		}
 

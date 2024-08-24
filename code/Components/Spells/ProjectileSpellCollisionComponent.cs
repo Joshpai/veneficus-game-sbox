@@ -10,6 +10,9 @@ public sealed class ProjectileSpellCollisionComponent
 	[Property]
 	public bool DoesExplode { get; set; } = true;
 
+	[Property]
+	public Rigidbody Body { get; set; }
+
 	public float DamageMultiplier { get; set; } = 1.0f;
 
 	private void HandleCollision(GameObject otherObj)

@@ -18,13 +18,19 @@
         "__type": "Sandbox.SphereCollider",
         "__guid": "f3459cca-3efa-4b86-b3f2-917243f2d42f",
         "Center": "0,0,0",
-        "IsTrigger": true,
+        "IsTrigger": false,
         "Radius": 32.90002,
         "Static": false
       },
       {
         "__type": "ProjectileSpellCollisionComponent",
         "__guid": "153e5231-7485-40eb-b456-5c2ee62d021f",
+        "Body": {
+          "_type": "component",
+          "component_id": "b50e53f5-032e-4092-a633-a8d1dcf8276f",
+          "go": "c56165d2-743f-4d75-a0fb-6f9d9a248610",
+          "component_type": "Rigidbody"
+        },
         "ContactDamage": 50,
         "DoesExplode": true,
         "SplashDamage": 20
@@ -36,16 +42,13 @@
         "Gravity": false,
         "LinearDamping": 0,
         "Locking": {
-          "X": true,
-          "Y": true,
-          "Z": true,
           "Pitch": true,
           "Yaw": true,
           "Roll": true
         },
         "MassCenterOverride": "0,0,0",
         "MassOverride": 0,
-        "MotionEnabled": false,
+        "MotionEnabled": true,
         "OverrideMassCenter": false,
         "RigidbodyFlags": 0,
         "StartAsleep": false
