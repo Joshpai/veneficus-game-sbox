@@ -279,7 +279,10 @@ public sealed class PlayerSpellcastingController : Component
 		var hitEnd =
 			cameraStart + PlayerMovementControllerRef.EyeAngles.Forward * 100000.0f;
 
-		var tr = Scene.Trace.Ray(cameraStart, hitEnd).HitTriggers().Run();
+		var tr = Scene.Trace.Ray(cameraStart, hitEnd)
+							.HitTriggers()
+							.WithoutTags("projectile")
+							.Run();
 
 		_castingSpell.CastDirection =
 			(tr.HitPosition -

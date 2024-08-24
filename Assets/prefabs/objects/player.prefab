@@ -58,7 +58,7 @@
         "PolymorphedRadius": 12,
         "PolymorphedStepHeight": 5,
         "SceneGravity": "0,0,-950",
-        "WalkSpeed": 250
+        "WalkSpeed": 325
       },
       {
         "__type": "HealthComponent",
