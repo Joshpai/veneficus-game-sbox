@@ -65,7 +65,8 @@
         "Death Count S": 0,
         "Death Count A": 2,
         "Death Count B": 5,
-        "Death Count C": 10
+        "Death Count C": 10,
+        "LevelIndex": -1
       }
     },
     {
@@ -96,7 +97,7 @@
       "__guid": "cd17df40-3bb3-4dad-8464-dd76702da062",
       "Flags": 0,
       "Name": "CheckpointOneRespawn",
-      "Position": "3497.829,-4654.848,4071.65",
+      "Position": "3497.827,-9398.376,4071.65",
       "Rotation": "0,0,1,0.0000001947072",
       "Scale": "1.004822,1.004822,1.004822",
       "Enabled": true,
@@ -265,7 +266,7 @@
       "__guid": "956da057-2592-4f2e-94a1-bb0971069865",
       "Flags": 0,
       "Name": "rock_armour_enemy (3)",
-      "Position": "3584,-4320,3844",
+      "Position": "3297.995,-4320,3844",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
       "__PrefabVariables": {}
@@ -933,6 +934,35 @@
           "RotationAmount": 90,
           "RotationAxis": "1,0,0",
           "RotationSpeed": 3
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "4eec4d24-2cce-4bdc-8345-400c6010e3da",
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Scale": "50,50,50",
+          "Static": false
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "e828c1e2-cbd6-45b9-905c-97d63d8153bb",
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": false,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ]
     },
@@ -1436,6 +1466,22 @@
           "RotationSpeed": 3
         }
       ]
+    },
+    {
+      "__guid": "63231fd9-f570-4def-8c20-e304ddb34d02",
+      "Flags": 0,
+      "Name": "2D Skybox",
+      "Position": "3431.507,-8824.302,4384.043",
+      "Tags": "skybox",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SkyBox2D",
+          "__guid": "fc4ad779-0a93-43b8-8f7a-c7da22d6f7eb",
+          "SkyMaterial": "materials/skybox/skybox_day_01.vmat",
+          "Tint": "1,1,1,1"
+        }
+      ]
     }
   ],
   "SceneProperties": {
@@ -1447,7 +1493,7 @@
     "TimeScale": 1,
     "UseFixedUpdate": true,
     "NavMesh": {
-      "Enabled": false,
+      "Enabled": true,
       "IncludeStaticBodies": true,
       "IncludeKeyframedBodies": true,
       "EditorAutoUpdate": true,
@@ -1455,7 +1501,7 @@
       "AgentRadius": 16,
       "AgentStepSize": 18,
       "AgentMaxSlope": 40,
-      "ExcludedBodies": "",
+      "ExcludedBodies": "player,enemy,trigger",
       "IncludedBodies": ""
     }
   },

@@ -19,9 +19,9 @@
       {
         "__type": "Sandbox.CapsuleCollider",
         "__guid": "d9251c92-1fda-45c3-80ce-64161d34de85",
-        "End": "0,0,58",
+        "End": "0,0,80",
         "IsTrigger": true,
-        "Radius": 16,
+        "Radius": 36,
         "Start": "0,0,16",
         "Static": false
       },
@@ -52,8 +52,8 @@
         "AlwaysActive": false,
         "AttackChargeDuration": 0.5,
         "AttackCooldown": 3,
-        "AttackRangeIdeal": 450,
-        "AttackRangeMax": 450,
+        "AttackRangeIdeal": 1000,
+        "AttackRangeMax": 1700,
         "AvoidSpells": false,
         "BeamDuration": 3,
         "EnemyLevel": 1,
@@ -64,13 +64,13 @@
           "go": "17ed16d0-7ff0-4360-a350-d7ddbcb374d3",
           "component_type": "HealthComponent"
         },
-        "HearingRadius": 125,
+        "HearingRadius": 1000,
         "MaxSpeed": 150,
         "PassiveMode": "Stationary",
         "PatrolPath": [],
         "RotationSpeed": 3,
         "VisionAngle": 0.7853982,
-        "VisionRange": 300
+        "VisionRange": 2000
       }
     ],
     "Children": [],

@@ -19,9 +19,9 @@
       {
         "__type": "Sandbox.CapsuleCollider",
         "__guid": "d9251c92-1fda-45c3-80ce-64161d34de85",
-        "End": "0,0,58",
+        "End": "0,0,60",
         "IsTrigger": true,
-        "Radius": 16,
+        "Radius": 24,
         "Start": "0,0,16",
         "Static": false
       },
@@ -38,7 +38,7 @@
         "EyePosition": "0,0,64",
         "HearingRadius": 125,
         "MaxSpeed": 250,
-        "PassiveMode": "Stationary",
+        "PassiveMode": "Wander",
         "PatrolPath": [],
         "RotationSpeed": 3,
         "TimeBetweenBurstShots": 0.1,

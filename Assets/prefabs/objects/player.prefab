@@ -57,7 +57,7 @@
         "JumpDuration": 0.8,
         "MaxJumpHoldLength": 0.31,
         "PlayerFriction": 10,
-        "PolyJumpGraceHeightPercent": 0.6,
+        "PolyJumpGraceHeightPercent": 0.75,
         "PolyJumpGracePeriod": 0.3,
         "PolymorphCameraFollowDistance": 100,
         "PolymorphedEyePosition": "0,0,20",

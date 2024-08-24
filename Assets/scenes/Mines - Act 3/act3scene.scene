@@ -45,7 +45,8 @@
         "Death Count S": 0,
         "Death Count A": 2,
         "Death Count B": 5,
-        "Death Count C": 10
+        "Death Count C": 10,
+        "LevelIndex": -1
       }
     },
     {
@@ -124,8 +125,8 @@
       "__guid": "9c25d0d3-cc62-4e28-8afd-eb4831a882b4",
       "Flags": 0,
       "Name": "CheckpointTwoRespawn",
-      "Position": "123.6588,-5916.409,-14388.84",
-      "Rotation": "0,0,1,0.0000001947072",
+      "Position": "-449.0755,-6711.111,-14388.84",
+      "Rotation": "0,0,0.7071067,0.7071068",
       "Enabled": true,
       "Components": [
         {
@@ -1405,7 +1406,7 @@
     "TimeScale": 1,
     "UseFixedUpdate": true,
     "NavMesh": {
-      "Enabled": false,
+      "Enabled": true,
       "IncludeStaticBodies": true,
       "IncludeKeyframedBodies": true,
       "EditorAutoUpdate": true,
@@ -1413,7 +1414,7 @@
       "AgentRadius": 16,
       "AgentStepSize": 18,
       "AgentMaxSlope": 40,
-      "ExcludedBodies": "",
+      "ExcludedBodies": "player,enemy,trigger",
       "IncludedBodies": ""
     }
   },

@@ -19,10 +19,10 @@
       {
         "__type": "Sandbox.CapsuleCollider",
         "__guid": "d9251c92-1fda-45c3-80ce-64161d34de85",
-        "End": "0,0,58",
+        "End": "0,0,20",
         "IsTrigger": true,
-        "Radius": 16,
-        "Start": "0,0,16",
+        "Radius": 65,
+        "Start": "0,0,20",
         "Static": false
       },
       {
@@ -60,13 +60,13 @@
         "ChargeStartupDuration": 0.5,
         "EnemyLevel": 1,
         "EyePosition": "0,0,64",
-        "HearingRadius": 125,
+        "HearingRadius": 1000,
         "MaxSpeed": 250,
         "PassiveMode": "Stationary",
         "PatrolPath": [],
         "RotationSpeed": 3,
         "VisionAngle": 0.7853982,
-        "VisionRange": 900
+        "VisionRange": 1500
       },
       {
         "__type": "RockArmourCollisionManager",
@@ -82,7 +82,8 @@
         "__guid": "881bb684-6368-4164-b9f1-65616456c672",
         "Flags": 0,
         "Name": "DangerZone",
-        "Position": "30,0,36",
+        "Position": "58.07857,0,48.08755",
+        "Scale": "1,1.397112,1.332802",
         "Tags": "trigger",
         "Enabled": true,
         "Components": [

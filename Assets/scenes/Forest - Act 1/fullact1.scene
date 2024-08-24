@@ -397,8 +397,8 @@
       "__guid": "00c42542-2cb9-4514-9034-186fd8882e29",
       "Flags": 0,
       "Name": "CheckpointOneRespawn",
-      "Position": "-3722.507,-3594.704,285.7088",
-      "Rotation": "0,0,0.9659258,0.2588192",
+      "Position": "-4020.639,-4007.729,285.7088",
+      "Rotation": "0,0,0.9238795,0.3826837",
       "Enabled": true,
       "Components": [
         {
@@ -431,7 +431,7 @@
       "__guid": "bba10a44-f9e9-44f9-b82e-023a34167f57",
       "Flags": 0,
       "Name": "CheckpointTwoRespawn",
-      "Position": "-5572.845,-9903.432,-1014.231",
+      "Position": "-5572.845,-9970.416,-1014.231",
       "Rotation": "0,0,1,0.0000001947072",
       "Enabled": true,
       "Components": [
@@ -983,6 +983,22 @@
       "__PrefabVariables": {
         "Unlock Spell": "MagicMissile"
       }
+    },
+    {
+      "__guid": "47b9c389-df40-4acc-b2ff-ba35d8d84edc",
+      "Flags": 0,
+      "Name": "2D Skybox",
+      "Position": "-5270.503,-11312.48,86.03307",
+      "Tags": "skybox",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SkyBox2D",
+          "__guid": "6c1a711f-5396-4434-8e8d-cfc8ab370c70",
+          "SkyMaterial": "materials/skybox/skybox_day_01.vmat",
+          "Tint": "1,1,1,1"
+        }
+      ]
     }
   ],
   "SceneProperties": {
@@ -994,15 +1010,15 @@
     "TimeScale": 1,
     "UseFixedUpdate": true,
     "NavMesh": {
-      "Enabled": false,
+      "Enabled": true,
       "IncludeStaticBodies": true,
       "IncludeKeyframedBodies": true,
       "EditorAutoUpdate": true,
       "AgentHeight": 64,
       "AgentRadius": 16,
       "AgentStepSize": 18,
-      "AgentMaxSlope": 40,
-      "ExcludedBodies": "",
+      "AgentMaxSlope": 87,
+      "ExcludedBodies": "player,enemy,trigger",
       "IncludedBodies": ""
     }
   },

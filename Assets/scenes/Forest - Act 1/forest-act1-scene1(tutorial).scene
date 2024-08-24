@@ -62,8 +62,8 @@
       "__guid": "a687e162-9f66-498b-b313-d3a05a3ad26d",
       "Flags": 0,
       "Name": "push_trigger",
-      "Position": "-1438.592,-825.8984,-14.8024",
-      "Scale": "15.7583,17.13902,0.2704005",
+      "Position": "-1438.592,-856.0015,-14.8024",
+      "Scale": "15.7583,15.16029,0.2704005",
       "Enabled": true,
       "__Prefab": "prefabs/triggers/push_trigger.prefab",
       "__PrefabVariables": {
