@@ -99,6 +99,17 @@
           "RenderType": "On",
           "Tint": "1,1,1,1",
           "UseAnimGraph": false
+        },
+        {
+          "__type": "SpinComponent",
+          "__guid": "93f1c2b1-3f30-401f-9b9d-a6e8d90a5356",
+          "Camera": {
+            "_type": "gameobject",
+            "go": "802483b8-ae89-46ff-93b0-5eeeb2fefc99"
+          },
+          "SpinAxis": "0,0,1",
+          "SpinPeriod": 11,
+          "StopCameraFaceProbability": 0.1
         }
       ]
     },
