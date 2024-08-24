@@ -1,7 +1,12 @@
 public sealed class RendingGaleEnemyAI : BaseEnemyAI
 {
+	[Property]
+	public float AttackAnimationLength { get; set; } = 1.38f;
+
 	[Property, Group("Combat")]
 	public float AttackDamage { get; set; } = 15.0f;
+
+	private float _attackFinishTime = 0.0f;
 
 	private enum State
 	{
@@ -25,6 +30,12 @@ public sealed class RendingGaleEnemyAI : BaseEnemyAI
 	protected override void OnUpdate()
 	{
 		base.OnUpdate();
+
+		if (_attackFinishTime < Time.Now &&
+			_modelRenderer.SceneModel.CurrentSequence.Name == "ERG_Attack")
+		{
+			_modelRenderer.SceneModel.CurrentSequence.Name = "ERG_Idle";
+		}
 
 		if (!_passive)
 			TurnToFacePlayer();
@@ -55,6 +66,8 @@ public sealed class RendingGaleEnemyAI : BaseEnemyAI
 				{
 					Agent.Velocity = Vector3.Zero;
 					_state = State.Attack;
+					_modelRenderer.SceneModel.CurrentSequence.Name = "ERG_Attack";
+					_attackFinishTime = Time.Now + AttackAnimationLength;
 				}
 
 				break;
