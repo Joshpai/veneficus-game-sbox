@@ -51,7 +51,22 @@ public sealed class ProjectileSpellCollisionComponent
 		HandleCollision(other.GameObject);
 	}
 
+	public void OnTriggerExit(Collider other)
+	{
+		HandleCollision(other.GameObject);
+	}
+
 	public void OnCollisionStart(Collision collision)
+	{
+		HandleCollision(collision.Other.GameObject);
+	}
+
+	public void OnCollisionUpdate(Collision collision)
+	{
+		HandleCollision(collision.Other.GameObject);
+	}
+
+	public void OnCollisionStop(Collision collision)
 	{
 		HandleCollision(collision.Other.GameObject);
 	}
