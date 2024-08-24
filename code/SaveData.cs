@@ -64,6 +64,7 @@ public class SaveData
 			return false;
 
 		Instance._saveFilePath = Instance._saveFiles[saveIdx];
+		Instance.Data = Instance._allSaveData[saveIdx];
 		Instance._selectedSave = saveIdx;
 		return true;
 	}
@@ -87,18 +88,6 @@ public class SaveData
 			path,
 			new SaveDataFormat()
 		);
-	}
-
-	public static void Load()
-	{
-		// Not sure if ReadJsonOrDefault handles bad file names.
-		if (Instance._saveFilePath == "")
-		{
-			Instance.Data = new SaveDataFormat();
-			return;
-		}
-
-		Instance.Data = ParseSaveFile(Instance._saveFilePath);
 	}
 
 	public static int GetSaveCount()
