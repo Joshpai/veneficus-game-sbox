@@ -46,7 +46,8 @@
         "Death Count S": 0,
         "Death Count A": 2,
         "Death Count B": 5,
-        "Death Count C": 10
+        "Death Count C": 10,
+        "LevelIndex": -1
       }
     },
     {
@@ -972,6 +973,16 @@
           "RotationSpeed": 3
         }
       ]
+    },
+    {
+      "__guid": "f23ab975-d3a4-444f-a7f7-48ffeca17a3b",
+      "Flags": 0,
+      "Name": "spell_unlock (1)",
+      "Enabled": true,
+      "__Prefab": "prefabs/triggers/spell_unlock.prefab",
+      "__PrefabVariables": {
+        "Unlock Spell": "MagicMissile"
+      }
     }
   ],
   "SceneProperties": {
