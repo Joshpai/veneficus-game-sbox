@@ -1,3 +1,5 @@
+using System.Text.Json;
+
 public class SaveDataFormat
 {
 	public UInt64 UnlockedSpells { get; set; } = 0x2ul;
@@ -36,8 +38,11 @@ public class SaveData
 			FileSystem.Data.FindFile(SAVE_DIRECTORY, "player_save-*.json");
 		foreach (var save in saves)
 		{
-			_saveFiles.Add(save);
-			_allSaveData.Add(ParseSaveFile(save));
+			var saveFile = $"{SAVE_DIRECTORY}/{save}";
+			Log.Info(saveFile);
+			Log.Info(save);
+			_saveFiles.Add(saveFile);
+			_allSaveData.Add(ParseSaveFile(saveFile));
 		}
 	}
 
@@ -45,10 +50,11 @@ public class SaveData
 	{
 		String creationTime = DateTime.UtcNow.ToString("yyyy-MM-ddTHH-mm-ssZ");
 		String saveFile = $"{SAVE_DIRECTORY}/player_save-{creationTime}.json";
-		Instance._saveFiles.Add(saveFile);
-		Instance._selectedSave = Instance._saveFiles.Count;
 		Instance._saveFilePath = saveFile;
 		Instance.Data = new SaveDataFormat();
+		Instance._saveFiles.Add(saveFile);
+		Instance._allSaveData.Add(Instance.Data);
+		Instance._selectedSave = Instance._allSaveData.Count - 1;
 		Save();
 	}
 
@@ -57,7 +63,7 @@ public class SaveData
 		if (saveIdx < 0 || saveIdx >= Instance._saveFiles.Count)
 			return false;
 
-		Instance._saveFilePath = $"{SAVE_DIRECTORY}/{Instance._saveFiles[saveIdx]}";
+		Instance._saveFilePath = Instance._saveFiles[saveIdx];
 		Instance._selectedSave = saveIdx;
 		return true;
 	}
@@ -67,12 +73,16 @@ public class SaveData
 		if (Instance._saveFilePath != "" && Instance.Data != null)
 		{
 			Instance._allSaveData[Instance._selectedSave] = Instance.Data;
-			FileSystem.Data.WriteJson(Instance._saveFilePath, Instance.Data);
+			// NOTE: this brokey, no worky
+			// FileSystem.Data.WriteJson<SaveDataFormat>(Instance._saveFilePath, Instance.Data);
+			string contents = JsonSerializer.Serialize(Instance.Data);
+			FileSystem.Data.WriteAllText(Instance._saveFilePath, contents);
 		}
 	}
 
 	private static SaveDataFormat ParseSaveFile(String path)
 	{
+		Log.Info(path);
 		return FileSystem.Data.ReadJsonOrDefault<SaveDataFormat>(
 			path,
 			new SaveDataFormat()

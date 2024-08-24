@@ -213,7 +213,7 @@ public sealed class LevelEnd : InteractableComponent
 		}
 
 		SaveData.Instance.Data.GreatestCompletedLevel =
-			(SaveData.Instance.Data.GreatestCompletedLevel < LevelIndex)
+			(LevelIndex > SaveData.Instance.Data.GreatestCompletedLevel)
 			? LevelIndex : SaveData.Instance.Data.GreatestCompletedLevel;
 		SaveData.Save();
 	}

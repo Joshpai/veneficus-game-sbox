@@ -47,7 +47,6 @@ public sealed class LevelManager : Component
 		LevelManagerStaticStore.CheckpointData = new LevelCheckpointData();
 		LevelManagerStaticStore.UsedObjects = new HashSet<Guid>();
 		LevelManagerStaticStore.SaveDataInstance = new SaveData();
-		SaveData.Load();
 	}
 
 	public static void LoadLevelImmediate(SceneFile newScene,
