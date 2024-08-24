@@ -67,7 +67,7 @@
       "Enabled": true,
       "__Prefab": "prefabs/triggers/push_trigger.prefab",
       "__PrefabVariables": {
-        "PushVector": "0,50,0",
+        "PushVector": "0,250,0",
         "Pushable Tags": [
           "player",
           "enemy"

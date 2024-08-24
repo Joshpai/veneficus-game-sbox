@@ -5,7 +5,7 @@
   "Ident": "veneficus-game",
   "Schema": 1,
   "IncludeSourceFiles": false,
-  "Resources": "",
+  "Resources": "\nmaterials/PlayerMaterials/Spells/*\nsounds/UI/*\nsounds/BackingWorldMusic/*",
   "PackageReferences": [],
   "EditorReferences": null,
   "IsWhitelistDisabled": false,

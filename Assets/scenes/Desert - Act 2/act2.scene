@@ -1064,7 +1064,67 @@
           "Keys": [
             {
               "_type": "gameobject",
-              "go": "fde1e366-e0ea-4621-91a9-3ad80290d54b"
+              "go": "0cb35410-53b9-4e02-a3cb-2db76d7f1f0d"
+            },
+            {
+              "_type": "gameobject",
+              "go": "72a9cd2c-1637-4e54-81e7-32f7cfb99c85"
+            },
+            {
+              "_type": "gameobject",
+              "go": "c6b5fa08-3537-4c32-ab65-71424ca40df8"
+            },
+            {
+              "_type": "gameobject",
+              "go": "6e30f29b-4c1f-4e94-8c35-83e6728b9718"
+            },
+            {
+              "_type": "gameobject",
+              "go": "375a4266-c52b-48b7-82e2-2c8a292e67c9"
+            },
+            {
+              "_type": "gameobject",
+              "go": "fb2c75b9-d475-4941-9d96-8096d4e2f71b"
+            },
+            {
+              "_type": "gameobject",
+              "go": "a50971fc-cbad-4e35-9c71-593743d0f9b2"
+            },
+            {
+              "_type": "gameobject",
+              "go": "41aa5091-6ff2-44cf-922f-4e7cf29ec354"
+            },
+            {
+              "_type": "gameobject",
+              "go": "f977114c-632b-448a-9782-a429369ef209"
+            },
+            {
+              "_type": "gameobject",
+              "go": "e5544563-01de-4545-861f-b721b5388f05"
+            },
+            {
+              "_type": "gameobject",
+              "go": "01c14b42-ba67-4853-97ed-b19a84e243a7"
+            },
+            {
+              "_type": "gameobject",
+              "go": "85d35af2-8895-4b63-8bf8-2f3ada9e5251"
+            },
+            {
+              "_type": "gameobject",
+              "go": "956da057-2592-4f2e-94a1-bb0971069865"
+            },
+            {
+              "_type": "gameobject",
+              "go": "382227e4-615a-4dd4-b428-882b19feabc2"
+            },
+            {
+              "_type": "gameobject",
+              "go": "26994190-fe0f-4400-a260-53b78d4e9b1a"
+            },
+            {
+              "_type": "gameobject",
+              "go": "3687dbdd-b6be-4979-bb35-e6c698e85a4c"
             }
           ],
           "OpenDistance": 100,
@@ -1080,7 +1140,7 @@
           "__guid": "d84e74f7-ea46-49c4-8123-7a9368555c8b",
           "Flags": 0,
           "Name": "Cube",
-          "Position": "-6.600098,-27.00732,980.3008",
+          "Position": "-6.600098,-27.00732,980.3005",
           "Scale": "20.63942,0.6624536,39.99419",
           "Enabled": true,
           "Components": [
@@ -1125,22 +1185,6 @@
           ]
         }
       ]
-    },
-    {
-      "__guid": "fde1e366-e0ea-4621-91a9-3ad80290d54b",
-      "Flags": 0,
-      "Name": "key_trigger (2)",
-      "Position": "110.2001,-362.2075,0.001953125",
-      "Rotation": "-0.000001817942,-0.000002130866,0.9088984,-0.4170178",
-      "Enabled": true,
-      "__Prefab": "prefabs/triggers/key_trigger.prefab",
-      "__PrefabVariables": {
-        "PushVector": "0,50,0",
-        "Pushable Tags": [
-          "player",
-          "enemy"
-        ]
-      }
     },
     {
       "__guid": "621fa1c3-febf-4337-a10a-9a93465e0812",
