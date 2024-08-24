@@ -43,7 +43,7 @@
       "__guid": "6f0cebfd-3d51-468d-b6e7-26bce2d15bfa",
       "Flags": 0,
       "Name": "level_end",
-      "Position": "-3935.72,-11994.96,4557.121",
+      "Position": "-3935.72,-11994.96,4476.146",
       "Tags": "interactable",
       "Enabled": true,
       "__Prefab": "prefabs/objects/level_end.prefab",

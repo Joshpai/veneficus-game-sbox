@@ -9,9 +9,9 @@
       {
         "__type": "Sandbox.SphereCollider",
         "__guid": "c5353bef-20ea-47b2-a091-fddf6987e4ef",
-        "Center": "0,0,0",
+        "Center": "0,0,120",
         "IsTrigger": false,
-        "Radius": 35,
+        "Radius": 50,
         "Static": false
       },
       {
@@ -19,7 +19,7 @@
         "__guid": "0a9afabe-b06f-4fc6-a7d9-fe8eb492dba9",
         "BodyGroups": 18446744073709551615,
         "CreateBoneObjects": false,
-        "Model": "models/dev/sphere.vmdl",
+        "Model": "models/environment/teleporter/teleporter.vmdl",
         "RenderType": "On",
         "Tint": "0,0.66667,0.86667,1",
         "UseAnimGraph": true
