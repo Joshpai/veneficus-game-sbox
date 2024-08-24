@@ -329,7 +329,7 @@ public sealed class PlayerMovementController : Component
 			IsPolymorphed ? PolymorphCameraFollowDistance
 						  : HumanCameraFollowDistance;
 		PlayerDitherDistance /= 3.0f;
-		if (cameraDistance < PlayerDitherDistance && clampedPitch < 70.0f)
+		if (cameraDistance < PlayerDitherDistance && clampedPitch < 65.0f)
 			playerAlpha = MathF.Max(
 				0.0f,
 				1.0f -
