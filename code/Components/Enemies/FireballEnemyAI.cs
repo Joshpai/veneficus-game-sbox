@@ -1,6 +1,11 @@
 public sealed class FireballEnemyAI : BaseEnemyAI
 {
+	[Property]
+	public float AttackAnimationLength { get; set; } = 1.67f;
+
 	private FireballSpell _fireball = null;
+
+	private float _attackFinishTime = 0.0f;
 
 	protected override void OnStart()
 	{
@@ -44,12 +49,13 @@ public sealed class FireballEnemyAI : BaseEnemyAI
 		{
 			_fireball.OnFixedUpdate();
 
-			// TODO: consider what we should do for determining how long this
-			// enemy type should charge the fireball for.
-			bool shouldFinishCasting = true;
+			bool shouldFinishCasting = _attackFinishTime < Time.Now;
 			if (shouldFinishCasting)
 			{
 				_fireball.FinishCasting();
+				_modelRenderer.SceneModel.CurrentSequence.Name = "";
+
+				SetAttackCooldown();
 
 				if (_enemyManager != null)
 					_enemyManager.AddCastSpell(_fireball);
@@ -67,8 +73,8 @@ public sealed class FireballEnemyAI : BaseEnemyAI
 			// TODO: prediction?
 			UpdateSpellCastDirection();
 			_fireball.StartCasting();
-
-			SetAttackCooldown();
+			_modelRenderer.SceneModel.CurrentSequence.Name = "EFB_Attack";
+			_attackFinishTime = Time.Now + AttackAnimationLength;
 		}
 	}
 }

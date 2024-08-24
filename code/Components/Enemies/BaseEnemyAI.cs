@@ -93,6 +93,8 @@ public class BaseEnemyAI : Component
 		Gizmo.Draw.Color = Color.White;
 		Gizmo.Draw.LineSphere(Transform.Position + EyePosition, HearingRadius);
 
+		Gizmo.Draw.LineSphere(Transform.Position + EyePosition, 10.0f);
+
 		Gizmo.Draw.LineThickness = 16.0f;
 		var offset = (_startingPosition == Vector3.Zero) ? Transform.Position
 														 : _startingPosition;

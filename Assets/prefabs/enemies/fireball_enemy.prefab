@@ -29,12 +29,13 @@
         "__type": "FireballEnemyAI",
         "__guid": "eede35f3-a5fa-4704-bd0b-5ee38719770c",
         "AlwaysActive": false,
+        "AttackAnimationLength": 1.67,
         "AttackCooldown": 1,
         "AttackRangeIdeal": 1000,
         "AttackRangeMax": 1500,
         "AvoidSpells": false,
         "EnemyLevel": 1,
-        "EyePosition": "0,0,64",
+        "EyePosition": "0,0,132",
         "HearingRadius": 1000,
         "MaxSpeed": 0,
         "PassiveMode": "Stationary",
@@ -42,39 +43,30 @@
         "RotationSpeed": 3,
         "VisionAngle": 0.7853982,
         "VisionRange": 1500
-      }
-    ],
-    "Children": [
+      },
       {
-        "__guid": "39202f06-e59e-417d-8cde-756ff04e5726",
-        "Flags": 0,
-        "Name": "NavMeshBody",
-        "Enabled": true,
-        "Components": [
-          {
-            "__type": "Sandbox.SkinnedModelRenderer",
-            "__guid": "e91f557f-f901-4fb6-a33e-caf6c4518c53",
-            "BodyGroups": 18446744073709551615,
-            "CreateBoneObjects": false,
-            "Model": "models/enemymodels/fireenemy/enemyfire.vmdl",
-            "RenderType": "On",
-            "Tint": "1,1,1,1",
-            "UseAnimGraph": true
-          },
-          {
-            "__type": "Sandbox.NavMeshAgent",
-            "__guid": "55d700c7-3ca2-482a-bece-d363ca9095a1",
-            "Acceleration": 50,
-            "Height": 64,
-            "MaxSpeed": 120,
-            "Radius": 16,
-            "Separation": 0.25,
-            "UpdatePosition": true,
-            "UpdateRotation": false
-          }
-        ]
+        "__type": "Sandbox.SkinnedModelRenderer",
+        "__guid": "71e4cfd9-a596-4b26-856d-7bed0843544b",
+        "BodyGroups": 18446744073709551615,
+        "CreateBoneObjects": false,
+        "Model": "models/enemymodels/fireenemy/enemyfire.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1",
+        "UseAnimGraph": true
+      },
+      {
+        "__type": "Sandbox.NavMeshAgent",
+        "__guid": "68ce590e-fda7-42c9-ad22-c100d23cf3bb",
+        "Acceleration": 50,
+        "Height": 64,
+        "MaxSpeed": 120,
+        "Radius": 16,
+        "Separation": 0.25,
+        "UpdatePosition": true,
+        "UpdateRotation": false
       }
     ],
+    "Children": [],
     "__variables": []
   },
   "ShowInMenu": false,

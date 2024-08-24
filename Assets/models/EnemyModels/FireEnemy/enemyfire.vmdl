@@ -63,7 +63,7 @@
 				[
 					{
 						_class = "AnimFile"
-						name = "EnemyFire"
+						name = "EFB_Attack"
 						activity_name = ""
 						activity_weight = 1
 						weight_list_name = ""
