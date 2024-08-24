@@ -29,6 +29,7 @@
         "__type": "MagicMissileEnemyAI",
         "__guid": "464c777a-5261-4fd4-b373-586eea6ea69b",
         "AlwaysActive": false,
+        "AttackAnimationLength": 2.46,
         "AttackCooldown": 1,
         "AttackRangeIdeal": 300,
         "AttackRangeMax": 1000,

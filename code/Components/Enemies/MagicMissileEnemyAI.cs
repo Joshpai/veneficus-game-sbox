@@ -1,5 +1,8 @@
 public sealed class MagicMissileEnemyAI : BaseEnemyAI
 {
+	[Property]
+	public float AttackAnimationLength { get; set; } = 4.5f;
+
 	[Property, Group("Combat")]
 	public int BurstCount { get; set; } = 3;
 
@@ -117,8 +120,9 @@ public sealed class MagicMissileEnemyAI : BaseEnemyAI
 			{
 				// We have already shot one!
 				_remainingBurstShots = BurstCount - 1;
-				_finishSpellTime = Time.Now + 4.5f;
-				_nextBurstShotTime = Time.Now + 4.5f + TimeBetweenBurstShots;
+				_finishSpellTime = Time.Now + AttackAnimationLength;
+				_nextBurstShotTime = Time.Now + AttackAnimationLength
+											  + TimeBetweenBurstShots;
 			}
 			else
 			{
