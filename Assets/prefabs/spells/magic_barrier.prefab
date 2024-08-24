@@ -9,9 +9,9 @@
         "__type": "Sandbox.SkinnedModelRenderer",
         "__guid": "3aacb18f-7235-4c08-bdc7-e1c96f95691d",
         "__enabled": false,
-        "BodyGroups": 341,
+        "BodyGroups": 18446744073709551615,
         "CreateBoneObjects": false,
-        "Model": "models/citizen/citizen.vmdl",
+        "Model": "models/playermodels/wizard/wizard.vmdl",
         "RenderType": "On",
         "Tint": "1,1,1,1",
         "UseAnimGraph": true
@@ -23,7 +23,7 @@
         "Flags": 0,
         "Name": "Barrier",
         "Position": "0,0,38.17241",
-        "Scale": "1.25,1.25,1.25",
+        "Scale": "2,2,2",
         "Enabled": true,
         "Components": [
           {
