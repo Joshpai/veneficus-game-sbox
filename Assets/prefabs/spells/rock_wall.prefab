@@ -10,7 +10,7 @@
         "Flags": 0,
         "Name": "Cube",
         "Position": "0,0,50",
-        "Scale": "0.25,3,2",
+        "Scale": "1.223726,3,2",
         "Enabled": true,
         "Components": [
           {
@@ -35,6 +35,8 @@
             "DamageMultiplier": 1,
             "DestroyOnDeath": false,
             "HealMultiplier": 1,
+            "HealthRegenDelay": 0,
+            "HealthRegenRate": 0,
             "MaxHealth": 300
           }
         ]
