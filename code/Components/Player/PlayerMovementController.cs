@@ -105,6 +105,12 @@ public sealed class PlayerMovementController : Component
 	[Property]
 	public float PolymorphCameraFollowDistance { get; set; } = 100.0f;
 
+	[Property]
+	public Collider PolymorphedHurtbox { get; set; }
+
+	[Property]
+	public Collider HumanHurtbox { get; set; }
+
 	// Too small a thing to fit elsewhere. Maximum range of an item the player
 	// can interact with.
 	[Property]
@@ -181,6 +187,7 @@ public sealed class PlayerMovementController : Component
 		Controller.Height = HumanHeight;
 		Controller.Radius = HumanRadius;
 		Controller.StepHeight = HumanStepHeight;
+		PolymorphedHurtbox.Enabled = false;
 
 		Scene.PhysicsWorld.Gravity = SceneGravity;
 	}
@@ -239,6 +246,12 @@ public sealed class PlayerMovementController : Component
 
 		_modelRenderer.SceneModel.AnimationGraph =
 			IsPolymorphed ? PolymorphedAnimGraph : HumanAnimGraph;
+
+		if (PolymorphedHurtbox != null)
+			PolymorphedHurtbox.Enabled = IsPolymorphed;
+
+		if (HumanHurtbox != null)
+			HumanHurtbox.Enabled = !IsPolymorphed;
 	}
 
 	protected override void DrawGizmos()
