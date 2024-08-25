@@ -184,6 +184,26 @@
           "Static": false
         }
       ]
+    },
+    {
+      "__guid": "1ef75bf3-752f-4f86-8be4-dbaf437d54aa",
+      "Flags": 0,
+      "Name": "death_trigger",
+      "Position": "-587.1842,-814.2186,-223.0939",
+      "Scale": "100.6184,127.3368,1",
+      "Enabled": true,
+      "__Prefab": "prefabs/triggers/death_trigger.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "59580f00-f706-45b9-b2d8-12347df21cb5",
+      "Flags": 0,
+      "Name": "death_trigger (1)",
+      "Position": "-835.2297,-1524.641,0",
+      "Scale": "7.270548,9.383224,0.02271469",
+      "Enabled": true,
+      "__Prefab": "prefabs/triggers/death_trigger.prefab",
+      "__PrefabVariables": {}
     }
   ],
   "SceneProperties": {

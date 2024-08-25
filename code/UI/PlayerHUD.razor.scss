@@ -23,6 +23,8 @@ PlayerHUD
     justify-content: center;
 
     div {
+      align-items: center;
+      justify-content: center;
       border: 3px solid black;
       padding: 15px;
       font-size: 48px;
@@ -30,6 +32,13 @@ PlayerHUD
       position: relative;
       width: auto;
       height: auto;
+
+      img
+      {
+        filter: brightness(0%);
+        width: 64px;
+        height: 64px;
+      }
     }
   }
 
@@ -52,10 +61,84 @@ PlayerHUD
 
   .health
   {
-    /* background-color: red; */
-    position: absolute;
     left: 15px;
     bottom: 15px;
+
+    .flask-tip
+    {
+      background-color: #e39191;
+    }
+
+    .flask-orb
+    {
+      background-color: #e39191;
+    }
+
+    .liquid
+    {
+      background-image: linear-gradient(#f52525 0%, #660303 100%);
+    }
+
+    .liquid-overlay
+    {
+      &.linear-gradient
+      {
+        background-image:
+        linear-gradient(
+        rgba(0, 0, 0, 0) 0%,
+        rgba(84, 14, 14, 1) 100%
+        );
+      }
+    }
+
+    .value
+    {
+      text-shadow: 0 0 3px #e39191;
+    }
+  }
+
+  .mana
+  {
+    right: 15px;
+    bottom: 15px;
+
+    .flask-tip
+    {
+      background-color: #7da4e3;
+    }
+
+    .flask-orb
+    {
+      background-color: #7da4e3;
+    }
+
+    .liquid
+    {
+      background-image: linear-gradient(#1461de 0%, #01317d 100%);
+    }
+
+    .liquid-overlay
+    {
+      &.linear-gradient
+      {
+        background-image:
+        linear-gradient(
+        rgba(0, 0, 0, 0) 0%,
+        rgba(14, 14, 84, 1) 100%
+        );
+      }
+    }
+
+    .value
+    {
+      text-shadow: 0 0 3px #7da4e3;
+    }
+  }
+
+  .flask
+  {
+    /* background-color: red; */
+    position: absolute;
 
     .flask-container
     {
@@ -70,7 +153,6 @@ PlayerHUD
         top: 0;
         width: 50px;
         height: 35px;
-        background-color: #e39191;
         margin-left: auto;
         margin-right: auto;
         border-bottom: none;
@@ -79,7 +161,6 @@ PlayerHUD
       .flask-orb
       {
         border: 3px solid white;
-        background-color: #e39191;
         position: absolute;
         bottom: 0;
         width: 200px;
@@ -102,7 +183,6 @@ PlayerHUD
           {
             position: absolute;
             /* background-color: #f52525; */
-            background-image: linear-gradient(#f52525 0%, #660303 100%);
             width: 100%;
             bottom: 0;
             /* height: 75%; */
@@ -127,14 +207,14 @@ PlayerHUD
               );
             }
 
-            &.linear-gradient
-            {
-              background-image:
-                linear-gradient(
-                  rgba(0, 0, 0, 0) 0%,
-                  rgba(84, 14, 14, 1) 100%
-                );
-            }
+            /* &.linear-gradient */
+            /* { */
+            /*   background-image: */
+            /*     linear-gradient( */
+            /*       rgba(0, 0, 0, 0) 0%, */
+            /*       rgba(84, 14, 14, 1) 100% */
+            /*     ); */
+            /* } */
 
             /* &.underlight */
             /* { */
@@ -161,7 +241,6 @@ PlayerHUD
             align-items: center;
             justify-content: center;
             font-size: 50px;
-            text-shadow: 0 0 3px #e39191;
           }
         }
       }
@@ -299,26 +378,26 @@ PlayerHUD
     }
   }
 
-  .mana-container
-  {
-    position: absolute;
-    right: 15px;
-    bottom: 15px;
-    width: 50px;
-    border: 3px solid white;
-
-    .mana-wrapper
-    {
-      height: 150px;
-      background-color: #ccc;
-
-      .mana
-      {
-        margin-top: auto;
-        background-color: blue;
-        width: 100%;
-        transition: height 0.2s linear;
-      }
-    }
-  }
+  /* .mana-container */
+  /* { */
+  /*   position: absolute; */
+  /*   right: 15px; */
+  /*   bottom: 15px; */
+  /*   width: 50px; */
+  /*   border: 3px solid white; */
+  /**/
+  /*   .mana-wrapper */
+  /*   { */
+  /*     height: 150px; */
+  /*     background-color: #ccc; */
+  /**/
+  /*     .mana */
+  /*     { */
+  /*       margin-top: auto; */
+  /*       background-color: blue; */
+  /*       width: 100%; */
+  /*       transition: height 0.2s linear; */
+  /*     } */
+  /*   } */
+  /* } */
 }
