@@ -16,10 +16,6 @@
 }
 
 <root>
-	<div class="crosshair-container">
-		<div class="crosshair"></div>
-	</div>
-
 	<div class="health">
 		<div class="flask-container">
 			<div class="flask-tip"></div>
@@ -105,6 +101,29 @@
 			</div>
 		</div>
 	</div>
+
+	<div class="crosshair-container">
+		<div class="crosshair"></div>
+	</div>
+
+	<!-- HACK: silly trivial truthy if because @code didn't work -->
+	@if (true)
+	{
+		String animate = "";
+		if (Health.Health < _lastHealth)
+		{
+			_flashHealthTime = FlashHealthTime;
+			animate = "animate";
+		}
+		else if (_flashHealthTime > 0.0f)
+		{
+			animate = "animate";
+		}
+		_lastHealth = Health.Health;
+		Log.Info(animate);
+		<div class="health-indicator @animate">
+		</div>
+	}
 </root>
 
 @code
@@ -117,6 +136,21 @@
 
 	[Property]
 	public PlayerSpellcastingController Spellcasting { get; set; }
+
+	[Property]
+	public float FlashHealthTime { get; set; } = 0.2f;
+
+	private float _lastHealth = 100.0f;
+	private float _flashHealthTime = 0.0f;
+
+	protected override void OnFixedUpdate()
+	{
+		if (_flashHealthTime > 0.0f)
+			_flashHealthTime -= Time.Delta;
+
+		if (_flashHealthTime < 0.0f)
+			_flashHealthTime = 0.0f;
+	}
 
 	/// <summary>
 	/// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
@@ -136,6 +170,7 @@
 			Spellcasting.GetSpellCooldown(BaseSpell.SpellType.WaterBeam),
 			SaveData.Instance.Data.UnlockedSpells,
 			Movement.LevelStarted,
-			Health.InRespawn
+			Health.InRespawn,
+			(_flashHealthTime != 0.0f)
 		);
 }
