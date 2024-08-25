@@ -28,7 +28,7 @@
       "Enabled": true,
       "__Prefab": "prefabs/objects/level_end.prefab",
       "__PrefabVariables": {
-        "Next Level": "scenes/forest - act 1/forest-act1-scene1(tutorial).scene",
+        "Next Level": "scenes/finish_screen.scene",
         "Deferred Next Level": null,
         "Target Finish Time S": 120,
         "Target Finish Time A": 150,
