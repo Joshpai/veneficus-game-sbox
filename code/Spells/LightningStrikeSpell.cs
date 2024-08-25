@@ -9,6 +9,7 @@ public class LightningStrikeSpell : WorldPlacementSpell
 	public override float SpellSpeed => 0.0f;
 	public override String IconPath =>
 		"materials/PlayerMaterials/Spells/lightningstrike.png";
+	public override String SpellSound => "sounds/Spells/lightningstrike";
 	// WorldPlacementSpell
 	public override float MinRange => 0.0f;
 	public override float MaxRange => 250.0f;

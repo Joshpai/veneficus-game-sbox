@@ -1,5 +1,5 @@
 {
-  "__guid": "e0d9a518-68ef-4b24-bce4-30c78c7d006d",
+  "__guid": "dd9a2bd3-4d5c-492d-b673-590a847de22a",
   "GameObjects": [
     {
       "__guid": "b31108fb-bdea-4110-b6da-da3a40d6687c",
@@ -14,8 +14,8 @@
             "_type": "gameobject",
             "prefab": "prefabs/ui/loading_screen.prefab"
           },
-          "StartingLevel": "scenes/finish_screen.scene",
-          "StartingLevelSpawnsPlayer": false
+          "StartingLevel": "scenes/minimal.scene",
+          "StartingLevelSpawnsPlayer": true
         },
         {
           "__type": "EnemyManager",

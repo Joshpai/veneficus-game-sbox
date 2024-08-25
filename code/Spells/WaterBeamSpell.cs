@@ -16,6 +16,7 @@ public class WaterBeamSpell : BaseSpell
 	public override bool IsStateful => true;
 	public override String IconPath =>
 		"materials/PlayerMaterials/Spells/waterbeam.png";
+	public override String SpellSound => "sounds/Spells/waterbeam";
 	public override ManaTakeTime TakeManaTime => ManaTakeTime.OnTick;
 
 	public override event EventHandler OnDestroy;

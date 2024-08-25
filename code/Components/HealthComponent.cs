@@ -18,6 +18,11 @@ public sealed class HealthComponent : Component
 	[Property]
 	public float HealthRegenDelay { get; set; } = 0.0f;
 
+	[Property]
+	public String HurtSound { get; set; } = null;
+	[Property]
+	public String HurtSoundMixerName { get; set; } = "Game";
+
 	public float Health { get; private set; }
 
 	public bool InRespawn { get; set; } = false;
@@ -33,6 +38,8 @@ public sealed class HealthComponent : Component
 	{
 		Alive = true;
 		Health = MaxHealth;
+		if (HurtSound != null)
+			Sound.Preload(HurtSound);
 	}
 
 	private void AddHealth(float amount)
@@ -53,6 +60,16 @@ public sealed class HealthComponent : Component
 	{
 		AddHealth(DamageMultiplier * -amount);
 		_regenStartTime = Time.Now + HealthRegenDelay;
+
+		if (HurtSound != null)
+		{
+			var mixerHurtSound =
+				Sandbox.Audio.Mixer.FindMixerByName(HurtSoundMixerName);
+			if (mixerHurtSound != null)
+				Sound.Play($"{HurtSound}.sound", mixerHurtSound);
+			else
+				Sound.Play($"{HurtSound}.sound");
+		}
 	}
 
 	public void Heal(float amount)

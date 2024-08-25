@@ -36,6 +36,8 @@ public abstract class BaseSpell
 	public abstract bool IsStateful { get; }
 	public abstract ManaTakeTime TakeManaTime { get; }
 	public abstract String IconPath { get; }
+	// TODO: maybe have sounds start at different times?
+	public abstract String SpellSound { get; }
 
 	public abstract event EventHandler OnDestroy;
 
@@ -51,6 +53,7 @@ public abstract class BaseSpell
 	public BaseSpell(GameObject caster)
 	{
 		_caster = caster;
+		Sound.Preload(SpellSound);
 	}
 
 	public bool CanFinishCasting()
@@ -74,7 +77,18 @@ public abstract class BaseSpell
 	public bool FinishCasting()
 	{
 		HasFinishedCasting = true;
-		return OnFinishCasting();
+		var succeded = OnFinishCasting();
+		if (succeded)
+		{
+			var mixerSpellSound =
+				Sandbox.Audio.Mixer.FindMixerByName("Game");
+			if (mixerSpellSound != null)
+				Sound.Play($"{SpellSound}.sound", mixerSpellSound);
+			else
+				Sound.Play($"{SpellSound}.sound");
+		}
+
+		return succeded;
 	}
 
 	public void CancelCasting()

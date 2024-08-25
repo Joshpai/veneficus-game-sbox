@@ -9,6 +9,7 @@ public class RendingGaleSpell : BaseSpell
 	public override bool IsStateful => false;
 	public override String IconPath =>
 		"materials/PlayerMaterials/Spells/rendinggale.png";
+	public override String SpellSound => "sounds/Spells/rendinggale";
 	public override ManaTakeTime TakeManaTime => ManaTakeTime.OnFinishCasting;
 
 	public override event EventHandler OnDestroy;

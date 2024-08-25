@@ -3,11 +3,18 @@ public sealed class MaxManaBuff : Component, Component.ITriggerListener
 	[Property]
 	public float MaxManaValue { get; set; } = 25.0f;
 
+	[Property]
+	public String PickupSound { get; set; } = "sounds/World/manacrystalpickedup";
+	[Property]
+	public String PickupSoundMixerName { get; set; } = "Game";
+
 	private bool _hasBeenCollected;
 
 	protected override void OnStart()
 	{
 		base.OnStart();
+
+		Sound.Preload(PickupSound);
 
 		if (SaveData.Instance == null || SaveData.Instance.Data == null ||
 			SaveData.Instance.Data.ConsumedMapItems == null ||
@@ -43,6 +50,12 @@ public sealed class MaxManaBuff : Component, Component.ITriggerListener
 
 		if (player != null)
 		{
+			var mixerPickupSound =
+				Sandbox.Audio.Mixer.FindMixerByName(PickupSoundMixerName);
+			if (mixerPickupSound != null)
+				Sound.Play($"{PickupSound}.sound", mixerPickupSound);
+			else
+				Sound.Play($"{PickupSound}.sound");
 			if (!_hasBeenCollected)
 			{
 				player.MaxMana += MaxManaValue;

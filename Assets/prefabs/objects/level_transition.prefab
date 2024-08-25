@@ -6,22 +6,6 @@
     "Enabled": true,
     "Children": [
       {
-        "__guid": "0afe7abf-9a4e-4053-a2e2-912c40a1135c",
-        "Flags": 0,
-        "Name": "Map",
-        "Components": [
-          {
-            "__type": "Sandbox.MapInstance",
-            "__guid": "8cf2ae8e-fc2f-4b0e-8d89-807084a8bb74",
-            "__version": 1,
-            "EnableCollision": false,
-            "MapName": "maps/prefabs/level_transition.vmap",
-            "NoOrigin": false,
-            "UseMapFromLaunch": false
-          }
-        ]
-      },
-      {
         "__guid": "bb2cf8cb-d572-48bd-a6d2-02f63a632320",
         "Flags": 0,
         "Name": "CameraContainer",
@@ -56,7 +40,9 @@
           {
             "__type": "SpinComponent",
             "__guid": "84c045b7-bd2c-4b69-894b-e77571c1bc84",
-            "SpinPeriod": 120
+            "SpinAxis": "1,0,0",
+            "SpinPeriod": 120,
+            "StopCameraFaceProbability": 0.5
           },
           {
             "__type": "Sandbox.CameraComponent",
@@ -74,6 +60,31 @@
             "Viewport": "0,0,1,1",
             "ZFar": 10000,
             "ZNear": 10
+          },
+          {
+            "__type": "Sandbox.SoundPointComponent",
+            "__guid": "61a76593-44ea-4842-8768-274d929c2045",
+            "DistanceAttenuation": false,
+            "DistanceAttenuationOverride": false,
+            "Force2d": false,
+            "MaxRepeatTime": 1,
+            "MinRepeatTime": 1,
+            "Occlusion": false,
+            "OcclusionOverride": false,
+            "OcclusionRadius": 32,
+            "Pitch": 1,
+            "PlayOnStart": true,
+            "ReflectionOverride": false,
+            "Reflections": false,
+            "Repeat": true,
+            "SoundEvent": "sounds/world/scenetransition.sound",
+            "SoundOverride": false,
+            "StopOnNew": false,
+            "TargetMixer": {
+              "Name": "ambience",
+              "Id": "5f7b0be7-5467-4a64-9d18-a4b618c510ae"
+            },
+            "Volume": 1
           }
         ],
         "Children": [

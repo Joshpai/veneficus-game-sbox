@@ -65,15 +65,26 @@ public sealed class LevelEnd : InteractableComponent
 	[Property]
 	public int DeathCount_C { get; set; } = 10;
 
-	private SoundFile _endOfLevelTouched = SoundFile.Load("sounds/World/endofleveltouched.vsnd");
-	
+	[Property]
+	public String FinishSound { get; set; } = "sounds/World/endofleveltouched";
+	[Property]
+	public String FinishSoundMixerName { get; set; } = "Game";
+
 	protected override void OnStart()
 	{
 		LevelTransition.Enabled = false;
+		Sound.Preload(FinishSound);
 	}
 
 	public override void Interact(GameObject interacter)
 	{
+		var mixerFinishSound =
+			Sandbox.Audio.Mixer.FindMixerByName(FinishSoundMixerName);
+		if (mixerFinishSound != null)
+			Sound.Play($"{FinishSound}.sound", mixerFinishSound);
+		else
+			Sound.Play($"{FinishSound}.sound");
+		
 		var completionTime =
 			Time.Now - LevelManagerStaticStore.Stats.LevelStartTime;
 		var completionTimeSpan = TimeSpan.FromSeconds(completionTime);
@@ -198,8 +209,6 @@ public sealed class LevelEnd : InteractableComponent
 		LevelManagerStaticStore.Stats = new LevelStats();
 
 		UpdateSaveDataLevelSummary(summaryData);
-		
-		Sound.PlayFile(_endOfLevelTouched);
 	}
 
 	private void UpdateSaveDataLevelSummary(LevelSummaryData summaryData)

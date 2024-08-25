@@ -9,6 +9,7 @@ public class RockArmourSpell : WorldPlacementSpell
 	public override float SpellSpeed => 0.0f;
 	public override String IconPath =>
 		"materials/PlayerMaterials/Spells/rockarmour.png";
+	public override String SpellSound => "sounds/Spells/rockarmour";
 	// WorldPlacementSpell
 	public override float MinRange => 75.0f;
 	public override float MaxRange => 250.0f;

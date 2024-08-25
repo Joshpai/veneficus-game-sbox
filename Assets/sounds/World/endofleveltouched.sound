@@ -2,7 +2,7 @@
   "UI": false,
   "Volume": "20",
   "Pitch": "1",
-  "Decibels": 70,
+  "Decibels": 128,
   "SelectionMode": "Random",
   "Sounds": [
     "sounds/world/endofleveltouched.vsnd"

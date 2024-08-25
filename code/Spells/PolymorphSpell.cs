@@ -13,6 +13,7 @@ public class PolymorphSpell : BaseSpell
 	public override bool IsStateful => true;
 	public override String IconPath =>
 		"materials/PlayerMaterials/Spells/polymorph.png";
+	public override String SpellSound => "sounds/Spells/polymorph";
 	public override ManaTakeTime TakeManaTime => ManaTakeTime.OnStartCasting;
 
 	public override event EventHandler OnDestroy;

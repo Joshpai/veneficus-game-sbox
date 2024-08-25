@@ -119,6 +119,16 @@ public sealed class PlayerMovementController : Component
 	[Property]
 	public Model LevelStartPortal { get; set; } = Model.Sphere;
 
+	[Property]
+	public String JumpSound { get; set; } = "sounds/Player/jump";
+	[Property]
+	public String JumpSoundMixerName { get; set; } = "Game";
+
+	[Property]
+	public String StartLevelSound { get; set; } = "sounds/World/gettingoutofstartoflevel";
+	[Property]
+	public String StartLevelSoundMixerName { get; set; } = "Game";
+
 	public bool IsDashing { get; set; } = false;
 
 	public float CameraFollowDistance;
@@ -193,6 +203,9 @@ public sealed class PlayerMovementController : Component
 		PolymorphedHurtbox.Enabled = false;
 
 		Scene.PhysicsWorld.Gravity = SceneGravity;
+
+		Sound.Preload(JumpSound);
+		Sound.Preload(StartLevelSound);
 	}
 
 	public void SetPlayerNotStarted()
@@ -212,6 +225,13 @@ public sealed class PlayerMovementController : Component
 
 	private void StartLevel()
 	{
+		var mixerStartLevelSound =
+			Sandbox.Audio.Mixer.FindMixerByName(StartLevelSoundMixerName);
+		if (mixerStartLevelSound != null)
+			Sound.Play($"{StartLevelSound}.sound", mixerStartLevelSound);
+		else
+			Sound.Play($"{StartLevelSound}.sound");
+
 		if (_modelRenderer != null)
 		{
 			_modelRenderer.Model = _oldModel;
@@ -379,6 +399,13 @@ public sealed class PlayerMovementController : Component
 			_movingPlatform.PlayerTouching = false;
 
 		Controller.Punch(groundJumpForce * Time.Delta / Mass);
+
+		var mixerJumpSound =
+			Sandbox.Audio.Mixer.FindMixerByName(JumpSoundMixerName);
+		if (mixerJumpSound != null)
+			Sound.Play($"{JumpSound}.sound", mixerJumpSound);
+		else
+			Sound.Play($"{JumpSound}.sound");
 	}
 
 	private void AirJump()

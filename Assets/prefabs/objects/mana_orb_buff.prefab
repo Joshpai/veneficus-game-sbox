@@ -27,7 +27,9 @@
       {
         "__type": "MaxManaBuff",
         "__guid": "daa0b1e0-e2f7-466b-ba5c-3061d6a4c834",
-        "MaxManaValue": 25
+        "MaxManaValue": 25,
+        "PickupSound": "sounds/World/manacrystalpickedup",
+        "PickupSoundMixerName": "Game"
       },
       {
         "__type": "Sandbox.Rigidbody",
@@ -43,6 +45,38 @@
         "OverrideMassCenter": false,
         "RigidbodyFlags": 0,
         "StartAsleep": false
+      },
+      {
+        "__type": "Sandbox.SoundPointComponent",
+        "__guid": "11af5a4a-fdb9-4d70-b896-3d0d74517622",
+        "DistanceAttenuation": false,
+        "DistanceAttenuationOverride": false,
+        "Force2d": false,
+        "MaxRepeatTime": 1,
+        "MinRepeatTime": 1,
+        "Occlusion": false,
+        "OcclusionOverride": false,
+        "OcclusionRadius": 32,
+        "Pitch": 1,
+        "PlayOnStart": true,
+        "ReflectionOverride": false,
+        "Reflections": false,
+        "Repeat": true,
+        "SoundEvent": "sounds/world/manacrystalambience.sound",
+        "SoundOverride": false,
+        "StopOnNew": false,
+        "TargetMixer": {
+          "Name": "ambience",
+          "Id": "5f7b0be7-5467-4a64-9d18-a4b618c510ae"
+        },
+        "Volume": 1
+      },
+      {
+        "__type": "SpinComponent",
+        "__guid": "c20ebe66-ef84-47ad-b737-83d6811adbcd",
+        "SpinAxis": "0,0,1",
+        "SpinPeriod": 15,
+        "StopCameraFaceProbability": 0.5
       }
     ],
     "Children": [],
