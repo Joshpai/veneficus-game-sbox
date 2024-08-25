@@ -20,7 +20,7 @@
 }
 
 <root>
-	<div class="health">
+	<div class="flask health">
 		<div class="flask-container">
 			<div class="flask-tip"></div>
 			<div class="flask-orb">
@@ -96,12 +96,20 @@
 		</div>
 	</div>
 
-	<div class="mana-container">
-		<div class="mana-wrapper"
-			 style="height: @(1.5f * Spellcasting.MaxMana)px">
-			<!-- Simple mana bar (vertical), changes colour depending on mana -->
-			<div class="mana"
-				 style="height: @(1.5f * Spellcasting.Mana)px">
+	<div class="flask mana">
+		<div class="flask-container">
+			<div class="flask-tip"></div>
+			<div class="flask-orb">
+				<div class="liquid-container">
+					<div class="liquid"
+						 style="height: @(100.0f * Spellcasting.Mana / Spellcasting.MaxMana)%;"></div>
+					<div class="liquid-overlay radial-gradient"></div>
+					<div class="liquid-overlay linear-gradient"></div>
+					<!-- <div class="liquid-overlay underlight"></div> -->
+				</div>
+				<div class="value-container">
+					<div class="value">@MathF.Ceiling(Spellcasting.Mana)</div>
+				</div>
 			</div>
 		</div>
 	</div>
