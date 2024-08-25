@@ -20,6 +20,8 @@ public sealed class HealthComponent : Component
 
 	public float Health { get; private set; }
 
+	public bool InRespawn { get; set; } = false;
+
 	public bool Alive { get; private set; } = false;
 
 	public event Action<float> OnHealthChanged;
@@ -67,6 +69,14 @@ public sealed class HealthComponent : Component
 
 		if (DestroyOnDeath)
 			GameObject.Destroy();
+	}
+
+	public float GetPercentage()
+	{
+		if (MaxHealth == 0.0f)
+			return 0.0f;
+
+		return Health / MaxHealth;
 	}
 
 	protected override void OnFixedUpdate()

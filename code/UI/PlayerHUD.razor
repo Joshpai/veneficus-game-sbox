@@ -4,11 +4,14 @@
 
 @if (!Movement.LevelStarted)
 {
-	<root>
-		<div class="start-hint">
+	if (!Health.InRespawn)
+	{
+		<root>
+			<div class="start-hint">
 			<div>Press "E" to start the level</div>
-		</div>
-	</root>
+			</div>
+		</root>
+	}
 	return;
 }
 
@@ -132,6 +135,7 @@
 			Spellcasting.GetSpellCooldown(BaseSpell.SpellType.LightningStrike) +
 			Spellcasting.GetSpellCooldown(BaseSpell.SpellType.WaterBeam),
 			SaveData.Instance.Data.UnlockedSpells,
-			Movement.LevelStarted
+			Movement.LevelStarted,
+			Health.InRespawn
 		);
 }

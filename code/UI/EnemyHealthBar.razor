@@ -1,0 +1,29 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+
+<root style="opacity: @(Health.Health < Health.MaxHealth ? 1.0 : 0.0f);">
+	<div class="hp-bar" style="width: @(Health.GetPercentage() * 100.0f)%"></div>
+	<div class="hp-value">
+	<div>@Health.Health</div>
+	</div>
+</root>
+
+@code
+{
+	public HealthComponent Health { get; set; }
+
+	protected override void OnStart()
+	{
+		Health = Components.GetInAncestorsOrSelf<HealthComponent>();
+	}
+
+	/// <summary>
+	/// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
+	/// </summary>
+	protected override int BuildHash() =>
+		System.HashCode.Combine(
+			Health,
+			(Health != null) ? Health.Health : 0
+		);
+}

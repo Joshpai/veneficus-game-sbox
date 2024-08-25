@@ -50,6 +50,7 @@
         "__type": "RendingGaleEnemyAI",
         "__guid": "2401b88b-bd5a-471a-bc1f-077cc1f0612c",
         "AlwaysActive": false,
+        "AttackAnimationLength": 1.38,
         "AttackCooldown": 1,
         "AttackDamage": 15,
         "AttackRangeIdeal": 35,
@@ -66,7 +67,31 @@
         "VisionRange": 1500
       }
     ],
-    "Children": [],
+    "Children": [
+      {
+        "__guid": "2888ce42-85b0-438e-a676-945bd4042cd5",
+        "Flags": 0,
+        "Name": "HealthBar",
+        "Position": "0,0,136.2471",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.WorldPanel",
+            "__guid": "70055436-ea4b-4036-a0c7-82cb1eaacfcc",
+            "HorizontalAlign": "Center",
+            "InteractionRange": 1000,
+            "LookAtCamera": false,
+            "PanelSize": "4096,512",
+            "RenderScale": 1,
+            "VerticalAlign": "Center"
+          },
+          {
+            "__type": "EnemyHealthBar",
+            "__guid": "e08f387f-0f36-41fa-a882-6a1139c16daf"
+          }
+        ]
+      }
+    ],
     "__variables": []
   },
   "ShowInMenu": false,

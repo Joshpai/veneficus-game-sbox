@@ -14,6 +14,7 @@ public sealed class PlayerDeathManager : Component
 
 	private void HandleDeath()
 	{
+		PlayerHealthComponent.InRespawn = true;
 		LevelManagerStaticStore.Stats.DeathCount++;
 
 		// NOTE: The death screen is responsible for it's own lifetime. In
@@ -60,6 +61,12 @@ public sealed class PlayerDeathManager : Component
 		if (deathScreenComponent != null)
 		{
 			deathScreenComponent.TimeScale = timeScale;
+			deathScreenComponent.PlayerHealthComponent =
+				LevelManagerStaticStore.Player.Components
+				.GetInDescendantsOrSelf<HealthComponent>();
+			if (deathScreenComponent.PlayerHealthComponent != null)
+				deathScreenComponent.PlayerHealthComponent.InRespawn = true;
+
 			// TODO: make this more random and related to the death reason.
 			// deathScreenComponent.DeathReason = "L + Ratio + Dead + your mum";
 		}
