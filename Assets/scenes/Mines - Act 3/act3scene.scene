@@ -146,275 +146,6 @@
       ]
     },
     {
-      "__guid": "5f900fb3-d86f-4c28-8052-0ac9801dd752",
-      "Flags": 0,
-      "Name": "rending_gale_enemy",
-      "Position": "-7264,-192,3.999756",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/rending_gale_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Wander",
-        "Patrol Path": [],
-        "Hearing Radius": 1000,
-        "Vision Range": 75000,
-        "Vision Angle": 0.12566371,
-        "Attack Range Ideal": 35,
-        "Attack Range Max": 250,
-        "Attack Cooldown": 1,
-        "Attack Damage": 15
-      }
-    },
-    {
-      "__guid": "8c3e4266-073c-4e54-9f5a-78f68b3536e0",
-      "Flags": 0,
-      "Name": "rending_gale_enemy (1)",
-      "Position": "-7232,64,3.999756",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/rending_gale_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Wander",
-        "Patrol Path": [],
-        "Hearing Radius": 1000,
-        "Vision Range": 75000,
-        "Vision Angle": 0.12566371,
-        "Attack Range Ideal": 35,
-        "Attack Range Max": 250,
-        "Attack Cooldown": 1,
-        "Attack Damage": 15
-      }
-    },
-    {
-      "__guid": "5eb7e3d2-0a65-42b0-9007-8ada5a974573",
-      "Flags": 0,
-      "Name": "rending_gale_enemy (2)",
-      "Position": "-7488,-64,3.999756",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/rending_gale_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Wander",
-        "Patrol Path": [],
-        "Hearing Radius": 1000,
-        "Vision Range": 75000,
-        "Vision Angle": 0.12566371,
-        "Attack Range Ideal": 35,
-        "Attack Range Max": 250,
-        "Attack Cooldown": 1,
-        "Attack Damage": 15
-      }
-    },
-    {
-      "__guid": "a217056a-92c8-45ec-8d93-bb1185cff2cc",
-      "Flags": 0,
-      "Name": "rending_gale_enemy (3)",
-      "Position": "-7424,192,3.999756",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/rending_gale_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Wander",
-        "Patrol Path": [],
-        "Hearing Radius": 1000,
-        "Vision Range": 75000,
-        "Vision Angle": 0.12566371,
-        "Attack Range Ideal": 35,
-        "Attack Range Max": 250,
-        "Attack Cooldown": 1,
-        "Attack Damage": 15
-      }
-    },
-    {
-      "__guid": "31b126b0-c6e6-48f4-a27b-776311182bc5",
-      "Flags": 0,
-      "Name": "rock_armour_enemy",
-      "Position": "-7552,1248,3.999756",
-      "Rotation": "0,0,-0.2164395,0.9762958",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Stationary",
-        "Patrol Path": [],
-        "Hearing Radius": 1000,
-        "Vision Range": 2500,
-        "Vision Angle": 0.7853982,
-        "Attack Range Ideal": 100,
-        "Attack Range Max": 750,
-        "Attack Cooldown": 1.6,
-        "Charge Power": 500
-      }
-    },
-    {
-      "__guid": "c0364e52-a75c-48ac-babb-6769608278c0",
-      "Flags": 0,
-      "Name": "rock_armour_enemy (1)",
-      "Position": "-7456,704,3.999756",
-      "Rotation": "0,0,-0.2588189,0.9659256",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Stationary",
-        "Patrol Path": [],
-        "Hearing Radius": 1000,
-        "Vision Range": 1500,
-        "Vision Angle": 0.7853982,
-        "Attack Range Ideal": 100,
-        "Attack Range Max": 750,
-        "Attack Cooldown": 1.6,
-        "Charge Power": 500
-      }
-    },
-    {
-      "__guid": "d3533ea1-e068-4b0e-90ac-db79a441e92b",
-      "Flags": 0,
-      "Name": "rock_armour_enemy (2)",
-      "Position": "-2944,4032,2564",
-      "Rotation": "0,0,-1,0.0000001947072",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Stationary",
-        "Patrol Path": [],
-        "Hearing Radius": 1000,
-        "Vision Range": 1500,
-        "Vision Angle": 0.7853982,
-        "Attack Range Ideal": 100,
-        "Attack Range Max": 750,
-        "Attack Cooldown": 1.6,
-        "Charge Power": 500
-      }
-    },
-    {
-      "__guid": "17bb34f3-4d39-4735-acf8-4a1efcde3c6c",
-      "Flags": 0,
-      "Name": "rending_gale_enemy (4)",
-      "Position": "-352,3744,2564",
-      "Rotation": "0,0,0.7071068,0.7071068",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/rending_gale_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Wander",
-        "Patrol Path": [],
-        "Hearing Radius": 1000,
-        "Vision Range": 1500,
-        "Vision Angle": 0.7853982,
-        "Attack Range Ideal": 35,
-        "Attack Range Max": 250,
-        "Attack Cooldown": 1,
-        "Attack Damage": 15
-      }
-    },
-    {
-      "__guid": "115561fe-ca28-4faa-80d8-785c35ddfa8e",
-      "Flags": 0,
-      "Name": "rending_gale_enemy (5)",
-      "Position": "-352,4384,2564",
-      "Rotation": "0,0,-0.6087614,0.7933534",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/rending_gale_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Wander",
-        "Patrol Path": [],
-        "Hearing Radius": 1000,
-        "Vision Range": 1500,
-        "Vision Angle": 0.7853982,
-        "Attack Range Ideal": 35,
-        "Attack Range Max": 250,
-        "Attack Cooldown": 1,
-        "Attack Damage": 15
-      }
-    },
-    {
-      "__guid": "47eb4492-86dd-401c-aafd-779a85db9e0c",
-      "Flags": 0,
-      "Name": "rock_armour_enemy (3)",
-      "Position": "95.99998,2144,2564",
-      "Rotation": "0,0,0.7071067,0.7071068",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Stationary",
-        "Patrol Path": [],
-        "Hearing Radius": 1000,
-        "Vision Range": 2500,
-        "Vision Angle": 0.37699112,
-        "Attack Range Ideal": 100,
-        "Attack Range Max": 750,
-        "Attack Cooldown": 1.6,
-        "Charge Power": 500
-      }
-    },
-    {
-      "__guid": "cf4137b8-c381-44dc-af0c-00a4631e47a5",
-      "Flags": 0,
-      "Name": "rock_armour_enemy (4)",
-      "Position": "95.99968,543.9999,2564",
-      "Rotation": "0,0,0.7071067,0.7071068",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Stationary",
-        "Patrol Path": [],
-        "Hearing Radius": 1000,
-        "Vision Range": 3000,
-        "Vision Angle": 0.25132743,
-        "Attack Range Ideal": 100,
-        "Attack Range Max": 750,
-        "Attack Cooldown": 1.6,
-        "Charge Power": 500
-      }
-    },
-    {
-      "__guid": "07a325f5-b9a0-4265-8b72-d65d0dd225f0",
-      "Flags": 0,
-      "Name": "rock_armour_enemy (5)",
-      "Position": "95.99927,-1696,2564",
-      "Rotation": "0,0,0.7071067,0.7071068",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Stationary",
-        "Patrol Path": [],
-        "Hearing Radius": 1000,
-        "Vision Range": 5000,
-        "Vision Angle": 0.12566371,
-        "Attack Range Ideal": 100,
-        "Attack Range Max": 750,
-        "Attack Cooldown": 1.6,
-        "Charge Power": 500
-      }
-    },
-    {
-      "__guid": "c6da552b-ed3b-47ee-83de-550b085a273c",
-      "Flags": 0,
-      "Name": "rock_armour_enemy (6)",
-      "Position": "95.99895,-3392,2564",
-      "Rotation": "0,0,0.7071067,0.7071068",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Stationary",
-        "Patrol Path": [],
-        "Hearing Radius": 1000,
-        "Vision Range": 7500,
-        "Vision Angle": 0.12566371,
-        "Attack Range Ideal": 100,
-        "Attack Range Max": 750,
-        "Attack Cooldown": 1.6,
-        "Charge Power": 500
-      }
-    },
-    {
       "__guid": "15e4b17f-453f-4308-820a-7ce199d7da77",
       "Flags": 0,
       "Name": "fireball_enemy",
@@ -527,48 +258,6 @@
       }
     },
     {
-      "__guid": "0123c009-35e1-4956-855a-e2240e4b4c16",
-      "Flags": 0,
-      "Name": "rending_gale_enemy (6)",
-      "Position": "-224.0007,-4287.999,2564",
-      "Rotation": "0,0,0.6755902,0.7372774",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/rending_gale_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Wander",
-        "Patrol Path": [],
-        "Hearing Radius": 1000,
-        "Vision Range": 7500,
-        "Vision Angle": 0.12,
-        "Attack Range Ideal": 35,
-        "Attack Range Max": 250,
-        "Attack Cooldown": 1,
-        "Attack Damage": 15
-      }
-    },
-    {
-      "__guid": "8529dec2-4a1f-48e4-a912-663b1c607828",
-      "Flags": 0,
-      "Name": "rending_gale_enemy (7)",
-      "Position": "447.9992,-4287.998,2564",
-      "Rotation": "0,0,0.7071067,0.7071068",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/rending_gale_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Wander",
-        "Patrol Path": [],
-        "Hearing Radius": 1000,
-        "Vision Range": 7500,
-        "Vision Angle": 0.12,
-        "Attack Range Ideal": 35,
-        "Attack Range Max": 250,
-        "Attack Cooldown": 1,
-        "Attack Damage": 15
-      }
-    },
-    {
       "__guid": "f814aef1-a66c-42fc-8bc2-4d94d287238b",
       "Flags": 0,
       "Name": "magic_missile_enemy (2)",
@@ -632,195 +321,6 @@
         "Attack Cooldown": 1,
         "Burst Count": 3,
         "Time Between Burst Shots": 0.1
-      }
-    },
-    {
-      "__guid": "d384936c-19b5-4819-be93-00192713d90b",
-      "Flags": 0,
-      "Name": "rending_gale_enemy (8)",
-      "Position": "288,-2688,-14556",
-      "Rotation": "0,0,-0.7071068,0.7071068",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/rending_gale_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Wander",
-        "Patrol Path": [],
-        "Hearing Radius": 1000,
-        "Vision Range": 4000,
-        "Vision Angle": 0.7853982,
-        "Attack Range Ideal": 35,
-        "Attack Range Max": 250,
-        "Attack Cooldown": 1,
-        "Attack Damage": 15
-      }
-    },
-    {
-      "__guid": "67b33746-3dc2-48b0-aca4-4547a3045d4d",
-      "Flags": 0,
-      "Name": "rending_gale_enemy (9)",
-      "Position": "639.9998,-2688,-14556",
-      "Rotation": "0,0,-0.7071068,0.7071068",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/rending_gale_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Wander",
-        "Patrol Path": [],
-        "Hearing Radius": 1000,
-        "Vision Range": 4000,
-        "Vision Angle": 0.7853982,
-        "Attack Range Ideal": 35,
-        "Attack Range Max": 250,
-        "Attack Cooldown": 1,
-        "Attack Damage": 15
-      }
-    },
-    {
-      "__guid": "f461e167-64de-43aa-a9b3-03d28c4ad6f7",
-      "Flags": 0,
-      "Name": "rending_gale_enemy (10)",
-      "Position": "991.9999,-2688,-14556",
-      "Rotation": "0,0,-0.7071068,0.7071068",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/rending_gale_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Wander",
-        "Patrol Path": [],
-        "Hearing Radius": 1000,
-        "Vision Range": 4000,
-        "Vision Angle": 0.7853982,
-        "Attack Range Ideal": 35,
-        "Attack Range Max": 250,
-        "Attack Cooldown": 1,
-        "Attack Damage": 15
-      }
-    },
-    {
-      "__guid": "e9ac2f4e-9c60-44f7-9cb0-575b2e85902d",
-      "Flags": 0,
-      "Name": "rending_gale_enemy (15)",
-      "Position": "1056.003,-6335.998,-14556",
-      "Rotation": "0,0,-0.7071069,-0.7071066",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/rending_gale_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Wander",
-        "Patrol Path": [],
-        "Hearing Radius": 1000,
-        "Vision Range": 4000,
-        "Vision Angle": 0.7853982,
-        "Attack Range Ideal": 35,
-        "Attack Range Max": 250,
-        "Attack Cooldown": 1,
-        "Attack Damage": 15
-      }
-    },
-    {
-      "__guid": "554f7859-a0dc-4a03-9045-c4e01339681b",
-      "Flags": 0,
-      "Name": "rending_gale_enemy (16)",
-      "Position": "832.0029,-6335.998,-14556",
-      "Rotation": "0,0,-0.7071069,-0.7071066",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/rending_gale_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Wander",
-        "Patrol Path": [],
-        "Hearing Radius": 1000,
-        "Vision Range": 4000,
-        "Vision Angle": 0.7853982,
-        "Attack Range Ideal": 35,
-        "Attack Range Max": 250,
-        "Attack Cooldown": 1,
-        "Attack Damage": 15
-      }
-    },
-    {
-      "__guid": "91d25342-e151-4aca-b499-a16f9082040e",
-      "Flags": 0,
-      "Name": "rending_gale_enemy (17)",
-      "Position": "608.0029,-6335.998,-14556",
-      "Rotation": "0,0,-0.7071069,-0.7071066",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/rending_gale_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Wander",
-        "Patrol Path": [],
-        "Hearing Radius": 1000,
-        "Vision Range": 4000,
-        "Vision Angle": 0.7853982,
-        "Attack Range Ideal": 35,
-        "Attack Range Max": 250,
-        "Attack Cooldown": 1,
-        "Attack Damage": 15
-      }
-    },
-    {
-      "__guid": "8f7eabbf-5ba9-4ddc-aa82-4573148e22ce",
-      "Flags": 0,
-      "Name": "rending_gale_enemy (11)",
-      "Position": "1920,-4448,-14556",
-      "Rotation": "0,0,-1,0.0000001947072",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/rending_gale_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Wander",
-        "Patrol Path": [],
-        "Hearing Radius": 1000,
-        "Vision Range": 4000,
-        "Vision Angle": 0.7853982,
-        "Attack Range Ideal": 35,
-        "Attack Range Max": 250,
-        "Attack Cooldown": 1,
-        "Attack Damage": 15
-      }
-    },
-    {
-      "__guid": "c528e834-8ea1-4b98-8daf-0e3d5741506a",
-      "Flags": 0,
-      "Name": "rending_gale_enemy (12)",
-      "Position": "1920,-4767.999,-14556",
-      "Rotation": "0,0,-1,0.0000001947072",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/rending_gale_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Wander",
-        "Patrol Path": [],
-        "Hearing Radius": 1000,
-        "Vision Range": 4000,
-        "Vision Angle": 0.7853982,
-        "Attack Range Ideal": 35,
-        "Attack Range Max": 250,
-        "Attack Cooldown": 1,
-        "Attack Damage": 15
-      }
-    },
-    {
-      "__guid": "0f7eefb0-bf0e-4439-9f16-397c56fb71a2",
-      "Flags": 0,
-      "Name": "rending_gale_enemy (13)",
-      "Position": "1920,-5087.999,-14556",
-      "Rotation": "0,0,-1,0.0000001947072",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/rending_gale_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Wander",
-        "Patrol Path": [],
-        "Hearing Radius": 1000,
-        "Vision Range": 4000,
-        "Vision Angle": 0.7853982,
-        "Attack Range Ideal": 35,
-        "Attack Range Max": 250,
-        "Attack Cooldown": 1,
-        "Attack Damage": 15
       }
     },
     {
@@ -890,29 +390,7 @@
       "__guid": "c5f80a46-1a9c-4be9-9b82-582ae4ed4079",
       "Flags": 0,
       "Name": "magic_missile_enemy (5)",
-      "Position": "736,-3776,-16220",
-      "Rotation": "0,0,-0.9238794,0.3826834",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Wander",
-        "Patrol Path": [],
-        "Hearing Radius": 125,
-        "Vision Room": 3000,
-        "Vision Angle": 1,
-        "Attack Range Ideal": 4000,
-        "Attack Range Max": 4000,
-        "Attack Cooldown": 1,
-        "Burst Count": 3,
-        "Time Between Burst Shots": 0.1
-      }
-    },
-    {
-      "__guid": "8fd5394a-1c08-43da-bca7-184d3dd009ef",
-      "Flags": 0,
-      "Name": "magic_missile_enemy (5)",
-      "Position": "736,-3776,-16220",
+      "Position": "650.2441,-3828.353,-16220",
       "Rotation": "0,0,-0.9238794,0.3826834",
       "Tags": "enemy",
       "Enabled": true,
@@ -934,7 +412,7 @@
       "__guid": "db2617a0-0689-4c4e-a3db-76e94aa64fe0",
       "Flags": 0,
       "Name": "magic_missile_enemy (6)",
-      "Position": "1024,-3552,-15836",
+      "Position": "919.0024,-3652.005,-15836",
       "Rotation": "0,0,-0.9659257,0.2588191",
       "Tags": "enemy",
       "Enabled": true,
@@ -956,7 +434,7 @@
       "__guid": "d1c7efc2-b186-44e0-9093-5c6030c7eca8",
       "Flags": 0,
       "Name": "magic_missile_enemy (7)",
-      "Position": "768,-5344,-16220",
+      "Position": "655.2231,-5231.227,-16220",
       "Rotation": "0,0,-0.9238794,-0.3826832",
       "Tags": "enemy",
       "Enabled": true,
@@ -1000,7 +478,7 @@
       "__guid": "c1aa52e6-d48d-43e4-bc96-859ce71635cc",
       "Flags": 0,
       "Name": "magic_missile_enemy (9)",
-      "Position": "-512,-3776,-16220",
+      "Position": "-439.5775,-3848.423,-16220",
       "Rotation": "0,0,-0.3826834,0.9238796",
       "Tags": "enemy",
       "Enabled": true,
@@ -1022,7 +500,7 @@
       "__guid": "ea23d6c6-dedd-4317-baa1-352061176c2b",
       "Flags": 0,
       "Name": "magic_missile_enemy (10)",
-      "Position": "-480,-5312,-16220",
+      "Position": "-420.6482,-5252.645,-16220",
       "Rotation": "0,0,0.3826833,0.9238794",
       "Tags": "enemy",
       "Enabled": true,
@@ -1088,7 +566,7 @@
       "__guid": "aca04ad9-56a3-4084-a42c-aeb0a655d278",
       "Flags": 0,
       "Name": "fireball_enemy (4)",
-      "Position": "-992,-3392,-15452",
+      "Position": "-907.0004,-3442.783,-15452",
       "Rotation": "0,0,-0.3826833,0.9238794",
       "Tags": "enemy",
       "Enabled": true,
@@ -1105,7 +583,7 @@
       "__guid": "b331f851-4bd3-4bb5-80d8-d7a329d879ec",
       "Flags": 0,
       "Name": "fireball_enemy (5)",
-      "Position": "1216,-3392,-15452",
+      "Position": "1161.056,-3446.946,-15452",
       "Rotation": "0,0,-0.9238794,0.3826834",
       "Tags": "enemy",
       "Enabled": true,
@@ -1122,7 +600,7 @@
       "__guid": "f7668c31-5df3-4556-8431-9aef5b2a4cb1",
       "Flags": 0,
       "Name": "fireball_enemy (6)",
-      "Position": "1280,-5696,-15452",
+      "Position": "1157.43,-5636.568,-15452",
       "Rotation": "0,0,-0.9238794,-0.3826832",
       "Tags": "enemy",
       "Enabled": true,
@@ -1139,7 +617,7 @@
       "__guid": "6e5ffc10-fc13-4660-a654-47ba6e6da94a",
       "Flags": 0,
       "Name": "fireball_enemy (7)",
-      "Position": "-992,-5696,-15452",
+      "Position": "-908.481,-5640.388,-15452",
       "Rotation": "0,0,0.3826833,0.9238794",
       "Tags": "enemy",
       "Enabled": true,
@@ -1153,31 +631,10 @@
       }
     },
     {
-      "__guid": "b15d0e66-8c25-47a4-9ba1-4303d947d470",
-      "Flags": 0,
-      "Name": "rock_armour_enemy (9)",
-      "Position": "-1280,-3136,-15068",
-      "Rotation": "0,0,-0.4617485,0.8870108",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Stationary",
-        "Patrol Path": [],
-        "Hearing Radius": 1000,
-        "Vision Range": 4000,
-        "Vision Angle": 1.1,
-        "Attack Range Ideal": 100,
-        "Attack Range Max": 750,
-        "Attack Cooldown": 1.6,
-        "Charge Power": 500
-      }
-    },
-    {
       "__guid": "7aab4273-6df2-4fbc-a8e5-58d30ad6b5e5",
       "Flags": 0,
       "Name": "rending_gale_enemy (18)",
-      "Position": "-2368,-6656,-16604",
+      "Position": "-2456.578,-6656,-16604",
       "Rotation": "0,0,-1,0.0000001947072",
       "Tags": "enemy",
       "Enabled": true,
@@ -1198,7 +655,7 @@
       "__guid": "b26db7e0-6f52-4c1a-b92b-dc1a9d534309",
       "Flags": 0,
       "Name": "magic_missile_enemy (13)",
-      "Position": "-2400,-6304,-16604",
+      "Position": "-2473.81,-6346.615,-16604",
       "Rotation": "0,0,-0.9659258,0.2588192",
       "Tags": "enemy",
       "Enabled": true,
@@ -1220,7 +677,7 @@
       "__guid": "d4c69e44-6b20-426b-b37e-3df40c330c0c",
       "Flags": 0,
       "Name": "magic_missile_enemy (14)",
-      "Position": "-2368,-7104,-16604",
+      "Position": "-2459.368,-7012.634,-16604",
       "Rotation": "0,0,0.9238795,0.3826834",
       "Tags": "enemy",
       "Enabled": true,
@@ -2325,7 +1782,112 @@
         {
           "__type": "DoorComponent",
           "__guid": "e802d8ad-d6e6-4aec-9e8a-5c82b91204be",
-          "Keys": [],
+          "Keys": [
+            {
+              "_type": "gameobject",
+              "go": "6cbdf45c-0c8f-40c5-902f-5f530d52be5b"
+            },
+            {
+              "_type": "gameobject",
+              "go": "dfe64bfa-969f-4f82-af84-8ffe65df2e29"
+            },
+            {
+              "_type": "gameobject",
+              "go": "d74cbf37-17fc-4938-8d9d-31a180a18e37"
+            },
+            {
+              "_type": "gameobject",
+              "go": "a4dc9e0a-dbf9-46ba-864b-1b9c43baeebc"
+            },
+            {
+              "_type": "gameobject",
+              "go": "25a605c5-f6bf-4444-bed0-78bf2ac7c764"
+            },
+            {
+              "_type": "gameobject",
+              "go": "d3e1bcea-5f8a-4337-b077-cd4ae217d0e6"
+            },
+            {
+              "_type": "gameobject",
+              "go": "1a5bf422-fa4b-4466-a361-0b5c425f5bd5"
+            },
+            {
+              "_type": "gameobject",
+              "go": "dac37738-939d-46c3-9572-a2613c72d2fa"
+            },
+            {
+              "_type": "gameobject",
+              "go": "3552725f-27b9-4459-83af-36f7844c19cc"
+            },
+            {
+              "_type": "gameobject",
+              "go": "f92da122-d834-4775-9b67-0ec8b3124014"
+            },
+            {
+              "_type": "gameobject",
+              "go": "f814aef1-a66c-42fc-8bc2-4d94d287238b"
+            },
+            {
+              "_type": "gameobject",
+              "go": "d7681b4f-fa13-4a18-b528-336f3073e341"
+            },
+            {
+              "_type": "gameobject",
+              "go": "838c29a1-9019-427a-90ba-93cecf445fd2"
+            },
+            {
+              "_type": "gameobject",
+              "go": "55dc17a9-f0ba-41e1-8f0c-72dc9323433d"
+            },
+            {
+              "_type": "gameobject",
+              "go": "aca04ad9-56a3-4084-a42c-aeb0a655d278"
+            },
+            {
+              "_type": "gameobject",
+              "go": "b331f851-4bd3-4bb5-80d8-d7a329d879ec"
+            },
+            {
+              "_type": "gameobject",
+              "go": "f7668c31-5df3-4556-8431-9aef5b2a4cb1"
+            },
+            {
+              "_type": "gameobject",
+              "go": "6e5ffc10-fc13-4660-a654-47ba6e6da94a"
+            },
+            {
+              "_type": "gameobject",
+              "go": "c5f80a46-1a9c-4be9-9b82-582ae4ed4079"
+            },
+            {
+              "_type": "gameobject",
+              "go": "db2617a0-0689-4c4e-a3db-76e94aa64fe0"
+            },
+            {
+              "_type": "gameobject",
+              "go": "d1c7efc2-b186-44e0-9093-5c6030c7eca8"
+            },
+            {
+              "_type": "gameobject",
+              "go": "59503b55-8258-464f-8b4a-a205097b3927"
+            },
+            {
+              "_type": "gameobject",
+              "go": "c1aa52e6-d48d-43e4-bc96-859ce71635cc"
+            },
+            {
+              "_type": "gameobject",
+              "go": "ea23d6c6-dedd-4317-baa1-352061176c2b"
+            },
+            {
+              "_type": "gameobject",
+              "go": "47bbb30d-b392-423b-9410-6a14d1f807b8"
+            },
+            {
+              "_type": "gameobject",
+              "go": "fcaebda9-8b14-496c-b4e3-e9c08993ccf0"
+            }
+          ],
           "OpenDistance": 500,
           "OpenTime": 1,
           "OpenType": "MoveDown",
@@ -2548,6 +2110,622 @@
       "Enabled": true,
       "__Prefab": "prefabs/triggers/death_trigger.prefab",
       "__PrefabVariables": {}
+    },
+    {
+      "__guid": "3fa8aead-b36f-4ec9-bfd5-6388414fa693",
+      "Flags": 0,
+      "Name": "fireball_enemy",
+      "Position": "-7622.922,1047.831,30.99973",
+      "Rotation": "0,0,-0.4617486,0.8870108",
+      "Tags": "enemy",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
+      "__PrefabVariables": {
+        "Hearing Radius": 1000,
+        "Vision Range": 1500,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 1500,
+        "Attack Range Max": 1500
+      }
+    },
+    {
+      "__guid": "21d39400-5467-46b9-af3e-83949b8c89c5",
+      "Flags": 0,
+      "Name": "fireball_enemy",
+      "Position": "-7741.133,865.8262,30.99976",
+      "Rotation": "0,0,-0.4226183,0.9063078",
+      "Tags": "enemy",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
+      "__PrefabVariables": {
+        "Hearing Radius": 1000,
+        "Vision Range": 1500,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 1500,
+        "Attack Range Max": 1500
+      }
+    },
+    {
+      "__guid": "f2ce5f41-6d66-4da6-86fa-b531110b8bf6",
+      "Flags": 0,
+      "Name": "magic_missile_enemy",
+      "Position": "-7420.962,1195.597,9.999756",
+      "Rotation": "0,0,-0.6427876,0.7660444",
+      "Tags": "enemy",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {
+        "Passive Mode": "Wander",
+        "Patrol Path": [],
+        "Hearing Radius": 125,
+        "Vision Room": 1500,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 1500,
+        "Attack Range Max": 1500,
+        "Attack Cooldown": 1,
+        "Burst Count": 3,
+        "Time Between Burst Shots": 0.1
+      }
+    },
+    {
+      "__guid": "40e6c7d7-021c-4616-8a21-d92802aed390",
+      "Flags": 0,
+      "Name": "magic_missile_enemy",
+      "Position": "-7827.923,669.4941,9.999756",
+      "Rotation": "0,0,-0.4226182,0.9063076",
+      "Tags": "enemy",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {
+        "Passive Mode": "Wander",
+        "Patrol Path": [],
+        "Hearing Radius": 125,
+        "Vision Room": 1500,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 1500,
+        "Attack Range Max": 1500,
+        "Attack Cooldown": 1,
+        "Burst Count": 3,
+        "Time Between Burst Shots": 0.1
+      }
+    },
+    {
+      "__guid": "dad74219-d984-4f70-b7cc-bcaaa1d01268",
+      "Flags": 0,
+      "Name": "magic_missile_enemy",
+      "Position": "-3786.322,3912.144,2570",
+      "Rotation": "0,0,1,-0.00000004371139",
+      "Tags": "enemy",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {
+        "Passive Mode": "Wander",
+        "Patrol Path": [],
+        "Hearing Radius": 125,
+        "Vision Room": 1000,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 300,
+        "Attack Range Max": 1000,
+        "Attack Cooldown": 1,
+        "Burst Count": 3,
+        "Time Between Burst Shots": 0.1
+      }
+    },
+    {
+      "__guid": "39e372cc-42a6-4ba7-9a8e-12ea3c4ac14b",
+      "Flags": 0,
+      "Name": "magic_missile_enemy",
+      "Position": "-3786.322,4131.354,2570",
+      "Rotation": "0,0,1,-0.00000004371139",
+      "Tags": "enemy",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {
+        "Passive Mode": "Wander",
+        "Patrol Path": [],
+        "Hearing Radius": 125,
+        "Vision Room": 1000,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 300,
+        "Attack Range Max": 1000,
+        "Attack Cooldown": 1,
+        "Burst Count": 3,
+        "Time Between Burst Shots": 0.1
+      }
+    },
+    {
+      "__guid": "e0bd8240-faf4-4ef2-b641-1954ae0b6e11",
+      "Flags": 0,
+      "Name": "fireball_enemy",
+      "Position": "-3361.745,4020.309,2591",
+      "Rotation": "0,0,1,-0.00000004371139",
+      "Tags": "enemy",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
+      "__PrefabVariables": {
+        "Hearing Radius": 1000,
+        "Vision Range": 1500,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 1000,
+        "Attack Range Max": 1500
+      }
+    },
+    {
+      "__guid": "e322f102-bdc7-49b2-a59d-bb8a52a7393d",
+      "Flags": 0,
+      "Name": "fireball_enemy",
+      "Position": "-1509.515,4020.309,2591",
+      "Rotation": "0,0,1,-0.00000004371139",
+      "Tags": "enemy",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
+      "__PrefabVariables": {
+        "Hearing Radius": 1000,
+        "Vision Range": 2300,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 2300,
+        "Attack Range Max": 2300
+      }
+    },
+    {
+      "__guid": "fd307b03-009b-471a-ad9b-f35444f8b245",
+      "Flags": 0,
+      "Name": "water_beam_enemy",
+      "Position": "-306.8038,4371.949,2572.202",
+      "Rotation": "0,0,-0.8433915,0.5372996",
+      "Tags": "enemy",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/water_beam_enemy.prefab",
+      "__PrefabVariables": {
+        "Passive Mode": "Stationary",
+        "Patrol Path": [],
+        "Hearing Radius": 1000,
+        "Vision Range": 2000,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 1000,
+        "Attack Range Max": 1700,
+        "Attack Cooldown": 3
+      }
+    },
+    {
+      "__guid": "75059bd1-8309-4ba6-b8e3-5fc0b4e1ae2d",
+      "Flags": 0,
+      "Name": "water_beam_enemy",
+      "Position": "29.68994,4462.204,2580.107",
+      "Rotation": "0,0,-0.8433915,0.5372996",
+      "Tags": "enemy",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/water_beam_enemy.prefab",
+      "__PrefabVariables": {
+        "Passive Mode": "Stationary",
+        "Patrol Path": [],
+        "Hearing Radius": 1000,
+        "Vision Range": 2000,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 1000,
+        "Attack Range Max": 1700,
+        "Attack Cooldown": 3
+      }
+    },
+    {
+      "__guid": "295ce345-9d57-4038-8845-ce80ab8868c2",
+      "Flags": 0,
+      "Name": "water_beam_enemy",
+      "Position": "432.9471,4328.625,2583.693",
+      "Rotation": "0,0,-0.9238796,0.3826834",
+      "Tags": "enemy",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/water_beam_enemy.prefab",
+      "__PrefabVariables": {
+        "Passive Mode": "Stationary",
+        "Patrol Path": [],
+        "Hearing Radius": 1000,
+        "Vision Range": 2000,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 1000,
+        "Attack Range Max": 1700,
+        "Attack Cooldown": 3
+      }
+    },
+    {
+      "__guid": "d36e15a0-96e5-433c-9a80-f5371ffc3a02",
+      "Flags": 0,
+      "Name": "magic_missile_enemy",
+      "Position": "135.7876,2142.753,2570",
+      "Rotation": "0,0,0.7071068,0.7071068",
+      "Tags": "enemy",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {
+        "Passive Mode": "Wander",
+        "Patrol Path": [],
+        "Hearing Radius": 125,
+        "Vision Room": 2000,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 2000,
+        "Attack Range Max": 2000,
+        "Attack Cooldown": 1,
+        "Burst Count": 3,
+        "Time Between Burst Shots": 0.1
+      }
+    },
+    {
+      "__guid": "2464faa6-7f7a-4255-a858-acd31af03fe5",
+      "Flags": 0,
+      "Name": "magic_missile_enemy",
+      "Position": "32.55466,2142.753,2570",
+      "Rotation": "0,0,0.7071068,0.7071068",
+      "Tags": "enemy",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {
+        "Passive Mode": "Wander",
+        "Patrol Path": [],
+        "Hearing Radius": 125,
+        "Vision Room": 2000,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 2000,
+        "Attack Range Max": 2000,
+        "Attack Cooldown": 1,
+        "Burst Count": 3,
+        "Time Between Burst Shots": 0.1
+      }
+    },
+    {
+      "__guid": "9335b414-1553-4eb7-8e64-fc9338ec7dc4",
+      "Flags": 0,
+      "Name": "fireball_enemy",
+      "Position": "88.75235,575.0499,2591",
+      "Rotation": "0,0,0.7372773,0.6755902",
+      "Tags": "enemy",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
+      "__PrefabVariables": {
+        "Hearing Radius": 1000,
+        "Vision Range": 3500,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 3500,
+        "Attack Range Max": 3500
+      }
+    },
+    {
+      "__guid": "8a235490-61e1-4b7b-98a1-8d3e3de30da6",
+      "Flags": 0,
+      "Name": "magic_missile_enemy",
+      "Position": "84.64287,-1685.66,2570",
+      "Rotation": "0,0,0.7071068,0.7071068",
+      "Tags": "enemy",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {
+        "Passive Mode": "Wander",
+        "Patrol Path": [],
+        "Hearing Radius": 125,
+        "Vision Room": 5000,
+        "Vision Angle": 0.25132743,
+        "Attack Range Ideal": 5000,
+        "Attack Range Max": 5000,
+        "Attack Cooldown": 1,
+        "Burst Count": 3,
+        "Time Between Burst Shots": 0.1
+      }
+    },
+    {
+      "__guid": "cca4e30c-4a48-4639-9096-2640ef1c234e",
+      "Flags": 0,
+      "Name": "fireball_enemy",
+      "Position": "106.4623,-3370.316,2591",
+      "Rotation": "0,0,0.7071068,0.7071068",
+      "Tags": "enemy",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
+      "__PrefabVariables": {
+        "Hearing Radius": 1000,
+        "Vision Range": 5000,
+        "Vision Angle": 0.12566371,
+        "Attack Range Ideal": 5000,
+        "Attack Range Max": 5000
+      }
+    },
+    {
+      "__guid": "b4c522af-b855-4934-b8c5-7e9329d9a4fc",
+      "Flags": 0,
+      "Name": "magic_missile_enemy",
+      "Position": "-235.9078,-4307.76,2570",
+      "Rotation": "0,0,0.6427876,0.7660444",
+      "Tags": "enemy",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {
+        "Passive Mode": "Wander",
+        "Patrol Path": [],
+        "Hearing Radius": 125,
+        "Vision Room": 7500,
+        "Vision Angle": 0.25132743,
+        "Attack Range Ideal": 7500,
+        "Attack Range Max": 7500,
+        "Attack Cooldown": 1,
+        "Burst Count": 3,
+        "Time Between Burst Shots": 0.1
+      }
+    },
+    {
+      "__guid": "5d787cbc-e496-45b5-9a69-a01aa31bb429",
+      "Flags": 0,
+      "Name": "magic_missile_enemy",
+      "Position": "417.9482,-4313.842,2570",
+      "Rotation": "0,0,0.6755902,0.7372773",
+      "Tags": "enemy",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {
+        "Passive Mode": "Wander",
+        "Patrol Path": [],
+        "Hearing Radius": 125,
+        "Vision Room": 7500,
+        "Vision Angle": 0.25132743,
+        "Attack Range Ideal": 7500,
+        "Attack Range Max": 7500,
+        "Attack Cooldown": 1,
+        "Burst Count": 3,
+        "Time Between Burst Shots": 0.1
+      }
+    },
+    {
+      "__guid": "4f941cdc-ad43-4d1a-8be7-0a3f19730b65",
+      "Flags": 0,
+      "Name": "fireball_enemy",
+      "Position": "-33.66218,-4936.294,2591",
+      "Rotation": "0,0,0.6755902,0.7372773",
+      "Tags": "enemy",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
+      "__PrefabVariables": {
+        "Hearing Radius": 1000,
+        "Vision Range": 7500,
+        "Vision Angle": 0.12566371,
+        "Attack Range Ideal": 7500,
+        "Attack Range Max": 7500
+      }
+    },
+    {
+      "__guid": "3e40b980-5581-4fcf-af5d-b4b19ff6ce08",
+      "Flags": 0,
+      "Name": "fireball_enemy",
+      "Position": "252.4944,-4936.294,2591",
+      "Rotation": "0,0,0.7071068,0.7071068",
+      "Tags": "enemy",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
+      "__PrefabVariables": {
+        "Hearing Radius": 1000,
+        "Vision Range": 7500,
+        "Vision Angle": 0.12566371,
+        "Attack Range Ideal": 7500,
+        "Attack Range Max": 7500
+      }
+    },
+    {
+      "__guid": "3552725f-27b9-4459-83af-36f7844c19cc",
+      "Flags": 0,
+      "Name": "water_beam_enemy",
+      "Position": "-1174.625,-3268.22,-14997",
+      "Rotation": "0,0,-0.3826834,0.9238794",
+      "Tags": "enemy",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/water_beam_enemy.prefab",
+      "__PrefabVariables": {
+        "Passive Mode": "Stationary",
+        "Patrol Path": [],
+        "Hearing Radius": 1000,
+        "Vision Range": 2000,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 1000,
+        "Attack Range Max": 1700,
+        "Attack Cooldown": 3
+      }
+    },
+    {
+      "__guid": "8c2ff333-3005-4320-8b34-5ffe989c804d",
+      "Flags": 0,
+      "Name": "water_beam_enemy",
+      "Position": "259.5789,-2728.913,-14485",
+      "Rotation": "0,0,-0.7071068,0.7071068",
+      "Tags": "enemy",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/water_beam_enemy.prefab",
+      "__PrefabVariables": {
+        "Passive Mode": "Stationary",
+        "Patrol Path": [],
+        "Hearing Radius": 1000,
+        "Vision Range": 2000,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 1000,
+        "Attack Range Max": 1700,
+        "Attack Cooldown": 3
+      }
+    },
+    {
+      "__guid": "dac37738-939d-46c3-9572-a2613c72d2fa",
+      "Flags": 0,
+      "Name": "water_beam_enemy",
+      "Position": "578.019,-2728.913,-14485",
+      "Rotation": "0,0,-0.7071068,0.7071068",
+      "Tags": "enemy",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/water_beam_enemy.prefab",
+      "__PrefabVariables": {
+        "Passive Mode": "Stationary",
+        "Patrol Path": [],
+        "Hearing Radius": 1000,
+        "Vision Range": 2000,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 1000,
+        "Attack Range Max": 1700,
+        "Attack Cooldown": 3
+      }
+    },
+    {
+      "__guid": "1a5bf422-fa4b-4466-a361-0b5c425f5bd5",
+      "Flags": 0,
+      "Name": "water_beam_enemy",
+      "Position": "931.3315,-2728.913,-14485",
+      "Rotation": "0,0,-0.7071068,0.7071068",
+      "Tags": "enemy",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/water_beam_enemy.prefab",
+      "__PrefabVariables": {
+        "Passive Mode": "Stationary",
+        "Patrol Path": [],
+        "Hearing Radius": 1000,
+        "Vision Range": 2000,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 1000,
+        "Attack Range Max": 1700,
+        "Attack Cooldown": 3
+      }
+    },
+    {
+      "__guid": "d3e1bcea-5f8a-4337-b077-cd4ae217d0e6",
+      "Flags": 0,
+      "Name": "water_beam_enemy",
+      "Position": "1952.879,-4433.172,-14485",
+      "Rotation": "0,0,0.9990481,-0.04361942",
+      "Tags": "enemy",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/water_beam_enemy.prefab",
+      "__PrefabVariables": {
+        "Passive Mode": "Stationary",
+        "Patrol Path": [],
+        "Hearing Radius": 1000,
+        "Vision Range": 2000,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 1000,
+        "Attack Range Max": 1700,
+        "Attack Cooldown": 3
+      }
+    },
+    {
+      "__guid": "25a605c5-f6bf-4444-bed0-78bf2ac7c764",
+      "Flags": 0,
+      "Name": "water_beam_enemy",
+      "Position": "1981.901,-4764.891,-14485",
+      "Rotation": "0,0,0.9990481,-0.04361942",
+      "Tags": "enemy",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/water_beam_enemy.prefab",
+      "__PrefabVariables": {
+        "Passive Mode": "Stationary",
+        "Patrol Path": [],
+        "Hearing Radius": 1000,
+        "Vision Range": 2000,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 1000,
+        "Attack Range Max": 1700,
+        "Attack Cooldown": 3
+      }
+    },
+    {
+      "__guid": "a4dc9e0a-dbf9-46ba-864b-1b9c43baeebc",
+      "Flags": 0,
+      "Name": "water_beam_enemy",
+      "Position": "2010.645,-5093.436,-14485",
+      "Rotation": "0,0,0.9990481,-0.04361942",
+      "Tags": "enemy",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/water_beam_enemy.prefab",
+      "__PrefabVariables": {
+        "Passive Mode": "Stationary",
+        "Patrol Path": [],
+        "Hearing Radius": 1000,
+        "Vision Range": 2000,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 1000,
+        "Attack Range Max": 1700,
+        "Attack Cooldown": 3
+      }
+    },
+    {
+      "__guid": "dfe64bfa-969f-4f82-af84-8ffe65df2e29",
+      "Flags": 0,
+      "Name": "water_beam_enemy",
+      "Position": "1040.512,-6328.521,-14485",
+      "Rotation": "0,0,0.7372773,0.6755902",
+      "Tags": "enemy",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/water_beam_enemy.prefab",
+      "__PrefabVariables": {
+        "Passive Mode": "Stationary",
+        "Patrol Path": [],
+        "Hearing Radius": 1000,
+        "Vision Range": 2000,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 1000,
+        "Attack Range Max": 1700,
+        "Attack Cooldown": 3
+      }
+    },
+    {
+      "__guid": "6cbdf45c-0c8f-40c5-902f-5f530d52be5b",
+      "Flags": 0,
+      "Name": "water_beam_enemy",
+      "Position": "729.8055,-6355.704,-14485",
+      "Rotation": "0,0,0.7372773,0.6755902",
+      "Tags": "enemy",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/water_beam_enemy.prefab",
+      "__PrefabVariables": {
+        "Passive Mode": "Stationary",
+        "Patrol Path": [],
+        "Hearing Radius": 1000,
+        "Vision Range": 2000,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 1000,
+        "Attack Range Max": 1700,
+        "Attack Cooldown": 3
+      }
+    },
+    {
+      "__guid": "a85560b1-a8cf-46a4-aac0-d851f66440ae",
+      "Flags": 0,
+      "Name": "rending_gale_enemy",
+      "Position": "-3957.92,-6156.932,-16571",
+      "Rotation": "0,0,-0.7372773,0.6755902",
+      "Tags": "enemy",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/rending_gale_enemy.prefab",
+      "__PrefabVariables": {
+        "Passive Mode": "Stationary",
+        "Patrol Path": [],
+        "Hearing Radius": 1000,
+        "Vision Range": 1500,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 35,
+        "Attack Range Max": 250,
+        "Attack Cooldown": 1,
+        "Attack Damage": 15
+      }
+    },
+    {
+      "__guid": "2cd35eb4-88cd-4372-bc3b-ae98a2b198da",
+      "Flags": 0,
+      "Name": "rending_gale_enemy",
+      "Position": "-3955.729,-7091.858,-16571",
+      "Rotation": "0,0,0.9063077,0.4226182",
+      "Tags": "enemy",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/rending_gale_enemy.prefab",
+      "__PrefabVariables": {
+        "Passive Mode": "Stationary",
+        "Patrol Path": [],
+        "Hearing Radius": 1000,
+        "Vision Range": 1500,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 35,
+        "Attack Range Max": 250,
+        "Attack Cooldown": 1,
+        "Attack Damage": 15
+      }
     }
   ],
   "SceneProperties": {

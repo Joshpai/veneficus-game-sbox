@@ -80,7 +80,7 @@
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {
-        "Passive Mode": "Wander",
+        "Passive Mode": "Stationary",
         "Patrol Path": [],
         "Hearing Radius": 125,
         "Vision Room": 1300,
@@ -102,7 +102,7 @@
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {
-        "Passive Mode": "Wander",
+        "Passive Mode": "Stationary",
         "Patrol Path": [],
         "Hearing Radius": 125,
         "Vision Room": 1700,
@@ -124,7 +124,7 @@
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {
-        "Passive Mode": "Wander",
+        "Passive Mode": "Stationary",
         "Patrol Path": [],
         "Hearing Radius": 125,
         "Vision Room": 1300,
@@ -146,7 +146,7 @@
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {
-        "Passive Mode": "Wander",
+        "Passive Mode": "Stationary",
         "Patrol Path": [],
         "Hearing Radius": 125,
         "Vision Room": 1500,
@@ -168,7 +168,7 @@
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {
-        "Passive Mode": "Wander",
+        "Passive Mode": "Stationary",
         "Patrol Path": [],
         "Hearing Radius": 125,
         "Vision Room": 1000,
@@ -190,7 +190,7 @@
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {
-        "Passive Mode": "Wander",
+        "Passive Mode": "Stationary",
         "Patrol Path": [],
         "Hearing Radius": 125,
         "Vision Room": 1600,
@@ -212,7 +212,7 @@
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {
-        "Passive Mode": "Wander",
+        "Passive Mode": "Stationary",
         "Patrol Path": [],
         "Hearing Radius": 125,
         "Vision Room": 1050,
@@ -234,7 +234,7 @@
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {
-        "Passive Mode": "Wander",
+        "Passive Mode": "Stationary",
         "Patrol Path": [],
         "Hearing Radius": 125,
         "Vision Room": 1900,
@@ -256,7 +256,7 @@
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {
-        "Passive Mode": "Wander",
+        "Passive Mode": "Stationary",
         "Patrol Path": [],
         "Hearing Radius": 125,
         "Vision Room": 2100,
@@ -278,7 +278,7 @@
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {
-        "Passive Mode": "Wander",
+        "Passive Mode": "Stationary",
         "Patrol Path": [],
         "Hearing Radius": 125,
         "Vision Room": 1000,
@@ -300,7 +300,7 @@
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {
-        "Passive Mode": "Wander",
+        "Passive Mode": "Stationary",
         "Patrol Path": [],
         "Hearing Radius": 125,
         "Vision Room": 750,
@@ -322,7 +322,7 @@
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {
-        "Passive Mode": "Wander",
+        "Passive Mode": "Stationary",
         "Patrol Path": [],
         "Hearing Radius": 125,
         "Vision Room": 1700,
@@ -344,7 +344,7 @@
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {
-        "Passive Mode": "Wander",
+        "Passive Mode": "Stationary",
         "Patrol Path": [],
         "Hearing Radius": 125,
         "Vision Room": 1900,
@@ -366,7 +366,7 @@
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {
-        "Passive Mode": "Wander",
+        "Passive Mode": "Stationary",
         "Patrol Path": [],
         "Hearing Radius": 125,
         "Vision Room": 1850,
@@ -474,7 +474,7 @@
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {
-        "Passive Mode": "Wander",
+        "Passive Mode": "Stationary",
         "Patrol Path": [],
         "Hearing Radius": 125,
         "Vision Room": 500,
@@ -496,7 +496,7 @@
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {
-        "Passive Mode": "Wander",
+        "Passive Mode": "Stationary",
         "Patrol Path": [],
         "Hearing Radius": 125,
         "Vision Room": 500,
@@ -828,7 +828,7 @@
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {
-        "Passive Mode": "Wander",
+        "Passive Mode": "Stationary",
         "Patrol Path": [],
         "Hearing Radius": 125,
         "Vision Room": 500,
@@ -850,7 +850,7 @@
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {
-        "Passive Mode": "Wander",
+        "Passive Mode": "Stationary",
         "Patrol Path": [],
         "Hearing Radius": 125,
         "Vision Room": 1000,
@@ -871,7 +871,7 @@
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {
-        "Passive Mode": "Wander",
+        "Passive Mode": "Stationary",
         "Patrol Path": [],
         "Hearing Radius": 125,
         "Vision Room": 500,
@@ -1583,6 +1583,50 @@
       "Enabled": true,
       "__Prefab": "prefabs/triggers/death_trigger.prefab",
       "__PrefabVariables": {}
+    },
+    {
+      "__guid": "3202d84c-c5dd-4c9f-804a-6324b905ed65",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (34)",
+      "Position": "-4568.375,-7427.923,-1546",
+      "Rotation": "0,0,-0.9396927,0.3420202",
+      "Tags": "enemy",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {
+        "Passive Mode": "Wander",
+        "Patrol Path": [],
+        "Hearing Radius": 125,
+        "Vision Room": 1000,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 300,
+        "Attack Range Max": 1000,
+        "Attack Cooldown": 1,
+        "Burst Count": 3,
+        "Time Between Burst Shots": 0.1
+      }
+    },
+    {
+      "__guid": "10afea6d-1f2e-4e10-9d76-ef88c05cfcbe",
+      "Flags": 0,
+      "Name": "magic_missile_enemy (35)",
+      "Position": "-6508.618,-7437.688,-1546",
+      "Rotation": "0,0,-0.3420201,0.9396927",
+      "Tags": "enemy",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
+      "__PrefabVariables": {
+        "Passive Mode": "Wander",
+        "Patrol Path": [],
+        "Hearing Radius": 125,
+        "Vision Room": 1000,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 300,
+        "Attack Range Max": 1000,
+        "Attack Cooldown": 1,
+        "Burst Count": 3,
+        "Time Between Burst Shots": 0.1
+      }
     }
   ],
   "SceneProperties": {

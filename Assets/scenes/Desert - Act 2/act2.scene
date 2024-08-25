@@ -607,7 +607,7 @@
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {
-        "Passive Mode": "Wander",
+        "Passive Mode": "Stationary",
         "Patrol Path": [],
         "Hearing Radius": 125,
         "Vision Room": 1400,
@@ -629,7 +629,7 @@
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {
-        "Passive Mode": "Wander",
+        "Passive Mode": "Stationary",
         "Patrol Path": [],
         "Hearing Radius": 125,
         "Vision Room": 1000,
@@ -651,7 +651,7 @@
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
       "__PrefabVariables": {
-        "Passive Mode": "Wander",
+        "Passive Mode": "Stationary",
         "Patrol Path": [],
         "Hearing Radius": 125,
         "Vision Room": 1000,
@@ -674,10 +674,10 @@
       "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
       "__PrefabVariables": {
         "Hearing Radius": 1000,
-        "Vision Range": 3000,
+        "Vision Range": 4000,
         "Vision Angle": 0.65,
-        "Attack Range Ideal": 3000,
-        "Attack Range Max": 3000
+        "Attack Range Ideal": 4000,
+        "Attack Range Max": 4000
       }
     },
     {
@@ -691,10 +691,10 @@
       "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
       "__PrefabVariables": {
         "Hearing Radius": 1000,
-        "Vision Range": 3000,
+        "Vision Range": 4000,
         "Vision Angle": 0.65,
-        "Attack Range Ideal": 3000,
-        "Attack Range Max": 3000
+        "Attack Range Ideal": 4000,
+        "Attack Range Max": 4000
       }
     },
     {
@@ -708,10 +708,10 @@
       "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
       "__PrefabVariables": {
         "Hearing Radius": 1000,
-        "Vision Range": 3000,
+        "Vision Range": 4000,
         "Vision Angle": 0.65,
-        "Attack Range Ideal": 3000,
-        "Attack Range Max": 3000
+        "Attack Range Ideal": 4000,
+        "Attack Range Max": 4000
       }
     },
     {
@@ -725,10 +725,10 @@
       "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
       "__PrefabVariables": {
         "Hearing Radius": 1000,
-        "Vision Range": 3000,
+        "Vision Range": 4000,
         "Vision Angle": 0.65,
-        "Attack Range Ideal": 3000,
-        "Attack Range Max": 3000
+        "Attack Range Ideal": 4000,
+        "Attack Range Max": 4000
       }
     },
     {
@@ -742,10 +742,10 @@
       "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
       "__PrefabVariables": {
         "Hearing Radius": 1000,
-        "Vision Range": 3000,
+        "Vision Range": 4000,
         "Vision Angle": 0.65,
-        "Attack Range Ideal": 3000,
-        "Attack Range Max": 3000
+        "Attack Range Ideal": 4000,
+        "Attack Range Max": 4000
       }
     },
     {
@@ -759,10 +759,10 @@
       "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
       "__PrefabVariables": {
         "Hearing Radius": 1000,
-        "Vision Range": 3000,
+        "Vision Range": 4000,
         "Vision Angle": 0.65,
-        "Attack Range Ideal": 3000,
-        "Attack Range Max": 3000
+        "Attack Range Ideal": 4000,
+        "Attack Range Max": 4000
       }
     },
     {
@@ -776,10 +776,10 @@
       "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
       "__PrefabVariables": {
         "Hearing Radius": 1000,
-        "Vision Range": 3000,
+        "Vision Range": 4000,
         "Vision Angle": 0.65,
-        "Attack Range Ideal": 3000,
-        "Attack Range Max": 3000
+        "Attack Range Ideal": 4000,
+        "Attack Range Max": 4000
       }
     },
     {
@@ -1074,7 +1074,7 @@
         "Passive Mode": "Stationary",
         "Patrol Path": [],
         "Hearing Radius": 1000,
-        "Vision Range": 4000,
+        "Vision Range": 2000,
         "Vision Angle": 0.12566371,
         "Attack Range Ideal": 100,
         "Attack Range Max": 750,
@@ -1116,7 +1116,7 @@
         "Passive Mode": "Stationary",
         "Patrol Path": [],
         "Hearing Radius": 1000,
-        "Vision Range": 4000,
+        "Vision Range": 2000,
         "Vision Angle": 0.12566371,
         "Attack Range Ideal": 100,
         "Attack Range Max": 750,
@@ -1137,7 +1137,7 @@
         "Passive Mode": "Stationary",
         "Patrol Path": [],
         "Hearing Radius": 1000,
-        "Vision Range": 2200,
+        "Vision Range": 2000,
         "Vision Angle": 0.7853982,
         "Attack Range Ideal": 100,
         "Attack Range Max": 750,
@@ -1179,7 +1179,7 @@
         "Passive Mode": "Stationary",
         "Patrol Path": [],
         "Hearing Radius": 1000,
-        "Vision Range": 1700,
+        "Vision Range": 2000,
         "Vision Angle": 0.7853982,
         "Attack Range Ideal": 100,
         "Attack Range Max": 750,
@@ -1200,7 +1200,7 @@
         "Passive Mode": "Stationary",
         "Patrol Path": [],
         "Hearing Radius": 1000,
-        "Vision Range": 1500,
+        "Vision Range": 2000,
         "Vision Angle": 0.7853982,
         "Attack Range Ideal": 100,
         "Attack Range Max": 750,
@@ -1423,7 +1423,7 @@
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rending_gale_enemy.prefab",
       "__PrefabVariables": {
-        "Passive Mode": "Wander",
+        "Passive Mode": "Stationary",
         "Patrol Path": [],
         "Hearing Radius": 1000,
         "Vision Range": 2000,
@@ -1444,7 +1444,7 @@
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rending_gale_enemy.prefab",
       "__PrefabVariables": {
-        "Passive Mode": "Wander",
+        "Passive Mode": "Stationary",
         "Patrol Path": [],
         "Hearing Radius": 1000,
         "Vision Range": 1800,
@@ -1465,7 +1465,7 @@
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rending_gale_enemy.prefab",
       "__PrefabVariables": {
-        "Passive Mode": "Wander",
+        "Passive Mode": "Stationary",
         "Patrol Path": [],
         "Hearing Radius": 1000,
         "Vision Range": 2200,
@@ -1486,7 +1486,7 @@
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rending_gale_enemy.prefab",
       "__PrefabVariables": {
-        "Passive Mode": "Wander",
+        "Passive Mode": "Stationary",
         "Patrol Path": [],
         "Hearing Radius": 1000,
         "Vision Range": 3100,
@@ -1844,7 +1844,7 @@
               "go": "30954c2e-ebdf-4b50-adc6-48e8ddac9261"
             }
           ],
-          "OpenDistance": 750,
+          "OpenDistance": 500,
           "OpenTime": 1,
           "OpenType": "MoveDown",
           "RotationAmount": 90,
@@ -2539,6 +2539,65 @@
       "Enabled": true,
       "__Prefab": "prefabs/triggers/death_trigger.prefab",
       "__PrefabVariables": {}
+    },
+    {
+      "__guid": "cab6e760-39df-4672-bc4d-623a2938a0ac",
+      "Flags": 0,
+      "Name": "fireball_enemy",
+      "Position": "1546.643,-8598.276,3695",
+      "Rotation": "0,0,-0.5372995,0.8433914",
+      "Tags": "enemy",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
+      "__PrefabVariables": {
+        "Hearing Radius": 1000,
+        "Vision Range": 1500,
+        "Vision Angle": 0.37699112,
+        "Attack Range Ideal": 1000,
+        "Attack Range Max": 1500
+      }
+    },
+    {
+      "__guid": "0d096955-7534-4652-a39d-ed0e1e911f30",
+      "Flags": 0,
+      "Name": "rending_gale_enemy",
+      "Position": "4419.273,-10491.49,3813",
+      "Rotation": "0,0,0.9537169,-0.3007058",
+      "Tags": "enemy",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/rending_gale_enemy.prefab",
+      "__PrefabVariables": {
+        "Passive Mode": "Stationary",
+        "Patrol Path": [],
+        "Hearing Radius": 1000,
+        "Vision Range": 1500,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 35,
+        "Attack Range Max": 250,
+        "Attack Cooldown": 1,
+        "Attack Damage": 15
+      }
+    },
+    {
+      "__guid": "06e6fcc3-7b91-49d2-ac78-9f1a4ad7792c",
+      "Flags": 0,
+      "Name": "rending_gale_enemy",
+      "Position": "2542.118,-10459.24,3813",
+      "Rotation": "0,0,-0.3420201,0.9396926",
+      "Tags": "enemy",
+      "Enabled": true,
+      "__Prefab": "prefabs/enemies/rending_gale_enemy.prefab",
+      "__PrefabVariables": {
+        "Passive Mode": "Stationary",
+        "Patrol Path": [],
+        "Hearing Radius": 1000,
+        "Vision Range": 1500,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 35,
+        "Attack Range Max": 250,
+        "Attack Cooldown": 1,
+        "Attack Damage": 15
+      }
     }
   ],
   "SceneProperties": {
