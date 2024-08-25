@@ -429,7 +429,7 @@
       "Flags": 0,
       "Name": "CheckpointOneRespawn",
       "Position": "-4020.639,-4007.729,285.7088",
-      "Rotation": "0,0,0.9396926,0.3420202",
+      "Rotation": "0,0,0.9063078,-0.4226182",
       "Enabled": true,
       "Components": [
         {
@@ -469,6 +469,7 @@
         {
           "__type": "Sandbox.ModelRenderer",
           "__guid": "86c2d67a-5378-45ca-819e-aa4dd5e0481a",
+          "__enabled": false,
           "BodyGroups": 18446744073709551615,
           "RenderType": "On",
           "Tint": "1,1,1,1"
