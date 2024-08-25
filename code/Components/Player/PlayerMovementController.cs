@@ -534,8 +534,11 @@ public sealed class PlayerMovementController : Component
 		if (Input.Pressed("use"))
 		{
 			var startPos = Camera.Transform.Position;
-			var endPos = startPos + EyeAngles.Forward * InteractRange;
+			var endPos = startPos +
+						 Camera.Transform.Rotation.Forward * InteractRange;
 			var trace = Scene.Trace.Ray(startPos, endPos)
+								   .IgnoreGameObjectHierarchy(GameObject)
+								   .IgnoreGameObjectHierarchy(Camera)
 								   .WithTag("interactable")
 								   .Run();
 			if (trace.Hit)
