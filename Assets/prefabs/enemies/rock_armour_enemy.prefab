@@ -14,7 +14,7 @@
         "HealMultiplier": 1,
         "HealthRegenDelay": 0,
         "HealthRegenRate": 0,
-        "MaxHealth": 100
+        "MaxHealth": 300
       },
       {
         "__type": "Sandbox.CapsuleCollider",
@@ -38,9 +38,9 @@
       {
         "__type": "Sandbox.NavMeshAgent",
         "__guid": "9f4491c2-978a-456d-bb10-dab18a57df2a",
-        "Acceleration": 50,
+        "Acceleration": 75,
         "Height": 64,
-        "MaxSpeed": 120,
+        "MaxSpeed": 200,
         "Radius": 16,
         "Separation": 0.25,
         "UpdatePosition": true,
@@ -121,7 +121,98 @@
         ]
       }
     ],
-    "__variables": []
+    "__variables": [
+      {
+        "Id": "Passive Mode",
+        "Title": "Passive Mode",
+        "Targets": [
+          {
+            "Id": "063c04c3-f13e-4d6e-8693-2b680ba3c8f4",
+            "Property": "PassiveMode"
+          }
+        ]
+      },
+      {
+        "Id": "Patrol Path",
+        "Title": "Patrol Path",
+        "Targets": [
+          {
+            "Id": "063c04c3-f13e-4d6e-8693-2b680ba3c8f4",
+            "Property": "PatrolPath"
+          }
+        ]
+      },
+      {
+        "Id": "Hearing Radius",
+        "Title": "Hearing Radius",
+        "Targets": [
+          {
+            "Id": "063c04c3-f13e-4d6e-8693-2b680ba3c8f4",
+            "Property": "HearingRadius"
+          }
+        ]
+      },
+      {
+        "Id": "Vision Range",
+        "Title": "Vision Range",
+        "Targets": [
+          {
+            "Id": "063c04c3-f13e-4d6e-8693-2b680ba3c8f4",
+            "Property": "VisionRange"
+          }
+        ]
+      },
+      {
+        "Id": "Vision Angle",
+        "Title": "Vision Angle",
+        "Targets": [
+          {
+            "Id": "063c04c3-f13e-4d6e-8693-2b680ba3c8f4",
+            "Property": "VisionAngle"
+          }
+        ]
+      },
+      {
+        "Id": "Attack Range Ideal",
+        "Title": "Attack Range Ideal",
+        "Targets": [
+          {
+            "Id": "063c04c3-f13e-4d6e-8693-2b680ba3c8f4",
+            "Property": "AttackRangeIdeal"
+          }
+        ]
+      },
+      {
+        "Id": "Attack Range Max",
+        "Title": "Attack Range Max",
+        "Targets": [
+          {
+            "Id": "063c04c3-f13e-4d6e-8693-2b680ba3c8f4",
+            "Property": "AttackRangeMax"
+          }
+        ]
+      },
+      {
+        "Id": "Attack Cooldown",
+        "Title": "Attack Cooldown",
+        "Targets": [
+          {
+            "Id": "063c04c3-f13e-4d6e-8693-2b680ba3c8f4",
+            "Property": "AttackCooldown"
+          }
+        ]
+      },
+      {
+        "Id": "Charge Power",
+        "Title": "Charge Power",
+        "Targets": [
+          {
+            "Id": "063c04c3-f13e-4d6e-8693-2b680ba3c8f4",
+            "Property": "ChargePower"
+          }
+        ]
+      }
+    ]
   },
   "ShowInMenu": false,
   "MenuPath": null,

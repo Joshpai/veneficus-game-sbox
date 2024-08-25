@@ -14,7 +14,7 @@
         "HealMultiplier": 1,
         "HealthRegenDelay": 0,
         "HealthRegenRate": 0,
-        "MaxHealth": 100
+        "MaxHealth": 50
       },
       {
         "__type": "Sandbox.CapsuleCollider",
@@ -40,7 +40,7 @@
         "__guid": "9f4491c2-978a-456d-bb10-dab18a57df2a",
         "Acceleration": 50,
         "Height": 64,
-        "MaxSpeed": 120,
+        "MaxSpeed": 400,
         "Radius": 16,
         "Separation": 0.25,
         "UpdatePosition": true,
@@ -92,7 +92,98 @@
         ]
       }
     ],
-    "__variables": []
+    "__variables": [
+      {
+        "Id": "Passive Mode",
+        "Title": "Passive Mode",
+        "Targets": [
+          {
+            "Id": "2401b88b-bd5a-471a-bc1f-077cc1f0612c",
+            "Property": "PassiveMode"
+          }
+        ]
+      },
+      {
+        "Id": "Patrol Path",
+        "Title": "Patrol Path",
+        "Targets": [
+          {
+            "Id": "2401b88b-bd5a-471a-bc1f-077cc1f0612c",
+            "Property": "PatrolPath"
+          }
+        ]
+      },
+      {
+        "Id": "Hearing Radius",
+        "Title": "Hearing Radius",
+        "Targets": [
+          {
+            "Id": "2401b88b-bd5a-471a-bc1f-077cc1f0612c",
+            "Property": "HearingRadius"
+          }
+        ]
+      },
+      {
+        "Id": "Vision Range",
+        "Title": "Vision Range",
+        "Targets": [
+          {
+            "Id": "2401b88b-bd5a-471a-bc1f-077cc1f0612c",
+            "Property": "VisionRange"
+          }
+        ]
+      },
+      {
+        "Id": "Vision Angle",
+        "Title": "Vision Angle",
+        "Targets": [
+          {
+            "Id": "2401b88b-bd5a-471a-bc1f-077cc1f0612c",
+            "Property": "VisionAngle"
+          }
+        ]
+      },
+      {
+        "Id": "Attack Range Ideal",
+        "Title": "Attack Range Ideal",
+        "Targets": [
+          {
+            "Id": "2401b88b-bd5a-471a-bc1f-077cc1f0612c",
+            "Property": "AttackRangeIdeal"
+          }
+        ]
+      },
+      {
+        "Id": "Attack Range Max",
+        "Title": "Attack Range Max",
+        "Targets": [
+          {
+            "Id": "2401b88b-bd5a-471a-bc1f-077cc1f0612c",
+            "Property": "AttackRangeMax"
+          }
+        ]
+      },
+      {
+        "Id": "Attack Cooldown",
+        "Title": "Attack Cooldown",
+        "Targets": [
+          {
+            "Id": "2401b88b-bd5a-471a-bc1f-077cc1f0612c",
+            "Property": "AttackCooldown"
+          }
+        ]
+      },
+      {
+        "Id": "Attack Damage",
+        "Title": "Attack Damage",
+        "Targets": [
+          {
+            "Id": "2401b88b-bd5a-471a-bc1f-077cc1f0612c",
+            "Property": "AttackDamage"
+          }
+        ]
+      }
+    ]
   },
   "ShowInMenu": false,
   "MenuPath": null,

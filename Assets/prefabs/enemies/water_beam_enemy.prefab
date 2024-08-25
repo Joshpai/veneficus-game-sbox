@@ -99,7 +99,88 @@
         ]
       }
     ],
-    "__variables": []
+    "__variables": [
+      {
+        "Id": "Passive Mode",
+        "Title": "Passive Mode",
+        "Targets": [
+          {
+            "Id": "2041b3f0-b560-445a-8a36-11b46ed44c8b",
+            "Property": "PassiveMode"
+          }
+        ]
+      },
+      {
+        "Id": "Patrol Path",
+        "Title": "Patrol Path",
+        "Targets": [
+          {
+            "Id": "2041b3f0-b560-445a-8a36-11b46ed44c8b",
+            "Property": "PatrolPath"
+          }
+        ]
+      },
+      {
+        "Id": "Hearing Radius",
+        "Title": "Hearing Radius",
+        "Targets": [
+          {
+            "Id": "2041b3f0-b560-445a-8a36-11b46ed44c8b",
+            "Property": "HearingRadius"
+          }
+        ]
+      },
+      {
+        "Id": "Vision Range",
+        "Title": "Vision Range",
+        "Targets": [
+          {
+            "Id": "2041b3f0-b560-445a-8a36-11b46ed44c8b",
+            "Property": "VisionRange"
+          }
+        ]
+      },
+      {
+        "Id": "Vision Angle",
+        "Title": "Vision Angle",
+        "Targets": [
+          {
+            "Id": "2041b3f0-b560-445a-8a36-11b46ed44c8b",
+            "Property": "VisionAngle"
+          }
+        ]
+      },
+      {
+        "Id": "Attack Range Ideal",
+        "Title": "Attack Range Ideal",
+        "Targets": [
+          {
+            "Id": "2041b3f0-b560-445a-8a36-11b46ed44c8b",
+            "Property": "AttackRangeIdeal"
+          }
+        ]
+      },
+      {
+        "Id": "Attack Range Max",
+        "Title": "Attack Range Max",
+        "Targets": [
+          {
+            "Id": "2041b3f0-b560-445a-8a36-11b46ed44c8b",
+            "Property": "AttackRangeMax"
+          }
+        ]
+      },
+      {
+        "Id": "Attack Cooldown",
+        "Title": "Attack Cooldown",
+        "Targets": [
+          {
+            "Id": "2041b3f0-b560-445a-8a36-11b46ed44c8b",
+            "Property": "AttackCooldown"
+          }
+        ]
+      }
+    ]
   },
   "ShowInMenu": false,
   "MenuPath": null,

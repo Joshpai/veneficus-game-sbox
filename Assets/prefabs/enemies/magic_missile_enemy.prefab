@@ -14,7 +14,7 @@
         "HealMultiplier": 1,
         "HealthRegenDelay": 0,
         "HealthRegenRate": 0,
-        "MaxHealth": 100
+        "MaxHealth": 80
       },
       {
         "__type": "Sandbox.CapsuleCollider",
@@ -93,7 +93,108 @@
         ]
       }
     ],
-    "__variables": []
+    "__variables": [
+      {
+        "Id": "Passive Mode",
+        "Title": "Passive Mode",
+        "Targets": [
+          {
+            "Id": "464c777a-5261-4fd4-b373-586eea6ea69b",
+            "Property": "PassiveMode"
+          }
+        ]
+      },
+      {
+        "Id": "Patrol Path",
+        "Title": "Patrol Path",
+        "Targets": [
+          {
+            "Id": "464c777a-5261-4fd4-b373-586eea6ea69b",
+            "Property": "PatrolPath"
+          }
+        ]
+      },
+      {
+        "Id": "Hearing Radius",
+        "Title": "Hearing Radius",
+        "Targets": [
+          {
+            "Id": "464c777a-5261-4fd4-b373-586eea6ea69b",
+            "Property": "HearingRadius"
+          }
+        ]
+      },
+      {
+        "Id": "Vision Room",
+        "Title": "Vision Room",
+        "Targets": [
+          {
+            "Id": "464c777a-5261-4fd4-b373-586eea6ea69b",
+            "Property": "VisionRange"
+          }
+        ]
+      },
+      {
+        "Id": "Vision Angle",
+        "Title": "Vision Angle",
+        "Targets": [
+          {
+            "Id": "464c777a-5261-4fd4-b373-586eea6ea69b",
+            "Property": "VisionAngle"
+          }
+        ]
+      },
+      {
+        "Id": "Attack Range Ideal",
+        "Title": "Attack Range Ideal",
+        "Targets": [
+          {
+            "Id": "464c777a-5261-4fd4-b373-586eea6ea69b",
+            "Property": "AttackRangeIdeal"
+          }
+        ]
+      },
+      {
+        "Id": "Attack Range Max",
+        "Title": "Attack Range Max",
+        "Targets": [
+          {
+            "Id": "464c777a-5261-4fd4-b373-586eea6ea69b",
+            "Property": "AttackRangeMax"
+          }
+        ]
+      },
+      {
+        "Id": "Attack Cooldown",
+        "Title": "Attack Cooldown",
+        "Targets": [
+          {
+            "Id": "464c777a-5261-4fd4-b373-586eea6ea69b",
+            "Property": "AttackCooldown"
+          }
+        ]
+      },
+      {
+        "Id": "Burst Count",
+        "Title": "Burst Count",
+        "Targets": [
+          {
+            "Id": "464c777a-5261-4fd4-b373-586eea6ea69b",
+            "Property": "BurstCount"
+          }
+        ]
+      },
+      {
+        "Id": "Time Between Burst Shots",
+        "Title": "Time Between Burst Shots",
+        "Targets": [
+          {
+            "Id": "464c777a-5261-4fd4-b373-586eea6ea69b",
+            "Property": "TimeBetweenBurstShots"
+          }
+        ]
+      }
+    ]
   },
   "ShowInMenu": false,
   "MenuPath": null,

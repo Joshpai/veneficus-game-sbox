@@ -154,29 +154,61 @@
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Passive Mode": "Wander",
+        "Patrol Path": [],
+        "Hearing Radius": 125,
+        "Vision Room": 1800,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 1800,
+        "Attack Range Max": 1800,
+        "Attack Cooldown": 1,
+        "Burst Count": 3,
+        "Time Between Burst Shots": 0.1
+      }
     },
     {
       "__guid": "72a9cd2c-1637-4e54-81e7-32f7cfb99c85",
       "Flags": 0,
       "Name": "rock_armour_enemy",
       "Position": "2240,-1920,2212",
-      "Rotation": "0,0,-0.7933533,0.6087615",
+      "Rotation": "0,0,-0.6087614,0.7933534",
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Passive Mode": "Stationary",
+        "Patrol Path": [],
+        "Hearing Radius": 1000,
+        "Vision Range": 1800,
+        "Vision Angle": 0.12566371,
+        "Attack Range Ideal": 100,
+        "Attack Range Max": 750,
+        "Attack Cooldown": 1.6,
+        "Charge Power": 500
+      }
     },
     {
       "__guid": "c6b5fa08-3537-4c32-ab65-71424ca40df8",
       "Flags": 0,
       "Name": "magic_missile_enemy (1)",
       "Position": "3424,-2784,2480",
-      "Rotation": "0,0,0.9914447,0.1305263",
+      "Rotation": "0,0,0.9990482,0.04361954",
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Passive Mode": "Wander",
+        "Patrol Path": [],
+        "Hearing Radius": 125,
+        "Vision Room": 1500,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 1500,
+        "Attack Range Max": 1500,
+        "Attack Cooldown": 1,
+        "Burst Count": 3,
+        "Time Between Burst Shots": 0.1
+      }
     },
     {
       "__guid": "6e30f29b-4c1f-4e94-8c35-83e6728b9718",
@@ -187,7 +219,18 @@
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Passive Mode": "Wander",
+        "Patrol Path": [],
+        "Hearing Radius": 125,
+        "Vision Room": 1100,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 1100,
+        "Attack Range Max": 1100,
+        "Attack Cooldown": 1,
+        "Burst Count": 3,
+        "Time Between Burst Shots": 0.1
+      }
     },
     {
       "__guid": "375a4266-c52b-48b7-82e2-2c8a292e67c9",
@@ -198,7 +241,17 @@
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Passive Mode": "Stationary",
+        "Patrol Path": [],
+        "Hearing Radius": 1000,
+        "Vision Range": 1500,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 100,
+        "Attack Range Max": 750,
+        "Attack Cooldown": 1.6,
+        "Charge Power": 500
+      }
     },
     {
       "__guid": "fb2c75b9-d475-4941-9d96-8096d4e2f71b",
@@ -208,7 +261,17 @@
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Passive Mode": "Stationary",
+        "Patrol Path": [],
+        "Hearing Radius": 1000,
+        "Vision Range": 1500,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 100,
+        "Attack Range Max": 750,
+        "Attack Cooldown": 1.6,
+        "Charge Power": 500
+      }
     },
     {
       "__guid": "a50971fc-cbad-4e35-9c71-593743d0f9b2",
@@ -218,7 +281,18 @@
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Passive Mode": "Wander",
+        "Patrol Path": [],
+        "Hearing Radius": 125,
+        "Vision Room": 1000,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 1100,
+        "Attack Range Max": 1100,
+        "Attack Cooldown": 1,
+        "Burst Count": 3,
+        "Time Between Burst Shots": 0.1
+      }
     },
     {
       "__guid": "41aa5091-6ff2-44cf-922f-4e7cf29ec354",
@@ -229,7 +303,14 @@
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Hearing Radius": 1000,
+        "Vision Range": 1500,
+        "Vision Angle": 0.7853982,
+        "Attack Cooldown": 1,
+        "Attack Range Ideal": 2500,
+        "Attack Range Max": 2500
+      }
     },
     {
       "__guid": "f977114c-632b-448a-9782-a429369ef209",
@@ -240,7 +321,14 @@
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Hearing Radius": 1000,
+        "Vision Range": 1500,
+        "Vision Angle": 0.7853982,
+        "Attack Cooldown": 1,
+        "Attack Range Ideal": 2500,
+        "Attack Range Max": 2500
+      }
     },
     {
       "__guid": "e5544563-01de-4545-861f-b721b5388f05",
@@ -251,7 +339,14 @@
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Hearing Radius": 1000,
+        "Vision Range": 2700,
+        "Vision Angle": 0.12566371,
+        "Attack Cooldown": 1,
+        "Attack Range Ideal": 2500,
+        "Attack Range Max": 2500
+      }
     },
     {
       "__guid": "01c14b42-ba67-4853-97ed-b19a84e243a7",
@@ -262,7 +357,14 @@
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Hearing Radius": 1000,
+        "Vision Range": 2500,
+        "Vision Angle": 0.37699112,
+        "Attack Cooldown": 1,
+        "Attack Range Ideal": 2500,
+        "Attack Range Max": 2500
+      }
     },
     {
       "__guid": "85d35af2-8895-4b63-8bf8-2f3ada9e5251",
@@ -272,7 +374,14 @@
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Hearing Radius": 1000,
+        "Vision Range": 2200,
+        "Vision Angle": 0.37699112,
+        "Attack Cooldown": 1,
+        "Attack Range Ideal": 1000,
+        "Attack Range Max": 1500
+      }
     },
     {
       "__guid": "956da057-2592-4f2e-94a1-bb0971069865",
@@ -282,7 +391,17 @@
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Passive Mode": "Stationary",
+        "Patrol Path": [],
+        "Hearing Radius": 1000,
+        "Vision Range": 1500,
+        "Vision Angle": 0.50265485,
+        "Attack Range Ideal": 100,
+        "Attack Range Max": 750,
+        "Attack Cooldown": 1.6,
+        "Charge Power": 500
+      }
     },
     {
       "__guid": "382227e4-615a-4dd4-b428-882b19feabc2",
@@ -292,7 +411,17 @@
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Passive Mode": "Stationary",
+        "Patrol Path": [],
+        "Hearing Radius": 1000,
+        "Vision Range": 1500,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 100,
+        "Attack Range Max": 750,
+        "Attack Cooldown": 1.6,
+        "Charge Power": 500
+      }
     },
     {
       "__guid": "26994190-fe0f-4400-a260-53b78d4e9b1a",
@@ -302,7 +431,18 @@
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Passive Mode": "Wander",
+        "Patrol Path": [],
+        "Hearing Radius": 125,
+        "Vision Room": 1000,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 300,
+        "Attack Range Max": 1000,
+        "Attack Cooldown": 1,
+        "Burst Count": 3,
+        "Time Between Burst Shots": 0.1
+      }
     },
     {
       "__guid": "3687dbdd-b6be-4979-bb35-e6c698e85a4c",
@@ -312,7 +452,18 @@
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Passive Mode": "Wander",
+        "Patrol Path": [],
+        "Hearing Radius": 125,
+        "Vision Room": 1700,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 2500,
+        "Attack Range Max": 2500,
+        "Attack Cooldown": 1,
+        "Burst Count": 3,
+        "Time Between Burst Shots": 0.1
+      }
     },
     {
       "__guid": "f83ef3c6-ee79-4a3b-8f9e-17e21eb57591",
@@ -323,7 +474,14 @@
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Hearing Radius": 1000,
+        "Vision Range": 1100,
+        "Vision Angle": 0.7853982,
+        "Attack Cooldown": 1,
+        "Attack Range Ideal": 1500,
+        "Attack Range Max": 1500
+      }
     },
     {
       "__guid": "08999c63-e405-4a5e-97b0-a59b6d571790",
@@ -334,7 +492,14 @@
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Hearing Radius": 1000,
+        "Vision Range": 1700,
+        "Vision Angle": 0.7853982,
+        "Attack Cooldown": 1,
+        "Attack Range Ideal": 1700,
+        "Attack Range Max": 1700
+      }
     },
     {
       "__guid": "13efd28e-6a92-4f79-a135-b88166f83ba8",
@@ -345,7 +510,18 @@
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Passive Mode": "Wander",
+        "Patrol Path": [],
+        "Hearing Radius": 125,
+        "Vision Room": 1400,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 1400,
+        "Attack Range Max": 1400,
+        "Attack Cooldown": 1,
+        "Burst Count": 3,
+        "Time Between Burst Shots": 0.1
+      }
     },
     {
       "__guid": "4105f9b5-f577-47b8-af7c-6d7b3f94c5c4",
@@ -356,7 +532,18 @@
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Passive Mode": "Wander",
+        "Patrol Path": [],
+        "Hearing Radius": 125,
+        "Vision Room": 1000,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 1000,
+        "Attack Range Max": 1000,
+        "Attack Cooldown": 1,
+        "Burst Count": 3,
+        "Time Between Burst Shots": 0.1
+      }
     },
     {
       "__guid": "0e8ae3bb-af4c-4094-8ae2-7e2f9174576d",
@@ -367,7 +554,18 @@
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Passive Mode": "Wander",
+        "Patrol Path": [],
+        "Hearing Radius": 125,
+        "Vision Room": 1000,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 1000,
+        "Attack Range Max": 1000,
+        "Attack Cooldown": 1,
+        "Burst Count": 3,
+        "Time Between Burst Shots": 0.1
+      }
     },
     {
       "__guid": "25781724-9ecb-4af8-974a-841556135724",
@@ -378,7 +576,14 @@
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Hearing Radius": 1000,
+        "Vision Range": 3000,
+        "Vision Angle": 0.65,
+        "Attack Cooldown": 1,
+        "Attack Range Ideal": 3000,
+        "Attack Range Max": 3000
+      }
     },
     {
       "__guid": "8bd96d9e-4d02-42a3-97df-ef257ad19794",
@@ -389,7 +594,14 @@
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Hearing Radius": 1000,
+        "Vision Range": 3000,
+        "Vision Angle": 0.65,
+        "Attack Cooldown": 1,
+        "Attack Range Ideal": 3000,
+        "Attack Range Max": 3000
+      }
     },
     {
       "__guid": "62293239-5022-481f-8d22-f65cbba8f437",
@@ -400,7 +612,14 @@
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Hearing Radius": 1000,
+        "Vision Range": 3000,
+        "Vision Angle": 0.65,
+        "Attack Cooldown": 1,
+        "Attack Range Ideal": 3000,
+        "Attack Range Max": 3000
+      }
     },
     {
       "__guid": "963f094f-6414-4862-ba3d-fde2c4fc6a80",
@@ -411,7 +630,14 @@
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Hearing Radius": 1000,
+        "Vision Range": 3000,
+        "Vision Angle": 0.65,
+        "Attack Cooldown": 1,
+        "Attack Range Ideal": 3000,
+        "Attack Range Max": 3000
+      }
     },
     {
       "__guid": "72866c42-fcec-4f06-95b5-6e9720848582",
@@ -422,7 +648,14 @@
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Hearing Radius": 1000,
+        "Vision Range": 3000,
+        "Vision Angle": 0.65,
+        "Attack Cooldown": 1,
+        "Attack Range Ideal": 3000,
+        "Attack Range Max": 3000
+      }
     },
     {
       "__guid": "fa7730fd-00fd-4a2c-814a-8232de5b9238",
@@ -433,7 +666,18 @@
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Passive Mode": "Wander",
+        "Patrol Path": [],
+        "Hearing Radius": 125,
+        "Vision Room": 1800,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 1800,
+        "Attack Range Max": 1800,
+        "Attack Cooldown": 1,
+        "Burst Count": 3,
+        "Time Between Burst Shots": 0.1
+      }
     },
     {
       "__guid": "76500aca-4cb4-42bc-8a8b-9afb9cb455a7",
@@ -444,7 +688,18 @@
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Passive Mode": "Wander",
+        "Patrol Path": [],
+        "Hearing Radius": 125,
+        "Vision Room": 1000,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 300,
+        "Attack Range Max": 1000,
+        "Attack Cooldown": 1,
+        "Burst Count": 3,
+        "Time Between Burst Shots": 0.1
+      }
     },
     {
       "__guid": "f477c453-803c-4ebe-856c-b9f7a80f24ee",
@@ -454,7 +709,18 @@
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Passive Mode": "Wander",
+        "Patrol Path": [],
+        "Hearing Radius": 125,
+        "Vision Room": 1800,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 1800,
+        "Attack Range Max": 1800,
+        "Attack Cooldown": 1,
+        "Burst Count": 3,
+        "Time Between Burst Shots": 0.1
+      }
     },
     {
       "__guid": "ac4f1016-93c1-42c6-a6f9-9b68e53af7ac",
@@ -464,7 +730,18 @@
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Passive Mode": "Wander",
+        "Patrol Path": [],
+        "Hearing Radius": 125,
+        "Vision Room": 1800,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 1800,
+        "Attack Range Max": 1800,
+        "Attack Cooldown": 1,
+        "Burst Count": 3,
+        "Time Between Burst Shots": 0.1
+      }
     },
     {
       "__guid": "e8b32ee5-0c46-4a5c-93ab-d9568efe1f1b",
@@ -474,7 +751,18 @@
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Passive Mode": "Wander",
+        "Patrol Path": [],
+        "Hearing Radius": 125,
+        "Vision Room": 1800,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 1800,
+        "Attack Range Max": 1800,
+        "Attack Cooldown": 1,
+        "Burst Count": 3,
+        "Time Between Burst Shots": 0.1
+      }
     },
     {
       "__guid": "6a3d38d5-0b33-4fea-a52f-4f6ca7f23af3",
@@ -485,7 +773,18 @@
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Passive Mode": "Wander",
+        "Patrol Path": [],
+        "Hearing Radius": 125,
+        "Vision Room": 1000,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 300,
+        "Attack Range Max": 1000,
+        "Attack Cooldown": 1,
+        "Burst Count": 3,
+        "Time Between Burst Shots": 0.1
+      }
     },
     {
       "__guid": "e3dfbf42-b031-4cf4-b3fb-464049277839",
@@ -496,18 +795,38 @@
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Passive Mode": "Stationary",
+        "Patrol Path": [],
+        "Hearing Radius": 1000,
+        "Vision Range": 4000,
+        "Vision Angle": 0.12566371,
+        "Attack Range Ideal": 100,
+        "Attack Range Max": 750,
+        "Attack Cooldown": 1.6,
+        "Charge Power": 500
+      }
     },
     {
       "__guid": "88e70e1d-8379-49fc-9748-71bb308ba643",
       "Flags": 0,
       "Name": "rock_armour_enemy (8)",
       "Position": "4735.992,-12800,4484",
-      "Rotation": "0,0,0.7071066,0.7071067",
+      "Rotation": "0,0,0.9063076,0.4226183",
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Passive Mode": "Stationary",
+        "Patrol Path": [],
+        "Hearing Radius": 1000,
+        "Vision Range": 2200,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 100,
+        "Attack Range Max": 750,
+        "Attack Cooldown": 1.6,
+        "Charge Power": 500
+      }
     },
     {
       "__guid": "04c87ab8-0da6-4bc4-a51c-75c296d1ae19",
@@ -518,18 +837,38 @@
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Passive Mode": "Stationary",
+        "Patrol Path": [],
+        "Hearing Radius": 1000,
+        "Vision Range": 4000,
+        "Vision Angle": 0.12566371,
+        "Attack Range Ideal": 100,
+        "Attack Range Max": 750,
+        "Attack Cooldown": 1.6,
+        "Charge Power": 500
+      }
     },
     {
       "__guid": "b280f398-edcc-4550-871a-13880718f6eb",
       "Flags": 0,
       "Name": "rock_armour_enemy (7)",
       "Position": "2239.992,-12896,4484",
-      "Rotation": "0,0,0.7071066,0.7071067",
+      "Rotation": "0,0,0.6087613,0.7933533",
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Passive Mode": "Stationary",
+        "Patrol Path": [],
+        "Hearing Radius": 1000,
+        "Vision Range": 2200,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 100,
+        "Attack Range Max": 750,
+        "Attack Cooldown": 1.6,
+        "Charge Power": 500
+      }
     },
     {
       "__guid": "ac5e479e-7bf1-40a7-89f9-4af048094a51",
@@ -540,7 +879,17 @@
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Passive Mode": "Stationary",
+        "Patrol Path": [],
+        "Hearing Radius": 1000,
+        "Vision Range": 1700,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 100,
+        "Attack Range Max": 750,
+        "Attack Cooldown": 1.6,
+        "Charge Power": 500
+      }
     },
     {
       "__guid": "9a390b2f-c550-4b3d-8bfc-0c71d2753257",
@@ -551,7 +900,17 @@
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Passive Mode": "Stationary",
+        "Patrol Path": [],
+        "Hearing Radius": 1000,
+        "Vision Range": 1700,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 100,
+        "Attack Range Max": 750,
+        "Attack Cooldown": 1.6,
+        "Charge Power": 500
+      }
     },
     {
       "__guid": "897745fb-216e-4cb8-a21a-5934f5113805",
@@ -562,7 +921,17 @@
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Passive Mode": "Stationary",
+        "Patrol Path": [],
+        "Hearing Radius": 1000,
+        "Vision Range": 1500,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 100,
+        "Attack Range Max": 750,
+        "Attack Cooldown": 1.6,
+        "Charge Power": 500
+      }
     },
     {
       "__guid": "260b6926-3a11-45f8-ae93-3f31c40b1dba",
@@ -620,111 +989,193 @@
       "__guid": "268d035c-96ef-474e-94f6-59f258995fcf",
       "Flags": 0,
       "Name": "fireball_enemy (12)",
-      "Position": "2048,-16448,4404",
-      "Rotation": "0,0,-0.4999999,0.8660253",
+      "Position": "1743.28,-16456.14,4404",
+      "Rotation": "0,0,-0.2164396,0.9762958",
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Hearing Radius": 1000,
+        "Vision Range": 1600,
+        "Vision Angle": 0.25132743,
+        "Attack Cooldown": 1,
+        "Attack Range Ideal": 1600,
+        "Attack Range Max": 1600
+      }
     },
     {
       "__guid": "bf454870-01dc-485e-b4a7-ebe982c7474d",
       "Flags": 0,
       "Name": "fireball_enemy (13)",
       "Position": "768,-17056,4404",
-      "Rotation": "0,0,0.3826833,0.9238794",
+      "Rotation": "0,0,0.3007057,0.9537169",
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Hearing Radius": 1000,
+        "Vision Range": 1500,
+        "Vision Angle": 0.7853982,
+        "Attack Cooldown": 1,
+        "Attack Range Ideal": 1500,
+        "Attack Range Max": 1500
+      }
     },
     {
       "__guid": "6efa6e88-6b83-4fa8-872e-71f4969f1cc9",
       "Flags": 0,
       "Name": "fireball_enemy (14)",
       "Position": "-192,-16480,4404",
-      "Rotation": "0,0,-0.3826833,0.9238794",
+      "Rotation": "0,0,-0.2164395,0.9762958",
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Hearing Radius": 1000,
+        "Vision Range": 1600,
+        "Vision Angle": 0.7853982,
+        "Attack Cooldown": 1,
+        "Attack Range Ideal": 1600,
+        "Attack Range Max": 1600
+      }
     },
     {
       "__guid": "498b6ade-8c97-44e9-b0d5-dda0d9e51da1",
       "Flags": 0,
       "Name": "fireball_enemy (15)",
       "Position": "-1312,-17024,4404",
-      "Rotation": "0,0,0.258819,0.9659257",
+      "Rotation": "0,0,0.2164396,0.976296",
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Hearing Radius": 1000,
+        "Vision Range": 1600,
+        "Vision Angle": 0.7853982,
+        "Attack Cooldown": 1,
+        "Attack Range Ideal": 1600,
+        "Attack Range Max": 1600
+      }
     },
     {
       "__guid": "7d4ececd-b6be-436a-80bb-ff083bb8e008",
       "Flags": 0,
       "Name": "fireball_enemy (16)",
       "Position": "-1920,-17152,4404",
-      "Rotation": "0,0,0.258819,0.9659257",
+      "Rotation": "0,0,0.1305262,0.9914449",
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Hearing Radius": 1000,
+        "Vision Range": 2500,
+        "Vision Angle": 0.7853982,
+        "Attack Cooldown": 1,
+        "Attack Range Ideal": 2500,
+        "Attack Range Max": 2500
+      }
     },
     {
       "__guid": "66d697a6-2326-4213-a40b-b03258b37e3d",
       "Flags": 0,
       "Name": "fireball_enemy (17)",
       "Position": "-1952,-16384,4404",
-      "Rotation": "0,0,-0.3826833,0.9238794",
+      "Rotation": "0,0,-0.258819,0.9659258",
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Hearing Radius": 1000,
+        "Vision Range": 2500,
+        "Vision Angle": 0.7853982,
+        "Attack Cooldown": 1,
+        "Attack Range Ideal": 2500,
+        "Attack Range Max": 2500
+      }
     },
     {
       "__guid": "28119869-3a8f-4a56-bf20-a89d6633f5a5",
       "Flags": 0,
       "Name": "rending_gale_enemy",
       "Position": "-1664,-15232,4484",
-      "Rotation": "0,0,-0.9238794,0.3826834",
+      "Rotation": "0,0,-0.8870109,0.4617486",
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rending_gale_enemy.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Passive Mode": "Wander",
+        "Patrol Path": [],
+        "Hearing Radius": 1000,
+        "Vision Range": 1100,
+        "Vision Angle": 0.12566371,
+        "Attack Range Ideal": 35,
+        "Attack Range Max": 250,
+        "Attack Cooldown": 1,
+        "Attack Damage": 15
+      }
     },
     {
       "__guid": "3ae21d0d-d43e-4189-a72a-56160bcb3acf",
       "Flags": 0,
       "Name": "rending_gale_enemy (1)",
       "Position": "-1248,-14624,4484",
-      "Rotation": "0,0,-0.7933532,0.6087614",
+      "Rotation": "0,0,-0.8870107,0.4617486",
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rending_gale_enemy.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Passive Mode": "Wander",
+        "Patrol Path": [],
+        "Hearing Radius": 1000,
+        "Vision Range": 1800,
+        "Vision Angle": 0.12566371,
+        "Attack Range Ideal": 35,
+        "Attack Range Max": 250,
+        "Attack Cooldown": 1,
+        "Attack Damage": 15
+      }
     },
     {
       "__guid": "a18d9a83-7fb2-4749-b9c8-db9bdf971d4f",
       "Flags": 0,
       "Name": "rending_gale_enemy (2)",
       "Position": "-1824,-13920,4484",
-      "Rotation": "0,0,-0.3826833,0.9238794",
+      "Rotation": "0,0,-0.7660443,0.6427878",
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rending_gale_enemy.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Passive Mode": "Wander",
+        "Patrol Path": [],
+        "Hearing Radius": 1000,
+        "Vision Range": 2200,
+        "Vision Angle": 0.12566371,
+        "Attack Range Ideal": 35,
+        "Attack Range Max": 250,
+        "Attack Cooldown": 1,
+        "Attack Damage": 15
+      }
     },
     {
       "__guid": "1a105c48-9945-40ec-b59d-568cebe1bd25",
       "Flags": 0,
       "Name": "rending_gale_enemy (3)",
       "Position": "-1376,-13152,4484",
-      "Rotation": "0,0,-0.9659256,0.2588192",
+      "Rotation": "0,0,-0.7933531,0.6087616",
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rending_gale_enemy.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Passive Mode": "Wander",
+        "Patrol Path": [],
+        "Hearing Radius": 1000,
+        "Vision Range": 3100,
+        "Vision Angle": 0.12566371,
+        "Attack Range Ideal": 35,
+        "Attack Range Max": 250,
+        "Attack Cooldown": 1,
+        "Attack Damage": 15
+      }
     },
     {
       "__guid": "ecde67cf-e105-4ae0-8ced-51daf802edde",
@@ -735,7 +1186,17 @@
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Passive Mode": "Stationary",
+        "Patrol Path": [],
+        "Hearing Radius": 1000,
+        "Vision Range": 2500,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 100,
+        "Attack Range Max": 750,
+        "Attack Cooldown": 1.6,
+        "Charge Power": 500
+      }
     },
     {
       "__guid": "c90aff3c-0722-48ec-a75c-b429d975176c",
@@ -746,7 +1207,17 @@
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Passive Mode": "Stationary",
+        "Patrol Path": [],
+        "Hearing Radius": 1000,
+        "Vision Range": 2500,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 100,
+        "Attack Range Max": 750,
+        "Attack Cooldown": 1.6,
+        "Charge Power": 500
+      }
     },
     {
       "__guid": "dc5275d6-7b9c-48a1-b99b-0f27417f208a",
@@ -757,7 +1228,17 @@
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Passive Mode": "Stationary",
+        "Patrol Path": [],
+        "Hearing Radius": 1000,
+        "Vision Range": 2500,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 100,
+        "Attack Range Max": 750,
+        "Attack Cooldown": 1.6,
+        "Charge Power": 500
+      }
     },
     {
       "__guid": "ea7015ff-0822-4a96-92c0-2c881438aab3",
@@ -768,7 +1249,17 @@
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Passive Mode": "Stationary",
+        "Patrol Path": [],
+        "Hearing Radius": 1000,
+        "Vision Range": 2500,
+        "Vision Angle": 0.7853982,
+        "Attack Range Ideal": 100,
+        "Attack Range Max": 750,
+        "Attack Cooldown": 1.6,
+        "Charge Power": 500
+      }
     },
     {
       "__guid": "714890b6-858f-447b-962c-5e38009e7b23",

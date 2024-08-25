@@ -14,7 +14,7 @@
         "HealMultiplier": 1,
         "HealthRegenDelay": 0,
         "HealthRegenRate": 0,
-        "MaxHealth": 100
+        "MaxHealth": 120
       },
       {
         "__type": "Sandbox.CapsuleCollider",
@@ -91,7 +91,58 @@
         ]
       }
     ],
-    "__variables": []
+    "__variables": [
+      {
+        "Id": "Hearing Radius",
+        "Title": "Hearing Radius",
+        "Targets": [
+          {
+            "Id": "eede35f3-a5fa-4704-bd0b-5ee38719770c",
+            "Property": "HearingRadius"
+          }
+        ]
+      },
+      {
+        "Id": "Vision Range",
+        "Title": "Vision Range",
+        "Targets": [
+          {
+            "Id": "eede35f3-a5fa-4704-bd0b-5ee38719770c",
+            "Property": "VisionRange"
+          }
+        ]
+      },
+      {
+        "Id": "Vision Angle",
+        "Title": "Vision Angle",
+        "Targets": [
+          {
+            "Id": "eede35f3-a5fa-4704-bd0b-5ee38719770c",
+            "Property": "VisionAngle"
+          }
+        ]
+      },
+      {
+        "Id": "Attack Range Ideal",
+        "Title": "Attack Range Ideal",
+        "Targets": [
+          {
+            "Id": "eede35f3-a5fa-4704-bd0b-5ee38719770c",
+            "Property": "AttackRangeIdeal"
+          }
+        ]
+      },
+      {
+        "Id": "Attack Range Max",
+        "Title": "Attack Range Max",
+        "Targets": [
+          {
+            "Id": "eede35f3-a5fa-4704-bd0b-5ee38719770c",
+            "Property": "AttackRangeMax"
+          }
+        ]
+      }
+    ]
   },
   "ShowInMenu": false,
   "MenuPath": null,
