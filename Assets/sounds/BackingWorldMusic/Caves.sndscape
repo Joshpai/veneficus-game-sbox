@@ -1,6 +1,11 @@
 {
   "MasterVolume": "1",
-  "LoopedSounds": [],
+  "LoopedSounds": [
+    {
+      "SoundFile": "sounds/backingworldmusic/dungeon002.vsnd",
+      "Volume": "3"
+    }
+  ],
   "StingSounds": [],
   "__references": [],
   "__version": 0
