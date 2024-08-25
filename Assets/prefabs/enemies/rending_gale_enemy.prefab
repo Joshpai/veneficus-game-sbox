@@ -16,7 +16,7 @@
         "HealthRegenRate": 0,
         "HurtSound": "sounds/Enemy/windenemy",
         "HurtSoundMixerName": "Game",
-        "MaxHealth": 50
+        "MaxHealth": 250
       },
       {
         "__type": "Sandbox.CapsuleCollider",
@@ -40,9 +40,9 @@
       {
         "__type": "Sandbox.NavMeshAgent",
         "__guid": "9f4491c2-978a-456d-bb10-dab18a57df2a",
-        "Acceleration": 50,
+        "Acceleration": 500,
         "Height": 64,
-        "MaxSpeed": 400,
+        "MaxSpeed": 850,
         "Radius": 16,
         "Separation": 0.25,
         "UpdatePosition": true,
@@ -55,13 +55,13 @@
         "AttackAnimationLength": 1.38,
         "AttackCooldown": 1,
         "AttackDamage": 15,
-        "AttackRangeIdeal": 35,
+        "AttackRangeIdeal": 50,
         "AttackRangeMax": 250,
         "AvoidSpells": true,
         "EnemyLevel": 1,
         "EyePosition": "0,0,64",
         "HearingRadius": 1000,
-        "MaxSpeed": 650,
+        "MaxSpeed": 850,
         "PassiveMode": "Wander",
         "PatrolPath": [],
         "RotationSpeed": 3,
