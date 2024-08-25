@@ -66,7 +66,31 @@
         "UpdateRotation": false
       }
     ],
-    "Children": [],
+    "Children": [
+      {
+        "__guid": "c6f087cf-0d92-48ee-8d37-8a497768b228",
+        "Flags": 0,
+        "Name": "HealthBar",
+        "Position": "0,0,197.6332",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.WorldPanel",
+            "__guid": "425f99e0-2541-43bc-91ed-af39175e5e5c",
+            "HorizontalAlign": "Center",
+            "InteractionRange": 1000,
+            "LookAtCamera": false,
+            "PanelSize": "4096,512",
+            "RenderScale": 1,
+            "VerticalAlign": "Center"
+          },
+          {
+            "__type": "EnemyHealthBar",
+            "__guid": "6843eb8b-16c0-422b-a4c0-d37b76fb2979"
+          }
+        ]
+      }
+    ],
     "__variables": []
   },
   "ShowInMenu": false,

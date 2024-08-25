@@ -1,0 +1,36 @@
+EnemyHealthBar
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(100, 20, 20);
+  border: 5px solid black;
+  transition: opacity 0.2s ease;
+
+  .hp-bar
+  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(255, 20, 20);
+    transition: width 0.5s ease;
+  }
+
+  .hp-value
+  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 200px;
+    font-family: Poppins;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+  }
+}

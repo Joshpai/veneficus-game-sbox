@@ -3,25 +3,31 @@
     "__guid": "c56165d2-743f-4d75-a0fb-6f9d9a248610",
     "Flags": 0,
     "Name": "water_beam",
-    "Rotation": "0,0.7071067,0,0.7071068",
     "Tags": "projectile",
     "Enabled": true,
     "Children": [
       {
-        "__guid": "184bebfe-80fe-4e8d-82f9-e582f95e19e8",
+        "__guid": "4dc14c3a-f9b0-4eb2-b17d-44fd9cc679aa",
         "Flags": 0,
-        "Name": "Cube",
-        "Position": "16.28278,0,0",
-        "Scale": "0.65,0.3,0.3",
+        "Name": "Visual",
         "Enabled": true,
-        "Components": [
+        "Children": [
           {
-            "__type": "Sandbox.ModelRenderer",
-            "__guid": "ee8c0842-e43e-4eb1-9a15-395cfe63d2ae",
-            "BodyGroups": 18446744073709551615,
-            "Model": "models/dev/box.vmdl",
-            "RenderType": "On",
-            "Tint": "1,1,1,1"
+            "__guid": "184bebfe-80fe-4e8d-82f9-e582f95e19e8",
+            "Flags": 0,
+            "Name": "Cube",
+            "Scale": "0.02,0.3,0.3",
+            "Enabled": true,
+            "Components": [
+              {
+                "__type": "Sandbox.ModelRenderer",
+                "__guid": "ee8c0842-e43e-4eb1-9a15-395cfe63d2ae",
+                "BodyGroups": 18446744073709551615,
+                "Model": "models/dev/box.vmdl",
+                "RenderType": "On",
+                "Tint": "0.32915,0.81578,0.83256,0.62"
+              }
+            ]
           }
         ]
       }

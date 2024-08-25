@@ -30,6 +30,7 @@ public class WaterBeamSpell : BaseSpell
 	private float _nextDamageTime = 0.0f;
 
 	private GameObject _waterBeam;
+	private GameObject _waterBeamChild;
 
 	public WaterBeamSpell(GameObject caster)
 		: base(caster)
@@ -38,11 +39,21 @@ public class WaterBeamSpell : BaseSpell
 
 	private void UpdateWaterBeamTransform()
 	{
+		SceneTraceResult tr = RunEyeTrace();
+		var length = (tr.HitPosition - tr.StartPosition).Length;
+		// TODO: why?
+		if (!tr.Hit)
+			length /= 2.0f;
+
 		_waterBeam.Transform.LocalPosition =
 			_caster.Transform.Position +
-			CasterEyeOrigin + CastDirection * START_OFFSET;
+			CasterEyeOrigin + CastDirection * (START_OFFSET + length / 2.0f);
 		_waterBeam.Transform.LocalRotation =
 			CastDirection.EulerAngles;
+
+		if (_waterBeamChild != null)
+			_waterBeamChild.Transform.LocalScale =
+				_waterBeamChild.Transform.LocalScale.WithX(length);
 	}
 
 	public override void OnStartCasting()
@@ -51,6 +62,11 @@ public class WaterBeamSpell : BaseSpell
 		_waterBeam.SetPrefabSource(WATER_BEAM_PREFAB);
 		_waterBeam.UpdateFromPrefab();
 		_waterBeam.Transform.Scale = new Vector3(1.0f, 1.0f, 1.0f);
+		foreach (var child in _waterBeam.Children)
+		{
+			_waterBeamChild = _waterBeam;
+			break;
+		}
 
 		_waterBeam.Transform.ClearInterpolation();
 		UpdateWaterBeamTransform();

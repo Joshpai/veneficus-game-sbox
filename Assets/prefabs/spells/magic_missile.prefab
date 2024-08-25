@@ -19,7 +19,7 @@
         "__guid": "f3459cca-3efa-4b86-b3f2-917243f2d42f",
         "Center": "0,0,0",
         "IsTrigger": false,
-        "Radius": 32.90002,
+        "Radius": 7.800008,
         "Static": false
       },
       {
@@ -52,6 +52,14 @@
         "OverrideMassCenter": false,
         "RigidbodyFlags": 0,
         "StartAsleep": false
+      },
+      {
+        "__type": "Sandbox.SphereCollider",
+        "__guid": "28dd13ad-70ce-4a10-8ed3-2a320e014688",
+        "Center": "0,0,0",
+        "IsTrigger": true,
+        "Radius": 32.90002,
+        "Static": false
       }
     ],
     "Children": [],
