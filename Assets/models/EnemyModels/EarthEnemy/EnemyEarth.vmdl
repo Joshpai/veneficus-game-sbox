@@ -61,8 +61,8 @@
 						disable_interpolation = false
 						enable_scale = false
 						source_filename = "models/EnemyModels/EarthEnemy/EnemyEarth.fbx"
-						start_frame = 30
-						end_frame = 70
+						start_frame = 20
+						end_frame = 60
 						framerate = -1.0
 						take = 0
 						reverse = false
