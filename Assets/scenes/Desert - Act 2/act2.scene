@@ -2109,6 +2109,7 @@
       "Flags": 0,
       "Name": "fireball",
       "Position": "7103.438,224.8266,3001.875",
+      "Scale": "2,2,2",
       "Enabled": true,
       "Components": [
         {
@@ -2229,6 +2230,7 @@
       "Flags": 0,
       "Name": "fireball",
       "Position": "3682.476,-15743.64,4506.023",
+      "Scale": "2,2,2",
       "Enabled": true,
       "Components": [
         {
@@ -2269,6 +2271,7 @@
       "Flags": 0,
       "Name": "rendinggale",
       "Position": "-1504.394,-12669.28,4503.712",
+      "Scale": "2,2,2",
       "Enabled": true,
       "Components": [
         {
@@ -2320,6 +2323,7 @@
       "Flags": 0,
       "Name": "rendinggale",
       "Position": "-2314.656,-11512.48,2411.895",
+      "Scale": "2,2,2",
       "Enabled": true,
       "Components": [
         {

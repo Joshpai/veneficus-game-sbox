@@ -1963,6 +1963,7 @@
       "Flags": 0,
       "Name": "waterbeam",
       "Position": "-4003.488,-6687.145,-16007.66",
+      "Scale": "2,2,2",
       "Enabled": true,
       "Components": [
         {
@@ -2003,6 +2004,7 @@
       "Flags": 0,
       "Name": "waterbeam",
       "Position": "-37310.24,-6656.128,-20551.41",
+      "Scale": "2,2,2",
       "Enabled": true,
       "Components": [
         {

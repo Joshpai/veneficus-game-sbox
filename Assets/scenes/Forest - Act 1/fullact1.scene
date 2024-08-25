@@ -1384,6 +1384,7 @@
       "Name": "rockarmour",
       "Position": "-4991.362,-5912.432,-2363.208",
       "Rotation": "-0.0006968975,0.0003745854,0.8838392,0.4677902",
+      "Scale": "2,2,2",
       "Enabled": true,
       "Components": [
         {
@@ -1425,6 +1426,7 @@
       "Name": "manabarrier",
       "Position": "-5570.375,-10306.86,-1213.423",
       "Rotation": "-0.005474299,0.005817503,0.6852784,0.7282375",
+      "Scale": "2,2,2",
       "Enabled": true,
       "Components": [
         {
