@@ -3,7 +3,7 @@
 @inherits PanelComponent
 
 <root>
-	<div class="title">You Die xdddd</div>
+	<div class="title">You Died</div>
 	<div class="title">@DeathReason</div>
 	<button @onclick=@(() => Respawn())>Respawn</button>
 </root>
@@ -11,7 +11,7 @@
 @code
 {
 	[Property]
-	public string DeathReason { get; set; } = "skill issue";
+	public string DeathReason { get; set; } = "";
 
 	[Property]
 	public float? TimeScale { get; set; } = null;
