@@ -9,14 +9,15 @@ MainMenu
   border-radius: 20px;
   pointer-events: all;
 
-  /* Button hover and click sounds */
   button:hover
   {
+    filter: brightness(80%);
     sound-in: "sounds/UI/belt-buckle-01.sound";
   }
 
   button:active
   {
+    filter: brightness(50%);
     sound-in: "sounds/UI/belt-buckle-05.sound";
   }
 
@@ -75,18 +76,8 @@ MainMenu
       {
         padding: 10px;
         flex-grow: 1;
-        background-color: transparent;
+        background-color: #bbb;
         transition: background-color 0.1s ease;
-      }
-
-      button:hover
-      {
-        background-color: #aaa;
-      }
-
-      button:active
-      {
-        background-color: #666;
       }
     }
   }
@@ -111,8 +102,9 @@ MainMenu
         font-size: 50px;
         margin: auto;
         padding: 15px;
-        border-bottom: 3px solid black;
+        border-bottom: 3px solid white;
         margin-bottom: 15px;
+        color: white;
       }
 
       .save-new
@@ -214,8 +206,9 @@ MainMenu
         font-size: 50px;
         margin: auto;
         padding: 15px;
-        border-bottom: 3px solid black;
+        border-bottom: 3px solid white;
         margin-bottom: 15px;
+        color: white;
       }
 
       .acts-list
