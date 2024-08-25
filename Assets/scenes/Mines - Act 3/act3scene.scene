@@ -88,7 +88,10 @@
       "Enabled": true,
       "__Prefab": "prefabs/triggers/checkpoint_trigger.prefab",
       "__PrefabVariables": {
-        "Respawn Point Marker": null
+        "Respawn Point Marker": {
+          "_type": "gameobject",
+          "go": "94dc6380-2052-46b2-a924-a336fd5d7ce0"
+        }
       }
     },
     {
@@ -118,7 +121,10 @@
       "Enabled": true,
       "__Prefab": "prefabs/triggers/checkpoint_trigger.prefab",
       "__PrefabVariables": {
-        "Respawn Point Marker": null
+        "Respawn Point Marker": {
+          "_type": "gameobject",
+          "go": "9c25d0d3-cc62-4e28-8afd-eb4831a882b4"
+        }
       }
     },
     {
@@ -421,7 +427,6 @@
         "Hearing Radius": 1000,
         "Vision Range": 2500,
         "Vision Angle": 0.25132743,
-        "Attack Cooldown": 1,
         "Attack Range Ideal": 2500,
         "Attack Range Max": 2500
       }
@@ -439,7 +444,6 @@
         "Hearing Radius": 1000,
         "Vision Range": 6000,
         "Vision Angle": 0.12566371,
-        "Attack Cooldown": 1,
         "Attack Range Ideal": 6000,
         "Attack Range Max": 6000
       }
@@ -457,7 +461,6 @@
         "Hearing Radius": 1000,
         "Vision Range": 2500,
         "Vision Angle": 0.25132743,
-        "Attack Cooldown": 1,
         "Attack Range Ideal": 2500,
         "Attack Range Max": 2500
       }
@@ -475,7 +478,6 @@
         "Hearing Radius": 1000,
         "Vision Range": 6000,
         "Vision Angle": 0.12566371,
-        "Attack Cooldown": 1,
         "Attack Range Ideal": 6000,
         "Attack Range Max": 6000
       }
@@ -1095,7 +1097,6 @@
         "Hearing Radius": 1000,
         "Vision Range": 4000,
         "Vision Angle": 1,
-        "Attack Cooldown": 1,
         "Attack Range Ideal": 4000,
         "Attack Range Max": 4000
       }
@@ -1113,7 +1114,6 @@
         "Hearing Radius": 1000,
         "Vision Range": 4000,
         "Vision Angle": 1,
-        "Attack Cooldown": 1,
         "Attack Range Ideal": 4000,
         "Attack Range Max": 4000
       }
@@ -1131,7 +1131,6 @@
         "Hearing Radius": 1000,
         "Vision Range": 4000,
         "Vision Angle": 1,
-        "Attack Cooldown": 1,
         "Attack Range Ideal": 4000,
         "Attack Range Max": 4000
       }
@@ -1149,7 +1148,6 @@
         "Hearing Radius": 1000,
         "Vision Range": 4000,
         "Vision Angle": 1,
-        "Attack Cooldown": 1,
         "Attack Range Ideal": 4000,
         "Attack Range Max": 4000
       }
@@ -1344,7 +1342,6 @@
         "Hearing Radius": 1000,
         "Vision Range": 3500,
         "Vision Angle": 0.37699112,
-        "Attack Cooldown": 1,
         "Attack Range Ideal": 3500,
         "Attack Range Max": 3500
       }
@@ -1427,7 +1424,6 @@
         "Hearing Radius": 1000,
         "Vision Range": 4000,
         "Vision Angle": 0.25132743,
-        "Attack Cooldown": 1,
         "Attack Range Ideal": 4000,
         "Attack Range Max": 4000
       }
@@ -1550,7 +1546,6 @@
         "Hearing Radius": 1000,
         "Vision Range": 4000,
         "Vision Angle": 0.25132743,
-        "Attack Cooldown": 1,
         "Attack Range Ideal": 4000,
         "Attack Range Max": 4000
       }
@@ -1778,7 +1773,6 @@
         "Hearing Radius": 1000,
         "Vision Range": 5000,
         "Vision Angle": 0.25132743,
-        "Attack Cooldown": 1,
         "Attack Range Ideal": 5000,
         "Attack Range Max": 5000
       }
@@ -1796,7 +1790,6 @@
         "Hearing Radius": 1000,
         "Vision Range": 5000,
         "Vision Angle": 0.25132743,
-        "Attack Cooldown": 1,
         "Attack Range Ideal": 5000,
         "Attack Range Max": 5000
       }
@@ -1897,7 +1890,6 @@
         "Hearing Radius": 1000,
         "Vision Range": 7500,
         "Vision Angle": 0.12566371,
-        "Attack Cooldown": 1,
         "Attack Range Ideal": 7500,
         "Attack Range Max": 7500
       }
@@ -2083,7 +2075,6 @@
         "Hearing Radius": 1000,
         "Vision Range": 15000,
         "Vision Angle": 0.12566371,
-        "Attack Cooldown": 1,
         "Attack Range Ideal": 15000,
         "Attack Range Max": 15000
       }
@@ -2100,7 +2091,6 @@
         "Hearing Radius": 1000,
         "Vision Range": 15000,
         "Vision Angle": 0.12566371,
-        "Attack Cooldown": 1,
         "Attack Range Ideal": 15000,
         "Attack Range Max": 15000
       }
@@ -2118,7 +2108,6 @@
         "Hearing Radius": 1000,
         "Vision Range": 15000,
         "Vision Angle": 0.12566371,
-        "Attack Cooldown": 1,
         "Attack Range Ideal": 15000,
         "Attack Range Max": 15000
       }
