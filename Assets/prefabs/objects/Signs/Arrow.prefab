@@ -1,0 +1,34 @@
+{
+  "RootObject": {
+    "__guid": "15a78871-7f00-49df-8b84-03153b6df9a1",
+    "Flags": 0,
+    "Name": "arrow",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.ModelRenderer",
+        "__guid": "a53774b3-dc49-4b52-bf5a-3d4b8149dd38",
+        "BodyGroups": 18446744073709551615,
+        "Model": "models/environment/signs/arrow.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__type": "Sandbox.BoxCollider",
+        "__guid": "b38b759e-18c2-46aa-9951-c150d473900b",
+        "Center": "3,0,0",
+        "IsTrigger": false,
+        "Scale": "75,10,35",
+        "Static": false
+      }
+    ],
+    "Children": [],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}
