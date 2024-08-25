@@ -39,8 +39,8 @@ public class SaveData
 		foreach (var save in saves)
 		{
 			var saveFile = $"{SAVE_DIRECTORY}/{save}";
-			Log.Info(saveFile);
-			Log.Info(save);
+			// Log.Info(saveFile);
+			// Log.Info(save);
 			_saveFiles.Add(saveFile);
 			_allSaveData.Add(ParseSaveFile(saveFile));
 		}
@@ -83,7 +83,7 @@ public class SaveData
 
 	private static SaveDataFormat ParseSaveFile(String path)
 	{
-		Log.Info(path);
+		// Log.Info(path);
 		return FileSystem.Data.ReadJsonOrDefault<SaveDataFormat>(
 			path,
 			new SaveDataFormat()
