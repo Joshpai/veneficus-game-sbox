@@ -145,7 +145,7 @@ public sealed class PlayerMovementController : Component
 
 	public bool IsPolymorphed;
 
-	public bool LevelStarted { get; private set; }= true;
+	public bool LevelStarted { get; private set; } = true;
 	private SkinnedModelRenderer _modelRenderer;
 	private Model _oldModel;
 

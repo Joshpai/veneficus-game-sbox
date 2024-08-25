@@ -16,8 +16,13 @@
 	[Property]
 	public float? TimeScale { get; set; } = null;
 
+	[Property]
+	public HealthComponent PlayerHealthComponent { get; set; } = null;
+
 	void Respawn()
 	{
+		if (PlayerHealthComponent != null)
+			PlayerHealthComponent.InRespawn = false;
 		// Log.Info("Respawn");
 		LevelManagerStaticStore.IsLoading = false;
 		Scene.TimeScale = (TimeScale != null) ? TimeScale.Value : 1.0f;

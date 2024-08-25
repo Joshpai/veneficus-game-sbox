@@ -20,6 +20,8 @@ public sealed class HealthComponent : Component
 
 	public float Health { get; private set; }
 
+	public bool InRespawn { get; set; } = false;
+
 	public bool Alive { get; private set; } = false;
 
 	public event Action<float> OnHealthChanged;
