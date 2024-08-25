@@ -1147,34 +1147,6 @@
           "Keys": [
             {
               "_type": "gameobject",
-              "go": "0cb35410-53b9-4e02-a3cb-2db76d7f1f0d"
-            },
-            {
-              "_type": "gameobject",
-              "go": "72a9cd2c-1637-4e54-81e7-32f7cfb99c85"
-            },
-            {
-              "_type": "gameobject",
-              "go": "c6b5fa08-3537-4c32-ab65-71424ca40df8"
-            },
-            {
-              "_type": "gameobject",
-              "go": "6e30f29b-4c1f-4e94-8c35-83e6728b9718"
-            },
-            {
-              "_type": "gameobject",
-              "go": "375a4266-c52b-48b7-82e2-2c8a292e67c9"
-            },
-            {
-              "_type": "gameobject",
-              "go": "fb2c75b9-d475-4941-9d96-8096d4e2f71b"
-            },
-            {
-              "_type": "gameobject",
-              "go": "a50971fc-cbad-4e35-9c71-593743d0f9b2"
-            },
-            {
-              "_type": "gameobject",
               "go": "41aa5091-6ff2-44cf-922f-4e7cf29ec354"
             },
             {
