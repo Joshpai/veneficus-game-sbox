@@ -3,7 +3,6 @@
     "__guid": "19879050-3f24-485a-bc91-9bef20ef5c00",
     "Flags": 0,
     "Name": "smokepuff",
-    "Position": "0,0,25",
     "Tags": "particles",
     "Enabled": true,
     "Components": [
@@ -106,6 +105,7 @@
         "FaceVelocity": false,
         "FogStrength": 1,
         "LeadingTrail": false,
+        "Lighting": false,
         "MotionBlur": false,
         "Opaque": false,
         "RotationOffset": 0,

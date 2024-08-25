@@ -32,6 +32,8 @@
         "DeathCount_B": 5,
         "DeathCount_C": 10,
         "DeathCount_S": 0,
+        "FinishSound": "sounds/World/endofleveltouched",
+        "FinishSoundMixerName": "Game",
         "LevelIndex": -1,
         "MainMenu": "scenes/main_menu.scene",
         "TargetEnemiesKilledPercent_A": 0.9,

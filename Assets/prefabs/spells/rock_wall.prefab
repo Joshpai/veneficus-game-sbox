@@ -37,6 +37,7 @@
             "HealMultiplier": 1,
             "HealthRegenDelay": 0,
             "HealthRegenRate": 0,
+            "HurtSoundMixerName": "Game",
             "MaxHealth": 300
           }
         ]

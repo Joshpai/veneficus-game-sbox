@@ -2,7 +2,7 @@
   "RootObject": {
     "__guid": "a96433bb-866f-474f-b5ab-1b586f06a60f",
     "Flags": 0,
-    "Name": "trigger",
+    "Name": "_trigger_base_duplicate_and_repurpose",
     "Enabled": true,
     "Children": [
       {

@@ -110,6 +110,7 @@
         "FaceVelocity": false,
         "FogStrength": 1,
         "LeadingTrail": true,
+        "Lighting": false,
         "MotionBlur": false,
         "Opaque": false,
         "RotationOffset": 0,

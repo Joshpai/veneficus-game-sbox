@@ -2,7 +2,7 @@
   "RootObject": {
     "__guid": "17ed16d0-7ff0-4360-a350-d7ddbcb374d3",
     "Flags": 0,
-    "Name": "fireenemy1",
+    "Name": "test_enemy",
     "Enabled": true,
     "Components": [
       {
@@ -58,6 +58,9 @@
         "DamageMultiplier": 1,
         "DestroyOnDeath": true,
         "HealMultiplier": 1,
+        "HealthRegenDelay": 0,
+        "HealthRegenRate": 0,
+        "HurtSoundMixerName": "Game",
         "MaxHealth": 100
       },
       {
