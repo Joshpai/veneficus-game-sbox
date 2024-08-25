@@ -176,7 +176,7 @@ public sealed class LevelEnd : InteractableComponent
 
 			finishSummary.DeathCount =
 				LevelManagerStaticStore.Stats.DeathCount;
-			summaryData.DeathRank = summaryData.DeathRank;
+			finishSummary.DeathRank = summaryData.DeathRank;
 
 			finishSummary.ChallengeDescription =
 				LevelManagerStaticStore.Stats.ChallengeDescription;
@@ -192,6 +192,8 @@ public sealed class LevelEnd : InteractableComponent
 			finishSummary.OnMainMenu += ReturnToMainMenu;
 			finishSummary.OnNextLevel += StartNextLevel;
 		}
+
+		LevelManagerStaticStore.Stats = new LevelStats();
 
 		UpdateSaveDataLevelSummary(summaryData);
 	}
