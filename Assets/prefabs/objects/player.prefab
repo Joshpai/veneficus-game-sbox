@@ -55,6 +55,8 @@
         "InteractRange": 550,
         "JumpCoyoteTime": 0.15,
         "JumpDuration": 0.8,
+        "JumpSound": "sounds/Player/jump",
+        "JumpSoundMixerName": "Game",
         "LevelStartPortal": "models/environment/teleporter/teleporter.vmdl",
         "MaxJumpHoldLength": 0.31,
         "PlayerFriction": 10,
@@ -73,6 +75,8 @@
         "PolymorphedRadius": 12,
         "PolymorphedStepHeight": 5,
         "SceneGravity": "0,0,-950",
+        "StartLevelSound": "sounds/Player/gettingoutofstartoflevel",
+        "StartLevelSoundMixerName": "Game",
         "WalkSpeed": 400
       },
       {
@@ -81,8 +85,10 @@
         "DamageMultiplier": 1,
         "DestroyOnDeath": false,
         "HealMultiplier": 1,
-        "HealthRegenDelay": 3,
-        "HealthRegenRate": 10,
+        "HealthRegenDelay": 5,
+        "HealthRegenRate": 5,
+        "HurtSound": "sounds/Player/playerhurt",
+        "HurtSoundMixerName": "Game",
         "MaxHealth": 100
       },
       {
@@ -90,7 +96,7 @@
         "__guid": "06d5e6b4-10f6-4af0-a0d9-55593bbf8591",
         "ManaRefundAmount": 0.5,
         "ManaRegenDelay": 1,
-        "ManaRegenRate": 100,
+        "ManaRegenRate": 25,
         "PlayerMovementControllerRef": {
           "_type": "component",
           "component_id": "8b1cbddb-d250-48f9-8481-5e1002d93f6a",
