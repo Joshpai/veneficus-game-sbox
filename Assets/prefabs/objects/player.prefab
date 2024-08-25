@@ -55,6 +55,7 @@
         "InteractRange": 550,
         "JumpCoyoteTime": 0.15,
         "JumpDuration": 0.8,
+        "LevelStartPortal": "models/environment/teleporter/teleporter.vmdl",
         "MaxJumpHoldLength": 0.31,
         "PlayerFriction": 10,
         "PolyJumpGraceHeightPercent": 0.75,

@@ -116,6 +116,9 @@ public sealed class PlayerMovementController : Component
 	[Property]
 	public float InteractRange { get; set; } = 64.0f;
 
+	[Property]
+	public Model LevelStartPortal { get; set; } = Model.Sphere;
+
 	public bool IsDashing { get; set; } = false;
 
 	public float CameraFollowDistance;
@@ -200,11 +203,7 @@ public sealed class PlayerMovementController : Component
 		if (_modelRenderer != null)
 		{
 			_oldModel = _modelRenderer.Model;
-			// _modelRenderer.Model = Model.Builder.Create();
-			// TODO: spawn a prefab portal here instead. This offset business
-			// is temporary as the sphere's origin is inside of it.
-			_modelRenderer.Model = Model.Sphere;
-			_modelRenderer.Transform.Position += Vector3.Up * 32.0f;
+			_modelRenderer.Model = LevelStartPortal;
 		}
 		Transform.Position += HumanEyePosition;
 		EyePosition = Vector3.Zero;
@@ -216,7 +215,6 @@ public sealed class PlayerMovementController : Component
 		if (_modelRenderer != null)
 		{
 			_modelRenderer.Model = _oldModel;
-			_modelRenderer.Transform.Position -= Vector3.Up * 32.0f;
 		}
 		Transform.Position -= HumanEyePosition;
 		EyePosition = HumanEyePosition;
