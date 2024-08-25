@@ -1,5 +1,5 @@
 {
-  "__guid": "7428e07f-d752-43f3-a324-dbe175d195e9",
+  "__guid": "7eb3b0a9-b1f5-446a-abc0-1e3613feb5d8",
   "GameObjects": [
     {
       "__guid": "80060495-5eaa-41ed-b006-7cd4b5e4a7b8",
@@ -314,7 +314,7 @@
       "__guid": "180f2a41-e5d6-4575-b06d-4cc9fb511699",
       "Flags": 0,
       "Name": "Spot Light",
-      "Position": "50.84135,-118.3276,534.4869",
+      "Position": "-94.45342,-91.50735,519.2272",
       "Rotation": "0,0.7071067,0,0.7071068",
       "Tags": "light_spot,light",
       "Enabled": true,
@@ -322,9 +322,9 @@
         {
           "__type": "Sandbox.SpotLight",
           "__guid": "26c81a12-5f81-4e00-b8cc-68910eb1fd31",
-          "Attenuation": 3.29,
+          "Attenuation": 0,
           "ConeInner": 15,
-          "ConeOuter": 45,
+          "ConeOuter": 12.82,
           "FogMode": "Enabled",
           "FogStrength": 1,
           "LightColor": "0.93023,0.88048,0.63169,1",
