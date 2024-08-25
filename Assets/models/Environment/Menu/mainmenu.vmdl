@@ -1,0 +1,97 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc29:version{3cec427c-1b0e-4d48-a90a-0436f33a6041} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "MaterialGroupList"
+				children = 
+				[
+					{
+						_class = "DefaultMaterialGroup"
+						remaps = [  ]
+						use_global_default = true
+						global_default_material = "materials/menu/menu.vmat"
+					},
+				]
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						filename = "models/environment/menu/mainmenu.fbx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = true
+							exception_list = 
+							[
+								"Circle",
+								"Cube_049",
+								"Cube_053",
+								"Cube_061",
+								"Cube_062",
+								"Cube_063",
+								"Cube_064",
+								"Cube_065",
+								"Cube_066",
+								"Circle_017",
+								"Circle_018",
+								"Circle_019",
+								"Circle_020",
+								"Circle_021",
+								"Circle_022",
+								"Circle_023",
+								"Circle_024",
+								"Circle_025",
+								"Circle_026",
+								"Circle_027",
+								"Circle_028",
+								"Circle_029",
+								"Circle_030",
+								"Cube_067",
+								"Cube_068",
+								"Circle_031",
+								"Circle_035",
+								"Circle_036",
+								"Circle_037",
+								"Circle_038",
+								"Circle_039",
+								"Circle_040",
+								"Circle_041",
+								"Circle_045",
+								"Circle_046",
+								"Circle_047",
+								"Circle_048",
+								"Circle_049",
+								"Circle_050",
+								"Circle_051",
+								"Circle_052",
+								"Circle_053",
+								"Circle_054",
+								"Circle_055",
+								"Circle_056",
+								"Circle_057",
+								"Circle_058",
+							]
+						}
+					},
+				]
+			},
+		]
+		model_archetype = ""
+		primary_associated_entity = ""
+		anim_graph_name = ""
+		base_model_name = ""
+	}
+}
