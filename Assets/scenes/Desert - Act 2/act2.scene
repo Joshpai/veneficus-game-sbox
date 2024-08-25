@@ -50,10 +50,10 @@
       "__PrefabVariables": {
         "Next Level": "scenes/mines - act 3/act3scene.scene",
         "Deferred Next Level": null,
-        "Target Finish Time S": 0,
-        "Target Finish Time A": 0,
-        "Target Finish Time B": 0,
-        "Target Finish Time D": 0,
+        "Target Finish Time S": 120,
+        "Target Finish Time A": 150,
+        "Target Finish Time B": 180,
+        "Target Finish Time D": 210,
         "Target Enemies Killed Percent S": 1,
         "Target Enemies Killed Percent A": 0.9,
         "Target Enemies Killed Percent B": 0.75,
@@ -66,7 +66,7 @@
         "Death Count A": 2,
         "Death Count B": 5,
         "Death Count C": 10,
-        "LevelIndex": -1
+        "LevelIndex": 2
       }
     },
     {
