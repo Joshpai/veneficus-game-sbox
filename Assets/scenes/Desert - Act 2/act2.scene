@@ -73,7 +73,7 @@
       "__guid": "7b48ab69-f445-4a5c-b81e-e0e1f9fc8d35",
       "Flags": 0,
       "Name": "level_transition",
-      "Position": "-7728.287,-17446.84,569.001",
+      "Position": "-7728.287,-17446.84,10814.84",
       "Enabled": true,
       "__Prefab": "prefabs/objects/level_transition.prefab",
       "__PrefabVariables": {}
@@ -2529,6 +2529,16 @@
           "enemy"
         ]
       }
+    },
+    {
+      "__guid": "e8ef13f8-e49d-4327-a18e-1147d4d57ebd",
+      "Flags": 0,
+      "Name": "death_trigger",
+      "Position": "1183.376,-8041.763,-338.2923",
+      "Scale": "571.5211,617.1986,1",
+      "Enabled": true,
+      "__Prefab": "prefabs/triggers/death_trigger.prefab",
+      "__PrefabVariables": {}
     }
   ],
   "SceneProperties": {

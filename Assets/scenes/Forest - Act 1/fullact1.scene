@@ -1573,6 +1573,16 @@
           "Tint": "1,1,1,1"
         }
       ]
+    },
+    {
+      "__guid": "f9472852-ab6a-4069-bb0f-cd451fd5faf0",
+      "Flags": 0,
+      "Name": "death_trigger (1)",
+      "Position": "-4467.894,-7711.5,-4591.753",
+      "Scale": "567.0558,660.2939,1",
+      "Enabled": true,
+      "__Prefab": "prefabs/triggers/death_trigger.prefab",
+      "__PrefabVariables": {}
     }
   ],
   "SceneProperties": {

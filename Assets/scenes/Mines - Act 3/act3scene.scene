@@ -2537,6 +2537,17 @@
           "enemy"
         ]
       }
+    },
+    {
+      "__guid": "6fa2ec6e-3aa4-4c85-a98a-b631abca2b0b",
+      "Flags": 0,
+      "Name": "death_trigger",
+      "Position": "-20775.23,9531.726,-21391.12",
+      "Rotation": "0.5,0.5,-0.5,0.5",
+      "Scale": "1,1618.028,546.6035",
+      "Enabled": true,
+      "__Prefab": "prefabs/triggers/death_trigger.prefab",
+      "__PrefabVariables": {}
     }
   ],
   "SceneProperties": {
