@@ -23,6 +23,8 @@ PlayerHUD
     justify-content: center;
 
     div {
+      align-items: center;
+      justify-content: center;
       border: 3px solid black;
       padding: 15px;
       font-size: 48px;
@@ -30,6 +32,13 @@ PlayerHUD
       position: relative;
       width: auto;
       height: auto;
+
+      img
+      {
+        filter: brightness(0%);
+        width: 64px;
+        height: 64px;
+      }
     }
   }
 
