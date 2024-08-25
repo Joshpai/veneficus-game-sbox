@@ -35,7 +35,7 @@
 						_class = "DefaultMaterialGroup"
 						remaps = [  ]
 						use_global_default = true
-						global_default_material = "materials/world/woodplanks/woodplanks.vmat"
+						global_default_material = "materials/world/signs/signarrow.vmat"
 					},
 				]
 			},
