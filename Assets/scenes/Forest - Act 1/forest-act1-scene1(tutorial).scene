@@ -130,6 +130,34 @@
       ]
     },
     {
+      "__guid": "e62223b1-6536-4366-8c77-d4ebfdeddb6a",
+      "Flags": 0,
+      "Name": "signjump (4)",
+      "Position": "-1681.834,-1408.611,162.6099",
+      "Rotation": "0,0,0.258819,0.9659259",
+      "Scale": "1.797451,1.797451,1.797451",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "42ef26ed-e2b7-4a07-a3e2-9b333bc2f8b2",
+          "BodyGroups": 18446744073709551615,
+          "MaterialOverride": "materials/world/signs/signdead.vmat",
+          "Model": "models/environment/signs/signjump.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "de09402e-4391-4b8b-87a5-9b40011f0488",
+          "Center": "0,0,65",
+          "IsTrigger": false,
+          "Scale": "18,95,145",
+          "Static": false
+        }
+      ]
+    },
+    {
       "__guid": "1d61d142-1ac7-484c-8a96-1c04581d048c",
       "Flags": 0,
       "Name": "signjump (2)",
