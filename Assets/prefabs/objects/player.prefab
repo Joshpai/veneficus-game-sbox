@@ -204,6 +204,46 @@
             "Viewport": "0,0,1,1",
             "ZFar": 10000,
             "ZNear": 0.1
+          },
+          {
+            "__type": "Sandbox.Vignette",
+            "__guid": "83799409-d040-4eff-bbde-5be57e7fe89d",
+            "Center": "0.5,0.5",
+            "Color": "0,0,0,1",
+            "Intensity": 0.4,
+            "Roundness": 1,
+            "Smoothness": 1
+          },
+          {
+            "__type": "Sandbox.ChromaticAberration",
+            "__guid": "bf6bcf53-a0e1-4f6e-aa2b-4596597d767f",
+            "Offset": "4,6,0",
+            "Scale": 0.1
+          },
+          {
+            "__type": "Sandbox.Tonemapping",
+            "__guid": "704cdaf3-3627-4f8a-a7df-4042cf044541",
+            "__version": 1,
+            "ExposureBias": 2.36,
+            "ExposureCompensation": 0,
+            "ExposureMethod": "Luminance",
+            "MaximumExposure": 2,
+            "MinimumExposure": 1,
+            "Mode": "HableFilmic",
+            "Rate": 1
+          },
+          {
+            "__type": "Sandbox.ColorAdjustments",
+            "__guid": "f014e71a-0994-4f34-8e38-ade628b53af0",
+            "Brightness": 1.35,
+            "Contrast": 1,
+            "HueRotate": 0,
+            "Saturation": 1.25
+          },
+          {
+            "__type": "Sandbox.Sharpen",
+            "__guid": "2c1a727a-5f4b-404a-8347-b3982d589a0a",
+            "Scale": 0.5
           }
         ]
       }
