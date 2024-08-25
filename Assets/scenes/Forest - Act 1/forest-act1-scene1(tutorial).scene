@@ -73,6 +73,117 @@
           "enemy"
         ]
       }
+    },
+    {
+      "__guid": "226386c4-b558-4703-9a81-ab6ca987af7d",
+      "Flags": 0,
+      "Name": "signjump",
+      "Position": "-442.3557,194.8181,-108.7769",
+      "Rotation": "0,0,-0.3826834,0.9238796",
+      "Scale": "1.797451,1.797451,1.797451",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "af2866db-0d7b-49ef-899d-4d51f21d6678",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/environment/signs/signjump.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "4d9b919b-b351-4f15-9a5e-30cba78f330f",
+          "Center": "0,0,65",
+          "IsTrigger": false,
+          "Scale": "18,95,145",
+          "Static": false
+        }
+      ]
+    },
+    {
+      "__guid": "bd65023c-6a5f-4500-b9ae-ca74a663dcb7",
+      "Flags": 0,
+      "Name": "signjump (1)",
+      "Position": "-900.5414,-70.89627,-120.1664",
+      "Rotation": "0,0,0.258819,0.9659259",
+      "Scale": "1.797451,1.797451,1.797451",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "94dcf5b6-ba81-419e-b839-20ecddb2bfba",
+          "BodyGroups": 18446744073709551615,
+          "MaterialOverride": "materials/world/signs/signpolyfrog.vmat",
+          "Model": "models/environment/signs/signjump.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "a6072406-1282-4fd8-95b5-9047e3381bf6",
+          "Center": "0,0,65",
+          "IsTrigger": false,
+          "Scale": "18,95,145",
+          "Static": false
+        }
+      ]
+    },
+    {
+      "__guid": "1d61d142-1ac7-484c-8a96-1c04581d048c",
+      "Flags": 0,
+      "Name": "signjump (2)",
+      "Position": "-271.2799,-1408.103,-147.3713",
+      "Rotation": "0,0,0.9999999,0.0000001788139",
+      "Scale": "1.797451,1.797451,1.797451",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "2878539f-12d1-43a4-a18d-a94dbe4c8826",
+          "BodyGroups": 18446744073709551615,
+          "MaterialOverride": "materials/world/signs/signpolyfrog.vmat",
+          "Model": "models/environment/signs/signjump.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "919e33c5-dfec-4338-80a6-5f3edbbfe5fe",
+          "Center": "0,0,65",
+          "IsTrigger": false,
+          "Scale": "18,95,145",
+          "Static": false
+        }
+      ]
+    },
+    {
+      "__guid": "b168254d-9614-499e-95a5-f37d6c71ba21",
+      "Flags": 0,
+      "Name": "signjump (3)",
+      "Position": "315.4354,-1082.697,952.2887",
+      "Rotation": "-0.2705981,-0.270598,0.6532815,0.6532816",
+      "Scale": "1.797451,1.797451,1.797451",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "992bbc33-b9a3-4b5b-9b02-9db708e25bb7",
+          "BodyGroups": 18446744073709551615,
+          "MaterialOverride": "materials/world/signs/signpolyfrog.vmat",
+          "Model": "models/environment/signs/signjump.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "7bf770b3-6289-437f-8076-12251bbcd598",
+          "Center": "0,0,110",
+          "IsTrigger": false,
+          "Scale": "18,95,60",
+          "Static": false
+        }
+      ]
     }
   ],
   "SceneProperties": {

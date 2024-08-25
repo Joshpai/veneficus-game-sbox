@@ -1040,6 +1040,33 @@
           "Tint": "1,1,1,1"
         }
       ]
+    },
+    {
+      "__guid": "9f7a7de8-22e0-4cbc-9f52-f8da4536d3e5",
+      "Flags": 0,
+      "Name": "signmissile",
+      "Position": "-181.7447,-310.9654,-127.2665",
+      "Rotation": "0,0,0.3826834,0.9238796",
+      "Scale": "1.940369,1.940369,1.940369",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "dcfea9b2-6cba-443d-bebf-ad9e46d514ae",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/environment/signs/signmissile.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "8bbd8bbb-3a82-4329-8919-8bd74448acc4",
+          "Center": "0,2,75",
+          "IsTrigger": false,
+          "Scale": "18,90,110",
+          "Static": false
+        }
+      ]
     }
   ],
   "SceneProperties": {
