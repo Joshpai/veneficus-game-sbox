@@ -8,7 +8,11 @@
 	{
 		<root>
 			<div class="start-hint">
-			<div>Press "E" to spawn</div>
+			<div>
+				Press
+				<img src="@(Input.GetGlyph("use", InputGlyphSize.Small, true).ResourcePath)" />
+				to spawn
+			</div>
 			</div>
 		</root>
 	}
