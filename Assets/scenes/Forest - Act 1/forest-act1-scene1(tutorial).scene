@@ -142,7 +142,7 @@
           "__type": "Sandbox.ModelRenderer",
           "__guid": "2878539f-12d1-43a4-a18d-a94dbe4c8826",
           "BodyGroups": 18446744073709551615,
-          "MaterialOverride": "materials/world/signs/signpolyfrog.vmat",
+          "MaterialOverride": "materials/world/signs/signpolyjump.vmat",
           "Model": "models/environment/signs/signjump.vmdl",
           "RenderType": "On",
           "Tint": "1,1,1,1"
@@ -170,7 +170,7 @@
           "__type": "Sandbox.ModelRenderer",
           "__guid": "992bbc33-b9a3-4b5b-9b02-9db708e25bb7",
           "BodyGroups": 18446744073709551615,
-          "MaterialOverride": "materials/world/signs/signpolyfrog.vmat",
+          "MaterialOverride": "materials/world/signs/signtp.vmat",
           "Model": "models/environment/signs/signjump.vmdl",
           "RenderType": "On",
           "Tint": "1,1,1,1"
