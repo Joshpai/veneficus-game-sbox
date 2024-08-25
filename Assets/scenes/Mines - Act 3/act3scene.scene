@@ -1445,7 +1445,7 @@
           "Keys": [
             {
               "_type": "gameobject",
-              "go": "e2125858-ecb5-4427-a6c5-d173698fd302"
+              "go": "0c48ab5e-10f6-4d9f-b425-098d9a324334"
             }
           ],
           "OpenDistance": 100,
@@ -1485,7 +1485,7 @@
           "Keys": [
             {
               "_type": "gameobject",
-              "go": "8e54aa1b-6089-4cd8-b671-e3201a3fbcff"
+              "go": "5e8ca855-c5c8-48ff-9a8b-12e97ed0093e"
             }
           ],
           "OpenDistance": 100,
@@ -1496,6 +1496,68 @@
           "RotationSpeed": 3
         }
       ]
+    },
+    {
+      "__guid": "1b81a5d2-fe00-43a4-baa5-1b4ccf1f947c",
+      "Flags": 0,
+      "Name": "checkpoint_triggerspawn",
+      "Position": "-1.039948,0.08225441,0",
+      "Enabled": true,
+      "__Prefab": "prefabs/triggers/checkpoint_trigger.prefab",
+      "__PrefabVariables": {
+        "Respawn Point Marker": {
+          "_type": "gameobject",
+          "go": "4b58d72c-2f27-43cb-8a8b-3fc1207a0b93"
+        }
+      }
+    },
+    {
+      "__guid": "4b58d72c-2f27-43cb-8a8b-3fc1207a0b93",
+      "Flags": 0,
+      "Name": "checkpointspawnpoint",
+      "Position": "-1.831711,0.3853536,110.6351",
+      "Rotation": "0,0,0.7071068,0.7071068",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "760a9104-07aa-4b9f-b2a1-8d393f9b6c5c",
+          "__enabled": false,
+          "BodyGroups": 18446744073709551615,
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ]
+    },
+    {
+      "__guid": "0c48ab5e-10f6-4d9f-b425-098d9a324334",
+      "Flags": 0,
+      "Name": "key_trigger",
+      "Position": "-4002.898,-6687.805,-16032",
+      "Enabled": true,
+      "__Prefab": "prefabs/triggers/key_trigger.prefab",
+      "__PrefabVariables": {
+        "PushVector": "0,50,0",
+        "Pushable Tags": [
+          "player",
+          "enemy"
+        ]
+      }
+    },
+    {
+      "__guid": "5e8ca855-c5c8-48ff-9a8b-12e97ed0093e",
+      "Flags": 0,
+      "Name": "key_trigger1",
+      "Position": "-37311.38,-6655.251,-20575.09",
+      "Enabled": true,
+      "__Prefab": "prefabs/triggers/key_trigger.prefab",
+      "__PrefabVariables": {
+        "PushVector": "0,50,0",
+        "Pushable Tags": [
+          "player",
+          "enemy"
+        ]
+      }
     }
   ],
   "SceneProperties": {

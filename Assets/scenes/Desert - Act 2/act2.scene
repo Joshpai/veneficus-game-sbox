@@ -981,7 +981,7 @@
               "go": "30954c2e-ebdf-4b50-adc6-48e8ddac9261"
             }
           ],
-          "OpenDistance": 500,
+          "OpenDistance": 750,
           "OpenTime": 1,
           "OpenType": "MoveDown",
           "RotationAmount": 90,
@@ -1297,7 +1297,7 @@
           "Keys": [
             {
               "_type": "gameobject",
-              "go": "260b6926-3a11-45f8-ae93-3f31c40b1dba"
+              "go": "7d4afaff-4ade-44fa-a876-5a5a385100ef"
             }
           ],
           "OpenDistance": 0,
@@ -1417,7 +1417,7 @@
           "Keys": [
             {
               "_type": "gameobject",
-              "go": "eb500c5f-deb5-4c76-bce1-f8404f7062c2"
+              "go": "caf8df16-faee-4da8-8839-4fdfd0306f30"
             }
           ],
           "OpenDistance": 0,
@@ -1508,7 +1508,7 @@
           "Keys": [
             {
               "_type": "gameobject",
-              "go": "85339c72-a0a0-45a0-9c3d-5e82c53ab076"
+              "go": "5ef4129f-8ff6-4d3b-b8bb-a3dfc1d37169"
             }
           ],
           "OpenDistance": 0,
@@ -1541,6 +1541,150 @@
       "Flags": 0,
       "Name": "key_trigger (2)",
       "Position": "-1502.865,-12671.22,4480",
+      "Enabled": true,
+      "__Prefab": "prefabs/triggers/key_trigger.prefab",
+      "__PrefabVariables": {
+        "PushVector": "0,50,0",
+        "Pushable Tags": [
+          "player",
+          "enemy"
+        ]
+      }
+    },
+    {
+      "__guid": "a1046382-9970-4cc3-9366-cc07b020cc7a",
+      "Flags": 0,
+      "Name": "CheckpointSpawnTrigger",
+      "Position": "2.757192,0.4203018,0.003014481",
+      "Rotation": "0.00000001024455,0.0000008642673,-0.006183035,0.9999808",
+      "Enabled": true,
+      "__Prefab": "prefabs/triggers/checkpoint_trigger.prefab",
+      "__PrefabVariables": {
+        "Respawn Point Marker": {
+          "_type": "gameobject",
+          "go": "1e0c3a35-60a3-4c46-aeed-a459e425263c"
+        }
+      }
+    },
+    {
+      "__guid": "1e0c3a35-60a3-4c46-aeed-a459e425263c",
+      "Flags": 0,
+      "Name": "CheckpointSpawnPoint",
+      "Position": "3.531576,0.3906403,26.40856",
+      "Rotation": "0,0,-0.9659258,0.2588191",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "017ca40f-c9e6-4b12-b3c4-0460359c2b4e",
+          "__enabled": false,
+          "BodyGroups": 18446744073709551615,
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ]
+    },
+    {
+      "__guid": "992633a6-b495-4239-9b69-bdea67b299ba",
+      "Flags": 0,
+      "Name": "CheckpointRoom1(1)Trigger",
+      "Position": "2284.644,-2170.701,2208",
+      "Scale": "21.615,1,23.63945",
+      "Enabled": true,
+      "__Prefab": "prefabs/triggers/checkpoint_trigger.prefab",
+      "__PrefabVariables": {
+        "Respawn Point Marker": {
+          "_type": "gameobject",
+          "go": "add28138-1c43-49d3-ba57-cd6e8bb35d52"
+        }
+      }
+    },
+    {
+      "__guid": "add28138-1c43-49d3-ba57-cd6e8bb35d52",
+      "Flags": 0,
+      "Name": "CheckpointRoom1(1)Point",
+      "Position": "2309.582,-1750.424,2358.92",
+      "Rotation": "0,0,-0.7071069,0.7071069",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "b74a3fe9-5673-40aa-bf82-bede437ce8e3",
+          "__enabled": false,
+          "BodyGroups": 18446744073709551615,
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ]
+    },
+    {
+      "__guid": "c87f84a8-d428-4858-a6bc-23e4ca94444b",
+      "Flags": 0,
+      "Name": "CheckpointRoom1(2)Trigger",
+      "Position": "5441.663,-5141.594,3088",
+      "Scale": "12.21913,19.97149,1",
+      "Enabled": true,
+      "__Prefab": "prefabs/triggers/checkpoint_trigger.prefab",
+      "__PrefabVariables": {
+        "Respawn Point Marker": {
+          "_type": "gameobject",
+          "go": "f8d7452d-15a3-408f-90ac-e64d564236a9"
+        }
+      }
+    },
+    {
+      "__guid": "f8d7452d-15a3-408f-90ac-e64d564236a9",
+      "Flags": 0,
+      "Name": "CheckpointRoom1(2)Point",
+      "Position": "5462.442,-5063.111,3232.351",
+      "Rotation": "0,0,0.7071068,0.7071067",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "01682f78-2b8f-4c78-b713-846e8fd8b4e1",
+          "__enabled": false,
+          "BodyGroups": 18446744073709551615,
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ]
+    },
+    {
+      "__guid": "caf8df16-faee-4da8-8839-4fdfd0306f30",
+      "Flags": 0,
+      "Name": "key_trigger (3)",
+      "Position": "3683.128,-15743.59,4480",
+      "Enabled": true,
+      "__Prefab": "prefabs/triggers/key_trigger.prefab",
+      "__PrefabVariables": {
+        "PushVector": "0,50,0",
+        "Pushable Tags": [
+          "player",
+          "enemy"
+        ]
+      }
+    },
+    {
+      "__guid": "7d4afaff-4ade-44fa-a876-5a5a385100ef",
+      "Flags": 0,
+      "Name": "key_trigger (4)",
+      "Position": "7103.566,223.5659,2976",
+      "Enabled": true,
+      "__Prefab": "prefabs/triggers/key_trigger.prefab",
+      "__PrefabVariables": {
+        "PushVector": "0,50,0",
+        "Pushable Tags": [
+          "player",
+          "enemy"
+        ]
+      }
+    },
+    {
+      "__guid": "5ef4129f-8ff6-4d3b-b8bb-a3dfc1d37169",
+      "Flags": 0,
+      "Name": "key_trigger (5)",
+      "Position": "-2314.902,-11511.21,2384",
       "Enabled": true,
       "__Prefab": "prefabs/triggers/key_trigger.prefab",
       "__PrefabVariables": {
