@@ -82,9 +82,9 @@
       "__guid": "23238707-3da4-4999-ac9a-4dd6b6dc5d14",
       "Flags": 0,
       "Name": "CheckpointOneTrigger",
-      "Position": "131.7754,-4672,-8452.523",
+      "Position": "131.7754,-4735.572,-8452.523",
       "Rotation": "-0.5,0.5,0.5,0.5",
-      "Scale": "1,4.921585,5.552709",
+      "Scale": "102.6146,8.995982,7.734567",
       "Enabled": true,
       "__Prefab": "prefabs/triggers/checkpoint_trigger.prefab",
       "__PrefabVariables": {
