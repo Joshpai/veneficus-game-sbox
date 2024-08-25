@@ -17,7 +17,7 @@
             "__type": "Sandbox.ModelRenderer",
             "__guid": "3d51087b-80fd-46a5-9342-e6f298f0d3cc",
             "BodyGroups": 18446744073709551615,
-            "Model": "models/dev/box.vmdl",
+            "Model": "models/playermodels/spells/rockwall/rockwall.vmdl",
             "RenderType": "On",
             "Tint": "1,1,1,1"
           },
