@@ -51,7 +51,41 @@
         "StopCameraFaceProbability": 0.5
       }
     ],
-    "Children": [],
+    "Children": [
+      {
+        "__guid": "062f2868-3c9e-4419-9ae0-6df1300592c9",
+        "Flags": 0,
+        "Name": "SoundSystem",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.SoundPointComponent",
+            "__guid": "ee515cfe-11d1-4fbb-9f1d-570d43364f98",
+            "DistanceAttenuation": false,
+            "DistanceAttenuationOverride": false,
+            "Force2d": false,
+            "MaxRepeatTime": 1,
+            "MinRepeatTime": 1,
+            "Occlusion": false,
+            "OcclusionOverride": false,
+            "OcclusionRadius": 32,
+            "Pitch": 1,
+            "PlayOnStart": true,
+            "ReflectionOverride": false,
+            "Reflections": false,
+            "Repeat": true,
+            "SoundEvent": "sounds/world/endoflevelportalambience.sound",
+            "SoundOverride": true,
+            "StopOnNew": false,
+            "TargetMixer": {
+              "Name": "ambience",
+              "Id": "2a3d8ad9-6fbc-4d2c-960f-b81b069e3905"
+            },
+            "Volume": 10
+          }
+        ]
+      }
+    ],
     "__variables": [
       {
         "Id": "Next Level",

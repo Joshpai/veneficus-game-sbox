@@ -1,5 +1,5 @@
 {
-  "__guid": "85e6307c-b1f7-42ea-b5d1-8a9bf8916139",
+  "__guid": "62eebbc4-c056-4a10-8818-6dee8c59fd2c",
   "GameObjects": [
     {
       "__guid": "4a6421a8-579c-4467-85c8-eba5a4c4d60f",
@@ -3415,7 +3415,7 @@
           "Center": "0,0,0",
           "IsTrigger": false,
           "Scale": "50,50",
-          "Static": false
+          "Static": true
         }
       ]
     }

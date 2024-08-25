@@ -65,6 +65,8 @@ public sealed class LevelEnd : InteractableComponent
 	[Property]
 	public int DeathCount_C { get; set; } = 10;
 
+	private SoundFile _endOfLevelTouched = SoundFile.Load("sounds/World/endofleveltouched.vsnd");
+	
 	protected override void OnStart()
 	{
 		LevelTransition.Enabled = false;
@@ -196,6 +198,8 @@ public sealed class LevelEnd : InteractableComponent
 		LevelManagerStaticStore.Stats = new LevelStats();
 
 		UpdateSaveDataLevelSummary(summaryData);
+		
+		Sound.PlayFile(_endOfLevelTouched);
 	}
 
 	private void UpdateSaveDataLevelSummary(LevelSummaryData summaryData)
