@@ -435,6 +435,7 @@
         {
           "__type": "Sandbox.ModelRenderer",
           "__guid": "5fd3c91d-1b4a-4c8f-b94a-3cba052671fd",
+          "__enabled": false,
           "BodyGroups": 18446744073709551615,
           "RenderType": "On",
           "Tint": "1,1,1,1"
