@@ -11,7 +11,7 @@
         "__guid": "105e7cab-5ed3-478a-83ff-699d1d073773",
         "BodyGroups": 18446744073709551615,
         "CreateBoneObjects": false,
-        "Model": "models/dev/sphere.vmdl",
+        "Model": "models/environment/manapot/manapot.vmdl",
         "RenderType": "On",
         "Tint": "0.3,0.06598,0.56744,1",
         "UseAnimGraph": false
