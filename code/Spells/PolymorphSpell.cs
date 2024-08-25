@@ -1,6 +1,6 @@
 public class PolymorphSpell : BaseSpell
 {
-	const float COOLDOWN_INTO_FROG = 0.3f;
+	const float COOLDOWN_INTO_FROG = 0.5f;
 	const float COOLDOWN_INTO_HUMAN = 2.0f;
 	private float _cooldown = COOLDOWN_INTO_FROG;
 
