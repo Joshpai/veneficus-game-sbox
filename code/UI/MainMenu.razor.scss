@@ -12,13 +12,13 @@ MainMenu
   button:hover
   {
     filter: brightness(80%);
-    sound-in: "sounds/UI/belt-buckle-01.sound";
+    sound-in: "sounds/UI/hoverbutton.sound";
   }
 
   button:active
   {
     filter: brightness(50%);
-    sound-in: "sounds/UI/belt-buckle-05.sound";
+    sound-in: "sounds/UI/clickbutton.sound";
   }
 
   .screen-container

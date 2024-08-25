@@ -14,8 +14,8 @@
             "_type": "gameobject",
             "prefab": "prefabs/ui/loading_screen.prefab"
           },
-          "StartingLevel": "scenes/minimal.scene",
-          "StartingLevelSpawnsPlayer": true
+          "StartingLevel": "scenes/finish_screen.scene",
+          "StartingLevelSpawnsPlayer": false
         },
         {
           "__type": "EnemyManager",

@@ -21,7 +21,7 @@
       {
         "__type": "PlayerMovementController",
         "__guid": "8b1cbddb-d250-48f9-8481-5e1002d93f6a",
-        "AirSpeed": 30,
+        "AirSpeed": 150,
         "Body": {
           "_type": "gameobject",
           "go": "6fc0ac49-0a5b-456c-96b7-8ea05a2ff166"

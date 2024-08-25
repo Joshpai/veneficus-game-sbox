@@ -1,0 +1,63 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+
+<root>
+	<div class="top">
+		<div class="title">THE END</div>
+		<div class="subtitle">Thanks for playing!</div>
+	</div>
+	<div class="body">
+		<div class="body-item left">
+			<div class="item-title">Developer Note</div>
+			<div>
+				We hope you had fun playing Veneficus! This game was quite a
+				whirlwind to work on in the past month or so, and lots of bits
+				had to be cut given the limited timeline of the game jam. That
+				being said, we're still very happy with the final result.
+			</div>
+		</div>
+		<div class="middle-gap">
+		</div>
+		<div class="body-item right">
+			<div class="item-title">Credits</div>
+			<div class="credit">
+				<div class="credit-name">Alex (2Legit)</div>
+				<div class="credit-thing">Modelling and Animating</div>
+			</div>
+			<div class="credit">
+				<div class="credit-name">Daniel (SirBarry)</div>
+				<div class="credit-thing">Mapping</div>
+			</div>
+			<div class="credit">
+				<div class="credit-name">Josh (Joshpai)</div>
+				<div class="credit-thing">Programming</div>
+			</div>
+			<div class="credit">
+				<div class="credit-name">The Homies</div>
+				<div class="credit-thing">Playtesting</div>
+			</div>
+		</div>
+	</div>
+	<button onclick=@ReturnToMainMenu>
+		<div>&#8592; Return to Main Menu</div>
+	</button>
+</root>
+
+@code
+{
+	[Property]
+	public SceneFile MainMenu { get; set; }
+
+	public void ReturnToMainMenu()
+	{
+		Log.Info(MainMenu);
+		if (MainMenu != null)
+			LevelManager.LoadLevelImmediate(MainMenu, true, false);
+	}
+
+	/// <summary>
+	/// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
+	/// </summary>
+	protected override int BuildHash() => 0;
+}
