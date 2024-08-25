@@ -65,7 +65,7 @@
 				[
 					{
 						_class = "AnimFile"
-						name = "EnemyWater"
+						name = "EWB_Walk"
 						activity_name = ""
 						activity_weight = 1
 						weight_list_name = ""
@@ -83,6 +83,98 @@
 						start_frame = -1
 						end_frame = -1
 						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "EWB_StartAttack"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/EnemyModels/WaterEnemy/EnemyWater.fbx"
+						start_frame = -1
+						end_frame = 49
+						framerate = -1.0
+						take = 1
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "EWB_Attacking"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/EnemyModels/WaterEnemy/EnemyWater.fbx"
+						start_frame = 66
+						end_frame = 75
+						framerate = -1.0
+						take = 1
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "EWB_StopAttack"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/EnemyModels/WaterEnemy/EnemyWater.fbx"
+						start_frame = 80
+						end_frame = -1
+						framerate = -1.0
+						take = 1
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "EWB_Idle"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = true
+						enable_scale = false
+						source_filename = "models/EnemyModels/WaterEnemy/EnemyWater.fbx"
+						start_frame = 99
+						end_frame = -1
+						framerate = -1.0
 						take = 1
 						reverse = false
 					},
@@ -92,7 +184,7 @@
 		]
 		model_archetype = ""
 		primary_associated_entity = ""
-		anim_graph_name = ""
+		anim_graph_name = "animgraphs/enemies/enemy_waterbream.vanmgrph"
 		base_model_name = ""
 	}
 }

@@ -3,17 +3,21 @@ public sealed class WaterBeamEnemyAI : BaseEnemyAI
 	[Property]
 	public HealthComponent Health { get; set; }
 
-	// How long can we continuously shoot a beam for?
-	[Property, Group("Combat")]
-	public float BeamDuration { get; set; } = 3.0f;
-
 	// After we're in range, how long do we wait before our attack actually
 	// starts?
-	[Property, Group("Combat")]
-	public float AttackChargeDuration { get; set; } = 0.5f;
+	[Property]
+	public float AttackChargeDuration { get; set; } = 0.75f;
+
+	// How long can we continuously shoot a beam for?
+	[Property]
+	public float BeamDuration { get; set; } = 3.0f;
+
+	[Property]
+	public float AttackEndDuration { get; set; } = 0.79f;
 
 	private WaterBeamSpell _beam = null;
 	private float _beamChargeFinishTime = 0.0f;
+	private float _beamEndFinishTime = 0.0f;
 	private float _beamEndTime = 0.0f;
 
 	private void CleanupSpell()
@@ -45,6 +49,33 @@ public sealed class WaterBeamEnemyAI : BaseEnemyAI
 	{
 		base.OnUpdate();
 
+		var b_start_attack = _beamChargeFinishTime != 0.0f &&
+							 _beamChargeFinishTime > Time.Now;
+		var b_stop_attack = _beamEndFinishTime > Time.Now;
+		var b_attacking = b_start_attack || b_stop_attack || _beam != null;
+		// The order here matters:
+		// - b_start_attack = true
+		// - b_attacking = true
+		// - b_start_attack = false
+		// - b_stop_attack = true
+		// - b_attacking = false
+		// - b_stop_attack = false
+		_modelRenderer.Set("b_start_attack", b_start_attack);
+		if (_beamEndFinishTime != 0.0f)
+		{
+			_modelRenderer.Set("b_attacking", b_attacking);
+			_modelRenderer.Set("b_stop_attack", b_stop_attack);
+			if (!b_stop_attack)
+				_beamEndFinishTime = 0.0f;
+		}
+		else
+		{
+			_modelRenderer.Set("b_stop_attack", b_stop_attack);
+			_modelRenderer.Set("b_attacking", b_attacking);
+		}
+		_modelRenderer.Set("b_walking",
+						   !_passive && !PlayerInRange(AttackRangeIdeal));
+
 		if (_beam != null)
 		{
 			UpdateSpellCastDirection();
@@ -55,39 +86,40 @@ public sealed class WaterBeamEnemyAI : BaseEnemyAI
 			TurnToFacePlayer();
 	}
 
+	private bool WantsToAttack()
+	{
+		return !_passive &&
+				PlayerInRange(AttackRangeMax) &&
+				!PlayerObscured();
+	}
+
 	private bool ShouldCastSpell()
 	{
 		// We must not be passive to attack, and we shouldn't cast if we
 		// haven't finished casting the currently pending spell.
-		return !_passive && _beam == null &&
-				PlayerInRange(AttackRangeMax) &&
-				!PlayerObscured() &&
+		return WantsToAttack() && _beam == null &&
 				CanAttack() &&
 				_beamChargeFinishTime <= Time.Now;
 	}
 
 	private void HandleMovement()
 	{
-		if (_passive)
+		if (_passive || _beam != null || _beamChargeFinishTime != 0.0f)
 			return;
 
-		if (!PlayerInRange(AttackRangeIdeal))
+		if (!PlayerInRange(AttackRangeIdeal) || !PlayerInVisionCone())
 		{
 			MoveToPlayer();
-		}
-		else
-		{
-			// If we aren't casting a spell already, and we're ready to cast it
-			if (_beam == null && _beamChargeFinishTime >= Time.Now)
-				// TODO: some kind of charge animation?
-				_beamChargeFinishTime = Time.Now + AttackChargeDuration;
-
-			TurnToFacePlayer();
 		}
 	}
 
 	private void HandleAttacks()
 	{
+		// If we aren't casting a spell already, and we're ready to cast it
+		if (_beam == null && WantsToAttack() && CanAttack() &&
+			_beamChargeFinishTime == 0.0f)
+			_beamChargeFinishTime = Time.Now + AttackChargeDuration;
+
 		if (_beam != null)
 		{
 			_beam.OnFixedUpdate();
@@ -97,6 +129,8 @@ public sealed class WaterBeamEnemyAI : BaseEnemyAI
 				_beam.FinishCasting();
 
 				SetAttackCooldown();
+
+				_beamEndFinishTime = Time.Now + AttackEndDuration;
 
 				if (_enemyManager != null)
 					_enemyManager.AddCastSpell(_beam);
@@ -110,6 +144,7 @@ public sealed class WaterBeamEnemyAI : BaseEnemyAI
 				(WaterBeamSpell)PlayerSpellcastingController.CreateSpell(
 					GameObject, BaseSpell.SpellType.WaterBeam
 				);
+			_beamChargeFinishTime = 0.0f;
 			_beam.CasterEyeOrigin = EyePosition;
 			UpdateSpellCastDirection();
 			_beam.StartCasting();

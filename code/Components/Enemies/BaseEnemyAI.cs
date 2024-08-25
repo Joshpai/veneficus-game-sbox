@@ -71,7 +71,7 @@ public class BaseEnemyAI : Component
 	private int _patrolDirection = 1;
 	private float _passiveNextWanderTime = 0.0f;
 
-	private float _nextAttackTime = 0.0f;
+	protected float _nextAttackTime = 0.0f;
 
 	protected SkinnedModelRenderer _modelRenderer;
 
