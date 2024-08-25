@@ -3,6 +3,8 @@
 @inherits PanelComponent
 
 <root>
+	<!-- This is stupidly engineered, I wanted to do a slidy animation but that
+	     didn't work so now it's just some silly rubbish :( -->
 	<div class="screen-container">
 		<div class="screen @(_selectedScreen == MainMenuScreens.Title ? "" : "hidden")">
 			<div class="title-container">
@@ -31,7 +33,7 @@
 				<div class="saves">
 					<div class="saves-title">Select a Save</div>
 					<button class="save-new" onclick=@NewSave>
-						<p>+ Create a New Save</p>
+						<p>&#10133; Create a New Save</p>
 					</button>
 					<div class="saves-list">
 						@for (int i = 0; i < SaveData.GetSaveCount(); i++)
