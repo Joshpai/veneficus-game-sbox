@@ -2,7 +2,15 @@
 @using Sandbox.UI;
 @inherits PanelComponent
 
-@if (!Movement.LevelStarted) return;
+@if (!Movement.LevelStarted)
+{
+	<root>
+		<div class="start-hint">
+			<div>Press "E" to start the level</div>
+		</div>
+	</root>
+	return;
+}
 
 <root>
 	<div class="crosshair-container">
