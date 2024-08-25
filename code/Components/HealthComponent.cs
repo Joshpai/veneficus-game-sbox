@@ -69,6 +69,14 @@ public sealed class HealthComponent : Component
 			GameObject.Destroy();
 	}
 
+	public float GetPercentage()
+	{
+		if (MaxHealth == 0.0f)
+			return 0.0f;
+
+		return Health / MaxHealth;
+	}
+
 	protected override void OnFixedUpdate()
 	{
 		if (Health < MaxHealth && _regenStartTime <= Time.Now)

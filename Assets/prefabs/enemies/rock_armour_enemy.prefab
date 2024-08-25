@@ -96,6 +96,29 @@
             "Static": false
           }
         ]
+      },
+      {
+        "__guid": "63b40695-7503-4d1a-927c-5e1c119904c8",
+        "Flags": 0,
+        "Name": "HealthBar",
+        "Position": "0,0,158.2319",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.WorldPanel",
+            "__guid": "18ed3415-b103-41db-8ace-7d94b4fc33db",
+            "HorizontalAlign": "Center",
+            "InteractionRange": 1000,
+            "LookAtCamera": false,
+            "PanelSize": "4096,512",
+            "RenderScale": 1,
+            "VerticalAlign": "Center"
+          },
+          {
+            "__type": "EnemyHealthBar",
+            "__guid": "03260cda-d20b-4ade-b19e-a4543a6c6ce7"
+          }
+        ]
       }
     ],
     "__variables": []
