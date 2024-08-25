@@ -9,9 +9,9 @@
       {
         "__type": "Sandbox.SphereCollider",
         "__guid": "c5353bef-20ea-47b2-a091-fddf6987e4ef",
-        "Center": "0,0,120",
+        "Center": "0,0,100",
         "IsTrigger": false,
-        "Radius": 50,
+        "Radius": 65,
         "Static": false
       },
       {
@@ -19,9 +19,10 @@
         "__guid": "0a9afabe-b06f-4fc6-a7d9-fe8eb492dba9",
         "BodyGroups": 18446744073709551615,
         "CreateBoneObjects": false,
+        "MaterialOverride": "materials/world/teleporter/teleport.vmat",
         "Model": "models/environment/teleporter/teleporter.vmdl",
         "RenderType": "On",
-        "Tint": "0,0.66667,0.86667,1",
+        "Tint": "0.89202,0.07442,1,0.92",
         "UseAnimGraph": true
       },
       {
@@ -41,6 +42,13 @@
         "TargetFinishTime_B": 0,
         "TargetFinishTime_C": 0,
         "TargetFinishTime_S": 0
+      },
+      {
+        "__type": "SpinComponent",
+        "__guid": "7923b9c8-b792-4d78-b6cf-6712a1f97014",
+        "SpinAxis": "0,0,1",
+        "SpinPeriod": 10,
+        "StopCameraFaceProbability": 0.5
       }
     ],
     "Children": [],
