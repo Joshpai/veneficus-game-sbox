@@ -244,6 +244,20 @@
             "__type": "Sandbox.Sharpen",
             "__guid": "2c1a727a-5f4b-404a-8347-b3982d589a0a",
             "Scale": 0.5
+          },
+          {
+            "__type": "Sandbox.CubemapFog",
+            "__guid": "b7653d45-efc7-407b-91ff-18bf9e93e45f",
+            "__enabled": false,
+            "Blur": 0.05,
+            "EndDistance": 9000,
+            "FalloffExponent": 2,
+            "HeightExponent": 2,
+            "HeightStart": 2000,
+            "HeightWidth": 0,
+            "Sky": "materials/skybox/skybox_day_01.vmat",
+            "StartDistance": 512,
+            "Tint": "1,1,1,1"
           }
         ]
       }
