@@ -249,9 +249,8 @@ public sealed class PlayerMovementController : Component
 		Transform.Position -= HumanEyePosition;
 		EyePosition = HumanEyePosition;
 		LevelStarted = true;
-		// TODO: restarting at checkpoints should still increment time, but be
-		// paused while not yet restarted.
-		LevelManagerStaticStore.Stats.LevelStartTime = Time.Now;
+		if (LevelManagerStaticStore.Stats.DeathCount == 0)
+			LevelManagerStaticStore.Stats.LevelStartTime = Time.Now;
 
 		if (OnStartLevel != null)
 			OnStartLevel.Invoke();
