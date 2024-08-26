@@ -86,6 +86,10 @@
             "_type": "gameobject",
             "prefab": "prefabs/enemies/magic_missile_enemy.prefab"
           },
+          "MaxManaBuff": {
+            "_type": "gameobject",
+            "prefab": "prefabs/objects/mana_orb_buff.prefab"
+          },
           "RendingGaleEnemyPrefab": {
             "_type": "gameobject",
             "prefab": "prefabs/enemies/rending_gale_enemy.prefab"

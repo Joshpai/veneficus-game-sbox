@@ -10,6 +10,7 @@
         "__type": "Sandbox.ModelRenderer",
         "__guid": "b56aeb2b-3c14-4405-bea9-31be5c3348ac",
         "BodyGroups": 18446744073709551615,
+        "MaterialOverride": "materials/spells/fireballmaterial.vmat",
         "Model": "models/dev/sphere.vmdl",
         "RenderType": "Off",
         "Tint": "0.85116,0.09897,0.09897,1"

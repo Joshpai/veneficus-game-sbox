@@ -335,7 +335,8 @@ public class BaseEnemyAI : Component
 
 	protected void SetAttackCooldown()
 	{
-		_nextAttackTime = Time.Now + AttackCooldown;
+		float multiplier = Random.Shared.NextSingle() + 0.5f;
+		_nextAttackTime = Time.Now + AttackCooldown * multiplier;
 	}
 
 	protected override void OnUpdate()
