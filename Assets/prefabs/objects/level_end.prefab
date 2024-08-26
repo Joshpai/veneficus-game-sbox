@@ -36,6 +36,7 @@
         "FinishSoundMixerName": "Game",
         "LevelIndex": -1,
         "MainMenu": "scenes/main_menu.scene",
+        "NextLevelSpawnsPlayer": true,
         "TargetEnemiesKilledPercent_A": 0.9,
         "TargetEnemiesKilledPercent_B": 0.75,
         "TargetEnemiesKilledPercent_C": 0.5,
@@ -246,6 +247,16 @@
           {
             "Id": "aecb641e-d6b2-4741-9950-279543944415",
             "Property": "LevelIndex"
+          }
+        ]
+      },
+      {
+        "Id": "Next Level Spawns Player",
+        "Title": "Next Level Spawns Player",
+        "Targets": [
+          {
+            "Id": "aecb641e-d6b2-4741-9950-279543944415",
+            "Property": "NextLevelSpawnsPlayer"
           }
         ]
       }

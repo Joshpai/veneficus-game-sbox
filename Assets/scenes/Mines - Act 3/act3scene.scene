@@ -46,7 +46,8 @@
         "Death Count A": 2,
         "Death Count B": 5,
         "Death Count C": 10,
-        "LevelIndex": 3
+        "LevelIndex": 3,
+        "Next Level Spawns Player": false
       }
     },
     {
@@ -1324,22 +1325,13 @@
               "_type": "gameobject",
               "go": "d74cbf37-17fc-4938-8d9d-31a180a18e37"
             },
-            {
-              "_type": "gameobject",
-              "go": "a4dc9e0a-dbf9-46ba-864b-1b9c43baeebc"
-            },
+            null,
             {
               "_type": "gameobject",
               "go": "25a605c5-f6bf-4444-bed0-78bf2ac7c764"
             },
-            {
-              "_type": "gameobject",
-              "go": "d3e1bcea-5f8a-4337-b077-cd4ae217d0e6"
-            },
-            {
-              "_type": "gameobject",
-              "go": "1a5bf422-fa4b-4466-a361-0b5c425f5bd5"
-            },
+            null,
+            null,
             {
               "_type": "gameobject",
               "go": "dac37738-939d-46c3-9572-a2613c72d2fa"
@@ -1360,10 +1352,7 @@
               "_type": "gameobject",
               "go": "d7681b4f-fa13-4a18-b528-336f3073e341"
             },
-            {
-              "_type": "gameobject",
-              "go": "838c29a1-9019-427a-90ba-93cecf445fd2"
-            },
+            null,
             {
               "_type": "gameobject",
               "go": "55dc17a9-f0ba-41e1-8f0c-72dc9323433d"
