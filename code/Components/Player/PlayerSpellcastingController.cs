@@ -51,6 +51,7 @@ public sealed class PlayerSpellcastingController : Component
 	private int _selectedSpellIdx;
 
 	private float _manaRegenStartTime;
+	private float _manaRegenVelocity;
 
 	// This makes a strange architectural format for the spell system. I really
 	// want to know things like `ManaCost` without needing an object but C#
@@ -82,6 +83,7 @@ public sealed class PlayerSpellcastingController : Component
 
 		Mana = MaxMana;
 		_manaRegenStartTime = 0.0f;
+		_manaRegenVelocity = 0.0f;
 
 		_modelRenderer =
 			Components.GetInDescendantsOrSelf<SkinnedModelRenderer>();
@@ -331,6 +333,7 @@ public sealed class PlayerSpellcastingController : Component
 		Mana += _castingSpell.ManaCost * ManaRefundAmount;
 		// Cancel => start regen immediately?
 		_manaRegenStartTime = Time.Now;
+		_manaRegenVelocity = 0.0f;
 		_castingSpell = null;
 	}
 
@@ -361,6 +364,7 @@ public sealed class PlayerSpellcastingController : Component
 		_castingSpell.OnDestroy += OnSpellDestroyed;
 		_castSpells.Add(_castingSpell);
 		_manaRegenStartTime = Time.Now + ManaRegenDelay;
+		_manaRegenVelocity = 0.0f;
 		_spellNextCastTime[(int)_castingSpell.GetSpellType()] =
 			Time.Now + _castingSpell.Cooldown;
 		_castingSpell = null;
@@ -439,7 +443,8 @@ public sealed class PlayerSpellcastingController : Component
 		// Implicit preconditions include that we aren't casting a spell now
 		else if (_manaRegenStartTime <= Time.Now && Mana < MaxMana)
 		{
-			Mana = Math.Min(Mana + ManaRegenRate * Time.Delta, MaxMana);
+			_manaRegenVelocity += ManaRegenRate * Time.Delta * Time.Delta;
+			Mana = Math.Min(Mana + _manaRegenVelocity, MaxMana);
 		}
 
 		foreach (BaseSpell spell in _castSpells)
