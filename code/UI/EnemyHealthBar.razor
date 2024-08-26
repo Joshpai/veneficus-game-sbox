@@ -5,7 +5,7 @@
 <root style="opacity: @(Health.Health < Health.MaxHealth ? 1.0 : 0.0f);">
 	<div class="hp-bar" style="width: @(Health.GetPercentage() * 100.0f)%"></div>
 	<div class="hp-value">
-	<div>@Health.Health</div>
+	<div>@MathF.Ceiling(Health.Health)</div>
 	</div>
 </root>
 

@@ -32,6 +32,21 @@ DeathScreen
     margin-bottom: 50px;
   }
 
+  .subtitle
+  {
+    font-size: 50px;
+    font-family: Poppins;
+    color: #fff;
+    margin-top: -20px;
+    margin-bottom: 50px;
+    gap: 10px;
+
+    p
+    {
+      color: cyan;
+    }
+  }
+
   button
   {
     border: 5px solid black;
@@ -39,5 +54,12 @@ DeathScreen
     padding: 32px;
     color: white;
     background-color: #666;
+  }
+
+  .main-menu
+  {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
   }
 }

@@ -1,0 +1,159 @@
+{
+  "__guid": "fcbef226-0674-42b3-9e6d-f16f0acfec1c",
+  "GameObjects": [
+    {
+      "__guid": "bfc59c12-1ed2-4f91-8956-a95a315eac3c",
+      "Flags": 0,
+      "Name": "Sun",
+      "Rotation": "-0.0729315,0.4822396,0.1305433,0.8631827",
+      "Tags": "light_directional,light",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.DirectionalLight",
+          "__guid": "d3659344-a90d-48fa-927a-095f70fe041f",
+          "FogMode": "Enabled",
+          "FogStrength": 1,
+          "LightColor": "0.94419,0.97767,1,1",
+          "Shadows": true,
+          "SkyColor": "0.2532,0.32006,0.35349,1"
+        }
+      ]
+    },
+    {
+      "__guid": "00344a8c-fa5e-45ae-b12a-10bb781a1dc3",
+      "Flags": 0,
+      "Name": "2D Skybox",
+      "Tags": "skybox",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SkyBox2D",
+          "__guid": "de79e9e0-5c37-4c54-ac67-bfcdb1d5483b",
+          "SkyMaterial": "materials/skybox/skybox_day_01.vmat",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.EnvmapProbe",
+          "__guid": "f3e304db-baab-4c1a-a4ec-8442585c2d62",
+          "Texture": "textures/cubemaps/default2.vtex",
+          "Bounds": {
+            "Mins": "-512,-512,-512",
+            "Maxs": "512,512,512"
+          },
+          "DelayBetweenUpdates": 0.1,
+          "Feathering": 0.02,
+          "FrameInterval": 5,
+          "MaxDistance": 512,
+          "Projection": "Sphere",
+          "RenderDynamically": false,
+          "TintColor": "1,1,1,1",
+          "UpdateStrategy": "OnEnabled",
+          "ZFar": 4096,
+          "ZNear": 16
+        }
+      ]
+    },
+    {
+      "__guid": "f7c79eae-7caf-4aac-ba96-3a5e5f75cf59",
+      "Flags": 0,
+      "Name": "spell_unlock",
+      "Position": "2.978355,1.426025,0",
+      "Enabled": true,
+      "__Prefab": "prefabs/triggers/spell_unlock.prefab",
+      "__PrefabVariables": {
+        "Unlock Spell": "MagicMissile"
+      }
+    },
+    {
+      "__guid": "88c64357-a8f2-40d0-9c57-b7d0d49e7395",
+      "Flags": 0,
+      "Name": "ArenaHandler",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ArenaManager",
+          "__guid": "931c5b37-ed2c-4083-aeea-4ef3b6102440",
+          "EnemySpawnBBox": {
+            "Mins": "1024,1024,1024",
+            "Maxs": "-1024,-1024,0"
+          },
+          "FireballEnemyPrefab": {
+            "_type": "gameobject",
+            "prefab": "prefabs/enemies/fireball_enemy.prefab"
+          },
+          "MagicMissileEnemyPrefab": {
+            "_type": "gameobject",
+            "prefab": "prefabs/enemies/magic_missile_enemy.prefab"
+          },
+          "RendingGaleEnemyPrefab": {
+            "_type": "gameobject",
+            "prefab": "prefabs/enemies/rending_gale_enemy.prefab"
+          },
+          "RockArmourEnemyPrefab": {
+            "_type": "gameobject",
+            "prefab": "prefabs/enemies/rock_armour_enemy.prefab"
+          },
+          "WaterBeamEnemyPrefab": {
+            "_type": "gameobject",
+            "prefab": "prefabs/enemies/water_beam_enemy.prefab"
+          }
+        }
+      ]
+    },
+    {
+      "__guid": "2a882ebe-9086-48f7-a836-21af4a6813e0",
+      "Flags": 0,
+      "Name": "Map",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.MapInstance",
+          "__guid": "f9169d9f-6df6-47d3-9499-3bb49be7ad37",
+          "__version": 1,
+          "EnableCollision": true,
+          "MapName": "maps/arena/arena.vmap",
+          "NoOrigin": false,
+          "UseMapFromLaunch": false
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "77990f66-fde4-43d8-ad0e-280020295435",
+      "Flags": 0,
+      "Name": "death_trigger",
+      "Position": "0,0,-905.9846",
+      "Scale": "87.69264,85.79317,14.25462",
+      "Enabled": true,
+      "__Prefab": "prefabs/triggers/death_trigger.prefab",
+      "__PrefabVariables": {}
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 60,
+    "NetworkInterpolation": true,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true,
+    "NavMesh": {
+      "Enabled": true,
+      "IncludeStaticBodies": true,
+      "IncludeKeyframedBodies": true,
+      "EditorAutoUpdate": true,
+      "AgentHeight": 64,
+      "AgentRadius": 16,
+      "AgentStepSize": 18,
+      "AgentMaxSlope": 40,
+      "ExcludedBodies": "trigger,enemy,player",
+      "IncludedBodies": ""
+    }
+  },
+  "Title": "minimal",
+  "Description": "",
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

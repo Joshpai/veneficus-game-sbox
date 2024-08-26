@@ -60,8 +60,17 @@ public class SaveData
 
 	public static bool SelectSaveIndex(int saveIdx)
 	{
-		if (saveIdx < 0 || saveIdx >= Instance._saveFiles.Count)
+		if (saveIdx >= Instance._saveFiles.Count)
 			return false;
+
+		// Allow a strictly invalid save for arena mode
+		if (saveIdx < 0)
+		{
+			Instance._saveFilePath = "";
+			Instance.Data = new SaveDataFormat();
+			Instance._selectedSave = saveIdx;
+			return true;
+		}
 
 		Instance._saveFilePath = Instance._saveFiles[saveIdx];
 		Instance.Data = Instance._allSaveData[saveIdx];

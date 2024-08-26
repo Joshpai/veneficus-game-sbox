@@ -16,7 +16,10 @@
       {
         "__type": "DeathScreen",
         "__guid": "94113ecc-40b4-42bb-bf85-82fcce0ef0e4",
-        "DeathReason": "skill issue"
+        "DeathReason": "skill issue",
+        "EnemiesKilled": 0,
+        "MainMenu": "scenes/main_menu.scene",
+        "SurvivedWaves": -1
       }
     ],
     "Children": [],

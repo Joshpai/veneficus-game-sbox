@@ -135,6 +135,8 @@ public sealed class PlayerMovementController : Component
 
 	public float Mass;
 
+	public Action OnStartLevel;
+
 	private bool _airJumpStartedPolymorphed;
 	private int _airJumpRemainingTicks;
 	private int _airJumpRemainingTicksMax;
@@ -246,6 +248,9 @@ public sealed class PlayerMovementController : Component
 		// TODO: restarting at checkpoints should still increment time, but be
 		// paused while not yet restarted.
 		LevelManagerStaticStore.Stats.LevelStartTime = Time.Now;
+
+		if (OnStartLevel != null)
+			OnStartLevel.Invoke();
 	}
 
 	public void TogglePolymorph()

@@ -71,7 +71,8 @@ public sealed class HealthComponent : Component
 			else
 				sound = Sound.Play($"{HurtSound}.sound");
 
-			if (sound != null)
+			if (sound != null && GameObject != null && GameObject.IsValid &&
+				GameObject.Transform != null)
 				sound.Position = Transform.Position;
 		}
 	}

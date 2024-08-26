@@ -4,12 +4,24 @@
 
 <root>
 	<div class="title">You Died</div>
-	<div class="title"></div>
+	@if (SurvivedWaves != -1)
+	{
+		<div class="subtitle">
+			You lasted <p>@SurvivedWaves</p> waves and killed
+			<p>@EnemiesKilled</p> enemies!
+		</div>
+	}
 	<button @onclick=@(() => Respawn())>Respawn</button>
+	<button class="main-menu" @onclick=@(() => GoToMainMenu())>
+		&larr; Return to Main Menu
+	</button>
 </root>
 
 @code
 {
+	[Property]
+	public SceneFile MainMenu { get; set; }
+
 	[Property]
 	public string DeathReason { get; set; } = "";
 
@@ -18,6 +30,21 @@
 
 	[Property]
 	public HealthComponent PlayerHealthComponent { get; set; } = null;
+
+	[Property]
+	public int SurvivedWaves { get; set; } = -1;
+
+	[Property]
+	public int EnemiesKilled { get; set; } = 0;
+
+	void GoToMainMenu()
+	{
+		LevelManagerStaticStore.IsLoading = false;
+		Scene.TimeScale = (TimeScale != null) ? TimeScale.Value : 1.0f;
+		if (MainMenu != null)
+			LevelManager.LoadLevelImmediate(MainMenu, true, false);
+		GameObject.Destroy();
+	}
 
 	void Respawn()
 	{
@@ -33,5 +60,10 @@
 	/// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
 	/// </summary>
 	protected override int BuildHash() =>
-		System.HashCode.Combine(DeathReason, TimeScale);
+		System.HashCode.Combine(
+			DeathReason,
+			TimeScale,
+			EnemiesKilled,
+			SurvivedWaves
+		);
 }
