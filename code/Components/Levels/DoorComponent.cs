@@ -47,7 +47,7 @@ public sealed class DoorComponent : Component
 	{
 		foreach (var keyObj in Keys)
 		{
-			if (keyObj.IsValid)
+			if (keyObj != null && keyObj.IsValid)
 			{
 				return false;
 			}
