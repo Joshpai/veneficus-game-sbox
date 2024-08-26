@@ -14,6 +14,9 @@ public sealed class ArenaManager : Component
 	public GameObject LightningStrikeEnemyPrefab { get; set; } = null;
 
 	[Property]
+	public GameObject MaxManaBuff { get; set; } = null;
+
+	[Property]
 	public BBox EnemySpawnBBox { get; set; }
 
 	private PlayerDeathManager _playerDeath;
@@ -91,15 +94,16 @@ public sealed class ArenaManager : Component
 		return (enemyPrefab != null) ? enemyPrefab.Clone() : null;
 	}
 
+	private Vector3? GetRandomPointInArena()
+	{
+		Vector3 randomPoint = EnemySpawnBBox.RandomPointInside;
+		return Scene.NavMesh.GetClosestPoint(randomPoint);
+	}
+
 	private bool SpawnEnemy(BaseSpell.SpellType enemyType)
 	{
 		// TODO: do we care that we might spawn inside the player?
-		// NOTE: the below doesn't seem to work how I want it to and always
-		// returns a null point, so I just simplified it a bit in this case
-		// var spawnPoint = Scene.NavMesh.GetRandomPoint(EnemySpawnBBox);
-		Vector3 randomPoint = EnemySpawnBBox.RandomPointInside;
-		Vector3? spawnPoint = Scene.NavMesh.GetClosestPoint(randomPoint);
-		Log.Info(spawnPoint);
+		var spawnPoint = GetRandomPointInArena();
 		if (spawnPoint == null)
 			return false;
 
@@ -182,6 +186,21 @@ public sealed class ArenaManager : Component
 		}
 	}
 
+	private void SpawnMaxManaBuff()
+	{
+		if (MaxManaBuff == null)
+			return;
+
+		var buff = MaxManaBuff.Clone();
+
+		var position = GetRandomPointInArena();
+		if (position != null)
+			buff.Transform.Position = position.Value + Vector3.Up * 50.0f;
+
+		// Counter the bobbing so we don't go inside the floor
+		buff.Transform.Position += Vector3.Up * 50.0f;
+	}
+
 	private void StartNextWave()
 	{
 		_waveNumber++;
@@ -192,6 +211,11 @@ public sealed class ArenaManager : Component
 
 		_playerHUD.WaveNumber = _waveNumber;
 		_playerDeath.SurvivedWaves = _waveNumber - 1;
+
+		if (_waveNumber > 1)
+		{
+			SpawnMaxManaBuff();
+		}
 
 		for (_waveSpawnedEnemies = 0;
 			 _waveSpawnedEnemies <
@@ -213,10 +237,5 @@ public sealed class ArenaManager : Component
 			_remainingEnemies = 0;
 			StartNextWave();
 		}
-	}
-
-	protected override void OnUpdate()
-	{
-
 	}
 }
