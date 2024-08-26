@@ -70,6 +70,9 @@ public sealed class PlayerMovementController : Component
 	public float PolyJumpGraceHeightPercent { get; set; } = 0.7f;
 
 	[Property]
+	public float PrePolyJumpGraceHeightPercent { get; set; } = 0.81f;
+
+	[Property]
 	public float HumanMass { get; set; } = 80.0f;
 
 	[Property]
@@ -141,6 +144,7 @@ public sealed class PlayerMovementController : Component
 	private int _airJumpRemainingTicks;
 	private int _airJumpRemainingTicksMax;
 	private int _polyJumpRemainingTicks;
+	private float _polyStartTime;
 	private Vector3 _airJumpForce;
 	private bool _canAirJump;
 	private bool _didJump;
@@ -258,6 +262,7 @@ public sealed class PlayerMovementController : Component
 		// We aren't in charge of changing the model here, just the behaviour
 		// of the player movement itself.
 		IsPolymorphed = !IsPolymorphed;
+		_polyStartTime = Time.Now;
 
 		EyePosition = IsPolymorphed ? PolymorphedEyePosition
 									 : HumanEyePosition;
@@ -384,6 +389,14 @@ public sealed class PlayerMovementController : Component
 		// F = ma = mv / t
 		var jumpForce = (vel / Time.Delta) * Mass;
 		var groundJumpForce = InitialJumpAmount * jumpForce;
+
+		// Allow poly before jump
+		if (_polyStartTime + PolyJumpGracePeriod > Time.Now)
+		{
+			var mass =
+				(IsPolymorphed) ? HumanMass : PolymorphedMass;
+			jumpForce = (vel / Time.Delta) * mass * PrePolyJumpGraceHeightPercent;
+		}
 
 		_airJumpStartedPolymorphed = IsPolymorphed;
 		_airJumpRemainingTicksMax = (int)(MaxJumpHoldLength / Time.Delta) + 1;
