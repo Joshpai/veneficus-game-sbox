@@ -74,6 +74,7 @@
         "PolymorphedMass": 10,
         "PolymorphedRadius": 12,
         "PolymorphedStepHeight": 5,
+        "PrePolyJumpGraceHeightPercent": 0.81,
         "SceneGravity": "0,0,-950",
         "StartLevelSound": "sounds/World/gettingoutofstartoflevel",
         "StartLevelSoundMixerName": "Game",
@@ -96,7 +97,7 @@
         "__guid": "06d5e6b4-10f6-4af0-a0d9-55593bbf8591",
         "ManaRefundAmount": 0.5,
         "ManaRegenDelay": 1,
-        "ManaRegenRate": 25,
+        "ManaRegenRate": 40,
         "PlayerMovementControllerRef": {
           "_type": "component",
           "component_id": "8b1cbddb-d250-48f9-8481-5e1002d93f6a",
@@ -165,7 +166,8 @@
           "component_id": "06d5e6b4-10f6-4af0-a0d9-55593bbf8591",
           "go": "b650359f-3468-4456-b249-1e8c3686c0cf",
           "component_type": "PlayerSpellcastingController"
-        }
+        },
+        "WaveNumber": 0
       }
     ],
     "Children": [
