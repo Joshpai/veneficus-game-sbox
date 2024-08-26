@@ -549,6 +549,193 @@
       "Enabled": true,
       "__Prefab": "prefabs/objects/foliage/foliage2.prefab",
       "__PrefabVariables": {}
+    },
+    {
+      "__guid": "325de004-e8b5-4a05-8adc-ac9d5a73b577",
+      "Flags": 0,
+      "Name": "foliage3",
+      "Position": "-444.9681,-117.8827,322.2139",
+      "Rotation": "0.7010569,0.7010569,0.09229954,-0.09229954",
+      "Scale": "1,4.790618,1",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/foliage/foliage3.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "ade000bf-8e26-45cc-9066-c83e1bd40269",
+      "Flags": 0,
+      "Name": "foliage3 (6)",
+      "Position": "-310.3684,-279.0442,322.2139",
+      "Rotation": "0.9914441,0.00000008940697,0.1305313,-0.00000001490116",
+      "Scale": "1,4.790618,1",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/foliage/foliage3.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "911b81dc-d9b8-4222-9bf6-7bdfd0b42a1e",
+      "Flags": 0,
+      "Name": "foliage3 (7)",
+      "Position": "-310.3684,-170.0587,322.2139",
+      "Rotation": "0.9914441,0.00000008940697,0.1305313,-0.00000001490116",
+      "Scale": "1,4.790618,1",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/foliage/foliage3.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "7f86a3c9-8193-45b2-8ebb-b2a35d1b2dc6",
+      "Flags": 0,
+      "Name": "foliage3 (1)",
+      "Position": "-624.236,-117.8827,322.2139",
+      "Rotation": "0.7010569,0.7010569,0.09229954,-0.09229954",
+      "Scale": "1,4.790618,1",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/foliage/foliage3.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "5c48514b-03a7-4dd2-94ce-3ed1938271f2",
+      "Flags": 0,
+      "Name": "foliage3 (2)",
+      "Position": "-810.6603,-117.8827,322.2139",
+      "Rotation": "0.7010569,0.7010569,0.09229954,-0.09229954",
+      "Scale": "1,4.790618,1",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/foliage/foliage3.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "4338892b-3010-4324-b395-004b12079777",
+      "Flags": 0,
+      "Name": "foliage3 (3)",
+      "Position": "-964.1522,-117.8827,322.2139",
+      "Rotation": "0.7010569,0.7010569,0.09229954,-0.09229954",
+      "Scale": "1,4.790618,1",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/foliage/foliage3.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "e7a2866f-e5dd-4eff-98f7-8d1ffa803758",
+      "Flags": 0,
+      "Name": "foliage3 (8)",
+      "Position": "-1054.656,-238.8582,322.2139",
+      "Rotation": "0.00000008940697,0.9914441,0.00000001490116,-0.1305313",
+      "Scale": "1,4.790618,1",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/foliage/foliage3.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "02bb84cb-b54c-4387-b97a-2fa7fabf6f18",
+      "Flags": 0,
+      "Name": "foliage3 (9)",
+      "Position": "-1326.244,-1232.806,254.2487",
+      "Rotation": "0.6830117,0.7071068,0.1830162,-0.000003658235",
+      "Scale": "1,4.790618,1",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/foliage/foliage3.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "90d668ed-1df1-4d02-8a7c-7b40a8756913",
+      "Flags": 0,
+      "Name": "foliage3 (13)",
+      "Position": "-1357.944,-1242.767,524.608",
+      "Rotation": "0.6830117,0.7071067,0.1830162,-0.000003673136",
+      "Scale": "1,4.790618,1",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/foliage/foliage3.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "3ed789f9-a8c0-4ebd-90f6-f001451f1fac",
+      "Flags": 0,
+      "Name": "foliage3 (10)",
+      "Position": "-1456.031,-1232.806,254.2487",
+      "Rotation": "0.7010568,0.7010568,0.09229957,-0.09229957",
+      "Scale": "1,4.790618,1",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/foliage/foliage3.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "e4751e5f-4285-42f1-ad99-474a448a04c6",
+      "Flags": 0,
+      "Name": "foliage3 (14)",
+      "Position": "-1499.622,-1243.992,550.1572",
+      "Rotation": "0.7010568,0.7010568,0.09229957,-0.09229957",
+      "Scale": "1,4.790618,1",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/foliage/foliage3.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "b1d71437-c6bb-49ea-9561-d3a4cad372dc",
+      "Flags": 0,
+      "Name": "foliage3 (11)",
+      "Position": "-1646.186,-1232.806,254.2487",
+      "Rotation": "0.7010568,0.7010568,0.09229957,-0.09229957",
+      "Scale": "1,4.790618,1",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/foliage/foliage3.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "c7b0bb0e-f2c0-44f7-ade1-6e886c7353d8",
+      "Flags": 0,
+      "Name": "foliage3 (16)",
+      "Position": "-1651.975,-1235.98,522.2048",
+      "Rotation": "0.7010568,0.7010568,0.09229957,-0.09229957",
+      "Scale": "1,4.790618,1",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/foliage/foliage3.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "213c0f45-817a-46b1-96b0-a2658cf6ee69",
+      "Flags": 0,
+      "Name": "foliage3 (12)",
+      "Position": "-1792.424,-1232.806,254.2487",
+      "Rotation": "0.7071067,0.6830117,0.000003673136,-0.1830162",
+      "Scale": "1,4.790618,1",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/foliage/foliage3.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "1b85efca-abbe-49b9-80ff-270daf5f4b2c",
+      "Flags": 0,
+      "Name": "foliage3 (15)",
+      "Position": "-1806.179,-1239.605,536.2315",
+      "Rotation": "0.7071067,0.6830117,0.000003673136,-0.1830162",
+      "Scale": "1,4.790618,1",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/foliage/foliage3.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "542a45b8-38d0-4e71-bf32-0b1dacd1459e",
+      "Flags": 0,
+      "Name": "foliage3 (4)",
+      "Position": "-743.2203,-117.8827,322.2139",
+      "Rotation": "0.7010569,0.7010569,0.09229954,-0.09229954",
+      "Scale": "1,4.790618,1",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/foliage/foliage3.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "c657c257-f02e-416d-b4e3-6acaf776564a",
+      "Flags": 0,
+      "Name": "foliage3 (5)",
+      "Position": "-541.703,-117.8827,322.2139",
+      "Rotation": "0.7010569,0.7010569,0.09229954,-0.09229954",
+      "Scale": "1,4.790618,1",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/foliage/foliage3.prefab",
+      "__PrefabVariables": {}
     }
   ],
   "SceneProperties": {
