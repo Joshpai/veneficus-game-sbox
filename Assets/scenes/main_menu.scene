@@ -154,9 +154,9 @@
           "__type": "MainMenu",
           "__guid": "be469723-e482-43a1-8903-2d9209c2f6fd",
           "ActImages": [
-            "materials\\world\\CaveWater\\1\u002B_diffuseOriginal.png",
-            "materials\\world\\CaveWater\\1\u002B_diffuseOriginal.png",
-            "materials\\world\\CaveWater\\1\u002B_diffuseOriginal.png",
+            "textures/thumbnails/tutthumb.png",
+            "textures/thumbnails/act1thumb.png",
+            "textures/thumbnails/act3thumb.png",
             "materials\\world\\CaveWater\\1\u002B_diffuseOriginal.png"
           ],
           "ActNames": [
