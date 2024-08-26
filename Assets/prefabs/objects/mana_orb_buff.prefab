@@ -77,6 +77,12 @@
         "SpinAxis": "0,0,1",
         "SpinPeriod": 15,
         "StopCameraFaceProbability": 0.5
+      },
+      {
+        "__type": "BobComponent",
+        "__guid": "4a6055fa-7257-452d-afb5-a63dffe60835",
+        "BobAmplitude": 10,
+        "BobPeriod": 3
       }
     ],
     "Children": [],
