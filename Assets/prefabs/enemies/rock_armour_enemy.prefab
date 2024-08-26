@@ -21,10 +21,10 @@
       {
         "__type": "Sandbox.CapsuleCollider",
         "__guid": "d9251c92-1fda-45c3-80ce-64161d34de85",
-        "End": "0,0,20",
+        "End": "0,0,72.29997",
         "IsTrigger": true,
-        "Radius": 65,
-        "Start": "0,0,20",
+        "Radius": 94.90003,
+        "Start": "0,0,50.9",
         "Static": false
       },
       {
