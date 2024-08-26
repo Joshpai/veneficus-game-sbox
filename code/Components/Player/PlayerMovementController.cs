@@ -214,6 +214,14 @@ public sealed class PlayerMovementController : Component
 		Sound.Preload(StartLevelSound);
 	}
 
+	public static bool Noclip = false;
+	[ConCmd("player_noclip")]
+	public static void ToggleNoclip()
+	{
+		// NOTE: uncomment for developer purposes!
+		// Noclip = !Noclip;
+	}
+
 	public void SetPlayerNotStarted()
 	{
 		_modelRenderer =
@@ -489,6 +497,13 @@ public sealed class PlayerMovementController : Component
 			{
 				return;
 			}
+		}
+
+		if (Noclip)
+		{
+			WishDir = Input.AnalogMove.Normal * Camera.Transform.Rotation;
+			Transform.Position += WishDir * 100.0f;
+			return;
 		}
 
 		WishDir = Input.AnalogMove.Normal * Body.Transform.Rotation;
