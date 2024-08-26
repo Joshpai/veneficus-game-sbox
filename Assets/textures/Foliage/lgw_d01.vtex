@@ -1,0 +1,10 @@
+{
+  "Sequences": [
+    {
+      "Source": "textures/foliage/lgw_d01.tga",
+      "IsLooping": true,
+      "Frames": 64
+    }
+  ],
+  "OutputTypeString": "2D"
+}

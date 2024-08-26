@@ -247,7 +247,7 @@
       "__guid": "add7da22-4d90-4671-8c1c-1b0442a499ca",
       "Flags": 0,
       "Name": "arrow",
-      "Position": "-1322.637,-335.2681,120.4731",
+      "Position": "-1325.089,-335.4212,117.0147",
       "Rotation": "0.1271192,-0.03901193,0.8399589,0.5261062",
       "Enabled": true,
       "__Prefab": "prefabs/objects/signs/arrow.prefab",
@@ -387,6 +387,167 @@
       "Rotation": "-0.3314137,0.1913418,-0.8001033,0.4619398",
       "Enabled": true,
       "__Prefab": "prefabs/objects/signs/arrow.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "53c2339e-b9e9-4880-b5ad-b5e423000a74",
+      "Flags": 0,
+      "Name": "foliage1",
+      "Position": "-1328.244,-393.8341,-7.821487",
+      "Rotation": "0.02850935,0.09763916,-0.9664159,0.2359964",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/foliage/foliage1.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "153dfff4-c6c5-43c9-9d95-4090ac0bd860",
+      "Flags": 0,
+      "Name": "foliage1 (1)",
+      "Position": "-1096.757,-388.5947,-4.96937",
+      "Rotation": "0.1035534,-0.07945929,-0.6035534,0.7865661",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/foliage/foliage1.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "2cdb29b4-ae60-47ee-ac26-2907e2c6d53b",
+      "Flags": 0,
+      "Name": "foliage2",
+      "Position": "-176.2346,-152.2648,60.73082",
+      "Scale": "0.5793809,0.5793809,0.5793809",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/foliage/foliage2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "635c61d6-db3b-4cb9-95d6-da5f94be7f52",
+      "Flags": 0,
+      "Name": "foliage2 (13)",
+      "Position": "106.9233,89.63524,59.20835",
+      "Scale": "0.5793809,0.5793809,0.5793809",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/foliage/foliage2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "d5b241a1-abe0-4a21-879d-ee5d39b230ed",
+      "Flags": 0,
+      "Name": "foliage2 (1)",
+      "Position": "-366.9198,120.0399,-3.127703",
+      "Scale": "0.5793809,0.5793809,0.5793809",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/foliage/foliage2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "6d0573ac-f1f5-42fe-b868-280fcffbb91e",
+      "Flags": 0,
+      "Name": "foliage2 (2)",
+      "Position": "-735.8961,-84.24274,-3.127703",
+      "Scale": "0.5793809,0.5793809,0.5793809",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/foliage/foliage2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "f4a9cfd6-241c-4f07-9841-610b331860dd",
+      "Flags": 0,
+      "Name": "foliage2 (3)",
+      "Position": "-1224.16,153.2858,-3.127703",
+      "Scale": "0.5793809,0.5793809,0.5793809",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/foliage/foliage2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "0d7a78bd-c8c4-4572-9473-dafc04f25de2",
+      "Flags": 0,
+      "Name": "foliage2 (4)",
+      "Position": "-1112.541,-283.8874,-3.127703",
+      "Scale": "0.5793809,0.5793809,0.5793809",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/foliage/foliage2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "fbb865d1-ddda-476c-b82e-7eb66bc8f2b2",
+      "Flags": 0,
+      "Name": "foliage2 (5)",
+      "Position": "-1388.885,-1320.145,253.4093",
+      "Scale": "0.5793809,0.5793809,0.5793809",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/foliage/foliage2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "e7421410-0e47-4332-88c5-7d6db8ec0a8a",
+      "Flags": 0,
+      "Name": "foliage2 (8)",
+      "Position": "-432.0739,-428.8856,825.7802",
+      "Scale": "0.5793809,0.5793809,0.5793809",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/foliage/foliage2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "37dcd92b-334c-4b6b-83f2-9eb3c53a1668",
+      "Flags": 0,
+      "Name": "foliage2 (9)",
+      "Position": "162.5272,-504.7025,825.7802",
+      "Scale": "0.5793809,0.5793809,0.5793809",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/foliage/foliage2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "72be39bc-25d7-4345-85e5-53575437dbed",
+      "Flags": 0,
+      "Name": "foliage2 (10)",
+      "Position": "-62.16911,-832.4528,825.7802",
+      "Scale": "0.5793809,0.5793809,0.5793809",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/foliage/foliage2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "f21eeec8-54ef-461a-97e3-4e88bd0edc39",
+      "Flags": 0,
+      "Name": "foliage2 (12)",
+      "Position": "-183.4612,-1750.734,825.7802",
+      "Scale": "0.5793809,0.5793809,0.5793809",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/foliage/foliage2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "aa31be17-dbc2-43cc-8e84-b6f70ef95ac3",
+      "Flags": 0,
+      "Name": "foliage2 (11)",
+      "Position": "23.41142,-1217.495,825.7802",
+      "Scale": "0.5793809,0.5793809,0.5793809",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/foliage/foliage2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "6e463087-1706-4a08-9d12-ebd7e55f2f1c",
+      "Flags": 0,
+      "Name": "foliage2 (7)",
+      "Position": "-1587.118,-1529.515,253.4093",
+      "Scale": "0.5793809,0.5793809,0.5793809",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/foliage/foliage2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "79ffb2aa-4ee9-4d82-b219-bfd98b1c57b8",
+      "Flags": 0,
+      "Name": "foliage2 (6)",
+      "Position": "-1447.145,-242.9871,214.1977",
+      "Rotation": "0,0.1305262,0,0.9914449",
+      "Scale": "0.5793809,0.5793809,0.5793809",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/foliage/foliage2.prefab",
       "__PrefabVariables": {}
     }
   ],

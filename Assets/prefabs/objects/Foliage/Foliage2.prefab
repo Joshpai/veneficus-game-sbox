@@ -1,0 +1,47 @@
+{
+  "RootObject": {
+    "__guid": "0d55926c-7507-48dd-8275-739c723d87c3",
+    "Flags": 0,
+    "Name": "foliage2",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.ModelRenderer",
+        "__guid": "5eb8ab03-cc5f-40bd-8ee7-f72f219ded21",
+        "BodyGroups": 18446744073709551615,
+        "MaterialOverride": "materials/foliage/foliage2.vmat",
+        "Model": "models/environment/foliage/grass1.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "e6f24e88-11ae-43c9-a386-004f11fded9d",
+        "Flags": 0,
+        "Name": "foliage2",
+        "Position": "4.715368,5.180585,0",
+        "Rotation": "0,0,0.7071068,0.7071068",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "d07d0655-621e-46ad-acdd-cce7d475ccac",
+            "BodyGroups": 18446744073709551615,
+            "MaterialOverride": "materials/foliage/foliage2.vmat",
+            "Model": "models/environment/foliage/grass1.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ]
+      }
+    ],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

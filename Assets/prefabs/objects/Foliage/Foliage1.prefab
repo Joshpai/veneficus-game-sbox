@@ -1,0 +1,27 @@
+{
+  "RootObject": {
+    "__guid": "0d55926c-7507-48dd-8275-739c723d87c3",
+    "Flags": 0,
+    "Name": "foliage1",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.ModelRenderer",
+        "__guid": "5eb8ab03-cc5f-40bd-8ee7-f72f219ded21",
+        "BodyGroups": 18446744073709551615,
+        "MaterialOverride": "materials/foliage/foliage.vmat",
+        "Model": "models/environment/foliage/grass1.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      }
+    ],
+    "Children": [],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}
