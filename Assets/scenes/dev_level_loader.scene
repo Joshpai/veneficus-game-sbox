@@ -14,7 +14,7 @@
             "_type": "gameobject",
             "prefab": "prefabs/ui/loading_screen.prefab"
           },
-          "StartingLevel": "scenes/minimal.scene",
+          "StartingLevel": "scenes/arena.scene",
           "StartingLevelSpawnsPlayer": true
         },
         {

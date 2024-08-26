@@ -147,6 +147,12 @@ public sealed class PlayerSpellcastingController : Component
 			   !IsSpellBlocked(spellType);
 	}
 
+	public void SetAllSpellsUnlocked()
+	{
+		_unlockedSpellsMask = 0xfffffffffffffffful;
+		UpdateUnlockedSpells();
+	}
+
 	public void SetSpellUnlocked(BaseSpell.SpellType spellType, bool unlocked)
 	{
 		if (unlocked)

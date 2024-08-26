@@ -6,6 +6,10 @@ public sealed class PlayerDeathManager : Component
 	[Property]
 	public GameObject DeathScreen { get; set; }
 
+	public bool IsArena { get; set; } = false;
+
+	public int SurvivedWaves { get; set; } = -1;
+
 	protected override void OnStart()
 	{
 		if (PlayerHealthComponent != null)
@@ -39,6 +43,7 @@ public sealed class PlayerDeathManager : Component
 
 		LevelManagerStaticStore.UsedObjects =
 			new HashSet<Guid>(LevelManagerStaticStore.CheckpointData.UsedObjects);
+		var oldEnemiesKilled = LevelManagerStaticStore.Stats.EnemiesKilled;
 		LevelManagerStaticStore.Stats.EnemiesKilled =
 			LevelManagerStaticStore.CheckpointData.EnemiesKilled;
 
@@ -60,6 +65,8 @@ public sealed class PlayerDeathManager : Component
 			deathScreen.Components.GetInDescendantsOrSelf<DeathScreen>();
 		if (deathScreenComponent != null)
 		{
+			deathScreenComponent.SurvivedWaves = SurvivedWaves;
+			deathScreenComponent.EnemiesKilled = oldEnemiesKilled;
 			deathScreenComponent.TimeScale = timeScale;
 			deathScreenComponent.PlayerHealthComponent =
 				LevelManagerStaticStore.Player.Components
