@@ -4,7 +4,7 @@ public class PolymorphSpell : BaseSpell
 	const float COOLDOWN_INTO_HUMAN = 2.0f;
 	private float _cooldown = COOLDOWN_INTO_FROG;
 
-	public override float ManaCost => 25.0f;
+	public override float ManaCost => 1.0f;
 	public override float Cooldown => _cooldown;
 	public override float CastTime => 0.0f;
 	public override float MaxChargeTime => 0.0f;
