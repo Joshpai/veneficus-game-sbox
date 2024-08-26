@@ -222,7 +222,9 @@ public sealed class LevelEnd : InteractableComponent
 		if (SaveData.Instance.Data.CompletedLevelData.ContainsKey(LevelIndex))
 		{
 			var last = SaveData.Instance.Data.CompletedLevelData[LevelIndex];
-			if (last.FinalRankValue > summaryData.FinalRankValue)
+			// NOTE: some numpty decided smaller rank is better so this is
+			// actually the correct comparison to replace a better score
+			if (last.FinalRankValue < summaryData.FinalRankValue)
 				return;
 			SaveData.Instance.Data.CompletedLevelData[LevelIndex] = summaryData;
 		}
