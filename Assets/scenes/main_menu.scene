@@ -157,7 +157,7 @@
             "textures/thumbnails/tutthumb.png",
             "textures/thumbnails/act1thumb.png",
             "textures/thumbnails/act3thumb.png",
-            "materials\\world\\CaveWater\\1\u002B_diffuseOriginal.png"
+            "textures/thumbnails/act3thumb.png"
           ],
           "ActNames": [
             "Act 0 - Tutorial",
