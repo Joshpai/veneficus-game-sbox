@@ -7,6 +7,7 @@ public sealed class KeyTrigger : Component, Component.ITriggerListener
 		if (spellcasting == null)
 			return;
 
+		LevelManagerStaticStore.UsedObjects.Add(GameObject.Parent.Id);
 		GameObject.Parent.Destroy();
 	}
 }
