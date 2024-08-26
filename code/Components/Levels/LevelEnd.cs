@@ -263,7 +263,6 @@ public sealed class LevelEnd : InteractableComponent
 		LevelManagerStaticStore.CheckpointData = new LevelCheckpointData();
 		LevelManagerStaticStore.UsedObjects = new HashSet<Guid>();
 		LevelManagerStaticStore.Stats = new LevelStats();
-		LevelManagerStaticStore.Stats = new LevelStats();
 		if (NextLevel != null)
 			LevelManager.LoadLevelImmediate(NextLevel, true, NextLevelSpawnsPlayer);
 	}
