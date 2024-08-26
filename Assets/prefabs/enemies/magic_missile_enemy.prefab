@@ -38,7 +38,7 @@
         "AvoidSpells": true,
         "BurstCount": 3,
         "EnemyLevel": 1,
-        "EyePosition": "0,0,64",
+        "EyePosition": "0,0,170.8999",
         "HearingRadius": 125,
         "MaxSpeed": 250,
         "PassiveMode": "Wander",
@@ -75,7 +75,7 @@
         "__guid": "332ab176-1deb-4633-a116-aa32dbff7986",
         "Flags": 0,
         "Name": "HealthBar",
-        "Position": "0,0,109.9695",
+        "Position": "0,0,240.8695",
         "Enabled": true,
         "Components": [
           {

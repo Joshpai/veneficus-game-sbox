@@ -61,7 +61,7 @@
         "ChargeSlowdownDuration": 0.8,
         "ChargeStartupDuration": 0.5,
         "EnemyLevel": 1,
-        "EyePosition": "0,0,64",
+        "EyePosition": "0,0,132.2999",
         "HearingRadius": 1000,
         "MaxSpeed": 250,
         "PassiveMode": "Stationary",
@@ -92,9 +92,9 @@
           {
             "__type": "Sandbox.BoxCollider",
             "__guid": "9088b4e4-2ab0-4dde-a626-7eafe24337aa",
-            "Center": "0,0,0",
+            "Center": "0,0,24.8",
             "IsTrigger": true,
-            "Scale": "10,60,72",
+            "Scale": "10,110.7,122.9",
             "Static": false
           }
         ]
@@ -103,7 +103,7 @@
         "__guid": "63b40695-7503-4d1a-927c-5e1c119904c8",
         "Flags": 0,
         "Name": "HealthBar",
-        "Position": "0,0,158.2319",
+        "Position": "0,0,235.0312",
         "Enabled": true,
         "Components": [
           {
