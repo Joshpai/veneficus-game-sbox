@@ -31,10 +31,10 @@
       "__PrefabVariables": {
         "Next Level": "scenes/desert - act 2/act2.scene",
         "Deferred Next Level": null,
-        "Target Finish Time S": 120,
-        "Target Finish Time A": 150,
-        "Target Finish Time B": 180,
-        "Target Finish Time D": 210,
+        "Target Finish Time S": 330,
+        "Target Finish Time A": 360,
+        "Target Finish Time B": 420,
+        "Target Finish Time D": 480,
         "Target Enemies Killed Percent S": 1,
         "Target Enemies Killed Percent A": 0.9,
         "Target Enemies Killed Percent B": 0.75,
@@ -291,28 +291,6 @@
       }
     },
     {
-      "__guid": "4d080d79-ffa5-41d0-88cf-1ba7c9c2048d",
-      "Flags": 0,
-      "Name": "magic_missile_enemy (10)",
-      "Position": "-2576.315,-3502.119,57.5",
-      "Rotation": "0,0,0.6087614,0.7933535",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Stationary",
-        "Patrol Path": [],
-        "Hearing Radius": 125,
-        "Vision Room": 750,
-        "Vision Angle": 0.62831855,
-        "Attack Range Ideal": 300,
-        "Attack Range Max": 1000,
-        "Attack Cooldown": 1,
-        "Burst Count": 3,
-        "Time Between Burst Shots": 0.1
-      }
-    },
-    {
       "__guid": "fe4b45f3-e256-417f-819b-0d459187acee",
       "Flags": 0,
       "Name": "magic_missile_enemy (11)",
@@ -329,28 +307,6 @@
         "Vision Angle": 0.25132743,
         "Attack Range Ideal": 1700,
         "Attack Range Max": 1700,
-        "Attack Cooldown": 1,
-        "Burst Count": 3,
-        "Time Between Burst Shots": 0.1
-      }
-    },
-    {
-      "__guid": "c2bab529-5a79-4a8a-a282-100de884c14d",
-      "Flags": 0,
-      "Name": "magic_missile_enemy (12)",
-      "Position": "-3875.854,-3063.771,57.5",
-      "Rotation": "0,0,0.0436194,0.9990482",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Stationary",
-        "Patrol Path": [],
-        "Hearing Radius": 125,
-        "Vision Room": 1900,
-        "Vision Angle": 0.25132743,
-        "Attack Range Ideal": 1900,
-        "Attack Range Max": 1900,
         "Attack Cooldown": 1,
         "Burst Count": 3,
         "Time Between Burst Shots": 0.1
@@ -487,55 +443,11 @@
       }
     },
     {
-      "__guid": "13560af1-5b1d-48e2-ac74-3f28b6be07b8",
-      "Flags": 0,
-      "Name": "magic_missile_enemy (19)",
-      "Position": "-4575.106,-4753.701,-1096",
-      "Rotation": "0,0,0.1305262,0.9914448",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Stationary",
-        "Patrol Path": [],
-        "Hearing Radius": 125,
-        "Vision Room": 500,
-        "Vision Angle": 1.1,
-        "Attack Range Ideal": 1000,
-        "Attack Range Max": 1000,
-        "Attack Cooldown": 1,
-        "Burst Count": 3,
-        "Time Between Burst Shots": 0.1
-      }
-    },
-    {
       "__guid": "d9fea9e0-b5d4-44f9-b9e9-7b1652dddb68",
       "Flags": 0,
       "Name": "magic_missile_enemy (20)",
       "Position": "-5963.909,-7445.211,-1132",
       "Rotation": "0,0,-0.6087613,0.7933533",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Wander",
-        "Patrol Path": [],
-        "Hearing Radius": 125,
-        "Vision Room": 2500,
-        "Vision Angle": 0.7853982,
-        "Attack Range Ideal": 2500,
-        "Attack Range Max": 2500,
-        "Attack Cooldown": 1,
-        "Burst Count": 3,
-        "Time Between Burst Shots": 0.1
-      }
-    },
-    {
-      "__guid": "f15a4485-f239-4532-9524-3b159d6db68a",
-      "Flags": 0,
-      "Name": "magic_missile_enemy (21)",
-      "Position": "-5603.387,-7445.214,-1132",
-      "Rotation": "0,0,-0.7071066,0.7071067",
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
@@ -610,28 +522,6 @@
         "Patrol Path": [],
         "Hearing Radius": 125,
         "Vision Room": 1900,
-        "Vision Angle": 0.7853982,
-        "Attack Range Ideal": 2500,
-        "Attack Range Max": 2500,
-        "Attack Cooldown": 1,
-        "Burst Count": 3,
-        "Time Between Burst Shots": 0.1
-      }
-    },
-    {
-      "__guid": "eb3954de-562b-4298-a31d-1ad9ea8ae00a",
-      "Flags": 0,
-      "Name": "magic_missile_enemy (25)",
-      "Position": "-6391.997,-9402.685,-1238.317",
-      "Rotation": "-0.001833499,0.0003539696,0.3293734,0.9441979",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Wander",
-        "Patrol Path": [],
-        "Hearing Radius": 125,
-        "Vision Room": 1950,
         "Vision Angle": 0.7853982,
         "Attack Range Ideal": 2500,
         "Attack Range Max": 2500,
@@ -729,28 +619,6 @@
       }
     },
     {
-      "__guid": "6cb2c47f-c96a-4a40-824c-9a17c9ee7f8d",
-      "Flags": 0,
-      "Name": "magic_missile_enemy (30)",
-      "Position": "-4642.073,-9367.747,-1238.519",
-      "Rotation": "-0.0005012706,0.001568719,0.8885364,0.4588033",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Wander",
-        "Patrol Path": [],
-        "Hearing Radius": 125,
-        "Vision Room": 2200,
-        "Vision Angle": 0.7853982,
-        "Attack Range Ideal": 2500,
-        "Attack Range Max": 2500,
-        "Attack Cooldown": 1,
-        "Burst Count": 3,
-        "Time Between Burst Shots": 0.1
-      }
-    },
-    {
       "__guid": "42f4d89f-c7e6-4dd9-bad6-beda5e38c47b",
       "Flags": 0,
       "Name": "CheckpointOneTrigger",
@@ -819,28 +687,6 @@
       ]
     },
     {
-      "__guid": "77c83aad-9bc2-4a37-bae5-059785f714bb",
-      "Flags": 0,
-      "Name": "magic_missile_enemy (31)",
-      "Position": "-4338.641,-4237.361,-1259",
-      "Rotation": "0,0,-0.7071066,0.7071067",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Stationary",
-        "Patrol Path": [],
-        "Hearing Radius": 125,
-        "Vision Room": 500,
-        "Vision Angle": 1.1,
-        "Attack Range Ideal": 1000,
-        "Attack Range Max": 1000,
-        "Attack Cooldown": 1,
-        "Burst Count": 3,
-        "Time Between Burst Shots": 0.1
-      }
-    },
-    {
       "__guid": "b5b152de-1336-46c0-8d30-9721f3d9c884",
       "Flags": 0,
       "Name": "magic_missile_enemy (32)",
@@ -898,27 +744,6 @@
         "Hearing Radius": 1000,
         "Vision Range": 400,
         "Vision Angle": 0.37699112,
-        "Attack Range Ideal": 100,
-        "Attack Range Max": 750,
-        "Attack Cooldown": 1.6,
-        "Charge Power": 500
-      }
-    },
-    {
-      "__guid": "f03a80e0-a2f1-450c-b512-11bd8a2b3e99",
-      "Flags": 0,
-      "Name": "rock_armour_enemy (1)",
-      "Position": "-5568.001,-9439.996,-1938",
-      "Rotation": "0,0,0.7071067,0.7071068",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Stationary",
-        "Patrol Path": [],
-        "Hearing Radius": 1000,
-        "Vision Range": 2100,
-        "Vision Angle": 0.7853982,
         "Attack Range Ideal": 100,
         "Attack Range Max": 750,
         "Attack Cooldown": 1.6,
@@ -1010,27 +835,6 @@
       }
     },
     {
-      "__guid": "3e769ba4-2534-4f68-85ee-32263b1de8af",
-      "Flags": 0,
-      "Name": "rock_armour_enemy (6)",
-      "Position": "-5591.742,-9995.465,-1236.11",
-      "Rotation": "-0.001090795,0.001119822,0.6983488,0.7157558",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/rock_armour_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Stationary",
-        "Patrol Path": [],
-        "Hearing Radius": 1000,
-        "Vision Range": 650,
-        "Vision Angle": 1.1309733,
-        "Attack Range Ideal": 100,
-        "Attack Range Max": 750,
-        "Attack Cooldown": 1.6,
-        "Charge Power": 500
-      }
-    },
-    {
       "__guid": "e7a83d0a-d00f-4769-abe5-13f41834a54c",
       "Flags": 0,
       "Name": "Cube",
@@ -1099,10 +903,7 @@
               "_type": "gameobject",
               "go": "d9fea9e0-b5d4-44f9-b9e9-7b1652dddb68"
             },
-            {
-              "_type": "gameobject",
-              "go": "f15a4485-f239-4532-9524-3b159d6db68a"
-            },
+            null,
             {
               "_type": "gameobject",
               "go": "d318b9f6-87f2-465f-998e-6da845e939a0"
@@ -1273,18 +1074,12 @@
               "_type": "gameobject",
               "go": "a4a45488-a276-4c3e-b0de-31c637a4dc95"
             },
-            {
-              "_type": "gameobject",
-              "go": "4d080d79-ffa5-41d0-88cf-1ba7c9c2048d"
-            },
+            null,
             {
               "_type": "gameobject",
               "go": "fe4b45f3-e256-417f-819b-0d459187acee"
             },
-            {
-              "_type": "gameobject",
-              "go": "c2bab529-5a79-4a8a-a282-100de884c14d"
-            },
+            null,
             {
               "_type": "gameobject",
               "go": "44186726-cc01-40ba-a777-f1bb54ea8ad0"

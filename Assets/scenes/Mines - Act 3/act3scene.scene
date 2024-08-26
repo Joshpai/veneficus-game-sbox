@@ -30,10 +30,10 @@
       "__PrefabVariables": {
         "Next Level": "scenes/finish_screen.scene",
         "Deferred Next Level": null,
-        "Target Finish Time S": 120,
-        "Target Finish Time A": 150,
-        "Target Finish Time B": 180,
-        "Target Finish Time D": 210,
+        "Target Finish Time S": 700,
+        "Target Finish Time A": 800,
+        "Target Finish Time B": 900,
+        "Target Finish Time D": 100,
         "Target Enemies Killed Percent S": 1,
         "Target Enemies Killed Percent A": 0.9,
         "Target Enemies Killed Percent B": 0.75,
@@ -146,23 +146,6 @@
       ]
     },
     {
-      "__guid": "15e4b17f-453f-4308-820a-7ce199d7da77",
-      "Flags": 0,
-      "Name": "fireball_enemy",
-      "Position": "384,1472,2564",
-      "Rotation": "0,0,0.7660446,0.6427878",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
-      "__PrefabVariables": {
-        "Hearing Radius": 1000,
-        "Vision Range": 2500,
-        "Vision Angle": 0.25132743,
-        "Attack Range Ideal": 2500,
-        "Attack Range Max": 2500
-      }
-    },
-    {
       "__guid": "237af894-39ae-41b8-b143-f39022c572e2",
       "Flags": 0,
       "Name": "fireball_enemy (3)",
@@ -177,23 +160,6 @@
         "Vision Angle": 0.12566371,
         "Attack Range Ideal": 6000,
         "Attack Range Max": 6000
-      }
-    },
-    {
-      "__guid": "15375b63-b03e-4ef7-86d7-b4d10faeaf4d",
-      "Flags": 0,
-      "Name": "fireball_enemy (1)",
-      "Position": "-160.0002,1472,2564",
-      "Rotation": "0,0,0.7071068,0.7071068",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
-      "__PrefabVariables": {
-        "Hearing Radius": 1000,
-        "Vision Range": 2500,
-        "Vision Angle": 0.25132743,
-        "Attack Range Ideal": 2500,
-        "Attack Range Max": 2500
       }
     },
     {
@@ -285,28 +251,6 @@
       "Name": "magic_missile_enemy (3)",
       "Position": "480,-4864,-14482",
       "Rotation": "0,0,0.9238795,0.3826834",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Wander",
-        "Patrol Path": [],
-        "Hearing Radius": 125,
-        "Vision Room": 1000,
-        "Vision Angle": 0.7853982,
-        "Attack Range Ideal": 4000,
-        "Attack Range Max": 4000,
-        "Attack Cooldown": 1,
-        "Burst Count": 3,
-        "Time Between Burst Shots": 0.1
-      }
-    },
-    {
-      "__guid": "838c29a1-9019-427a-90ba-93cecf445fd2",
-      "Flags": 0,
-      "Name": "magic_missile_enemy (4)",
-      "Position": "448,-4192,-14482",
-      "Rotation": "0,0,-0.9238795,0.3826834",
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
@@ -727,46 +671,6 @@
       }
     },
     {
-      "__guid": "266b6903-6122-4db9-bde6-b8e891f85236",
-      "Flags": 0,
-      "Name": "water_beam_enemy (1)",
-      "Position": "-7680,-7168,-16700",
-      "Rotation": "0,0,0.258819,0.9659257",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/water_beam_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Stationary",
-        "Patrol Path": [],
-        "Hearing Radius": 1000,
-        "Vision Range": 2000,
-        "Vision Angle": 0.7853982,
-        "Attack Range Ideal": 2000,
-        "Attack Range Max": 2000,
-        "Attack Cooldown": 3
-      }
-    },
-    {
-      "__guid": "bfc80e8b-ab3e-47a5-8813-c48f4ab1d195",
-      "Flags": 0,
-      "Name": "water_beam_enemy (2)",
-      "Position": "-10432,-6144,-16700",
-      "Rotation": "0,0,-0.2164395,0.9762958",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/water_beam_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Stationary",
-        "Patrol Path": [],
-        "Hearing Radius": 1000,
-        "Vision Range": 2500,
-        "Vision Angle": 0.7853982,
-        "Attack Range Ideal": 2500,
-        "Attack Range Max": 2500,
-        "Attack Cooldown": 3
-      }
-    },
-    {
       "__guid": "ca030dcf-43d5-4628-850f-9dccdb0adecc",
       "Flags": 0,
       "Name": "water_beam_enemy (3)",
@@ -847,28 +751,6 @@
       }
     },
     {
-      "__guid": "80bc2e69-4145-4c1f-86f0-1df126d04cbe",
-      "Flags": 0,
-      "Name": "magic_missile_enemy (17)",
-      "Position": "-14688,-6176,-16700",
-      "Rotation": "0,0,-0.04361933,0.999048",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Wander",
-        "Patrol Path": [],
-        "Hearing Radius": 125,
-        "Vision Room": 3500,
-        "Vision Angle": 0.25132743,
-        "Attack Range Ideal": 3500,
-        "Attack Range Max": 3500,
-        "Attack Cooldown": 1,
-        "Burst Count": 3,
-        "Time Between Burst Shots": 0.1
-      }
-    },
-    {
       "__guid": "c7e5dffe-685e-4403-9f7e-28ddc7e4d180",
       "Flags": 0,
       "Name": "fireball_enemy (9)",
@@ -906,75 +788,10 @@
       }
     },
     {
-      "__guid": "f30865de-5a45-4932-85e9-7139ef9b7214",
-      "Flags": 0,
-      "Name": "magic_missile_enemy (18)",
-      "Position": "-17984,-7168,-16700",
-      "Rotation": "0,0,0.04361926,0.999048",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Wander",
-        "Patrol Path": [],
-        "Hearing Radius": 125,
-        "Vision Room": 4000,
-        "Vision Angle": 0.25132743,
-        "Attack Range Ideal": 4000,
-        "Attack Range Max": 4000,
-        "Attack Cooldown": 1,
-        "Burst Count": 3,
-        "Time Between Burst Shots": 0.1
-      }
-    },
-    {
       "__guid": "ee7fa46b-91a7-4035-b8a1-2f4ce9404324",
       "Flags": 0,
       "Name": "magic_missile_enemy (19)",
       "Position": "-18688,-7168,-16700",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Wander",
-        "Patrol Path": [],
-        "Hearing Radius": 125,
-        "Vision Room": 4000,
-        "Vision Angle": 0.25132743,
-        "Attack Range Ideal": 4000,
-        "Attack Range Max": 4000,
-        "Attack Cooldown": 1,
-        "Burst Count": 3,
-        "Time Between Burst Shots": 0.1
-      }
-    },
-    {
-      "__guid": "fee05834-1a14-4e15-b6f5-a92fc9c2cb76",
-      "Flags": 0,
-      "Name": "magic_missile_enemy (20)",
-      "Position": "-19264,-6144,-16700",
-      "Rotation": "0,0,-0.0871556,0.9961945",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Wander",
-        "Patrol Path": [],
-        "Hearing Radius": 125,
-        "Vision Room": 4000,
-        "Vision Angle": 0.25132743,
-        "Attack Range Ideal": 4000,
-        "Attack Range Max": 4000,
-        "Attack Cooldown": 1,
-        "Burst Count": 3,
-        "Time Between Burst Shots": 0.1
-      }
-    },
-    {
-      "__guid": "82ea6806-4bbc-4124-9131-063b6bb34680",
-      "Flags": 0,
-      "Name": "magic_missile_enemy (21)",
-      "Position": "-20320,-7168,-16700",
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
@@ -1033,50 +850,6 @@
       "Name": "magic_missile_enemy (22)",
       "Position": "-23200,-7168,-16700",
       "Rotation": "0,0,0.0436194,0.9990481",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Wander",
-        "Patrol Path": [],
-        "Hearing Radius": 125,
-        "Vision Room": 4000,
-        "Vision Angle": 0.25132743,
-        "Attack Range Ideal": 4000,
-        "Attack Range Max": 4000,
-        "Attack Cooldown": 1,
-        "Burst Count": 3,
-        "Time Between Burst Shots": 0.1
-      }
-    },
-    {
-      "__guid": "9cb5b487-63cc-431c-8de3-7c5d95cec5bf",
-      "Flags": 0,
-      "Name": "magic_missile_enemy (23)",
-      "Position": "-22912,-6144,-16700",
-      "Rotation": "0,0,-0.0871557,0.9961946",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Wander",
-        "Patrol Path": [],
-        "Hearing Radius": 125,
-        "Vision Room": 4000,
-        "Vision Angle": 0.25132743,
-        "Attack Range Ideal": 4000,
-        "Attack Range Max": 4000,
-        "Attack Cooldown": 1,
-        "Burst Count": 3,
-        "Time Between Burst Shots": 0.1
-      }
-    },
-    {
-      "__guid": "0e5abebf-f626-4c50-8fda-5c3652d18256",
-      "Flags": 0,
-      "Name": "magic_missile_enemy (24)",
-      "Position": "-23648,-7168,-16700",
-      "Rotation": "0,0,0.04361938,0.9990484",
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
@@ -1157,49 +930,6 @@
       }
     },
     {
-      "__guid": "2efa8cd0-a1ac-49b5-b450-961d9f286062",
-      "Flags": 0,
-      "Name": "magic_missile_enemy (27)",
-      "Position": "-26528,-6144,-16700",
-      "Rotation": "0,0,-0.0436194,0.9990481",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Wander",
-        "Patrol Path": [],
-        "Hearing Radius": 125,
-        "Vision Room": 5000,
-        "Vision Angle": 0.25132743,
-        "Attack Range Ideal": 5000,
-        "Attack Range Max": 5000,
-        "Attack Cooldown": 1,
-        "Burst Count": 3,
-        "Time Between Burst Shots": 0.1
-      }
-    },
-    {
-      "__guid": "d6e8aaf5-800c-498e-8765-7ef7d13cef2c",
-      "Flags": 0,
-      "Name": "magic_missile_enemy (28)",
-      "Position": "-27392,-7168,-16700",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Wander",
-        "Patrol Path": [],
-        "Hearing Radius": 125,
-        "Vision Room": 5000,
-        "Vision Angle": 0.25132743,
-        "Attack Range Ideal": 5000,
-        "Attack Range Max": 5000,
-        "Attack Cooldown": 1,
-        "Burst Count": 3,
-        "Time Between Burst Shots": 0.1
-      }
-    },
-    {
       "__guid": "ebe191f4-2c1a-468c-8b4a-a97b4fce7453",
       "Flags": 0,
       "Name": "water_beam_enemy (7)",
@@ -1216,22 +946,6 @@
         "Attack Range Ideal": 5000,
         "Attack Range Max": 5000,
         "Attack Cooldown": 3
-      }
-    },
-    {
-      "__guid": "381deed7-7640-41e4-a42a-1ca9f7dff6c4",
-      "Flags": 0,
-      "Name": "fireball_enemy (11)",
-      "Position": "-28736,-6144,-16700",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
-      "__PrefabVariables": {
-        "Hearing Radius": 1000,
-        "Vision Range": 5000,
-        "Vision Angle": 0.25132743,
-        "Attack Range Ideal": 5000,
-        "Attack Range Max": 5000
       }
     },
     {
@@ -1269,47 +983,6 @@
         "Attack Range Ideal": 5000,
         "Attack Range Max": 5000,
         "Attack Cooldown": 3
-      }
-    },
-    {
-      "__guid": "448df3de-c677-406e-8b85-63ca454aaf17",
-      "Flags": 0,
-      "Name": "water_beam_enemy (9)",
-      "Position": "-30016,-7168,-16700",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/water_beam_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Stationary",
-        "Patrol Path": [],
-        "Hearing Radius": 1000,
-        "Vision Range": 5000,
-        "Vision Angle": 0.25132743,
-        "Attack Range Ideal": 5000,
-        "Attack Range Max": 5000,
-        "Attack Cooldown": 3
-      }
-    },
-    {
-      "__guid": "5b4cd032-9e92-4e8f-9874-9fe79e3f44ef",
-      "Flags": 0,
-      "Name": "magic_missile_enemy (29)",
-      "Position": "-30400,-6144,-16700",
-      "Rotation": "0,0,-0.0436194,0.9990483",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Wander",
-        "Patrol Path": [],
-        "Hearing Radius": 125,
-        "Vision Room": 5000,
-        "Vision Angle": 0.25132743,
-        "Attack Range Ideal": 5000,
-        "Attack Range Max": 5000,
-        "Attack Cooldown": 1,
-        "Burst Count": 3,
-        "Time Between Burst Shots": 0.1
       }
     },
     {
@@ -1374,114 +1047,10 @@
       }
     },
     {
-      "__guid": "97b9248c-d60d-42ad-a869-633a6831115e",
-      "Flags": 0,
-      "Name": "magic_missile_enemy (32)",
-      "Position": "-33056,-6144,-16700",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Wander",
-        "Patrol Path": [],
-        "Hearing Radius": 125,
-        "Vision Room": 7500,
-        "Vision Angle": 0.25132743,
-        "Attack Range Ideal": 7500,
-        "Attack Range Max": 7500,
-        "Attack Cooldown": 1,
-        "Burst Count": 3,
-        "Time Between Burst Shots": 0.1
-      }
-    },
-    {
-      "__guid": "5883b685-9b09-40a8-aae7-91ec251e4e0d",
-      "Flags": 0,
-      "Name": "magic_missile_enemy (33)",
-      "Position": "-33664,-7168,-16700",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Wander",
-        "Patrol Path": [],
-        "Hearing Radius": 125,
-        "Vision Room": 7500,
-        "Vision Angle": 0.25132743,
-        "Attack Range Ideal": 7500,
-        "Attack Range Max": 7500,
-        "Attack Cooldown": 1,
-        "Burst Count": 3,
-        "Time Between Burst Shots": 0.1
-      }
-    },
-    {
-      "__guid": "94140d51-b4b7-48a1-93b6-f719d34145d6",
-      "Flags": 0,
-      "Name": "water_beam_enemy (10)",
-      "Position": "-34048,-7168,-16700",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/water_beam_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Stationary",
-        "Patrol Path": [],
-        "Hearing Radius": 1000,
-        "Vision Range": 7500,
-        "Vision Angle": 0.25132743,
-        "Attack Range Ideal": 7500,
-        "Attack Range Max": 7500,
-        "Attack Cooldown": 3
-      }
-    },
-    {
-      "__guid": "a4feba99-e8ce-4fe9-abbe-e8c6665249b3",
-      "Flags": 0,
-      "Name": "magic_missile_enemy (34)",
-      "Position": "-34528,-6144,-16700",
-      "Rotation": "0,0,-0.08715575,0.9961948",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Wander",
-        "Patrol Path": [],
-        "Hearing Radius": 125,
-        "Vision Room": 7500,
-        "Vision Angle": 0.25132743,
-        "Attack Range Ideal": 7500,
-        "Attack Range Max": 7500,
-        "Attack Cooldown": 1,
-        "Burst Count": 3,
-        "Time Between Burst Shots": 0.1
-      }
-    },
-    {
       "__guid": "fc65d70d-6054-47ff-b523-386bf8d3307b",
       "Flags": 0,
       "Name": "magic_missile_enemy (35)",
       "Position": "-35040,-7168,-16700",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Wander",
-        "Patrol Path": [],
-        "Hearing Radius": 125,
-        "Vision Room": 7500,
-        "Vision Angle": 0.25132743,
-        "Attack Range Ideal": 7500,
-        "Attack Range Max": 7500,
-        "Attack Cooldown": 1,
-        "Burst Count": 3,
-        "Time Between Burst Shots": 0.1
-      }
-    },
-    {
-      "__guid": "6a194756-d924-4367-a1a0-f04b0687ae09",
-      "Flags": 0,
-      "Name": "magic_missile_enemy",
-      "Position": "-35552,-7168,-16700",
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
@@ -1614,46 +1183,6 @@
         "Patrol Path": [],
         "Hearing Radius": 1000,
         "Vision Range": 2000,
-        "Vision Angle": 0.7853982,
-        "Attack Range Ideal": 2500,
-        "Attack Range Max": 2500,
-        "Attack Cooldown": 3
-      }
-    },
-    {
-      "__guid": "a59b731d-b909-4fc6-9c3f-72d230d46ae7",
-      "Flags": 0,
-      "Name": "water_beam_enemy",
-      "Position": "-38656,-7104,-20508",
-      "Rotation": "0,0,0.1305262,0.9914448",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/water_beam_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Stationary",
-        "Patrol Path": [],
-        "Hearing Radius": 1000,
-        "Vision Range": 2200,
-        "Vision Angle": 0.7853982,
-        "Attack Range Ideal": 2500,
-        "Attack Range Max": 2500,
-        "Attack Cooldown": 3
-      }
-    },
-    {
-      "__guid": "95fdd615-da72-441e-b319-234b0016dc01",
-      "Flags": 0,
-      "Name": "water_beam_enemy",
-      "Position": "-38592,-6240,-20508",
-      "Rotation": "0,0,-0.258819,0.9659257",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/water_beam_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Stationary",
-        "Patrol Path": [],
-        "Hearing Radius": 1000,
-        "Vision Range": 2200,
         "Vision Angle": 0.7853982,
         "Attack Range Ideal": 2500,
         "Attack Range Max": 2500,
@@ -2330,67 +1859,6 @@
       }
     },
     {
-      "__guid": "d36e15a0-96e5-433c-9a80-f5371ffc3a02",
-      "Flags": 0,
-      "Name": "magic_missile_enemy",
-      "Position": "135.7876,2142.753,2570",
-      "Rotation": "0,0,0.7071068,0.7071068",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Wander",
-        "Patrol Path": [],
-        "Hearing Radius": 125,
-        "Vision Room": 2000,
-        "Vision Angle": 0.7853982,
-        "Attack Range Ideal": 2000,
-        "Attack Range Max": 2000,
-        "Attack Cooldown": 1,
-        "Burst Count": 3,
-        "Time Between Burst Shots": 0.1
-      }
-    },
-    {
-      "__guid": "2464faa6-7f7a-4255-a858-acd31af03fe5",
-      "Flags": 0,
-      "Name": "magic_missile_enemy",
-      "Position": "32.55466,2142.753,2570",
-      "Rotation": "0,0,0.7071068,0.7071068",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Wander",
-        "Patrol Path": [],
-        "Hearing Radius": 125,
-        "Vision Room": 2000,
-        "Vision Angle": 0.7853982,
-        "Attack Range Ideal": 2000,
-        "Attack Range Max": 2000,
-        "Attack Cooldown": 1,
-        "Burst Count": 3,
-        "Time Between Burst Shots": 0.1
-      }
-    },
-    {
-      "__guid": "9335b414-1553-4eb7-8e64-fc9338ec7dc4",
-      "Flags": 0,
-      "Name": "fireball_enemy",
-      "Position": "88.75235,575.0499,2591",
-      "Rotation": "0,0,0.7372773,0.6755902",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
-      "__PrefabVariables": {
-        "Hearing Radius": 1000,
-        "Vision Range": 3500,
-        "Vision Angle": 0.7853982,
-        "Attack Range Ideal": 3500,
-        "Attack Range Max": 3500
-      }
-    },
-    {
       "__guid": "8a235490-61e1-4b7b-98a1-8d3e3de30da6",
       "Flags": 0,
       "Name": "magic_missile_enemy",
@@ -2413,88 +1881,10 @@
       }
     },
     {
-      "__guid": "cca4e30c-4a48-4639-9096-2640ef1c234e",
-      "Flags": 0,
-      "Name": "fireball_enemy",
-      "Position": "106.4623,-3370.316,2591",
-      "Rotation": "0,0,0.7071068,0.7071068",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
-      "__PrefabVariables": {
-        "Hearing Radius": 1000,
-        "Vision Range": 5000,
-        "Vision Angle": 0.12566371,
-        "Attack Range Ideal": 5000,
-        "Attack Range Max": 5000
-      }
-    },
-    {
-      "__guid": "b4c522af-b855-4934-b8c5-7e9329d9a4fc",
-      "Flags": 0,
-      "Name": "magic_missile_enemy",
-      "Position": "-235.9078,-4307.76,2570",
-      "Rotation": "0,0,0.6427876,0.7660444",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Wander",
-        "Patrol Path": [],
-        "Hearing Radius": 125,
-        "Vision Room": 7500,
-        "Vision Angle": 0.25132743,
-        "Attack Range Ideal": 7500,
-        "Attack Range Max": 7500,
-        "Attack Cooldown": 1,
-        "Burst Count": 3,
-        "Time Between Burst Shots": 0.1
-      }
-    },
-    {
-      "__guid": "5d787cbc-e496-45b5-9a69-a01aa31bb429",
-      "Flags": 0,
-      "Name": "magic_missile_enemy",
-      "Position": "417.9482,-4313.842,2570",
-      "Rotation": "0,0,0.6755902,0.7372773",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/magic_missile_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Wander",
-        "Patrol Path": [],
-        "Hearing Radius": 125,
-        "Vision Room": 7500,
-        "Vision Angle": 0.25132743,
-        "Attack Range Ideal": 7500,
-        "Attack Range Max": 7500,
-        "Attack Cooldown": 1,
-        "Burst Count": 3,
-        "Time Between Burst Shots": 0.1
-      }
-    },
-    {
-      "__guid": "4f941cdc-ad43-4d1a-8be7-0a3f19730b65",
-      "Flags": 0,
-      "Name": "fireball_enemy",
-      "Position": "-33.66218,-4936.294,2591",
-      "Rotation": "0,0,0.6755902,0.7372773",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/fireball_enemy.prefab",
-      "__PrefabVariables": {
-        "Hearing Radius": 1000,
-        "Vision Range": 7500,
-        "Vision Angle": 0.12566371,
-        "Attack Range Ideal": 7500,
-        "Attack Range Max": 7500
-      }
-    },
-    {
       "__guid": "3e40b980-5581-4fcf-af5d-b4b19ff6ce08",
       "Flags": 0,
       "Name": "fireball_enemy",
-      "Position": "252.4944,-4936.294,2591",
+      "Position": "135.5874,-4936.294,2591",
       "Rotation": "0,0,0.7071068,0.7071068",
       "Tags": "enemy",
       "Enabled": true,
@@ -2513,26 +1903,6 @@
       "Name": "water_beam_enemy",
       "Position": "-1174.625,-3268.22,-14997",
       "Rotation": "0,0,-0.3826834,0.9238794",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/water_beam_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Stationary",
-        "Patrol Path": [],
-        "Hearing Radius": 1000,
-        "Vision Range": 2000,
-        "Vision Angle": 0.7853982,
-        "Attack Range Ideal": 1000,
-        "Attack Range Max": 1700,
-        "Attack Cooldown": 3
-      }
-    },
-    {
-      "__guid": "8c2ff333-3005-4320-8b34-5ffe989c804d",
-      "Flags": 0,
-      "Name": "water_beam_enemy",
-      "Position": "259.5789,-2728.913,-14485",
-      "Rotation": "0,0,-0.7071068,0.7071068",
       "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/enemies/water_beam_enemy.prefab",
@@ -2568,70 +1938,10 @@
       }
     },
     {
-      "__guid": "1a5bf422-fa4b-4466-a361-0b5c425f5bd5",
-      "Flags": 0,
-      "Name": "water_beam_enemy",
-      "Position": "931.3315,-2728.913,-14485",
-      "Rotation": "0,0,-0.7071068,0.7071068",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/water_beam_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Stationary",
-        "Patrol Path": [],
-        "Hearing Radius": 1000,
-        "Vision Range": 2000,
-        "Vision Angle": 0.7853982,
-        "Attack Range Ideal": 1000,
-        "Attack Range Max": 1700,
-        "Attack Cooldown": 3
-      }
-    },
-    {
-      "__guid": "d3e1bcea-5f8a-4337-b077-cd4ae217d0e6",
-      "Flags": 0,
-      "Name": "water_beam_enemy",
-      "Position": "1952.879,-4433.172,-14485",
-      "Rotation": "0,0,0.9990481,-0.04361942",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/water_beam_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Stationary",
-        "Patrol Path": [],
-        "Hearing Radius": 1000,
-        "Vision Range": 2000,
-        "Vision Angle": 0.7853982,
-        "Attack Range Ideal": 1000,
-        "Attack Range Max": 1700,
-        "Attack Cooldown": 3
-      }
-    },
-    {
       "__guid": "25a605c5-f6bf-4444-bed0-78bf2ac7c764",
       "Flags": 0,
       "Name": "water_beam_enemy",
       "Position": "1981.901,-4764.891,-14485",
-      "Rotation": "0,0,0.9990481,-0.04361942",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/enemies/water_beam_enemy.prefab",
-      "__PrefabVariables": {
-        "Passive Mode": "Stationary",
-        "Patrol Path": [],
-        "Hearing Radius": 1000,
-        "Vision Range": 2000,
-        "Vision Angle": 0.7853982,
-        "Attack Range Ideal": 1000,
-        "Attack Range Max": 1700,
-        "Attack Cooldown": 3
-      }
-    },
-    {
-      "__guid": "a4dc9e0a-dbf9-46ba-864b-1b9c43baeebc",
-      "Flags": 0,
-      "Name": "water_beam_enemy",
-      "Position": "2010.645,-5093.436,-14485",
       "Rotation": "0,0,0.9990481,-0.04361942",
       "Tags": "enemy",
       "Enabled": true,
