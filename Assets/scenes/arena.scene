@@ -1,5 +1,5 @@
 {
-  "__guid": "fcbef226-0674-42b3-9e6d-f16f0acfec1c",
+  "__guid": "55aa4511-c515-44d0-a389-251d38db9ee6",
   "GameObjects": [
     {
       "__guid": "bfc59c12-1ed2-4f91-8956-a95a315eac3c",
@@ -74,10 +74,6 @@
         {
           "__type": "ArenaManager",
           "__guid": "931c5b37-ed2c-4083-aeea-4ef3b6102440",
-          "EnemySpawnBBox": {
-            "Mins": "1024,1024,1024",
-            "Maxs": "-1024,-1024,0"
-          },
           "FireballEnemyPrefab": {
             "_type": "gameobject",
             "prefab": "prefabs/enemies/fireball_enemy.prefab"
@@ -128,10 +124,38 @@
       "Flags": 0,
       "Name": "death_trigger",
       "Position": "0,0,-905.9846",
-      "Scale": "87.69264,85.79317,14.25462",
+      "Scale": "87.69264,85.79317,6.792553",
       "Enabled": true,
       "__Prefab": "prefabs/triggers/death_trigger.prefab",
       "__PrefabVariables": {}
+    },
+    {
+      "__guid": "4056538f-b60b-496b-95b1-68abea0be59a",
+      "Flags": 0,
+      "Name": "scafolding1",
+      "Position": "164.4324,365.8685,-2.828384",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/scafolding/scafolding1.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "55fab92b-92a7-4c45-8ca6-0036f96b9d93",
+      "Flags": 0,
+      "Name": "Plane",
+      "Position": "0,0,-888.0862",
+      "Scale": "42.45365,44.57428,1",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "cf80516b-201b-4453-8d87-c8f9518fb690",
+          "BodyGroups": 18446744073709551615,
+          "MaterialOverride": "materials/dev/black_nonsolid.vmat",
+          "Model": "models/dev/plane.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ]
     }
   ],
   "SceneProperties": {

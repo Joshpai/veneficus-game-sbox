@@ -17,21 +17,223 @@
       {
         "__type": "Sandbox.BoxCollider",
         "__guid": "80e2e4ca-26c3-44b8-922b-e1541d613466",
-        "Center": "-205.6999,0,192.2",
+        "Center": "-209.7001,-8.799998,192.2",
         "IsTrigger": false,
-        "Scale": "223.4998,256.2,11.2",
+        "Scale": "248.4997,271.5997,11.2",
         "Static": false
       },
       {
         "__type": "Sandbox.BoxCollider",
         "__guid": "fd69f9a1-d4e0-41a1-8cf6-a99312dd1383",
-        "Center": "250.7,0,137.3002",
+        "Center": "254.1001,-8.599998,137.3002",
         "IsTrigger": false,
-        "Scale": "225.2997,91.49992,11.2",
+        "Scale": "225.2997,109.3998,11.2",
         "Static": false
       }
     ],
-    "Children": [],
+    "Children": [
+      {
+        "__guid": "ddf1063d-a565-4824-b402-2ab76921561e",
+        "Flags": 0,
+        "Name": "LowerLeft",
+        "Position": "250.638,-165.7594,60.59597",
+        "Rotation": "-0.4454168,-0,0,0.8953233",
+        "Scale": "4.499999,0.1999948,5.499999",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.BoxCollider",
+            "__guid": "741317ac-8828-4c98-bddd-56a76c36e0d9",
+            "Center": "0,0,0",
+            "IsTrigger": false,
+            "Scale": "50,50,50",
+            "Static": false
+          }
+        ]
+      },
+      {
+        "__guid": "6549b2ca-72b2-4991-b2de-49d71c7bb49b",
+        "Flags": 0,
+        "Name": "LowerRight",
+        "Position": "250.638,149.1424,61.51949",
+        "Rotation": "0.4578742,0,0,0.889017",
+        "Scale": "4.499999,0.1999948,5.199999",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.BoxCollider",
+            "__guid": "74ba8b65-abfe-4878-ae39-3189f8789b06",
+            "Center": "0,0,0",
+            "IsTrigger": false,
+            "Scale": "50,50,50",
+            "Static": false
+          }
+        ]
+      },
+      {
+        "__guid": "203e885e-5d6a-44e9-9e40-78c6e4a790e8",
+        "Flags": 0,
+        "Name": "Leg",
+        "Position": "-312.9468,-126.2307,87.74204",
+        "Scale": "0.5,0.5,3.799999",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.BoxCollider",
+            "__guid": "c590b3e5-cb7c-4d0f-8b9c-701ffb7bcc53",
+            "Center": "0,0,0",
+            "IsTrigger": false,
+            "Scale": "50,50,50",
+            "Static": false
+          }
+        ]
+      },
+      {
+        "__guid": "6f07e1ab-8c0a-4b72-beb6-cc2c9f06778e",
+        "Flags": 0,
+        "Name": "Leg (3)",
+        "Position": "-312.9468,105.1853,87.74204",
+        "Scale": "0.5,0.5,3.799999",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.BoxCollider",
+            "__guid": "424806aa-a591-4182-bed7-2a9f794ab53f",
+            "Center": "0,0,0",
+            "IsTrigger": false,
+            "Scale": "50,50,50",
+            "Static": false
+          }
+        ]
+      },
+      {
+        "__guid": "371912e4-2b0d-4dab-b02f-ce419bf4b00b",
+        "Flags": 0,
+        "Name": "Leg (1)",
+        "Position": "-106.1058,-126.2307,87.74204",
+        "Scale": "0.5,0.5,3.799999",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.BoxCollider",
+            "__guid": "0e84fe49-8959-4a8e-8469-1f0777754d81",
+            "Center": "0,0,0",
+            "IsTrigger": false,
+            "Scale": "50,50,50",
+            "Static": false
+          }
+        ]
+      },
+      {
+        "__guid": "69b7d07c-d5a5-43e5-a62f-91f9d198ac00",
+        "Flags": 0,
+        "Name": "Leg (4)",
+        "Position": "140.6607,-58.40509,66.15121",
+        "Scale": "0.5,0.5,3.799999",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.BoxCollider",
+            "__guid": "8e477f56-99c1-4078-bee1-a7e2305906a6",
+            "Center": "0,0,0",
+            "IsTrigger": false,
+            "Scale": "50,50,34.00011",
+            "Static": false
+          }
+        ]
+      },
+      {
+        "__guid": "b550b000-195e-442b-99a7-c81e45fc5405",
+        "Flags": 0,
+        "Name": "Leg (5)",
+        "Position": "148.8422,30.91296,66.15121",
+        "Scale": "0.5,0.5,3.799999",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.BoxCollider",
+            "__guid": "c388ab95-6d3c-455a-aecc-a21ef22ebf64",
+            "Center": "0,0,0",
+            "IsTrigger": false,
+            "Scale": "50,50,34.00011",
+            "Static": false
+          }
+        ]
+      },
+      {
+        "__guid": "cf2445c4-f35b-4e55-98a2-1f92d6fff25f",
+        "Flags": 0,
+        "Name": "Leg (6)",
+        "Position": "348.7947,30.91296,66.15121",
+        "Scale": "0.5,0.5,3.799999",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.BoxCollider",
+            "__guid": "9cf13491-1866-42ce-9e38-10bbf34b4c15",
+            "Center": "0,0,0",
+            "IsTrigger": false,
+            "Scale": "50,50,34.00011",
+            "Static": false
+          }
+        ]
+      },
+      {
+        "__guid": "c7e8201d-6656-4116-bb0b-301e811088f8",
+        "Flags": 0,
+        "Name": "Leg (7)",
+        "Position": "348.7947,-54.38551,66.15121",
+        "Scale": "0.5,0.5,3.799999",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.BoxCollider",
+            "__guid": "3028ae88-cbb1-457a-ab09-12fa450f583c",
+            "Center": "0,0,0",
+            "IsTrigger": false,
+            "Scale": "50,50,34.00011",
+            "Static": false
+          }
+        ]
+      },
+      {
+        "__guid": "26a4e85d-9cc5-433f-a35a-ee589fd4592a",
+        "Flags": 0,
+        "Name": "Leg (2)",
+        "Position": "-106.1058,103.8825,87.74204",
+        "Scale": "0.5,0.5,3.799999",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.BoxCollider",
+            "__guid": "eb426876-f525-48b9-a071-2e4e3f8ace17",
+            "Center": "0,0,0",
+            "IsTrigger": false,
+            "Scale": "50,50,50",
+            "Static": false
+          }
+        ]
+      },
+      {
+        "__guid": "08035e8a-92c6-4777-a23d-5a596ef0724a",
+        "Flags": 0,
+        "Name": "UpperRamp",
+        "Position": "19.73581,-9.911992,159.8071",
+        "Rotation": "0,-0.6252428,0,0.7804303",
+        "Scale": "0.3999996,2.299995,4.7",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.BoxCollider",
+            "__guid": "b87c38e0-55dc-40b1-8a99-0454d309cbe1",
+            "Center": "0,0,0",
+            "IsTrigger": false,
+            "Scale": "50,50,50",
+            "Static": false
+          }
+        ]
+      }
+    ],
     "__variables": []
   },
   "ShowInMenu": false,
