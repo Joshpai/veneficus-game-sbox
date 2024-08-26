@@ -52,10 +52,15 @@ public sealed class MaxManaBuff : Component, Component.ITriggerListener
 		{
 			var mixerPickupSound =
 				Sandbox.Audio.Mixer.FindMixerByName(PickupSoundMixerName);
+			SoundHandle sound;
 			if (mixerPickupSound != null)
-				Sound.Play($"{PickupSound}.sound", mixerPickupSound);
+				sound = Sound.Play($"{PickupSound}.sound", mixerPickupSound);
 			else
-				Sound.Play($"{PickupSound}.sound");
+				sound = Sound.Play($"{PickupSound}.sound");
+
+			if (sound != null)
+				sound.Position = Transform.Position;
+
 			if (!_hasBeenCollected)
 			{
 				player.MaxMana += MaxManaValue;

@@ -227,10 +227,14 @@ public sealed class PlayerMovementController : Component
 	{
 		var mixerStartLevelSound =
 			Sandbox.Audio.Mixer.FindMixerByName(StartLevelSoundMixerName);
+		SoundHandle sound;
 		if (mixerStartLevelSound != null)
-			Sound.Play($"{StartLevelSound}.sound", mixerStartLevelSound);
+			sound = Sound.Play($"{StartLevelSound}.sound", mixerStartLevelSound);
 		else
-			Sound.Play($"{StartLevelSound}.sound");
+			sound = Sound.Play($"{StartLevelSound}.sound");
+
+		if (sound != null)
+			sound.Position = Transform.Position;
 
 		if (_modelRenderer != null)
 		{
@@ -402,10 +406,14 @@ public sealed class PlayerMovementController : Component
 
 		var mixerJumpSound =
 			Sandbox.Audio.Mixer.FindMixerByName(JumpSoundMixerName);
+		SoundHandle sound;
 		if (mixerJumpSound != null)
-			Sound.Play($"{JumpSound}.sound", mixerJumpSound);
+			sound = Sound.Play($"{JumpSound}.sound", mixerJumpSound);
 		else
-			Sound.Play($"{JumpSound}.sound");
+			sound = Sound.Play($"{JumpSound}.sound");
+
+		if (sound != null)
+			sound.Position = Transform.Position;
 	}
 
 	private void AirJump()

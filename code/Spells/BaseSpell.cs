@@ -82,10 +82,14 @@ public abstract class BaseSpell
 		{
 			var mixerSpellSound =
 				Sandbox.Audio.Mixer.FindMixerByName("Game");
+			SoundHandle sound;
 			if (mixerSpellSound != null)
-				Sound.Play($"{SpellSound}.sound", mixerSpellSound);
+				sound = Sound.Play($"{SpellSound}.sound", mixerSpellSound);
 			else
-				Sound.Play($"{SpellSound}.sound");
+				sound = Sound.Play($"{SpellSound}.sound");
+
+			if (sound != null)
+				sound.Position = _caster.Transform.Position;
 		}
 
 		return succeded;

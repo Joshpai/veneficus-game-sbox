@@ -80,10 +80,14 @@ public sealed class LevelEnd : InteractableComponent
 	{
 		var mixerFinishSound =
 			Sandbox.Audio.Mixer.FindMixerByName(FinishSoundMixerName);
+		SoundHandle sound;
 		if (mixerFinishSound != null)
-			Sound.Play($"{FinishSound}.sound", mixerFinishSound);
+			sound = Sound.Play($"{FinishSound}.sound", mixerFinishSound);
 		else
-			Sound.Play($"{FinishSound}.sound");
+			sound = Sound.Play($"{FinishSound}.sound");
+
+		if (sound != null)
+			sound.Position = Transform.Position;
 		
 		var completionTime =
 			Time.Now - LevelManagerStaticStore.Stats.LevelStartTime;

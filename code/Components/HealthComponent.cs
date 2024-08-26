@@ -65,10 +65,14 @@ public sealed class HealthComponent : Component
 		{
 			var mixerHurtSound =
 				Sandbox.Audio.Mixer.FindMixerByName(HurtSoundMixerName);
+			SoundHandle sound;
 			if (mixerHurtSound != null)
-				Sound.Play($"{HurtSound}.sound", mixerHurtSound);
+				sound = Sound.Play($"{HurtSound}.sound", mixerHurtSound);
 			else
-				Sound.Play($"{HurtSound}.sound");
+				sound = Sound.Play($"{HurtSound}.sound");
+
+			if (sound != null)
+				sound.Position = Transform.Position;
 		}
 	}
 
