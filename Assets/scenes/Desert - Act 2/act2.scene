@@ -2612,6 +2612,606 @@
           "Tint": "1,1,1,1"
         }
       ]
+    },
+    {
+      "__guid": "249d64e9-2811-46e4-859c-353f031a110e",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "635.1077,-119.5976,2.06263",
+      "Rotation": "0.00000001024455,0.0000008642673,-0.006183035,0.9999808",
+      "Scale": "2.44166,2.584312,1.379979",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "8d9f7302-ef4c-4329-9b56-e18176fccc24",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "1897.72,-3310.667,2.06263",
+      "Rotation": "0.0000007535997,0.0000004232617,-0.8691003,0.4946358",
+      "Scale": "2.44166,2.584312,1.379979",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "5f57057c-cb2e-4d5e-a512-5e9fe52dddda",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "1897.72,-7020.334,2.06263",
+      "Rotation": "0.0000007535997,0.0000004232617,-0.8691003,0.4946358",
+      "Scale": "2.44166,2.584312,1.379979",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "717af136-c3e9-48f6-bc19-219633b15c8d",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "791.5258,-990.3589,2.06263",
+      "Rotation": "0.0000005342601,0.0000006794329,-0.613655,0.7895742",
+      "Scale": "2.44166,2.584312,1.379979",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "8f541fc8-12ab-43f0-b412-3306eec0db29",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "1065.409,-3010.749,2.06263",
+      "Rotation": "0.0000008555362,-0.0000001229663,-0.9906188,-0.1366536",
+      "Scale": "2.44166,2.584312,1.379979",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "0a343d1f-0556-426b-aa3e-e39b84028f15",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "1065.409,-6720.416,2.06263",
+      "Rotation": "0.0000008555362,-0.0000001229663,-0.9906188,-0.1366536",
+      "Scale": "2.44166,2.584312,1.379979",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "0db42b9c-8237-4f86-8b5d-bad7e94c9b00",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "939.0222,-5421.991,2.06263",
+      "Rotation": "0.0000008555362,-0.0000001229663,-0.9906188,-0.1366536",
+      "Scale": "2.44166,2.584312,1.379979",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "9e998fcf-0a1f-4341-b5d3-e8805803bc2d",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "1747.799,-830.8157,2.06263",
+      "Rotation": "0.0000005342601,0.0000006794329,-0.613655,0.7895742",
+      "Scale": "2.44166,2.584312,1.379979",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "dbdd9fc4-9b20-46f9-b8ae-ed0a1e4d9838",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "2966.787,-1601.269,2.06263",
+      "Rotation": "0.0000007535997,0.0000004232617,-0.8691002,0.4946359",
+      "Scale": "2.44166,2.584312,1.379979",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "fa993e53-c56e-4af5-a3b0-b0b7fc177af2",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "741.8148,-368.8028,2.06263",
+      "Rotation": "0.0000004410057,0.0000007433552,-0.505345,0.8629173",
+      "Scale": "2.44166,2.584312,1.379979",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "e4e61a22-8276-43dd-9755-93266366bbc5",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "1628.548,-3278.476,2.06263",
+      "Rotation": "0.0000008642673,-0.00000001024449,-0.9999808,-0.006182879",
+      "Scale": "2.44166,2.584312,1.379979",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "67ee96a9-e778-4f44-9003-3ce4fef15ef1",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "1628.548,-6988.143,2.06263",
+      "Rotation": "0.0000008642673,-0.00000001024449,-0.9999808,-0.006182879",
+      "Scale": "2.44166,2.584312,1.379979",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "b5e5a102-071f-465b-99af-aa18842883e7",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "578.4299,-1623.896,2.06263",
+      "Rotation": "0.0000008023993,0.0000003212761,-0.9262278,0.3769639",
+      "Scale": "2.44166,2.584312,1.379979",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "ed415866-fab2-47ec-af62-9b50f607b6e5",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "623.2981,-2509.434,2.06263",
+      "Rotation": "0.000000679433,-0.0000005342601,-0.7895743,-0.6136548",
+      "Scale": "2.44166,2.584312,1.379979",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "7eb5228a-2fa4-4a9d-9a05-276f7b2f3422",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "623.2981,-6219.101,2.06263",
+      "Rotation": "0.000000679433,-0.0000005342601,-0.7895743,-0.6136548",
+      "Scale": "2.44166,2.584312,1.379979",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "12651f31-9fc1-43fe-b314-690a9f4de52b",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "496.9111,-3966.238,2.06263",
+      "Rotation": "0.000000679433,-0.0000005342601,-0.7895743,-0.6136548",
+      "Scale": "2.44166,2.584312,1.379979",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "0d8e413e-c6c7-4b7f-afda-d8254cbb9ff1",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "1534.703,-998.386,2.06263",
+      "Rotation": "0.0000008023993,0.0000003212761,-0.9262278,0.3769639",
+      "Scale": "2.44166,2.584312,1.379979",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "7fc20c0a-d6ad-480d-9e23-be586f069b94",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "2697.616,-1569.078,2.06263",
+      "Rotation": "0.0000008642673,-0.00000001024449,-0.9999808,-0.00618276",
+      "Scale": "2.44166,2.584312,1.379979",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "01926d2e-ddfd-4246-a331-588fb9277299",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "2310.323,-504.6,2.06263",
+      "Rotation": "0.0000008642673,-0.00000001024449,-0.9999808,-0.00618276",
+      "Scale": "2.44166,2.584312,1.379979",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "8def073a-5130-4c21-96c9-70dcba4514f8",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "218.6086,-716.7607,2.06263",
+      "Rotation": "0.0000004410057,0.0000007433552,-0.505345,0.8629173",
+      "Scale": "2.44166,2.584312,1.379979",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "0473fe01-556f-46a2-bab3-e4483b0934e9",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "1588.811,-2651.387,2.06263",
+      "Rotation": "0.0000008642673,-0.00000001024449,-0.9999808,-0.006182879",
+      "Scale": "2.44166,2.584312,1.379979",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "b4ea4a44-9ed4-4121-ae46-b1f653ba5f56",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "1588.811,-6361.054,2.06263",
+      "Rotation": "0.0000008642673,-0.00000001024449,-0.9999808,-0.006182879",
+      "Scale": "2.44166,2.584312,1.379979",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "8fa82fbb-44db-4151-b03a-40e7d3f47244",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "392.1149,-1391.84,2.06263",
+      "Rotation": "0.0000008023993,0.0000003212761,-0.9262278,0.3769639",
+      "Scale": "2.44166,2.584312,1.379979",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "7c89864a-9f8a-45b6-8fa4-7579d2d4f2cb",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "917.4222,-2464.109,2.06263",
+      "Rotation": "0.000000679433,-0.0000005342601,-0.7895743,-0.6136548",
+      "Scale": "2.44166,2.584312,1.379979",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "1d666355-9cc0-4dab-b995-5ec8b10d6d34",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "917.4222,-6173.775,2.06263",
+      "Rotation": "0.000000679433,-0.0000005342601,-0.7895743,-0.6136548",
+      "Scale": "2.44166,2.584312,1.379979",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "159f7f5e-bb19-44d9-bc1a-042c3479455f",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "791.0352,-4875.351,2.06263",
+      "Rotation": "0.000000679433,-0.0000005342601,-0.7895743,-0.6136548",
+      "Scale": "2.44166,2.584312,1.379979",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "c40ccf10-3160-4046-ab5d-f7e85cf79543",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "1348.388,-766.3298,2.06263",
+      "Rotation": "0.0000008023993,0.0000003212761,-0.9262278,0.3769639",
+      "Scale": "2.44166,2.584312,1.379979",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "47d9c788-c5ea-4c98-abb1-82b20ddf546d",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "2729.959,-1273.244,2.06263",
+      "Rotation": "0.0000008642673,-0.00000001024449,-0.9999808,-0.00618276",
+      "Scale": "2.44166,2.584312,1.379979",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "ff015ea4-5127-46ad-a696-97902a9a54eb",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "3682.67,-549.3448,2.06263",
+      "Rotation": "0.0000008642673,-0.00000001024449,-0.9999808,-0.00618276",
+      "Scale": "2.44166,2.584312,1.379979",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "e6585655-7798-4ba3-932b-71b84dfd8181",
+      "Flags": 0,
+      "Name": "GameObject",
+      "Enabled": true
+    },
+    {
+      "__guid": "cad3c585-7660-4c77-8983-2c22dfe6cb95",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "3721.347,-8462.456,3775.944",
+      "Rotation": "0,0,0.258819,0.9659258",
+      "Scale": "3.469089,3.742339,2.154653",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "904df5d1-05b0-4bbe-bb92-31f5874bf87f",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "3218.579,-8267.429,3775.944",
+      "Scale": "3.469089,3.742339,2.154653",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "739f1063-f968-4052-a87a-5e16953265c0",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "3218.579,-9306.161,3775.944",
+      "Rotation": "0,0,-0.7933533,0.6087615",
+      "Scale": "3.469089,3.742339,2.154653",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "555b758f-8ba3-4f25-8e95-bd7a7f7929d4",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "3674.852,-9773.993,3775.944",
+      "Scale": "3.469089,3.742339,2.154653",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "0035ec9a-0d80-4fc9-acb5-c526b684f233",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "5483.133,-9092.931,3776.844",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "e683da4a-8742-4732-bb6b-5e57d2708c59",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "6613.773,-8659.242,3776.958",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "29a5fa17-4e2a-4742-befe-bb3ae4a6c85c",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "6341.646,-9836.088,3777.35",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "feb219a7-a7ef-480c-ab9c-312b8e055c94",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "1932.424,-9295.425,3663.964",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "d26d6f36-64ca-47a2-ac27-34b197e20e06",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "662.7957,-8867.497,3664.564",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "1f3d4104-cfb2-4c6b-9afc-e8cb9c2142c3",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "1274.739,-9188.814,3664.604",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "62a0d1aa-fe87-4260-9c44-45406205e77c",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "229.4425,-9289.936,3663.396",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "8abde8d1-b507-439d-973f-8dadbe81e7bf",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "3820.353,-10837.88,3780",
+      "Rotation": "0,0,0.1305262,0.9914449",
+      "Scale": "2.183095,2.183095,2.183095",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "e7e3517e-c199-4053-bbf0-e62427658d3e",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "2984.614,-11158.12,3780",
+      "Rotation": "0,0,0.5,0.8660255",
+      "Scale": "2.183095,2.183095,2.183095",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "9a03d919-4453-4016-b8dd-2a4a3d4bfd36",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "4003.872,-11593.11,3780",
+      "Rotation": "0,0,-0.7071067,0.7071068",
+      "Scale": "2.183095,2.183095,2.183095",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "5d6f678a-9761-473c-87f3-39dacfbb46c8",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "3199.475,-11667.96,3780",
+      "Rotation": "0,0,-0.3826834,0.9238796",
+      "Scale": "2.183095,2.183095,2.183095",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "a8fdb317-7fa7-4fe9-9f37-2901ea60d86c",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "3199.475,-14478.23,3780",
+      "Rotation": "0,0,-0.3826834,0.9238796",
+      "Scale": "2.183095,2.183095,2.183095",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "69480a48-89b6-4fc2-8514-f5bc2027c4c3",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "3910.742,-14198.2,3780",
+      "Rotation": "0,0,-0.3826834,0.9238796",
+      "Scale": "2.183095,2.183095,2.183095",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "cd1e7c99-e256-4e5b-835a-631fb5e93187",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "3465.631,-10943.66,3780",
+      "Scale": "2.183095,2.183095,2.183095",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "5035d12b-e162-4a54-a834-49c9026fcb73",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "2808.581,-11483.74,3780",
+      "Rotation": "0,0,0.3826834,0.9238796",
+      "Scale": "2.183095,2.183095,2.183095",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "cf675151-9d77-4670-ad99-1fedd8fc6a78",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "3275.893,-15654.82,4479.411",
+      "Scale": "2.272118,1.979013,2.611295",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "871c194e-b2f7-4dda-89d5-acd6a1a73e34",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "3680.638,-15905.16,4479.411",
+      "Scale": "2.272118,1.979013,2.611295",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "84dc7001-e296-43bd-8187-b1ba8899eb0e",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "3549.776,-16855.28,4485.239",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "1cb86721-86b2-4ae3-a919-a55002b677d2",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "-2043.107,-16699.79,4483.27",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "cdaddd7f-4560-4b56-9ded-f4ee4ae43a4a",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "-2323.65,-15917.24,4480.617",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "1175089a-f10e-425b-b522-a1f83d56cd25",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "-1305.046,-14417.85,4480.314",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "7b08f824-2ff6-4d35-897b-85b3771e9caf",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "-1568.728,-12813.47,4479.992",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "8ebc224b-1b50-49db-981a-aa6f75f9323c",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "-1408.211,-12517.21,4479.992",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "49fe8758-8771-49fe-b509-58778924e964",
+      "Flags": 0,
+      "Name": "rock2",
+      "Position": "-2080.41,-12143.14,4480.761",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock2.prefab",
+      "__PrefabVariables": {}
     }
   ],
   "SceneProperties": {

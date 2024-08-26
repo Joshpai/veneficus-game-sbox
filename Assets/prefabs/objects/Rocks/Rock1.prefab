@@ -1,0 +1,27 @@
+{
+  "RootObject": {
+    "__guid": "40bbf664-2386-4f80-ac03-386aaa197b75",
+    "Flags": 0,
+    "Name": "rock1",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.ModelRenderer",
+        "__guid": "1b703e5e-c61d-41ba-91a7-24082e5d13f3",
+        "BodyGroups": 18446744073709551615,
+        "MaterialOverride": "materials/world/mud1/mud.vmat",
+        "Model": "models/environment/rocks/rocks.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      }
+    ],
+    "Children": [],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

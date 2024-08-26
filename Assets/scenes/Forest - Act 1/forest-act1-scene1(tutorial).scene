@@ -736,6 +736,38 @@
       "Enabled": true,
       "__Prefab": "prefabs/objects/foliage/foliage3.prefab",
       "__PrefabVariables": {}
+    },
+    {
+      "__guid": "fda50961-ab1c-4286-a00d-35d2e89fe9b7",
+      "Flags": 0,
+      "Name": "rock1",
+      "Position": "-413.8586,-1585.716,-1.135713",
+      "Scale": "2.112646,2.112646,2.112646",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock1.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "683bafba-3647-4bd0-ac2c-5133ea4aea3e",
+      "Flags": 0,
+      "Name": "rock1 (1)",
+      "Position": "-305.0415,-1268.538,-1.135713",
+      "Rotation": "0,0,0.7071067,0.7071068",
+      "Scale": "2.112646,2.112646,2.112646",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock1.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "9a5da933-851d-42ae-b14f-4b3e4a162f2f",
+      "Flags": 0,
+      "Name": "rock1 (2)",
+      "Position": "-487.8889,-1493.572,-1.135713",
+      "Rotation": "0,0,0.7071067,0.7071068",
+      "Scale": "0.8687661,0.8687661,0.8687661",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/rocks/rock1.prefab",
+      "__PrefabVariables": {}
     }
   ],
   "SceneProperties": {
