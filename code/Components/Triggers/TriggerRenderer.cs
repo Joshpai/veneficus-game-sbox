@@ -20,7 +20,8 @@ public sealed class TriggerRenderer : Component, Component.ITriggerListener
 	[ConCmd("toggle_show_triggers")]
 	public static void ToggleShowTriggers()
 	{
-		ShowTriggers = !ShowTriggers;
+		// NOTE : uncomment for developer builds
+		// ShowTriggers = !ShowTriggers;
 	}
 
 	public void OnTriggerEnter(Collider other)
