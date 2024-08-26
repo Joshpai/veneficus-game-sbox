@@ -30,7 +30,6 @@ public sealed class SpinComponent : Component
 
 		if (_nextStopTime > Time.Now)
 			return;
-		_nextStopTime = Time.Now + SpinPeriod / 2.0f;
 
 		float angleToCamera =
 			MathF.Acos(
@@ -39,11 +38,15 @@ public sealed class SpinComponent : Component
 			);
 		if (angleToCamera < MathF.PI / SpinPeriod)
 		{
+			_nextStopTime = Time.Now + SpinPeriod / 2.0f;
+
 			float rand = MathF.Abs(Vector3.Random.Normal.x);
 			if (rand > StopCameraFaceProbability)
 				return;
 
 			_shouldRotate = false;
+			Transform.Rotation =
+				Camera.Transform.Rotation.RotateAroundAxis(Vector3.Up, 180.0f);
 		}
 	}
 }

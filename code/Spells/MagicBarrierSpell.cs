@@ -31,6 +31,11 @@ public class MagicBarrierSpell : BaseSpell
 		if (caster == null)
 			return;
 
+		// Silly dance again
+		OnDestroy = null;
+		var copy = OnDestroy;
+		OnDestroy = copy;
+
 		_enabled = false;
 		_uptime = 0.0f;
 
