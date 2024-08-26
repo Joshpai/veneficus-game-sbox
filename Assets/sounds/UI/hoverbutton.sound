@@ -5,7 +5,7 @@
   "Decibels": 70,
   "SelectionMode": "Random",
   "Sounds": [
-    "sounds/ui/belt-buckle-01.vsnd"
+    "sounds/ui/hoverbutton.vsnd"
   ],
   "Occlusion": true,
   "AirAbsorption": true,
