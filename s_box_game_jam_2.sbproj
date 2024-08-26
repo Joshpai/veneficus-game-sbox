@@ -5,7 +5,7 @@
   "Ident": "veneficus-game",
   "Schema": 1,
   "IncludeSourceFiles": false,
-  "Resources": "\nmaterials/PlayerMaterials/Spells/*\nsounds/UI/*\nsounds/BackingWorldMusic/*\ntextures/Signs/*\nmodels/Environment/Signs/*\nmodels/PlayerModels/Spells/Rockwall/*",
+  "Resources": "\nmaterials/PlayerMaterials/Spells/*\nsounds/UI/*\nsounds/BackingWorldMusic/*\ntextures/Signs/*\nmodels/Environment/Signs/*\nmodels/PlayerModels/Spells/Rockwall/*\nsounds/World/*\nsounds/Spells/*\nsounds/Player/*\nsounds/Enemy/*",
   "PackageReferences": [],
   "EditorReferences": null,
   "IsWhitelistDisabled": false,
