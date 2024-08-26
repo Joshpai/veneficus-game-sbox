@@ -859,18 +859,12 @@
               "_type": "gameobject",
               "go": "85a267f0-99d1-4802-b7b0-6ec432f4e2bd"
             },
-            {
-              "_type": "gameobject",
-              "go": "3e769ba4-2534-4f68-85ee-32263b1de8af"
-            },
+            null,
             {
               "_type": "gameobject",
               "go": "f4d78f5b-db70-4992-8dea-b0378ab58f25"
             },
-            {
-              "_type": "gameobject",
-              "go": "eb3954de-562b-4298-a31d-1ad9ea8ae00a"
-            },
+            null,
             {
               "_type": "gameobject",
               "go": "b3dfcf4f-b9cb-4964-baa6-959bff3bef31"
@@ -879,10 +873,7 @@
               "_type": "gameobject",
               "go": "b2fb6210-a4fc-43d1-995b-08034ab23368"
             },
-            {
-              "_type": "gameobject",
-              "go": "6cb2c47f-c96a-4a40-824c-9a17c9ee7f8d"
-            },
+            null,
             {
               "_type": "gameobject",
               "go": "a90d4123-ab52-44e6-a59f-f61add6c676a"
@@ -908,10 +899,7 @@
               "_type": "gameobject",
               "go": "d318b9f6-87f2-465f-998e-6da845e939a0"
             },
-            {
-              "_type": "gameobject",
-              "go": "f03a80e0-a2f1-450c-b512-11bd8a2b3e99"
-            },
+            null,
             {
               "_type": "gameobject",
               "go": "873ecde5-ea25-4281-8c8a-c276dacbbebe"
@@ -1467,7 +1455,8 @@
       "__guid": "89319eef-741e-473e-9c9a-b85b49f1e11e",
       "Flags": 0,
       "Name": "post (2)",
-      "Position": "-1056.442,-2695.415,52",
+      "Position": "-1055.154,-2694.789,52",
+      "Rotation": "0,0,0.258819,0.9659258",
       "Enabled": true,
       "__Prefab": "prefabs/objects/signs/post.prefab",
       "__PrefabVariables": {}
@@ -1476,8 +1465,8 @@
       "__guid": "b507baab-aab5-4970-a179-9fb33e8d91df",
       "Flags": 0,
       "Name": "arrow (2)",
-      "Position": "-1057.492,-2689.981,155.9389",
-      "Rotation": "0.7071066,0.7071065,0.0000001376787,0.0000001376788",
+      "Position": "-1058.78,-2690.607,155.9389",
+      "Rotation": "0.4999999,0.866025,0.0000001686213,0.00000009735364",
       "Enabled": true,
       "__Prefab": "prefabs/objects/signs/arrow.prefab",
       "__PrefabVariables": {}
@@ -1486,9 +1475,9 @@
       "__guid": "840e00bf-ef2c-48a7-84fc-1769b5611ab8",
       "Flags": 0,
       "Name": "arrow (3)",
-      "Position": "-1485.677,-2565.059,159.1898",
-      "Rotation": "-0.00000005167687,0.00000009182446,-0.8128461,0.5824782",
-      "Scale": "1.530058,1.530058,1.530058",
+      "Position": "-1492.724,-2550.915,159.1898",
+      "Rotation": "-0.0000000434772,0.00000009597897,-0.7589867,0.6511059",
+      "Scale": "0.720153,1.530058,0.7279848",
       "Enabled": true,
       "__Prefab": "prefabs/objects/signs/arrow.prefab",
       "__PrefabVariables": {}
@@ -1586,6 +1575,27 @@
       "Name": "arrow (8)",
       "Position": "-4602.033,-8880.482,-1835.994",
       "Rotation": "0,-0.7071066,0,0.7071067",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/signs/arrow.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "361cba03-44a1-4329-b7ea-de45e2f4a129",
+      "Flags": 0,
+      "Name": "post (8)",
+      "Position": "-3865.366,-3636.431,54.48598",
+      "Rotation": "-0.006884436,0.003210266,-0.4996994,0.8661656",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/signs/post.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "b0ad854d-8920-4f56-b5f8-d03432f7ef95",
+      "Flags": 0,
+      "Name": "arrow (9)",
+      "Position": "-3864.372,-3636.923,140.0101",
+      "Rotation": "0.01491874,0.04098888,-0.4995241,0.8652012",
+      "Scale": "1.487564,1,1.393095",
       "Enabled": true,
       "__Prefab": "prefabs/objects/signs/arrow.prefab",
       "__PrefabVariables": {}
