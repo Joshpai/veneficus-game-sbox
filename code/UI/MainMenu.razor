@@ -188,6 +188,9 @@
 	{
 		// Select a strictly invalid save so we don't give players rewards in
 		// story mode!
+		LevelManagerStaticStore.CheckpointData = new LevelCheckpointData();
+		LevelManagerStaticStore.UsedObjects = new HashSet<Guid>();
+		LevelManagerStaticStore.Stats = new LevelStats();
 		SaveData.SelectSaveIndex(-1);
 		if (ArenaLevel != null)
 			LevelManager.LoadLevelImmediate(ArenaLevel, true, true);

@@ -244,6 +244,8 @@ public sealed class LevelEnd : InteractableComponent
 
 	private void RestartCurrentLevel()
 	{
+		LevelManagerStaticStore.CheckpointData = new LevelCheckpointData();
+		LevelManagerStaticStore.UsedObjects = new HashSet<Guid>();
 		LevelManagerStaticStore.Stats = new LevelStats();
 		LevelManager.LoadLevelImmediate(LevelManagerStaticStore.ActiveScene, true, true);
 	}
@@ -258,6 +260,9 @@ public sealed class LevelEnd : InteractableComponent
 	{
 		// TODO: convert "NextLevel" to a stack of next levels. (maybe?)
 		// We want to be able to go to a level summary screen first.
+		LevelManagerStaticStore.CheckpointData = new LevelCheckpointData();
+		LevelManagerStaticStore.UsedObjects = new HashSet<Guid>();
+		LevelManagerStaticStore.Stats = new LevelStats();
 		LevelManagerStaticStore.Stats = new LevelStats();
 		if (NextLevel != null)
 			LevelManager.LoadLevelImmediate(NextLevel, true, NextLevelSpawnsPlayer);
