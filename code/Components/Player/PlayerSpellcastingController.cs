@@ -278,7 +278,7 @@ public sealed class PlayerSpellcastingController : Component
 		// TODO: make the number below a variable? must be very big, but is
 		// less important at longer distance as the offset error will reduce.
 		var hitEnd =
-			cameraStart + PlayerMovementControllerRef.EyeAngles.Forward * 100000.0f;
+			cameraStart + PlayerMovementControllerRef.EyeAngles.Forward * 5000.0f;
 
 		string[] ignoreTags = new string[] {"projectile", "player"};
 		var tr = Scene.Trace.Ray(cameraStart, hitEnd)
@@ -286,8 +286,10 @@ public sealed class PlayerSpellcastingController : Component
 							.WithoutTags(ignoreTags)
 							.Run();
 
+		var endPos = tr.Hit ? tr.HitPosition : hitEnd;
+
 		_castingSpell.CastDirection =
-			(tr.HitPosition -
+			(endPos -
 			 (PlayerMovementControllerRef.Transform.Position +
 			  PlayerMovementControllerRef.EyePosition)).Normal;
 	}
