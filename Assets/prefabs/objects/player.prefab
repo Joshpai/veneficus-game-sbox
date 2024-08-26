@@ -75,7 +75,7 @@
         "PolymorphedRadius": 12,
         "PolymorphedStepHeight": 5,
         "SceneGravity": "0,0,-950",
-        "StartLevelSound": "sounds/Player/gettingoutofstartoflevel",
+        "StartLevelSound": "sounds/World/gettingoutofstartoflevel",
         "StartLevelSoundMixerName": "Game",
         "WalkSpeed": 400
       },
