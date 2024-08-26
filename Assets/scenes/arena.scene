@@ -133,7 +133,7 @@
       "__guid": "4056538f-b60b-496b-95b1-68abea0be59a",
       "Flags": 0,
       "Name": "scafolding1",
-      "Position": "164.4324,365.8685,-2.828384",
+      "Position": "266.3091,365.8685,-2.828384",
       "Enabled": true,
       "__Prefab": "prefabs/objects/scafolding/scafolding1.prefab",
       "__PrefabVariables": {}
@@ -150,12 +150,330 @@
           "__type": "Sandbox.ModelRenderer",
           "__guid": "cf80516b-201b-4453-8d87-c8f9518fb690",
           "BodyGroups": 18446744073709551615,
-          "MaterialOverride": "materials/dev/black_nonsolid.vmat",
+          "MaterialOverride": "materials/world/lava1/lava.vmat",
           "Model": "models/dev/plane.vmdl",
           "RenderType": "On",
           "Tint": "1,1,1,1"
         }
       ]
+    },
+    {
+      "__guid": "84081264-57a4-4174-b281-efa151e0642c",
+      "Flags": 0,
+      "Name": "scafolding2",
+      "Position": "-10.36053,-1059.738,47.13509",
+      "Rotation": "-0.1305262,0,0,0.9914449",
+      "Scale": "1,2.402379,2.34585",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/scafolding/scafolding2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "e520796e-5b44-46f4-8635-34c6215fcf79",
+      "Flags": 0,
+      "Name": "scafolding2 (1)",
+      "Position": "-10.36053,-1702.066,180.0543",
+      "Rotation": "-0.0871558,0,0,0.996195",
+      "Scale": "1,2.630927,2.295265",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/scafolding/scafolding2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "95b018e7-6c16-46be-a8ee-b743a9b4e9b4",
+      "Flags": 0,
+      "Name": "scafolding3",
+      "Position": "-83.26435,-976.4051,-259.5615",
+      "Rotation": "0.2972098,0.09950793,-0.3687337,0.8751",
+      "Scale": "2.342415,2.342415,2.342415",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/scafolding/scafolding3.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "d496b6ca-6b05-4bef-b70e-c1c300a660ce",
+      "Flags": 0,
+      "Name": "scafolding3 (1)",
+      "Position": "89.73075,-976.4051,-250.7871",
+      "Rotation": "0.2383693,-0.2035082,0.5601952,0.7667763",
+      "Scale": "2.342415,2.342415,2.342415",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/scafolding/scafolding3.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "21d0f14e-cce8-4361-9b87-8fe50c50bc6b",
+      "Flags": 0,
+      "Name": "scafolding2 (2)",
+      "Position": "-1907.743,-349.4294,243.3391",
+      "Rotation": "-0.003002141,0.03041309,0.09818721,0.9946986",
+      "Scale": "1.261269,2.51624,2.51624",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/scafolding/scafolding2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "38d8bdff-d8a0-4776-a14f-d2b2c28e9b54",
+      "Flags": 0,
+      "Name": "scafolding2 (3)",
+      "Position": "-1921.141,279.8124,243.5241",
+      "Rotation": "-0.0004572892,0.01150221,-0.06758918,0.9976467",
+      "Scale": "1.261269,2.51624,2.51624",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/scafolding/scafolding2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "52a7d811-0ed8-477f-bfa7-84d15f4b903a",
+      "Flags": 0,
+      "Name": "scafolding3 (2)",
+      "Position": "-1912.006,-688.8149,102.2996",
+      "Rotation": "-0.03610981,0.3653243,0.091496,0.9256688",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/scafolding/scafolding3.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "13c06c86-a7dd-4051-b2f2-df914851c47d",
+      "Flags": 0,
+      "Name": "scafolding3 (3)",
+      "Position": "-2015.052,-172.6509,102.2992",
+      "Rotation": "-0.03610981,0.3653243,0.091496,0.9256688",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/scafolding/scafolding3.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "c9f6bb21-bd55-4608-9149-cfca12bac085",
+      "Flags": 0,
+      "Name": "scafolding3 (4)",
+      "Position": "-2055.992,52.76422,106.5575",
+      "Rotation": "0.1091413,0.3751397,0.03322022,0.9199211",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/scafolding/scafolding3.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "f5dfc5bb-705d-4c3d-8f20-507c098d7b90",
+      "Flags": 0,
+      "Name": "scafolding3 (5)",
+      "Position": "-1982.866,450.9751,106.5575",
+      "Rotation": "0.1091413,0.3751397,0.03322022,0.9199211",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/scafolding/scafolding3.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "420c1cd9-81a8-43e6-b6e7-dd02fb6a2d63",
+      "Flags": 0,
+      "Name": "scafolding3 (6)",
+      "Position": "-397.5864,-39.06,6",
+      "Scale": "1.749585,1.472302,1.898526",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/scafolding/scafolding3.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "ef1cce23-b71a-4347-a73d-b9a9c478b3e0",
+      "Flags": 0,
+      "Name": "scafolding3 (10)",
+      "Position": "-475.9216,301.14,6",
+      "Scale": "1.749585,1.472302,1.26761",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/scafolding/scafolding3.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "d17440f8-d0bb-422b-b75b-b3e86057ebee",
+      "Flags": 0,
+      "Name": "scafolding3 (7)",
+      "Position": "-643.2716,-39.06,6",
+      "Scale": "1.749585,1.472302,1.898526",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/scafolding/scafolding3.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "af8fd92f-2f2c-4902-80eb-317df4a7e8ec",
+      "Flags": 0,
+      "Name": "scafolding3 (8)",
+      "Position": "-643.2716,-454.3191,6",
+      "Scale": "1.749585,1.472302,1.898526",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/scafolding/scafolding3.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "74256505-e091-4bf2-8686-fe9274f5844d",
+      "Flags": 0,
+      "Name": "scafolding3 (9)",
+      "Position": "-370.5628,-454.3191,6",
+      "Scale": "1.749585,1.472302,1.898526",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/scafolding/scafolding3.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "bb58eafa-e3e3-420b-aa09-05d50e6e4c32",
+      "Flags": 0,
+      "Name": "scafolding2 (4)",
+      "Position": "-512.911,-228.9769,361.7094",
+      "Scale": "1.731841,1.769451,1",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/scafolding/scafolding2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "8982467e-637e-4b0b-8d04-2ba19263887c",
+      "Flags": 0,
+      "Name": "scafolding2 (6)",
+      "Position": "-767.392,-228.9769,385.2901",
+      "Rotation": "0,0.1564345,0,0.9876884",
+      "Scale": "0.7061052,0.9615903,1",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/scafolding/scafolding2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "6fd56000-9640-4ed6-9a2c-16e7146f8ae7",
+      "Flags": 0,
+      "Name": "scafolding2 (5)",
+      "Position": "-481.1035,315.9823,239.9001",
+      "Rotation": "0,0,-0.3420201,0.9396926",
+      "Scale": "0.447287,0.981746,0.8612124",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/scafolding/scafolding2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "9f803e03-038d-4215-abbd-154b1a32b236",
+      "Flags": 0,
+      "Name": "scafolding3 (11)",
+      "Position": "1352.736,714.5974,-896.4434",
+      "Rotation": "-0.005171046,0.01704675,0.2902349,0.9567896",
+      "Scale": "5.94066,5.94066,6.287334",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/scafolding/scafolding3.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "512bb2da-684c-4cff-a140-f9c5a957c8fa",
+      "Flags": 0,
+      "Name": "scafolding2 (7)",
+      "Position": "1669.614,961.8648,248.3852",
+      "Rotation": "-0.005171031,0.01704678,0.290236,0.9567893",
+      "Scale": "4.44322,2.180879,3.194016",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/scafolding/scafolding2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "2afb43dd-8d20-43f4-9083-af109cdf75ae",
+      "Flags": 0,
+      "Name": "scafolding1 (1)",
+      "Position": "1672.987,990.6935,277.7461",
+      "Rotation": "-0.005171031,0.01704681,0.2902359,0.9567893",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/scafolding/scafolding1.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "c0aef48e-0bf3-40c9-a9d3-b54b2feeef4b",
+      "Flags": 0,
+      "Name": "scafolding3 (12)",
+      "Position": "-518.7421,2104.609,277.6893",
+      "Rotation": "0.01940402,0.02364391,-0.6340888,0.772655",
+      "Scale": "3.012426,3.130345,1.045893",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/scafolding/scafolding3.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "ffc37d39-2f0b-4bd1-be56-df0fdb8cca2b",
+      "Flags": 0,
+      "Name": "scafolding2 (8)",
+      "Position": "-496.1771,2104.029,465.8758",
+      "Rotation": "0.01940393,0.02364394,-0.6340922,0.7726521",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/scafolding/scafolding2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "021eda6c-7626-42b5-ab4a-306f849e4926",
+      "Flags": 0,
+      "Name": "scafolding2 (11)",
+      "Position": "40.54876,2204.001,625.6149",
+      "Rotation": "-0.008421803,0.0015334,-0.7053625,0.708795",
+      "Scale": "1.416805,1,1.552896",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/scafolding/scafolding2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "8717f209-b925-4616-91a3-4f69e1f4d882",
+      "Flags": 0,
+      "Name": "scafolding2 (9)",
+      "Position": "-876.7395,2037.619,328.1088",
+      "Rotation": "0.1393628,0.2199444,-0.735876,-0.6250511",
+      "Scale": "1,2.036395,1",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/scafolding/scafolding2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "205393a0-eecb-4725-96b1-595637c4e74c",
+      "Flags": 0,
+      "Name": "scafolding2 (10)",
+      "Position": "-252.964,2154.871,546.392",
+      "Rotation": "-0.1849522,-0.1764352,0.7139093,0.6519174",
+      "Scale": "1,1.405245,1",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/scafolding/scafolding2.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "51ab79ae-00f6-4718-bf06-8ad502a3af37",
+      "Flags": 0,
+      "Name": "scafolding3 (13)",
+      "Position": "-912.6894,-1153.985,-894.4758",
+      "Rotation": "-0.01571038,-0.00839749,0.8817811,-0.4713224",
+      "Scale": "5.858047,5.858047,5.858047",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/scafolding/scafolding3.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "5b0622c1-2b5d-4263-b628-b8b4a93986ee",
+      "Flags": 0,
+      "Name": "scafolding3 (17)",
+      "Position": "1352.88,-632.9535,-834.1688",
+      "Rotation": "-0.01571038,-0.00839749,0.8817811,-0.4713224",
+      "Scale": "5.858047,5.858047,5.858047",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/scafolding/scafolding3.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "694641fd-b34e-49a6-9c78-b2867d3f7705",
+      "Flags": 0,
+      "Name": "scafolding3 (14)",
+      "Position": "761.108,1351.035,-787.087",
+      "Rotation": "-0.01571038,-0.00839749,0.8817811,-0.4713224",
+      "Scale": "5.246213,5.246213,5.246213",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/scafolding/scafolding3.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "b255803d-7d11-4391-92e0-802d9bfacc44",
+      "Flags": 0,
+      "Name": "scafolding3 (16)",
+      "Position": "-1278.606,1210.455,-831.6458",
+      "Rotation": "-0.01571038,-0.00839749,0.8817811,-0.4713224",
+      "Scale": "3.871523,3.871523,3.871523",
+      "Enabled": true,
+      "__Prefab": "prefabs/objects/scafolding/scafolding3.prefab",
+      "__PrefabVariables": {}
     }
   ],
   "SceneProperties": {

@@ -9,7 +9,7 @@
         "__type": "Sandbox.ModelRenderer",
         "__guid": "51b82ad5-9599-4157-8887-30e9b09173ac",
         "BodyGroups": 18446744073709551615,
-        "MaterialOverride": "materials/world/woodplanks/woodplanks.vmat",
+        "MaterialOverride": "materials/world/woodplanks/planks2.vmat",
         "Model": "models/environment/scafolding/scafolding3.vmdl",
         "RenderType": "On",
         "Tint": "1,1,1,1"
