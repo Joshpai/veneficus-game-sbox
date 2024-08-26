@@ -171,6 +171,7 @@
             "scenes/desert - act 2/act2.scene",
             "scenes/mines - act 3/act3scene.scene"
           ],
+          "ArenaLevel": "scenes/arena.scene",
           "FirstLevel": "scenes/forest - act 1/forest-act1-scene1(tutorial).scene"
         }
       ]

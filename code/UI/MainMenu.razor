@@ -17,6 +17,9 @@
 					<div class="button-container">
 						<button onclick=@PlayGame>Play Story Mode</button>
 					</div>
+					<div class="button-container">
+						<button onclick=@PlayArenaMode>Play Arena Mode</button>
+					</div>
 					<!-- TODO: later
 					<div class="button-container">
 						<button onclick=@Settings>Settings</button>
@@ -152,6 +155,9 @@
 	public SceneFile FirstLevel { get; set; }
 
 	[Property]
+	public SceneFile ArenaLevel { get; set; }
+
+	[Property]
 	public List<SceneFile> ActScenes { get; set; }
 
 	[Property]
@@ -173,6 +179,15 @@
 	{
 		// Log.Info("Play Game");
 		_selectedScreen = MainMenuScreens.PlaySaveSelect;
+	}
+
+	public void PlayArenaMode()
+	{
+		// Select a strictly invalid save so we don't give players rewards in
+		// story mode!
+		SaveData.SelectSaveIndex(-1);
+		if (ArenaLevel != null)
+			LevelManager.LoadLevelImmediate(ArenaLevel, true, true);
 	}
 
 	public void NewSave()

@@ -13,6 +13,9 @@ public sealed class ArenaManager : Component
 	[Property]
 	public GameObject LightningStrikeEnemyPrefab { get; set; } = null;
 
+	[Property]
+	public BBox EnemySpawnBBox { get; set; }
+
 	private PlayerDeathManager _playerDeath;
 	private PlayerMovementController _playerMovement;
 	private PlayerHUD _playerHUD;
@@ -21,6 +24,16 @@ public sealed class ArenaManager : Component
 	private int _remainingEnemies = 0;
 	private List<BaseSpell.SpellType> _waveEnemies;
 	private int _waveSpawnedEnemies = 0;
+
+	protected override void DrawGizmos()
+	{
+		base.DrawGizmos();
+
+		if (!Gizmo.IsSelected)
+			return;
+
+		Gizmo.Draw.LineBBox(EnemySpawnBBox);
+	}
 
 	protected override void OnStart()
 	{
@@ -36,7 +49,6 @@ public sealed class ArenaManager : Component
 			Scene.GetAllComponents<PlayerSpellcastingController>();
 		foreach (var spellcastingController in playerSpellcastingControllers)
 		{
-			// TODO: make sure no save is active so this doesn't propogate
 			spellcastingController.SetAllSpellsUnlocked();
 		}
 
@@ -82,7 +94,12 @@ public sealed class ArenaManager : Component
 	private bool SpawnEnemy(BaseSpell.SpellType enemyType)
 	{
 		// TODO: do we care that we might spawn inside the player?
-		var spawnPoint = Scene.NavMesh.GetRandomPoint();
+		// NOTE: the below doesn't seem to work how I want it to and always
+		// returns a null point, so I just simplified it a bit in this case
+		// var spawnPoint = Scene.NavMesh.GetRandomPoint(EnemySpawnBBox);
+		Vector3 randomPoint = EnemySpawnBBox.RandomPointInside;
+		Vector3? spawnPoint = Scene.NavMesh.GetClosestPoint(randomPoint);
+		Log.Info(spawnPoint);
 		if (spawnPoint == null)
 			return false;
 

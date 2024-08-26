@@ -55,59 +55,6 @@
       ]
     },
     {
-      "__guid": "6ad70641-3c6c-4402-9c85-9a4969af4764",
-      "Flags": 0,
-      "Name": "Plane",
-      "Scale": "10,10,5",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.ModelRenderer",
-          "__guid": "0b6a18bf-fdb8-4661-970e-ef635bfa9baa",
-          "BodyGroups": 18446744073709551615,
-          "MaterialOverride": "materials/default.vmat",
-          "Model": "models/dev/plane.vmdl",
-          "RenderType": "On",
-          "Tint": "0.39546,0.51163,0.27128,1"
-        },
-        {
-          "__type": "Sandbox.BoxCollider",
-          "__guid": "0715cb55-1733-4f5e-8560-c288b8695631",
-          "Center": "0,0,-5",
-          "IsTrigger": false,
-          "Scale": "100,100,10",
-          "Static": false
-        },
-        {
-          "__type": "Sandbox.Rigidbody",
-          "__guid": "d1ac42c7-ef0d-44d7-a8d7-89e29f51bad9",
-          "AngularDamping": 0,
-          "Gravity": false,
-          "LinearDamping": 0,
-          "Locking": {
-            "X": true,
-            "Y": true,
-            "Z": true,
-            "Pitch": true,
-            "Yaw": true,
-            "Roll": true
-          },
-          "MassCenterOverride": "0,0,0",
-          "MassOverride": 0,
-          "MotionEnabled": false,
-          "OverrideMassCenter": false,
-          "RigidbodyFlags": 0,
-          "StartAsleep": false
-        }
-      ]
-    },
-    {
-      "__guid": "27c91835-83a0-431b-919f-7d048f1457fd",
-      "Flags": 0,
-      "Name": "PlayerSpawn",
-      "Enabled": true
-    },
-    {
       "__guid": "f7c79eae-7caf-4aac-ba96-3a5e5f75cf59",
       "Flags": 0,
       "Name": "spell_unlock",
@@ -122,12 +69,15 @@
       "__guid": "88c64357-a8f2-40d0-9c57-b7d0d49e7395",
       "Flags": 0,
       "Name": "ArenaHandler",
-      "Position": "-3674.287,899.8499,4230.996",
       "Enabled": true,
       "Components": [
         {
           "__type": "ArenaManager",
-          "__guid": "68fa0456-bff1-410c-aa76-1294e6cdb48d",
+          "__guid": "931c5b37-ed2c-4083-aeea-4ef3b6102440",
+          "EnemySpawnBBox": {
+            "Mins": "1024,1024,1024",
+            "Maxs": "-1024,-1024,0"
+          },
           "FireballEnemyPrefab": {
             "_type": "gameobject",
             "prefab": "prefabs/enemies/fireball_enemy.prefab"
@@ -150,6 +100,34 @@
           }
         }
       ]
+    },
+    {
+      "__guid": "2a882ebe-9086-48f7-a836-21af4a6813e0",
+      "Flags": 0,
+      "Name": "Map",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.MapInstance",
+          "__guid": "f9169d9f-6df6-47d3-9499-3bb49be7ad37",
+          "__version": 1,
+          "EnableCollision": true,
+          "MapName": "maps/arena/arena.vmap",
+          "NoOrigin": false,
+          "UseMapFromLaunch": false
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "77990f66-fde4-43d8-ad0e-280020295435",
+      "Flags": 0,
+      "Name": "death_trigger",
+      "Position": "0,0,-905.9846",
+      "Scale": "87.69264,85.79317,14.25462",
+      "Enabled": true,
+      "__Prefab": "prefabs/triggers/death_trigger.prefab",
+      "__PrefabVariables": {}
     }
   ],
   "SceneProperties": {
