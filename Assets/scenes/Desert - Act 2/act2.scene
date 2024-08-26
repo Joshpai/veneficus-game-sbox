@@ -1162,18 +1162,12 @@
               "_type": "gameobject",
               "go": "f477c453-803c-4ebe-856c-b9f7a80f24ee"
             },
-            {
-              "_type": "gameobject",
-              "go": "ac4f1016-93c1-42c6-a6f9-9b68e53af7ac"
-            },
+            null,
             {
               "_type": "gameobject",
               "go": "e8b32ee5-0c46-4a5c-93ab-d9568efe1f1b"
             },
-            {
-              "_type": "gameobject",
-              "go": "6a3d38d5-0b33-4fea-a52f-4f6ca7f23af3"
-            },
+            null,
             null,
             {
               "_type": "gameobject",
@@ -1209,22 +1203,13 @@
               "_type": "gameobject",
               "go": "67de7d4a-b9bc-47fa-9746-95a2841a9fda"
             },
-            {
-              "_type": "gameobject",
-              "go": "982fe073-7863-48f0-ad86-cc2238605612"
-            },
+            null,
             {
               "_type": "gameobject",
               "go": "d49ad4ba-b96b-4335-bbc4-57256c9c5268"
             },
-            {
-              "_type": "gameobject",
-              "go": "29a54474-f55f-49f1-9971-54381d7fd7de"
-            },
-            {
-              "_type": "gameobject",
-              "go": "1558ffd0-b5fa-421b-a058-03224dce5fd5"
-            },
+            null,
+            null,
             {
               "_type": "gameobject",
               "go": "e91bafc3-62ff-4795-80cd-f25fa78482bb"
@@ -2592,6 +2577,39 @@
           "IsTrigger": false,
           "Scale": "50,50",
           "Static": true
+        }
+      ]
+    },
+    {
+      "__guid": "23e8cb8a-3610-43a6-8458-e90566bc4de7",
+      "Flags": 0,
+      "Name": "checkpoint_triggerarena2",
+      "Position": "3495.478,-10067.16,3776",
+      "Scale": "13.06201,1,13.03676",
+      "Enabled": true,
+      "__Prefab": "prefabs/triggers/checkpoint_trigger.prefab",
+      "__PrefabVariables": {
+        "Respawn Point Marker": {
+          "_type": "gameobject",
+          "go": "fd352f03-3854-46b9-bfbd-893e98100a01"
+        }
+      }
+    },
+    {
+      "__guid": "fd352f03-3854-46b9-bfbd-893e98100a01",
+      "Flags": 0,
+      "Name": "checkpointrespawnarena2",
+      "Position": "3491.777,-9809.202,4062.266",
+      "Rotation": "0,0,1,-0.00000004371139",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "9d79f450-4998-4909-b01a-140d7ddce6a4",
+          "__enabled": false,
+          "BodyGroups": 18446744073709551615,
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
         }
       ]
     }

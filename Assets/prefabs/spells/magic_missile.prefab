@@ -10,9 +10,10 @@
         "__type": "Sandbox.ModelRenderer",
         "__guid": "b56aeb2b-3c14-4405-bea9-31be5c3348ac",
         "BodyGroups": 18446744073709551615,
+        "MaterialOverride": "materials/spells/magicmissilematerial.vmat",
         "Model": "models/dev/sphere.vmdl",
         "RenderType": "On",
-        "Tint": "0.24787,0.10661,0.4093,1"
+        "Tint": "0.42477,0.21579,0.48837,1"
       },
       {
         "__type": "Sandbox.SphereCollider",
