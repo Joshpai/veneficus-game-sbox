@@ -1,8 +1,8 @@
 public class FireballSpell : ProjectileSpell
 {
 	// BaseSpell
-	public override float ManaCost => 50.0f;
-	public override float Cooldown => 2.0f;
+	public override float ManaCost => 20.0f;
+	public override float Cooldown => 1.0f;
 	public override float CastTime => 0.3f;
 	public override float MaxChargeTime => 0.5f;
 	public override float SpellMass => 35.0f;
