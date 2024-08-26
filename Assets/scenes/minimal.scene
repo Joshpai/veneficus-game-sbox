@@ -149,6 +149,7 @@
           "HealMultiplier": 1,
           "HealthRegenDelay": 10,
           "HealthRegenRate": 10,
+          "HurtSoundMixerName": "Game",
           "MaxHealth": 100
         }
       ]
@@ -201,6 +202,7 @@
           "HealMultiplier": 1,
           "HealthRegenDelay": 10,
           "HealthRegenRate": 10,
+          "HurtSoundMixerName": "Game",
           "MaxHealth": 100
         }
       ]
@@ -253,6 +255,7 @@
           "HealMultiplier": 1,
           "HealthRegenDelay": 10,
           "HealthRegenRate": 10,
+          "HurtSoundMixerName": "Game",
           "MaxHealth": 100
         }
       ]

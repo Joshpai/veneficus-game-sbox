@@ -16,9 +16,6 @@ public sealed class ArenaManager : Component
 	[Property]
 	public GameObject MaxManaBuff { get; set; } = null;
 
-	[Property]
-	public BBox EnemySpawnBBox { get; set; }
-
 	private PlayerDeathManager _playerDeath;
 	private PlayerMovementController _playerMovement;
 	private PlayerHUD _playerHUD;
@@ -27,16 +24,6 @@ public sealed class ArenaManager : Component
 	private int _remainingEnemies = 0;
 	private List<BaseSpell.SpellType> _waveEnemies;
 	private int _waveSpawnedEnemies = 0;
-
-	protected override void DrawGizmos()
-	{
-		base.DrawGizmos();
-
-		if (!Gizmo.IsSelected)
-			return;
-
-		Gizmo.Draw.LineBBox(EnemySpawnBBox);
-	}
 
 	protected override void OnStart()
 	{
@@ -96,8 +83,7 @@ public sealed class ArenaManager : Component
 
 	private Vector3? GetRandomPointInArena()
 	{
-		Vector3 randomPoint = EnemySpawnBBox.RandomPointInside;
-		return Scene.NavMesh.GetClosestPoint(randomPoint);
+		return Scene.NavMesh.GetRandomPoint();
 	}
 
 	private bool SpawnEnemy(BaseSpell.SpellType enemyType)
