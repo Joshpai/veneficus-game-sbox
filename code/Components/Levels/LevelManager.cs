@@ -138,6 +138,12 @@ public sealed class LevelManager : Component
 
 		LevelManagerStaticStore.ActiveScene = newScene;
 
+		LevelManagerStaticStore.Stats.MaxEnemies = 0;
+		foreach (var _ in Scene.GetAllComponents<BaseEnemyAI>())
+			LevelManagerStaticStore.Stats.MaxEnemies++;
+
+		Log.Info(LevelManagerStaticStore.Stats.MaxEnemies);
+
 		return oldTimeScale;
 	}
 
