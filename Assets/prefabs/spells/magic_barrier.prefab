@@ -31,10 +31,11 @@
             "__guid": "a76a7756-bad7-4a71-8bea-e4f89c030046",
             "BodyGroups": 18446744073709551615,
             "CreateBoneObjects": false,
+            "MaterialOverride": "materials/dev/debug_nav_translucent.vmat",
             "Model": "models/dev/sphere.vmdl",
-            "RenderType": "On",
-            "Tint": "0.24922,0.89302,0.81791,0.25",
-            "UseAnimGraph": true
+            "RenderType": "Off",
+            "Tint": "0.07843,0.38431,0.58824,0.4",
+            "UseAnimGraph": false
           }
         ]
       }
