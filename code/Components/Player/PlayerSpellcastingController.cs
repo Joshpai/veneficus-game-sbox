@@ -286,7 +286,7 @@ public sealed class PlayerSpellcastingController : Component
 		var hitEnd =
 			cameraStart + PlayerMovementControllerRef.EyeAngles.Forward * 5000.0f;
 
-		string[] ignoreTags = new string[] {"projectile", "player"};
+		string[] ignoreTags = new string[] {"projectile", "player", "trigger"};
 		var tr = Scene.Trace.Ray(cameraStart, hitEnd)
 							.HitTriggers()
 							.WithoutTags(ignoreTags)
