@@ -16,7 +16,7 @@
         "HealthRegenRate": 0,
         "HurtSound": "sounds/Enemy/windenemy",
         "HurtSoundMixerName": "Game",
-        "MaxHealth": 250
+        "MaxHealth": 150
       },
       {
         "__type": "Sandbox.CapsuleCollider",
