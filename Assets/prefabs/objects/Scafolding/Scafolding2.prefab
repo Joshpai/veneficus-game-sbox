@@ -1,0 +1,35 @@
+{
+  "RootObject": {
+    "__guid": "f819b61b-63af-4dc1-a6f3-4b67217e9505",
+    "Flags": 0,
+    "Name": "scafolding2",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.ModelRenderer",
+        "__guid": "51b82ad5-9599-4157-8887-30e9b09173ac",
+        "BodyGroups": 18446744073709551615,
+        "MaterialOverride": "materials/world/woodplanks/woodplanks.vmat",
+        "Model": "models/environment/scafolding/scafolding2.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__type": "Sandbox.BoxCollider",
+        "__guid": "2869fdb4-cae3-44b9-be2f-52493f9fd2f5",
+        "Center": "0,-9,0",
+        "IsTrigger": false,
+        "Scale": "234.4,266.1999,23.79998",
+        "Static": false
+      }
+    ],
+    "Children": [],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}
