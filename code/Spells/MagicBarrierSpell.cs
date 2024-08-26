@@ -1,7 +1,7 @@
 public class MagicBarrierSpell : BaseSpell
 {
 	public override float ManaCost => 25.0f;
-	public override float Cooldown => 2.0f;
+	public override float Cooldown => 30.0f;
 	public override float CastTime => 0.0f;
 	public override float MaxChargeTime => 0.0f;
 	public override float SpellMass => 0.0f;
@@ -10,7 +10,6 @@ public class MagicBarrierSpell : BaseSpell
 	public override String IconPath =>
 		"materials/PlayerMaterials/Spells/manabarrier.png";
 	public override String SpellSound => "sounds/Spells/magicbarrier";
-	// TODO: "custom" or "ontick"?
 	public override ManaTakeTime TakeManaTime => ManaTakeTime.OnStartCasting;
 
 	private const String BARRIER_PREFAB = "prefabs/spells/magic_barrier.prefab";
@@ -24,6 +23,7 @@ public class MagicBarrierSpell : BaseSpell
 	private HealthComponent _health;
 	private GameObject _barrierObj;
 	private bool _enabled;
+	private float _uptime;
 
 	public MagicBarrierSpell(GameObject caster)
 		: base(caster)
@@ -32,6 +32,7 @@ public class MagicBarrierSpell : BaseSpell
 			return;
 
 		_enabled = false;
+		_uptime = 0.0f;
 
 		_playerMovementController =
 			_caster.Components
@@ -55,6 +56,7 @@ public class MagicBarrierSpell : BaseSpell
 	public override bool OnFinishCasting()
 	{
 		_enabled = !_enabled;
+		_uptime = Time.Now + Cooldown;
 
 		_barrierObj.Enabled = _enabled;
 
@@ -78,10 +80,10 @@ public class MagicBarrierSpell : BaseSpell
 
 	public override bool OnFixedUpdate()
 	{
-		// TODO: we actually want to constantly draw mana when enabled
-		OnDestroy?.Invoke(this, EventArgs.Empty);
-
-		// TODO: this should be true when above is fixed.
+		if (_enabled && _uptime < Time.Now)
+		{
+			OnFinishCasting();
+		}
 		return false;
 	}
 
