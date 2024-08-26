@@ -148,7 +148,6 @@
       {
         "__type": "PlayerHUD",
         "__guid": "ddb225e5-237e-4c99-bea1-8a39b506f1b4",
-        "__enabled": false,
         "FlashHealthTime": 0.2,
         "Health": {
           "_type": "component",
