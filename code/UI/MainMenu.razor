@@ -100,7 +100,10 @@
 				<div class="acts">
 					<div class="acts-title">Select an Act</div>
 					<div class="acts-list">
-						@for (int i = 0; i <= SaveData.Instance.Data.GreatestCompletedLevel + 1; i++)
+						@for (int i = 0;
+							  i <= SaveData.Instance.Data.GreatestCompletedLevel + 1 &&
+							  i <= 3;
+							  i++)
 						{
 							String completionTime = "Incomplete";
 							String enemiesKilled = "Incomplete";

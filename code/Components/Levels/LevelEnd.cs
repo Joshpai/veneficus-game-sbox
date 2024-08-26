@@ -25,6 +25,9 @@ public sealed class LevelEnd : InteractableComponent
 	public SceneFile NextLevel { get; set; }
 
 	[Property]
+	public bool NextLevelSpawnsPlayer { get; set; } = true;
+
+	[Property]
 	public SceneFile MainMenu { get; set; }
 
 	// Relevant for later scenes. For example, if we want to send players to
@@ -257,6 +260,6 @@ public sealed class LevelEnd : InteractableComponent
 		// We want to be able to go to a level summary screen first.
 		LevelManagerStaticStore.Stats = new LevelStats();
 		if (NextLevel != null)
-			LevelManager.LoadLevelImmediate(NextLevel, true, true);
+			LevelManager.LoadLevelImmediate(NextLevel, true, NextLevelSpawnsPlayer);
 	}
 }
